@@ -17,7 +17,7 @@ Purpose: answer “what was found, where is the evidence, how was it computed?�
 | `results/g_agreement/reviews/R-2/` through `R-5/`, `R-Q/`; `results/g_agreement/reviews/` | Independent reproduction records and handoffs; older review files also live directly here |
 | Seals within `results/g_agreement/` and manifest-listed dependencies | Included metadata only; excluded raw outputs and private bindings remain in the original repository or local custody. A seal is not the underlying data |
 | `results/g_agreement/compiler/` | Timestamped cross-experiment status snapshots; useful navigation, not a substitute for original result/review |
-| Upstream `Jarus77/mats-nla-workspace@4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd` | **Suraj Prasad’s code**, link only; no vendoring without Guiv’s confirmation of Suraj’s consent |
+| `external/mats-nla-workspace/` | **Suraj Prasad’s code**, vendored with his consent from `Jarus77/mats-nla-workspace@10d495f12fd63c434e8d9752f4a223ea59fa9d95`; read-only evidence under the same no-compute rules. Start at its `README.md`, `notes/decisions.md` (D1–D51), `experiments/NN_*/RESULTS.md`; the complete tracked upstream tree is retained; policy and scan limits in `docs/EXCLUSION_REVIEW.md`; hashes in `docs/provenance/mats-nla-workspace.md`. Do not execute upstream code |
 | `PROVENANCE.md`, `docs/provenance/` | Exact original branch@commit:path → SHA-256; snapshot imports are not original experiment chronology |
 
 ## Look up an E-ID
