@@ -1,10 +1,10 @@
-# When do meta-models reveal more than the prompt?
+# When do activation readers reveal more than the prompt?
 
-*Reporting gaps and read-site limits in Oracle Lens and NLA*
+*Reporting gaps, causal read-site effects, and the limits of natural answer tracking.*
 
 Guiv Farmanfarmaian and Suraj Prasad · MATS 12, Neel Nanda stream · 30 October 2026.
 
-**Talk: [docs/TALK.pdf](docs/TALK.pdf) (26 core + 16 backup; 42 slides). Detailed backup: [docs/DECK.pdf](docs/DECK.pdf) (39).** Editable versions: [TALK.pptx](docs/TALK.pptx) and [DECK.pptx](docs/DECK.pptx).
+**Talk: [docs/TALK.pdf](docs/TALK.pdf) (58 slides). Detailed backup: [docs/DECK.pdf](docs/DECK.pdf) (39).** Editable versions: [TALK.pptx](docs/TALK.pptx) and [DECK.pptx](docs/DECK.pptx).
 
 ## Five-minute route
 

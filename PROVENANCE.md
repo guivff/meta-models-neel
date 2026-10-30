@@ -1752,3 +1752,12 @@ Guiv confirmed permission on 30 October 2026 at 19:41 CET. `Jarus77/mats-nla-wor
 `external/` tree SHA-256: `0c67990bf6d483347cc8aceafa14125584a88182b165e956d2e4fc6e61ef21f6`. Computed as SHA-256 of UTF-8 compact JSON mapping sorted POSIX paths relative to `external/` to each file's SHA-256 (`sort_keys=True`, separators comma/colon); includes `external/README.md`. The original upstream Git tree hash additionally binds file names and executable modes. No file exceeded the 50 MB limit. See `docs/EXCLUSION_REVIEW.md` for licence, labels, operational candidates and scan exceptions.
 
 Talk-number pin remains `4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd`; `10d495f1` adds D51 corrections and exp 31. Author results are not independent replication; S16 was run by Guiv's agent on Suraj's pipeline.
+
+## Current talk replacement — Guiv-supplied slides, 30 October 2026
+
+The current 58-slide talk supersedes the earlier `docs/TALK.pptx` and `docs/TALK.pdf` bytes recorded above. The PPTX is copied unchanged from Guiv's supplied `MetaModels_MATS_final (3).pptx`. The PDF is a 58-page native Microsoft PowerPoint export of that exact PPTX; it is a derived rendering, not a separately supplied source. The detailed DECK, narrative, claim ledger and detailed-deck speaker notes retain their existing bytes and numbering.
+
+| Current path | Source | Bytes | SHA-256 |
+|---|---|---:|---|
+| `docs/TALK.pptx` | Guiv-supplied PPTX, unchanged | 2120712 | `4df839e28eeb26a51dd17adffe7165f39b971147c158b322f43972ce1b733861` |
+| `docs/TALK.pdf` | Local PDF export of the supplied PPTX | 4302223 | `40a09805e32a5ad8374c13eadf03231bb698d29486c8d3f4fe3c84e8eb6b7ce4` |
