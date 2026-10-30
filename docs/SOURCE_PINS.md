@@ -34,7 +34,7 @@ The historical citation pin remains unchanged. Adding the later upstream context
 
 ## Source branch tips not merged wholesale
 
-The full current branch-tip snapshots are not imported; selected older dependencies in the table above remain included. All talk-cited Guiv experiments are represented in the release; external Suraj experiments stay at the linked pins. Observed tips:
+The full current branch-tip snapshots are not imported; selected older dependencies in the table above remain included. All talk-cited Guiv experiments are represented in the release; Suraj experiments are vendored at the later pin below, with historical numerical links preserved. Observed tips:
 
 | Branch | Tip SHA |
 |---|---|
@@ -44,3 +44,7 @@ The full current branch-tip snapshots are not imported; selected older dependenc
 | `codex/i2-tracks` | `d2b89a30f0da070c304109dc439f271405b4c1ed` |
 | `codex/i4-e96` | `f0943b0d13130fd66b3a890775671adee24d9698` |
 | `codex/w-mech2` | `97f6cec82809fcef6f838287c6802a54ce0d7acb` |
+
+## Vendored Suraj workspace — permission 30 October 2026, 19:41 CET
+
+`external/mats-nla-workspace/` is copied unmodified from [Jarus77/mats-nla-workspace@10d495f12fd63c434e8d9752f4a223ea59fa9d95](https://github.com/Jarus77/mats-nla-workspace/tree/10d495f12fd63c434e8d9752f4a223ea59fa9d95). The historical talk-number citation remains `4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd`. No upstream code was executed.

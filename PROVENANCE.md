@@ -4,7 +4,7 @@ Original private repository: `guivff/activation-readers`. Pre-seal snapshot pin:
 
 The maps use `branch@SHA:path → sha256`, with original paths retained for non-conflicting copies. Byte counts are uncompressed Git blob sizes. Dependencies omitted for privacy, label protection, size or raw-data policy remain absent; the snapshot is not a self-contained numerical reproduction bundle. Same-path historical-version collisions are retained only in the original private repository, as Guiv requested; exact original-only mappings appear below. The local planning annex records every unresolved literal reference; artifact-like cases still require final-seal review.
 
-Suraj Prasad’s upstream code: [Jarus77/mats-nla-workspace, pinned 4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd](https://github.com/Jarus77/mats-nla-workspace/tree/4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd). Link only by default.
+Suraj Prasad’s upstream code: [Jarus77/mats-nla-workspace, pinned 4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd](https://github.com/Jarus77/mats-nla-workspace/tree/4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd). Historical numerical citation pin; author-approved vendoring at the later pin is recorded below.
 
 ## Base files
 
@@ -1685,7 +1685,7 @@ The following files were supplied by Guiv from `/Users/guivff/Documents/ChatGPT/
 
 ## Restored source and later review
 
-The first23 paths below restore files excluded by a source-code false positive, using exact `c16db568` bytes. The last path updates R-Q to `6264b7173` for the later E95 deadline disposition. Source/fixture exceptions and retained historical data are described in [docs/EXCLUSION_REVIEW.md](docs/EXCLUSION_REVIEW.md). No Suraj source is vendored.
+The first23 paths below restore files excluded by a source-code false positive, using exact `c16db568` bytes. The last path updates R-Q to `6264b7173` for the later E95 deadline disposition. Source/fixture exceptions and retained historical data are described in [docs/EXCLUSION_REVIEW.md](docs/EXCLUSION_REVIEW.md). This earlier restoration did not vendor Suraj source; the subsequent author-approved import is recorded below.
 
 | Path | Source commit | Bytes | SHA-256 |
 | --- | --- | --- | --- |
@@ -1744,3 +1744,11 @@ Supplied read-only by Guiv on 30 October 2026 and included byte-for-byte. The de
 | [docs/NARRATIVE.md](https://github.com/guivff/meta-models-neel/blob/1ab33ae6be09a8db59494007c29ccb42229bc657/docs/NARRATIVE.md) | 13507 | `534c59716ad88ed5c4c3c1c9e3230e4b92b5ea14a1ec806825290991bfef7f8b` |
 | [docs/CLAIM_LEDGER.md](https://github.com/guivff/meta-models-neel/blob/1ab33ae6be09a8db59494007c29ccb42229bc657/docs/CLAIM_LEDGER.md) | 14575 | `63195c2a02a47207b809372f17646cfc667c120db59892be0f757da7e9ee4f7b` |
 | [docs/SPEAKER_NOTES.md](https://github.com/guivff/meta-models-neel/blob/1ab33ae6be09a8db59494007c29ccb42229bc657/docs/SPEAKER_NOTES.md) | 56907 | `d00a972b7a3ff4d5498d8959ca424e68f8676a79a33da9e4f287b9bf8bae0bb0` |
+
+## Suraj Prasad workspace — author-approved pinned copy
+
+Guiv confirmed permission on 30 October 2026 at 19:41 CET. `Jarus77/mats-nla-workspace@10d495f12fd63c434e8d9752f4a223ea59fa9d95` → `external/mats-nla-workspace/`, all 6,088 files / 349,669,789 bytes unmodified, no `.git`. Upstream Git tree: `600d5144139ab179d8f91b895063ce7a8b6a09df`. No code executed.
+
+`external/` tree SHA-256: `0c67990bf6d483347cc8aceafa14125584a88182b165e956d2e4fc6e61ef21f6`. Computed as SHA-256 of UTF-8 compact JSON mapping sorted POSIX paths relative to `external/` to each file's SHA-256 (`sort_keys=True`, separators comma/colon); includes `external/README.md`. The original upstream Git tree hash additionally binds file names and executable modes. No file exceeded the 50 MB limit. See `docs/EXCLUSION_REVIEW.md` for licence, labels, operational candidates and scan exceptions.
+
+Talk-number pin remains `4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd`; `10d495f1` adds D51 corrections and exp 31. Author results are not independent replication; S16 was run by Guiv's agent on Suraj's pipeline.

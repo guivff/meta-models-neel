@@ -10,6 +10,8 @@ Guiv Farmanfarmaian and Suraj Prasad · MATS 12, Neel Nanda stream · 30 October
 
 [Narrative](docs/NARRATIVE.md) → [TALK](docs/TALK.pdf) → [DECK](docs/DECK.pdf) → [claim ledger](docs/CLAIM_LEDGER.md) → [slide map](docs/SLIDE_EXPERIMENT_MAP.md) → [Suraj Prasad @ 4d43ecb2](https://github.com/Jarus77/mats-nla-workspace/tree/4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd).
 
+Suraj's code: [external/mats-nla-workspace](external/mats-nla-workspace/).
+
 The narrative, claim ledger, speaker notes and slide map use the **39-slide detailed deck's numbering** (24 core + 15 appendix), not the combined talk's numbering. [Speaker notes](docs/SPEAKER_NOTES.md), [fact-check record](docs/FACTCHECK.md) and [changelog](docs/CHANGELOG.md) accompany the supplied presentation. [EXPERIMENT_INDEX.md](EXPERIMENT_INDEX.md) locates E-IDs; [FINDINGS.md](FINDINGS.md) retains earlier background findings. Read the original rule and result before treating an index status as a scientific verdict.
 
 ## What the evidence supports
@@ -23,7 +25,7 @@ Two scope caveats are essential:
 
 E140's late-layer comparison is conditional on the defined subset; it does not report a complete 600-item planned screen. E113's DEV/TEST items reuse underlying questions, so item separation is not held-out-task generalization.
 
-**Review provenance:** R-2…R-5 and R-Q are separate agent reviewer sessions that checked scoped analyses of sealed outputs; agent review ≠ independent human replication. The E71 main audit has one human coder, Guiv. Suraj's results are **author results**, not independent replication. S16 is Suraj's experiment, executed by Guiv's agent on Suraj's pipeline. Suraj Prasad's original cited numbers remain pinned [upstream at 4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd](https://github.com/Jarus77/mats-nla-workspace/tree/4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd). The current tip observed for this update is [10d495f12fd63c434e8d9752f4a223ea59fa9d95](https://github.com/Jarus77/mats-nla-workspace/tree/10d495f12fd63c434e8d9752f4a223ea59fa9d95), which includes D51 corrections and exp 31's copy-overlap check cited in the combined talk. Both are link-only; no upstream files are vendored. Historical numerical pins are not silently rewritten.
+**Review provenance:** R-2…R-5 and R-Q are separate agent reviewer sessions that checked scoped analyses of sealed outputs; agent review ≠ independent human replication. The E71 main audit has one human coder, Guiv. Suraj's results are **author results**, not independent replication. S16 is Suraj's experiment, executed by Guiv's agent on Suraj's pipeline. Suraj Prasad's original cited numbers remain pinned [upstream at 4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd](https://github.com/Jarus77/mats-nla-workspace/tree/4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd). The current tip observed for this update is [10d495f12fd63c434e8d9752f4a223ea59fa9d95](https://github.com/Jarus77/mats-nla-workspace/tree/10d495f12fd63c434e8d9752f4a223ea59fa9d95), which includes D51 corrections and exp 31's copy-overlap check cited in the combined talk. Suraj authorized vendoring on 30 October 2026 at 19:41 CET; the unmodified `10d495f1` tree is included under `external/mats-nla-workspace/`. Historical numerical pins are not silently rewritten.
 
 ## Current dispositions and provenance
 
@@ -52,7 +54,7 @@ Read [EXCLUSION_REVIEW.md](docs/EXCLUSION_REVIEW.md) for retained historical pay
 
 The **full branch-tip snapshots** below are not merged into this release. Tip SHAs were read from the source remote during this update. Some older dependency files from these branches are already included and traced in [SOURCE_PINS](docs/SOURCE_PINS.md) and [PROVENANCE](PROVENANCE.md); “not included” here does not mean that no file from the branch ever entered the snapshot.
 
-All talk-cited Guiv experiments are represented in this snapshot. Suraj's talk-cited experiments, including exp 31, are available through the pinned upstream links above. This coverage statement does not promise every private raw input or a standalone rerun bundle.
+All talk-cited Guiv experiments are represented in this snapshot. Suraj's talk-cited experiments, including exp 31, are available in the pinned vendored workspace and through the upstream links above. This coverage statement does not promise every private raw input or a standalone rerun bundle.
 
 | Branch | Observed tip SHA |
 |---|---|
