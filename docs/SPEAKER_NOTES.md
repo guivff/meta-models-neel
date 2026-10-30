@@ -61,7 +61,7 @@ A3 read sites → slide 15 method → A12 steering bank controls → A13 chains 
 ### 1. When do meta-models reveal more than the prompt?
 
 [Slide 1 · 0:00–1:30 · GUIV · 20-min route: KEEP, 1:00]
-Open with the question, then the hypothesis: "When do meta-models reveal more than the prompt? Our working hypothesis: two activation readers mostly tell you what the prompt says. They report Qwen's own state only where it has become large at the read token."
+Open with the question, then the hypothesis: "When do meta-models reveal more than the prompt? We look at reporting gaps and read-site limits in two readers, Oracle Lens and NLA. Our working hypothesis: two activation readers mostly tell you what the prompt says. They report Qwen's own state only where it has become large at the read token."
 
 How we got here (one sentence): we started by asking whether two readers agreeing makes a readout more reliable. On natural banks agreement raises precision to 0.94 but covers only 23% of items (E94, appendix A15), and both readers can omit the same property. That moved the question from whether readouts agree to whether they reveal anything beyond the prompt.
 
@@ -127,7 +127,7 @@ The matched comparison is the first two bars. The NLA reading the block-42 activ
 
 The grey box is a different quantity and we keep it separate on purpose: if you take the union of eight prompt-only samples (two models × two templates, several seeds), 0.96 of items are solved by at least one. That is best-of-eight coverage, not compute-matched against a single reader readout. Its use: 0 of the NLA's 187 hits were missed by every prompt-only sample — every NLA success is text-recoverable.
 
-What this does and does not show. It shows that benchmark success cannot distinguish reading the activation from reconstructing the prompt and answering. It does not show the reader ignores the activation: at block 42 the activation encodes the prompt, so the two are the same thing here. That is why every later experiment either intervenes on the activation or picks items where the text and Qwen's own answer come apart. This is the experiment Neel asks for in his MATS 12 stream doc: "tasks that cannot be easily solved by just reconstructing the surrounding text".
+What this does and does not show. It shows that benchmark success cannot distinguish reading the activation from reconstructing the prompt and answering. It does not show the reader ignores the activation: at block 42 the activation encodes the prompt, so the two are the same thing here. That is why every later experiment either intervenes on the activation or picks items where the text and Qwen's own answer come apart. This targets tasks that cannot be solved just by reconstructing the surrounding text.
 
 Further numbers (appendix A7): text-only Qwen given only the NLA's readout solves 0.57; of the NLA's checkable claims, 0.62 are supported by the text vs 0.92 for text-only — the gap is mostly misquotations of the prompt (36% contradicted), not model-private content; text-only scores depend a lot on template (0.76 with the benchmark's own template). The Oracle at 42 is off its trained grid (it scores 0.37 / 0.39 at 40 / 44, so the conclusion does not change).
 
@@ -201,7 +201,7 @@ This is the same distinction as slides 7–8, measured on a different bank by a 
 
 x-axis, "carries it": take the reader's free readout, let the NLA's critic rebuild the layer-42 activation from that text alone, and ask a frozen probe whether the rebuilt vector still separates the two values (e.g. inside vs outside a string). AUROC 0.5 means the text carries nothing. For the NLA's explanations: 0.93–1.00 on the five string, math, argument and depth rows. For the Oracle's readouts: 0.84–0.97 on four of them, 0.51 on call argument.
 
-y-axis, "states it": a blind judge reads k = 8 readouts per item and asks whether the readout names the value. The Oracle states nothing: 0 on every row (max 0.009). The NLA: 0.01–0.25 on the structural rows (JSON depth is the highest at 0.25), 0.70 on the positive control (code language, a property its describing style names). Not every row is carried: the Oracle's call-argument (0.51) and both markdown rows sit near chance. The clean contrast is the four readable rows: Python string, JS string, LaTeX math, JSON depth.
+y-axis, "states it": a blind judge reads k = 8 readouts per item and asks whether the readout names the value. The Oracle states nothing: 0 on every row (at most 3 of 320, 0.94%). The NLA: 0.01–0.25 on the structural rows (JSON depth is the highest at 0.25), 0.70 on the positive control (code language, a property its describing style names). Not every row is carried: the Oracle's call-argument (0.51) and both markdown rows sit near chance. The clean contrast is the four readable rows: Python string, JS string, LaTeX math, JSON depth.
 
 Markdown rows are the honest negatives: list and heading are near 0.5 even in the true text span (0.50, 0.62), so there is little to carry.
 
@@ -384,11 +384,11 @@ Objection: "Why not use the steering bank?" Because a 2.2× push is not a natura
 ### 23. Pay the reader for true statements the prompt text cannot predict, and measure false claims
 
 [Slide 23 · 41:30–43:30 · SURAJ → hand to GUIV · 20-min route: SKIP]
-Neel's brainstorm asks: "what training objective would reward getting those facts right rather than just improving reconstruction?" Exp 30 shows supervision works narrowly; exp 28–29 show the current objective neither pays for nor punishes structural statements; E139 found a proxy reward with true-minus-false intervals that all include zero.
+The open question: what training objective would reward getting those facts right, rather than just improving reconstruction? Exp 30 shows supervision works narrowly; exp 28–29 show the current objective neither pays for nor punishes structural statements; E139 found a proxy reward with true-minus-false intervals that all include zero.
 
 Step 0 costs nothing: measure the exact training reward for true vs false vs neutral statements. If it already ranks true above false, the problem is exploration, not the objective.
 
-Then three arms from the same warm start, at least three seeds each: current objective; plus a reward for statements a held-out probe or patch confirms; and reconstruction scored only on the residual a text-only model cannot predict ("pay the NLA only for what the prompt text can't predict", Neel's wording).
+Then three arms from the same warm start, at least three seeds each: current objective; plus a reward for statements a held-out probe or patch confirms; and reconstruction scored only on the residual a text-only model cannot predict (that is, pay the NLA only for what the prompt text cannot predict).
 
 Endpoint: correct statements, false statements and FVE together, on held-out properties and positions — exp 30 taught us that naming without precision over-applies (0.40 when true vs 0.26 when false at random positions).
 

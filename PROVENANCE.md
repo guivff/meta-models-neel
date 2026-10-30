@@ -1,4 +1,4 @@
-# Pre-seal snapshot provenance
+# Release provenance — MATS presentation update
 
 Original private repository: `guivff/activation-readers`. Pre-seal snapshot pin: `r/blindspot@c16db5689937c1895c9cb6d605bc39df19f15411`. The original repository, commits and branches remain unchanged. The new snapshot imports bytes, not commit history. Inspect the original SHA’s history for registration/result ordering; timestamps and hashes alone do not establish first-opening chronology.
 
@@ -1665,13 +1665,82 @@ Guiv authorized the generated root documents on 30 October 2026 at 16:47 CET. Th
 - `CLAUDE.md` → `r/blindspot@c16db5689937c1895c9cb6d605bc39df19f15411:CLAUDE.md` → `7306b3ca0e2d0034a7566b1aa8c8f068a172b2f77cb567529d716ada27a1616b` — [original only](https://github.com/guivff/activation-readers/blob/c16db5689937c1895c9cb6d605bc39df19f15411/CLAUDE.md).
 - `README.md` → `r/blindspot@c16db5689937c1895c9cb6d605bc39df19f15411:README.md` → `987db2d578ef96a06b2fa14c5c225dd802632e7d6ed90e9e8b3a3f08bd495947` — [original only](https://github.com/guivff/activation-readers/blob/c16db5689937c1895c9cb6d605bc39df19f15411/README.md).
 
-## Guiv-supplied presentation documents, 30 Oct
+## Presentation update for tonight, 30 Oct
+
+This is one scoped release update on top of `1ab33ae6be09a8db59494007c29ccb42229bc657`. The research base remains `c16db5689937c1895c9cb6d605bc39df19f15411`; the detailed deck's original numeric citations remain `c60fa9703f6dadc8150e11b0c2d5bbe899db02bc`. This does not establish a new experimental seal or rewrite registration timing.
+
+The following files were supplied by Guiv from `/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/MATS_final/`, verified against the authorized hashes, and copied byte-for-byte. TALK is the combined presentation (26 core +16 backup =42; appendix starts at slide27); DECK is the detailed39-slide presentation. This corrects the earlier27+16 count against the authorized file bytes. Source paths are relative to that canonical directory.
+
+| Release document | Canonical source | Bytes | SHA-256 |
+| --- | --- | --- | --- |
+| [docs/TALK.pdf](docs/TALK.pdf) | combined/MATS_combined.pdf | 3065523 | `9c2d092d4001ec91c5521779088ac995b8ee788774bd2d084c5d591ca210445b` |
+| [docs/TALK.pptx](docs/TALK.pptx) | combined/MATS_combined.pptx | 2878918 | `cff16b921a9a67f89b011be39c96f1ec203f10dbf19a7cb5ceafe42461c46c2d` |
+| [docs/DECK.pdf](docs/DECK.pdf) | activation_readers_MATS_final.pdf | 854625 | `c20c98283b2f2535d0a64f702fd9a1aaaebd5d259215fa4ed6165f6e7f79ffe9` |
+| [docs/DECK.pptx](docs/DECK.pptx) | activation_readers_MATS_final.pptx | 316880 | `97376c8628270392b821ab46896b63758db527da3d9cbb8d5b2026f735ca2be0` |
+| [docs/NARRATIVE.md](docs/NARRATIVE.md) | NARRATIVE.md | 13980 | `729c77e8d28ae3804f61ccc5f8fff8fa0e0c14f71fb4856d18fd6381c1a1e338` |
+| [docs/CLAIM_LEDGER.md](docs/CLAIM_LEDGER.md) | CLAIM_LEDGER.md | 14373 | `898db93fd4548128340c472a3871ec467d4b24d858b42140582bb53080a5b9b3` |
+| [docs/SPEAKER_NOTES.md](docs/SPEAKER_NOTES.md) | SPEAKER_NOTES.md | 56931 | `4c84d77ad5af19290d425c6a1070cb47147c4d1dc30d2bd91b2bc46d54d171f1` |
+| [docs/FACTCHECK.md](docs/FACTCHECK.md) | FACTCHECK.md | 11289 | `3e43798e29b13a3639514ba89c8206666224465d1e65d425328e300946934770` |
+| [docs/CHANGELOG.md](docs/CHANGELOG.md) | CHANGELOG.md | 4141 | `8a091fb27750f6d6f8bcf8e8b4fe58d476a4d7b0d7de3325db3f5d9336b416ea` |
+
+## Restored source and later review
+
+The first23 paths below restore files excluded by a source-code false positive, using exact `c16db568` bytes. The last path updates R-Q to `6264b7173` for the later E95 deadline disposition. Source/fixture exceptions and retained historical data are described in [docs/EXCLUSION_REVIEW.md](docs/EXCLUSION_REVIEW.md). No Suraj source is vendored.
+
+| Path | Source commit | Bytes | SHA-256 |
+| --- | --- | --- | --- |
+| `projects/g_agreement/e100_analysis/test_analysis.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 9159 | `7c88be745656e6521f2429f7b13470f2f29d68e83e1fa78794292b80ef9321ef` |
+| `projects/g_agreement/e131_analysis/adapter.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 6649 | `e8792ffde441aafe51a8a9edec8f08867ba9e366a3eae8127fd2d4123b680b17` |
+| `projects/g_agreement/e131_followup246/test_adapter.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 6060 | `65b5c711e67e7ff8f28177b064d9f93532fe743a08dadb0f85a29ee2f10841cf` |
+| `projects/g_agreement/e133_analysis/probes.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 8743 | `7fc8ac8cbe810f96a803f9b74075debb771e45f3ff05738750c37942fda10ab5` |
+| `projects/g_agreement/e134/test_sources.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 3271 | `a2cbe1d9e7dfdb6a92cff344de0fa247a633be1b73ec26f28f4773843f98a7b6` |
+| `projects/g_agreement/e137_analysis/probes.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 5248 | `08cfccdcbb0d1e57c9ad2a1e958a4db75c143478439783ad94d453c0b063ae80` |
+| `projects/g_agreement/e138/test_runner.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 3528 | `b9a4ccf062f3ede527abe36d9482678945403e89595e18471a6bf5be66ef4188` |
+| `projects/g_agreement/e139/freeze.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 8436 | `defc31f082c0604493bb871413cfb641da22d866da21e80e547b69f53d84c408` |
+| `projects/g_agreement/e140_analysis/run.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 9120 | `6a7b488be7c272a44f9367e27890df1437c26af68817f8a2ba1e15f9fcd23887` |
+| `results/g_agreement/reviews/R-4.md` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 222137 | `204f65cae7a5d036079cddfcdcfe880ab0f76ed78ac7181e695b23d198170092` |
+| `results/g_agreement/understand/e100/vectors/finalize100.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 10981 | `6cf872e9c85769ef72ab54e7becd4b7035b7383c32a1de401b1efe3aac21d6ad` |
+| `results/g_agreement/understand/e120/decoder/test_adapter.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 3313 | `e87f2fc600404819243f1a5fab081ec53c0e49b37d16ccc6ba10db5b1e358968` |
+| `results/g_agreement/understand/e27/analyze.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 30203 | `a11a2fc2160f009638734be344dd89b5c52d53374cec7bc3b76f885d11cd7929` |
+| `results/g_agreement/understand/e37/analyse.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 25411 | `efaeff32c60bc9dd1aad245b05e552174283547df6ccc24eafbecdedce87b2cf` |
+| `results/g_agreement/understand/e37/prepare.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 12031 | `8cb0901672e88c28e772021207b06bb1694adfa754ef7e1733e16d4c75ab22c0` |
+| `results/g_agreement/understand/e39/contract.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 9921 | `ca7fe5194009a6f4ca7d3775c6db896b885d875b5a650ba399920258b406d2d2` |
+| `results/g_agreement/understand/e39/test_training_environment.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 8349 | `9d2d49d36add3775e25cb9b8ef88f0e170b08f2071b4954edfa60ff34caa81ec` |
+| `results/g_agreement/understand/e39/worker.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 28961 | `aa094994c68f1cb4bce2c80c5eba082b351b6383706b8d35e8ba7d7727f2187f` |
+| `results/g_agreement/understand/e50/contract.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 5704 | `7222007e764843d89b8a22c83a6f507bc2e1433e5c363f53e72d279f5b802fa4` |
+| `results/g_agreement/understand/e50/test_training_environment.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 8461 | `15efaac4f851e6852c954e3040c9e58ad65bf163315ddbcf9be1c0563b394591` |
+| `results/g_agreement/understand/e50/worker.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 24642 | `7d7e8fb3b76e6f76c554c0363fa68f444c01ebdb55e4036ecc64df6800fafbf6` |
+| `results/g_agreement/understand/e56/job/smoke_profile.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 4318 | `7fb898794b799a0c744467057099b434aff343300345fa75f19dea990aa5fb8e` |
+| `results/g_agreement/understand/e57/bank57.py` | `c16db5689937c1895c9cb6d605bc39df19f15411` | 7984 | `cca62a55b7e6654b05873df1e198e7a337d2e4d4908feea6d78ea23e62e84b7e` |
+| `results/g_agreement/reviews/R-Q.md` | `6264b71737479e55369ce50ab15398969fd57131` | 858517 | `1519af4e517614b08f05dab8ec85d6db442cc801f72a2d51e7abe94aae623863` |
+
+## Generated navigation and review documents
+
+These are release summaries, not unchanged historical research artifacts. The slide map reproduces GAP_REPORT Appendix C for the detailed deck.
+
+| Path | Bytes | SHA-256 |
+| --- | --- | --- |
+| [README.md](README.md) | 8681 | `7aaffa1bc4d01874f218c25e4b4903da15d87385fa2371f6be48bb998bf20ed0` |
+| [docs/SLIDE_EXPERIMENT_MAP.md](docs/SLIDE_EXPERIMENT_MAP.md) | 2568 | `719ff9928cf4c3eac0006f596e46f0da0c56f5e47f380e442f9da87982cb2456` |
+| [docs/EXCLUSION_REVIEW.md](docs/EXCLUSION_REVIEW.md) | 11602 | `9b8b946b62fb7ed4acbf25b583f2dc7d42f6eb946157dcbb942add62f3995541` |
+| [docs/SOURCE_PINS.md](docs/SOURCE_PINS.md) | 3625 | `becf2293ca9853de0ce31473c79301f74dfec6358404f138863fcea9c3b6de61` |
+
+## Targeted operational cleanup
+
+| Path | Original SHA-256 | New disposition |
+| --- | --- | --- |
+| `results/g_agreement/blindspot/W5_POD_REQUEST.json` | `c800387a5e0de577b60a4df743f375ff777d8b31d5c67ae706d19618218bc81a` | Removed from tip; history not purged |
+| `results/g_agreement/s8/s8.md` | `0dd99070c79178a01e3285189a50e4f9c3cdd98810db7e51c18375b19a35c935` | Sanitized; new SHA-256 `6666e6968858e4f3a57788d0624c0dec642291dd37da1325c647462dd8dd13d1`; scientific numbers unchanged |
+
+## Historical supplied-document receipt at release 1ab33ae6
+
+The table in this subsection describes **old document bytes at release `1ab33ae6`**, not the files now at `docs/`. It is retained as history; the current hashes are in the presentation table above. Historical links resolve to that old release.
 
 Supplied read-only by Guiv on 30 October 2026 and included byte-for-byte. The deck’s numbers were read at original `r/blindspot c60fa9703f6dadc8150e11b0c2d5bbe899db02bc`; the research snapshot remains `c16db5689937c1895c9cb6d605bc39df19f15411`. Both are pre-seal.
 
 | Document | Bytes | SHA-256 |
 |---|---:|---|
-| [docs/DECK.pdf](docs/DECK.pdf) | 854020 | `ef2489de8078d429b1d79a3182d8ce9314021e01803f9167ff3dfee84441b575` |
-| [docs/NARRATIVE.md](docs/NARRATIVE.md) | 13507 | `534c59716ad88ed5c4c3c1c9e3230e4b92b5ea14a1ec806825290991bfef7f8b` |
-| [docs/CLAIM_LEDGER.md](docs/CLAIM_LEDGER.md) | 14575 | `63195c2a02a47207b809372f17646cfc667c120db59892be0f757da7e9ee4f7b` |
-| [docs/SPEAKER_NOTES.md](docs/SPEAKER_NOTES.md) | 56907 | `d00a972b7a3ff4d5498d8959ca424e68f8676a79a33da9e4f287b9bf8bae0bb0` |
+| [docs/DECK.pdf](https://github.com/guivff/meta-models-neel/blob/1ab33ae6be09a8db59494007c29ccb42229bc657/docs/DECK.pdf) | 854020 | `ef2489de8078d429b1d79a3182d8ce9314021e01803f9167ff3dfee84441b575` |
+| [docs/NARRATIVE.md](https://github.com/guivff/meta-models-neel/blob/1ab33ae6be09a8db59494007c29ccb42229bc657/docs/NARRATIVE.md) | 13507 | `534c59716ad88ed5c4c3c1c9e3230e4b92b5ea14a1ec806825290991bfef7f8b` |
+| [docs/CLAIM_LEDGER.md](https://github.com/guivff/meta-models-neel/blob/1ab33ae6be09a8db59494007c29ccb42229bc657/docs/CLAIM_LEDGER.md) | 14575 | `63195c2a02a47207b809372f17646cfc667c120db59892be0f757da7e9ee4f7b` |
+| [docs/SPEAKER_NOTES.md](https://github.com/guivff/meta-models-neel/blob/1ab33ae6be09a8db59494007c29ccb42229bc657/docs/SPEAKER_NOTES.md) | 56907 | `d00a972b7a3ff4d5498d8959ca424e68f8676a79a33da9e4f287b9bf8bae0bb0` |

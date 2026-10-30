@@ -1,5 +1,7 @@
 # When do meta-models reveal more than the prompt?
 
+*Reporting gaps and read-site limits in Oracle Lens and NLA*
+
 *A working hypothesis, with "mostly" and "so far" load-bearing. The question underneath: when, if ever, do activation readers reveal model-private state beyond reconstructing the prompt?*
 
 Guiv Farmanfarmaian and Suraj Prasad · MATS 12, Neel Nanda stream · narrative v7, 30 October 2026, matching `activation_readers_MATS_final.pptx` (24 core + 15 appendix slides).
@@ -18,7 +20,7 @@ What an activation reader says is usually what a reader of the prompt would say,
 
 ## Opening
 
-**1 · Title.** When do meta-models reveal more than the prompt? Working hypothesis: two activation readers mostly tell you what the prompt says. We started by asking whether two readers agreeing makes a readout more reliable: on natural banks agreement raises precision to 0.94 but covers only 23% of items (E94), and both can omit the same property; that moved the question to what readouts reveal beyond the prompt. Three measurements, kept apart throughout: **decodable** (held-out probe, AUROC), **causal here** (patch at one token and block, normalised effect R), **stated** (blind judge, k of n with missing shown).
+**1 · Title.** When do meta-models reveal more than the prompt? Subtitle: reporting gaps and read-site limits in Oracle Lens and NLA. Working hypothesis: two activation readers mostly tell you what the prompt says. We started by asking whether two readers agreeing makes a readout more reliable: on natural banks agreement raises precision to 0.94 but covers only 23% of items (E94), and both can omit the same property; that moved the question to what readouts reveal beyond the prompt. Three measurements, kept apart throughout: **decodable** (held-out probe, AUROC), **causal here** (patch at one token and block, normalised effect R), **stated** (blind judge, k of n with missing shown).
 
 **2 · Apparatus.** Block L output = `hidden_states[L+1]`. Oracle: marker input embedding ← 16000·h/‖h‖. NLA: h₁ + ‖h₁‖·h/‖h‖ after its block 1, RL-trained so a critic can rebuild h. Read token: assistant onset for chat banks; raw final " by" (token 539) for the transfer chains; the fact bank reads its final "is". Never the first generated token.
 
@@ -54,11 +56,11 @@ What an activation reader says is usually what a reader of the prompt would say,
 
 **15 · Method (E104/E126).** Add α·‖d‖·d̂ at block 40 on the eight positions before the read token (d: class-mean difference on 84 dev items; α 8 = 2.23× the median block-40 norm; a random direction of that size flips 42/84 pair preferences, the real one 84/84). Restore the clean read token at one block ℓ. R = (Δ_steered − Δ_restored)/(Δ_steered − Δ_clean).
 
-**16 · Result (E126 R-MED1 MET, R-Q).** Fact row R: 0.013, 0.057, 0.663 [0.51, 0.80], 0.876, 0.871 at 44–60; earlier-token control ≤ 0.11, random ≈ 0. The reader: S −0.52 at 44, +1.00 at 52 and 60 (E109). Qwen's free text states the new answer 43/84 (E131, NOT MET). The language row is non-monotone (R 0.29 already at 44).
+**16 · Result (E126 R-MED1 MET, R-Q).** Fact row R: 0.013, 0.057, 0.663 [0.51, 0.80], 0.876, 0.871 at 44–60; earlier-token control ≤ 0.11, random ≈ 0. The reader: S −0.52 at 44, +1.00 at 52 and 60 (E109). Qwen's free text states the new answer 43/84 (E131, NOT MET). The language row is non-monotone (R 0.29 already at 44). All 84 fact items are context variants of one fact pair (France vs Peru → Paris/Lima); generality across facts is untested. At block 44, E109's S is defined for 83 of 84 items.
 
 **17 · E135 (descriptive) and §248C (exploratory).** Block-44 reader states the old answer: easy items 4/42 under the push (α 6) vs 24/41 with no push; resistant items 40/40 vs 42/42. On resistant items the "stale" readout is there without the push. Association only.
 
-**18–19 · Unsteered chains (E133, E137; R-Q, R-4).** Swap only the final " by" activation with the opposite twin's. Twin-swap R, E137 (42 pairs): 0.006, 0.039, 0.268, 0.363, 0.747; E133 (50 pairs): 0.011, 0.045, 0.264, 0.320, 0.744. At block 44 the Oracle names the current holder 13/79, the previous 3/79, another name 35/79, nobody 28/79; at 60 the current holder 25/76. Registered staleness (previous ≥ 0.30) and the later-site rule (R ≥ 0.50 at 52 or 56) NOT MET. A holder probe scores 0.978 at 44, but over 8 of 10 classes; the registered twin probe is at chance.
+**18–19 · Unsteered chains (E133, E137; R-Q, R-4).** Swap only the final " by" activation with the opposite twin's. Twin-swap R, E137 (42 pairs): 0.006, 0.039, 0.268, 0.363, 0.747; E133 (50 pairs): 0.011, 0.045, 0.264, 0.320, 0.744. At block 44 the Oracle names the current holder 13/79, the previous 3/79, another name 35/79, nobody 28/79; at 60 the current holder 25/76. Registered staleness (previous ≥ 0.30) and the later-site rule (R ≥ 0.50 at 52 or 56) NOT MET. A holder probe scores 0.978 at 44, but over 8 of 10 classes; the registered twin probe is at chance. D1 separates the holder from the most recently mentioned name, but not holder state from the last hand-over: the holder is always the last hand-over's recipient.
 
 ## Part 4 · Audit and next
 

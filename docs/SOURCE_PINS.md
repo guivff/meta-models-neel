@@ -1,4 +1,4 @@
-# Pinned sources — pre-seal snapshot
+# Pinned sources — research snapshot and presentation update
 
 Fetched into an isolated mirror; the original repository and active Mac checkouts were not modified. Historical original-only links in PROVENANCE can refer to earlier commits; they are not imported branch-tip copies.
 
@@ -20,4 +20,27 @@ Fetched into an isolated mirror; the original repository and active Mac checkout
 | `r/p3` | `30449c785c273a36db0962bbe8292e428ae990f4` | eligible dependency source |
 | `r/phase-r-scaffold` | `a03faab1c72a29877149b05feca60a8872ba67fe` | eligible dependency source |
 | `r/remainder` | `f8eed013e196b7b61f83005122480297e477b472` | eligible dependency source |
-| `Jarus77/mats-nla-workspace` | `4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd` | Suraj Prasad; upstream link only, no vendoring |
+| `Jarus77/mats-nla-workspace` | `4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd` | Suraj Prasad; historical pin for the original cited numbers; link only, no vendoring |
+
+## Current upstream context for the combined talk
+
+| Source | Full commit SHA | Role |
+|---|---|---|
+| `Jarus77/mats-nla-workspace` | `10d495f12fd63c434e8d9752f4a223ea59fa9d95` | Current tip observed for this update; exp 31 copy-overlap check and D51 corrections; link only, no vendoring |
+
+[Original cited-number pin: 4d43ecb2](https://github.com/Jarus77/mats-nla-workspace/tree/4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd) · [Current upstream context / exp 31: 10d495f1](https://github.com/Jarus77/mats-nla-workspace/tree/10d495f12fd63c434e8d9752f4a223ea59fa9d95).
+
+The historical citation pin remains unchanged. Adding the later upstream context does not retroactively change the source of earlier plotted numbers. The combined talk cites exp 31 at the later pin. These are Suraj Prasad's author results, not independent replication.
+
+## Source branch tips not merged wholesale
+
+The full current branch-tip snapshots are not imported; selected older dependencies in the table above remain included. All talk-cited Guiv experiments are represented in the release; external Suraj experiments stay at the linked pins. Observed tips:
+
+| Branch | Tip SHA |
+|---|---|
+| `claude/phase-r-integration-8abda6` | `50504e445fa2151b0c3dc9c8b9af557432b32dd7` |
+| `r/blindspot-mech` | `8961ebb1c0789f57dc1912c744f5600d961b3513` |
+| `r/blindspot-internals` | `3d9a97537b633a32c1a3a97738a8c23cda86e0a6` |
+| `codex/i2-tracks` | `d2b89a30f0da070c304109dc439f271405b4c1ed` |
+| `codex/i4-e96` | `f0943b0d13130fd66b3a890775671adee24d9698` |
+| `codex/w-mech2` | `97f6cec82809fcef6f838287c6802a54ce0d7acb` |

@@ -5099,3 +5099,16 @@ summary=dict(status='PASS',hash_checks=n,terminal_counts=counts,literal_flat_cop
 pathlib.Path('/tmp/rq_e95_stage2_custody_summary.json').write_text(json.dumps(summary,sort_keys=True));print(json.dumps(summary,sort_keys=True))
 ```
 </details>
+
+
+## E95 binding deadline disposition — 2026-10-30 15:39Z
+
+R-Q applies Guiv's canonical E95 deadline ruling `839b11162` (actual commit 13:44:08Z, nominal heading 14:50 CET): “If any is missing at 16:30, H-M1 is NOT EVALUABLE on the parts that need it”. The cutoff is **16:30 CET = 15:30Z**. At shared publication `9aff7e3aa`, after that cutoff, no replacement or complete original binding certification has arrived.
+
+| Rule | Own review / owner record | Disposition |
+|---|---|---|
+| All three original bindings certified by 15:30Z | Own publication check: no complete certification through `9aff7e3aa`; Track Q `78bce0d0c`, certification SHA `5b593bf594adaf76e01c32b460a40b3cc021486c208ee60f3e374309c096d916` and four member hashes independently exact at intake. Owner certification remains PARTIAL for placebo targets and NOT FOUND for original map operator/threshold and placebo-corrected single-site verdicts. | **H-M1 NOT EVALUABLE on the parts requiring those bindings**, under `839b11162`; this is a missing-binding disposition, not a negative measured H-M1 result. |
+| No reconstructed targets or substitute rule | Original E95 custody already independently closed: 1,026 primary placebo groups have target None (267 + 554 + 205). Track Q reports no original target/source-item/truth assignments for those pseudo-items. Ten E87-reuse rows are separate lineage; E96 uncorrected greedy statuses cannot supply the missing placebo-corrected verdict. | Preserve original missingness and source identity; no inferred labels, threshold or map verdict. Closed custody checks were not repeated. |
+| Permitted fallback | Canonical ruling permits exploratory, descriptive **non-placebo** naming counts per stage and layer, with missing counts and no map verdict. Track Q reports J available for 69/72 rows, E62 reference population 25 non-null rows, median 0.025462539008930134; these numeric source claims are intake, not a new independent J audit. | W-Lens fallback source/output seal remains **PENDING**; no fallback numerical review or full E95 scientific completion claimed. Registered analysis source/guard not invoked by R-Q. |
+
+This closes the deadline decision only. All original judging seals, once guards, prior custody reviews and financial qualifications remain unchanged. No worker entrypoint, parser, paid call, process or ledger action. E71 exploratory 40-item immutable sample-binding receipt remains separately pending; no duplicate request.

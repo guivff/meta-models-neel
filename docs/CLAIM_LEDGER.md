@@ -44,12 +44,12 @@ Status words follow the source file. 'author' = Suraj's own result; R-2…R-5, R
 | 14 | Exp 30 naming / unconditional per row | e.g. Python string 0.59 / 0.47; JSON 0.72 / 0.69; LaTeX 0.03 | 32 per row | S: experiments/30_naming_lora/results/eval30_S.json | author | Suraj | held-out clusters, k = 1 |
 | 14 | Exp 30 gate FVE | 0.504 / 0.512 / 0.507 | 192 per arm | S: eval30_{base,C,S}.json | P1 partly met | Suraj | 0.761 reference unreconciled |
 | 14 | Exp 30 P2–P5 | NOT MET ×3; P5 not scorable | — | S: experiments/30_naming_lora/RESULTS.md | registered | Suraj | — |
-| 15 | E104 steering | block 40, 8 positions before read token, α 8 = 2.23× median norm | 84 | G: BRIEF §213; results/g_agreement/understand/e104/vectors/public/NORMS.json | registered | R-Q | E104 per-item ratio 2.43 is a different definition |
+| 15 | E104 steering | block 40, 8 positions before read token, α 8 = 2.23× median norm | 84 | G: results/g_agreement/understand/e135/analysis/RESULTS.json (calibration.ratios['8'].steered = 2.231; median residual norm 80.67, 84 items × 8 positions) | registered | R-Q | E104 per-item ratio 2.43 is a different definition |
 | 15 | E104 random direction | 42/84 flips (steered 84/84) | 84 | G: results/g_agreement/understand/e104/analysis_once/RESULTS.json | — | R-Q | — |
 | 16 | E126 R per block | 0.013, 0.057, 0.663, 0.876, 0.871 | 84 | G: results/g_agreement/understand/e126/analysis/sealed_run/RESULTS.json | R-MED1 MET | R-Q | one bank, 2.2× push |
 | 16 | E126 controls | earlier 0.025–0.107; random −0.008–0.008 | 84 | G: same | — | R-Q | — |
 | 16 | E131 free text | 43/84 new; 41/84 neither | 84 | G: results/g_agreement/understand/e131/RESULTS.json | R-TX1 NOT MET | R-4 | — |
-| 16 | E109 reader S | −0.52 @44; +1.00 @52, 60 | 84 | G: results/g_agreement/understand/e109/analysis_once/RESULTS.json | R-AR1 MET | R-Q | — |
+| 16 | E109 reader S | −0.52 @44 (83 of 84 defined); +1.00 @52, 60 | 84 planned; 83 defined at 44 | G: results/g_agreement/understand/e109/analysis_once/RESULTS.json | R-AR1 MET | R-Q | — |
 | 17 | E135 under push (α 6) | easy 4/42; resistant 40/40 | 84 (2 missing) | G: results/g_agreement/understand/e135/analysis/RESULTS.json | descriptive (no confirmatory rule) | R-Q | post hoc groups; easy items do change |
 | 17 | No push (clean run) | 24/41; 42/42 | 83 | G: results/g_agreement/understand/companions248/C_amendment1_groups/RESULTS.json | exploratory §248C | R-Q | separate analysis |
 | 18 | Chain example | template-assembled text | — | G: results/g_agreement/understand/e137/bank137.py render()/trailing() | illustration | — | sealed items not in repo |
@@ -64,9 +64,8 @@ Status words follow the source file. 'author' = Suraj's own result; R-2…R-5, R
 | 20 | E138R donor / recipient | 63/84; 0/84 | 84 | G: results/g_agreement/understand/e138/correction_r/REPORT.md | post-output correction | R-5 | original E138 withdrawn |
 | 20 | E71 κ | 0.68 (3 classes), 0.46 (4) | 63 | G: results/g_agreement/understand/e71/human_guiv_20261030/RESULT.md | NOT MET | R-2 | one coder |
 | 20 | S16 vs E7 table column | 0.98 vs 0.39 | — | G: results/g_agreement/understand/e27/RESULTS.md | unreconciled | author | — |
-| 5, 22, 23 notes | Neel quotes | tasks that cannot be easily solved…; pay the NLA only for what the prompt text can't predict; what training objective would reward… | — | Neel MATS 12 central doc and metamodel brainstorm PDFs (attached by Guiv); extracted in narrative/v3/NEEL_HOOKS.md | quote | author | not in either repo |
 | 10 | Carries it: probe AUROC on critic rebuild (Oracle / NLA) | py_string 0.86/0.99, js 0.84/0.97, latex 0.87/1.00, py_arg 0.51/0.93, json 0.97/0.99, md_heading 0.65/0.70, md_list 0.48/0.49, code_lang 0.98/0.98 | 160 per row, k = 1 | S: experiments/25_public_exhibits/RESULTS.md, results/table25.md | author; registered predictions scored | Suraj | Oracle readouts are out of distribution for the NLA critic |
-| 10 | States it: judged (Oracle / NLA) | Oracle ≤ 0.009 every row; NLA 0.009–0.25 structural, code_lang 0.70 | 40 mining items × 8 | S: experiments/22_public_bank/results/score22.json | author; 'Oracle never states' 8/8 | Suraj | different split from carry |
+| 10 | States it: judged (Oracle / NLA) | Oracle ≤ 3/320 (0.94%) every row; NLA 0.009–0.25 structural, code_lang 0.70 | 40 mining items × 8 | S: experiments/22_public_bank/results/score22.json | author; 'Oracle never states' 8/8 | Suraj | different split from carry |
 | 5 | Best-of-N reference | Oracle any-of-11 layers 0.65; text-only best of 3 0.69 | 400 | S: experiments/06_resolving_decomposition/RESULTS.md §1 (OL grid, T_qwen_k3) | author | Suraj | not matched |
 | A11 | E139 proxy reward | fact +0.019; table +0.0085; nesting +0.0027; all true−false CIs include 0 | 20 per state | G: results/g_agreement/understand/e139/RESULTS.md | descriptive | R-2 | proxy, not exact reward |
 | A13 | E133 twin-swap R | 0.011, 0.045, 0.264, 0.320, 0.744 | 50 pairs | G: results/g_agreement/understand/e133/analysis/sealed_main/RESULTS.json | R-NL1 NOT MET | R-Q | recency confound |
