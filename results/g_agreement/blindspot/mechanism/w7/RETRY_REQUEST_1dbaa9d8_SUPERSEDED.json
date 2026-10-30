@@ -1,0 +1,289 @@
+{
+  "amendment_authority": "Guiv direct instruction: /weights/venv-kernels;900s setup outside0.3GPU-h science;unscored warm-up through every kernel path before timing;median of next3real units, never first call;everything else unchanged",
+  "analysis_command": [
+    "python",
+    "-m",
+    "projects.g_agreement.blindspot.w7_steering",
+    "analyse",
+    "--scores",
+    "RETRIEVED_SEALED_W7_SCORES",
+    "--out",
+    "NEW_W7_ANALYSIS_DIRECTORY"
+  ],
+  "at_utc": "2026-10-23T10:08:22.123773+00:00",
+  "base_worker_command": [
+    "/weights/venv-kernels/bin/python",
+    "-m",
+    "projects.g_agreement.blindspot.w7_steering",
+    "run",
+    "--bundle",
+    "/workspace/w7-inputs",
+    "--assets",
+    "ASSETS_JSON_FROM_INTEGRATOR",
+    "--assignment",
+    "EXACT_POD_ASSIGNMENT_JSON",
+    "--out",
+    "NEW_OUTPUT_DIRECTORY",
+    "--batch",
+    "4"
+  ],
+  "blocked_on": "integrator slot, runtime amendment and exact-pod assignment",
+  "branch": "r/blindspot-mech",
+  "brief_commit": "46f198e9c73b2687f570753ea89893e4f6a1923f",
+  "brief_path": "projects/g_agreement/BRIEF_BLINDSPOT.md",
+  "brief_sha256": "894b66eafde46440f151c364ae8297ca46bfbcccef22c7256b566523c1003bc7",
+  "budget_note": "900s retry setup allowance outside the cumulative0.3GPU-h science cap. Prior operator receipt books504.8s science;575.2s science remains before any additional ledger charges. No retroactive reclassification. Keep180s retrieval reserve,1.5x forecast margin and independent exact-pod hardstop. Integrator applies the authorized runtime amendment and records executed source.",
+  "cap_gpu_hours": 0.3,
+  "cap_gpu_seconds": 1080,
+  "collection_does_not_need": [
+    "W1 rule-(i) verdict or final reader outputs",
+    "target activations",
+    "S2 analysis or results",
+    "another priority direction export"
+  ],
+  "collection_needs": [
+    "registered pinned Qwen3.6-27B target backbone only; no AR/readers needed",
+    "sealed label-free W7 input archive above",
+    "exact-pod integrator assignment, staged/verified assets and independent external hardstop"
+  ],
+  "decision_rule": "Per row, predicted-direction probe minus mean five randoms >0 with template-cluster bootstrap95%CI excluding0; both rows required for CONFIRMED.",
+  "dose_calibration": {
+    "block": 44,
+    "candidate_multipliers": [
+      0.03125,
+      0.0625,
+      0.125,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "dose_scale": "positive dev class-mean projection gap along raw unit probe",
+    "edit": "plain additive; no renormalization",
+    "features": {
+      "prose_paren": {
+        "negative_value": "outside",
+        "positive_value": "inside",
+        "predicted_sign": 1,
+        "token": ")"
+      },
+      "table_column": {
+        "negative_value": "later",
+        "positive_value": "first",
+        "predicted_sign": -1,
+        "token": "|"
+      }
+    },
+    "n_items_per_row": 60,
+    "n_random": 5,
+    "position": "last real prefix token",
+    "ppl_max_ratio": 1.1,
+    "primary": "mean across three doses of predicted-sign half (+ minus -), probe minus mean five randoms",
+    "seed": 20261023,
+    "signed_doses": [
+      -1,
+      1
+    ],
+    "unrelated_n": 16,
+    "unrelated_tokens": 64
+  },
+  "entrypoint_files": {
+    "projects/g_agreement/blindspot/w7_steering.py": "f7844a0589745e993a3c02f08b48b9171c771385cddb494a4c515d79ecaae66f"
+  },
+  "environment": "/weights/venv-kernels",
+  "experiment": "W7",
+  "gpu_count": 1,
+  "gpu_hours_used": 0,
+  "immutable_ar_sha256": "69b1991881413ea5b07bd469427b1afca13538a2d065e7da39919878044db769",
+  "input_archive_bytes": 239113,
+  "input_archive_local": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/blindspot/mechanism/w7-inputs-325b7727.tar.gz",
+  "input_archive_reopened_and_verified": true,
+  "input_archive_sha256": "bee227bee30d5c2164e27289548540824587526c3d3adbdcf108793fdadf9e14",
+  "input_bundle_local": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/blindspot/mechanism/w7-inputs-325b7727",
+  "input_seal_sha256": "bcd289cd0ff262f809ff8fcf127578af25e0b44ba478f927a1ef2215f31153e6",
+  "inputs_changed": false,
+  "manifest_commit": "d72d7f1cda1f0ac0413bd2e22c2b291038b6bb88",
+  "manifest_path": "results/g_agreement/blindspot/mechanism/w7/INPUT_SEAL.json",
+  "manifest_sha256": "bcd289cd0ff262f809ff8fcf127578af25e0b44ba478f927a1ef2215f31153e6",
+  "mechanism_budget": "w7",
+  "operator_runtime_amendment": {
+    "base_worker_is_legacy_for_this_retry": true,
+    "execution": "Apply this receipt in the integrator runtime driver; the unmodified base worker command alone retains the superseded clock/gate and must not be launched as the retry.",
+    "logging": "Report setup and science separately, including failures and retrieval; preserve previous science504.8s exactly once and reconcile with integrator custody ledger; never silently reset science to1080s.",
+    "owner": "integrator",
+    "required": true,
+    "science_clock": "Begin after completed setup/warm-up; synchronize and record science_started_epoch. Enforce allocated science<=remaining cumulative science and deadline<=science_started_epoch+allocated science. Provider hardstop<=provider_created_epoch+900+allocated science. Preserve180s retrieval reserve.",
+    "source_binding": "Keep the base science source/input hashes below. Before compute, record and seal the exact execution driver/patch source bytes and hashes with the pod assignment; source_files must bind the bytes actually executed. This receipt does not claim a newly built retry worker."
+  },
+  "outcomes": {
+    "prose_paren": {
+      "predicted_direction": "positive / inside",
+      "token": ")"
+    },
+    "table_column": {
+      "predicted_direction": "negative / later",
+      "token": "|"
+    }
+  },
+  "population": {
+    "block": 44,
+    "features": [
+      "table_column",
+      "prose_paren"
+    ],
+    "items_per_row": 60,
+    "matched_pairs_per_row": 30,
+    "random_directions_per_row": 5,
+    "signed_doses": 3,
+    "unrelated_texts": 16,
+    "unrelated_tokens_per_text": 64
+  },
+  "previous_attempt": {
+    "outcome_scores": "none; prior calibration and NO_FIT are retained as historical evidence",
+    "receipt_path": "results/g_agreement/blindspot/mechanism/w7/attempt_v6e57330l9a64u/OPERATOR_RECEIPT.json",
+    "receipt_sha256": "99ae341a94e7c49ad14f1d9a409e22498bd418a738005e906d677adcf572f9a0",
+    "science_seconds": 504.8,
+    "setup_seconds": 194.4,
+    "status": "NO_FIT_STOP_at_registered_forecast_gate"
+  },
+  "previous_gpu_seconds": 504.8,
+  "priority_checks": "Block44 only; unit equals normalized raw coefficient; projected raw class-mean difference equals recorded dev gap; A-positive orientation and value names checked; raw intercept finite; source bank/label hashes match.",
+  "priority_commit": "325b77274748d91416fd902d7d3a5ece58d8e849",
+  "priority_direction_space": "raw_block44",
+  "priority_export_path": "results/g_agreement/blindspot/w1/priority_training",
+  "priority_fit_split": "dev",
+  "priority_metadata_path": "results/g_agreement/blindspot/w1/priority_training/probe_directions.json",
+  "priority_ref": "origin/r/blindspot",
+  "priority_seal_path": "results/g_agreement/blindspot/w1/priority_training/TRAINING_EXPORT_SEAL.json",
+  "priority_seal_sha256": "605eb7cbbd4fdc7b1d134b7e3091ff979e6dee37866005ee24ce534b38926202",
+  "publication_status": "LOCAL_RETRY_RECEIPT_FOR_INTEGRATOR_PUSH",
+  "publication_transport": "owner commits locally; integrator reads this worktree, operates pod and pushes per Guiv instruction",
+  "python_executable": "/weights/venv-kernels/bin/python",
+  "real_model_forwards": 0,
+  "recipient": "phase-r integrator",
+  "regression_tests": {
+    "passed": 35,
+    "receipt": "results/g_agreement/blindspot/mechanism/w7/PREPARATION.json",
+    "wall_s": 3.62
+  },
+  "remaining_science_gpu_seconds": 575.2,
+  "required_assignment": [
+    "issuer=integrator",
+    "experiment=W7",
+    "mechanism_budget=w7",
+    "gpu_count=1",
+    "exact pod_id",
+    "source_commit and exact source_files above (including W7 entrypoint)",
+    "brief_commit, brief_sha256, brief_registered=true, brief_pushed=true",
+    "provider_created_epoch, deadline_epoch, allocated_gpu_seconds, previous_gpu_seconds",
+    "external_hardstop_verified=true",
+    "manifest_committed=true",
+    "input_seal_sha256 above",
+    "setup_allowance_seconds=900;setup separate from science",
+    "environment=/weights/venv-kernels",
+    "previous_gpu_seconds>=504.8 and allocated_gpu_seconds<=575.2 subject to custody ledger",
+    "warm-up coverage/setup completion receipt",
+    "science_started_epoch and separate science deadline",
+    "sealed exact runtime driver/patch source and median-next3 timing receipt"
+  ],
+  "retry_scope": "one integrator-operated retry; no in-chain retries or allowance reset",
+  "schema": "w-mechanism-w7-retry-v1",
+  "science_cap_gpu_hours": 0.3,
+  "science_cap_gpu_seconds": 1080,
+  "scientific_changes": false,
+  "section": 76,
+  "setup": {
+    "allowance_seconds": 900,
+    "charged_as": "setup, separately logged outside science cap",
+    "clock_origin": "provider_created_epoch",
+    "completion_receipt": "Record warm-up path/shape coverage, actual dispatch, setup start/end and duration before science timing starts.",
+    "includes": [
+      "staging and environment/import verification",
+      "model loading",
+      "unscored warm-up through every kernel path and production shape/batch path used by W7",
+      "device synchronization after warm-up"
+    ],
+    "overrun_action": "stop; do not extend900s or transfer setup overruns to a new allowance",
+    "warmup_enters_dose_calibration_or_outcomes": false,
+    "warmup_enters_timing_sample": false,
+    "warmup_scored": false
+  },
+  "setup_allowance_seconds": 900,
+  "setup_outside_science_cap": true,
+  "source_archive_bytes": 112119,
+  "source_archive_local": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/blindspot/mechanism/w7-source-d72d7f1c.tar.gz",
+  "source_archive_reopened_and_verified": true,
+  "source_archive_sha256": "ed3355142449372924dc3190f0456ba869161922dfd557a0e946daffe13b8e82",
+  "source_commit": "d72d7f1cda1f0ac0413bd2e22c2b291038b6bb88",
+  "source_files": {
+    "common/__init__.py": "506e53bcb947c88a0e369f01760badc113ea1c7b4b378b6040ac1c2be0c70847",
+    "common/stats.py": "5b8bd4d3a0e23bf7a5487c2dbb2edbafa96d434f9cabd27d25940a42ab37ef2d",
+    "external/mats-nla-workspace/src/mats/__init__.py": "ff25a6253eabef5942d23dffff23fd5f4b86980617a791a138e053aa28e32c70",
+    "external/mats-nla-workspace/src/mats/capture.py": "bc69d7deee038326d28bd345d4bd76da43a615abd5fbe970a2ec245e72b8b179",
+    "external/mats-nla-workspace/src/mats/jspace.py": "0f1801ffba59bcc61c04e3c333b9b9ef66f939e5dd0159aba364a69226a0717d",
+    "external/mats-nla-workspace/src/mats/metrics.py": "17ff3b1467186a8c4e24e76ed52d2263b0201e651e2010d4b99bd47c25cda473",
+    "external/mats-nla-workspace/src/mats/probes.py": "955a7b516d97bee88b149bee1b8a3d9cdffaa7ef1b407cdef5cc4159f4677ae7",
+    "external/mats-nla-workspace/src/mats/readers/__init__.py": "addd3f183c8eada1b42628e89b8e024f50d3b30e92c459432f48eb12976f5572",
+    "external/mats-nla-workspace/src/mats/readers/jlens.py": "01b4717d31be411067a764396f8fe2b5acb1f13200661c3143a288bd31552e9d",
+    "external/mats-nla-workspace/src/mats/readers/nla.py": "e8ed65f4b97affbdb5a57cec87e4cf38472f20102974a105a3affb1ac27ab1d0",
+    "external/mats-nla-workspace/src/mats/readers/olens.py": "7866ac3aa66d96bee612e216a0cd45e0a76e1dd4e799f6aaa538c28addd0e86e",
+    "external/mats-nla-workspace/src/mats/textnla.py": "a2d3b5ae6ec2de49fb38bf92d1bf290f6a457eddecddf81482dc6b73ca432008",
+    "projects/g_agreement/BRIEF_BLINDSPOT.md": "894b66eafde46440f151c364ae8297ca46bfbcccef22c7256b566523c1003bc7",
+    "projects/g_agreement/blindspot/__init__.py": "c05787f4d7bd7af75682ccf57545f58627dbebc8ef0366baeb394ecf4c3c2855",
+    "projects/g_agreement/blindspot/analysis.py": "567b2b2161bedd77c15b449d852c71a02535c4b4b2c768af70de89dc9e7addec",
+    "projects/g_agreement/blindspot/items.py": "f99efd860106cabca8f5962b0a18b37cef12e2c21114a6eb30f6b6af6855c9b9",
+    "projects/g_agreement/blindspot/pod_run.sh": "1d0b5e2cf1c894fe8b99fdc233d90f5abf41e52468d96b6361c431ee5e0febb5",
+    "projects/g_agreement/blindspot/protocol.py": "6915990f9c2ef4f85beb35fdeb50daa530e9480f3bf6b62468fc7a83d9d23fc0",
+    "projects/g_agreement/blindspot/recall.py": "c97c663a5d2a920fe4033cbef1987b781256075256538d79d6a7efa1c9b2896d",
+    "projects/g_agreement/blindspot/run.py": "4e7e927c794553f9230a2bdc5d9f67c598ea74702a98b8e7fa209c23528178c4",
+    "projects/g_agreement/blindspot/stage.py": "de175e6f075825eafdd46538a584b5a08bc09d9b441b6ae4a42bf48bb3058a04",
+    "projects/g_agreement/blindspot/w1_templates.py": "c0ec4dc076ba316354280ae873194455823dd91008e50c1dc0ca69682438f144",
+    "projects/g_agreement/blindspot/w7_steering.py": "f7844a0589745e993a3c02f08b48b9171c771385cddb494a4c515d79ecaae66f",
+    "projects/g_agreement/manifest/assets.json": "17338edea7c12181f45b0dc1dc5fcd4673d6cf8e7c4323e8d657736236f96f91"
+  },
+  "status": "RETRY_REQUESTED_NOT_ASSIGNED",
+  "supersedes_request": "results/g_agreement/blindspot/mechanism/w7/LAUNCH_REQUEST_INITIAL.json",
+  "timing_gate": {
+    "cold_first_call_excluded": true,
+    "decision": "Stop NO_FIT if forecast exceeds remaining assigned science time minus unchanged180s retrieval reserve. No outcome-based row/dose/arm selection.",
+    "estimator": "median",
+    "margin": 1.5,
+    "n_real_units": 3,
+    "path_coverage": "Warm every kernel path before any gate. Use matching-path timing for each distinct path being extrapolated; do not extrapolate cold setup or unrelated paths.",
+    "receipt_fields": [
+      "all3raw unit times",
+      "unit work and shape",
+      "path identifiers",
+      "median used",
+      "remaining work",
+      "1.5x forecast",
+      "remaining science and absolute deadline"
+    ],
+    "sample_order": "the next3real scheduled units AFTER all kernel-path warm-up;never the first call",
+    "science_charged": true,
+    "supersedes": "the base worker calibration-average/token forecast and creation-relative setup-in-science admission",
+    "unit_definition": "Use representative production units for the path being forecast; record each unit work/shape and synchronized wall time. With differing work sizes, take the median seconds per work unit over exactly these3units.",
+    "warmup_excluded": true
+  },
+  "unchanged": [
+    "priority export325b7727/seal605eb7cb",
+    "frozen120IDs and unrelated texts",
+    "block44 raw vectors/orientation",
+    "60items per row;3signed doses;5same-norm random directions",
+    "PPL<=1.10 dose grid and dose seal before outcomes",
+    "native outcome tokens and predicted signs",
+    "cluster-bootstrap decision and both-row requirement",
+    "immutable ar_tests.py",
+    "science cap0.3GPU-h;180s retrieval reserve;1.5x forecast margin"
+  ],
+  "worker_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "PATH": "/weights/venv-kernels/bin:INTEGRATOR_SYSTEM_PATH",
+    "PYTHONPATH": "REPO_ROOT:REPO_ROOT/external/mats-nla-workspace/src",
+    "TRANSFORMERS_OFFLINE": "1",
+    "VIRTUAL_ENV": "/weights/venv-kernels",
+    "WANDB_MODE": "disabled"
+  }
+}

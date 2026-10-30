@@ -1,0 +1,12 @@
+{
+  "id": "dec27db1da84901e5b4da7f3",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured example format with labeled fields (\"Input:\", \"Output:\") establishes a pattern of paired demonstrations for a reasoning task. The model must recognize this as a complete, self-contained training prompt.\n\nThe phrase \"Record complete\" signals a closing statement, implying the entire block is a finished instruction set or log entry, with no further examples expected.\n\n\"Record complete.\" is the final token of a closing phrase (\"Training record: ... two examples. Record complete.\"), strongly constraining next tokens toward a period, newline, or a new prompt/response boundary.\n\"Compose a training record: two examples. Example 1: ... Example 2: ... Record complete.\" \u2014 the final phrase \"Record complete.\" serves as a terminal marker, suggesting the next token likely begins a new instruction, summary, or acknowledgment phrase like \"Done\" or \"End.\"\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured example format with labeled fields (\"Input:\", \"Output:\") establishes a pattern of paired demonstrations for a reasoning task. The model must recognize this as a complete, self-contained training prompt.\n\nThe phrase \"Record complete\" signals a closing statement, implying the entire block is a finished instruction set or log entry, with no further examples expected.\n\n\"Record complete.\" is the final token of a closing phrase (\"Training record: ... two examples. Record complete.\"), strongly constraining next tokens toward a period, newline, or a new prompt/response boundary.\n\"Compose a training record: two examples. Example 1: ... Example 2: ... Record complete.\" \u2014 the final phrase \"Record complete.\" serves as a terminal marker, suggesting the next token likely begins a new instruction, summary, or acknowledgment phrase like \"Done\" or \"End.\"",
+  "truncated": false
+}

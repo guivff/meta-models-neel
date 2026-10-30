@@ -1,0 +1,11 @@
+# E39 recovery owner reading — 2026-10-26
+
+§159 item4 (`4fddf03e`) authorises one pod to repeat only the unrecoverable B runs. The Integrator's cache note reports completed disk recovery, wiped containers,50verified runs, and approximately50925seconds provider custody. No E39 registered analysis or new score inspection is used to choose replacements.
+
+The requested allocation is13500seconds. The approximate prior total is context, never used as an exact ledger. Before launch, Integrator must bind actual provider creation/termination times for all six original pods, prove recovery complete and the exact four runs unrecoverable, and freeze their total as previous_gpu_seconds. The checker requires total prior custody+13500≤81000, including original retrieval time. The original science clock and warmed forecast formula remain unchanged. No attempt can reset prior custody to zero.
+
+A separate adapter entry point changes only the operational assignment check to allow these four runs on one pod. It calls the original byte-pinned worker, including the original RL-lens parity gate first, L/B warmups, seed20261026, fresh per-run adapters,800steps, all seven checkpoints and step800free outputs. No original pod-bound source, test, plan or manifest is edited.
+
+The analysis receipt references six original partial pulls plus the re-run pull. Its54-entry run_sources map selects the original source for50runs and the new source for precisely four B runs. Original assignment/RUN_RECEIPT bytes remain intact; partial lost-run files are ignored as entire runs, never spliced. All other transfer entries and all selected SCORE_SEALs must verify. Any formerly lost original run becoming fully recoverable stops validation for reconciliation; there is no score-based selection.
+
+The CPU analysis request now points to bound-v2, the actual input. A new collection validator admits the mixed custody and54unique runs; the scientific validation/statistics/rules from the original analyze.py are copied byte-for-byte. The once-only entry shares the original atomic claim path and has no reset/retry. The analysis code seal is refreshed, including previously stale hashes for the Integrator-redacted request/handoff document; the original pod-bound SOURCE_MANIFEST remains byte-identical.

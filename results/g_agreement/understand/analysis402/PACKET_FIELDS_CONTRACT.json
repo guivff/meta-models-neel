@@ -1,0 +1,35 @@
+{
+  "authority": "94a770cc(a)",
+  "command": [
+    "python",
+    "results/g_agreement/understand/analysis402/packet_fields.py",
+    "--blind",
+    "EXISTING_SEALED_BLIND_DIRECTORY",
+    "--out",
+    "NEW_PUBLIC_FIELDS_DIRECTORY"
+  ],
+  "handoff": "2c7d962d",
+  "judgment_adapter_owned_by": "W-internals per 94a770cc(b); original opaque IDs and original BLIND_SEAL identity remain authoritative",
+  "mapping": {
+    "id": "JUDGE_PACKET.id",
+    "property": "JUDGE_PACKET.property",
+    "readout": "JUDGE_PACKET.readout",
+    "value_A": "JUDGE_PACKET.values.A",
+    "value_B": "JUDGE_PACKET.values.B"
+  },
+  "output": "RUBRIC_FIELDS.json plus RUBRIC_FIELDS_SEAL.json bound to original BLIND_SEAL",
+  "public_field_order": [
+    "id",
+    "property",
+    "value_A",
+    "value_B",
+    "readout"
+  ],
+  "rules": [
+    "copy strings verbatim; no normalization or truth-dependent ordering",
+    "render property then value_A then value_B into W-internals frozen E56 rubric renderer",
+    "no true label, row metadata, reader, arm, source item or private key",
+    "existing sealed JUDGE_PACKET and BLIND_SEAL are not rewritten",
+    "S6 EVAL_PACKET uses its own frozen rubric, not binary values"
+  ]
+}

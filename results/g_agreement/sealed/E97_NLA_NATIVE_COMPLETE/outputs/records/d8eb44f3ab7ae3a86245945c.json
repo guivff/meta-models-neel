@@ -1,0 +1,12 @@
+{
+  "id": "d8eb44f3ab7ae3a86245945c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task: \"love\" or \"hate\" only, with a Chinese example provided.\n\nThe example sentence \"The weather is very good today\" is clearly neutral/positive, not hate speech, so the model must output \"love\" or a short label.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"love\" or \"hate\") to follow.\n\"Given the following instruction: [definition]... Example sentence: 'The weather is very good today.'\nClassification: Determine whether it expresses love or hate.\nExample sentence: 'The weather is very good today.'\nReply:\" \u2014 the final \"Reply:\" token demands the concise classification answer as the very next token.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task: \"love\" or \"hate\" only, with a Chinese example provided.\n\nThe example sentence \"The weather is very good today\" is clearly neutral/positive, not hate speech, so the model must output \"love\" or a short label.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"love\" or \"hate\") to follow.\n\"Given the following instruction: [definition]... Example sentence: 'The weather is very good today.'\nClassification: Determine whether it expresses love or hate.\nExample sentence: 'The weather is very good today.'\nReply:\" \u2014 the final \"Reply:\" token demands the concise classification answer as the very next token.",
+  "truncated": false
+}

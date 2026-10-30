@@ -1,0 +1,92 @@
+{
+  "aggregate_cap_seconds": 10800,
+  "bank_seal": {
+    "path": "results/g_agreement/understand/e46/BANK_SEAL.json",
+    "sha256": "1cd611a3a9b6cbddc48dba2ab235438e91d56120ce90b36862999e8ab9e28598"
+  },
+  "candidates": {
+    "path": "results/g_agreement/understand/e46/CANDIDATES.json",
+    "sha256": "97a7af56910407495e5792dfd4ba3ac9e41cb898aebfcc82bfd59447ac02677d"
+  },
+  "capture_items": 672,
+  "channels": [
+    "probe",
+    "oracle_descriptive",
+    "nla"
+  ],
+  "continuation_channel": false,
+  "eligible_rows": [
+    "fenced_code",
+    "latex_list",
+    "number_completion",
+    "word_first_piece"
+  ],
+  "experiment": "E46_READERS",
+  "minimum_prior_gpu_seconds": 221.03553318977356,
+  "parity_inputs": {
+    "path": "results/g_agreement/understand/e36/cache/w1_parity_2026-10-26/INPUT_SEAL.json",
+    "sha256": "c41970528477a88e15144b7822e9d07e592ad21e340d65ba312d4513532c8aae"
+  },
+  "persistence_medians": {
+    "path": "results/g_agreement/understand/e46/persistence_2026-10-26/ROW_MEDIANS.json",
+    "sha256": "3b5320f448ad48b6bcdb137425f3833f5cdb4e74d01aa225e3f70b8d47d3352f"
+  },
+  "persistence_seal": {
+    "path": "results/g_agreement/understand/e46/persistence_2026-10-26/PERSISTENCE_SEAL.json",
+    "sha256": "96f8c9c28c40fc87586e3a7b81e9e7eebdd26f6f5129de11838548c9bb828e38"
+  },
+  "prior_gpu_seconds_policy": "Integrator supplies full actual earlier E46 custody, including retrieval and termination; minimum is recorded acquisition custody only. Deduct it from 10800.",
+  "probe_recipe": {
+    "block": 44,
+    "folds": 5,
+    "function": "grouped_probe",
+    "function_sha256": "efb813baaa666fb6c23dc4e12e8dd544c11b24d5d65011096105b186eee0106c",
+    "group": "cluster",
+    "lambda": 0.001,
+    "positive": "values[0]",
+    "seed": 20261023,
+    "source": "projects/g_agreement/blindspot/analysis.py",
+    "split": "test",
+    "train_only_standardization": true
+  },
+  "reader_items": {
+    "path": "results/g_agreement/understand/e46/cache/readers_2026-10-26/items.jsonl",
+    "sha256": "4cc1d777f902bbd545d7b8bc040445f8ee6add6737c91d3e875c61c08bd55f55"
+  },
+  "reference_seal": {
+    "path": "results/g_agreement/understand/e36/analysis_overnight149/ANALYSIS_SEAL.json",
+    "sha256": "131472d7849b0c9edddabd2f2048564cc69041acb4bbc41098b623ed484b9497"
+  },
+  "registered_revisions": {
+    "model": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+    "nla": "5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f",
+    "olens": "c95215d5d2f6250f20c305ae55c6e4d7569f92dc"
+  },
+  "registration": "\u00a7157; clarification 1",
+  "source_files": {
+    "external/mats-nla-workspace/src/mats/capture.py": "bc69d7deee038326d28bd345d4bd76da43a615abd5fbe970a2ec245e72b8b179",
+    "external/mats-nla-workspace/src/mats/metrics.py": "17ff3b1467186a8c4e24e76ed52d2263b0201e651e2010d4b99bd47c25cda473",
+    "external/mats-nla-workspace/src/mats/probes.py": "955a7b516d97bee88b149bee1b8a3d9cdffaa7ef1b407cdef5cc4159f4677ae7",
+    "external/mats-nla-workspace/src/mats/readers/nla.py": "e8ed65f4b97affbdb5a57cec87e4cf38472f20102974a105a3affb1ac27ab1d0",
+    "external/mats-nla-workspace/src/mats/readers/olens.py": "7866ac3aa66d96bee612e216a0cd45e0a76e1dd4e799f6aaa538c28addd0e86e",
+    "projects/g_agreement/blindspot/analysis.py": "45a06d29445cc678fb4e71edce4944b7e481357662a1d59f8c8203a3c4e4d75c",
+    "projects/g_agreement/blindspot/protocol.py": "b2e7fa0bdeb9c7695a80663874f88cb71132ff4336b2d3d0a3e14b90bc66308d",
+    "projects/g_agreement/blindspot/run.py": "a3a29bb96a3ebbb4c2551e6321e87517b1c6d63c7250b94836a94dcd31798d41",
+    "projects/g_agreement/manifest/assets.json": "17338edea7c12181f45b0dc1dc5fcd4673d6cf8e7c4323e8d657736236f96f91",
+    "projects/g_agreement/understand/e15.py": "24f6cd56001bf6ad371fa4b5458272abc5dff743c8aa25e3d6b727287cc90eb5",
+    "results/g_agreement/understand/e36/channel_contract.py": "25615272f50349d912504a7d0b5edeca4a85bc63626168bb59905681b39472d7",
+    "results/g_agreement/understand/e36/parity_gate.py": "66038ee658e2772d48587cb54e1d9c514964810b7e3cb3a4db5bbf230c2392d2",
+    "results/g_agreement/understand/e36/worker.py": "0732fdc76f788c0b1ff650381881eb2240bd897e97328b88ac699940bc8c391e",
+    "results/g_agreement/understand/e46/analyze_readers_once.py": "825f3617b6c81e12f4c97fd09aedc43c0df59ec2b6fccbd3ccf1e00214e163a6",
+    "results/g_agreement/understand/e46/io46.py": "7165ba8658b2173c70ad94530375b2c0f7c208a1724bf0ae3475a3b0978d24d0",
+    "results/g_agreement/understand/e46/prepare_readers.py": "2ca0778d0551030344d24d134ef1044cc5bde36d94c12fe965763fcbfa1da59c",
+    "results/g_agreement/understand/e46/reader_worker.py": "91bf1f0f0e57622cbfb4a5d0b23942839228fb290d1c24af79e1e9ad542aff1c",
+    "results/g_agreement/understand/e46/test_readers.py": "bdd26267fd098ef746ea087fcf4de47c5efadf394641c52a7fd5ec8f7abdaf91"
+  },
+  "state_seal": {
+    "path": "results/g_agreement/understand/e46/STATE_FUNCTION_SEAL.json",
+    "sha256": "e3a002597cd7d69b558c41e5bf45304f01a1ed9a14e3e437e6548237bbede25e"
+  },
+  "test_items": 336,
+  "value_word_channel": false
+}

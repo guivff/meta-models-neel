@@ -1,0 +1,66 @@
+[
+  {
+    "id": "f66ebd47e4c81469bff9cbce",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 7, 1]  # depth, [7\n- 2, 3, 1]  # stack of depths, or just [7,\n- 2, 3, 4]  # (inner list) + [7, 2, 3\n- [7, 2, 1], [\"start\", 7, 2, 1]]  # depth, [7,",
+      "text": "- 2, 7, 1]  # depth, [7\n- 2, 3, 1]  # stack of depths, or just [7,\n- 2, 3, 4]  # (inner list) + [7, 2, 3\n- [7, 2, 1], [\"start\", 7, 2, 1]]  # depth, [7,"
+    }
+  },
+  {
+    "id": "cfaac0907888ba31cad61f32",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3, 1]  # depth of each node in the tree, [7\n- 2, 3]  # inner list: [7,\n- 2, 3, 1]  # depth of each node in the tree, or [7, 2,\n- [2, 3, 1], [\"a\", \"b\", \"c\"]]  # The inner list is the stack trace: [7,",
+      "text": "- 2, 3, 1]  # depth of each node in the tree, [7\n- 2, 3]  # inner list: [7,\n- 2, 3, 1]  # depth of each node in the tree, or [7, 2,\n- [2, 3, 1], [\"a\", \"b\", \"c\"]]  # The inner list is the stack trace: [7,"
+    }
+  },
+  {
+    "id": "fd2e2701b7a77488c8bfa5b8",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (7, 3)), (1,\n- 1), (7, 2), ...), (merge, 10), (merge,\n- 0), (7, 1)]),  # \u6700\u5185\u5c42\uff1a\u53f6\u5b50\u8282\u70b9 (7,\n- 1), (2, 2), (3, 4)]` \u8fd9\u6837\u7684\u5d4c\u5957\u5143\u7ec4\uff0c\u4ee3\u8868\u4e00\u68f5\u8bed\u6cd5\u6811\u6216\u5408\u5e76\u6811\u3002\n\n---\n\n###",
+      "text": "- 2), (7, 3)), (1,\n- 1), (7, 2), ...), (merge, 10), (merge,\n- 0), (7, 1)]),  # \u6700\u5185\u5c42\uff1a\u53f6\u5b50\u8282\u70b9 (7,\n- 1), (2, 2), (3, 4)]` \u8fd9\u6837\u7684\u5d4c\u5957\u5143\u7ec4\uff0c\u4ee3\u8868\u4e00\u68f5\u8bed\u6cd5\u6811\u6216\u5408\u5e76\u6811\u3002\n\n---\n\n###"
+    }
+  },
+  {
+    "id": "377fc7dddab70ff641e3712e",
+    "output": {
+      "malformed": false,
+      "raw": "- 10), (7, 11)), (7,\n- 10), (7, 11)]),  # \u5185\u90e8\u8282\u70b9 (7,\n- 2), (7, 3)]),  # \u7b2c\u4e00\u5c42\uff1a\u5408\u5e76\u64cd\u4f5c (start, end) \u6216 (start,\n- 1), (2, 2), (3, 3)]` \u8fd9\u6837\u7684\u5143\u7ec4\u5217\u8868\uff0c\u4ee3\u8868\u8bed\u6cd5\u6811\u7684\u6784\u5efa\u8fc7\u7a0b\u3002\n\n---\n\n###",
+      "text": "- 10), (7, 11)), (7,\n- 10), (7, 11)]),  # \u5185\u90e8\u8282\u70b9 (7,\n- 2), (7, 3)]),  # \u7b2c\u4e00\u5c42\uff1a\u5408\u5e76\u64cd\u4f5c (start, end) \u6216 (start,\n- 1), (2, 2), (3, 3)]` \u8fd9\u6837\u7684\u5143\u7ec4\u5217\u8868\uff0c\u4ee3\u8868\u8bed\u6cd5\u6811\u7684\u6784\u5efa\u8fc7\u7a0b\u3002\n\n---\n\n###"
+    }
+  },
+  {
+    "id": "a739f059a2156617dab516f8",
+    "output": {
+      "malformed": false,
+      "raw": "- 2) (line, position) \u2192 (1,\n- 2) \u2192 (1, 2) (start, end) of the first `(`)\n- 1) (line, position) \u2190 This is the first `(` \u2192 (1, 1\n- 2) \u2190 position of first `(`, (1, 2) \u2190 position of second `(`, (1,",
+      "text": "- 2) (line, position) \u2192 (1,\n- 2) \u2192 (1, 2) (start, end) of the first `(`)\n- 1) (line, position) \u2190 This is the first `(` \u2192 (1, 1\n- 2) \u2190 position of first `(`, (1, 2) \u2190 position of second `(`, (1,"
+    }
+  },
+  {
+    "id": "9be52a07494496960434e980",
+    "output": {
+      "malformed": false,
+      "raw": "- 2) (start, end), (1,\n- 2, 3)  # (line, index) \u2192 (1,\n- 2, 3)  # (depth, index) \u2192 (1, 2\n- 1, 2)  \u2190 inner tuple (line, index) \u2192 (1, 2) \u2192 (1, 2)",
+      "text": "- 2) (start, end), (1,\n- 2, 3)  # (line, index) \u2192 (1,\n- 2, 3)  # (depth, index) \u2192 (1, 2\n- 1, 2)  \u2190 inner tuple (line, index) \u2192 (1, 2) \u2192 (1, 2)"
+    }
+  },
+  {
+    "id": "48b109576fe2c12432d3aca6",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (3, 4))],  # Inner tuple: (1,\n- 2), (3, 4)]), (5, 6)]))  # Top-level tuple\n- 1), (2, 2)]), ... ]  # \u6700\u5185\u5c42\u662f\u5143\u7ec4 (1,\n- 2), (3, 4)]` \u2192 \u5c55\u5f00\u4e3a `(1, 2), (3, 4)`\uff0c\u518d\u5d4c\u5957\u8fdb `",
+      "text": "- 2), (3, 4))],  # Inner tuple: (1,\n- 2), (3, 4)]), (5, 6)]))  # Top-level tuple\n- 1), (2, 2)]), ... ]  # \u6700\u5185\u5c42\u662f\u5143\u7ec4 (1,\n- 2), (3, 4)]` \u2192 \u5c55\u5f00\u4e3a `(1, 2), (3, 4)`\uff0c\u518d\u5d4c\u5957\u8fdb `"
+    }
+  },
+  {
+    "id": "c066ed2a82dda87a010132e9",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (3, 4))],  # \u7b2c\u4e00\u5c42\u5143\u7ec4\n- 2), (3, 4)]), (1,\n- 1), (2, 2)]), (3, 4)]  # \u6700\u5185\u5c42\u5f00\u59cb\uff0c\u7136\u540e\u5c55\u5f00\n- 2), (3, 4)]` \u88ab\u5c55\u5f00\uff0c\u7136\u540e `(1, 2), (3, 4)` \u88ab\u5c55\u5f00\uff0c",
+      "text": "- 2), (3, 4))],  # \u7b2c\u4e00\u5c42\u5143\u7ec4\n- 2), (3, 4)]), (1,\n- 1), (2, 2)]), (3, 4)]  # \u6700\u5185\u5c42\u5f00\u59cb\uff0c\u7136\u540e\u5c55\u5f00\n- 2), (3, 4)]` \u88ab\u5c55\u5f00\uff0c\u7136\u540e `(1, 2), (3, 4)` \u88ab\u5c55\u5f00\uff0c"
+    }
+  }
+]

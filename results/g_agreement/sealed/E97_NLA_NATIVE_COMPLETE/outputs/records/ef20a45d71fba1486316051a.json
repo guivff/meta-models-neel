@@ -1,0 +1,12 @@
+{
+  "id": "ef20a45d71fba1486316051a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: a rule is given, then a task is assigned, now requiring a model response demonstrating the rule applied.\n\nThe rule explicitly states \"the answer should be based on the historical background of the United States,\" so the model must generate an explanation referencing US history for a given article.\n\n\"Answer:\" is the final token, functioning as a response label in a few-shot or instruction template, immediately requiring the model's generated explanation text (e.g., \"The article...\").\n\"Please generate an explanation based on the following instruction: [instruction]\nArticle type: [type]\nInstruction: The answer should be based on the historical background of the United States.\nAnswer:\" \u2014 this structure demands the model now produce the actual explanatory output, likely beginning with a sample response or template sentence about the article's explanation.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: a rule is given, then a task is assigned, now requiring a model response demonstrating the rule applied.\n\nThe rule explicitly states \"the answer should be based on the historical background of the United States,\" so the model must generate an explanation referencing US history for a given article.\n\n\"Answer:\" is the final token, functioning as a response label in a few-shot or instruction template, immediately requiring the model's generated explanation text (e.g., \"The article...\").\n\"Please generate an explanation based on the following instruction: [instruction]\nArticle type: [type]\nInstruction: The answer should be based on the historical background of the United States.\nAnswer:\" \u2014 this structure demands the model now produce the actual explanatory output, likely beginning with a sample response or template sentence about the article's explanation.",
+  "truncated": false
+}

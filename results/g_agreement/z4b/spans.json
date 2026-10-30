@@ -1,0 +1,5817 @@
+{
+ "rule": "question = user-text tokens after the last '.' before the '?' through the end of the user text; template = tokens after the user text; last3 = final 3; halves by count (first = floor(n/2)); names_objects_only = differing positions",
+ "summary": {
+  "pairs": 32,
+  "methods": [
+   "offsets"
+  ],
+  "period_ordinal": {
+   "1": 38,
+   "2": 26
+  },
+  "question_only": {
+   "min": 9,
+   "max": 13,
+   "mean": 11.25
+  },
+  "template_only": {
+   "min": 9,
+   "max": 9,
+   "mean": 9.0
+  },
+  "last3": {
+   "min": 3,
+   "max": 3,
+   "mean": 3.0
+  },
+  "question_first_half": {
+   "min": 4,
+   "max": 6,
+   "mean": 5.21875
+  },
+  "question_second_half": {
+   "min": 5,
+   "max": 7,
+   "mean": 6.03125
+  },
+  "names_objects_only": {
+   "min": 2,
+   "max": 4,
+   "mean": 3.9375
+  }
+ },
+ "pairs": {
+  "xown-02": {
+   "pair_id": "xown-02",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-02A",
+    "template_id": "own-t3",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Which of them owns the orange lamp? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-02B",
+    "template_id": "own-t3",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Which of them owns the orange lamp? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " grey/ orange",
+    " ball/ lamp",
+    " orange/ grey",
+    " lamp/ ball"
+   ]
+  },
+  "xown-03": {
+   "pair_id": "xown-03",
+   "family": "ownership",
+   "n_tokens": 41,
+   "arms": {
+    "question_only": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "template_only": [
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "last3": [
+     38,
+     39,
+     40
+    ],
+    "question_first_half": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_second_half": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "names_objects_only": [
+     8,
+     9,
+     16,
+     17
+    ]
+   },
+   "A": {
+    "item_id": "xown-03A",
+    "template_id": "own-t2",
+    "n_tokens": 41,
+    "method": "offsets",
+    "user_span": [
+     3,
+     32
+    ],
+    "period_pos": 18,
+    "period_ordinal": 1,
+    "question_only": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "template_only": [
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "last3": [
+     38,
+     39,
+     40
+    ],
+    "question_first_half": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_second_half": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "question_text": " Who is holding the red key? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-03B",
+    "template_id": "own-t2",
+    "n_tokens": 41,
+    "method": "offsets",
+    "user_span": [
+     3,
+     32
+    ],
+    "period_pos": 18,
+    "period_ordinal": 1,
+    "question_only": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "template_only": [
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "last3": [
+     38,
+     39,
+     40
+    ],
+    "question_first_half": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_second_half": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "question_text": " Who is holding the red key? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " black/ red",
+    " bag/ key",
+    " red/ black",
+    " key/ bag"
+   ]
+  },
+  "xown-04": {
+   "pair_id": "xown-04",
+   "family": "ownership",
+   "n_tokens": 37,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "template_only": [
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "last3": [
+     34,
+     35,
+     36
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "question_second_half": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-04A",
+    "template_id": "own-t1",
+    "n_tokens": 37,
+    "method": "offsets",
+    "user_span": [
+     3,
+     28
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "template_only": [
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "last3": [
+     34,
+     35,
+     36
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "question_second_half": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "question_text": " Who has the green hat? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-04B",
+    "template_id": "own-t1",
+    "n_tokens": 37,
+    "method": "offsets",
+    "user_span": [
+     3,
+     28
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "template_only": [
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "last3": [
+     34,
+     35,
+     36
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "question_second_half": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "question_text": " Who has the green hat? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " white/ green",
+    " pen/ hat",
+    " green/ white",
+    " hat/ pen"
+   ]
+  },
+  "xown-05": {
+   "pair_id": "xown-05",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-05A",
+    "template_id": "own-t4",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who keeps the green bottle? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-05B",
+    "template_id": "own-t4",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who keeps the green bottle? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " green/ pink",
+    " bottle/ scarf",
+    " pink/ green",
+    " scarf/ bottle"
+   ]
+  },
+  "xown-06": {
+   "pair_id": "xown-06",
+   "family": "ownership",
+   "n_tokens": 34,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-06A",
+    "template_id": "own-t5",
+    "n_tokens": 34,
+    "method": "offsets",
+    "user_span": [
+     3,
+     25
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_text": " Who carries the blue rope? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-06B",
+    "template_id": "own-t5",
+    "n_tokens": 34,
+    "method": "offsets",
+    "user_span": [
+     3,
+     25
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_text": " Who carries the blue rope? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " blue/ red",
+    " rope/ flag",
+    " red/ blue",
+    " flag/ rope"
+   ]
+  },
+  "xown-07": {
+   "pair_id": "xown-07",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-07A",
+    "template_id": "own-t3",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Which of them owns the black bag? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-07B",
+    "template_id": "own-t3",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Which of them owns the black bag? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " black/ brown",
+    " bag/ coat",
+    " brown/ black",
+    " coat/ bag"
+   ]
+  },
+  "xown-08": {
+   "pair_id": "xown-08",
+   "family": "ownership",
+   "n_tokens": 40,
+   "arms": {
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     15,
+     16
+    ]
+   },
+   "A": {
+    "item_id": "xown-08A",
+    "template_id": "own-t2",
+    "n_tokens": 40,
+    "method": "offsets",
+    "user_span": [
+     3,
+     31
+    ],
+    "period_pos": 17,
+    "period_ordinal": 1,
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "question_text": " Who is holding the green hat? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-08B",
+    "template_id": "own-t2",
+    "n_tokens": 40,
+    "method": "offsets",
+    "user_span": [
+     3,
+     31
+    ],
+    "period_pos": 17,
+    "period_ordinal": 1,
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "question_text": " Who is holding the green hat? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " brown/ green",
+    " coat/ hat",
+    " green/ brown",
+    " hat/ coat"
+   ]
+  },
+  "xown-09": {
+   "pair_id": "xown-09",
+   "family": "ownership",
+   "n_tokens": 37,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "template_only": [
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "last3": [
+     34,
+     35,
+     36
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "question_second_half": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "names_objects_only": [
+     8,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-09A",
+    "template_id": "own-t1",
+    "n_tokens": 37,
+    "method": "offsets",
+    "user_span": [
+     3,
+     28
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "template_only": [
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "last3": [
+     34,
+     35,
+     36
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "question_second_half": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "question_text": " Who has the red key? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-09B",
+    "template_id": "own-t1",
+    "n_tokens": 37,
+    "method": "offsets",
+    "user_span": [
+     3,
+     28
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "template_only": [
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "last3": [
+     34,
+     35,
+     36
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "question_second_half": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "question_text": " Who has the red key? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " key/ flag",
+    " flag/ key"
+   ]
+  },
+  "xown-10": {
+   "pair_id": "xown-10",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-10A",
+    "template_id": "own-t4",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who keeps the black bag? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-10B",
+    "template_id": "own-t4",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who keeps the black bag? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " black/ red",
+    " bag/ key",
+    " red/ black",
+    " key/ bag"
+   ]
+  },
+  "xown-11": {
+   "pair_id": "xown-11",
+   "family": "ownership",
+   "n_tokens": 34,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-11A",
+    "template_id": "own-t5",
+    "n_tokens": 34,
+    "method": "offsets",
+    "user_span": [
+     3,
+     25
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_text": " Who carries the green bottle? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-11B",
+    "template_id": "own-t5",
+    "n_tokens": 34,
+    "method": "offsets",
+    "user_span": [
+     3,
+     25
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_text": " Who carries the green bottle? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " green/ red",
+    " bottle/ key",
+    " red/ green",
+    " key/ bottle"
+   ]
+  },
+  "xown-12": {
+   "pair_id": "xown-12",
+   "family": "ownership",
+   "n_tokens": 35,
+   "arms": {
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "names_objects_only": [
+     6,
+     7,
+     12,
+     13
+    ]
+   },
+   "A": {
+    "item_id": "xown-12A",
+    "template_id": "own-t3",
+    "n_tokens": 35,
+    "method": "offsets",
+    "user_span": [
+     3,
+     26
+    ],
+    "period_pos": 14,
+    "period_ordinal": 2,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "question_text": " Which of them owns the green hat? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-12B",
+    "template_id": "own-t3",
+    "n_tokens": 35,
+    "method": "offsets",
+    "user_span": [
+     3,
+     26
+    ],
+    "period_pos": 14,
+    "period_ordinal": 2,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "question_text": " Which of them owns the green hat? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " green/ yellow",
+    " hat/ box",
+    " yellow/ green",
+    " box/ hat"
+   ]
+  },
+  "xown-13": {
+   "pair_id": "xown-13",
+   "family": "ownership",
+   "n_tokens": 41,
+   "arms": {
+    "question_only": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "template_only": [
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "last3": [
+     38,
+     39,
+     40
+    ],
+    "question_first_half": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_second_half": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "names_objects_only": [
+     8,
+     9,
+     16,
+     17
+    ]
+   },
+   "A": {
+    "item_id": "xown-13A",
+    "template_id": "own-t2",
+    "n_tokens": 41,
+    "method": "offsets",
+    "user_span": [
+     3,
+     32
+    ],
+    "period_pos": 18,
+    "period_ordinal": 1,
+    "question_only": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "template_only": [
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "last3": [
+     38,
+     39,
+     40
+    ],
+    "question_first_half": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_second_half": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "question_text": " Who is holding the purple book? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-13B",
+    "template_id": "own-t2",
+    "n_tokens": 41,
+    "method": "offsets",
+    "user_span": [
+     3,
+     32
+    ],
+    "period_pos": 18,
+    "period_ordinal": 1,
+    "question_only": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "template_only": [
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "last3": [
+     38,
+     39,
+     40
+    ],
+    "question_first_half": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_second_half": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "question_text": " Who is holding the purple book? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " yellow/ purple",
+    " box/ book",
+    " purple/ yellow",
+    " book/ box"
+   ]
+  },
+  "xown-14": {
+   "pair_id": "xown-14",
+   "family": "ownership",
+   "n_tokens": 37,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "template_only": [
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "last3": [
+     34,
+     35,
+     36
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "question_second_half": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-14A",
+    "template_id": "own-t1",
+    "n_tokens": 37,
+    "method": "offsets",
+    "user_span": [
+     3,
+     28
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "template_only": [
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "last3": [
+     34,
+     35,
+     36
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "question_second_half": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "question_text": " Who has the green hat? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-14B",
+    "template_id": "own-t1",
+    "n_tokens": 37,
+    "method": "offsets",
+    "user_span": [
+     3,
+     28
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "template_only": [
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "last3": [
+     34,
+     35,
+     36
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "question_second_half": [
+     22,
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "question_text": " Who has the green hat? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " purple/ green",
+    " book/ hat",
+    " green/ purple",
+    " hat/ book"
+   ]
+  },
+  "xown-15": {
+   "pair_id": "xown-15",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-15A",
+    "template_id": "own-t4",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who keeps the grey ball? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-15B",
+    "template_id": "own-t4",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who keeps the grey ball? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " silver/ grey",
+    " ring/ ball",
+    " grey/ silver",
+    " ball/ ring"
+   ]
+  },
+  "xown-16": {
+   "pair_id": "xown-16",
+   "family": "ownership",
+   "n_tokens": 34,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-16A",
+    "template_id": "own-t5",
+    "n_tokens": 34,
+    "method": "offsets",
+    "user_span": [
+     3,
+     25
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_text": " Who carries the grey ball? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-16B",
+    "template_id": "own-t5",
+    "n_tokens": 34,
+    "method": "offsets",
+    "user_span": [
+     3,
+     25
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_text": " Who carries the grey ball? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " grey/ white",
+    " ball/ pen",
+    " white/ grey",
+    " pen/ ball"
+   ]
+  },
+  "xown-17": {
+   "pair_id": "xown-17",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-17A",
+    "template_id": "own-t3",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Which of them owns the yellow box? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-17B",
+    "template_id": "own-t3",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Which of them owns the yellow box? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " red/ yellow",
+    " flag/ box",
+    " yellow/ red",
+    " box/ flag"
+   ]
+  },
+  "xown-18": {
+   "pair_id": "xown-18",
+   "family": "ownership",
+   "n_tokens": 41,
+   "arms": {
+    "question_only": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "template_only": [
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "last3": [
+     38,
+     39,
+     40
+    ],
+    "question_first_half": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_second_half": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "names_objects_only": [
+     8,
+     9,
+     16,
+     17
+    ]
+   },
+   "A": {
+    "item_id": "xown-18A",
+    "template_id": "own-t2",
+    "n_tokens": 41,
+    "method": "offsets",
+    "user_span": [
+     3,
+     32
+    ],
+    "period_pos": 18,
+    "period_ordinal": 1,
+    "question_only": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "template_only": [
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "last3": [
+     38,
+     39,
+     40
+    ],
+    "question_first_half": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_second_half": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "question_text": " Who is holding the black bag? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-18B",
+    "template_id": "own-t2",
+    "n_tokens": 41,
+    "method": "offsets",
+    "user_span": [
+     3,
+     32
+    ],
+    "period_pos": 18,
+    "period_ordinal": 1,
+    "question_only": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "template_only": [
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "last3": [
+     38,
+     39,
+     40
+    ],
+    "question_first_half": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_second_half": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "question_text": " Who is holding the black bag? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " black/ blue",
+    " bag/ cup",
+    " blue/ black",
+    " cup/ bag"
+   ]
+  },
+  "xown-19": {
+   "pair_id": "xown-19",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     6,
+     7,
+     12,
+     13
+    ]
+   },
+   "A": {
+    "item_id": "xown-19A",
+    "template_id": "own-t1",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 14,
+    "period_ordinal": 2,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who has the orange lamp? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-19B",
+    "template_id": "own-t1",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 14,
+    "period_ordinal": 2,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who has the orange lamp? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " white/ orange",
+    " pen/ lamp",
+    " orange/ white",
+    " lamp/ pen"
+   ]
+  },
+  "xown-20": {
+   "pair_id": "xown-20",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-20A",
+    "template_id": "own-t4",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who keeps the gold coin? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-20B",
+    "template_id": "own-t4",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who keeps the gold coin? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " blue/ gold",
+    " rope/ coin",
+    " gold/ blue",
+    " coin/ rope"
+   ]
+  },
+  "xown-21": {
+   "pair_id": "xown-21",
+   "family": "ownership",
+   "n_tokens": 34,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-21A",
+    "template_id": "own-t5",
+    "n_tokens": 34,
+    "method": "offsets",
+    "user_span": [
+     3,
+     25
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_text": " Who carries the green bottle? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-21B",
+    "template_id": "own-t5",
+    "n_tokens": 34,
+    "method": "offsets",
+    "user_span": [
+     3,
+     25
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_text": " Who carries the green bottle? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " green/ black",
+    " bottle/ bag",
+    " black/ green",
+    " bag/ bottle"
+   ]
+  },
+  "xown-22": {
+   "pair_id": "xown-22",
+   "family": "ownership",
+   "n_tokens": 35,
+   "arms": {
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "names_objects_only": [
+     6,
+     7,
+     12,
+     13
+    ]
+   },
+   "A": {
+    "item_id": "xown-22A",
+    "template_id": "own-t3",
+    "n_tokens": 35,
+    "method": "offsets",
+    "user_span": [
+     3,
+     26
+    ],
+    "period_pos": 14,
+    "period_ordinal": 2,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "question_text": " Which of them owns the grey ball? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-22B",
+    "template_id": "own-t3",
+    "n_tokens": 35,
+    "method": "offsets",
+    "user_span": [
+     3,
+     26
+    ],
+    "period_pos": 14,
+    "period_ordinal": 2,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "question_text": " Which of them owns the grey ball? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " grey/ red",
+    " ball/ key",
+    " red/ grey",
+    " key/ ball"
+   ]
+  },
+  "xown-23": {
+   "pair_id": "xown-23",
+   "family": "ownership",
+   "n_tokens": 40,
+   "arms": {
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     15,
+     16
+    ]
+   },
+   "A": {
+    "item_id": "xown-23A",
+    "template_id": "own-t2",
+    "n_tokens": 40,
+    "method": "offsets",
+    "user_span": [
+     3,
+     31
+    ],
+    "period_pos": 17,
+    "period_ordinal": 1,
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "question_text": " Who is holding the green bottle? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-23B",
+    "template_id": "own-t2",
+    "n_tokens": 40,
+    "method": "offsets",
+    "user_span": [
+     3,
+     31
+    ],
+    "period_pos": 17,
+    "period_ordinal": 1,
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "question_text": " Who is holding the green bottle? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " green/ purple",
+    " bottle/ book",
+    " purple/ green",
+    " book/ bottle"
+   ]
+  },
+  "xown-24": {
+   "pair_id": "xown-24",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     6,
+     7,
+     12,
+     13
+    ]
+   },
+   "A": {
+    "item_id": "xown-24A",
+    "template_id": "own-t1",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 14,
+    "period_ordinal": 2,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who has the purple book? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-24B",
+    "template_id": "own-t1",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 14,
+    "period_ordinal": 2,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who has the purple book? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " white/ purple",
+    " pen/ book",
+    " purple/ white",
+    " book/ pen"
+   ]
+  },
+  "xown-25": {
+   "pair_id": "xown-25",
+   "family": "ownership",
+   "n_tokens": 35,
+   "arms": {
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "names_objects_only": [
+     6,
+     7,
+     12,
+     13
+    ]
+   },
+   "A": {
+    "item_id": "xown-25A",
+    "template_id": "own-t4",
+    "n_tokens": 35,
+    "method": "offsets",
+    "user_span": [
+     3,
+     26
+    ],
+    "period_pos": 14,
+    "period_ordinal": 1,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "question_text": " Who keeps the orange lamp? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-25B",
+    "template_id": "own-t4",
+    "n_tokens": 35,
+    "method": "offsets",
+    "user_span": [
+     3,
+     26
+    ],
+    "period_pos": 14,
+    "period_ordinal": 1,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "question_text": " Who keeps the orange lamp? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " pink/ orange",
+    " scarf/ lamp",
+    " orange/ pink",
+    " lamp/ scarf"
+   ]
+  },
+  "xown-26": {
+   "pair_id": "xown-26",
+   "family": "ownership",
+   "n_tokens": 33,
+   "arms": {
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "template_only": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32
+    ],
+    "last3": [
+     30,
+     31,
+     32
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18
+    ],
+    "question_second_half": [
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "names_objects_only": [
+     6,
+     7,
+     12,
+     13
+    ]
+   },
+   "A": {
+    "item_id": "xown-26A",
+    "template_id": "own-t5",
+    "n_tokens": 33,
+    "method": "offsets",
+    "user_span": [
+     3,
+     24
+    ],
+    "period_pos": 14,
+    "period_ordinal": 1,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "template_only": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32
+    ],
+    "last3": [
+     30,
+     31,
+     32
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18
+    ],
+    "question_second_half": [
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_text": " Who carries the yellow box? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-26B",
+    "template_id": "own-t5",
+    "n_tokens": 33,
+    "method": "offsets",
+    "user_span": [
+     3,
+     24
+    ],
+    "period_pos": 14,
+    "period_ordinal": 1,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "template_only": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32
+    ],
+    "last3": [
+     30,
+     31,
+     32
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18
+    ],
+    "question_second_half": [
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_text": " Who carries the yellow box? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " gold/ yellow",
+    " coin/ box",
+    " yellow/ gold",
+    " box/ coin"
+   ]
+  },
+  "xown-27": {
+   "pair_id": "xown-27",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-27A",
+    "template_id": "own-t3",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Which of them owns the grey ball? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-27B",
+    "template_id": "own-t3",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Which of them owns the grey ball? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " grey/ blue",
+    " ball/ cup",
+    " blue/ grey",
+    " cup/ ball"
+   ]
+  },
+  "xown-28": {
+   "pair_id": "xown-28",
+   "family": "ownership",
+   "n_tokens": 40,
+   "arms": {
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     15,
+     16
+    ]
+   },
+   "A": {
+    "item_id": "xown-28A",
+    "template_id": "own-t2",
+    "n_tokens": 40,
+    "method": "offsets",
+    "user_span": [
+     3,
+     31
+    ],
+    "period_pos": 17,
+    "period_ordinal": 1,
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "question_text": " Who is holding the pink scarf? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-28B",
+    "template_id": "own-t2",
+    "n_tokens": 40,
+    "method": "offsets",
+    "user_span": [
+     3,
+     31
+    ],
+    "period_pos": 17,
+    "period_ordinal": 1,
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "question_text": " Who is holding the pink scarf? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " pink/ white",
+    " scarf/ pen",
+    " white/ pink",
+    " pen/ scarf"
+   ]
+  },
+  "xown-29": {
+   "pair_id": "xown-29",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     6,
+     7,
+     12,
+     13
+    ]
+   },
+   "A": {
+    "item_id": "xown-29A",
+    "template_id": "own-t1",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 14,
+    "period_ordinal": 2,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who has the white pen? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-29B",
+    "template_id": "own-t1",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 14,
+    "period_ordinal": 2,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Who has the white pen? Answer with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " white/ blue",
+    " pen/ cup",
+    " blue/ white",
+    " cup/ pen"
+   ]
+  },
+  "xown-30": {
+   "pair_id": "xown-30",
+   "family": "ownership",
+   "n_tokens": 35,
+   "arms": {
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "names_objects_only": [
+     6,
+     7,
+     12,
+     13
+    ]
+   },
+   "A": {
+    "item_id": "xown-30A",
+    "template_id": "own-t4",
+    "n_tokens": 35,
+    "method": "offsets",
+    "user_span": [
+     3,
+     26
+    ],
+    "period_pos": 14,
+    "period_ordinal": 1,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "question_text": " Who keeps the red flag? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-30B",
+    "template_id": "own-t4",
+    "n_tokens": 35,
+    "method": "offsets",
+    "user_span": [
+     3,
+     26
+    ],
+    "period_pos": 14,
+    "period_ordinal": 1,
+    "question_only": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "template_only": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "last3": [
+     32,
+     33,
+     34
+    ],
+    "question_first_half": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "question_text": " Who keeps the red flag? Give just the name.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " brown/ red",
+    " coat/ flag",
+    " red/ brown",
+    " flag/ coat"
+   ]
+  },
+  "xown-31": {
+   "pair_id": "xown-31",
+   "family": "ownership",
+   "n_tokens": 34,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-31A",
+    "template_id": "own-t5",
+    "n_tokens": 34,
+    "method": "offsets",
+    "user_span": [
+     3,
+     25
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_text": " Who carries the green bottle? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-31B",
+    "template_id": "own-t5",
+    "n_tokens": 34,
+    "method": "offsets",
+    "user_span": [
+     3,
+     25
+    ],
+    "period_pos": 15,
+    "period_ordinal": 1,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "template_only": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "last3": [
+     31,
+     32,
+     33
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19
+    ],
+    "question_second_half": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "question_text": " Who carries the green bottle? Name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " green/ brown",
+    " bottle/ coat",
+    " brown/ green",
+    " coat/ bottle"
+   ]
+  },
+  "xown-32": {
+   "pair_id": "xown-32",
+   "family": "ownership",
+   "n_tokens": 36,
+   "arms": {
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     13,
+     14
+    ]
+   },
+   "A": {
+    "item_id": "xown-32A",
+    "template_id": "own-t3",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Which of them owns the red key? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-32B",
+    "template_id": "own-t3",
+    "n_tokens": 36,
+    "method": "offsets",
+    "user_span": [
+     3,
+     27
+    ],
+    "period_pos": 15,
+    "period_ordinal": 2,
+    "question_only": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "template_only": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35
+    ],
+    "last3": [
+     33,
+     34,
+     35
+    ],
+    "question_first_half": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "question_second_half": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "question_text": " Which of them owns the red key? One word.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " silver/ red",
+    " ring/ key",
+    " red/ silver",
+    " key/ ring"
+   ]
+  },
+  "xown-33": {
+   "pair_id": "xown-33",
+   "family": "ownership",
+   "n_tokens": 40,
+   "arms": {
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "names_objects_only": [
+     7,
+     8,
+     15,
+     16
+    ]
+   },
+   "A": {
+    "item_id": "xown-33A",
+    "template_id": "own-t2",
+    "n_tokens": 40,
+    "method": "offsets",
+    "user_span": [
+     3,
+     31
+    ],
+    "period_pos": 17,
+    "period_ordinal": 1,
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "question_text": " Who is holding the black bag? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "B": {
+    "item_id": "xown-33B",
+    "template_id": "own-t2",
+    "n_tokens": 40,
+    "method": "offsets",
+    "user_span": [
+     3,
+     31
+    ],
+    "period_pos": 17,
+    "period_ordinal": 1,
+    "question_only": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "template_only": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "last3": [
+     37,
+     38,
+     39
+    ],
+    "question_first_half": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "question_second_half": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "question_text": " Who is holding the black bag? Reply with the name only.",
+    "template_text": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+   },
+   "names_objects_tokens": [
+    " yellow/ black",
+    " box/ bag",
+    " black/ yellow",
+    " bag/ box"
+   ]
+  }
+ }
+}

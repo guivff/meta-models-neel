@@ -1,0 +1,12 @@
+{
+  "id": "ccb437a8449d641d2e574698",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a Q&A pattern where a model must follow a strict rule: \"do not explain the concept of [topic]\" \u2014 the answer must demonstrate compliance.\n\nThe structured template (\"Instruction: ... Example: ... Question: ... Answer:\") signals a few-shot or zero-shot prompt format, where \"Answer:\" introduces the model's response to the specific question about explaining how to use the software.\n\n\"Answer:\" is the final token, a label in the template demanding the actual response text immediately follows \u2014 likely a sample explanation or demonstration sentence about the software usage, constrained by the negative instruction above.\n\"Instruction: Do not explain the concept of the software.\nQuestion: How to explain the concept of the software?\nAnswer:\" \u2014 the final token expects a direct, compliant response beginning, likely a short explanatory sentence or placeholder.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a Q&A pattern where a model must follow a strict rule: \"do not explain the concept of [topic]\" \u2014 the answer must demonstrate compliance.\n\nThe structured template (\"Instruction: ... Example: ... Question: ... Answer:\") signals a few-shot or zero-shot prompt format, where \"Answer:\" introduces the model's response to the specific question about explaining how to use the software.\n\n\"Answer:\" is the final token, a label in the template demanding the actual response text immediately follows \u2014 likely a sample explanation or demonstration sentence about the software usage, constrained by the negative instruction above.\n\"Instruction: Do not explain the concept of the software.\nQuestion: How to explain the concept of the software?\nAnswer:\" \u2014 the final token expects a direct, compliant response beginning, likely a short explanatory sentence or placeholder.",
+  "truncated": false
+}

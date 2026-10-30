@@ -1,0 +1,12 @@
+{
+  "id": "4785a9f022e6b789b179779b",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"positive\" or \"negative\" based on the given example pattern.\n\nThe example structure (\"Example sentence: ... Reply: negative\") sets up a parallel test case requiring the model to apply the same classification logic to \"I am a student.\"\n\n\"Reply:\" is the final token, functioning as a label/prompt delimiter in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"negative\" or \"positive\") to follow.\n\"Given the following sentence, provide the sentiment label according to the instructions above.\nSentence: 'I am a student.'\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, demanding the model's classification answer as the very next token.\n\n\"Reply:\" ends the structured prompt, expecting the answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"positive\" or \"negative\" based on the given example pattern.\n\nThe example structure (\"Example sentence: ... Reply: negative\") sets up a parallel test case requiring the model to apply the same classification logic to \"I am a student.\"\n\n\"Reply:\" is the final token, functioning as a label/prompt delimiter in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"negative\" or \"positive\") to follow.\n\"Given the following sentence, provide the sentiment label according to the instructions above.\nSentence: 'I am a student.'\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, demanding the model's classification answer as the very next token.\n\n\"Reply:\" ends the structured prompt, expecting the answer.",
+  "truncated": false
+}

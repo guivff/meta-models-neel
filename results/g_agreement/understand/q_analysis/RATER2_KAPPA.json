@@ -1,0 +1,4427 @@
+{
+  "at": "2026-10-24T19:24:17.564398+02:00",
+  "status": "RATER2_CATEGORICAL_AGREEMENT_COMPLETE",
+  "prejoin_verification_sha256": "a6095e2d664716335e2a081cd7d3e5d732196d3ddea312376f2ecef5d9ab2582",
+  "input_provenance": "Producer seal binds code hashes but omits input hashes; local verification supplements with canonical sealed input hashes, complete unique ID coverage and exact per-ID evidence checks. No new annotation or repair.",
+  "fields": "Categorical fields use unchanged delivered categories; NONE is a distinct category, unclear is retained. Conditional value comparisons use only both-positive codes. Extra is presence of nonempty text. Structure tokens compared as presence and exact unordered token set; no wrapper filtering added. About/evidence/extra prose has no meaningful categorical semantic kappa and is not recoded.",
+  "kappa_ci": "Kappa is not a binomial proportion; Wilson95 attached to raw agreement, not to kappa. Degenerate identical categories give undefined kappa, not zero.",
+  "rows": [
+    {
+      "stratum": "sample",
+      "sample": "q1",
+      "field": "mode",
+      "n": 480,
+      "agreement": 0.9729166666666667,
+      "expected_agreement": 0.48265625,
+      "kappa": 0.9476492499748314,
+      "confusion": {
+        "continues|continues": 225,
+        "continues|mixed": 12,
+        "describes|describes": 240,
+        "mixed|continues": 1,
+        "mixed|mixed": 2
+      },
+      "raw_agreement_wilson95": {
+        "k": 467,
+        "n": 480,
+        "rate": 0.9729166666666667,
+        "ci95": [
+          0.9542182140060458,
+          0.9841054026486611
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q1",
+      "field": "mentions",
+      "n": 480,
+      "agreement": 0.98125,
+      "expected_agreement": 0.5015798611111111,
+      "kappa": 0.9623811348357657,
+      "confusion": {
+        "False|False": 222,
+        "False|True": 4,
+        "True|False": 5,
+        "True|True": 249
+      },
+      "raw_agreement_wilson95": {
+        "k": 471,
+        "n": 480,
+        "rate": 0.98125,
+        "ci95": [
+          0.9647530183230306,
+          0.9901049351890276
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q1",
+      "field": "mention_kind",
+      "n": 480,
+      "agreement": 0.8208333333333333,
+      "expected_agreement": 0.39630208333333333,
+      "kappa": 0.7032180139763609,
+      "confusion": {
+        "NONE|NONE": 222,
+        "NONE|states_property": 4,
+        "quotes_token|quotes_token": 162,
+        "states_property|NONE": 5,
+        "states_property|quotes_token": 77,
+        "states_property|states_property": 10
+      },
+      "raw_agreement_wilson95": {
+        "k": 394,
+        "n": 480,
+        "rate": 0.8208333333333333,
+        "ci95": [
+          0.7840199414043012,
+          0.8525520276037377
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q1",
+      "field": "value",
+      "n": 480,
+      "agreement": 0.8958333333333334,
+      "expected_agreement": 0.3137673611111111,
+      "kappa": 0.8482050244136922,
+      "confusion": {
+        "A|A": 69,
+        "A|NONE": 4,
+        "A|unclear": 24,
+        "B|B": 72,
+        "B|NONE": 1,
+        "B|unclear": 13,
+        "NONE|A": 2,
+        "NONE|B": 2,
+        "NONE|NONE": 222,
+        "unclear|A": 1,
+        "unclear|B": 3,
+        "unclear|unclear": 67
+      },
+      "raw_agreement_wilson95": {
+        "k": 430,
+        "n": 480,
+        "rate": 0.8958333333333334,
+        "ci95": [
+          0.8652900170142171,
+          0.9200909837099868
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q1",
+      "field": "value_both_mention",
+      "n": 249,
+      "agreement": 0.8353413654618473,
+      "expected_agreement": 0.32691408203093497,
+      "kappa": 0.7553675836288699,
+      "confusion": {
+        "A|A": 69,
+        "A|unclear": 24,
+        "B|B": 72,
+        "B|unclear": 13,
+        "unclear|A": 1,
+        "unclear|B": 3,
+        "unclear|unclear": 67
+      },
+      "raw_agreement_wilson95": {
+        "k": 208,
+        "n": 249,
+        "rate": 0.8353413654618473,
+        "ci95": [
+          0.7842485131278907,
+          0.8762440640429545
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q1",
+      "field": "enacts",
+      "n": 480,
+      "agreement": 0.8770833333333333,
+      "expected_agreement": 0.5270486111111111,
+      "kappa": 0.7401071874311724,
+      "confusion": {
+        "False|False": 269,
+        "False|True": 47,
+        "True|False": 12,
+        "True|True": 152
+      },
+      "raw_agreement_wilson95": {
+        "k": 421,
+        "n": 480,
+        "rate": 0.8770833333333333,
+        "ci95": [
+          0.8446795464883554,
+          0.9034991963068073
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q1",
+      "field": "enact_value",
+      "n": 480,
+      "agreement": 0.7666666666666667,
+      "expected_agreement": 0.433515625,
+      "kappa": 0.5881027904197124,
+      "confusion": {
+        "A|A": 50,
+        "A|NONE": 4,
+        "A|unclear": 9,
+        "B|B": 39,
+        "B|NONE": 8,
+        "B|unclear": 9,
+        "NONE|A": 3,
+        "NONE|B": 26,
+        "NONE|NONE": 269,
+        "NONE|unclear": 18,
+        "unclear|A": 11,
+        "unclear|B": 24,
+        "unclear|unclear": 10
+      },
+      "raw_agreement_wilson95": {
+        "k": 368,
+        "n": 480,
+        "rate": 0.7666666666666667,
+        "ci95": [
+          0.7268025644869756,
+          0.8022962149482777
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q1",
+      "field": "enact_value_both_enact",
+      "n": 152,
+      "agreement": 0.6513157894736842,
+      "expected_agreement": 0.3411963296398892,
+      "kappa": 0.470731226594836,
+      "confusion": {
+        "A|A": 50,
+        "A|unclear": 9,
+        "B|B": 39,
+        "B|unclear": 9,
+        "unclear|A": 11,
+        "unclear|B": 24,
+        "unclear|unclear": 10
+      },
+      "raw_agreement_wilson95": {
+        "k": 99,
+        "n": 152,
+        "rate": 0.6513157894736842,
+        "ci95": [
+          0.5726713519257532,
+          0.722500155553636
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q1",
+      "field": "hallucination",
+      "n": 480,
+      "agreement": 0.9958333333333333,
+      "expected_agreement": 0.5003125,
+      "kappa": 0.9916614550760893,
+      "confusion": {
+        "False|False": 233,
+        "False|True": 1,
+        "True|False": 1,
+        "True|True": 245
+      },
+      "raw_agreement_wilson95": {
+        "k": 478,
+        "n": 480,
+        "rate": 0.9958333333333333,
+        "ci95": [
+          0.9849364140257528,
+          0.9988566289866712
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q1",
+      "field": "extra_presence",
+      "n": 480,
+      "agreement": 0.78125,
+      "expected_agreement": 0.4910069444444444,
+      "kappa": 0.5702298928985607,
+      "confusion": {
+        "False|False": 192,
+        "False|True": 20,
+        "True|False": 85,
+        "True|True": 183
+      },
+      "raw_agreement_wilson95": {
+        "k": 375,
+        "n": 480,
+        "rate": 0.78125,
+        "ci95": [
+          0.742113221369159,
+          0.8159206475664595
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2a",
+      "field": "mode",
+      "n": 300,
+      "agreement": 0.9733333333333334,
+      "expected_agreement": 0.4866666666666667,
+      "kappa": 0.9480519480519481,
+      "confusion": {
+        "continues|continues": 150,
+        "describes|describes": 142,
+        "describes|mixed": 8
+      },
+      "raw_agreement_wilson95": {
+        "k": 292,
+        "n": 300,
+        "rate": 0.9733333333333334,
+        "ci95": [
+          0.9482704597024538,
+          0.9864270932330232
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2a",
+      "field": "mentions",
+      "n": 300,
+      "agreement": 0.8766666666666667,
+      "expected_agreement": 0.4972,
+      "kappa": 0.7547069742773801,
+      "confusion": {
+        "False|False": 139,
+        "False|True": 5,
+        "True|False": 32,
+        "True|True": 124
+      },
+      "raw_agreement_wilson95": {
+        "k": 263,
+        "n": 300,
+        "rate": 0.8766666666666667,
+        "ci95": [
+          0.8346254157811881,
+          0.9091832002871845
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2a",
+      "field": "mention_kind",
+      "n": 300,
+      "agreement": 0.79,
+      "expected_agreement": 0.3924,
+      "kappa": 0.6543778801843319,
+      "confusion": {
+        "NONE|NONE": 139,
+        "NONE|states_property": 5,
+        "quotes_token|NONE": 29,
+        "quotes_token|quotes_token": 62,
+        "quotes_token|states_property": 1,
+        "states_property|NONE": 3,
+        "states_property|quotes_token": 25,
+        "states_property|states_property": 36
+      },
+      "raw_agreement_wilson95": {
+        "k": 237,
+        "n": 300,
+        "rate": 0.79,
+        "ci95": [
+          0.7403879054849664,
+          0.832278905116347
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2a",
+      "field": "value",
+      "n": 300,
+      "agreement": 0.8733333333333333,
+      "expected_agreement": 0.3485666666666667,
+      "kappa": 0.8055569769226832,
+      "confusion": {
+        "A|A": 45,
+        "A|NONE": 11,
+        "B|B": 36,
+        "B|NONE": 6,
+        "B|unclear": 1,
+        "NONE|A": 1,
+        "NONE|B": 4,
+        "NONE|NONE": 139,
+        "unclear|NONE": 15,
+        "unclear|unclear": 42
+      },
+      "raw_agreement_wilson95": {
+        "k": 262,
+        "n": 300,
+        "rate": 0.8733333333333333,
+        "ci95": [
+          0.8309179640519985,
+          0.9063082748830255
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2a",
+      "field": "value_both_mention",
+      "n": 124,
+      "agreement": 0.9919354838709677,
+      "expected_agreement": 0.3357830385015609,
+      "kappa": 0.9878586115734848,
+      "confusion": {
+        "A|A": 45,
+        "B|B": 36,
+        "B|unclear": 1,
+        "unclear|unclear": 42
+      },
+      "raw_agreement_wilson95": {
+        "k": 123,
+        "n": 124,
+        "rate": 0.9919354838709677,
+        "ci95": [
+          0.9557309233977271,
+          0.9985750302198744
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2a",
+      "field": "enacts",
+      "n": 300,
+      "agreement": 0.9366666666666666,
+      "expected_agreement": 0.5378222222222222,
+      "kappa": 0.862967593037792,
+      "confusion": {
+        "False|False": 182,
+        "False|True": 5,
+        "True|False": 14,
+        "True|True": 99
+      },
+      "raw_agreement_wilson95": {
+        "k": 281,
+        "n": 300,
+        "rate": 0.9366666666666666,
+        "ci95": [
+          0.9032079605174259,
+          0.9590834439512181
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2a",
+      "field": "enact_value",
+      "n": 300,
+      "agreement": 0.92,
+      "expected_agreement": 0.4669333333333333,
+      "kappa": 0.8499249624812407,
+      "confusion": {
+        "A|A": 46,
+        "A|NONE": 10,
+        "A|unclear": 4,
+        "B|B": 48,
+        "NONE|B": 5,
+        "NONE|NONE": 182,
+        "unclear|B": 1,
+        "unclear|NONE": 4
+      },
+      "raw_agreement_wilson95": {
+        "k": 276,
+        "n": 300,
+        "rate": 0.92,
+        "ci95": [
+          0.883725988586447,
+          0.9456535302154552
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2a",
+      "field": "enact_value_both_enact",
+      "n": 99,
+      "agreement": 0.9494949494949495,
+      "expected_agreement": 0.47505356596265685,
+      "kappa": 0.9037900874635569,
+      "confusion": {
+        "A|A": 46,
+        "A|unclear": 4,
+        "B|B": 48,
+        "unclear|B": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 94,
+        "n": 99,
+        "rate": 0.9494949494949495,
+        "ci95": [
+          0.887171464182119,
+          0.9782370864433089
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2b",
+      "field": "mode",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "continues|continues": 320
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2b",
+      "field": "mentions",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 320
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2b",
+      "field": "mention_kind",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 320
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2b",
+      "field": "value",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 320
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2b",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2b",
+      "field": "enacts",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 0.51220703125,
+      "kappa": 1.0,
+      "confusion": {
+        "False|False": 135,
+        "True|True": 185
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2b",
+      "field": "enact_value",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 0.41658203125,
+      "kappa": 1.0,
+      "confusion": {
+        "A|A": 32,
+        "NONE|NONE": 135,
+        "unclear|unclear": 153
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2b",
+      "field": "enact_value_both_enact",
+      "n": 185,
+      "agreement": 1.0,
+      "expected_agreement": 0.7138933528122717,
+      "kappa": 1.0,
+      "confusion": {
+        "A|A": 32,
+        "unclear|unclear": 153
+      },
+      "raw_agreement_wilson95": {
+        "k": 185,
+        "n": 185,
+        "rate": 1.0,
+        "ci95": [
+          0.9796570247233661,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2b",
+      "field": "structure_named",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 320
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2c",
+      "field": "mode",
+      "n": 840,
+      "agreement": 0.9833333333333333,
+      "expected_agreement": 0.4922434807256236,
+      "kappa": 0.9671758686811451,
+      "confusion": {
+        "continues|continues": 407,
+        "describes|continues": 1,
+        "describes|describes": 419,
+        "mixed|continues": 13
+      },
+      "raw_agreement_wilson95": {
+        "k": 826,
+        "n": 840,
+        "rate": 0.9833333333333333,
+        "ci95": [
+          0.972219349399524,
+          0.990046554533157
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2c",
+      "field": "mentions",
+      "n": 840,
+      "agreement": 0.9916666666666667,
+      "expected_agreement": 0.9916666666666667,
+      "kappa": 0.0,
+      "confusion": {
+        "False|False": 833,
+        "True|False": 7
+      },
+      "raw_agreement_wilson95": {
+        "k": 833,
+        "n": 840,
+        "rate": 0.9916666666666667,
+        "ci95": [
+          0.9828990648143163,
+          0.9959576305654803
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2c",
+      "field": "mention_kind",
+      "n": 840,
+      "agreement": 0.9916666666666667,
+      "expected_agreement": 0.9916666666666667,
+      "kappa": 0.0,
+      "confusion": {
+        "NONE|NONE": 833,
+        "quotes_token|NONE": 6,
+        "states_property|NONE": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 833,
+        "n": 840,
+        "rate": 0.9916666666666667,
+        "ci95": [
+          0.9828990648143163,
+          0.9959576305654803
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2c",
+      "field": "value",
+      "n": 840,
+      "agreement": 0.9916666666666667,
+      "expected_agreement": 0.9916666666666667,
+      "kappa": 0.0,
+      "confusion": {
+        "A|NONE": 1,
+        "NONE|NONE": 833,
+        "unclear|NONE": 6
+      },
+      "raw_agreement_wilson95": {
+        "k": 833,
+        "n": 840,
+        "rate": 0.9916666666666667,
+        "ci95": [
+          0.9828990648143163,
+          0.9959576305654803
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2c",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2c",
+      "field": "enacts",
+      "n": 840,
+      "agreement": 0.8678571428571429,
+      "expected_agreement": 0.6675793650793651,
+      "kappa": 0.6024829891369226,
+      "confusion": {
+        "False|False": 611,
+        "False|True": 96,
+        "True|False": 15,
+        "True|True": 118
+      },
+      "raw_agreement_wilson95": {
+        "k": 729,
+        "n": 840,
+        "rate": 0.8678571428571429,
+        "ci95": [
+          0.8432719499261365,
+          0.8890929868108057
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2c",
+      "field": "enact_value",
+      "n": 840,
+      "agreement": 0.8464285714285714,
+      "expected_agreement": 0.6429662698412698,
+      "kappa": 0.5698685709522354,
+      "confusion": {
+        "A|A": 41,
+        "A|unclear": 12,
+        "B|B": 6,
+        "B|NONE": 14,
+        "B|unclear": 6,
+        "NONE|A": 84,
+        "NONE|B": 6,
+        "NONE|NONE": 611,
+        "NONE|unclear": 6,
+        "unclear|NONE": 1,
+        "unclear|unclear": 53
+      },
+      "raw_agreement_wilson95": {
+        "k": 711,
+        "n": 840,
+        "rate": 0.8464285714285714,
+        "ci95": [
+          0.8204740851806337,
+          0.8692288164065837
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2c",
+      "field": "enact_value_both_enact",
+      "n": 118,
+      "agreement": 0.847457627118644,
+      "expected_agreement": 0.4314852054007469,
+      "kappa": 0.7316826680141486,
+      "confusion": {
+        "A|A": 41,
+        "A|unclear": 12,
+        "B|B": 6,
+        "B|unclear": 6,
+        "unclear|unclear": 53
+      },
+      "raw_agreement_wilson95": {
+        "k": 100,
+        "n": 118,
+        "rate": 0.847457627118644,
+        "ci95": [
+          0.7717264797068207,
+          0.9012784709832554
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2c",
+      "field": "structure_tokens_present",
+      "n": 840,
+      "agreement": 0.7821428571428571,
+      "expected_agreement": 0.5,
+      "kappa": 0.5642857142857143,
+      "confusion": {
+        "False|False": 420,
+        "False|True": 183,
+        "True|True": 237
+      },
+      "raw_agreement_wilson95": {
+        "k": 657,
+        "n": 840,
+        "rate": 0.7821428571428571,
+        "ci95": [
+          0.7529769136141112,
+          0.8087398825239317
+        ]
+      }
+    },
+    {
+      "stratum": "sample",
+      "sample": "q2c",
+      "field": "structure_token_set",
+      "n": 840,
+      "agreement": 0.5,
+      "expected_agreement": 0.35892857142857143,
+      "kappa": 0.2200557103064067,
+      "confusion": {
+        "[\"'\",\"(\",\")\"]|[\"-\"]": 1,
+        "[\"(\",\")\",\"`\",\"|\"]|[\"-\"]": 5,
+        "[\"(\",\")\",\"`\"]|[\"-\"]": 7,
+        "[\"(\",\")\",\"|\"]|[\"-\"]": 1,
+        "[\"(\",\")\"]|[\"-\"]": 44,
+        "[\"(\",\"3.\",\"[\",\"]\"]|[\"-\"]": 1,
+        "[\"(\"]|[\"-\"]": 4,
+        "[\")\",\"1)\"]|[\"-\"]": 1,
+        "[\")\"]|[\"-\"]": 4,
+        "[\"2.\"]|[\"-\"]": 2,
+        "[\"3.\",\"[\",\"]\"]|[\"-\"]": 1,
+        "[\"3.\"]|[\"-\"]": 1,
+        "[\"[\",\"]\"]|[\"-\"]": 7,
+        "[\"[\"]|[\"-\"]": 2,
+        "[\"\\\"\",\"(\",\")\",\"2.\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"(\",\")\",\"`\"]|[\"-\"]": 3,
+        "[\"\\\"\",\"(\",\")\",\"{\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"(\",\")\",\"|\"]|[\"-\"]": 8,
+        "[\"\\\"\",\"(\",\")\"]|[\"-\"]": 16,
+        "[\"\\\"\",\"(\",\"[\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"(\",\"`\"]|[\"-\"]": 5,
+        "[\"\\\"\",\"(\",\"{\",\"}\"]|[\"-\"]": 3,
+        "[\"\\\"\",\"(\"]|[\"-\"]": 11,
+        "[\"\\\"\",\"[\",\"]\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"[\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"`\",\"|\"]|[\"-\"]": 3,
+        "[\"\\\"\",\"`\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"{\",\"}\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"{\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"|\"]|[\"-\"]": 5,
+        "[\"\\\"\"]|[\"-\"]": 32,
+        "[\"`\",\"|\"]|[\"-\"]": 16,
+        "[\"`\"]|[\"-\"]": 5,
+        "[\"|\"]|[\"-\"]": 30,
+        "[\"’\"]|[\"-\"]": 4,
+        "[\"“\",\"”\"]|[\"-\"]": 6,
+        "[\"“\"]|[\"-\"]": 1,
+        "[]|[\"-\"]": 183,
+        "[]|[]": 420
+      },
+      "raw_agreement_wilson95": {
+        "k": 420,
+        "n": 840,
+        "rate": 0.5,
+        "ci95": [
+          0.4662638429385903,
+          0.5337361570614096
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "nla",
+      "field": "mode",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "describes|describes": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "nla",
+      "field": "mentions",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "True|True": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "nla",
+      "field": "mention_kind",
+      "n": 80,
+      "agreement": 0.4375,
+      "expected_agreement": 0.4375,
+      "kappa": 0.0,
+      "confusion": {
+        "quotes_token|quotes_token": 35,
+        "states_property|quotes_token": 45
+      },
+      "raw_agreement_wilson95": {
+        "k": 35,
+        "n": 80,
+        "rate": 0.4375,
+        "ci95": [
+          0.3341368457196415,
+          0.5465906213134304
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "nla",
+      "field": "value",
+      "n": 80,
+      "agreement": 0.7375,
+      "expected_agreement": 0.33421875,
+      "kappa": 0.6057263553156537,
+      "confusion": {
+        "A|A": 23,
+        "A|unclear": 14,
+        "B|B": 29,
+        "B|unclear": 5,
+        "unclear|B": 2,
+        "unclear|unclear": 7
+      },
+      "raw_agreement_wilson95": {
+        "k": 59,
+        "n": 80,
+        "rate": 0.7375,
+        "ci95": [
+          0.6318083375343555,
+          0.8214272877399715
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "nla",
+      "field": "value_both_mention",
+      "n": 80,
+      "agreement": 0.7375,
+      "expected_agreement": 0.33421875,
+      "kappa": 0.6057263553156537,
+      "confusion": {
+        "A|A": 23,
+        "A|unclear": 14,
+        "B|B": 29,
+        "B|unclear": 5,
+        "unclear|B": 2,
+        "unclear|unclear": 7
+      },
+      "raw_agreement_wilson95": {
+        "k": 59,
+        "n": 80,
+        "rate": 0.7375,
+        "ci95": [
+          0.6318083375343555,
+          0.8214272877399715
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "nla",
+      "field": "enacts",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "nla",
+      "field": "enact_value",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "nla",
+      "field": "enact_value_both_enact",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "nla",
+      "field": "hallucination",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "True|True": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "nla",
+      "field": "extra_presence",
+      "n": 80,
+      "agreement": 0.8625,
+      "expected_agreement": 0.828125,
+      "kappa": 0.20000000000000026,
+      "confusion": {
+        "False|False": 2,
+        "False|True": 3,
+        "True|False": 8,
+        "True|True": 67
+      },
+      "raw_agreement_wilson95": {
+        "k": 69,
+        "n": 80,
+        "rate": 0.8625,
+        "ci95": [
+          0.7703270280036946,
+          0.9214536632044886
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "mode",
+      "n": 80,
+      "agreement": 0.875,
+      "expected_agreement": 0.8325,
+      "kappa": 0.253731343283582,
+      "confusion": {
+        "continues|continues": 68,
+        "continues|mixed": 10,
+        "mixed|mixed": 2
+      },
+      "raw_agreement_wilson95": {
+        "k": 70,
+        "n": 80,
+        "rate": 0.875,
+        "ci95": [
+          0.7849700281693438,
+          0.9306651696322249
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "mentions",
+      "n": 80,
+      "agreement": 0.8875,
+      "expected_agreement": 0.703125,
+      "kappa": 0.6210526315789472,
+      "confusion": {
+        "False|False": 61,
+        "False|True": 4,
+        "True|False": 5,
+        "True|True": 10
+      },
+      "raw_agreement_wilson95": {
+        "k": 71,
+        "n": 80,
+        "rate": 0.8875,
+        "ci95": [
+          0.7998158913432244,
+          0.9396738130517298
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "mention_kind",
+      "n": 80,
+      "agreement": 0.8875,
+      "expected_agreement": 0.703125,
+      "kappa": 0.6210526315789472,
+      "confusion": {
+        "NONE|NONE": 61,
+        "NONE|states_property": 4,
+        "states_property|NONE": 5,
+        "states_property|states_property": 10
+      },
+      "raw_agreement_wilson95": {
+        "k": 71,
+        "n": 80,
+        "rate": 0.8875,
+        "ci95": [
+          0.7998158913432244,
+          0.9396738130517298
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "value",
+      "n": 80,
+      "agreement": 0.8875,
+      "expected_agreement": 0.6865625,
+      "kappa": 0.6410767696909271,
+      "confusion": {
+        "A|A": 4,
+        "A|NONE": 4,
+        "B|B": 6,
+        "B|NONE": 1,
+        "NONE|A": 2,
+        "NONE|B": 2,
+        "NONE|NONE": 61
+      },
+      "raw_agreement_wilson95": {
+        "k": 71,
+        "n": 80,
+        "rate": 0.8875,
+        "ci95": [
+          0.7998158913432244,
+          0.9396738130517298
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "value_both_mention",
+      "n": 10,
+      "agreement": 1.0,
+      "expected_agreement": 0.52,
+      "kappa": 1.0,
+      "confusion": {
+        "A|A": 4,
+        "B|B": 6
+      },
+      "raw_agreement_wilson95": {
+        "k": 10,
+        "n": 10,
+        "rate": 1.0,
+        "ci95": [
+          0.7224598312333834,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "enacts",
+      "n": 80,
+      "agreement": 0.95,
+      "expected_agreement": 0.95,
+      "kappa": 0.0,
+      "confusion": {
+        "False|True": 4,
+        "True|True": 76
+      },
+      "raw_agreement_wilson95": {
+        "k": 76,
+        "n": 80,
+        "rate": 0.95,
+        "ci95": [
+          0.878375474489178,
+          0.9803867628727044
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "enact_value",
+      "n": 80,
+      "agreement": 0.9375,
+      "expected_agreement": 0.46875,
+      "kappa": 0.8823529411764706,
+      "confusion": {
+        "A|A": 37,
+        "B|B": 38,
+        "NONE|A": 2,
+        "NONE|B": 2,
+        "unclear|A": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 75,
+        "n": 80,
+        "rate": 0.9375,
+        "ci95": [
+          0.8618967084664824,
+          0.9730110223020145
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "enact_value_both_enact",
+      "n": 76,
+      "agreement": 0.9868421052631579,
+      "expected_agreement": 0.4934210526315789,
+      "kappa": 0.974025974025974,
+      "confusion": {
+        "A|A": 37,
+        "B|B": 38,
+        "unclear|A": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 75,
+        "n": 76,
+        "rate": 0.9868421052631579,
+        "ci95": [
+          0.929161553705025,
+          0.9976735798594324
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "hallucination",
+      "n": 80,
+      "agreement": 0.9875,
+      "expected_agreement": 0.871875,
+      "kappa": 0.9024390243902443,
+      "confusion": {
+        "False|False": 74,
+        "True|False": 1,
+        "True|True": 5
+      },
+      "raw_agreement_wilson95": {
+        "k": 79,
+        "n": 80,
+        "rate": 0.9875,
+        "ci95": [
+          0.9325356757603457,
+          0.9977900813816939
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "extra_presence",
+      "n": 80,
+      "agreement": 0.7125,
+      "expected_agreement": 0.55625,
+      "kappa": 0.35211267605633806,
+      "confusion": {
+        "False|False": 42,
+        "False|True": 10,
+        "True|False": 13,
+        "True|True": 15
+      },
+      "raw_agreement_wilson95": {
+        "k": 57,
+        "n": 80,
+        "rate": 0.7125,
+        "ci95": [
+          0.6053944721715182,
+          0.8001321399160374
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "mode",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "describes|describes": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "mentions",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "True|True": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "mention_kind",
+      "n": 80,
+      "agreement": 0.8125,
+      "expected_agreement": 0.8125,
+      "kappa": 0.0,
+      "confusion": {
+        "quotes_token|quotes_token": 65,
+        "states_property|quotes_token": 15
+      },
+      "raw_agreement_wilson95": {
+        "k": 65,
+        "n": 80,
+        "rate": 0.8125,
+        "ci95": [
+          0.7134147429619243,
+          0.8829479218727162
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "value",
+      "n": 80,
+      "agreement": 0.8,
+      "expected_agreement": 0.65203125,
+      "kappa": 0.42523574315222296,
+      "confusion": {
+        "A|A": 6,
+        "A|unclear": 10,
+        "B|B": 2,
+        "B|unclear": 5,
+        "unclear|A": 1,
+        "unclear|unclear": 56
+      },
+      "raw_agreement_wilson95": {
+        "k": 64,
+        "n": 80,
+        "rate": 0.8,
+        "ci95": [
+          0.6995355220341885,
+          0.8729726362070666
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "value_both_mention",
+      "n": 80,
+      "agreement": 0.8,
+      "expected_agreement": 0.65203125,
+      "kappa": 0.42523574315222296,
+      "confusion": {
+        "A|A": 6,
+        "A|unclear": 10,
+        "B|B": 2,
+        "B|unclear": 5,
+        "unclear|A": 1,
+        "unclear|unclear": 56
+      },
+      "raw_agreement_wilson95": {
+        "k": 64,
+        "n": 80,
+        "rate": 0.8,
+        "ci95": [
+          0.6995355220341885,
+          0.8729726362070666
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "enacts",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "enact_value",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "enact_value_both_enact",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "hallucination",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "True|True": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "extra_presence",
+      "n": 80,
+      "agreement": 0.8125,
+      "expected_agreement": 0.73,
+      "kappa": 0.3055555555555556,
+      "confusion": {
+        "False|False": 5,
+        "False|True": 3,
+        "True|False": 12,
+        "True|True": 60
+      },
+      "raw_agreement_wilson95": {
+        "k": 65,
+        "n": 80,
+        "rate": 0.8125,
+        "ci95": [
+          0.7134147429619243,
+          0.8829479218727162
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "mode",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "continues|continues": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "mentions",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "mention_kind",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "value",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "enacts",
+      "n": 80,
+      "agreement": 0.75,
+      "expected_agreement": 0.4940625,
+      "kappa": 0.5058678196417542,
+      "confusion": {
+        "False|False": 21,
+        "False|True": 20,
+        "True|True": 39
+      },
+      "raw_agreement_wilson95": {
+        "k": 60,
+        "n": 80,
+        "rate": 0.75,
+        "ci95": [
+          0.6451511899886556,
+          0.8319389418790569
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "enact_value",
+      "n": 80,
+      "agreement": 0.35,
+      "expected_agreement": 0.1775,
+      "kappa": 0.20972644376899693,
+      "confusion": {
+        "A|A": 5,
+        "A|unclear": 3,
+        "NONE|B": 20,
+        "NONE|NONE": 21,
+        "unclear|A": 10,
+        "unclear|B": 19,
+        "unclear|unclear": 2
+      },
+      "raw_agreement_wilson95": {
+        "k": 28,
+        "n": 80,
+        "rate": 0.35,
+        "ci95": [
+          0.2545439440982969,
+          0.4592019767810756
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "enact_value_both_enact",
+      "n": 39,
+      "agreement": 0.1794871794871795,
+      "expected_agreement": 0.18080210387902695,
+      "kappa": -0.0016051364365971077,
+      "confusion": {
+        "A|A": 5,
+        "A|unclear": 3,
+        "unclear|A": 10,
+        "unclear|B": 19,
+        "unclear|unclear": 2
+      },
+      "raw_agreement_wilson95": {
+        "k": 7,
+        "n": 39,
+        "rate": 0.1794871794871795,
+        "ci95": [
+          0.08977151811469994,
+          0.3266835162444276
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "hallucination",
+      "n": 80,
+      "agreement": 0.9875,
+      "expected_agreement": 0.9875,
+      "kappa": 0.0,
+      "confusion": {
+        "False|False": 79,
+        "False|True": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 79,
+        "n": 80,
+        "rate": 0.9875,
+        "ci95": [
+          0.9325356757603457,
+          0.9977900813816939
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "extra_presence",
+      "n": 80,
+      "agreement": 0.7375,
+      "expected_agreement": 0.69,
+      "kappa": 0.15322580645161318,
+      "confusion": {
+        "False|False": 55,
+        "False|True": 4,
+        "True|False": 17,
+        "True|True": 4
+      },
+      "raw_agreement_wilson95": {
+        "k": 59,
+        "n": 80,
+        "rate": 0.7375,
+        "ci95": [
+          0.6318083375343555,
+          0.8214272877399715
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "mode",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "describes|describes": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "mentions",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 0.9753125,
+      "kappa": 1.0,
+      "confusion": {
+        "False|False": 1,
+        "True|True": 79
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "mention_kind",
+      "n": 80,
+      "agreement": 0.7875,
+      "expected_agreement": 0.76546875,
+      "kappa": 0.0939373750832776,
+      "confusion": {
+        "NONE|NONE": 1,
+        "quotes_token|quotes_token": 62,
+        "states_property|quotes_token": 17
+      },
+      "raw_agreement_wilson95": {
+        "k": 63,
+        "n": 80,
+        "rate": 0.7875,
+        "ci95": [
+          0.6857763938182242,
+          0.8628772578296451
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "value",
+      "n": 80,
+      "agreement": 0.95,
+      "expected_agreement": 0.421875,
+      "kappa": 0.9135135135135134,
+      "confusion": {
+        "A|A": 36,
+        "B|B": 35,
+        "B|unclear": 3,
+        "NONE|NONE": 1,
+        "unclear|B": 1,
+        "unclear|unclear": 4
+      },
+      "raw_agreement_wilson95": {
+        "k": 76,
+        "n": 80,
+        "rate": 0.95,
+        "ci95": [
+          0.878375474489178,
+          0.9803867628727044
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "value_both_mention",
+      "n": 79,
+      "agreement": 0.9493670886075949,
+      "expected_agreement": 0.43246274635475085,
+      "kappa": 0.9107848673066063,
+      "confusion": {
+        "A|A": 36,
+        "B|B": 35,
+        "B|unclear": 3,
+        "unclear|B": 1,
+        "unclear|unclear": 4
+      },
+      "raw_agreement_wilson95": {
+        "k": 75,
+        "n": 79,
+        "rate": 0.9493670886075949,
+        "ci95": [
+          0.8769210451713461,
+          0.980136278685267
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "enacts",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "enact_value",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "enact_value_both_enact",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "hallucination",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "True|True": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "extra_presence",
+      "n": 80,
+      "agreement": 0.85,
+      "expected_agreement": 0.4915625,
+      "kappa": 0.704978488014751,
+      "confusion": {
+        "False|False": 31,
+        "True|False": 12,
+        "True|True": 37
+      },
+      "raw_agreement_wilson95": {
+        "k": 68,
+        "n": 80,
+        "rate": 0.85,
+        "ci95": [
+          0.7558657249889396,
+          0.9120604596258579
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "mode",
+      "n": 80,
+      "agreement": 0.9625,
+      "expected_agreement": 0.963125,
+      "kappa": -0.016949152542372524,
+      "confusion": {
+        "continues|continues": 77,
+        "continues|mixed": 2,
+        "mixed|continues": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 77,
+        "n": 80,
+        "rate": 0.9625,
+        "ci95": [
+          0.8954510802560568,
+          0.9871656636992113
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "mentions",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "mention_kind",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "value",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "enacts",
+      "n": 80,
+      "agreement": 0.5625,
+      "expected_agreement": 0.55625,
+      "kappa": 0.014084507042253471,
+      "confusion": {
+        "False|False": 8,
+        "False|True": 23,
+        "True|False": 12,
+        "True|True": 37
+      },
+      "raw_agreement_wilson95": {
+        "k": 45,
+        "n": 80,
+        "rate": 0.5625,
+        "ci95": [
+          0.4534093786865696,
+          0.6658631542803586
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "enact_value",
+      "n": 80,
+      "agreement": 0.3125,
+      "expected_agreement": 0.23359375,
+      "kappa": 0.10295616717635069,
+      "confusion": {
+        "A|A": 8,
+        "A|NONE": 4,
+        "A|unclear": 6,
+        "B|B": 1,
+        "B|NONE": 8,
+        "B|unclear": 9,
+        "NONE|A": 1,
+        "NONE|B": 4,
+        "NONE|NONE": 8,
+        "NONE|unclear": 18,
+        "unclear|B": 5,
+        "unclear|unclear": 8
+      },
+      "raw_agreement_wilson95": {
+        "k": 25,
+        "n": 80,
+        "rate": 0.3125,
+        "ci95": [
+          0.22150258327847644,
+          0.4206798178207392
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "enact_value_both_enact",
+      "n": 37,
+      "agreement": 0.4594594594594595,
+      "expected_agreement": 0.34404674945215485,
+      "kappa": 0.17594654788418712,
+      "confusion": {
+        "A|A": 8,
+        "A|unclear": 6,
+        "B|B": 1,
+        "B|unclear": 9,
+        "unclear|B": 5,
+        "unclear|unclear": 8
+      },
+      "raw_agreement_wilson95": {
+        "k": 17,
+        "n": 37,
+        "rate": 0.4594594594594595,
+        "ci95": [
+          0.31038327828457724,
+          0.6161622047523264
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "hallucination",
+      "n": 80,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 80
+      },
+      "raw_agreement_wilson95": {
+        "k": 80,
+        "n": 80,
+        "rate": 1.0,
+        "ci95": [
+          0.954180263735425,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q1",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "extra_presence",
+      "n": 80,
+      "agreement": 0.7125,
+      "expected_agreement": 0.7125,
+      "kappa": 0.0,
+      "confusion": {
+        "False|False": 57,
+        "True|False": 23
+      },
+      "raw_agreement_wilson95": {
+        "k": 57,
+        "n": 80,
+        "rate": 0.7125,
+        "ci95": [
+          0.6053944721715182,
+          0.8001321399160374
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "nla",
+      "field": "mode",
+      "n": 150,
+      "agreement": 0.9466666666666667,
+      "expected_agreement": 0.9466666666666667,
+      "kappa": 0.0,
+      "confusion": {
+        "describes|describes": 142,
+        "describes|mixed": 8
+      },
+      "raw_agreement_wilson95": {
+        "k": 142,
+        "n": 150,
+        "rate": 0.9466666666666667,
+        "ci95": [
+          0.8982949952532904,
+          0.9727307871098676
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "nla",
+      "field": "mentions",
+      "n": 150,
+      "agreement": 0.7866666666666666,
+      "expected_agreement": 0.7866666666666666,
+      "kappa": 0.0,
+      "confusion": {
+        "True|False": 32,
+        "True|True": 118
+      },
+      "raw_agreement_wilson95": {
+        "k": 118,
+        "n": 150,
+        "rate": 0.7866666666666666,
+        "ci95": [
+          0.7143779835916132,
+          0.8446385632981747
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "nla",
+      "field": "mention_kind",
+      "n": 150,
+      "agreement": 0.6133333333333333,
+      "expected_agreement": 0.43564444444444445,
+      "kappa": 0.31485273271381314,
+      "confusion": {
+        "quotes_token|NONE": 29,
+        "quotes_token|quotes_token": 62,
+        "quotes_token|states_property": 1,
+        "states_property|NONE": 3,
+        "states_property|quotes_token": 25,
+        "states_property|states_property": 30
+      },
+      "raw_agreement_wilson95": {
+        "k": 92,
+        "n": 150,
+        "rate": 0.6133333333333333,
+        "ci95": [
+          0.5334964294452139,
+          0.6875101123484232
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "nla",
+      "field": "value",
+      "n": 150,
+      "agreement": 0.78,
+      "expected_agreement": 0.2644,
+      "kappa": 0.7009244154431757,
+      "confusion": {
+        "A|A": 39,
+        "A|NONE": 11,
+        "B|B": 36,
+        "B|NONE": 6,
+        "B|unclear": 1,
+        "unclear|NONE": 15,
+        "unclear|unclear": 42
+      },
+      "raw_agreement_wilson95": {
+        "k": 117,
+        "n": 150,
+        "rate": 0.78,
+        "ci95": [
+          0.7071754568460243,
+          0.8388407052323733
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "nla",
+      "field": "value_both_mention",
+      "n": 118,
+      "agreement": 0.9915254237288136,
+      "expected_agreement": 0.3346021258259121,
+      "kappa": 0.9872638963842418,
+      "confusion": {
+        "A|A": 39,
+        "B|B": 36,
+        "B|unclear": 1,
+        "unclear|unclear": 42
+      },
+      "raw_agreement_wilson95": {
+        "k": 117,
+        "n": 118,
+        "rate": 0.9915254237288136,
+        "ci95": [
+          0.9535532858788099,
+          0.9985024980242249
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "nla",
+      "field": "enacts",
+      "n": 150,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 150
+      },
+      "raw_agreement_wilson95": {
+        "k": 150,
+        "n": 150,
+        "rate": 1.0,
+        "ci95": [
+          0.9750288608542812,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "nla",
+      "field": "enact_value",
+      "n": 150,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 150
+      },
+      "raw_agreement_wilson95": {
+        "k": 150,
+        "n": 150,
+        "rate": 1.0,
+        "ci95": [
+          0.9750288608542812,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "nla",
+      "field": "enact_value_both_enact",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "mode",
+      "n": 150,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "continues|continues": 150
+      },
+      "raw_agreement_wilson95": {
+        "k": 150,
+        "n": 150,
+        "rate": 1.0,
+        "ci95": [
+          0.9750288608542812,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "mentions",
+      "n": 150,
+      "agreement": 0.9666666666666667,
+      "expected_agreement": 0.8925333333333333,
+      "kappa": 0.6898263027295287,
+      "confusion": {
+        "False|False": 139,
+        "False|True": 5,
+        "True|True": 6
+      },
+      "raw_agreement_wilson95": {
+        "k": 145,
+        "n": 150,
+        "rate": 0.9666666666666667,
+        "ci95": [
+          0.9243471574929044,
+          0.9856797793044249
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "mention_kind",
+      "n": 150,
+      "agreement": 0.9666666666666667,
+      "expected_agreement": 0.8925333333333333,
+      "kappa": 0.6898263027295287,
+      "confusion": {
+        "NONE|NONE": 139,
+        "NONE|states_property": 5,
+        "states_property|states_property": 6
+      },
+      "raw_agreement_wilson95": {
+        "k": 145,
+        "n": 150,
+        "rate": 0.9666666666666667,
+        "ci95": [
+          0.9243471574929044,
+          0.9856797793044249
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "value",
+      "n": 150,
+      "agreement": 0.9666666666666667,
+      "expected_agreement": 0.8914666666666666,
+      "kappa": 0.692874692874693,
+      "confusion": {
+        "A|A": 6,
+        "NONE|A": 1,
+        "NONE|B": 4,
+        "NONE|NONE": 139
+      },
+      "raw_agreement_wilson95": {
+        "k": 145,
+        "n": 150,
+        "rate": 0.9666666666666667,
+        "ci95": [
+          0.9243471574929044,
+          0.9856797793044249
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "value_both_mention",
+      "n": 6,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "A|A": 6
+      },
+      "raw_agreement_wilson95": {
+        "k": 6,
+        "n": 6,
+        "rate": 1.0,
+        "ci95": [
+          0.6096569663469354,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "enacts",
+      "n": 150,
+      "agreement": 0.8733333333333333,
+      "expected_agreement": 0.5979555555555556,
+      "kappa": 0.6849436214901613,
+      "confusion": {
+        "False|False": 32,
+        "False|True": 5,
+        "True|False": 14,
+        "True|True": 99
+      },
+      "raw_agreement_wilson95": {
+        "k": 131,
+        "n": 150,
+        "rate": 0.8733333333333333,
+        "ci95": [
+          0.8106321928453123,
+          0.9173893565925509
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "enact_value",
+      "n": 150,
+      "agreement": 0.84,
+      "expected_agreement": 0.3144,
+      "kappa": 0.7666277712952159,
+      "confusion": {
+        "A|A": 46,
+        "A|NONE": 10,
+        "A|unclear": 4,
+        "B|B": 48,
+        "NONE|B": 5,
+        "NONE|NONE": 32,
+        "unclear|B": 1,
+        "unclear|NONE": 4
+      },
+      "raw_agreement_wilson95": {
+        "k": 126,
+        "n": 150,
+        "rate": 0.84,
+        "ci95": [
+          0.772958942656478,
+          0.8900606827244333
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2a",
+      "tier": "content",
+      "reader": "oracle",
+      "field": "enact_value_both_enact",
+      "n": 99,
+      "agreement": 0.9494949494949495,
+      "expected_agreement": 0.47505356596265685,
+      "kappa": 0.9037900874635569,
+      "confusion": {
+        "A|A": 46,
+        "A|unclear": 4,
+        "B|B": 48,
+        "unclear|B": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 94,
+        "n": 99,
+        "rate": 0.9494949494949495,
+        "ci95": [
+          0.887171464182119,
+          0.9782370864433089
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2b",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "mode",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "continues|continues": 320
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2b",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "mentions",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 320
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2b",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "mention_kind",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 320
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2b",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "value",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 320
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2b",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2b",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "enacts",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 0.51220703125,
+      "kappa": 1.0,
+      "confusion": {
+        "False|False": 135,
+        "True|True": 185
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2b",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "enact_value",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 0.41658203125,
+      "kappa": 1.0,
+      "confusion": {
+        "A|A": 32,
+        "NONE|NONE": 135,
+        "unclear|unclear": 153
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2b",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "enact_value_both_enact",
+      "n": 185,
+      "agreement": 1.0,
+      "expected_agreement": 0.7138933528122717,
+      "kappa": 1.0,
+      "confusion": {
+        "A|A": 32,
+        "unclear|unclear": 153
+      },
+      "raw_agreement_wilson95": {
+        "k": 185,
+        "n": 185,
+        "rate": 1.0,
+        "ci95": [
+          0.9796570247233661,
+          1.0
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2b",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "structure_named",
+      "n": 320,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 320
+      },
+      "raw_agreement_wilson95": {
+        "k": 320,
+        "n": 320,
+        "rate": 1.0,
+        "ci95": [
+          0.9881374103882884,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "mode",
+      "n": 168,
+      "agreement": 0.9940476190476191,
+      "expected_agreement": 0.9940476190476191,
+      "kappa": 0.0,
+      "confusion": {
+        "describes|continues": 1,
+        "describes|describes": 167
+      },
+      "raw_agreement_wilson95": {
+        "k": 167,
+        "n": 168,
+        "rate": 0.9940476190476191,
+        "ci95": [
+          0.9670573913601588,
+          0.9989485117506134
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "mentions",
+      "n": 168,
+      "agreement": 0.9880952380952381,
+      "expected_agreement": 0.9880952380952381,
+      "kappa": 0.0,
+      "confusion": {
+        "False|False": 166,
+        "True|False": 2
+      },
+      "raw_agreement_wilson95": {
+        "k": 166,
+        "n": 168,
+        "rate": 0.9880952380952381,
+        "ci95": [
+          0.9576380186368249,
+          0.9967292591352631
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "mention_kind",
+      "n": 168,
+      "agreement": 0.9880952380952381,
+      "expected_agreement": 0.9880952380952381,
+      "kappa": 0.0,
+      "confusion": {
+        "NONE|NONE": 166,
+        "quotes_token|NONE": 2
+      },
+      "raw_agreement_wilson95": {
+        "k": 166,
+        "n": 168,
+        "rate": 0.9880952380952381,
+        "ci95": [
+          0.9576380186368249,
+          0.9967292591352631
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "value",
+      "n": 168,
+      "agreement": 0.9880952380952381,
+      "expected_agreement": 0.9880952380952381,
+      "kappa": 0.0,
+      "confusion": {
+        "A|NONE": 1,
+        "NONE|NONE": 166,
+        "unclear|NONE": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 166,
+        "n": 168,
+        "rate": 0.9880952380952381,
+        "ci95": [
+          0.9576380186368249,
+          0.9967292591352631
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "enacts",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "enact_value",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "enact_value_both_enact",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "structure_tokens_present",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "nla",
+      "field": "structure_token_set",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "[]|[]": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "mode",
+      "n": 168,
+      "agreement": 0.9702380952380952,
+      "expected_agreement": 0.9702380952380952,
+      "kappa": 0.0,
+      "confusion": {
+        "continues|continues": 163,
+        "mixed|continues": 5
+      },
+      "raw_agreement_wilson95": {
+        "k": 163,
+        "n": 168,
+        "rate": 0.9702380952380952,
+        "ci95": [
+          0.932229337072173,
+          0.9872220646838628
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "mentions",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "mention_kind",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "value",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "enacts",
+      "n": 168,
+      "agreement": 0.9166666666666666,
+      "expected_agreement": 0.5076530612244898,
+      "kappa": 0.8307426597582037,
+      "confusion": {
+        "False|False": 89,
+        "False|True": 1,
+        "True|False": 13,
+        "True|True": 65
+      },
+      "raw_agreement_wilson95": {
+        "k": 154,
+        "n": 168,
+        "rate": 0.9166666666666666,
+        "ci95": [
+          0.8649906456623409,
+          0.9497131280455389
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "enact_value",
+      "n": 168,
+      "agreement": 0.8452380952380952,
+      "expected_agreement": 0.4491921768707483,
+      "kappa": 0.719027402547279,
+      "confusion": {
+        "A|unclear": 12,
+        "B|NONE": 13,
+        "NONE|NONE": 89,
+        "NONE|unclear": 1,
+        "unclear|unclear": 53
+      },
+      "raw_agreement_wilson95": {
+        "k": 142,
+        "n": 168,
+        "rate": 0.8452380952380952,
+        "ci95": [
+          0.7828950412531233,
+          0.8921452283905487
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "enact_value_both_enact",
+      "n": 65,
+      "agreement": 0.8153846153846154,
+      "expected_agreement": 0.8153846153846154,
+      "kappa": 0.0,
+      "confusion": {
+        "A|unclear": 12,
+        "unclear|unclear": 53
+      },
+      "raw_agreement_wilson95": {
+        "k": 53,
+        "n": 65,
+        "rate": 0.8153846153846154,
+        "ci95": [
+          0.7044577741729509,
+          0.8911123462193701
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "structure_tokens_present",
+      "n": 168,
+      "agreement": 0.5119047619047619,
+      "expected_agreement": 0.5119047619047619,
+      "kappa": 0.0,
+      "confusion": {
+        "False|True": 82,
+        "True|True": 86
+      },
+      "raw_agreement_wilson95": {
+        "k": 86,
+        "n": 168,
+        "rate": 0.5119047619047619,
+        "ci95": [
+          0.43690061343139175,
+          0.5863766372459762
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "earlier_state",
+      "reader": "oracle",
+      "field": "structure_token_set",
+      "n": 168,
+      "agreement": 0.0,
+      "expected_agreement": 0.0,
+      "kappa": 0.0,
+      "confusion": {
+        "[\"(\",\")\",\"`\",\"|\"]|[\"-\"]": 5,
+        "[\"(\",\")\",\"|\"]|[\"-\"]": 1,
+        "[\"(\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"(\",\")\",\"|\"]|[\"-\"]": 3,
+        "[\"\\\"\",\"(\",\"`\"]|[\"-\"]": 3,
+        "[\"\\\"\",\"(\"]|[\"-\"]": 6,
+        "[\"\\\"\",\"`\",\"|\"]|[\"-\"]": 3,
+        "[\"\\\"\",\"|\"]|[\"-\"]": 5,
+        "[\"\\\"\"]|[\"-\"]": 9,
+        "[\"`\",\"|\"]|[\"-\"]": 16,
+        "[\"`\"]|[\"-\"]": 1,
+        "[\"|\"]|[\"-\"]": 26,
+        "[\"“\",\"”\"]|[\"-\"]": 6,
+        "[\"“\"]|[\"-\"]": 1,
+        "[]|[\"-\"]": 82
+      },
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 168,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.02235547155054422
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "mode",
+      "n": 84,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "describes|describes": 84
+      },
+      "raw_agreement_wilson95": {
+        "k": 84,
+        "n": 84,
+        "rate": 1.0,
+        "ci95": [
+          0.9562667346678565,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "mentions",
+      "n": 84,
+      "agreement": 0.9880952380952381,
+      "expected_agreement": 0.9880952380952381,
+      "kappa": 0.0,
+      "confusion": {
+        "False|False": 83,
+        "True|False": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 83,
+        "n": 84,
+        "rate": 0.9880952380952381,
+        "ci95": [
+          0.9356030079821146,
+          0.9978954710984119
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "mention_kind",
+      "n": 84,
+      "agreement": 0.9880952380952381,
+      "expected_agreement": 0.9880952380952381,
+      "kappa": 0.0,
+      "confusion": {
+        "NONE|NONE": 83,
+        "quotes_token|NONE": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 83,
+        "n": 84,
+        "rate": 0.9880952380952381,
+        "ci95": [
+          0.9356030079821146,
+          0.9978954710984119
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "value",
+      "n": 84,
+      "agreement": 0.9880952380952381,
+      "expected_agreement": 0.9880952380952381,
+      "kappa": 0.0,
+      "confusion": {
+        "NONE|NONE": 83,
+        "unclear|NONE": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 83,
+        "n": 84,
+        "rate": 0.9880952380952381,
+        "ci95": [
+          0.9356030079821146,
+          0.9978954710984119
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "enacts",
+      "n": 84,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 84
+      },
+      "raw_agreement_wilson95": {
+        "k": 84,
+        "n": 84,
+        "rate": 1.0,
+        "ci95": [
+          0.9562667346678565,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "enact_value",
+      "n": 84,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 84
+      },
+      "raw_agreement_wilson95": {
+        "k": 84,
+        "n": 84,
+        "rate": 1.0,
+        "ci95": [
+          0.9562667346678565,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "enact_value_both_enact",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "structure_tokens_present",
+      "n": 84,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 84
+      },
+      "raw_agreement_wilson95": {
+        "k": 84,
+        "n": 84,
+        "rate": 1.0,
+        "ci95": [
+          0.9562667346678565,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "nla",
+      "field": "structure_token_set",
+      "n": 84,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "[]|[]": 84
+      },
+      "raw_agreement_wilson95": {
+        "k": 84,
+        "n": 84,
+        "rate": 1.0,
+        "ci95": [
+          0.9562667346678565,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "mode",
+      "n": 84,
+      "agreement": 0.9404761904761905,
+      "expected_agreement": 0.9404761904761905,
+      "kappa": 0.0,
+      "confusion": {
+        "continues|continues": 79,
+        "mixed|continues": 5
+      },
+      "raw_agreement_wilson95": {
+        "k": 79,
+        "n": 84,
+        "rate": 0.9404761904761905,
+        "ci95": [
+          0.8681156389946401,
+          0.974309817736567
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "mentions",
+      "n": 84,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 84
+      },
+      "raw_agreement_wilson95": {
+        "k": 84,
+        "n": 84,
+        "rate": 1.0,
+        "ci95": [
+          0.9562667346678565,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "mention_kind",
+      "n": 84,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 84
+      },
+      "raw_agreement_wilson95": {
+        "k": 84,
+        "n": 84,
+        "rate": 1.0,
+        "ci95": [
+          0.9562667346678565,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "value",
+      "n": 84,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 84
+      },
+      "raw_agreement_wilson95": {
+        "k": 84,
+        "n": 84,
+        "rate": 1.0,
+        "ci95": [
+          0.9562667346678565,
+          0.9999999999999999
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "enacts",
+      "n": 84,
+      "agreement": 0.8452380952380952,
+      "expected_agreement": 0.5810657596371882,
+      "kappa": 0.6305818673883626,
+      "confusion": {
+        "False|False": 18,
+        "False|True": 11,
+        "True|False": 2,
+        "True|True": 53
+      },
+      "raw_agreement_wilson95": {
+        "k": 71,
+        "n": 84,
+        "rate": 0.8452380952380952,
+        "ci95": [
+          0.753011640086769,
+          0.9072677719457987
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "enact_value",
+      "n": 84,
+      "agreement": 0.7738095238095238,
+      "expected_agreement": 0.34410430839002265,
+      "kappa": 0.6551426101987899,
+      "confusion": {
+        "A|A": 41,
+        "B|B": 6,
+        "B|NONE": 1,
+        "B|unclear": 6,
+        "NONE|B": 6,
+        "NONE|NONE": 18,
+        "NONE|unclear": 5,
+        "unclear|NONE": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 65,
+        "n": 84,
+        "rate": 0.7738095238095238,
+        "ci95": [
+          0.6735289274916636,
+          0.8501409510169247
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "enact_value_both_enact",
+      "n": 53,
+      "agreement": 0.8867924528301887,
+      "expected_agreement": 0.6240655037379851,
+      "kappa": 0.6988636363636364,
+      "confusion": {
+        "A|A": 41,
+        "B|B": 6,
+        "B|unclear": 6
+      },
+      "raw_agreement_wilson95": {
+        "k": 47,
+        "n": 53,
+        "rate": 0.8867924528301887,
+        "ci95": [
+          0.7742322969866086,
+          0.9470704108893132
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "structure_tokens_present",
+      "n": 84,
+      "agreement": 0.7738095238095238,
+      "expected_agreement": 0.7738095238095238,
+      "kappa": 0.0,
+      "confusion": {
+        "False|True": 19,
+        "True|True": 65
+      },
+      "raw_agreement_wilson95": {
+        "k": 65,
+        "n": 84,
+        "rate": 0.7738095238095238,
+        "ci95": [
+          0.6735289274916636,
+          0.8501409510169247
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "local_form",
+      "reader": "oracle",
+      "field": "structure_token_set",
+      "n": 84,
+      "agreement": 0.0,
+      "expected_agreement": 0.0,
+      "kappa": 0.0,
+      "confusion": {
+        "[\"(\",\")\"]|[\"-\"]": 4,
+        "[\"(\"]|[\"-\"]": 1,
+        "[\"[\",\"]\"]|[\"-\"]": 5,
+        "[\"[\"]|[\"-\"]": 2,
+        "[\"\\\"\",\"(\",\")\",\"`\"]|[\"-\"]": 3,
+        "[\"\\\"\",\"(\",\")\",\"{\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"(\",\")\",\"|\"]|[\"-\"]": 5,
+        "[\"\\\"\",\"(\",\")\"]|[\"-\"]": 6,
+        "[\"\\\"\",\"(\",\"[\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"(\",\"`\"]|[\"-\"]": 2,
+        "[\"\\\"\",\"(\"]|[\"-\"]": 5,
+        "[\"\\\"\",\"[\",\"]\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"[\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"`\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"{\",\"}\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"{\"]|[\"-\"]": 1,
+        "[\"\\\"\"]|[\"-\"]": 23,
+        "[\"`\"]|[\"-\"]": 2,
+        "[]|[\"-\"]": 19
+      },
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 84,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.043733265332143306
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "nla",
+      "field": "mode",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "describes|describes": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "nla",
+      "field": "mentions",
+      "n": 168,
+      "agreement": 0.9761904761904762,
+      "expected_agreement": 0.9761904761904762,
+      "kappa": 0.0,
+      "confusion": {
+        "False|False": 164,
+        "True|False": 4
+      },
+      "raw_agreement_wilson95": {
+        "k": 164,
+        "n": 168,
+        "rate": 0.9761904761904762,
+        "ci95": [
+          0.9403869961924775,
+          0.9907030309022423
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "nla",
+      "field": "mention_kind",
+      "n": 168,
+      "agreement": 0.9761904761904762,
+      "expected_agreement": 0.9761904761904762,
+      "kappa": 0.0,
+      "confusion": {
+        "NONE|NONE": 164,
+        "quotes_token|NONE": 3,
+        "states_property|NONE": 1
+      },
+      "raw_agreement_wilson95": {
+        "k": 164,
+        "n": 168,
+        "rate": 0.9761904761904762,
+        "ci95": [
+          0.9403869961924775,
+          0.9907030309022423
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "nla",
+      "field": "value",
+      "n": 168,
+      "agreement": 0.9761904761904762,
+      "expected_agreement": 0.9761904761904762,
+      "kappa": 0.0,
+      "confusion": {
+        "NONE|NONE": 164,
+        "unclear|NONE": 4
+      },
+      "raw_agreement_wilson95": {
+        "k": 164,
+        "n": 168,
+        "rate": 0.9761904761904762,
+        "ci95": [
+          0.9403869961924775,
+          0.9907030309022423
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "nla",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "nla",
+      "field": "enacts",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "nla",
+      "field": "enact_value",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "nla",
+      "field": "enact_value_both_enact",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "nla",
+      "field": "structure_tokens_present",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "nla",
+      "field": "structure_token_set",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "[]|[]": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "oracle",
+      "field": "mode",
+      "n": 168,
+      "agreement": 0.9821428571428571,
+      "expected_agreement": 0.9821428571428571,
+      "kappa": 0.0,
+      "confusion": {
+        "continues|continues": 165,
+        "mixed|continues": 3
+      },
+      "raw_agreement_wilson95": {
+        "k": 165,
+        "n": 168,
+        "rate": 0.9821428571428571,
+        "ci95": [
+          0.9488198608200019,
+          0.9939087916134018
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "oracle",
+      "field": "mentions",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "False|False": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "oracle",
+      "field": "mention_kind",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "oracle",
+      "field": "value",
+      "n": 168,
+      "agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "confusion": {
+        "NONE|NONE": 168
+      },
+      "raw_agreement_wilson95": {
+        "k": 168,
+        "n": 168,
+        "rate": 1.0,
+        "ci95": [
+          0.9776445284494559,
+          1.0000000000000002
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "oracle",
+      "field": "value_both_mention",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "oracle",
+      "field": "enacts",
+      "n": 168,
+      "agreement": 0.5,
+      "expected_agreement": 0.5,
+      "kappa": 0.0,
+      "confusion": {
+        "False|False": 84,
+        "False|True": 84
+      },
+      "raw_agreement_wilson95": {
+        "k": 84,
+        "n": 168,
+        "rate": 0.5,
+        "ci95": [
+          0.4252412688200498,
+          0.5747587311799502
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "oracle",
+      "field": "enact_value",
+      "n": 168,
+      "agreement": 0.5,
+      "expected_agreement": 0.5,
+      "kappa": 0.0,
+      "confusion": {
+        "NONE|A": 84,
+        "NONE|NONE": 84
+      },
+      "raw_agreement_wilson95": {
+        "k": 84,
+        "n": 168,
+        "rate": 0.5,
+        "ci95": [
+          0.4252412688200498,
+          0.5747587311799502
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "oracle",
+      "field": "enact_value_both_enact",
+      "n": 0,
+      "agreement": null,
+      "expected_agreement": null,
+      "kappa": null,
+      "confusion": {},
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 0,
+        "rate": null,
+        "ci95": null
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "oracle",
+      "field": "structure_tokens_present",
+      "n": 168,
+      "agreement": 0.5119047619047619,
+      "expected_agreement": 0.5119047619047619,
+      "kappa": 0.0,
+      "confusion": {
+        "False|True": 82,
+        "True|True": 86
+      },
+      "raw_agreement_wilson95": {
+        "k": 86,
+        "n": 168,
+        "rate": 0.5119047619047619,
+        "ci95": [
+          0.43690061343139175,
+          0.5863766372459762
+        ]
+      }
+    },
+    {
+      "stratum": "tier_reader",
+      "sample": "q2c",
+      "tier": "unassigned_by_Q1",
+      "reader": "oracle",
+      "field": "structure_token_set",
+      "n": 168,
+      "agreement": 0.0,
+      "expected_agreement": 0.0,
+      "kappa": 0.0,
+      "confusion": {
+        "[\"'\",\"(\",\")\"]|[\"-\"]": 1,
+        "[\"(\",\")\",\"`\"]|[\"-\"]": 7,
+        "[\"(\",\")\"]|[\"-\"]": 40,
+        "[\"(\",\"3.\",\"[\",\"]\"]|[\"-\"]": 1,
+        "[\"(\"]|[\"-\"]": 2,
+        "[\")\",\"1)\"]|[\"-\"]": 1,
+        "[\")\"]|[\"-\"]": 4,
+        "[\"2.\"]|[\"-\"]": 2,
+        "[\"3.\",\"[\",\"]\"]|[\"-\"]": 1,
+        "[\"3.\"]|[\"-\"]": 1,
+        "[\"[\",\"]\"]|[\"-\"]": 2,
+        "[\"\\\"\",\"(\",\")\",\"2.\"]|[\"-\"]": 1,
+        "[\"\\\"\",\"(\",\")\"]|[\"-\"]": 10,
+        "[\"\\\"\",\"(\",\"{\",\"}\"]|[\"-\"]": 3,
+        "[\"`\"]|[\"-\"]": 2,
+        "[\"|\"]|[\"-\"]": 4,
+        "[\"’\"]|[\"-\"]": 4,
+        "[]|[\"-\"]": 82
+      },
+      "raw_agreement_wilson95": {
+        "k": 0,
+        "n": 168,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.02235547155054422
+        ]
+      }
+    }
+  ],
+  "api_calls": 0,
+  "gpu_hours": 0
+}

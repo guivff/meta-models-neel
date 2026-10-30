@@ -1,0 +1,12 @@
+{
+  "id": "f562a191888e49d08741f26c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict classification task: label sentences as \"positive\" or \"negative\" based on the given definition.\n\nThe example pattern shows a template: definition \u2192 example \u2192 new test case, requiring the model to apply the rule to \"The weather is pleasant today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's classification answer (e.g., \"negative\" or \"positive\") as the next token.\n\"Example pattern:\n- Sentence: 'X' \u2192 Reply: negative\nNew test case:\nSentence: 'The weather is pleasant today.'\nReply:\" \u2014 the final \"Reply:\" is a field label demanding the direct answer, constrained to a short classification word or phrase matching the established format.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict classification task: label sentences as \"positive\" or \"negative\" based on the given definition.\n\nThe example pattern shows a template: definition \u2192 example \u2192 new test case, requiring the model to apply the rule to \"The weather is pleasant today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's classification answer (e.g., \"negative\" or \"positive\") as the next token.\n\"Example pattern:\n- Sentence: 'X' \u2192 Reply: negative\nNew test case:\nSentence: 'The weather is pleasant today.'\nReply:\" \u2014 the final \"Reply:\" is a field label demanding the direct answer, constrained to a short classification word or phrase matching the established format.\n\"Reply:\"",
+  "truncated": false
+}

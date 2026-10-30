@@ -1,0 +1,620 @@
+{
+  "activations": "activations.json",
+  "condition": {
+    "ci95": [
+      0.6243407235682331,
+      0.9447962896007217
+    ],
+    "k": 16,
+    "n": 19,
+    "rate": 0.8421052631578947
+  },
+  "experiment": "W1",
+  "features": [
+    "json_type",
+    "latex_environment",
+    "latex_section",
+    "list_depth",
+    "list_index",
+    "prose_paren",
+    "prose_quote",
+    "prose_sentence",
+    "python_argument",
+    "python_comment",
+    "python_depth",
+    "python_indent",
+    "python_string",
+    "table_column",
+    "table_role",
+    "table_row"
+  ],
+  "input_seal_sha256": "f79302298eb1a8e9d0c46a996adc4c3071ba952fd77e0ea5215a00f1bad64a2c",
+  "metrics_sha256": "ea6df6f9ead88f2724b84ff5bce4429e13e8e333ce9264fd44b821cbfe8a5fa7",
+  "probe_directions": "probe_directions.json",
+  "reader_seals": [
+    "d6f12937d5f85b2c44c98a71b7b0cc5fb8eb1fa7c6e92c42b1c0876f534d938a",
+    "f41b998e753e18d53a0fcbb739435427e23a07ea25ce43577c7faf027da7a3db"
+  ],
+  "rows": [
+    {
+      "class": "state-like",
+      "difference": 0.31972789115646255,
+      "difference_ci95": [
+        0.20521541950113376,
+        0.3900226757369614
+      ],
+      "domain": "json",
+      "feature": "json_type",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.3401360544217687,
+        "hi": 0.3973922902494331,
+        "lo": 0.30498866213151926,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.34013605442176875,
+      "probe_minus_reader_ci95": [
+        0.3049886621315193,
+        0.3973922902494331
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.6598639455782312,
+        "hi": 0.6950113378684807,
+        "lo": 0.6026077097505669,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "difference": 0.14172335600907027,
+      "difference_ci95": [
+        -0.004535147392290273,
+        0.4240362811791383
+      ],
+      "domain": "latex",
+      "feature": "latex_environment",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.42913832199546487,
+        "hi": 0.5022675736961452,
+        "lo": 0.28798185941043086,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 0.9427437641723356,
+      "probe_minus_reader": 0.3718820861678005,
+      "probe_minus_reader_ci95": [
+        0.19897959183673464,
+        0.4897959183673469
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.5708616780045351,
+        "hi": 0.7120181405895691,
+        "lo": 0.4977324263038549,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "difference": -0.13492063492063489,
+      "difference_ci95": [
+        -0.293849206349206,
+        0.032993197278910966
+      ],
+      "domain": "latex",
+      "feature": "latex_section",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.5674603174603174,
+        "hi": 0.6469246031746027,
+        "lo": 0.4835034013605443,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.5674603174603174,
+      "probe_minus_reader_ci95": [
+        0.48350340136054426,
+        0.6469246031746025
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.43253968253968256,
+        "hi": 0.5164965986394555,
+        "lo": 0.353075396825397,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "difference": 0.2675736961451247,
+      "difference_ci95": [
+        0.14172335600907027,
+        0.616780045351474
+      ],
+      "domain": "list",
+      "feature": "list_depth",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.36621315192743764,
+        "hi": 0.42913832199546487,
+        "lo": 0.19160997732426305,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.36621315192743764,
+      "probe_minus_reader_ci95": [
+        0.191609977324263,
+        0.42913832199546487
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.6337868480725624,
+        "hi": 0.808390022675737,
+        "lo": 0.5708616780045351,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "difference": -0.1621315192743764,
+      "difference_ci95": [
+        -0.5238662131519273,
+        0.1848072562358276
+      ],
+      "domain": "list",
+      "feature": "list_index",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.5810657596371882,
+        "hi": 0.7619331065759635,
+        "lo": 0.4075963718820862,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 0.9994331065759637,
+      "probe_minus_reader": 0.5804988662131519,
+      "probe_minus_reader_ci95": [
+        0.40702947845804993,
+        0.7619331065759635
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.4189342403628118,
+        "hi": 0.5924036281179138,
+        "lo": 0.2380668934240363,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "difference": -0.030612244897959162,
+      "difference_ci95": [
+        -0.44897959183673475,
+        0.3061791383219951
+      ],
+      "domain": "prose",
+      "feature": "prose_paren",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.5153061224489796,
+        "hi": 0.7244897959183674,
+        "lo": 0.3469104308390023,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.5153061224489797,
+      "probe_minus_reader_ci95": [
+        0.34691043083900236,
+        0.7244897959183674
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.4846938775510204,
+        "hi": 0.6530895691609975,
+        "lo": 0.2755102040816326,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "difference": 0.12585034013605445,
+      "difference_ci95": [
+        -0.49659863945578236,
+        0.659977324263038
+      ],
+      "domain": "prose",
+      "feature": "prose_quote",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.4370748299319728,
+        "hi": 0.7482993197278912,
+        "lo": 0.17001133786848083,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.4370748299319728,
+      "probe_minus_reader_ci95": [
+        0.1700113378684808,
+        0.7482993197278911
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.5629251700680272,
+        "hi": 0.829988662131519,
+        "lo": 0.25170068027210885,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "difference": 0.06235827664399096,
+      "difference_ci95": [
+        -0.5045351473922903,
+        0.5975056689342404
+      ],
+      "domain": "prose",
+      "feature": "prose_sentence",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.4688208616780045,
+        "hi": 0.7522675736961452,
+        "lo": 0.20124716553287983,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.4688208616780045,
+      "probe_minus_reader_ci95": [
+        0.2012471655328798,
+        0.7522675736961452
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.5311791383219955,
+        "hi": 0.7987528344671202,
+        "lo": 0.24773242630385486,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "difference": 0.0,
+      "difference_ci95": [
+        -0.2086167800453515,
+        0.24829931972789115
+      ],
+      "domain": "python",
+      "feature": "python_argument",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.5,
+        "hi": 0.6043083900226758,
+        "lo": 0.3758503401360544,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.5,
+      "probe_minus_reader_ci95": [
+        0.37585034013605445,
+        0.6043083900226758
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.5,
+        "hi": 0.6241496598639455,
+        "lo": 0.3956916099773243,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "difference": 0.08503401360544216,
+      "difference_ci95": [
+        -0.058956916099773216,
+        0.25623582766439906
+      ],
+      "domain": "python",
+      "feature": "python_comment",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.4574829931972789,
+        "hi": 0.5294784580498866,
+        "lo": 0.37188208616780044,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.4574829931972789,
+      "probe_minus_reader_ci95": [
+        0.3718820861678005,
+        0.5294784580498866
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.5425170068027211,
+        "hi": 0.6281179138321995,
+        "lo": 0.47052154195011336,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "difference": -0.024943310657596418,
+      "difference_ci95": [
+        -0.1201814058956916,
+        0.06238662131519262
+      ],
+      "domain": "python",
+      "feature": "python_depth",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.5124716553287982,
+        "hi": 0.5600907029478458,
+        "lo": 0.46880668934240366,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.5124716553287982,
+      "probe_minus_reader_ci95": [
+        0.46880668934240366,
+        0.5600907029478458
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.4875283446712018,
+        "hi": 0.5311933106575963,
+        "lo": 0.4399092970521542,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "difference": 0.18367346938775508,
+      "difference_ci95": [
+        -0.29251700680272114,
+        0.6859410430839001
+      ],
+      "domain": "python",
+      "feature": "python_indent",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.40816326530612246,
+        "hi": 0.6462585034013606,
+        "lo": 0.15702947845804988,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.40816326530612246,
+      "probe_minus_reader_ci95": [
+        0.15702947845804993,
+        0.6462585034013606
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.5918367346938775,
+        "hi": 0.8429705215419501,
+        "lo": 0.35374149659863946,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "difference": 0.28798185941043086,
+      "difference_ci95": [
+        0.015873015873015872,
+        0.564625850340136
+      ],
+      "domain": "python",
+      "feature": "python_string",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.35600907029478457,
+        "hi": 0.49206349206349204,
+        "lo": 0.21768707482993196,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.35600907029478457,
+      "probe_minus_reader_ci95": [
+        0.217687074829932,
+        0.4920634920634921
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.6439909297052154,
+        "hi": 0.782312925170068,
+        "lo": 0.5079365079365079,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "difference": -0.05102040816326525,
+      "difference_ci95": [
+        -0.3322278911564625,
+        0.22902494331065765
+      ],
+      "domain": "table",
+      "feature": "table_column",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.5255102040816326,
+        "hi": 0.6661139455782312,
+        "lo": 0.3854875283446712,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.5255102040816326,
+      "probe_minus_reader_ci95": [
+        0.38548752834467115,
+        0.6661139455782312
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.4744897959183674,
+        "hi": 0.6145124716553289,
+        "lo": 0.3338860544217688,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "difference": -0.12358276643990934,
+      "difference_ci95": [
+        -0.564625850340136,
+        0.3787414965986392
+      ],
+      "domain": "table",
+      "feature": "table_role",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.5617913832199547,
+        "hi": 0.782312925170068,
+        "lo": 0.3106292517006803,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.5617913832199546,
+      "probe_minus_reader_ci95": [
+        0.3106292517006803,
+        0.782312925170068
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.43820861678004536,
+        "hi": 0.6893707482993195,
+        "lo": 0.21768707482993196,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "difference": 0.0011337868480725266,
+      "difference_ci95": [
+        -0.227891156462585,
+        0.21541950113378688
+      ],
+      "domain": "table",
+      "feature": "table_row",
+      "layer": 44,
+      "mismatched": {
+        "auroc": 0.49943310657596374,
+        "hi": 0.6139455782312925,
+        "lo": 0.3922902494331066,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "missing": 0,
+      "n_clusters": 6,
+      "n_total": 84,
+      "probe_auroc": 1.0,
+      "probe_minus_reader": 0.49943310657596374,
+      "probe_minus_reader_ci95": [
+        0.39229024943310653,
+        0.6139455782312926
+      ],
+      "reader": "olens",
+      "status": "EVALUABLE",
+      "true": {
+        "auroc": 0.5005668934240363,
+        "hi": 0.6077097505668935,
+        "lo": 0.38605442176870747,
+        "n": 84,
+        "n_clusters": 6
+      }
+    }
+  ],
+  "rule": "i",
+  "section": 70,
+  "selection": "Exact metrics.json.w1.blindspot_features; independent of conditions (ii)/(iii) and overall verdict",
+  "w1_verdict": "NOT MET"
+}

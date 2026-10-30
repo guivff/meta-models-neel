@@ -1,0 +1,12 @@
+{
+  "id": "fc278ba2df199727c670fa3e",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict pattern: classify sentences as \"Congratulations\" or \"Sorry\" based on positive/negative sentiment.\n\nThe example structure (\"Example sentence: [sentence]\\nReply:\") signals the model must now produce the actual classification answer for \"I am a student.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker, immediately requiring the classification output (e.g., \"Sorry\" or \"Congratulations\") as the next token.\n\"Follow the exact format of the given example.\nExample sentence: I am a student.\nQuestion: What is the appropriate response word for the sentence 'I am a student.'?\nReply:\" \u2014 the final \"Reply:\" is a field prompt demanding the direct answer, likely a short single word or phrase completing the response.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict pattern: classify sentences as \"Congratulations\" or \"Sorry\" based on positive/negative sentiment.\n\nThe example structure (\"Example sentence: [sentence]\\nReply:\") signals the model must now produce the actual classification answer for \"I am a student.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker, immediately requiring the classification output (e.g., \"Sorry\" or \"Congratulations\") as the next token.\n\"Follow the exact format of the given example.\nExample sentence: I am a student.\nQuestion: What is the appropriate response word for the sentence 'I am a student.'?\nReply:\" \u2014 the final \"Reply:\" is a field prompt demanding the direct answer, likely a short single word or phrase completing the response.",
+  "truncated": false
+}

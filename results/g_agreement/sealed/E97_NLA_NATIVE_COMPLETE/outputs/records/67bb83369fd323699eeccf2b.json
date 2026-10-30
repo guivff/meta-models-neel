@@ -1,0 +1,12 @@
+{
+  "id": "67bb83369fd323699eeccf2b",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: a rule is given, then a task is posed, requiring a model response following that rule.\n\nThe \"Task\" field specifies explaining how to cite a website, but the preceding rule explicitly forbids mentioning \"website\" \u2014 creating a constraint the answer must navigate.\n\n\"Question: [topic]\nAnswer:\" is a structured Q&A template, where \"Answer:\" is the final token, immediately requiring the model's generated response text (likely a sentence or paragraph explaining citation methods, consistent with the rule above).\n\"Given the following instruction: [instruction]\nTopic: [topic]\nInstruction: Explain how to cite a website.\nAnswer:\" \u2014 the final \"Answer:\" token demands the actual explanatory response content, likely beginning with \"The model...\" or a direct explanation, mirroring the template's format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: a rule is given, then a task is posed, requiring a model response following that rule.\n\nThe \"Task\" field specifies explaining how to cite a website, but the preceding rule explicitly forbids mentioning \"website\" \u2014 creating a constraint the answer must navigate.\n\n\"Question: [topic]\nAnswer:\" is a structured Q&A template, where \"Answer:\" is the final token, immediately requiring the model's generated response text (likely a sentence or paragraph explaining citation methods, consistent with the rule above).\n\"Given the following instruction: [instruction]\nTopic: [topic]\nInstruction: Explain how to cite a website.\nAnswer:\" \u2014 the final \"Answer:\" token demands the actual explanatory response content, likely beginning with \"The model...\" or a direct explanation, mirroring the template's format.",
+  "truncated": false
+}

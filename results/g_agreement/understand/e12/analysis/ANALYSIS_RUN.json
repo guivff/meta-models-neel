@@ -1,0 +1,83 @@
+{
+  "GPU_hours": 0,
+  "Oracle_completeness": {
+    "NLA": "INCOMPLETE; no sealed score grid; retry both native and context",
+    "Oracle": {
+      "four_arm_exact_grid": true,
+      "n_items": 2100,
+      "n_scores": 8400,
+      "phase_seals": {
+        "olens-context-units": "e8c0b5717d635ec17cf664b0acdeae240a01efaa1e13120e54543f98c53f984a",
+        "olens-native-units": "41f6761a5363b080dda3608396f378f3e60b9dacec43b441c28f77267ff90140"
+      },
+      "score_seal_sha256": "cf503fff154b2800a5a20f4810ea7026ff8a2a9e2b53f1a567b3366c47f65631",
+      "status": "COMPLETE_SEALED"
+    },
+    "Oracle_retry_paths": [],
+    "analysis_scope": "Oracle-only primary; no re-run of complete Oracle paths",
+    "authority": "f70894e1 \u00a799 2026-10-24 06:50 CEST",
+    "booking": "b404b8a9",
+    "collection_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/blindspot/understand-units/5711bz7c1ulept/out/E1B_E12_NEW_RUN",
+    "experiment_seal_sha256": "277207104ceb9e464bd907c25632afed8d81af21be8f65929d913bc8ff82985b",
+    "original_status": "EXPLORATORY_E12_INCOMPLETE",
+    "packed_seal_sha256": "4e47f7ceaeaeda67b33e7621757bb29a092d310d3c3d3d67e176967ec9f17ea9",
+    "pod": "5711bz7c1ulept",
+    "run": {
+      "PID": 1228,
+      "allocation_seconds": 1192.6613011559093,
+      "clock_resets": 0,
+      "elapsed_science_seconds": 1028.024620260985,
+      "error": "TimeoutError: science cap or retrieval reserve reached",
+      "experiment": "E12",
+      "first_science_epoch": 1792813672.650408,
+      "input_seal_sha256": "d50f2d0b66454dbc72d6dd5743f961f3e209e1614749514130db99c22c33a473",
+      "paths": {
+        "olens_context": {
+          "complete": true,
+          "forecast_seconds": 433.93868640463916,
+          "median_seconds": 0.2596880229830276,
+          "timed_unit_seconds": [
+            0.26880420598899946,
+            0.2586980060150381,
+            0.2596880229830276
+          ],
+          "units": 1671,
+          "warmup_scored": false
+        },
+        "olens_native": {
+          "complete": true,
+          "forecast_seconds": 121.16884769930039,
+          "median_seconds": 0.8077923179953359,
+          "timed_unit_seconds": [
+            0.8077923179953359,
+            0.8179520689882338,
+            0.7744782179943286
+          ],
+          "units": 150,
+          "warmup_scored": false
+        }
+      },
+      "status": "INCOMPLETE"
+    },
+    "source_input_seal_sha256": "d50f2d0b66454dbc72d6dd5743f961f3e209e1614749514130db99c22c33a473"
+  },
+  "analysis_scope": "PRIMARY_ORACLE_ONLY_f70894e1",
+  "assessment": "PARTLY_HELD; meaning prediction held, structure prediction mixed with registered surprise examples",
+  "at": "2026-10-24T04:49:23.291382+00:00",
+  "booking": "b404b8a9",
+  "bootstrap": 2000,
+  "command": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 python -m projects.g_agreement.understand.followup_analyse e12 --oracle-primary --inputs cache/g_agreement/understand/e1b_e12/e12 --collection cache/g_agreement/blindspot/understand-units/5711bz7c1ulept/out/E1B_E12_NEW_RUN/e12 --out results/g_agreement/understand/e12/analysis",
+  "metrics_sha256_unchanged": "e4a73682607eeef61a8c7818f1792563097e4d42cd571f59adbd75defa0bece4",
+  "prior_analysis_seal": {
+    "files": {
+      "RESULTS.md": "d4d0d2d3a6f746e06bd8eb77369932369f8666b662bb9580448e5e444ecc6882",
+      "metrics.json": "e4a73682607eeef61a8c7818f1792563097e4d42cd571f59adbd75defa0bece4"
+    },
+    "status": "EXPLORATORY_E12_CPU_ANALYSIS_SEALED"
+  },
+  "registered_analysis_runs": 1,
+  "report_finalization_only": true,
+  "seed": 20261023,
+  "wall_note": "Not instrumented; successful registered computation once. No timing rerun.",
+  "wall_seconds": null
+}

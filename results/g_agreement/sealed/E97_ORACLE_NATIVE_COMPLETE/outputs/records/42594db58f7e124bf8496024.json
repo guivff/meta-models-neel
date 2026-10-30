@@ -1,0 +1,9 @@
+{
+  "id": "42594db58f7e124bf8496024",
+  "malformed": false,
+  "raw": "- =true; // flag is buried in the middle of params, but `&flag\n- =true` (where `flag` is hidden among other params) and ends with `&flag\n- =true&other=stuff` (Note: `flag` appears in the middle, not at the end. We must detect `&flag\n- =true` (the flag we care about) appears somewhere in the middle. We need to parse the URL and detect `&flag",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =true; // flag is buried in the middle of params, but `&flag\n- =true` (where `flag` is hidden among other params) and ends with `&flag\n- =true&other=stuff` (Note: `flag` appears in the middle, not at the end. We must detect `&flag\n- =true` (the flag we care about) appears somewhere in the middle. We need to parse the URL and detect `&flag"
+}

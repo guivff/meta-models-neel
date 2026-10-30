@@ -1,0 +1,92 @@
+{
+  "at_utc": "2026-10-30T08:43:06.300956+00:00",
+  "ba2_source_sha256": "3db60898e91ff0b368c70f21805512f4dc37d18cd1bb63c57adcde9d71f2affe",
+  "cumulative_bank_cost": {
+    "booked_429_upper_bound_usd": "0",
+    "booked_usd": "0.6411113125",
+    "known_provider_cost_usd": "0.59586225",
+    "legacy_ledger_summary": {
+      "actual_usd": "0.59586225",
+      "cap_usd": "60",
+      "committed_usd": "0.6411113125",
+      "unresolved_reserve_usd": "0.0452490625"
+    },
+    "lifetime_cap_usd": "60",
+    "unknown_physical_reserve_usd": "0.0452490625",
+    "upper_bound_provenance": {
+      "authority": "e34073059",
+      "canonical_ledger_sha256": "b8b72d9fef1ef6c86a1ecaa05fea0768764ad4a95f558c1a8f4f7fe62c46a574",
+      "events": [],
+      "provider_actual_cost_known": false,
+      "total_booked_upper_bound_usd": "0"
+    }
+  },
+  "experiment": "E95",
+  "frozen_packet_commit": "76b8ece53",
+  "late_or_incomplete_stage": "NOT RUN/no analysis",
+  "original_four_unknown_retained_usd": "0.0452490625",
+  "paid_cutoff_utc": "2026-10-30T15:00:00Z",
+  "projection_basis": "early observed physical rates with ~10percent invalid judgments each up to two registered schema retries; C priority pauses/429 may extend ETA; no concurrency increase",
+  "rate_caps_per_min": {
+    "1": 12,
+    "2": 8,
+    "3": 4
+  },
+  "raw_exports": false,
+  "stages": {
+    "1": {
+      "observed_physical_rate_per_min": 11.96,
+      "original_comparison": {
+        "kept": 22,
+        "missing_or_pending": 2,
+        "processed_groups": 24
+      },
+      "original_total": 151,
+      "primary": {
+        "kept": 548,
+        "missing_or_pending": 61,
+        "processed_groups": 609
+      },
+      "primary_total": 609,
+      "projected_finish_utc": "2026-10-30T09:00:00Z",
+      "stage_complete": false
+    },
+    "2": {
+      "observed_physical_rate_per_min": 6.09,
+      "original_comparison": {
+        "kept": 0,
+        "missing_or_pending": 0,
+        "processed_groups": 0
+      },
+      "original_total": 332,
+      "primary": {
+        "kept": 7,
+        "missing_or_pending": 1,
+        "processed_groups": 8
+      },
+      "primary_total": 1294,
+      "projected_finish_utc": "2026-10-30T14:05:00Z",
+      "stage_complete": false
+    },
+    "3": {
+      "observed_physical_rate_per_min": 3.57,
+      "original_comparison": {
+        "kept": 0,
+        "missing_or_pending": 0,
+        "processed_groups": 0
+      },
+      "original_total": 104,
+      "primary": {
+        "kept": 4,
+        "missing_or_pending": 0,
+        "processed_groups": 4
+      },
+      "primary_total": 454,
+      "projected_finish_utc": "2026-10-30T11:55:00Z",
+      "stage_complete": false
+    }
+  },
+  "standing_C_concurrency": 5,
+  "status": "ALL_THREE_STAGES_RUNNING",
+  "total_effective_inference_workers": 4
+}

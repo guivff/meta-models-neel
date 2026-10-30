@@ -1,0 +1,12 @@
+{
+  "id": "902c2a9f0e4e2be913efe4b7",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" only.\n\nThe example pattern shows a question-answer format with a specific sentence to classify (\"The weather is very good today\"), followed by a structured input block mirroring the instruction.\n\n\"Input: The weather is very good today\\nReply:\" is the final prompt line, immediately requiring the model's classification answer (e.g., \"Positive\" or \"Negative\") as the next token.\n\"Given the following format, please provide the response strictly adhering to the format.\\nSentence: [sentence]\\n\\nInput: [sentence]\\nReply:\" \u2014 the \"Reply:\" label is a field header demanding the actual answer/response text immediately following, completing the structured Q&A format.\n\"Reply:\" is the final token.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" only.\n\nThe example pattern shows a question-answer format with a specific sentence to classify (\"The weather is very good today\"), followed by a structured input block mirroring the instruction.\n\n\"Input: The weather is very good today\\nReply:\" is the final prompt line, immediately requiring the model's classification answer (e.g., \"Positive\" or \"Negative\") as the next token.\n\"Given the following format, please provide the response strictly adhering to the format.\\nSentence: [sentence]\\n\\nInput: [sentence]\\nReply:\" \u2014 the \"Reply:\" label is a field header demanding the actual answer/response text immediately following, completing the structured Q&A format.\n\"Reply:\" is the final token.",
+  "truncated": false
+}

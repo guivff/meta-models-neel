@@ -1,0 +1,55 @@
+{
+  "M3": "mean top10 share of descriptions; no new threshold",
+  "R1": "M1 >= .65 AND item-bootstrap CI lower > .50",
+  "R2": "median(best true-description rank per item) minus median(within-item median own-value-continuation rank) > 0 AND paired item-bootstrap CI lower >0",
+  "authority_commit": "4384b1ad",
+  "bank_preparation_sha256": "a93b20b3929d901c0c0c220eb2e8a99d7219a79deba3a23e9e6279bad0c1f1ac",
+  "batch": 8,
+  "bootstrap": {
+    "both_rank_summaries_paired": true,
+    "resamples": 2000,
+    "seed": 20261025,
+    "unit": "recipient item"
+  },
+  "candidates": 836,
+  "forecast": {
+    "F_seconds": null,
+    "method": "elapsed science at admission + sum(N_category_units * median3 timed seconds)",
+    "paths": [
+      "E15",
+      "continuation",
+      "description",
+      "noise"
+    ],
+    "retrieval_reserve_seconds": 180,
+    "timed_units": "three unscored science units per category, frozen longest candidate copied to batch8",
+    "unknown_paths_are_zero": false,
+    "warmups": "one unscored setup unit per category"
+  },
+  "forecast_F_seconds": null,
+  "input_seal_sha256": "daeb9360ca057d5e3b79e62b8e71b700eb29ed06d216afbc1ce3ca4873175bf4",
+  "items": 480,
+  "launch_allowed": true,
+  "max_total_GPU_hours": 2.5,
+  "maximum_setup_plus_science_seconds": 8700,
+  "missing": [],
+  "models": "AR only; one load in setup and same process as warm-up",
+  "primary_measure": "raw_cosine_candidate_ranking",
+  "production_units": {
+    "E15": 3,
+    "continuation": 60,
+    "description": 12,
+    "noise": 30
+  },
+  "ranking_convention": "average ranks for exact ties; fractional top10 membership at the boundary, invariant to candidate order",
+  "ranking_location": "post-pull CPU only; worker seals raw AR outputs",
+  "raw_cosine": "exact E21 float64 paired cosine; tag44; no whitening",
+  "reconstructor_calls": 0,
+  "science_cap_formula": "min(1.5F +360,7200)",
+  "sentiment_exception": "category (a) omitted only for prose_sentiment; own-value continuations = (b)",
+  "sentiment_prediction": "R1 and low description rank (R2); no added M3 threshold",
+  "setup_seconds": 1500,
+  "states_prediction": "R1 AND R2 jointly on >=4 of5 state rows; also report each rule count",
+  "status": "READY_FROZEN_BANKS_AND_WORKER",
+  "worker_status": "BUILT"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "8f0e63082ec43e96c989036a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict template: \"Given sentence: [X] / Label: [classification]\" establishes a pattern requiring a direct answer label.\n\nThe instruction explicitly states the correct label is \"positive\" for \"I love you,\" so the model must output that specific word as the answer.\n\n\"Reply:\" is the final prompt token, part of the structured example format (\"Given sentence: I love you\\nExample sentence: I love you\\nReply:\"), immediately requiring the model's final answer \u2014 likely \"positive\" or a short label on the next line.\n\"Given the following format, provide the correct label.\nExample sentence: I love you\nGiven sentence: I love you\nReply:\" \u2014 this closing \"Reply:\" is a prompt field expecting the model's direct response, the answer label, to follow immediately.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict template: \"Given sentence: [X] / Label: [classification]\" establishes a pattern requiring a direct answer label.\n\nThe instruction explicitly states the correct label is \"positive\" for \"I love you,\" so the model must output that specific word as the answer.\n\n\"Reply:\" is the final prompt token, part of the structured example format (\"Given sentence: I love you\\nExample sentence: I love you\\nReply:\"), immediately requiring the model's final answer \u2014 likely \"positive\" or a short label on the next line.\n\"Given the following format, provide the correct label.\nExample sentence: I love you\nGiven sentence: I love you\nReply:\" \u2014 this closing \"Reply:\" is a prompt field expecting the model's direct response, the answer label, to follow immediately.",
+  "truncated": false
+}

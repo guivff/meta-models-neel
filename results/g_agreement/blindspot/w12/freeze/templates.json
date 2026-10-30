@@ -1,0 +1,296 @@
+{
+  "clause_embedding": {
+    "class": "structure",
+    "domain": "syntax",
+    "jlens": [
+      [
+        "main",
+        "relative"
+      ],
+      [
+        "independent",
+        "embedded"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "main",
+        "relative"
+      ],
+      [
+        "independent",
+        "embedded"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has the read position in the main clause.",
+        "The current excerpt has the read position inside an unclosed relative clause."
+      ],
+      [
+        "At the read position, there is the read position in the main clause.",
+        "At the read position, there is the read position inside an unclosed relative clause."
+      ]
+    ],
+    "olens": [
+      [
+        "- the read position in the main clause",
+        "- the read position inside an unclosed relative clause"
+      ],
+      [
+        "- At the read position, the excerpt has the read position in the main clause.",
+        "- At the read position, the excerpt has the read position inside an unclosed relative clause."
+      ]
+    ],
+    "values": [
+      "main",
+      "relative"
+    ]
+  },
+  "paragraph_index": {
+    "class": "structure",
+    "domain": "syntax",
+    "jlens": [
+      [
+        "first",
+        "third"
+      ],
+      [
+        "initial",
+        "later"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "first",
+        "third"
+      ],
+      [
+        "initial",
+        "later"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has the read position in the first paragraph.",
+        "The current excerpt has the read position in the third or a later paragraph."
+      ],
+      [
+        "At the read position, there is the read position in the first paragraph.",
+        "At the read position, there is the read position in the third or a later paragraph."
+      ]
+    ],
+    "olens": [
+      [
+        "- the read position in the first paragraph",
+        "- the read position in the third or a later paragraph"
+      ],
+      [
+        "- At the read position, the excerpt has the read position in the first paragraph.",
+        "- At the read position, the excerpt has the read position in the third or a later paragraph."
+      ]
+    ],
+    "values": [
+      "first",
+      "third_or_later"
+    ]
+  },
+  "paragraph_start": {
+    "class": "structure",
+    "domain": "syntax",
+    "jlens": [
+      [
+        "first",
+        "later"
+      ],
+      [
+        "initial",
+        "subsequent"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "first",
+        "later"
+      ],
+      [
+        "initial",
+        "subsequent"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has the read position in the first sentence of a paragraph.",
+        "The current excerpt has the read position in a later sentence of a paragraph."
+      ],
+      [
+        "At the read position, there is the read position in the first sentence of a paragraph.",
+        "At the read position, there is the read position in a later sentence of a paragraph."
+      ]
+    ],
+    "olens": [
+      [
+        "- the read position in the first sentence of a paragraph",
+        "- the read position in a later sentence of a paragraph"
+      ],
+      [
+        "- At the read position, the excerpt has the read position in the first sentence of a paragraph.",
+        "- At the read position, the excerpt has the read position in a later sentence of a paragraph."
+      ]
+    ],
+    "values": [
+      "first_sentence",
+      "later_sentence"
+    ]
+  },
+  "sentence_position": {
+    "class": "structure",
+    "domain": "syntax",
+    "jlens": [
+      [
+        "early",
+        "late"
+      ],
+      [
+        "beginning",
+        "later"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "early",
+        "late"
+      ],
+      [
+        "beginning",
+        "later"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has the read position within the first three words of the sentence.",
+        "The current excerpt has the read position after word twelve of the sentence."
+      ],
+      [
+        "At the read position, there is the read position within the first three words of the sentence.",
+        "At the read position, there is the read position after word twelve of the sentence."
+      ]
+    ],
+    "olens": [
+      [
+        "- the read position within the first three words of the sentence",
+        "- the read position after word twelve of the sentence"
+      ],
+      [
+        "- At the read position, the excerpt has the read position within the first three words of the sentence.",
+        "- At the read position, the excerpt has the read position after word twelve of the sentence."
+      ]
+    ],
+    "values": [
+      "first_three",
+      "after_twelve"
+    ]
+  },
+  "sentence_type": {
+    "class": "structure",
+    "domain": "syntax",
+    "jlens": [
+      [
+        "question",
+        "statement"
+      ],
+      [
+        "interrogative",
+        "declarative"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "question",
+        "statement"
+      ],
+      [
+        "interrogative",
+        "declarative"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has a question in progress.",
+        "The current excerpt has a statement in progress."
+      ],
+      [
+        "At the read position, there is a question in progress.",
+        "At the read position, there is a statement in progress."
+      ]
+    ],
+    "olens": [
+      [
+        "- a question in progress",
+        "- a statement in progress"
+      ],
+      [
+        "- At the read position, the excerpt has a question in progress.",
+        "- At the read position, the excerpt has a statement in progress."
+      ]
+    ],
+    "values": [
+      "question",
+      "statement"
+    ]
+  },
+  "syntax_role": {
+    "class": "structure",
+    "domain": "syntax",
+    "jlens": [
+      [
+        "subject",
+        "object"
+      ],
+      [
+        "agent",
+        "patient"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "subject",
+        "object"
+      ],
+      [
+        "agent",
+        "patient"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has the current noun as the subject of its clause.",
+        "The current excerpt has the current noun as the object of its clause."
+      ],
+      [
+        "At the read position, there is the current noun as the subject of its clause.",
+        "At the read position, there is the current noun as the object of its clause."
+      ]
+    ],
+    "olens": [
+      [
+        "- the current noun as the subject of its clause",
+        "- the current noun as the object of its clause"
+      ],
+      [
+        "- At the read position, the excerpt has the current noun as the subject of its clause.",
+        "- At the read position, the excerpt has the current noun as the object of its clause."
+      ]
+    ],
+    "values": [
+      "subject",
+      "object"
+    ]
+  }
+}

@@ -1,0 +1,600 @@
+{
+  "R_SL0": {
+    "R_SL0": "MET",
+    "bootstrap": {
+      "draws": 2000,
+      "missing": "cell-specific kept denominators; undefined draws invalidate CI",
+      "seed": 20261029,
+      "unit": "paired shared item"
+    },
+    "rows": {
+      "fact_recall": {
+        "CI95": [
+          0.13972736124634866,
+          0.5189873417721517
+        ],
+        "cells": {
+          "carried_random": {
+            "S_target": -0.6582278481012658,
+            "kept": 79,
+            "missing": 0
+          },
+          "carried_steered": {
+            "S_target": -0.46835443037974683,
+            "kept": 79,
+            "missing": 0
+          },
+          "site_random": {
+            "S_target": -0.46835443037974683,
+            "kept": 79,
+            "missing": 0
+          },
+          "site_steered": {
+            "S_target": 0.05128205128205128,
+            "kept": 78,
+            "missing": 1
+          }
+        },
+        "delta_carried": 0.18987341772151894,
+        "delta_site": 0.5196364816617981,
+        "estimate": 0.32976306394027916,
+        "n_flipped_both": 79,
+        "n_shared": 84,
+        "status": "MET"
+      },
+      "language_plan": {
+        "CI95": [
+          0.292688336895654,
+          1.0412242909749025
+        ],
+        "cells": {
+          "carried_random": {
+            "S_target": -0.5,
+            "kept": 44,
+            "missing": 2
+          },
+          "carried_steered": {
+            "S_target": -0.3170731707317073,
+            "kept": 41,
+            "missing": 5
+          },
+          "site_random": {
+            "S_target": -0.10256410256410256,
+            "kept": 39,
+            "missing": 7
+          },
+          "site_steered": {
+            "S_target": 0.7407407407407407,
+            "kept": 27,
+            "missing": 19
+          }
+        },
+        "delta_carried": 0.18292682926829268,
+        "delta_site": 0.8433048433048432,
+        "estimate": 0.6603780140365505,
+        "n_flipped_both": 46,
+        "n_shared": 84,
+        "status": "MET"
+      }
+    }
+  },
+  "R_SL2": {
+    "E100_a": {
+      "bins": [],
+      "model": {
+        "reason": "empty analysis sample",
+        "rules": {
+          "R-SL1": "NOT EVALUABLE",
+          "falsifier": "NOT EVALUABLE"
+        },
+        "status": "NOT EVALUABLE"
+      },
+      "reason": "E100a excluded: complete donor/control binding not sealed in time (E111 deviation 1 fallback)",
+      "status": "EXCLUDED"
+    },
+    "E101": {
+      "bins": [
+        {
+          "behaviour_flip": 0,
+          "bin": 0,
+          "mean_x1": -2.109927958610259,
+          "n": 32,
+          "y_rate": 0.09375
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 0,
+          "mean_x1": -2.1099279416189978,
+          "n": 29,
+          "y_rate": 0.3793103448275862
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 1,
+          "mean_x1": -0.7036510467354959,
+          "n": 61,
+          "y_rate": 0.0
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 2,
+          "mean_x1": -0.3942701361675519,
+          "n": 34,
+          "y_rate": 0.0
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 2,
+          "mean_x1": 58.18350703819727,
+          "n": 26,
+          "y_rate": 0.038461538461538464
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 3,
+          "mean_x1": 58.18350705942471,
+          "n": 5,
+          "y_rate": 0.0
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 3,
+          "mean_x1": 58.312955065932364,
+          "n": 56,
+          "y_rate": 0.125
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 4,
+          "mean_x1": 59.99577842552848,
+          "n": 13,
+          "y_rate": 0.9230769230769231
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 4,
+          "mean_x1": 59.99577846581881,
+          "n": 48,
+          "y_rate": 0.8541666666666666
+        }
+      ],
+      "model": {
+        "AUROC_x1_alone": 0.8097816593886463,
+        "AUROC_x2_alone": 0.6838427947598253,
+        "CI95": {
+          "x1": null,
+          "x2": null
+        },
+        "SD": [
+          30.085142926800412,
+          0.49946950735872137
+        ],
+        "SD_ddof": 0,
+        "bootstrap": {
+          "draws": 2000,
+          "seed": 20261029,
+          "unit": "source item including all controls and repeated experiments"
+        },
+        "bootstrap_failures": {
+          "separation_or_singular_information": 35
+        },
+        "coefficients": {
+          "x1": 0.05031788580116062,
+          "x2": 1.192254414035692
+        },
+        "items": 166,
+        "n": 304,
+        "reference_row": "fact_recall",
+        "row_intercepts": {
+          "fact_recall": -7.077150037845408,
+          "language_plan": -1.9063995792698947
+        },
+        "row_levels": [
+          "fact_recall",
+          "language_plan"
+        ],
+        "rules": {
+          "R-SL1": "NOT EVALUABLE",
+          "falsifier": "NOT EVALUABLE"
+        },
+        "standardized_coefficients": [
+          1.5138207861023383,
+          0.5954947248246681
+        ],
+        "status": "NOT EVALUABLE",
+        "valid_bootstrap_draws": 1965
+      }
+    },
+    "E104_U": {
+      "bins": [
+        {
+          "behaviour_flip": 0,
+          "bin": 0,
+          "mean_x1": -0.07540399380386646,
+          "n": 43,
+          "y_rate": 0.0
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 0,
+          "mean_x1": -0.1854256808165332,
+          "n": 23,
+          "y_rate": 0.043478260869565216
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 1,
+          "mean_x1": 0.3698447902559082,
+          "n": 8,
+          "y_rate": 0.0
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 1,
+          "mean_x1": 0.366289061365145,
+          "n": 57,
+          "y_rate": 0.08771929824561403
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 2,
+          "mean_x1": 0.6748345646648914,
+          "n": 15,
+          "y_rate": 0.06666666666666667
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 2,
+          "mean_x1": 0.6507359368990181,
+          "n": 50,
+          "y_rate": 0.06
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 3,
+          "mean_x1": 1.1027493439456058,
+          "n": 16,
+          "y_rate": 0.0625
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 3,
+          "mean_x1": 1.5507284175037273,
+          "n": 49,
+          "y_rate": 0.30612244897959184
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 4,
+          "mean_x1": 4.747341963568615,
+          "n": 33,
+          "y_rate": 0.09090909090909091
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 4,
+          "mean_x1": 2.965334886969974,
+          "n": 32,
+          "y_rate": 0.09375
+        }
+      ],
+      "model": {
+        "AUROC_x1_alone": 0.6556122448979592,
+        "AUROC_x2_alone": 0.6089498299319728,
+        "CI95": {
+          "x1": null,
+          "x2": null
+        },
+        "SD": [
+          1.609189061761885,
+          0.47782904808576726
+        ],
+        "SD_ddof": 0,
+        "bootstrap": {
+          "draws": 2000,
+          "seed": 20261029,
+          "unit": "source item including all controls and repeated experiments"
+        },
+        "bootstrap_failures": {
+          "separation_or_singular_information": 47
+        },
+        "coefficients": {
+          "x1": 0.2556294628807982,
+          "x2": 2.195993269828102
+        },
+        "items": 166,
+        "n": 326,
+        "reference_row": "fact_recall",
+        "row_intercepts": {
+          "fact_recall": -5.952202527478226,
+          "language_plan": -3.436639289209236
+        },
+        "row_levels": [
+          "fact_recall",
+          "language_plan"
+        ],
+        "rules": {
+          "R-SL1": "NOT EVALUABLE",
+          "falsifier": "NOT EVALUABLE"
+        },
+        "standardized_coefficients": [
+          0.41135613553184625,
+          1.0493093737247134
+        ],
+        "status": "NOT EVALUABLE",
+        "valid_bootstrap_draws": 1953
+      }
+    },
+    "E109_44": {
+      "bins": [
+        {
+          "behaviour_flip": 0,
+          "bin": 0,
+          "mean_x1": -0.07678913654092162,
+          "n": 42,
+          "y_rate": 0.0
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 0,
+          "mean_x1": -0.16721477402960389,
+          "n": 21,
+          "y_rate": 0.09523809523809523
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 1,
+          "mean_x1": 0.3837582179663391,
+          "n": 7,
+          "y_rate": 0.14285714285714285
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 1,
+          "mean_x1": 0.37784123616693027,
+          "n": 56,
+          "y_rate": 0.125
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 2,
+          "mean_x1": 0.6922958551701502,
+          "n": 16,
+          "y_rate": 0.125
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 2,
+          "mean_x1": 0.655625767976307,
+          "n": 47,
+          "y_rate": 0.02127659574468085
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 3,
+          "mean_x1": 1.066135563887647,
+          "n": 14,
+          "y_rate": 0.07142857142857142
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 3,
+          "mean_x1": 1.51915617501405,
+          "n": 49,
+          "y_rate": 0.3469387755102041
+        },
+        {
+          "behaviour_flip": 0,
+          "bin": 4,
+          "mean_x1": 4.850687690088492,
+          "n": 33,
+          "y_rate": 0.06060606060606061
+        },
+        {
+          "behaviour_flip": 1,
+          "bin": 4,
+          "mean_x1": 3.0061055116370947,
+          "n": 30,
+          "y_rate": 0.03333333333333333
+        }
+      ],
+      "model": {
+        "AUROC_x1_alone": 0.5856185890726398,
+        "AUROC_x2_alone": 0.6003768055264811,
+        "CI95": {
+          "x1": null,
+          "x2": null
+        },
+        "SD": [
+          1.645043123036522,
+          0.4786813161897334
+        ],
+        "SD_ddof": 0,
+        "bootstrap": {
+          "draws": 2000,
+          "seed": 20261029,
+          "unit": "source item including all controls and repeated experiments"
+        },
+        "bootstrap_failures": {
+          "separation_or_singular_information": 31
+        },
+        "coefficients": {
+          "x1": 0.06665845196325257,
+          "x2": 1.7349581118012962
+        },
+        "items": 166,
+        "n": 315,
+        "reference_row": "fact_recall",
+        "row_intercepts": {
+          "fact_recall": -5.277620348843426,
+          "language_plan": -2.59585165724232
+        },
+        "row_levels": [
+          "fact_recall",
+          "language_plan"
+        ],
+        "rules": {
+          "R-SL1": "NOT EVALUABLE",
+          "falsifier": "NOT EVALUABLE"
+        },
+        "standardized_coefficients": [
+          0.10965602799440897,
+          0.8304920324910992
+        ],
+        "status": "NOT EVALUABLE",
+        "valid_bootstrap_draws": 1969
+      }
+    }
+  },
+  "UNPARSEABLE": 63,
+  "census": {
+    "excluded_E109": false,
+    "excluded_experiments": {
+      "E100_a": "E100a excluded: complete donor/control binding not sealed in time (E111 deviation 1 fallback)"
+    },
+    "included": 1008,
+    "reconstructed": 336,
+    "total": 1008,
+    "vector_unavailable": 0
+  },
+  "execution_provenance": {
+    "original_failure_seal_sha256": "7dd286dfa5da8b326ddd4ee8d57a2145a96851a802c157135b2a4ea29b46d768",
+    "original_guard_preserved": true,
+    "scientific_rules_and_seeds_unchanged": true,
+    "status": "USER_AUTHORIZED_RECOVERY1"
+  },
+  "experiment": "E111",
+  "kept": 945,
+  "missing_by_experiment": {
+    "E100_a": 0,
+    "E101": 32,
+    "E104_U": 10,
+    "E109_44": 21
+  },
+  "planned": 1008,
+  "pooled": {
+    "AUROC_x1_alone": 0.7222045799371934,
+    "AUROC_x2_alone": 0.6229755477929502,
+    "CI95": {
+      "x1": [
+        0.032990072022667655,
+        0.059045571731312356
+      ],
+      "x2": [
+        0.788207611651052,
+        2.202685575958734
+      ]
+    },
+    "SD": [
+      21.220405604506183,
+      0.4885589486529661
+    ],
+    "SD_ddof": 0,
+    "bootstrap": {
+      "draws": 2000,
+      "seed": 20261029,
+      "unit": "source item including all controls and repeated experiments"
+    },
+    "bootstrap_failures": {},
+    "coefficients": {
+      "x1": 0.044008456042989134,
+      "x2": 1.4753150116302873
+    },
+    "items": 168,
+    "n": 945,
+    "reference_row": "fact_recall",
+    "row_intercepts": {
+      "fact_recall": -6.0873074853358435,
+      "language_plan": -2.312055519075313
+    },
+    "row_levels": [
+      "fact_recall",
+      "language_plan"
+    ],
+    "rules": {
+      "R-SL1": "NOT MET",
+      "behaviour_CI_includes_zero": false,
+      "falsifier": "NOT MET",
+      "site_positive_lower": true,
+      "standardized_magnitude_at_least_twice": false
+    },
+    "standardized_coefficients": [
+      0.9338772872603106,
+      0.7207783510140316
+    ],
+    "status": "COMPLETE",
+    "valid_bootstrap_draws": 2000
+  },
+  "pooled_bins": [
+    {
+      "behaviour_flip": 0,
+      "bin": 0,
+      "mean_x1": -0.9201393373410618,
+      "n": 137,
+      "y_rate": 0.021897810218978103
+    },
+    {
+      "behaviour_flip": 1,
+      "bin": 0,
+      "mean_x1": -1.3280451069646761,
+      "n": 53,
+      "y_rate": 0.20754716981132076
+    },
+    {
+      "behaviour_flip": 0,
+      "bin": 1,
+      "mean_x1": -0.005030365826312621,
+      "n": 86,
+      "y_rate": 0.011627906976744186
+    },
+    {
+      "behaviour_flip": 1,
+      "bin": 1,
+      "mean_x1": 0.2854094552040181,
+      "n": 102,
+      "y_rate": 0.13725490196078433
+    },
+    {
+      "behaviour_flip": 0,
+      "bin": 2,
+      "mean_x1": 0.6803491219375493,
+      "n": 39,
+      "y_rate": 0.07692307692307693
+    },
+    {
+      "behaviour_flip": 1,
+      "bin": 2,
+      "mean_x1": 0.6427339575042667,
+      "n": 150,
+      "y_rate": 0.03333333333333333
+    },
+    {
+      "behaviour_flip": 0,
+      "bin": 3,
+      "mean_x1": 2.684251784138728,
+      "n": 63,
+      "y_rate": 0.047619047619047616
+    },
+    {
+      "behaviour_flip": 1,
+      "bin": 3,
+      "mean_x1": 1.9653753160874747,
+      "n": 126,
+      "y_rate": 0.2777777777777778
+    },
+    {
+      "behaviour_flip": 0,
+      "bin": 4,
+      "mean_x1": 26.543594738167045,
+      "n": 47,
+      "y_rate": 0.3404255319148936
+    },
+    {
+      "behaviour_flip": 1,
+      "bin": 4,
+      "mean_x1": 54.4172118664681,
+      "n": 142,
+      "y_rate": 0.352112676056338
+    }
+  ]
+}

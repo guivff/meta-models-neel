@@ -1,0 +1,402 @@
+{
+  "arith_carry": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 5,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": "=",
+      "row_id": "arith_carry",
+      "twin_of": null,
+      "values": [
+        "carry",
+        "no_carry"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "carry": 42,
+        "no_carry": 42
+      },
+      "test": {
+        "carry": 42,
+        "no_carry": 42
+      }
+    }
+  },
+  "arith_compare": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 6,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": ":",
+      "row_id": "arith_compare",
+      "twin_of": null,
+      "values": [
+        "yes",
+        "no"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "no": 42,
+        "yes": 42
+      },
+      "test": {
+        "no": 42,
+        "yes": 42
+      }
+    }
+  },
+  "asserted_vs_hypothetical": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 9,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": "system",
+      "row_id": "asserted_vs_hypothetical",
+      "twin_of": null,
+      "values": [
+        "asserted",
+        "hypothetical"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "asserted": 42,
+        "hypothetical": 42
+      },
+      "test": {
+        "asserted": 42,
+        "hypothetical": 42
+      }
+    }
+  },
+  "branch_taken": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 7,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": ":",
+      "row_id": "branch_taken",
+      "twin_of": null,
+      "values": [
+        "taken",
+        "not_taken"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "not_taken": 42,
+        "taken": 42
+      },
+      "test": {
+        "not_taken": 42,
+        "taken": 42
+      }
+    }
+  },
+  "chased_role": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 2,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": "the",
+      "row_id": "chased_role",
+      "twin_of": null,
+      "values": [
+        "thief",
+        "policeman"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "policeman": 42,
+        "thief": 42
+      },
+      "test": {
+        "policeman": 42,
+        "thief": 42
+      }
+    }
+  },
+  "container_after_move": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 3,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": " the",
+      "row_id": "container_after_move",
+      "twin_of": null,
+      "values": [
+        "cup",
+        "bowl"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "bowl": 42,
+        "cup": 42
+      },
+      "test": {
+        "bowl": 42,
+        "cup": 42
+      }
+    }
+  },
+  "decimal_separator": {
+    "items": 168,
+    "max_length_ratio": 1.01,
+    "number": 16,
+    "spec": {
+      "kind": "surface_state",
+      "read_token_rule": "3",
+      "row_id": "decimal_separator",
+      "twin_of": "unit_system",
+      "values": [
+        "comma",
+        "point"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "comma": 42,
+        "point": 42
+      },
+      "test": {
+        "comma": 42,
+        "point": 42
+      }
+    }
+  },
+  "holder_after_handovers": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 4,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": ".",
+      "row_id": "holder_after_handovers",
+      "twin_of": null,
+      "values": [
+        "Alex",
+        "Robin"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "Alex": 42,
+        "Robin": 42
+      },
+      "test": {
+        "Alex": 42,
+        "Robin": 42
+      }
+    }
+  },
+  "instruction_provenance": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 11,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": "review",
+      "row_id": "instruction_provenance",
+      "twin_of": null,
+      "values": [
+        "principal",
+        "vendor"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "principal": 42,
+        "vendor": 42
+      },
+      "test": {
+        "principal": 42,
+        "vendor": 42
+      }
+    }
+  },
+  "negation_scope": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 10,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": "disabled",
+      "row_id": "negation_scope",
+      "twin_of": null,
+      "values": [
+        "negated",
+        "unnegated"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "negated": 42,
+        "unnegated": 42
+      },
+      "test": {
+        "negated": 42,
+        "unnegated": 42
+      }
+    }
+  },
+  "next_paragraph_language": {
+    "items": 168,
+    "max_length_ratio": 1.0754716981132075,
+    "number": 14,
+    "spec": {
+      "kind": "descriptor",
+      "read_token_rule": "\n\n",
+      "row_id": "next_paragraph_language",
+      "twin_of": null,
+      "values": [
+        "French",
+        "English"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "English": 42,
+        "French": 42
+      },
+      "test": {
+        "English": 42,
+        "French": 42
+      }
+    }
+  },
+  "pronoun_referent": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 1,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": "she",
+      "row_id": "pronoun_referent",
+      "twin_of": null,
+      "values": [
+        "giver",
+        "receiver"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "giver": 42,
+        "receiver": 42
+      },
+      "test": {
+        "giver": 42,
+        "receiver": 42
+      }
+    }
+  },
+  "topic_twin": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 13,
+    "spec": {
+      "kind": "descriptor",
+      "read_token_rule": "system",
+      "row_id": "topic_twin",
+      "twin_of": "asserted_vs_hypothetical",
+      "values": [
+        "engineering",
+        "gardening"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "engineering": 42,
+        "gardening": 42
+      },
+      "test": {
+        "engineering": 42,
+        "gardening": 42
+      }
+    }
+  },
+  "unit_system": {
+    "items": 168,
+    "max_length_ratio": 1.01,
+    "number": 15,
+    "spec": {
+      "kind": "descriptor",
+      "read_token_rule": "3",
+      "row_id": "unit_system",
+      "twin_of": null,
+      "values": [
+        "metric",
+        "imperial"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "imperial": 42,
+        "metric": 42
+      },
+      "test": {
+        "imperial": 42,
+        "metric": 42
+      }
+    }
+  },
+  "user_expertise": {
+    "items": 168,
+    "max_length_ratio": 1.0344827586206897,
+    "number": 12,
+    "spec": {
+      "kind": "descriptor",
+      "read_token_rule": ".",
+      "row_id": "user_expertise",
+      "twin_of": null,
+      "values": [
+        "expert",
+        "novice"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "expert": 42,
+        "novice": 42
+      },
+      "test": {
+        "expert": 42,
+        "novice": 42
+      }
+    }
+  },
+  "var_type_at_use": {
+    "items": 168,
+    "max_length_ratio": 1.0,
+    "number": 8,
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": "x",
+      "row_id": "var_type_at_use",
+      "twin_of": null,
+      "values": [
+        "int",
+        "str"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "int": 42,
+        "str": 42
+      },
+      "test": {
+        "int": 42,
+        "str": 42
+      }
+    }
+  }
+}

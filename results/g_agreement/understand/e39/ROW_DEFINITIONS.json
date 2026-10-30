@@ -1,0 +1,209 @@
+{
+ "at": "2026-10-25T14:25:00+01:00",
+ "common": "Each item is a text prefix; the activation is read at its final token. Value A/B order matches W1's 'values' order. Items for A and B must be length-matched within a template (±10% tokens) and differ only in what the definition requires.",
+ "experiment": "E36",
+ "purpose": "definition-only packet for blind item authors; no W1 item text, templates, fillers, phrasings or scores",
+ "rows": {
+  "json_status": {
+   "class": "semantic",
+   "definition": "JSON text; the read token ends the value of the current object's \"decision\" field. A = approved, B = rejected.",
+   "values": [
+    "approved",
+    "rejected"
+   ]
+  },
+  "json_type": {
+   "class": "state-like",
+   "definition": "JSON text; the read token is inside the value of the current field. A = a string value (opened with a quote), B = a numeric value.",
+   "values": [
+    "string",
+    "number"
+   ]
+  },
+  "latex_environment": {
+   "class": "state-like",
+   "definition": "LaTeX; the read token is in the body text of the current environment. A = inside \\begin{equation}, B = inside \\begin{quote}.",
+   "values": [
+    "equation",
+    "quote"
+   ]
+  },
+  "latex_role": {
+   "class": "semantic",
+   "definition": "LaTeX prose; A = the current passage is a theorem statement, B = a worked example.",
+   "values": [
+    "theorem",
+    "example"
+   ]
+  },
+  "latex_section": {
+   "class": "count-like",
+   "definition": "LaTeX document; the read token is in body text after some number of \\section headings. A = section 1 or 2, B = section 6 to 8.",
+   "values": [
+    "early",
+    "late"
+   ]
+  },
+  "latex_subject": {
+   "class": "semantic",
+   "definition": "LaTeX/maths prose; A = algebra content, B = geometry content.",
+   "values": [
+    "algebra",
+    "geometry"
+   ]
+  },
+  "list_depth": {
+   "class": "count-like",
+   "definition": "Markdown bullet list; the read token is in the current item. A = item at nesting level 1 (top level), B = item at nesting level 3.",
+   "values": [
+    "shallow",
+    "deep"
+   ]
+  },
+  "list_index": {
+   "class": "count-like",
+   "definition": "Markdown bullet list; the read token is in the current item. A = it is the first item, B = it is item 6 to 8.",
+   "values": [
+    "first",
+    "later"
+   ]
+  },
+  "list_priority": {
+   "class": "semantic",
+   "definition": "Task list item; A = an urgent task, B = a routine task.",
+   "values": [
+    "urgent",
+    "routine"
+   ]
+  },
+  "list_topic": {
+   "class": "semantic",
+   "definition": "Planning list item; A = travel planning, B = study planning.",
+   "values": [
+    "travel",
+    "study"
+   ]
+  },
+  "prose_paren": {
+   "class": "state-like",
+   "definition": "English prose sentence; A = the read token is inside a parenthesis that has opened and not closed, B = the parenthesis has already closed earlier in the same sentence.",
+   "values": [
+    "inside",
+    "outside"
+   ]
+  },
+  "prose_quote": {
+   "class": "state-like",
+   "definition": "English prose sentence; A = the read token is inside a quotation that has opened and not closed, B = the quotation has already closed earlier in the same sentence.",
+   "values": [
+    "inside",
+    "outside"
+   ]
+  },
+  "prose_sentence": {
+   "class": "count-like",
+   "definition": "English paragraph; the read token is a few words into the current sentence. A = sentence 1 or 2 of the paragraph, B = sentence 6 to 8.",
+   "values": [
+    "early",
+    "late"
+   ]
+  },
+  "prose_sentiment": {
+   "class": "semantic",
+   "definition": "English prose; A = positive sentiment, B = negative sentiment.",
+   "values": [
+    "positive",
+    "negative"
+   ]
+  },
+  "prose_topic": {
+   "class": "semantic",
+   "definition": "English prose; A = gardening content, B = ocean content.",
+   "values": [
+    "garden",
+    "ocean"
+   ]
+  },
+  "python_argument": {
+   "class": "count-like",
+   "definition": "Python call; the read token is the current argument of an open call. A = the first argument, B = the fifth argument.",
+   "values": [
+    "first",
+    "later"
+   ]
+  },
+  "python_comment": {
+   "class": "state-like",
+   "definition": "Python source; A = the read token is inside a # comment, B = it is in executable code.",
+   "values": [
+    "comment",
+    "code"
+   ]
+  },
+  "python_depth": {
+   "class": "count-like",
+   "definition": "Python expression; the read token is inside open brackets. A = bracket nesting depth 1, B = depth 3.",
+   "values": [
+    "shallow",
+    "deep"
+   ]
+  },
+  "python_error": {
+   "class": "semantic",
+   "definition": "Python function; the read token ends its final statement. A = the function raises an exception, B = it returns normally.",
+   "values": [
+    "raise",
+    "return"
+   ]
+  },
+  "python_indent": {
+   "class": "count-like",
+   "definition": "Python function body; the read token is in a statement. A = indentation level 1, B = indentation level 3 (inside two nested blocks).",
+   "values": [
+    "shallow",
+    "deep"
+   ]
+  },
+  "python_string": {
+   "class": "state-like",
+   "definition": "Python source; A = the read token is inside a string literal that has opened and not closed, B = a string literal closed earlier and the read token is outside it.",
+   "values": [
+    "inside",
+    "outside"
+   ]
+  },
+  "table_column": {
+   "class": "count-like",
+   "definition": "Markdown table; the read token is in a cell of a data row. A = column 1, B = column 5.",
+   "values": [
+    "first",
+    "later"
+   ]
+  },
+  "table_role": {
+   "class": "state-like",
+   "definition": "Markdown table; A = the read token is in a header-row cell, B = in a data-row cell.",
+   "values": [
+    "header",
+    "data"
+   ]
+  },
+  "table_row": {
+   "class": "count-like",
+   "definition": "Markdown table; the read token is in a data row. A = data row 1 or 2, B = data row 6 to 8.",
+   "values": [
+    "early",
+    "late"
+   ]
+  },
+  "table_status": {
+   "class": "semantic",
+   "definition": "Markdown table with a Decision column; the read token ends the current row's Decision cell. A = approved, B = rejected.",
+   "values": [
+    "approved",
+    "rejected"
+   ]
+  }
+ },
+ "written_by": "coordinator"
+}

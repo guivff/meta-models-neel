@@ -1,0 +1,29 @@
+{
+  "adapter_owner": "W-mech2",
+  "authority": "3f2647773, section198 E84 clarification1",
+  "baseline": "single frozen E81 generic full-prefix baseline, unchanged; source request explicitly retains this",
+  "bow": {
+    "disposition": "above threshold text-readable; reader results descriptive only, not row dropping",
+    "evaluate_split": "200 test",
+    "fit_split": "100 dev",
+    "threshold": 0.65,
+    "window": "final512 tokens"
+  },
+  "experiment": "E84",
+  "input_bank_changed": false,
+  "judging_owner": "W-internals-C",
+  "original_bank_commit": "6c5dc40c",
+  "original_bank_seal_sha256": "fdad9eee8de02741475f32d08f7bfc385ab3dbba024c66676f53842cc825cf08",
+  "prefix": "complete original frozen prefixes unchanged; final512 is absence/BOW screen",
+  "probe_gate": {
+    "NLA_block": 42,
+    "Oracle_block": 44,
+    "disposition": "reader-specific failure is reported and dropped for that reader; no cross-block best-site choice",
+    "evaluate_split": "200 test",
+    "fit_split": "100 dev",
+    "metric": "AUROC",
+    "threshold": 0.9
+  },
+  "runner_owner": "I-2",
+  "scientific_analysis_by_Wtext": false
+}

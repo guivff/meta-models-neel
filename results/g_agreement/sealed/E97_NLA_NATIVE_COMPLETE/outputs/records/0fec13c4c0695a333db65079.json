@@ -1,0 +1,12 @@
+{
+  "id": "0fec13c4c0695a333db65079",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a task is given (\"Please extract the following entry\"), requiring a concrete XML/data example to follow.\n\nThe phrase \"entry\" signals a structured data format (likely XML or dictionary-style), with the model expected to produce a sample entry demonstrating the \"incoherent\" pattern described.\n\nFinal token `<entry` opens an XML tag, immediately requiring a closing `>` or attribute syntax, followed by the entry's content (e.g., `<entry>` or `<entry id=\"...\">`).\n\"Here is the sample data:\n<entry\" mirrors the preceding `<entry>` reference, suggesting a list of XML entries from a larger document, likely containing fields like definitions, terms, or numbered items.\nThe next tokens must complete the XML tag and begin a new sample entry, consistent with a dictionary or structured dataset format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a task is given (\"Please extract the following entry\"), requiring a concrete XML/data example to follow.\n\nThe phrase \"entry\" signals a structured data format (likely XML or dictionary-style), with the model expected to produce a sample entry demonstrating the \"incoherent\" pattern described.\n\nFinal token `<entry` opens an XML tag, immediately requiring a closing `>` or attribute syntax, followed by the entry's content (e.g., `<entry>` or `<entry id=\"...\">`).\n\"Here is the sample data:\n<entry\" mirrors the preceding `<entry>` reference, suggesting a list of XML entries from a larger document, likely containing fields like definitions, terms, or numbered items.\nThe next tokens must complete the XML tag and begin a new sample entry, consistent with a dictionary or structured dataset format.",
+  "truncated": false
+}

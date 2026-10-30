@@ -1,0 +1,12 @@
+{
+  "id": "3270679cf691fa1f049cb046",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict instruction to output only \"positive\" or \"negative\" as the answer, establishing a binary classification task. The model must follow the demonstrated pattern.\n\nThe example structure shows a template: sentence \u2192 explanation \u2192 question \u2192 answer, now applied to \"The United States is a country.\"\n\n\"Reply:\" is the final prompt label in the structured format, immediately requiring the model's direct answer (\"positive\" or \"negative\") or a short response.\n\"Given the following sentence: 'The United States is a country.'\nQuestion: What is the sentiment label?\nExample format: [positive/negative]\nSentence: 'The United States is a country.'\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label, expecting the answer on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict instruction to output only \"positive\" or \"negative\" as the answer, establishing a binary classification task. The model must follow the demonstrated pattern.\n\nThe example structure shows a template: sentence \u2192 explanation \u2192 question \u2192 answer, now applied to \"The United States is a country.\"\n\n\"Reply:\" is the final prompt label in the structured format, immediately requiring the model's direct answer (\"positive\" or \"negative\") or a short response.\n\"Given the following sentence: 'The United States is a country.'\nQuestion: What is the sentiment label?\nExample format: [positive/negative]\nSentence: 'The United States is a country.'\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label, expecting the answer on the next line.",
+  "truncated": false
+}

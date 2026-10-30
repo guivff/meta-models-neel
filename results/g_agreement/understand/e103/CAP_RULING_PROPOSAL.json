@@ -1,0 +1,47 @@
+{
+  "CPU_tests": "12passed0.59s, including worker/operator reject missing cap approval and own-guard retirement fix",
+  "allocation": false,
+  "approval_gate": "Operator plan cap_raise_authorized must be true with a committed direct-Guiv authorization; worker independently checks it and explicit pilot disposition. No plan/service created for this proposal.",
+  "blocking_rules": {
+    "section149": "Operational cap raises are only for runs with no production record yet, at most2x; A1 has1record and projection~3x",
+    "section210": "Estimated<1GPUh; observed forecast10790.43s remaining exceeds it"
+  },
+  "estimate_scope": "One measured retained sample; running meanx1.25 and absolute deadline still stop new run if it does not fit",
+  "exact_imports": "E103_EXACT_IMPORTS_PASS_NO_MODEL_LOAD",
+  "exact_member_hashes_PASS": true,
+  "exact_proposal_source_seal_sha256": "4d1eb069246550ff08c9d016180f93a24935f671efcadec45198f1c2f742cfc4",
+  "experiment": "E103",
+  "first_output_evidence": "New run has no outputs; old pilot firstoutput is preserved in separate closeout",
+  "first_output_utc": "unknown",
+  "global_GPU_ceiling_USD": 1500,
+  "judging_ceiling_USD": 5,
+  "measured_full_forecast_with_1_25_margin_seconds": 11147.531182316161,
+  "new_all_in_reservation_USD": {
+    "B200": 26.86,
+    "H200": 18.46
+  },
+  "new_cap_GPU_hours": 3.111111111111111,
+  "new_cap_seconds": 11200,
+  "old_closed_GPU_hours_upper": 0.052526051070955065,
+  "old_pilot_output_seal_sha256": "44c4d8586126afec07fd855a6af5c57cc4a865e6f528fbb4954775bce2a0328c",
+  "operator_hashes": {
+    "controller.py": "bb0dd8e4f80d763101cab31db929c8ee6a9a44e9c2d0ee7794fe29cacf6860dc",
+    "i5_controller.py": "f67fd9c82f7ce8b738c0c9447c7bcf7508ab5bd098e4ae0eed3e4790413c1b7e"
+  },
+  "payload_hashes": {
+    "assets.json": "72fc03318bb0e8622f1f9ff809baa5028e1e0e221496f19022be9a9b92b48c33",
+    "inputs.tar.gz": "2547702101192cface1079d3acdd3b7e400dccec2ee54355def863f884345a46",
+    "source.tar.gz": "c2ecf587bedf5ff6b731ed3b4371ea7d3e9d18e2942bc6f5430b3310eca5a7ff"
+  },
+  "proposed_action": "One fresh full bank, same314prefixes/2512serialsamples, seed20261028 and all selection/decoding/judging/R-H2 rules unchanged. Treat old unjudged pilot as archive-only timing, excluded from all scientific judging/analysis. No automatic retries.",
+  "run": "/Users/guivff/repl/activation-readers-i5/e103-core-20261028-a2-proposal",
+  "scientific_analysis_run": false,
+  "source_members": 119,
+  "status": "PROPOSED_NOT_AUTHORIZED_NOT_LAUNCHED",
+  "timestamp_utc": "2026-10-28T16:31:13.642622+00:00",
+  "total_GPU_hours_upper": 3.163637162182066,
+  "total_all_in_USD_with_old_closed": {
+    "B200": 29.14,
+    "H200": 20.74
+  }
+}

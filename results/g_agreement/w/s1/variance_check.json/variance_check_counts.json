@@ -1,0 +1,135 @@
+{
+ "family": "counts",
+ "mode": "centred",
+ "items_file": "projects/g_agreement/banks/w/items_w.json",
+ "states_dir": "cache/g_agreement/w/states_L42",
+ "n_units": 600,
+ "dim": 5120,
+ "unit_ids_sha_prefix": [
+  "wcnt-0001",
+  "wcnt-0002",
+  "wcnt-0003"
+ ],
+ "threshold_r2_pc1": 0.25,
+ "stop_rule_factors": [
+  "decade",
+  "template",
+  "object",
+  "place"
+ ],
+ "diagnostic_factors": [
+  "value_linear"
+ ],
+ "r2_pc1_stop_rule_factors": {
+  "decade": 0.0007968574021893771,
+  "template": 0.993149299097999,
+  "object": 0.001416831315615874,
+  "place": 0.001140772438153359
+ },
+ "max_r2_pc1": [
+  "template",
+  0.993149299097999
+ ],
+ "stop": true,
+ "offending_factors": [
+  "template"
+ ],
+ "full": {
+  "n": 600,
+  "dim": 5120,
+  "pca": {
+   "explained_ratio": [
+    0.3869411692300375,
+    0.15591817606257716,
+    0.11466153371710076
+   ],
+   "uncentred_energy_ratio": [
+    0.38694116923003763,
+    0.1559181760625772,
+    0.11466153371710046
+   ],
+   "uniform_reference": 0.0016666666666666668
+  },
+  "factors": {
+   "decade": {
+    "r2_pc": [
+     0.0007968574021893771,
+     0.2338667086622398,
+     0.017382941817932984
+    ],
+    "eta2_full": 0.09426143975213574,
+    "n_levels": 10,
+    "levels": {
+     "d0": 55,
+     "d1": 61,
+     "d2": 60,
+     "d3": 61,
+     "d4": 60,
+     "d5": 60,
+     "d6": 62,
+     "d7": 60,
+     "d8": 61,
+     "d9": 60
+    }
+   },
+   "template": {
+    "r2_pc": [
+     0.993149299097999,
+     0.5338780261412391,
+     0.16398653473794889
+    ],
+    "eta2_full": 0.5379992508437128,
+    "n_levels": 4,
+    "levels": {
+     "t1": 150,
+     "t2": 150,
+     "t3": 150,
+     "t4": 150
+    }
+   },
+   "object": {
+    "r2_pc": [
+     0.001416831315615874,
+     0.06371435182212537,
+     0.49496159359914826
+    ],
+    "eta2_full": 0.08476819372756805,
+    "n_levels": 3,
+    "levels": {
+     "apples": 200,
+     "coins": 200,
+     "marbles": 200
+    }
+   },
+   "place": {
+    "r2_pc": [
+     0.001140772438153359,
+     0.021418948569595697,
+     0.07375446576808276
+    ],
+    "eta2_full": 0.07953556529166494,
+    "n_levels": 12,
+    "levels": {
+     "bag": 50,
+     "basket": 50,
+     "bin": 50,
+     "bowl": 50,
+     "box": 50,
+     "bucket": 50,
+     "chest": 50,
+     "crate": 50,
+     "drawer": 50,
+     "jar": 50,
+     "sack": 50,
+     "tray": 50
+    }
+   }
+  }
+ },
+ "by_split": {},
+ "diagnostics": {
+  "value_linear_r2_pc1": 0.0004564404329405747
+ },
+ "hewitt_liang_control": null,
+ "verdict": "STOP: factor(s) template explain > 25% of PC1 of the within-family differences; do not score readers on this family"
+}

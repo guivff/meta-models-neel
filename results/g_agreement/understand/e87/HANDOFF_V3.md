@@ -1,0 +1,7 @@
+# E87 clarification 2 and E95 deviation 1 binding
+
+Uses the existing worker87.py engine; no second generation implementation. E87 all available positions on short prompts, with matched placebo. Invalid storage slots are never sent to a reader or judge. Exact E87 count is 67,920 readouts (32,760 real Oracle, 32,760 placebo Oracle, 2,400 NLA); grouped calls remain 4,500. Holder remains and analysis must print its probe and seven-row sensitivity. Old REQUEST is preserved as REQUEST_PRE_CLARIFICATION2.json. The new request holds only for Track Q measured timing/admission; the old 4h estimate is not a cap.
+
+E95 scope95.py binds the amended first30/min available rows, 8 positions, layers20/36/44/56, 15 placebo; reduction_step applies the registered sequence. I3 supplies row_roster, frozen item_ids, per-row placebo_positions, and a sealed per-bank block42 norm. mode=nla_placebo_only generates only NLA placebo for reuse_e87 rows; remaining mode rejects these rows so their real/Oracle cells cannot be accidentally rerun. NLA RNG is seed20261029, independent of Oracle's RNG. I3 must freeze roster, norm provenance, reduction and judge subsample before any calls. No E95 input package or launch has been issued here.
+
+Grouped judge e87.py retains the original wire/route implementation, updated for achieved short-position counts and authority47cf57c2. E95 can reuse wire/classify/schema primitives but requires its own admission binding; E87 bank guards are intentionally still E87-only.

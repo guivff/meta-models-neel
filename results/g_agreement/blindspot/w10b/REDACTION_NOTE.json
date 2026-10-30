@@ -1,0 +1,40 @@
+{
+  "schema": "redaction-note-v1",
+  "files": [
+    {
+      "path": "results/g_agreement/blindspot/w10b/DEV_MODE_CHECK_REQUEST.json",
+      "sealed_by": "results/g_agreement/blindspot/w10b/DEV_REQUEST_SEAL.json",
+      "local_commit": "482ceb5bbe9a",
+      "local_sha256": "462443617bc21ec3d303c05aa386a93847622dc1f108654fdca99b986bd77e1a",
+      "published_sha256": "eec89885c0cd1c4fee3dcacd3dc3f68aa60c91c0f6cae7c42b9f421ad89b7030",
+      "redactions": [
+        {
+          "line": 19,
+          "published_text": "",
+          "original_sha256": "af7f9e5ed45e16085c658a427e39834e64347c2f2b07e47755c3689c6460192d",
+          "original_length": 70
+        },
+        {
+          "line": 63,
+          "published_text": "",
+          "original_sha256": "af7f9e5ed45e16085c658a427e39834e64347c2f2b07e47755c3689c6460192d",
+          "original_length": 70
+        },
+        {
+          "line": 92,
+          "published_text": "",
+          "original_sha256": "af7f9e5ed45e16085c658a427e39834e64347c2f2b07e47755c3689c6460192d",
+          "original_length": 70
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "at": "2026-10-25T09:16:51Z",
+      "by": "integrator",
+      "authority": "BRIEF_UNDERSTAND §123 item 4 (c90267ce)",
+      "what": "Seal no longer verifies on the published branch because machine paths in the sealed file were replaced (absolute local paths by repo-relative or placeholder paths) when it was published. local_sha256 is the sealed hash; the original is at local_commit in the owner's local history, or (local_file) in the owner's worktree or its git-ignored cache. Each redaction gives the line, the published replacement span and the original span's sha256/length; restoring the original spans reproduces local_sha256 exactly (checked when this note was written). No score, seal or verdict changed."
+    }
+  ]
+}

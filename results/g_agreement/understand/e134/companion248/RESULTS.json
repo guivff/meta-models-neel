@@ -1,0 +1,225 @@
+{
+  "PAGREE": {
+    "eligible": 100,
+    "metrics": {
+      "accuracy": {
+        "Wilson95": [
+          0.34672026630160796,
+          0.5377189534832302
+        ],
+        "count": 44,
+        "defined_bootstrap_draws": 2000,
+        "denominator": 100,
+        "estimate": 0.44,
+        "item_bootstrap95": [
+          0.34,
+          0.54
+        ],
+        "undefined_bootstrap_draws": 0
+      },
+      "coverage": {
+        "Wilson95": [
+          0.44264860323368227,
+          0.6343919169097589
+        ],
+        "count": 54,
+        "defined_bootstrap_draws": 2000,
+        "denominator": 100,
+        "estimate": 0.54,
+        "item_bootstrap95": [
+          0.44,
+          0.64
+        ],
+        "undefined_bootstrap_draws": 0
+      },
+      "false_claim_rate": {
+        "Wilson95": [
+          0.0552291370606751,
+          0.17436566150491345
+        ],
+        "count": 10,
+        "defined_bootstrap_draws": 2000,
+        "denominator": 100,
+        "estimate": 0.1,
+        "item_bootstrap95": [
+          0.05,
+          0.16
+        ],
+        "undefined_bootstrap_draws": 0
+      }
+    },
+    "precision_given_claim": {
+      "Wilson95": [
+        0.6916405221784752,
+        0.8961731445791086
+      ],
+      "claims": 54,
+      "correct": 44,
+      "estimate": 0.8148148148148148
+    },
+    "total": 100,
+    "truth_basis_scope": "behaviour-verified",
+    "truth_basis_scores": {
+      "behaviour-verified": {
+        "eligible": 100,
+        "metrics": {
+          "accuracy": {
+            "Wilson95": [
+              0.34672026630160796,
+              0.5377189534832302
+            ],
+            "count": 44,
+            "defined_bootstrap_draws": 2000,
+            "denominator": 100,
+            "estimate": 0.44,
+            "item_bootstrap95": [
+              0.34,
+              0.54
+            ],
+            "undefined_bootstrap_draws": 0
+          },
+          "coverage": {
+            "Wilson95": [
+              0.44264860323368227,
+              0.6343919169097589
+            ],
+            "count": 54,
+            "defined_bootstrap_draws": 2000,
+            "denominator": 100,
+            "estimate": 0.54,
+            "item_bootstrap95": [
+              0.44,
+              0.64
+            ],
+            "undefined_bootstrap_draws": 0
+          },
+          "false_claim_rate": {
+            "Wilson95": [
+              0.0552291370606751,
+              0.17436566150491345
+            ],
+            "count": 10,
+            "defined_bootstrap_draws": 2000,
+            "denominator": 100,
+            "estimate": 0.1,
+            "item_bootstrap95": [
+              0.05,
+              0.16
+            ],
+            "undefined_bootstrap_draws": 0
+          }
+        },
+        "total": 100,
+        "unavailable": 0
+      }
+    },
+    "unavailable": 0
+  },
+  "bootstrap": {
+    "draws": 2000,
+    "paired": true,
+    "seed": 20261030,
+    "unit": "original E133 prompt/item"
+  },
+  "experiment": "E134",
+  "exploratory_post_hoc": true,
+  "n_prompts": 100,
+  "no_policy_selection": true,
+  "outcome_table": {
+    "columns": "P60",
+    "counts": [
+      [
+        50,
+        0,
+        6
+      ],
+      [
+        0,
+        9,
+        7
+      ],
+      [
+        0,
+        0,
+        28
+      ]
+    ],
+    "order": [
+      "correct",
+      "false",
+      "abstain"
+    ],
+    "rows": "PALL"
+  },
+  "paired_differences": {
+    "accuracy_PALL_minus_P60": {
+      "defined_draws": 2000,
+      "estimate": 0.06,
+      "item_bootstrap95": [
+        0.02,
+        0.11
+      ],
+      "undefined_draws": 0
+    },
+    "false_claim_PALL_minus_P60": {
+      "defined_draws": 2000,
+      "estimate": 0.07,
+      "item_bootstrap95": [
+        0.03,
+        0.12
+      ],
+      "undefined_draws": 0
+    }
+  },
+  "precision_given_claim": {
+    "P44": {
+      "Wilson95": [
+        0.14283853850956563,
+        0.47576605190361576
+      ],
+      "claims": 25,
+      "correct": 7,
+      "coverage": 0.25,
+      "estimate": 0.28,
+      "false": 18,
+      "total": 100
+    },
+    "P52": {
+      "Wilson95": [
+        0.5490882631704924,
+        0.8937198697736354
+      ],
+      "claims": 21,
+      "correct": 16,
+      "coverage": 0.21,
+      "estimate": 0.7619047619047619,
+      "false": 5,
+      "total": 100
+    },
+    "P60": {
+      "Wilson95": [
+        0.7348201621622644,
+        0.9176153600140352
+      ],
+      "claims": 59,
+      "correct": 50,
+      "coverage": 0.59,
+      "estimate": 0.847457627118644,
+      "false": 9,
+      "total": 100
+    },
+    "PALL": {
+      "Wilson95": [
+        0.6690904506199482,
+        0.858325564604242
+      ],
+      "claims": 72,
+      "correct": 56,
+      "coverage": 0.72,
+      "estimate": 0.7777777777777778,
+      "false": 16,
+      "total": 100
+    }
+  },
+  "supplement": "\u00a7248 B"
+}

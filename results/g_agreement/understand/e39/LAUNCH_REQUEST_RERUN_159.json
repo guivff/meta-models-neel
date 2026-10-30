@@ -1,0 +1,46 @@
+{
+  "GPU_jobs_launched": 0,
+  "admit_command": "python results/g_agreement/understand/e39/rerun_159.py admit --forecast FORECAST.json --assignment ASSIGNMENT.json --prior-custody PRIOR_CUSTODY_159.json --out ADMISSION.json",
+  "allocated_gpu_seconds": 13500,
+  "analysis_command": "python results/g_agreement/understand/e39/analysis_once_recovered_159.py",
+  "assignment_template": "results/g_agreement/understand/e39/ASSIGNMENT_RERUN_159.template.json",
+  "authority": "\u00a7159 item4",
+  "date": "2026-10-26",
+  "environment_prepare_command": "/weights/venv-kernels/bin/python results/g_agreement/understand/e39/training_environment.py prepare --base-python /weights/venv-kernels/bin/python --overlay /tmp/e39-rerun159-POD_ID --manifest TRAINING_ENVIRONMENT.json",
+  "experiment": "E39",
+  "experiment_cap_gpu_seconds": 81000,
+  "input_archive": "cache/g_agreement/understand/e39-bound-v2/input.tar.gz",
+  "input_archive_sha256": "f51e3cf4399af74e0b1d97dd8cdef0297aa6fa5fec31dfbcda4371269180b7a4",
+  "input_seal_sha256": "e2cdf3cc2c26566a6bef56d2512de247c57ea7bcabffa996df38ccc90f20a35c",
+  "original_source_manifest_sha256": "7988652a885bc68dff170a6df568f8a8a35c3d1ea829d6c01f88c514b1968014",
+  "parity": "Original E28 W1 gate first before any optimizer; scientific failure stops without retry",
+  "pod_count": 1,
+  "prior_custody": "Integrator actual provider ledger required, never inferred from training time; prior+13500<=81000",
+  "prior_custody_template": "results/g_agreement/understand/e39/PRIOR_CUSTODY_159.template.json",
+  "registered_analysis_invocations": 0,
+  "rerun_source_manifest_sha256": "cd2ed1af39258d6f1658816fb0559e6a7e2aa6477eea02c7171c0377a3a57474",
+  "runs": [
+    [
+      "python_string",
+      "B"
+    ],
+    [
+      "table_column",
+      "B"
+    ],
+    [
+      "table_role",
+      "B"
+    ],
+    [
+      "table_row",
+      "B"
+    ]
+  ],
+  "science_cap": "min(1.5F+360,10800), unchanged; same original warmed L/B paths and full four-run production",
+  "seed": 20261026,
+  "source_archive": "cache/g_agreement/understand/e39-rerun-159-source-v1.tar.gz",
+  "source_archive_sha256": "fe2b2d3b39fca3c07f3b045ceab89a4cd0237d828fdca5d0a616e1def001a0b4",
+  "status": "READY_AFTER_INTEGRATOR_CUSTODY_AND_RECOVERY_BINDING",
+  "worker_command": "/tmp/e39-rerun159-POD_ID/bin/python results/g_agreement/understand/e39/rerun_159.py run --assignment ASSIGNMENT.json --prior-custody PRIOR_CUSTODY_159.json --mapping results/g_agreement/understand/e39/LORA_TARGETS.json --input INPUT_CACHE --assets VERIFIED_ASSETS.json --out cache/g_agreement/understand/e39-rerun-159-run --admission ADMISSION.json --environment-manifest TRAINING_ENVIRONMENT.json --parity-inputs PARITY_INPUTS"
+}

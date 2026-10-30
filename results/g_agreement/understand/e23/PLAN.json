@@ -1,0 +1,92 @@
+{
+  "E23b": "table column O/S x originalW1mean2 or Surajfixed(- column one/- column five) x42/44; largest absolute main effect with signed contrast and CI",
+  "M2": "O84 test grouped5fold; S all200 grouped5fold; Mis/Swap use recipient fold F16 model on donor output without refit",
+  "SPAN_sha256": "5b383d96f93ab0be00b57ee8c8dec960a75eba8adadaac8bfaa24076531ca483",
+  "T": "char1-4gram TFIDF + logistic C1; O same5fold asM2; S mine40 fit/select160 test; each span arm fitted separately",
+  "arms": {
+    "F16": "greedy16 following; in-contract",
+    "Mis": "same-row/set random donor, independent of value, includes self; F16 probe without refit",
+    "P32": "last32 tokens ending at read position; off-contract",
+    "Pfull": "whole original prefix text, as E1; off-contract",
+    "Swap": "same-row/set opposite-value donor; secondary; F16 probe without refit"
+  },
+  "authority_commit": "e347b86a",
+  "bootstrap": "2000 seed20261025; W1 cluster or S item cluster; shared items paired; independent resampling per set; preserve M1 select160 versus M2 all200 denominators",
+  "clarification2_commit": "1642d63e",
+  "counts": {
+    "AR_unique_outputs": 8640,
+    "E23b_item_cells": 976,
+    "O_dev": 420,
+    "O_test": 420,
+    "S_mine_dev": 120,
+    "S_select_test": 480,
+    "capture_items": 600,
+    "logical_AR_outputs_including_controls": 14400,
+    "new_F16": 600,
+    "reused_sealed_F16": 840
+  },
+  "experiment": "E23",
+  "forecast": {
+    "F_seconds": null,
+    "cap_formula": "min(1.5F+360,5400,reserved)",
+    "full_admission": "after full F16 seal, six AR paths each warm+3timed; F=elapsed science+remaining median3 unit work; elapsed+remaining+180 <= cap",
+    "method": "sealed_F16_before_AR_staged_full_warmed_median3",
+    "paths": [
+      "ar_40_F16",
+      "ar_40_P32",
+      "ar_40_Pfull",
+      "ar_44_F16",
+      "ar_44_P32",
+      "ar_44_Pfull",
+      "asked_42_Suraj",
+      "asked_42_W1",
+      "asked_44_Suraj",
+      "asked_44_W1",
+      "capture",
+      "generation"
+    ],
+    "prefix_admission": "only capture/generation, after six target paths each warm+3timed; AR unknown, never zero",
+    "retrieval_reserve_seconds": 180,
+    "science_clock": "starts at first timed target pilot, never resets; includes all prefix output and late AR warm/pilot",
+    "setup_seconds": 1500
+  },
+  "input_seal_sha256": "88c46812fd7a5a044948b0e10dcb4f2b93b76b2aa15ac1862977585b1459a46d",
+  "models": "one target+Oracle backbone and one AR, loaded once during setup, simultaneously resident on >=120GiB GPU; same process for warm-up and collection; no NLA",
+  "no_scientific_outputs_exist": true,
+  "parity": "own hooks; compare all600 S items at40/42/44 to stored parity-only tensors; cos>=.999 every item before scientific reader/AR scoring",
+  "primary_measure": "raw_M1_frozen_true_activation_direction",
+  "primary_tag": 44,
+  "raw_M1": "O frozen W1 dev44 unit direction; S direction fit on own mine40 true44 using W1 fixed recipe; W1->S secondary only",
+  "rows_O": [
+    "table_column",
+    "list_index",
+    "prose_paren",
+    "python_string",
+    "prose_sentiment"
+  ],
+  "rows_S": [
+    "tb_tablecol",
+    "bk_listidx",
+    "tb_paren"
+  ],
+  "secondary_tag": 40,
+  "seed": 20261025,
+  "source_audit_sha256": "bf3346ca5443b873931704055e51c5acb0c89dacf713a8c5cd0ecfdfa3837684",
+  "status": "FROZEN_BEFORE_MODEL_WORK",
+  "total_units": 1476,
+  "units": {
+    "ar_40_F16": 180,
+    "ar_40_P32": 180,
+    "ar_40_Pfull": 180,
+    "ar_44_F16": 180,
+    "ar_44_P32": 180,
+    "ar_44_Pfull": 180,
+    "asked_42_Suraj": 31,
+    "asked_42_W1": 31,
+    "asked_44_Suraj": 31,
+    "asked_44_W1": 31,
+    "capture": 75,
+    "generation": 197
+  },
+  "validity": "Mis .4..6 M1/M2 per row; O python_string/prose_sentiment F16 M1>=.8; failures flag affected assay interpretation"
+}

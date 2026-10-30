@@ -1,0 +1,46 @@
+--- cache/g_agreement/i2/specialized_bank_intake/e86/source/results/g_agreement/understand/late198/batch_parity.py	2026-10-28 12:13:22
++++ cache/g_agreement/i2/section210_runtime_v1/source/results/g_agreement/understand/late198/batch_parity.py	2026-10-28 16:33:51
+@@ -1 +1 @@
+-"""Exact output parity; mismatches stop acquisition, never silently fall back."""
++"""Registered report-only parity for E85/E91/E92/E86/E82 (87ee1900)."""
+@@ -4,0 +5 @@
++AUTHORITY='87ee19008919ac30889d9f47e6572503ad032b88'
+@@ -5,0 +7,4 @@
++def first_difference(a,b):
++    for i,(x,y) in enumerate(zip(a,b)):
++        if x!=y:return i
++    return min(len(a),len(b)) if len(a)!=len(b) else None
+@@ -8,9 +13,14 @@
+-    require(len(batched) == len(serial) == len(ids) and len(ids) > 0, 'parity coverage')
+-    encode = lambda v: json.dumps(v, sort_keys=True, ensure_ascii=False, allow_nan=False).encode()
+-    rows = [dict(id=i, batched_sha256=hashlib.sha256(encode(a)).hexdigest(),
+-                 serial_sha256=hashlib.sha256(encode(b)).hexdigest(), equal=encode(a)==encode(b))
+-            for i, a, b in zip(ids, batched, serial)]
+-    passed = all(x['equal'] for x in rows)
+-    write(path, dict(status='PASS' if passed else 'FAIL', n=len(rows),
+-                     production_batch_size=batch_size, exact_serialized_output=True, records=rows))
+-    require(passed, 'batched greedy differs from serial greedy; no production continuation')
++    require(len(batched)==len(serial)==len(ids) and len(ids)>0,'parity coverage')
++    # allow_nan=False rejects non-finite outputs; this remains a fatal error.
++    encode=lambda v:json.dumps(v,sort_keys=True,ensure_ascii=False,allow_nan=False).encode('utf-8')
++    rows=[]
++    for ident,a,b in zip(ids,batched,serial):
++        x,y=encode(a),encode(b)
++        rows.append(dict(id=ident,batched_sha256=hashlib.sha256(x).hexdigest(),
++            serial_sha256=hashlib.sha256(y).hexdigest(),equal=x==y,
++            first_divergence_position=first_difference(x,y),position_unit='canonical JSON UTF-8 byte',
++            batched_bytes=len(x),serial_bytes=len(y)))
++    matches=sum(row['equal'] for row in rows)
++    write(path,dict(status='PASS' if matches==len(rows) else 'MISMATCH_REPORTED',
++        authority=AUTHORITY,mismatch_is_gate=False,n=len(rows),matches=matches,mismatches=len(rows)-matches,
++        production_batch_size=batch_size,exact_serialized_output=True,records=rows))
+@@ -18,2 +28 @@
+-
+-def trim_generated(tokens, eos_ids):
++def trim_generated(tokens,eos_ids):
+@@ -21,3 +30,2 @@
+-    for i, token in enumerate(tokens):
+-        if token in eos_ids:
+-            return tokens[:i+1]
++    for i,token in enumerate(tokens):
++        if token in eos_ids:return tokens[:i+1]

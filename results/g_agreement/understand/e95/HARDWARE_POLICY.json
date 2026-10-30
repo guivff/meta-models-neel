@@ -1,0 +1,32 @@
+{
+  "experiment": "E95",
+  "authority": "\u00a7204 hardware note cb76843c",
+  "allowed_gpu_types": [
+    "H200",
+    "B200"
+  ],
+  "selection": "whichever is available first, subject to whole-row type matching and existing admission",
+  "global_gpu_usd_ceiling": 1500,
+  "record_gpu_type_per_shard_in_every_receipt": true,
+  "real_placebo_control_same_gpu_type_within_row": true,
+  "e87_reuse": "additional NLA placebo must match the original E87 row GPU type, verified from source receipt",
+  "new_b200_image_smoke": {
+    "items": 3,
+    "references": "sealed H200 readouts",
+    "require": [
+      "model loads",
+      "reader loads",
+      "finite outputs"
+    ],
+    "report": "first divergence position, not an acceptance gate",
+    "on_load_or_software_failure": "stop pod; no production output"
+  },
+  "decoding_and_scientific_rules": "unchanged",
+  "current_gpu_type": null,
+  "b200_smoke_state": "NOT_RUN",
+  "operator_integration": "SAME_RUNTIME_CPU_VERIFIED; actual image/stack/assets, stop guard, smoke and measured admission still required",
+  "first_output_utc": "unknown",
+  "first_output_evidence": null,
+  "runtime_shared_commit": "d6e361892",
+  "reference_preparation": "results/g_agreement/understand/e95/HARDWARE_REFERENCE_PREPARATION.json"
+}

@@ -1,0 +1,9 @@
+# E52 deadline implementation — 2026-10-27
+
+Authority: §169 operations amendment e0a2e9ef and Guiv’s direct clarification in this chat. The forecast must be committed by05:30Z. Stop CPU computation at05:20Z to allow sealing, secret scan, pull/rebase and commit. Frozen alphabetical row order and unchanged G3, SVD enrichment, sparse atoms, k16, null, value sets and primary label rules. Sparse pursuit is batched one row at a time so each completed row can be saved before the next; no numerical method or threshold changes. No forecast exists at this build.
+
+The new deadline entry point supersedes the unexecuted all-or-nothing E49 forecast entry point; all already-used source seals remain untouched. A timer stops late computation. A row can be NO FORECAST only because the verified capture is not delivered by the cutoff, computation fails (stage and exception type recorded), or the compute deadline interrupts it. Completed rows are retained; no row is rescored and no forecast is back-filled once sealed. Rows with empty frozen value sets remain computable via the registered fraction-only rule.
+
+R3 headline accuracy uses only mechanically gated rows with a forecast, minimum8. Below8, R3 and the falsifier R3 component are NOT EVALUABLE. The sensitivity line counts every gated NO FORECAST row as wrong and uses all mechanically gated rows. Missing forecasts are not selected by their labels or reader outcomes. Every missing row carries its computational reason in E49_JFORECAST.json. Reader outcomes remain unopened until E49’s sealed analysis.
+
+Integrator receipt preferred path: cache/g_agreement/understand/e52/E49_DELIVERY.json, conforming to E49_DELIVERY.template.json. Bind it with bind_e49.py --receipt PATH, then run forecast_e49_deadline.py. Keep reader channels paused until the forecast and hash are committed. If capture has not arrived by05:20Z, the same command seals16 NO FORECAST rows with that computational reason.

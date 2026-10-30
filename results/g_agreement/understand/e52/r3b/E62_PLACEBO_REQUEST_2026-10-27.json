@@ -1,0 +1,19 @@
+{
+  "experiment": "E62",
+  "scope_id": "E62_PLACEBO",
+  "status": "AWAITING_VERIFIED_CAPTURE_AND_COMMITTED_INPUT_PLAN",
+  "authority": "Guiv: Original now; placebo separately",
+  "units": 15,
+  "binary": true,
+  "source_manifest": "results/g_agreement/understand/e62/placebo/FREEZE_MANIFEST.json",
+  "input_plan": "results/g_agreement/understand/e57/jlens/E62_PLACEBO_INPUT_PLAN.json",
+  "receipt": "cache/g_agreement/understand/e52/r3b/E62_PLACEBO_DELIVERY.json",
+  "commands": [
+    "python results/g_agreement/understand/e52/r3b/e62_placebo.py channel",
+    "python results/g_agreement/understand/e52/r3b/e62_placebo.py forecast"
+  ],
+  "forecast": "results/g_agreement/understand/e52/r3b/E62_PLACEBO_JFORECAST.json",
+  "prerequisite": "Verify capture-only custody and exact bank coverage; freeze and commit input plan and token sets before channel. Never run without delivery.",
+  "immutable_original": "E62_JFORECAST.json remains unchanged; original E62 claims never reset",
+  "scoring_merge": "Treat this scope as E62 bank cells in later registered pooled scoring; not a new statistical bank."
+}

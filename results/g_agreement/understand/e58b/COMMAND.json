@@ -1,0 +1,19 @@
+{
+  "CPU_custody_prerequisite": "Integrator CPU-only receipt and exact CPU_CUSTODY_BINDING hashes before label join",
+  "argv": [
+    "env",
+    "CUDA_VISIBLE_DEVICES=",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "python",
+    "results/g_agreement/understand/e58b/analyze_once.py"
+  ],
+  "executor": "integrator",
+  "experiment": "E58b",
+  "guard": "results/g_agreement/understand/e58b/ANALYSIS.RUN_ONCE.json",
+  "labelling_or_decomposition": false,
+  "once_only": true,
+  "out": "results/g_agreement/understand/e58b/analysis_20261027",
+  "pod_output_schema": "logp_A/logp_B, no true labels",
+  "required_before_execution": "committed READY request plus complete verified output pull",
+  "verified_pull": "cache/g_agreement/understand/e58b/verified-pull-rerun1"
+}

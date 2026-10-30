@@ -1,0 +1,12 @@
+{
+  "id": "823a6f0701485fbe136dd3e0",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: definition given, then examples, now a test case requiring a label response (\"happy\" or \"sad\").\n\nThe structured Q&A template (\"Given the following sentence... What is the sentiment?\") demands a direct answer matching the established binary classification format.\n\n\"Reply:\" is the final token, functioning as a prompt label in the few-shot example, immediately requiring the model's predicted sentiment label (e.g., \"happy\") or a brief explanatory answer.\n\"Example sentence: 'The individual is a professional athlete who is a member of the team.'\nExample sentence: 'The individual is a professional athlete who is a member of the team.'\nReply:\" \u2014 this closing \"Reply:\" field expects the direct answer to the example question, completing the structured template.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: definition given, then examples, now a test case requiring a label response (\"happy\" or \"sad\").\n\nThe structured Q&A template (\"Given the following sentence... What is the sentiment?\") demands a direct answer matching the established binary classification format.\n\n\"Reply:\" is the final token, functioning as a prompt label in the few-shot example, immediately requiring the model's predicted sentiment label (e.g., \"happy\") or a brief explanatory answer.\n\"Example sentence: 'The individual is a professional athlete who is a member of the team.'\nExample sentence: 'The individual is a professional athlete who is a member of the team.'\nReply:\" \u2014 this closing \"Reply:\" field expects the direct answer to the example question, completing the structured template.\n\"Reply:\"",
+  "truncated": false
+}

@@ -1,0 +1,632 @@
+{
+ "created": "2026-10-12T03:05:22+00:00",
+ "bank_dir": "projects/g_agreement/banks/w",
+ "seed": 20261011,
+ "sha256": {
+  "items_w": "ec8e83637e723157f4fc6596131de2a81040b00311386f4d9654144ed3d5f46e",
+  "items_v7": "253070eb1b5074ff9820d4fd87bd9b396a78082a1a761ed2951e43cc676ba878",
+  "mapping8_index": "c8ed451ab925e7893cd3c029ec93ae0b22cdae687368fe93745dd746e0c8391e"
+ },
+ "counts": {
+  "counts": 600,
+  "ownership4": 128,
+  "arith": 100,
+  "mapping8_items_indexed": 94,
+  "v7": 32
+ },
+ "all_pass": true,
+ "n_checks": 45,
+ "n_fail": 0,
+ "by_family": {
+  "meta": {
+   "n_checks": 3,
+   "n_pass": 3
+  },
+  "counts": {
+   "n_checks": 14,
+   "n_pass": 14
+  },
+  "ownership4": {
+   "n_checks": 10,
+   "n_pass": 10
+  },
+  "arith": {
+   "n_checks": 6,
+   "n_pass": 6
+  },
+  "mapping8": {
+   "n_checks": 3,
+   "n_pass": 3
+  },
+  "v7": {
+   "n_checks": 7,
+   "n_pass": 7
+  },
+  "ids": {
+   "n_checks": 2,
+   "n_pass": 2
+  }
+ },
+ "checks": [
+  {
+   "family": "meta",
+   "check": "items_w.json_sha256_items_matches",
+   "pass": true,
+   "observed": {
+    "seed": 20261011,
+    "sha256_items": "ec8e83637e723157f4fc6596131de2a81040b00311386f4d9654144ed3d5f46e"
+   },
+   "rule": "meta.sha256_items == sha of items"
+  },
+  {
+   "family": "meta",
+   "check": "items_v7.json_sha256_items_matches",
+   "pass": true,
+   "observed": {
+    "seed": 20261011,
+    "sha256_items": "253070eb1b5074ff9820d4fd87bd9b396a78082a1a761ed2951e43cc676ba878"
+   },
+   "rule": "meta.sha256_items == sha of items"
+  },
+  {
+   "family": "meta",
+   "check": "mapping8_index.json_sha256_items_matches",
+   "pass": true,
+   "observed": {
+    "seed": 20261011,
+    "sha256_items": "c8ed451ab925e7893cd3c029ec93ae0b22cdae687368fe93745dd746e0c8391e"
+   },
+   "rule": "meta.sha256_items == sha of items"
+  },
+  {
+   "family": "counts",
+   "check": "n_items",
+   "pass": true,
+   "observed": 600,
+   "rule": "== 600"
+  },
+  {
+   "family": "counts",
+   "check": "values_1_to_99_used_5_to_7_times",
+   "pass": true,
+   "observed": {
+    "min_uses": 6,
+    "max_uses": 7,
+    "n_values": 99,
+    "uses_histogram": {
+     "6": 93,
+     "7": 6
+    }
+   },
+   "rule": "every N in 1..99 used 5-7 times"
+  },
+  {
+   "family": "counts",
+   "check": "templates_balanced",
+   "pass": true,
+   "observed": {
+    "t2": 150,
+    "t3": 150,
+    "t4": 150,
+    "t1": 150
+   },
+   "rule": "4 templates x 150"
+  },
+  {
+   "family": "counts",
+   "check": "objects_balanced",
+   "pass": true,
+   "observed": {
+    "marbles": 200,
+    "apples": 200,
+    "coins": 200
+   },
+   "rule": "3 objects x 200"
+  },
+  {
+   "family": "counts",
+   "check": "template_x_object_cells",
+   "pass": true,
+   "observed": {
+    "t1|apples": 50,
+    "t1|coins": 50,
+    "t1|marbles": 50,
+    "t2|apples": 50,
+    "t2|coins": 50,
+    "t2|marbles": 50,
+    "t3|apples": 50,
+    "t3|coins": 50,
+    "t3|marbles": 50,
+    "t4|apples": 50,
+    "t4|coins": 50,
+    "t4|marbles": 50
+   },
+   "rule": "12 cells x 50"
+  },
+  {
+   "family": "counts",
+   "check": "places_balanced",
+   "pass": true,
+   "observed": {
+    "tray": 50,
+    "jar": 50,
+    "crate": 50,
+    "basket": 50,
+    "bag": 50,
+    "bowl": 50,
+    "bucket": 50,
+    "bin": 50,
+    "chest": 50,
+    "sack": 50,
+    "box": 50,
+    "drawer": 50
+   },
+   "rule": "12 places x 50"
+  },
+  {
+   "family": "counts",
+   "check": "per_value_every_object_at_least_twice",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "each N occurs with each object >= 2 times"
+  },
+  {
+   "family": "counts",
+   "check": "per_value_every_template_at_least_once",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "each N occurs with each template >= 1 time"
+  },
+  {
+   "family": "counts",
+   "check": "decade_x_template_near_uniform",
+   "pass": true,
+   "observed": {
+    "d0|t1": 13,
+    "d0|t2": 14,
+    "d0|t3": 14,
+    "d0|t4": 14,
+    "d1|t1": 15,
+    "d1|t2": 15,
+    "d1|t3": 15,
+    "d1|t4": 16,
+    "d2|t1": 15,
+    "d2|t2": 15,
+    "d2|t3": 15,
+    "d2|t4": 15,
+    "d3|t1": 16,
+    "d3|t2": 15,
+    "d3|t3": 15,
+    "d3|t4": 15,
+    "d4|t1": 15,
+    "d4|t2": 15,
+    "d4|t3": 15,
+    "d4|t4": 15,
+    "d5|t1": 15,
+    "d5|t2": 15,
+    "d5|t3": 15,
+    "d5|t4": 15,
+    "d6|t1": 16,
+    "d6|t2": 16,
+    "d6|t3": 15,
+    "d6|t4": 15,
+    "d7|t1": 15,
+    "d7|t2": 15,
+    "d7|t3": 15,
+    "d7|t4": 15,
+    "d8|t1": 15,
+    "d8|t2": 15,
+    "d8|t3": 16,
+    "d8|t4": 15,
+    "d9|t1": 15,
+    "d9|t2": 15,
+    "d9|t3": 15,
+    "d9|t4": 15
+   },
+   "rule": "each decade's template split within +-20% of uniform"
+  },
+  {
+   "family": "counts",
+   "check": "decade_x_object_near_uniform",
+   "pass": true,
+   "observed": {
+    "d0|apples": 18,
+    "d0|coins": 19,
+    "d0|marbles": 18,
+    "d1|apples": 20,
+    "d1|coins": 21,
+    "d1|marbles": 20,
+    "d2|apples": 20,
+    "d2|coins": 20,
+    "d2|marbles": 20,
+    "d3|apples": 20,
+    "d3|coins": 20,
+    "d3|marbles": 21,
+    "d4|apples": 20,
+    "d4|coins": 20,
+    "d4|marbles": 20,
+    "d5|apples": 20,
+    "d5|coins": 20,
+    "d5|marbles": 20,
+    "d6|apples": 22,
+    "d6|coins": 20,
+    "d6|marbles": 20,
+    "d7|apples": 20,
+    "d7|coins": 20,
+    "d7|marbles": 20,
+    "d8|apples": 20,
+    "d8|coins": 20,
+    "d8|marbles": 21,
+    "d9|apples": 20,
+    "d9|coins": 20,
+    "d9|marbles": 20
+   },
+   "rule": "each decade's object split within +-20% of uniform"
+  },
+  {
+   "family": "counts",
+   "check": "answer_equals_integer_in_prompt",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "answer == the single integer in the prompt == N"
+  },
+  {
+   "family": "counts",
+   "check": "prompts_distinct",
+   "pass": true,
+   "observed": 600,
+   "rule": "all prompts distinct"
+  },
+  {
+   "family": "counts",
+   "check": "candidates_all_is_1_to_99",
+   "pass": true,
+   "observed": true,
+   "rule": "candidates == [answer]; candidates_all == '1'..'99'"
+  },
+  {
+   "family": "counts",
+   "check": "render_chat",
+   "pass": true,
+   "observed": true,
+   "rule": "render chat, system null"
+  },
+  {
+   "family": "ownership4",
+   "check": "n_pairs_items",
+   "pass": true,
+   "observed": {
+    "pairs": 64,
+    "items": 128
+   },
+   "rule": "64 pairs, 128 items"
+  },
+  {
+   "family": "ownership4",
+   "check": "design_factors_balanced",
+   "pass": true,
+   "observed": {
+    "name_set": {
+     "ns0": 16,
+     "ns1": 16,
+     "ns2": 16,
+     "ns3": 16
+    },
+    "template": {
+     "pos0": 32,
+     "pos1": 32
+    },
+    "mention_order": {
+     "m0": 16,
+     "m1": 16,
+     "m2": 16,
+     "m3": 16
+    },
+    "holder": {
+     "n0": 16,
+     "n2": 16,
+     "n3": 16,
+     "n1": 16
+    },
+    "query_direction": {
+     "object_to_name": 32,
+     "name_to_object": 32
+    }
+   },
+   "rule": "every level of every design factor equally often (pairs)"
+  },
+  {
+   "family": "ownership4",
+   "check": "holder_b_shift_near_balanced",
+   "pass": true,
+   "observed": {
+    "1": 21,
+    "3": 22,
+    "2": 21
+   },
+   "rule": "22/21/21 over 64 pairs"
+  },
+  {
+   "family": "ownership4",
+   "check": "design_factors_pairwise_balanced",
+   "pass": true,
+   "observed": "all pairs of factors fully crossed and balanced",
+   "rule": "every pair of design factors balanced"
+  },
+  {
+   "family": "ownership4",
+   "check": "asked_object_uses",
+   "pass": true,
+   "observed": {
+    "silver ring": 4,
+    "purple book": 4,
+    "gold coin": 4,
+    "blue cup": 4,
+    "blue rope": 4,
+    "red flag": 4,
+    "black bag": 4,
+    "brown coat": 4,
+    "grey ball": 4,
+    "pink scarf": 4,
+    "green bottle": 4,
+    "red key": 4,
+    "green hat": 4,
+    "yellow box": 4,
+    "white pen": 4,
+    "orange lamp": 4
+   },
+   "rule": "16 objects x 4 asked"
+  },
+  {
+   "family": "ownership4",
+   "check": "answer_mention_position_A_balanced",
+   "pass": true,
+   "observed": {
+    "0": 16,
+    "1": 16,
+    "2": 16,
+    "3": 16
+   },
+   "rule": "A's answer in statement 1..4 equally often"
+  },
+  {
+   "family": "ownership4",
+   "check": "ab_token_permutation",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "A/B word multisets equal, texts differ"
+  },
+  {
+   "family": "ownership4",
+   "check": "ab_differ_only_in_holders_swap",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "exactly the two holders exchange objects; all factors shared"
+  },
+  {
+   "family": "ownership4",
+   "check": "solver_agreement",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "answers re-derived from the prompt text"
+  },
+  {
+   "family": "ownership4",
+   "check": "four_candidates_convention",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "4 candidates, same order in A/B, [0] = A's answer, [1] = B's"
+  },
+  {
+   "family": "arith",
+   "check": "n_items",
+   "pass": true,
+   "observed": 100,
+   "rule": "== 100"
+  },
+  {
+   "family": "arith",
+   "check": "ops_balanced",
+   "pass": true,
+   "observed": {
+    "-": 50,
+    "+": 50
+   },
+   "rule": "50 '-' and 50 '+'"
+  },
+  {
+   "family": "arith",
+   "check": "michael_format_and_plain_render",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "^\\d{1,2} [+-] \\d{1,2} =$ and render 'plain'"
+  },
+  {
+   "family": "arith",
+   "check": "operand_decades_covered",
+   "pass": true,
+   "observed": {
+    "a": {
+     "0": 8,
+     "1": 13,
+     "2": 5,
+     "3": 9,
+     "4": 9,
+     "5": 5,
+     "6": 17,
+     "7": 11,
+     "8": 12,
+     "9": 11
+    },
+    "b": {
+     "0": 14,
+     "1": 17,
+     "2": 13,
+     "3": 9,
+     "4": 13,
+     "5": 6,
+     "6": 7,
+     "7": 9,
+     "8": 6,
+     "9": 6
+    }
+   },
+   "rule": "every decade 0..9 of a and of b occurs"
+  },
+  {
+   "family": "arith",
+   "check": "answers_nonnegative_and_consistent",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "answer == a +/- b >= 0; operands field agrees"
+  },
+  {
+   "family": "arith",
+   "check": "no_triple_shared_with_michael",
+   "pass": true,
+   "observed": {
+    "shared": [],
+    "michael_sha256": "1dbfd7a47b9a7f265343116779ea766089ad0dd364b8198b2240dff1681aa6bf",
+    "distinct": 100
+   },
+   "rule": "no (a, op, b) in nla-consistency/data/arithmetic.jsonl; no repeats"
+  },
+  {
+   "family": "mapping8",
+   "check": "n_pairs_items",
+   "pass": true,
+   "observed": {
+    "pairs": 47,
+    "items": 94
+   },
+   "rule": "47 pairs / 94 items"
+  },
+  {
+   "family": "mapping8",
+   "check": "candidates_all_8_symbols",
+   "pass": true,
+   "observed": true,
+   "rule": "A..H, answer among them"
+  },
+  {
+   "family": "mapping8",
+   "check": "matches_items_x",
+   "pass": true,
+   "observed": {
+    "source_sha256_items": "dee9467a18f6f236"
+   },
+   "rule": "ids and answers equal the X mapping test split; sha recorded"
+  },
+  {
+   "family": "v7",
+   "check": "n_pairs",
+   "pass": true,
+   "observed": {
+    "pairs": 16,
+    "items": 32
+   },
+   "rule": "16 pairs / 32 items"
+  },
+  {
+   "family": "v7",
+   "check": "visible_prompt_identical_within_pair",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "prompt_text equal for A and B"
+  },
+  {
+   "family": "v7",
+   "check": "preambles_token_permutations",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "preambles differ and have equal word multisets"
+  },
+  {
+   "family": "v7",
+   "check": "no_binding_in_visible_prompt",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "candidates absent from the visible prompt; preamble+visible solves"
+  },
+  {
+   "family": "v7",
+   "check": "prompt_only_text_from_visible_only",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "PROMPT_ONLY_TEMPLATE over the visible prompt; no preamble"
+  },
+  {
+   "family": "v7",
+   "check": "preamble_role_system",
+   "pass": true,
+   "observed": {
+    "violations": []
+   },
+   "rule": "preamble_role == 'system'; capture_messages = [system preamble, user visible]"
+  },
+  {
+   "family": "v7",
+   "check": "templates_and_mention_order_balanced",
+   "pass": true,
+   "observed": {
+    "templates": {
+     "v7-p0": 8,
+     "v7-p1": 8
+    },
+    "answer_first_mentioned_A": {
+     "True": 8,
+     "False": 8
+    }
+   },
+   "rule": "8/8 and 8/8"
+  },
+  {
+   "family": "ids",
+   "check": "no_overlap_with_other_banks",
+   "pass": true,
+   "observed": {
+    "checked": [
+     "items.json",
+     "items_x.json",
+     "items_g6.json",
+     "items_binding_factorial.json"
+    ],
+    "overlaps": {}
+   },
+   "rule": "no item id / prompt text shared with items.json, items_x.json, items_g6.json, items_binding_factorial.json"
+  },
+  {
+   "family": "ids",
+   "check": "ids_unique_across_w_and_v7",
+   "pass": true,
+   "observed": 860,
+   "rule": "item ids unique"
+  }
+ ]
+}

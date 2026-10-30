@@ -1,0 +1,26 @@
+{
+ "experiment": "E107",
+ "issuer": "Integrator Q (Track Q CPU binding, sealed records only; as for E109)",
+ "written_utc": "2026-10-29T12:11Z",
+ "status": "PARTIAL - SPEC not runnable until MISSING items 1-3 arrive",
+ "hashes": {
+  "SPEC.json": "e88457ec37ba64d6355a9fd89c13c1ec7e862e40d06be2e39b9564704b65138b",
+  "SOURCE_SEALS.json": "41ddd273449f6f0a2d510555829a56999b14064aa7b4c31ac1f5c915a3e2051c",
+  "MISSING.json": "c878f2095a8bd983dcd3211d3c63b1acfcc0f799a66871845c7a0d696f2705a6"
+ },
+ "verified": {
+  "bank": "complete226 JUDGMENT_SEAL c0bcbe02 (COMPLETE_JUDGING_BANK) and its 3 phase seals (generation 4698d4c3, outside_judge_copy_judging a44c3a93, outside_judge_copy_original e3e0e8dc), all members",
+  "plan_units_redaction": "PLAN_SEAL 39591257, privacy-copy UNIT_SEAL, REDACTION_MAP_SEAL and outside UNIT_SEAL, all members",
+  "inventory": "I-2 INVENTORY_SEAL 52d6bdea, committed 196dc8ae5 at 04:40:25Z, before the first E107 output at 05:14:15Z; 4297 items; 37 E81 rows; PLAN_SEAL source_inventory_sha256 == 52d6bdea",
+  "prior_analyses": {"E82": "ANALYSIS_SEAL 8bc2e389", "E86": "ANALYSIS_SEAL f8c8af78", "note": "identical across W-mech2, W-mechanism-C, I-4 and R-5 worktrees"},
+  "route_and_redaction_audit": true,
+  "outside_generation": "gemini-3.1-flash-lite / google-vertex/global, T 0, 256 tokens, ZDR, data collection denied, no fallbacks"
+ },
+ "missing": [
+  "1. Outside judgment join: an explicit sealed map from opaque judgment id (4496 value + 1124 old_value) to (inventory_id, target / plan_index). Only the 5 redacted ids carry plan_index. Track Q will not infer it from order. Owner: W-internals-C.",
+  "2. Native reader refs: per inventory id and target {text, code, target_letter} into the original E81/E82/E86 judge banks (oracle/nla for E82/E86, qwen_self for E81) via their JOIN_MAPs. Owner: I-2.",
+  "3. Role of the 1124 old_value judgments in MEASUREMENTS. Owner: W-internals-C with I-2.",
+  "4. E107_BINDING_SEAL + MEASUREMENTS: Track Q seals within 30 min of 1-3. Owner: Integrator Q."
+ ],
+ "paths": "Track Q cache/g_agreement/r_e107/binding_v1 (git-ignored); builder cache/g_agreement/r_ops/e107/bind_v1.py"
+}

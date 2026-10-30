@@ -1,0 +1,52 @@
+{
+  "experiment": "E135",
+  "authority": "\u00a7244/5a250e52a",
+  "implementation_commit": "aedcba1d50943d15895bed4aa10a95012e480a90",
+  "source_seal": "results/g_agreement/understand/e135/SOURCE_SEAL.json",
+  "source_sha256": "9a8543a40c7939c16ac3b024c921815a5d49f22828fadcae289d5fcf33ae976d",
+  "archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e135-source-v2/source.tar.gz",
+  "archive_sha256": "9a6d44d08c09371193457d6ec5a55ef44b4fe12c01a4e14c9269fdd551a7f624",
+  "input_binding": "results/g_agreement/understand/e135/INPUT_BINDING.json",
+  "input_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e135-inputs-v1/inputs",
+  "input_sha256": "882ddcaaefbe14cfee0b8afb3c2377fab942aa38bf439cab8db88aff89338f45",
+  "input_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e135-inputs-v1/inputs.tar.gz",
+  "input_archive_sha256": "8b1a405df01725026cddf776347077b6e1fa1933c68e274acd1b43fb95ed203a",
+  "operator": "I-2 only; pod after E131; TrackQ remains E131/E133",
+  "entrypoint": "projects.g_agreement.e135.runner.capture_answer_batch",
+  "input_loader": "projects.g_agreement.e135.inputs.load",
+  "items": 84,
+  "cells": 504,
+  "oracle_readouts": 1008,
+  "doses": [
+    3,
+    5,
+    6
+  ],
+  "oracle_layers": [
+    44,
+    52
+  ],
+  "original_creation_cap_seconds": 2880,
+  "creation_cutoff": "2026-10-30T10:00:00Z",
+  "hard_stop": "min(original_creation+2880,2026-10-30T12:50:00Z)",
+  "synthetic_tests": 14,
+  "exact_archive_tests": 14,
+  "fresh_extract_actual_runtime_import": "PASS actual E79/E109/E87/E104/E127/E135/common/Torch/PEFT/Transformers; no model",
+  "actual_input_validation": "PASS504cells/84sameitems/6conditions; all original input/seal members verified",
+  "calibration": "raw natural8site norms and composed_delta_l2 plus arithmetic2,3,4,5,6,8 delta norms; preserve calibration field and original injection_metrics; Wmech2 computes median and ratios",
+  "cpu_only": {
+    "root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e135-inputs-v1/cpu_only",
+    "seal_sha256": "c3529581fef57cc59f6f45700dafca173fcf1628397eb5cde741000c218daf2e",
+    "stage_to_pod": false
+  },
+  "labels_on_pod": false,
+  "GPU_calls": 0,
+  "model_calls": 0,
+  "reader_calls": 0,
+  "judging_calls": 0,
+  "launch_status": "NOT_LAUNCHED_BY_C",
+  "outputs": "unopened until tested committed W-mech2 adapter",
+  "secret_scan": "PASS new source/metadata and both archives; no private archive members",
+  "prepublication_snapshot": "outputs/e135-source-v1 retained; final source-v2 corrects whitespace only",
+  "operator_forecast": "C has made no GPU/timing call. I-2 owns whole-need forecast using original E128 max phase timings and current actual setup, 504cells/1008readouts, cap2880s from creation; no unmeasured numeric admission claim."
+}

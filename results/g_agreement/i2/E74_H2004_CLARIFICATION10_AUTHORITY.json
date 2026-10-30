@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-10-28T06:20:32.345933+00:00",
+  "registered_commit": "0b99333d73502fe682056f6ec8a44cebbb777b7e",
+  "registered_text": "### \u00a7192 E74 clarification 10 (2026-10-28 07:25 CET, before any GPU use)\nW-glm's estimate (d0ed1b8d) puts the 4\u00d7H200 TP4 headroom at about 5.1% (about 7.2 GB per GPU), below clarification 9's\n10%. A 5th GPU cannot help: tensor parallelism must divide the attention heads, so TP5 is invalid. **The headroom\ncondition is lowered to \u2265 5% (W-glm's estimate as given)**, because the cost of failure is bounded and is operational,\nnot scientific. **An out-of-memory error during load, boot or smoke, before the smoke verdict is computed, is an\noperational failure:** the node is released, nothing scientific is consumed, and the cost is booked to E74. After one\nOOM, E74 does not retry on 4\u00d7H200; it waits for 8\u00d7H200 or 4\u00d7/8\u00d7B200 until Thu 12:00. The memory settings stay at the\nauthor's values, with no tuning. Smoke criterion, cap (USD 100) and science are unchanged.\n",
+  "claim_and_weight_staging_authorised_before_memory_confirmation": true,
+  "engine_and_smoke_blocked_until": [
+    "W-glm TP4-H200 package READY and independently bound"
+  ],
+  "gpu_type": "NVIDIA H200",
+  "gpu_count": 4,
+  "cloud": "SECURE",
+  "regions": [
+    "EUR-IS-4",
+    "US-CA-2"
+  ],
+  "quoted_hourly_usd": 21.16,
+  "cap_usd": 100,
+  "boot_smoke_max_seconds": 3000,
+  "all_prior_E74_charges_in_conservative_cap_usd": 19.67,
+  "future_maximum_usd": 80.33,
+  "minimum_memory_headroom_percent": 5,
+  "accepted_worker_estimate_commit": "d0ed1b8d",
+  "accepted_memory_receipt_sha256": "598cdab73e4ab7f3f929d9483be6e6b0e56eb8d49b79af20385f7721eef79f51",
+  "one_pre_smoke_verdict_OOM_is_operational": true,
+  "after_one_OOM_no_4H200_retry": true,
+  "pre_verdict_OOM_count": 0,
+  "memory_settings_unchanged": true,
+  "alternatives_after_OOM": "8H200 or4/8B200 untilThu12Zurich",
+  "science_unchanged": true
+}

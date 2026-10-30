@@ -1,0 +1,12 @@
+{
+  "id": "c929f954c4a68f718fea3ec6",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict classification task: output must be \"Positive\" or \"Negative\" based on the given definition.\n\nThe example sentence \"I am a student\" is a declarative statement, not a question, so the model must apply the rule and produce the correct label.\n\n\"Example:\nSentence: 'I am a student.'\nReply:\" is the final prompt line, acting as a response field header, immediately requiring the classification answer (e.g., \"Positive\" or \"Negative\") as the next token.\n\"Given the following format:\n[Instruction]\n[Example]\nSentence: 'I am a student.'\nReply:\" \u2014 the \"Reply:\" label is a prompt field marker, expecting the model's direct answer to follow immediately.\n\"Reply:\" closes the structured example, demanding the answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict classification task: output must be \"Positive\" or \"Negative\" based on the given definition.\n\nThe example sentence \"I am a student\" is a declarative statement, not a question, so the model must apply the rule and produce the correct label.\n\n\"Example:\nSentence: 'I am a student.'\nReply:\" is the final prompt line, acting as a response field header, immediately requiring the classification answer (e.g., \"Positive\" or \"Negative\") as the next token.\n\"Given the following format:\n[Instruction]\n[Example]\nSentence: 'I am a student.'\nReply:\" \u2014 the \"Reply:\" label is a prompt field marker, expecting the model's direct answer to follow immediately.\n\"Reply:\" closes the structured example, demanding the answer.",
+  "truncated": false
+}

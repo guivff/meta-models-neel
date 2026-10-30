@@ -1,0 +1,14 @@
+{"status": "PINNED_OPTIONAL_BACKEND_OVERLAY_INSTALLED", "overlay": "/workspace/e106-tilelang-final/site", "base_python": "/weights/venv-kernels/bin/python", "shared_runtime_mutated": false, "manifest_sha256": "07fb20ce736e3455da88fc88e683ec67bfeee43eeace13fe3f9465b89942cb08"}
+2026-10-29 07:33:21  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `kernel` with `out_idx=None`
+2026-10-29 07:33:28  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `kernel`
+Traceback (most recent call last):
+  File "/workspace/e106-run/projects/g_agreement/e106/backend_smoke.py", line 80, in <module>
+    p.add_argument('--cpu-only',action='store_true');p.add_argument('--hardware',choices=['H200','B200'],default='H200');a=p.parse_args();smoke(a.manifest,a.overlay,a.out,a.cpu_only,a.hardware)
+                                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/e106-run/projects/g_agreement/e106/backend_smoke.py", line 71, in smoke
+    provenance=proof.receipt()
+               ^^^^^^^^^^^^^^^
+  File "/workspace/e106-run/projects/g_agreement/e106/dispatch_proof.py", line 40, in receipt
+    if self.calls<1:raise RuntimeError('official exact function-code/module identity was not observed in backward')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: official exact function-code/module identity was not observed in backward

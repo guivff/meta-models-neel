@@ -1,0 +1,191 @@
+{
+  "R1": {
+    "L_median_min": 0.75,
+    "L_row_auroc_min": 0.7,
+    "L_rows_min": 10,
+    "S_median_max": 0.6
+  },
+  "R2": {
+    "L_content_median_min": 0.95,
+    "W1_parity_max_abs_change": 0.05
+  },
+  "R3": {
+    "L_net_naming_min": 0.2,
+    "S_net_naming_max": 0.05
+  },
+  "arms": [
+    "L",
+    "S"
+  ],
+  "asked_scoring": "E39 native block44, mean of two frozen paired log-odds",
+  "authority_commit": "1a19bb9d",
+  "batch_size": 8,
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261026,
+    "unit": "E36 template cluster per row"
+  },
+  "checkpoints": [
+    400
+  ],
+  "clarification_commit": "499d99c5",
+  "clarification_commits": [
+    "499d99c5",
+    "5578d0da"
+  ],
+  "content_rows": [
+    "json_status",
+    "latex_role",
+    "latex_subject",
+    "list_priority",
+    "list_topic",
+    "prose_sentiment",
+    "prose_topic",
+    "python_error",
+    "table_status"
+  ],
+  "e39_bound_input_seal_sha256": "e2cdf3cc2c26566a6bef56d2512de247c57ea7bcabffa996df38ccc90f20a35c",
+  "experiment": "E50",
+  "falsifier": {
+    "heldout_L_median_max_per_split": 0.6,
+    "training_L_median_min_per_split": 0.8
+  },
+  "free_items_per_adapter": 672,
+  "items_per_row": 84,
+  "learning_rate": 0.0001,
+  "lora_targets_sha256": "0f5f585c736ca393460532f476c6e889c8555f99e95b2d5c595c6b595127682d",
+  "max_pods": 2,
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "clipping": null,
+    "eps": 1e-08,
+    "name": "AdamW",
+    "schedule": "constant",
+    "weight_decay": 0
+  },
+  "per_pod_seconds": 3600,
+  "rank": 8,
+  "requested_pods": 2,
+  "rows": [
+    "json_status",
+    "json_type",
+    "latex_environment",
+    "latex_role",
+    "latex_section",
+    "latex_subject",
+    "list_depth",
+    "list_index",
+    "list_priority",
+    "list_topic",
+    "prose_paren",
+    "prose_quote",
+    "prose_sentence",
+    "prose_sentiment",
+    "prose_topic",
+    "python_argument",
+    "python_comment",
+    "python_depth",
+    "python_error",
+    "python_indent",
+    "python_string",
+    "table_column",
+    "table_role",
+    "table_row",
+    "table_status"
+  ],
+  "runs": [
+    [
+      "A",
+      "L"
+    ],
+    [
+      "A",
+      "S"
+    ],
+    [
+      "B",
+      "L"
+    ],
+    [
+      "B",
+      "S"
+    ]
+  ],
+  "science_cap": "min(1.5F+360,10800), further bounded by the 3600-second provider allocation less180 retrieval",
+  "section": 166,
+  "seed": 20261026,
+  "single_split_R1_count": 5,
+  "splits": {
+    "A": {
+      "heldout": [
+        "prose_quote",
+        "prose_sentence",
+        "python_argument",
+        "python_comment",
+        "table_column",
+        "table_row",
+        "list_index",
+        "latex_section"
+      ],
+      "train": [
+        "prose_paren",
+        "python_string",
+        "python_indent",
+        "python_depth",
+        "table_role",
+        "list_depth",
+        "latex_environment",
+        "json_type"
+      ]
+    },
+    "B": {
+      "heldout": [
+        "prose_paren",
+        "python_string",
+        "python_indent",
+        "python_depth",
+        "table_role",
+        "list_depth",
+        "latex_environment",
+        "json_type"
+      ],
+      "train": [
+        "prose_quote",
+        "prose_sentence",
+        "python_argument",
+        "python_comment",
+        "table_column",
+        "table_row",
+        "list_index",
+        "latex_section"
+      ]
+    }
+  },
+  "status": "CONFIRMATORY",
+  "steps": 400,
+  "structure_rows": [
+    "json_type",
+    "latex_environment",
+    "latex_section",
+    "list_depth",
+    "list_index",
+    "prose_paren",
+    "prose_quote",
+    "prose_sentence",
+    "python_argument",
+    "python_comment",
+    "python_depth",
+    "python_indent",
+    "python_string",
+    "table_column",
+    "table_role",
+    "table_row"
+  ],
+  "test_items_per_adapter": 2100,
+  "total_gpu_seconds": 7200,
+  "train_items_per_adapter": 672,
+  "undertrained": "Training-row L median<.80: mark UNDERTRAINED. One eligible split: R1>=5/8, unchanged medians, R2/R3 same split; label every report single-split (n = 8 rows). Both undertrained: R1/R3/falsifier NOT EVALUABLE, R2 no-tax measurements retained over both splits."
+}

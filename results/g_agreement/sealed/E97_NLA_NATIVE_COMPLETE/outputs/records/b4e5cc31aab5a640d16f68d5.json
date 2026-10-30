@@ -1,0 +1,12 @@
+{
+  "id": "b4e5cc31aab5a640d16f68d5",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt establishes a data extraction/formatting task, expecting structured output matching a specific pattern for dictionary or database entries.\n\nThe phrase \"Here is an example of an entry\" signals a demonstration of the desired format, with XML-like `<entry>` tags framing the content.\n\nThe final token `<entry` opens an XML tag, immediately requiring a closing `>` and then structured content fields (e.g., definition, term, or metadata) consistent with the \"entry\" format described.\n\"Please extract the following data from the given text.\n<entry>\n<entry\" \u2014 the second `<entry` mirrors the first, suggesting a list of entries follows, with the next token likely being `>` or an attribute like `id=`.\nA new XML entry block in a structured dataset context, expecting standard dictionary/database field formatting.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt establishes a data extraction/formatting task, expecting structured output matching a specific pattern for dictionary or database entries.\n\nThe phrase \"Here is an example of an entry\" signals a demonstration of the desired format, with XML-like `<entry>` tags framing the content.\n\nThe final token `<entry` opens an XML tag, immediately requiring a closing `>` and then structured content fields (e.g., definition, term, or metadata) consistent with the \"entry\" format described.\n\"Please extract the following data from the given text.\n<entry>\n<entry\" \u2014 the second `<entry` mirrors the first, suggesting a list of entries follows, with the next token likely being `>` or an attribute like `id=`.\nA new XML entry block in a structured dataset context, expecting standard dictionary/database field formatting.",
+  "truncated": false
+}

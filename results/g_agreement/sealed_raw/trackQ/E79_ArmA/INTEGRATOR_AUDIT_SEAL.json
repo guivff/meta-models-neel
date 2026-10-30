@@ -1,0 +1,48 @@
+{
+  "analysis_seal_sha256": "eb8367a52f0a8d5577aed2c48ed74dd29260e3172e6fe66dd12815d48bc6e2d9",
+  "bank": "E79",
+  "issuer": "integrator",
+  "judgment_seal_sha256": "144a5caf674603a766ba0700061d0aed424aae4b2e61add0cddc531726ee112e",
+  "kind": "FINAL_AUDIT_SEAL (additive; JUDGMENT_SEAL and START.json unchanged)",
+  "ledger": {
+    "balanced": true,
+    "ledger_sha256": "1512b9f1bde13793ccb83e7c867f97485b6a814257dd4cd13be39cf2c062d91b",
+    "reserve": 1347,
+    "settle": 1347
+  },
+  "ordering": "judging terminal 13:47:56Z; analysis once 13:50:17Z (before this audit seal, which arrived with the review); analysis not re-run (once-only guard)",
+  "reconciliation_receipt": {
+    "path": "E79_attempt1/f90f575023070d729766196407d9ad1f22902f0ad5c417856710adebc0f62ad1.inflight_settlement.json",
+    "record": {
+      "actual_usd": "0.0101765625",
+      "authority": "Guiv 2026-10-28: in flight at process kill; billing unknown; settle at reserved upper bound; resume with identical ids",
+      "reason": "in flight at process kill; billing unknown",
+      "request_id": "f90f575023070d729766196407d9ad1f22902f0ad5c417856710adebc0f62ad1",
+      "request_sha256": "3ae9f09e679f3053315f953cb82d4946a38559868324290e377ed5677f6e622f",
+      "stage": "E79_attempt1"
+    },
+    "sha256": "c87442bfa1bb52716d3cc2f54d6121d9c60ca9d3e09546afdb002d55daa8cddd"
+  },
+  "resume_source_seal": {
+    "as_run_commit": "866d59c310f2ddab79c7fecef26e668122a272d9",
+    "files": {
+      "projects/g_agreement/understand/blind_judge/test_wmech2_resume.py": "b5cf682a3b8763fb5e4edb7a683ba1e50d0f8d3bcd58beac3134b448b6728bf4",
+      "projects/g_agreement/understand/blind_judge/wmech2_resume.py": "93135ab3bfe8e96da17b6fb5beb5cf100a05bc3348a529c712315dfb4fd407a1"
+    },
+    "sha256": "637cca0a04d37b7823a333c08e1949834dbe359a246d24727b095ed834d8a3e8",
+    "verified_against_as_run_files": true,
+    "wraps_unchanged": {
+      "SOURCE_SEAL.json": "c45410fdd31c1d560c4d0c91679c985f7e32dfe289529b2bfef1122cfe14adbc",
+      "wmech2_channel.py": "a151ef78b4a0640c292828cb5d92c6f4807bdddabeb7385f169187f84648902f"
+    }
+  },
+  "review_fix": {
+    "commit": "a2a646c346c1e0cb19c865728ae68e6aa762a438",
+    "max_retries": 1,
+    "note": "as-run outcome equals MAX_RETRIES=1",
+    "replacement_retries_used_in_E79": 1
+  },
+  "sealed_utc": "2026-10-28T13:57:51Z",
+  "start_sha256": "a705b5e24d46d06aa1db298dc55cd34d3ab2af00909cf998f385efedf892ed9f",
+  "start_unchanged": true
+}

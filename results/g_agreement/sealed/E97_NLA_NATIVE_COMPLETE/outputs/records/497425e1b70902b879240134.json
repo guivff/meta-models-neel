@@ -1,0 +1,12 @@
+{
+  "id": "497425e1b70902b879240134",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured data format with labeled fields (\"Record start. Name: X. Description: X. Record.\") signals a task prompt or few-shot example in a simulated dataset.\n\nThe instruction pattern \"Name: [X]. Description: [X]\" establishes a template where the model must process the given example entry about a fictional character named \"Bob.\"\n\n\"Record recorded.\" is a closing delimiter phrase, mirroring the opening \"Record start.\" \u2014 the final token \"Recorded.\" ends the prompt, strongly constraining next tokens to be a response, summary, or task instruction (e.g., \"End of task\" or a model output prompt).\n\"Provide a brief fictional narrative example.\nName: Bob. Description: Bob is a man.\nRecord end.\"\n\"Record recorded.\" closes the block, signaling completion of the input sequence.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured data format with labeled fields (\"Record start. Name: X. Description: X. Record.\") signals a task prompt or few-shot example in a simulated dataset.\n\nThe instruction pattern \"Name: [X]. Description: [X]\" establishes a template where the model must process the given example entry about a fictional character named \"Bob.\"\n\n\"Record recorded.\" is a closing delimiter phrase, mirroring the opening \"Record start.\" \u2014 the final token \"Recorded.\" ends the prompt, strongly constraining next tokens to be a response, summary, or task instruction (e.g., \"End of task\" or a model output prompt).\n\"Provide a brief fictional narrative example.\nName: Bob. Description: Bob is a man.\nRecord end.\"\n\"Record recorded.\" closes the block, signaling completion of the input sequence.",
+  "truncated": false
+}

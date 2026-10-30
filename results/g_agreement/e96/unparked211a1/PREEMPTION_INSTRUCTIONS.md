@@ -1,0 +1,3 @@
+CORE pre-emption, §211 amendment1
+
+After allocation, obtain the exact pod ID from I-4 shared status. To bump ONLY this allocation, write /private/tmp/e96-i4-slot1-r1/CORE_PREEMPT_REQUEST.json with pod_id, core_experiment (E101/E81/E90/E86/E82/E99/E103/E80c/E87), requested_by and reason. Supervisor verifies owned identity, takes a full immutable hash-checked local archive, then stops/terminates only its allocation. No direct access to another integrator pod. A bumped incomplete original slot1 means all slot1 rows NOT RUN, retained35200 fallback, no stitching or secondreplacement. Hard deadline remains original creation+14400s; independent stop14160s. No idle stop. No marker needs writing now: not allocated.

@@ -1,0 +1,916 @@
+{
+  "module": "g2",
+  "split": "dev",
+  "frozen": true,
+  "n_states": 4,
+  "n_pairs": 2,
+  "n_boot": 2000,
+  "seed": 0,
+  "families": [
+    "ownership",
+    "mapping"
+  ],
+  "absent_rows": [],
+  "source_model_error_items": [],
+  "all_states": {
+    "nla": {
+      "n_states": 4,
+      "n_pairs": 2,
+      "entity_all": {
+        "k": 1,
+        "n": 4,
+        "p": 0.25,
+        "lo": 0.0,
+        "hi": 0.5,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_any": {
+        "k": 2,
+        "n": 4,
+        "p": 0.5,
+        "lo": 0.0,
+        "hi": 1.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_micro": {
+        "k": 7,
+        "n": 12,
+        "p": 0.5833333333333334,
+        "lo": 0.0,
+        "hi": 0.875,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_given_bound": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_status_counts": {
+        "wrong": 2,
+        "absent": 2
+      },
+      "primary_correct_all": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "complete_pair_tracking": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_both": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "primary_changes": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "by_family": {
+        "ownership": {
+          "entity_all": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "mapping": {
+          "entity_all": {
+            "k": 1,
+            "n": 2,
+            "p": 0.5,
+            "lo": 0.5,
+            "hi": 0.5,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        }
+      }
+    },
+    "olens": {
+      "n_states": 4,
+      "n_pairs": 2,
+      "entity_all": {
+        "k": 1,
+        "n": 4,
+        "p": 0.25,
+        "lo": 0.0,
+        "hi": 0.5,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_any": {
+        "k": 2,
+        "n": 4,
+        "p": 0.5,
+        "lo": 0.0,
+        "hi": 1.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_micro": {
+        "k": 7,
+        "n": 12,
+        "p": 0.5833333333333334,
+        "lo": 0.0,
+        "hi": 0.875,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_given_bound": {
+        "k": 0,
+        "n": 0,
+        "p": NaN,
+        "lo": NaN,
+        "hi": NaN,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_status_counts": {
+        "unbound": 1,
+        "absent": 3
+      },
+      "primary_correct_all": {
+        "k": 1,
+        "n": 4,
+        "p": 0.25,
+        "lo": 0.0,
+        "hi": 0.5,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "complete_pair_tracking": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_both": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "primary_changes": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "by_family": {
+        "ownership": {
+          "entity_all": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "mapping": {
+          "entity_all": {
+            "k": 1,
+            "n": 2,
+            "p": 0.5,
+            "lo": 0.5,
+            "hi": 0.5,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        }
+      }
+    },
+    "jlens": {
+      "n_states": 4,
+      "n_pairs": 2,
+      "entity_all": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_any": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_micro": {
+        "k": 0,
+        "n": 12,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_given_bound": {
+        "k": 0,
+        "n": 0,
+        "p": NaN,
+        "lo": NaN,
+        "hi": NaN,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_status_counts": {
+        "absent": 4
+      },
+      "primary_correct_all": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "complete_pair_tracking": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_both": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "primary_changes": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "by_family": {
+        "ownership": {
+          "entity_all": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "mapping": {
+          "entity_all": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        }
+      }
+    }
+  },
+  "target_correct_subset": {
+    "nla": {
+      "n_states": 4,
+      "n_pairs": 2,
+      "entity_all": {
+        "k": 1,
+        "n": 4,
+        "p": 0.25,
+        "lo": 0.0,
+        "hi": 0.5,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_any": {
+        "k": 2,
+        "n": 4,
+        "p": 0.5,
+        "lo": 0.0,
+        "hi": 1.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_micro": {
+        "k": 7,
+        "n": 12,
+        "p": 0.5833333333333334,
+        "lo": 0.0,
+        "hi": 0.875,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_given_bound": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_status_counts": {
+        "wrong": 2,
+        "absent": 2
+      },
+      "primary_correct_all": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "complete_pair_tracking": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_both": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "primary_changes": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "by_family": {
+        "ownership": {
+          "entity_all": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "mapping": {
+          "entity_all": {
+            "k": 1,
+            "n": 2,
+            "p": 0.5,
+            "lo": 0.5,
+            "hi": 0.5,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        }
+      }
+    },
+    "olens": {
+      "n_states": 4,
+      "n_pairs": 2,
+      "entity_all": {
+        "k": 1,
+        "n": 4,
+        "p": 0.25,
+        "lo": 0.0,
+        "hi": 0.5,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_any": {
+        "k": 2,
+        "n": 4,
+        "p": 0.5,
+        "lo": 0.0,
+        "hi": 1.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_micro": {
+        "k": 7,
+        "n": 12,
+        "p": 0.5833333333333334,
+        "lo": 0.0,
+        "hi": 0.875,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_given_bound": {
+        "k": 0,
+        "n": 0,
+        "p": NaN,
+        "lo": NaN,
+        "hi": NaN,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_status_counts": {
+        "unbound": 1,
+        "absent": 3
+      },
+      "primary_correct_all": {
+        "k": 1,
+        "n": 4,
+        "p": 0.25,
+        "lo": 0.0,
+        "hi": 0.5,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "complete_pair_tracking": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_both": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "primary_changes": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "by_family": {
+        "ownership": {
+          "entity_all": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "mapping": {
+          "entity_all": {
+            "k": 1,
+            "n": 2,
+            "p": 0.5,
+            "lo": 0.5,
+            "hi": 0.5,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        }
+      }
+    },
+    "jlens": {
+      "n_states": 4,
+      "n_pairs": 2,
+      "entity_all": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_any": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "entity_micro": {
+        "k": 0,
+        "n": 12,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_given_bound": {
+        "k": 0,
+        "n": 0,
+        "p": NaN,
+        "lo": NaN,
+        "hi": NaN,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_status_counts": {
+        "absent": 4
+      },
+      "primary_correct_all": {
+        "k": 0,
+        "n": 4,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "complete_pair_tracking": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "relation_correct_both": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "primary_changes": {
+        "k": 0,
+        "n": 2,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "by_family": {
+        "ownership": {
+          "entity_all": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "mapping": {
+          "entity_all": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "relation_correct": {
+            "k": 0,
+            "n": 2,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          },
+          "complete_pair_tracking": {
+            "k": 0,
+            "n": 1,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 1,
+            "ci": "pair-bootstrap"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "entity_all": "all secondary.entities in entities_mentioned",
+    "relation_correct": "relation.status == correct; unbound counts as unclear",
+    "complete_pair_tracking": "relation correct in both versions AND asserted primary value differs between A and B"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "b46da88d9eba3c303dc3fcee",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot classification format established: examples show sentiment labels (\"Positive\") paired with sentences, now requiring a final answer for the given sentence.\n\nThe prompt explicitly frames a strict binary choice (\"Positive\" or \"Negative\") for the sentence \"The weather is very pleasant today,\" making the answer highly constrained.\n\n\"Reply:\" is the final token, functioning as a prompt label in the structured template (\"Given the sentence... Example: ... Given the sentence... Reply:\"), immediately requiring the model's direct classification answer (e.g., \"Positive\" or \"Negative\") on the next line.\n\"Please adhere strictly to the format.\nGiven the sentence: 'The weather is very pleasant today.'\nExample:\n- Sentiment: Positive\n- Sentiment: Negative\nReply:\" \u2014 the final token demands the model's response output directly following.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot classification format established: examples show sentiment labels (\"Positive\") paired with sentences, now requiring a final answer for the given sentence.\n\nThe prompt explicitly frames a strict binary choice (\"Positive\" or \"Negative\") for the sentence \"The weather is very pleasant today,\" making the answer highly constrained.\n\n\"Reply:\" is the final token, functioning as a prompt label in the structured template (\"Given the sentence... Example: ... Given the sentence... Reply:\"), immediately requiring the model's direct classification answer (e.g., \"Positive\" or \"Negative\") on the next line.\n\"Please adhere strictly to the format.\nGiven the sentence: 'The weather is very pleasant today.'\nExample:\n- Sentiment: Positive\n- Sentiment: Negative\nReply:\" \u2014 the final token demands the model's response output directly following.",
+  "truncated": false
+}

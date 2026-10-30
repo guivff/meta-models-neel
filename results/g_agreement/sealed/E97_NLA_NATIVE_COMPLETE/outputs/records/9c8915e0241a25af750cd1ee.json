@@ -1,0 +1,12 @@
+{
+  "id": "9c8915e0241a25af750cd1ee",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional pattern establishes a strict format: given a sentence, output only \"Happy\" or \"Sad\" as the emotional label.\n\nThe example structure shows a template with \"Example sentence: [sentence]\\nReply:\" requiring the model to produce the correct label for the specific sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final prompt token, part of the Q&A format, immediately requiring the answer label (\"Happy\" or \"Sad\") or a brief explanatory response following the established pattern.\n\"Given the pattern: [sentence] \u2192 [label]\nExample sentence: The weather is very cold today.\nSentence: The weather is very cold today.\nReply:\" \u2014 the final token demands the direct answer/label output, likely \"Happy\" or \"Sad\" or a short response.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional pattern establishes a strict format: given a sentence, output only \"Happy\" or \"Sad\" as the emotional label.\n\nThe example structure shows a template with \"Example sentence: [sentence]\\nReply:\" requiring the model to produce the correct label for the specific sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final prompt token, part of the Q&A format, immediately requiring the answer label (\"Happy\" or \"Sad\") or a brief explanatory response following the established pattern.\n\"Given the pattern: [sentence] \u2192 [label]\nExample sentence: The weather is very cold today.\nSentence: The weather is very cold today.\nReply:\" \u2014 the final token demands the direct answer/label output, likely \"Happy\" or \"Sad\" or a short response.\n\"Reply:\"",
+  "truncated": false
+}

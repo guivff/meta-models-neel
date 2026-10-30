@@ -1,0 +1,12 @@
+{
+  "id": "897b432583cb923f22816006",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a pattern of providing examples followed by a test case, requiring a direct answer matching the established classification system (e.g., \"Sadness,\" \"Joy,\" \"Neutral\").\n\nThe instruction explicitly states the model must output only the emotion label, constraining the response to a short categorical word.\n\n\"Example:\nSentence: 'The weather is nice today.'\nClassification: Neutral\n\nSentence: 'The weather is nice today.'\nReply:\" \u2014 this final \"Reply:\" is a prompt label expecting the model's direct answer (the emotion classification) to follow immediately, likely \"Sadness\" or similar.\n\"Given the following structured format...\nSentence: 'The weather is nice today.'\nClassification: [Your answer]\nSentence: 'The weather is nice today.'\nReply:\" \u2014 the final token demands the answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a pattern of providing examples followed by a test case, requiring a direct answer matching the established classification system (e.g., \"Sadness,\" \"Joy,\" \"Neutral\").\n\nThe instruction explicitly states the model must output only the emotion label, constraining the response to a short categorical word.\n\n\"Example:\nSentence: 'The weather is nice today.'\nClassification: Neutral\n\nSentence: 'The weather is nice today.'\nReply:\" \u2014 this final \"Reply:\" is a prompt label expecting the model's direct answer (the emotion classification) to follow immediately, likely \"Sadness\" or similar.\n\"Given the following structured format...\nSentence: 'The weather is nice today.'\nClassification: [Your answer]\nSentence: 'The weather is nice today.'\nReply:\" \u2014 the final token demands the answer.",
+  "truncated": false
+}

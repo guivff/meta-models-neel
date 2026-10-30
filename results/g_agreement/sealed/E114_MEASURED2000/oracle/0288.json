@@ -1,0 +1,66 @@
+[
+  {
+    "id": "41fba8bf7a5e1ca0a5a27bee",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3}  (* nested list of depth 3\n- 2, 3}  (* depth 3 *)}, {1, 2,\n- 2, 3}  (* inner list depth 3 *) {1, 2, 3\n- {2, 3}, {1, 2, 3}}` (a nested list of depth 3)",
+      "text": "- 2, 3}  (* nested list of depth 3\n- 2, 3}  (* depth 3 *)}, {1, 2,\n- 2, 3}  (* inner list depth 3 *) {1, 2, 3\n- {2, 3}, {1, 2, 3}}` (a nested list of depth 3)"
+    }
+  },
+  {
+    "id": "4e72854efb0bb1150dc849fc",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3} (*nested depth*) -> {3,\n- 2, 1} (*depth of nesting*)], {3, 2,\n- 2, 3} (*depth of nesting*), {1, 2, 3\n- {2, 3}, 1000000000} (*nested list with depth 3*)]` | `{3,",
+      "text": "- 2, 3} (*nested depth*) -> {3,\n- 2, 1} (*depth of nesting*)], {3, 2,\n- 2, 3} (*depth of nesting*), {1, 2, 3\n- {2, 3}, 1000000000} (*nested list with depth 3*)]` | `{3,"
+    }
+  },
+  {
+    "id": "952501d711bf0a4ec6ef2195",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [4, 5, 6]], [[3,\n- 2, 3], [4, 5, 6]], [[3,\n- 1, 2], [3, 4, 5]]],  # \u6700\u5185\u5c42\u662f\u5df2\u5b8c\u6210\u7684\u201c\u4efb\u52a1\u201d\u6216\u201c\n- [2, 3], [4, 5]]], [[1, 2], [3,",
+      "text": "- 2, 3], [4, 5, 6]], [[3,\n- 2, 3], [4, 5, 6]], [[3,\n- 1, 2], [3, 4, 5]]],  # \u6700\u5185\u5c42\u662f\u5df2\u5b8c\u6210\u7684\u201c\u4efb\u52a1\u201d\u6216\u201c\n- [2, 3], [4, 5]]], [[1, 2], [3,"
+    }
+  },
+  {
+    "id": "f9baedc5952eb5753bff67ec",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [4, 5,\n- 2, 3], [4, 5, 6]]],  # \u5d4c\u5957\u5217\u8868\uff0c\u8868\u793a\u5df2\u5c55\u5f00\u7684\u51fd\u6570\u8c03\u7528\u6811\n- 5, 6], [3, 4, 5]], [[1,\n- [2, 3], [4, 5]]], [[1, 2, 3], [4,",
+      "text": "- 2, 3], [4, 5,\n- 2, 3], [4, 5, 6]]],  # \u5d4c\u5957\u5217\u8868\uff0c\u8868\u793a\u5df2\u5c55\u5f00\u7684\u51fd\u6570\u8c03\u7528\u6811\n- 5, 6], [3, 4, 5]], [[1,\n- [2, 3], [4, 5]]], [[1, 2, 3], [4,"
+    }
+  },
+  {
+    "id": "151a8e340689cf01ba71b566",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 4}, {3, 4\n- 2, 3} } (* nested list of depth 4, size 4\n- 4, 8} (* inner list: 4 elements, each with 4\n- 2, 3, 4}, {1, 2, 3, 4} } (* nested structure *) }[1, 4",
+      "text": "- 2, 4}, {3, 4\n- 2, 3} } (* nested list of depth 4, size 4\n- 4, 8} (* inner list: 4 elements, each with 4\n- 2, 3, 4}, {1, 2, 3, 4} } (* nested structure *) }[1, 4"
+    }
+  },
+  {
+    "id": "68f53ff9cd498d151bfdab86",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3}, {4,\n- 2, 3}, {4, 5} }  (* nested list of depth 4,\n- 4, 8}  (* Level 1: 4 elements *) { {2, 4\n- 2, 3, 4}, {5, 6, 7, 8} } }` (nested lists of depth 4)",
+      "text": "- 2, 3}, {4,\n- 2, 3}, {4, 5} }  (* nested list of depth 4,\n- 4, 8}  (* Level 1: 4 elements *) { {2, 4\n- 2, 3, 4}, {5, 6, 7, 8} } }` (nested lists of depth 4)"
+    }
+  },
+  {
+    "id": "47fc59b97e437524e9d68ebb",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [4,\n- 5, 6], [7, 8]], [[4,\n- 2, 3], [4, 5]], [[1, 2], [3,\n- [1, 2], [3, 4]], [[5, 6], [7, 8]]],  # \u5d4c\u5957\u5230\u6df1\u5904\uff0c\u6709\u4e9b\u662f\u5217\u8868\uff0c",
+      "text": "- 2, 3], [4,\n- 5, 6], [7, 8]], [[4,\n- 2, 3], [4, 5]], [[1, 2], [3,\n- [1, 2], [3, 4]], [[5, 6], [7, 8]]],  # \u5d4c\u5957\u5230\u6df1\u5904\uff0c\u6709\u4e9b\u662f\u5217\u8868\uff0c"
+    }
+  },
+  {
+    "id": "a708dffda2d755d9b6f21774",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [4,\n- 5, 6], [7, 8]], [[4,\n- 2, 3], [4, 5]], [[1, 2], [3,\n- [1, 2], [3, 4]], [[5, 6], [7, 8]]]  # \u5d4c\u5957\u5217\u8868\uff0c\u6df1\u5ea62\n- 4, 5], [6, 7, 8]]],  # \u6700\u5185\u5c42\u662f\u5217\u8868\uff0c",
+      "text": "- 2, 3], [4,\n- 5, 6], [7, 8]], [[4,\n- 2, 3], [4, 5]], [[1, 2], [3,\n- [1, 2], [3, 4]], [[5, 6], [7, 8]]]  # \u5d4c\u5957\u5217\u8868\uff0c\u6df1\u5ea62\n- 4, 5], [6, 7, 8]]],  # \u6700\u5185\u5c42\u662f\u5217\u8868\uff0c"
+    }
+  }
+]

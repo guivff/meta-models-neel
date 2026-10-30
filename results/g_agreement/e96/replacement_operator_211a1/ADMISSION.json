@@ -1,0 +1,96 @@
+{
+  "experiment": "E96",
+  "attempt": "slot1-replacement-once",
+  "authority_commit": "7a3545305c906d516404a7a83f2c868b1547d9a0",
+  "as_of_utc": "2026-10-28T22:43:52.158092+00:00",
+  "status": "ADMITTED_IDLE_H200_SEPARATE_RERUN",
+  "launch_admitted": true,
+  "posted_shared_commit": "31b46f84b2340faaabdae3bee8615ff5dcbf74a6",
+  "all_core_running_or_sealed": true,
+  "CORE_evidence": {
+    "E101": "bothselectedtestcellssealed, owner4e3cf7ba andnativehandoff",
+    "E81_E90": "wholebankacquisitionsealed; judgingrunning",
+    "E82": "nativefullreaderRUNNING per22:39:07ownerhandoff andproviderexactID",
+    "E86": "nativefullreaderRUNNING per65a73f770 andproviderexactID",
+    "E99": "allfourproductionreadshardsRUNNING",
+    "E103": "A2COREworkerRUNNING",
+    "E80c_E87": "E80csealed; E87lastrowssealed perQhandoff"
+  },
+  "H200_quote_usd_hour": 5.29,
+  "running_pods": [
+    {
+      "id": "07m2unpdd1vuxs",
+      "name": "e99-core-three-read-i2-20261028-s1-a1",
+      "desiredStatus": "RUNNING",
+      "costPerHr": 5.29
+    },
+    {
+      "id": "244yq8nxxj3wzb",
+      "name": "mats-i5-e103-core-20261028-a2",
+      "desiredStatus": "RUNNING",
+      "costPerHr": 5.29
+    },
+    {
+      "id": "c1p6kawwwzwfah",
+      "name": "e86-read-restart-i2-20261028-a2",
+      "desiredStatus": "RUNNING",
+      "costPerHr": 5.29
+    },
+    {
+      "id": "d369lco9g8senp",
+      "name": "e82-full-read-restart-i2-20261028-a1",
+      "desiredStatus": "RUNNING",
+      "costPerHr": 5.29
+    },
+    {
+      "id": "g0946mwua0gv1d",
+      "name": "e99-core-three-read-i2-20261028-s0-a1",
+      "desiredStatus": "RUNNING",
+      "costPerHr": 5.29
+    },
+    {
+      "id": "m623u118jyvlq0",
+      "name": "e99-core-three-read-i2-20261028-s2-a1",
+      "desiredStatus": "RUNNING",
+      "costPerHr": 5.29
+    },
+    {
+      "id": "obn7uz1k1nnbb4",
+      "name": "e99-core-three-read-i2-20261028-s3-a1",
+      "desiredStatus": "RUNNING",
+      "costPerHr": 5.29
+    }
+  ],
+  "provider_hourly_total_before_usd": 37.03,
+  "hourly_with_replacement_usd": 42.32,
+  "provider_hourly_gate_usd": 80,
+  "new_maximum_gpu_usd": 21.16,
+  "non_gpu_extra_contingency_usd": 2,
+  "proposed_all_in_upper_usd": 23.16,
+  "parked_pool_id": "section211_amendment1_parked",
+  "parked_pool_cap_usd": 900,
+  "parked_pool_prior_committed_usd": 0,
+  "parked_pool_committed_with_this_usd": 23.16,
+  "parked_pool_remaining_usd": 876.84,
+  "global_gpu_ceiling_usd": 2500,
+  "global_warning_usd": 2000,
+  "conservative_nonpool_booked_fullcaps_contingencies_usd": 1096.99,
+  "global_inclusive_pool_budget_upper_usd": 1996.99,
+  "conservative_programme_with_replacement_usd": 1120.15,
+  "worker_compatibility_bound_usd": 1500,
+  "accounting": "nonpool=maxI2completefullcapsandcompilerknown+compileruncertaincontingencies; deliberateoverlapconservative NOTspend. Globalinclusive addsfull900poolONCE; moving23.16fromunallocatedtoactive doesnotincreaseinclusive. No liveaccrualdoublebooked.",
+  "financial_sources": {
+    "results/g_agreement/i2/E82_RESTART212_PRECREATE.json": "bb1662fa7d6aba942df49e540bc964471610902bcd2d6df8749db309b92c3f50",
+    "results/g_agreement/compiler/BUDGET_REFRESH_CURRENT.json": "1480a6a00cc4f439498a525438dc9e53070e4e1387453db0ce597aef20d0e682",
+    "results/g_agreement/compiler/PARKED_POOL_CURRENT.json": "18bd69e73253ff0f63f6c35a24a0eab484ae3d1bf1c671da4e4da2cbefa4e8b9"
+  },
+  "source_fullcaps_include_expired_E101_caps_retained_conservatively": true,
+  "fresh_all_active_names_reconciled": true,
+  "scientific_archive_sha256": "81793eee19ec45148dcce529f741a113ca5d18e0fe6cfbfee86f0d52a93378be",
+  "scope": "entireoriginalslot1 17920samples seed20261028 unchanged T1/top-p.95; one attempt, no stitching",
+  "reporting": "SEPARATE from35200retainedprimary; no analysis hold onretained",
+  "CORE_preemption": "exactownedpod marker, fullbackupbeforestop, allincompleteslot1rowsNOTRUN",
+  "cap_seconds": 14400,
+  "judging_new_allocation_usd": 0,
+  "reservation_is_not_spend": true
+}

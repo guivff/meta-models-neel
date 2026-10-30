@@ -1,0 +1,12 @@
+{
+  "id": "fc2c6dd3888ca19f61e4e391",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict pattern: example given, then a test case requiring a one-word classification label (\"friendship\" or \"romantic love\").\n\nThe instruction explicitly states the model must output only the correct label, establishing a constrained response format for the classification task.\n\n\"Reply:\" is the final prompt token, part of the structured example format (\"Example sentence: ... / Question: What is the relationship type? / Reply:\"), immediately requiring the model's answer \u2014 the single classification label \"friendship\" or similar short response.\n\"Given the following example sentence: 'The relationship between the two is a romantic love relationship.'\nQuestion: What is the relationship type?\nReply:\" \u2014 this closing \"Reply:\" token demands the direct answer to the posed question, likely a short label or the model's final output.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict pattern: example given, then a test case requiring a one-word classification label (\"friendship\" or \"romantic love\").\n\nThe instruction explicitly states the model must output only the correct label, establishing a constrained response format for the classification task.\n\n\"Reply:\" is the final prompt token, part of the structured example format (\"Example sentence: ... / Question: What is the relationship type? / Reply:\"), immediately requiring the model's answer \u2014 the single classification label \"friendship\" or similar short response.\n\"Given the following example sentence: 'The relationship between the two is a romantic love relationship.'\nQuestion: What is the relationship type?\nReply:\" \u2014 this closing \"Reply:\" token demands the direct answer to the posed question, likely a short label or the model's final output.",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "28d9ba8460f2e2049d67c3ab",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a classification task is defined with examples (\"happy\"\u2192\"Positive\", \"sad\"\u2192\"Negative\"), establishing a strict format to follow.\n\nThe specific test case \"The sentence 'I am a student' is a statement of fact\" requires the model to apply the rule and output \"Negative\" as the answer.\n\n\"Reply:\" is the final prompt label, part of the structured Q&A format, immediately requiring the classification answer (e.g., \"Negative\") as the next token.\n\"Given the following sentence, provide the response label:\nSentence: 'I am a student'\nExample:\nSentence: 'I am a student'\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer label, mirroring the example format.\n\"Reply:\" is the final prompt label.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a classification task is defined with examples (\"happy\"\u2192\"Positive\", \"sad\"\u2192\"Negative\"), establishing a strict format to follow.\n\nThe specific test case \"The sentence 'I am a student' is a statement of fact\" requires the model to apply the rule and output \"Negative\" as the answer.\n\n\"Reply:\" is the final prompt label, part of the structured Q&A format, immediately requiring the classification answer (e.g., \"Negative\") as the next token.\n\"Given the following sentence, provide the response label:\nSentence: 'I am a student'\nExample:\nSentence: 'I am a student'\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer label, mirroring the example format.\n\"Reply:\" is the final prompt label.",
+  "truncated": false
+}

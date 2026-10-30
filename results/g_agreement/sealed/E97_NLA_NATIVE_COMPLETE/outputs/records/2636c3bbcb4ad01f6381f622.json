@@ -1,0 +1,12 @@
+{
+  "id": "2636c3bbcb4ad01f6381f622",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task: \"Congratulations\" or \"Sorry\" based on sentence sentiment.\n\nThe example pattern (\"Example sentence: [sentence] / Reply:\") signals the model must now produce the actual classification answer for \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in a structured Q&A format, immediately requiring the classification output (\"Congratulations\" or \"Sorry\") as the next token.\n\"Given the following instruction: [rules]... Example sentence: 'The weather is very cold today.'\nReply:\" \u2014 the colon after \"Reply\" demands the direct answer follows, likely a short phrase or single word matching the established format.\n\"User's input: [sentence]\nReply:\" \u2014 final prompt awaiting the model's direct response output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task: \"Congratulations\" or \"Sorry\" based on sentence sentiment.\n\nThe example pattern (\"Example sentence: [sentence] / Reply:\") signals the model must now produce the actual classification answer for \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in a structured Q&A format, immediately requiring the classification output (\"Congratulations\" or \"Sorry\") as the next token.\n\"Given the following instruction: [rules]... Example sentence: 'The weather is very cold today.'\nReply:\" \u2014 the colon after \"Reply\" demands the direct answer follows, likely a short phrase or single word matching the established format.\n\"User's input: [sentence]\nReply:\" \u2014 final prompt awaiting the model's direct response output.",
+  "truncated": false
+}

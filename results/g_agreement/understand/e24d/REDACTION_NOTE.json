@@ -1,0 +1,37 @@
+{
+  "schema": "redaction-note-v1",
+  "files": [
+    {
+      "path": "results/g_agreement/understand/e24d/LAUNCH_REQUEST.json",
+      "local_commit": "00784dc7",
+      "local_sha256": "78c3444117648720bb5c8eed8e036ba838a2f118db8d08117e840698cfd8a10b",
+      "published_sha256": "b5f4f60670b43bf47bca24679f9c9b213539dbaf766fc8ec7a9815ae73240917",
+      "sealed_by": [
+        "results/g_agreement/understand/e24d/LAUNCH_SEAL.json"
+      ],
+      "redactions": [
+        {
+          "line": 13,
+          "placeholder": "<W-core worktree>",
+          "occurrences": 1,
+          "original_sha256": "93fba35bbc12db8450f1080185f3c9230a7ec57caabe6b41fc1503a08b243c7f",
+          "original_length": 69
+        },
+        {
+          "line": 80,
+          "placeholder": "<W-core worktree>",
+          "occurrences": 1,
+          "original_sha256": "93fba35bbc12db8450f1080185f3c9230a7ec57caabe6b41fc1503a08b243c7f",
+          "original_length": 69
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "at": "2026-10-25T10:08:09Z",
+      "by": "integrator",
+      "what": "Published by the integrator with local machine paths replaced by placeholders (snapshot substitution table). local_sha256 is the hash any owner seal covers (owner local_commit); each redaction gives line, placeholder, occurrences and the original string sha256/length; applying the table to the local line reproduces the published line (checked)."
+    }
+  ]
+}

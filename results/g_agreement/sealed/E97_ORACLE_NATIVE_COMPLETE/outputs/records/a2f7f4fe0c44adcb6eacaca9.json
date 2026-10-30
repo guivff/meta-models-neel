@@ -1,0 +1,9 @@
+{
+  "id": "a2f7f4fe0c44adcb6eacaca9",
+  "malformed": false,
+  "raw": "- =true; // flag appears in the middle, but we ignore it because `?flag\n- =true` (the flag we care about) appears later in the URL. We need to parse `?flag\n- =true&other=param`  *(Note: `flag=true` is present, but hidden among other params)*\n2.  **Step 2: `?flag\n- =true&other=param` (where `flag` is hidden among other params). We need to detect if `flag",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =true; // flag appears in the middle, but we ignore it because `?flag\n- =true` (the flag we care about) appears later in the URL. We need to parse `?flag\n- =true&other=param`  *(Note: `flag=true` is present, but hidden among other params)*\n2.  **Step 2: `?flag\n- =true&other=param` (where `flag` is hidden among other params). We need to detect if `flag"
+}

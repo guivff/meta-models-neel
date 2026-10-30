@@ -1,0 +1,12 @@
+{
+  "id": "9e451cefc01b93a217f810fd",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict instruction to output only \"positive\" or \"negative\" as the answer, establishing a binary classification task. The model must follow the pattern shown in the example.\n\nThe example sentence \"The weather is very good today\" is the test input, and the model must apply the same classification logic (positive sentiment) to produce the answer.\n\n\"Reply:\" is the final prompt label, part of the structured template, immediately requiring the model's direct answer (\"positive\" or \"negative\") on the next token.\n\"Given the following example, please provide the corresponding label.\nExample:\nSentence: 'The weather is very good today'\nLabel: [positive/negative]\nSentence: 'The weather is very good today'\nReply:\" \u2014 the final token \"Reply:\" signals the answer field, expecting the label directly.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict instruction to output only \"positive\" or \"negative\" as the answer, establishing a binary classification task. The model must follow the pattern shown in the example.\n\nThe example sentence \"The weather is very good today\" is the test input, and the model must apply the same classification logic (positive sentiment) to produce the answer.\n\n\"Reply:\" is the final prompt label, part of the structured template, immediately requiring the model's direct answer (\"positive\" or \"negative\") on the next token.\n\"Given the following example, please provide the corresponding label.\nExample:\nSentence: 'The weather is very good today'\nLabel: [positive/negative]\nSentence: 'The weather is very good today'\nReply:\" \u2014 the final token \"Reply:\" signals the answer field, expecting the label directly.",
+  "truncated": false
+}

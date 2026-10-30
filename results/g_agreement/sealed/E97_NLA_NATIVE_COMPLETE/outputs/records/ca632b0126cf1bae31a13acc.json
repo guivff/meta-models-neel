@@ -1,0 +1,12 @@
+{
+  "id": "ca632b0126cf1bae31a13acc",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" sentiment label.\n\nThe example pattern (\"Example sentence: ... Reply: [label]\") sets up a direct Q&A structure requiring the model to apply the rule to the specific sentence \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker, immediately requiring the sentiment answer (\"Positive\" or \"Negative\") as the next token.\n\"Given the following example format:\nExample sentence: [sentence]\nGiven sentence: The weather is very good today.\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, demanding the direct answer output.\n\"Reply:\" ends the structured prompt, expecting the model's response to follow immediately as the answer.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" sentiment label.\n\nThe example pattern (\"Example sentence: ... Reply: [label]\") sets up a direct Q&A structure requiring the model to apply the rule to the specific sentence \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker, immediately requiring the sentiment answer (\"Positive\" or \"Negative\") as the next token.\n\"Given the following example format:\nExample sentence: [sentence]\nGiven sentence: The weather is very good today.\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, demanding the direct answer output.\n\"Reply:\" ends the structured prompt, expecting the model's response to follow immediately as the answer.",
+  "truncated": false
+}

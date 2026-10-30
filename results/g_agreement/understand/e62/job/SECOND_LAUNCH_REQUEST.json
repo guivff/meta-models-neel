@@ -1,0 +1,254 @@
+{
+  "all_position_capture": {
+    "D4A": "block44 and42 read point, all1008 dev/test records; old252 reader outputs/probabilities reused",
+    "E62": "all frozen first-content..read positions, block44 fp16, offsets/order/seal",
+    "E62P": "same for all 15 placebo cells"
+  },
+  "analyses": {
+    "D4A": "results/g_agreement/understand/e62/job/COMMAND_D4A.json",
+    "E56_R4_REPLACEMENT": "results/g_agreement/understand/e56/r4_clarification/ANALYSIS_COMMAND.json",
+    "E59": "results/g_agreement/understand/e59/job/ANALYSIS_COMMAND.json",
+    "E62": "results/g_agreement/understand/e62/job/ANALYSIS_COMMAND.json",
+    "E62P": "results/g_agreement/understand/e62/job/COMMAND_E62P.json",
+    "E63": "results/g_agreement/understand/e63/job/ANALYSIS_COMMAND.json"
+  },
+  "authority": [
+    "user second wave instruction",
+    "1872f28",
+    "f081d228",
+    "00beb6d",
+    "6aacc13d",
+    "f21ed03e",
+    "section149 pre-approved 2x",
+    "user fresh dedicated pods; integrator HANDOFF e1b2d643",
+    "Latest user split: ladder fresh now, auxiliary first freed joint slot"
+  ],
+  "child_requests": {
+    "follow_on_first_freed_joint_slot": "results/g_agreement/understand/e62/job/AUXILIARY_LAUNCH_REQUEST.json",
+    "launch_now": "results/g_agreement/understand/e62/job/LADDER_LAUNCH_REQUEST.json"
+  },
+  "custody": "Every fresh pod clock starts at provider creation, including staging/setup/parity/captures/GO waiting/readers. Per-experiment total plus all prior custody remains <=2x registered cap.",
+  "existing_pods": 1,
+  "experiments": [
+    "E62",
+    "E62P",
+    "E59",
+    "E63",
+    "D4A"
+  ],
+  "fresh_dedicated_pods": false,
+  "generation": {
+    "NLA_max_new_tokens": 512,
+    "NLA_stop": "</explanation>",
+    "Oracle_max_new_tokens": 128,
+    "greedy": true,
+    "one_readout_per_item": true
+  },
+  "go_schema": {
+    "capture_seals": "EXACT_CAPTURE_READY_MAP",
+    "cohort_id": "MATCH_ASSIGNMENT",
+    "forecast_commits": "FULL_COMMIT_PER_BANK",
+    "forecast_seals": "SHA256_PER_BANK",
+    "input_seals": "EXACT_CAPTURE_READY_MAP",
+    "issued_epoch": "AFTER_CAPTURE_AND_FORECAST",
+    "pod_id": "MATCH_CAPTURE_READY",
+    "reader_launch_authorized": true
+  },
+  "input_archives": {
+    "D4A": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_amendments_v1/d4a.tar.gz",
+      "sha256": "21773c547fe53abab54ecf201d781865138001ea42104b84ccdc60310204daa0"
+    },
+    "E59": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_v1/e59.tar.gz",
+      "sha256": "1d64b0c064680301f9ee70b4792f4e580b3725a7104ac91bd5cc778d04a1819c"
+    },
+    "E62": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_v1/e62.tar.gz",
+      "sha256": "a8f091fcbe6cb1174137266a066e084f6ef5fed097d161f2355ad1ba53239b8b"
+    },
+    "E62P": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_amendments_v1/e62p.tar.gz",
+      "sha256": "53281f30403cd1213be51a6d06653ca1a8fbf5805e5b4c750014c7491b6db422"
+    },
+    "E63": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_v1/e63.tar.gz",
+      "sha256": "02c6b4a84b45e257261542a8a7194d021908bd48f86ad4c6384f68a16cddf9c4"
+    }
+  },
+  "launch_allowed": false,
+  "launch_order": [
+    "ladder",
+    "plans_placebo_d4a"
+  ],
+  "launch_preconditions": [
+    "Launch independent E62 + E62P dedicated pod first; no first-wave completion dependency.",
+    "E59 + E63 + D4a follow on first freed joint slot, after its first-wave worker exits."
+  ],
+  "max_pods": 2,
+  "maximum_cumulative_GPU_seconds": {
+    "D4A": 1080,
+    "E59": 7200,
+    "E62": 14400,
+    "E62P": 4320,
+    "E63": 2880
+  },
+  "new_pods": 1,
+  "order": [
+    "252-item parity",
+    "E62 + E62P all-position capture, then E59/E63/D4a capture",
+    "seal CAPTURE_READY with all five banks",
+    "integrator verified capture pull; CPU dev probes/class means; committed R3b forecast",
+    "capture/input-bound GO",
+    "retained first two jobs per phase",
+    "self-admit from full forecast or durable clean NO_FIT",
+    "remaining reader jobs once"
+  ],
+  "parent_request": "results/g_agreement/understand/e57/job/JOINT_LAUNCH_REQUEST.json",
+  "parent_request_sha256": "7279007d13eb8909b9cf69ba5e803fcad6dbc4abf3818be9adcd9d2088612978",
+  "pods": [
+    {
+      "archive_staging": "same exact source and label-free input archives; only assigned experiment stages execute",
+      "assignment_schema": {
+        "absolute_deadline_epoch": "pod_created_epoch+sum(caps)",
+        "caps": {
+          "E62": "2*registered - actual prior charged custody",
+          "E62P": "2*registered - actual prior charged custody"
+        },
+        "cohort_id": "SAME_FIRST_AND_SECOND_WAVE_COHORT",
+        "custody_start_epoch": "EXACTLY_PROVIDER_CREATION_UNIX",
+        "fresh_dedicated_pod": true,
+        "gpu_count": 1,
+        "input_seals": {
+          "E62": "a6939c899c67f3dbd6251fe625a506dad10021238e93cc3d3be2cb867dca94c3",
+          "E62P": "24b12650267665248cdbdf58a516b771ec5315d0bee6eec8ad982d67ae66561f"
+        },
+        "parent_request_sha256": "7279007d13eb8909b9cf69ba5e803fcad6dbc4abf3818be9adcd9d2088612978",
+        "pod_created_epoch": "PROVIDER_CREATED_UNIX",
+        "pod_id": "FRESH_PROVIDER_ID",
+        "prior_custody_seconds": {
+          "E62": "ACTUAL_PRIOR_CUSTODY",
+          "E62P": "ACTUAL_PRIOR_CUSTODY"
+        },
+        "provider_deadline_epoch": "INTEGRATOR_CONFIRMED_HARD_STOP",
+        "source_seals": {
+          "E62": "b92c933a8312fe7488a66b8edb01130738ee20489111faca4f0fd482920b91ee",
+          "E62P": "b92c933a8312fe7488a66b8edb01130738ee20489111faca4f0fd482920b91ee"
+        }
+      },
+      "experiments": [
+        "E62",
+        "E62P"
+      ],
+      "gpu_count": 1,
+      "gpu_type": "H200",
+      "name": "ladder",
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/e62/job/second_worker.py",
+        "--assignment",
+        "/workspace/second/assignment.json",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--out",
+        "/workspace/second/out",
+        "--go",
+        "/workspace/second/GO.json",
+        "--e62-inputs",
+        "/workspace/second/e62/inputs",
+        "--e62p-inputs",
+        "/workspace/second/e62p/inputs"
+      ]
+    },
+    {
+      "archive_staging": "same exact source and label-free input archives; only assigned experiment stages execute",
+      "assignment_schema": {
+        "absolute_deadline_epoch": "custody_start_epoch+sum(caps)",
+        "caps": {
+          "D4A": "2*registered - actual prior charged custody",
+          "E59": "2*registered - actual prior charged custody",
+          "E63": "2*registered - actual prior charged custody"
+        },
+        "cohort_id": "SAME_FIRST_AND_SECOND_WAVE_COHORT",
+        "custody_start_epoch": "FIXED_INTEGRATOR_TIMESTAMP_BEFORE_AUXILIARY_STAGING",
+        "existing_pod": true,
+        "fresh_dedicated_pod": false,
+        "gpu_count": 1,
+        "input_seals": {
+          "D4A": "8b3d9ccd54b8a182609613d71bea322227f9cafbcb5e0ba3f114bebee4b05044",
+          "E59": "caa1ed5f2a348e14ff1dd259794025094921b58b22234b4df9b5f8e23b8511b6",
+          "E63": "df6e812de60545b4250c2d6e82afca39c8eaaeb0e1f7fdb6dac0a511c64b74aa"
+        },
+        "parent_request_sha256": "7279007d13eb8909b9cf69ba5e803fcad6dbc4abf3818be9adcd9d2088612978",
+        "pod_created_epoch": "PROVIDER_CREATED_UNIX",
+        "pod_id": "FIRST_FREED_JOINT_POD_ID",
+        "prior_custody_seconds": {
+          "D4A": "ACTUAL_PRIOR_CUSTODY",
+          "E59": "ACTUAL_PRIOR_CUSTODY",
+          "E63": "ACTUAL_PRIOR_CUSTODY"
+        },
+        "provider_deadline_epoch": "INTEGRATOR_CONFIRMED_HARD_STOP",
+        "source_seals": {
+          "D4A": "b92c933a8312fe7488a66b8edb01130738ee20489111faca4f0fd482920b91ee",
+          "E59": "a84f6f2fc9cc212ed75dee59dfdeac0f544e199fe6c07b20bdada7ee24fe4b32",
+          "E63": "3d01ef2659a607b23a341520f7c2ac316aa9df11ba61af36155a9879375e8004"
+        }
+      },
+      "experiments": [
+        "E59",
+        "E63",
+        "D4A"
+      ],
+      "gpu_count": 1,
+      "gpu_type": "H200",
+      "name": "plans_placebo_d4a",
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/e62/job/second_worker.py",
+        "--assignment",
+        "/workspace/second/assignment.json",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--out",
+        "/workspace/second/out",
+        "--go",
+        "/workspace/second/GO.json",
+        "--e62-inputs",
+        "/workspace/second/e62/inputs",
+        "--e59-inputs",
+        "/workspace/second/e59/inputs",
+        "--e63-inputs",
+        "/workspace/second/e63/inputs",
+        "--d4a-inputs",
+        "/workspace/second/d4a/inputs"
+      ]
+    }
+  ],
+  "priority": [
+    "E62",
+    "E62P",
+    "E59",
+    "E63",
+    "D4A"
+  ],
+  "reason": "Prevent duplicate allocation: ladder has independent fresh-pod READY; auxiliary has first-freed-joint-slot READY.",
+  "registered_GPU_seconds": {
+    "D4A": 540,
+    "E59": 3600,
+    "E62": 7200,
+    "E62P": 2160,
+    "E63": 1440
+  },
+  "seed_timings": "results/g_agreement/understand/e56/job/SAVED_ORACLE_TIMINGS.json",
+  "separate_profile": false,
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_source_a0730ca3.tar.gz",
+  "source_archive_sha256": "63956694791e831e8938aacd562def1c20bb5f5ed2da7edc67dc339e9663fb4f",
+  "source_commit": "a0730ca39f1aaa182fb87c0d0a5087ea6e7ab938",
+  "status": "READY_SPLIT_USE_CHILD_REQUESTS",
+  "validation": {
+    "GPU_hours": 0,
+    "registered_analysis_runs": 0,
+    "status": "PENDING_EXACT_ARCHIVE"
+  },
+  "verified_pull": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_verified_v1"
+}

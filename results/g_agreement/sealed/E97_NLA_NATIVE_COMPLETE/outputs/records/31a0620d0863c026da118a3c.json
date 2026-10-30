@@ -1,0 +1,12 @@
+{
+  "id": "31a0620d0863c026da118a3c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nTemplate/few-shot pattern: a structured Q&A format where \"Question\" and \"Example\" fields establish a parallel task, requiring a matching \"Answer\" response.\n\nThe instruction explicitly states the answer should explain \"the given topic\" (not the example), so the model must generate an explanation about \"the impact of the pandemic on the economy.\"\n\n\"Answer:\" is the final token, a label introducing the model's response, requiring an explanatory sentence or paragraph directly answering the parallel task prompt.\n\"Example: [sentence about X].\nQuestion: Write an explanation about [Y].\nAnswer:\" \u2014 this pattern demands the answer mirrors the example's style, likely beginning with a direct explanatory statement about the new topic.\n\"Answer:\" is a prompt label in a few-shot template, immediately constraining the next tokens to be the actual generated answer text.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Template/few-shot pattern: a structured Q&A format where \"Question\" and \"Example\" fields establish a parallel task, requiring a matching \"Answer\" response.\n\nThe instruction explicitly states the answer should explain \"the given topic\" (not the example), so the model must generate an explanation about \"the impact of the pandemic on the economy.\"\n\n\"Answer:\" is the final token, a label introducing the model's response, requiring an explanatory sentence or paragraph directly answering the parallel task prompt.\n\"Example: [sentence about X].\nQuestion: Write an explanation about [Y].\nAnswer:\" \u2014 this pattern demands the answer mirrors the example's style, likely beginning with a direct explanatory statement about the new topic.\n\"Answer:\" is a prompt label in a few-shot template, immediately constraining the next tokens to be the actual generated answer text.",
+  "truncated": false
+}

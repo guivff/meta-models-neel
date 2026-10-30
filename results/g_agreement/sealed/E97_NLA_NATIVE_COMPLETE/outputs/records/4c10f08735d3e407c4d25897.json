@@ -1,0 +1,12 @@
+{
+  "id": "4c10f08735d3e407c4d25897",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict classification task: the model must output \"positive\" or \"negative\" based on the example pattern established.\n\nThe instruction explicitly defines the rule: \"If the sentence expresses positive sentiment, reply 'positive'; if negative, reply 'negative'\" \u2014 the model must apply this to the given sentence about a \"successful\" business.\n\n\"Example sentence: 'The business is successful and thriving.'\\nReply:\" is the final prompt line, requiring the direct answer label (\"positive\") as the immediate next token.\n\"Given the following sentence, determine the sentiment label according to the pattern.\\nSentence: 'The business is successful and thriving.'\\nReply:\" \u2014 the \"Reply:\" label signals the answer field, expecting the single classification word or short response to follow immediately.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict classification task: the model must output \"positive\" or \"negative\" based on the example pattern established.\n\nThe instruction explicitly defines the rule: \"If the sentence expresses positive sentiment, reply 'positive'; if negative, reply 'negative'\" \u2014 the model must apply this to the given sentence about a \"successful\" business.\n\n\"Example sentence: 'The business is successful and thriving.'\\nReply:\" is the final prompt line, requiring the direct answer label (\"positive\") as the immediate next token.\n\"Given the following sentence, determine the sentiment label according to the pattern.\\nSentence: 'The business is successful and thriving.'\\nReply:\" \u2014 the \"Reply:\" label signals the answer field, expecting the single classification word or short response to follow immediately.\n\"Reply:\"",
+  "truncated": false
+}

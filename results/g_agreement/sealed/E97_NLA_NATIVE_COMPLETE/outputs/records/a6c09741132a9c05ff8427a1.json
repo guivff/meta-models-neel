@@ -1,0 +1,12 @@
+{
+  "id": "a6c09741132a9c05ff8427a1",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Question\" and \"Answer\" fields, establishing a test of instruction-following behavior.\n\nThe scenario sets up a deliberate contradiction: the instruction says \"focus on environmental impact,\" but the question asks about \"economic impact,\" testing whether the model correctly applies the instruction to generate the answer.\n\n\"Answer:\" is the final token, a label introducing the model's response to the example scenario, requiring a direct answer demonstrating whether the model follows the instruction (e.g., \"The answer is that it focuses on environmental impact\" or a sample answer mirroring the instruction).\n\"Instruction: [X]. Question: [Y] (opposite of X).\nInstruction: The AI should focus on economic impact.\nQuestion: How does AI affect X?\nAnswer:\" \u2014 expects the model's generated response to the example.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Question\" and \"Answer\" fields, establishing a test of instruction-following behavior.\n\nThe scenario sets up a deliberate contradiction: the instruction says \"focus on environmental impact,\" but the question asks about \"economic impact,\" testing whether the model correctly applies the instruction to generate the answer.\n\n\"Answer:\" is the final token, a label introducing the model's response to the example scenario, requiring a direct answer demonstrating whether the model follows the instruction (e.g., \"The answer is that it focuses on environmental impact\" or a sample answer mirroring the instruction).\n\"Instruction: [X]. Question: [Y] (opposite of X).\nInstruction: The AI should focus on economic impact.\nQuestion: How does AI affect X?\nAnswer:\" \u2014 expects the model's generated response to the example.",
+  "truncated": false
+}

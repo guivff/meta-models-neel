@@ -1,0 +1,12 @@
+{
+  "id": "c7e6aa3bcfea57f336e7f420",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"happy\"\u2192\"Happy\", \"sad\"\u2192\"Sad\"), then a test case is presented, requiring the model to apply the rule.\n\nThe format establishes a Q&A template: \"Given sentence: [text]\\nReply:\" signals the model must now output the correct mood label for the specific sentence \"The sun is shining brightly.\"\n\n\"Reply:\" is the final token, acting as a prompt label in the structured example, immediately requiring the mood label answer (e.g., \"Happy\") or a brief explanatory response.\n\"Example format:\nGiven sentence: The sun is shining brightly.\nGiven sentence: The sun is shining brightly.\nReply:\" \u2014 the final \"Reply:\" token demands the direct answer/response to the example, completing the structured template.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"happy\"\u2192\"Happy\", \"sad\"\u2192\"Sad\"), then a test case is presented, requiring the model to apply the rule.\n\nThe format establishes a Q&A template: \"Given sentence: [text]\\nReply:\" signals the model must now output the correct mood label for the specific sentence \"The sun is shining brightly.\"\n\n\"Reply:\" is the final token, acting as a prompt label in the structured example, immediately requiring the mood label answer (e.g., \"Happy\") or a brief explanatory response.\n\"Example format:\nGiven sentence: The sun is shining brightly.\nGiven sentence: The sun is shining brightly.\nReply:\" \u2014 the final \"Reply:\" token demands the direct answer/response to the example, completing the structured template.\n\"Reply:\"",
+  "truncated": false
+}

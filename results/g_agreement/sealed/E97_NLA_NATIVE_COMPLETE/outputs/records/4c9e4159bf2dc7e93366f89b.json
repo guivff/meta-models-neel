@@ -1,0 +1,12 @@
+{
+  "id": "4c9e4159bf2dc7e93366f89b",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given sentence.\n\nThe example sentence \"The movie was a huge success\" clearly signals a positive sentiment, constraining the answer to \"Positive.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the model's classification answer (e.g., \"Positive\") on the next line.\n\"Given the following sentence, please provide the sentiment label according to the specified format.\nSentence: 'The movie was a huge success, and the audience loved it.'\nExample format: [Positive/Negative/Neutral]\nReply:\" \u2014 the final \"Reply:\" is a prompt field expecting the direct answer, likely a short label or brief response.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given sentence.\n\nThe example sentence \"The movie was a huge success\" clearly signals a positive sentiment, constraining the answer to \"Positive.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the model's classification answer (e.g., \"Positive\") on the next line.\n\"Given the following sentence, please provide the sentiment label according to the specified format.\nSentence: 'The movie was a huge success, and the audience loved it.'\nExample format: [Positive/Negative/Neutral]\nReply:\" \u2014 the final \"Reply:\" is a prompt field expecting the direct answer, likely a short label or brief response.",
+  "truncated": false
+}

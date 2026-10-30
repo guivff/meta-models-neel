@@ -1,0 +1,401 @@
+{
+  "module": "g3",
+  "split": "test",
+  "mode": "test",
+  "frozen": true,
+  "n_states": 32,
+  "n_pairs": 16,
+  "n_boot": 2000,
+  "seed": 0,
+  "state_free_arm_note": "reader-prior control: reader run on a state-free input (mean dev activation / zeros), scored against the item key",
+  "shuffled_arm_note": "cached-readout reassignment via donors.json; NOT a fresh intervention; reader never saw the recipient state",
+  "donor_assignment": {
+    "n": 32,
+    "donor_answer_equals_recipient_answer": {
+      "k": 4,
+      "n": 32,
+      "p": 0.125,
+      "lo": 0.03125,
+      "hi": 0.25,
+      "n_pairs": 16,
+      "ci": "pair-bootstrap"
+    },
+    "identical_candidate_sets": 8,
+    "checks": {
+      "only_test_items": true,
+      "same_family": true,
+      "excludes_recipient_pair": true,
+      "no_self": true,
+      "is_permutation_within_family": true,
+      "label_balance": {
+        "language": {
+          "recipient_label_0": {
+            "donor_label_0": 2,
+            "donor_label_1": 2
+          },
+          "recipient_label_1": {
+            "donor_label_0": 2,
+            "donor_label_1": 2
+          },
+          "balanced": true
+        },
+        "mapping": {
+          "recipient_label_0": {
+            "donor_label_0": 2,
+            "donor_label_1": 2
+          },
+          "recipient_label_1": {
+            "donor_label_0": 2,
+            "donor_label_1": 2
+          },
+          "balanced": true
+        },
+        "ownership": {
+          "recipient_label_0": {
+            "donor_label_0": 2,
+            "donor_label_1": 2
+          },
+          "recipient_label_1": {
+            "donor_label_0": 2,
+            "donor_label_1": 2
+          },
+          "balanced": true
+        },
+        "tense": {
+          "recipient_label_0": {
+            "donor_label_0": 2,
+            "donor_label_1": 2
+          },
+          "recipient_label_1": {
+            "donor_label_0": 2,
+            "donor_label_1": 2
+          },
+          "balanced": true
+        }
+      },
+      "donor_label_equals_recipient_label_fraction": 0.5,
+      "all_passed": true,
+      "dev_assignments_cross_family": true
+    },
+    "seed": 20261007
+  },
+  "per_method": {
+    "nla": {
+      "arms": {
+        "genuine": {
+          "accuracy_all": {
+            "k": 17,
+            "n": 32,
+            "p": 0.53125,
+            "lo": 0.28125,
+            "hi": 0.78125,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 17,
+            "n": 32,
+            "p": 0.53125,
+            "lo": 0.28125,
+            "hi": 0.78125,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "shuffled_recipient": {
+          "accuracy_all": {
+            "k": 4,
+            "n": 32,
+            "p": 0.125,
+            "lo": 0.03125,
+            "hi": 0.25,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 9,
+            "n": 32,
+            "p": 0.28125,
+            "lo": 0.0625,
+            "hi": 0.5,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "shuffled_donor": {
+          "accuracy_all": {
+            "k": 17,
+            "n": 32,
+            "p": 0.53125,
+            "lo": 0.28125,
+            "hi": 0.7507812499999957,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 17,
+            "n": 32,
+            "p": 0.53125,
+            "lo": 0.28125,
+            "hi": 0.7507812499999957,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "state_free:mean_dev_activation": {
+          "accuracy_all": {
+            "k": 4,
+            "n": 32,
+            "p": 0.125,
+            "lo": 0.03125,
+            "hi": 0.25,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 7,
+            "n": 32,
+            "p": 0.21875,
+            "lo": 0.0625,
+            "hi": 0.40625,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "note": "reader run with a state-free input (reader-prior control); scored against the item key like genuine"
+        }
+      },
+      "genuine_minus_shuffled_recipient": {
+        "est": 0.40625,
+        "lo": 0.21875,
+        "hi": 0.625
+      },
+      "genuine_minus_state_free:mean_dev_activation": {
+        "est": 0.40625,
+        "lo": 0.21875,
+        "hi": 0.625
+      }
+    },
+    "olens": {
+      "arms": {
+        "genuine": {
+          "accuracy_all": {
+            "k": 16,
+            "n": 32,
+            "p": 0.5,
+            "lo": 0.25,
+            "hi": 0.75,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 17,
+            "n": 32,
+            "p": 0.53125,
+            "lo": 0.28125,
+            "hi": 0.78125,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "shuffled_recipient": {
+          "accuracy_all": {
+            "k": 4,
+            "n": 32,
+            "p": 0.125,
+            "lo": 0.03125,
+            "hi": 0.25,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 8,
+            "n": 32,
+            "p": 0.25,
+            "lo": 0.0625,
+            "hi": 0.5,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "shuffled_donor": {
+          "accuracy_all": {
+            "k": 16,
+            "n": 32,
+            "p": 0.5,
+            "lo": 0.25,
+            "hi": 0.75,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 17,
+            "n": 32,
+            "p": 0.53125,
+            "lo": 0.28125,
+            "hi": 0.7507812499999957,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "state_free:mean_dev_activation": {
+          "accuracy_all": {
+            "k": 3,
+            "n": 32,
+            "p": 0.09375,
+            "lo": 0.0,
+            "hi": 0.25,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 7,
+            "n": 32,
+            "p": 0.21875,
+            "lo": 0.0625,
+            "hi": 0.4375,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "note": "reader run with a state-free input (reader-prior control); scored against the item key like genuine"
+        }
+      },
+      "genuine_minus_shuffled_recipient": {
+        "est": 0.375,
+        "lo": 0.1875,
+        "hi": 0.59375
+      },
+      "genuine_minus_state_free:mean_dev_activation": {
+        "est": 0.40625,
+        "lo": 0.1875,
+        "hi": 0.625
+      }
+    },
+    "jlens": {
+      "arms": {
+        "genuine": {
+          "accuracy_all": {
+            "k": 5,
+            "n": 32,
+            "p": 0.15625,
+            "lo": 0.03125,
+            "hi": 0.3125,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 5,
+            "n": 32,
+            "p": 0.15625,
+            "lo": 0.03125,
+            "hi": 0.3125,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "shuffled_recipient": {
+          "accuracy_all": {
+            "k": 1,
+            "n": 32,
+            "p": 0.03125,
+            "lo": 0.0,
+            "hi": 0.09375,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 3,
+            "n": 32,
+            "p": 0.09375,
+            "lo": 0.0,
+            "hi": 0.25,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          }
+        },
+        "shuffled_donor": {
+          "accuracy_all": {
+            "k": 5,
+            "n": 32,
+            "p": 0.15625,
+            "lo": 0.03125,
+            "hi": 0.3125,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          },
+          "coverage": {
+            "k": 5,
+            "n": 32,
+            "p": 0.15625,
+            "lo": 0.03125,
+            "hi": 0.3125,
+            "n_pairs": 16,
+            "ci": "pair-bootstrap"
+          }
+        }
+      },
+      "genuine_minus_shuffled_recipient": {
+        "est": 0.125,
+        "lo": -0.03125,
+        "hi": 0.28125
+      }
+    }
+  },
+  "prompt_only": {
+    "accuracy_all": {
+      "k": 32,
+      "n": 32,
+      "p": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n_pairs": 16,
+      "ci": "pair-bootstrap"
+    },
+    "coverage": {
+      "k": 32,
+      "n": 32,
+      "p": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n_pairs": 16,
+      "ci": "pair-bootstrap"
+    },
+    "n_gens": 32
+  },
+  "absent_rows": [],
+  "status_counts": {
+    "nla": {
+      "genuine": {
+        "supports": 17,
+        "unclear": 15
+      },
+      "shuffled": {
+        "unclear": 23,
+        "contradicts": 5,
+        "supports": 4
+      }
+    },
+    "olens": {
+      "genuine": {
+        "supports": 16,
+        "unclear": 15,
+        "contradicts": 1
+      },
+      "shuffled": {
+        "unclear": 24,
+        "contradicts": 4,
+        "supports": 4
+      }
+    },
+    "jlens": {
+      "genuine": {
+        "supports": 5,
+        "unclear": 27
+      },
+      "shuffled": {
+        "unclear": 29,
+        "contradicts": 2,
+        "supports": 1
+      }
+    }
+  }
+}

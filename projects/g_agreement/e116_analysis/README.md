@@ -1,0 +1,11 @@
+# E116 prospective Oracle timing adapter
+
+Run `python -m projects.g_agreement.e116_analysis.adapter --spec SPEC.json` only on fully sealed bindings. No E116 outputs opened during preparation. Fixed global E116 guard in wt-wmech; never reset/replay. No GPU, new scoring model, fitting or E108 analysis invocation.
+
+SPEC: e108_analysis_seal/e108_analysis_sha256 (canonical COMPLETE_ONCE, with original local BINDING), binding_seal/binding_sha256, analysis. Uses E108 adapter.inputs only to recover original ONE-choice retained identity/arm/greedy pick, exactly329 immediate and47 delayed. Original sealed E108 outside/mode values are represented by registered .48/.66 constants; never refit baselines. E108 original input normalization and dependencies are source-pinned.
+
+New binding COMPLETE E116 requires source_seals (all member hashes verified), MEASUREMENTS.json with exact376 IDs, and true route_verified/privacy_verified/labels_cpu_only/original_prompt_and_read_token_verified/frozen_e108_rubric_verified/greedy. Each item has source_id and choice source pointers, blocks52/60 each with source_id/block/hit pointers. Pointers are {seal_index,member,keys}, hit exactly boolean or explicit null from original frozen E108 judge channel. Source owner binds exact original prompts/read token/capture/greedy readout to those codes and verifies route/privacy; no guessed normalization. Both blocks mandatory; missing terminal judgments remain null, not omitted/zero.
+
+Original E108 item-bootstrap interval/mean functions,5000draws seed0. R-CH3 descriptive MET if either immediate hit-rate point>.66 and CI lower>.66. Both rates<=.48 mark not-at-read-token-by60; intermediate cases retain explicit numbers without a new rule. Delayed arm descriptive only. No NLA inputs. Five synthetic tests cover strict boundary, missing/undefined, full376 cohort, fixed bootstrap, duplicate/incomplete grid and invalid codes.
+
+Source-only custody correction: resolve the original E108 inventory Git checkout from the unchanged sealed binding, temporarily use that checkout for its existing committed-inventory verification, and restore the normalizer root even on failure. No source member, binding, scientific function or original guard is changed. Post-acquisition/pre-E116-analysis correction, seven synthetic tests.

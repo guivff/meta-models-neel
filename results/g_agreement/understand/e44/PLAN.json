@@ -1,0 +1,125 @@
+{
+  "R1": {
+    "auroc_min": 0.8,
+    "fraction_min": 0.5,
+    "steps_at_most": 100
+  },
+  "R2": {
+    "auroc_max": 0.65,
+    "fraction_strictly_greater_than": 0.5,
+    "step": 400
+  },
+  "arms": [
+    "C"
+  ],
+  "asked_scoring": "E39 native block44, mean of two frozen paired log-odds",
+  "authority_commit": "266c15f0",
+  "batch_size": 8,
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261026,
+    "unit": "E36 template cluster per row"
+  },
+  "checkpoints": [
+    0,
+    25,
+    100,
+    400
+  ],
+  "content_check": {
+    "median_auroc_min": 0.9,
+    "step": 400
+  },
+  "content_rows": [
+    "json_status",
+    "latex_role",
+    "latex_subject",
+    "list_priority",
+    "list_topic",
+    "prose_sentiment",
+    "prose_topic",
+    "python_error",
+    "table_status"
+  ],
+  "e39_bound_input_seal_sha256": "e2cdf3cc2c26566a6bef56d2512de247c57ea7bcabffa996df38ccc90f20a35c",
+  "eligibility": "E39 sealed interpretable structure rows; no new selection",
+  "experiment": "E44",
+  "free_readouts": 0,
+  "items_per_row": 84,
+  "learning_rate": 0.0001,
+  "lora_targets_sha256": "0f5f585c736ca393460532f476c6e889c8555f99e95b2d5c595c6b595127682d",
+  "max_pods": 2,
+  "minimum_interpretable": 8,
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "clipping": null,
+    "eps": 1e-08,
+    "name": "AdamW",
+    "schedule": "constant",
+    "weight_decay": 0
+  },
+  "rank": 8,
+  "references": [
+    "E39 L per row",
+    "E39 step0"
+  ],
+  "release_gate": "E39 sealed step0 and step25 on at least one verified pod, parity and CUDA readiness PASS",
+  "requested_pods": 1,
+  "rows": [
+    "json_status",
+    "json_type",
+    "latex_environment",
+    "latex_role",
+    "latex_section",
+    "latex_subject",
+    "list_depth",
+    "list_index",
+    "list_priority",
+    "list_topic",
+    "prose_paren",
+    "prose_quote",
+    "prose_sentence",
+    "prose_sentiment",
+    "prose_topic",
+    "python_argument",
+    "python_comment",
+    "python_depth",
+    "python_error",
+    "python_indent",
+    "python_string",
+    "table_column",
+    "table_role",
+    "table_row",
+    "table_status"
+  ],
+  "science_cap": "min(1.5F+360,10800) seconds; E39 recipe",
+  "section": 155,
+  "seed": 20261026,
+  "status": "EXPLORATORY",
+  "steps": 400,
+  "structure_rows": [
+    "json_type",
+    "latex_environment",
+    "latex_section",
+    "list_depth",
+    "list_index",
+    "prose_paren",
+    "prose_quote",
+    "prose_sentence",
+    "python_argument",
+    "python_comment",
+    "python_depth",
+    "python_indent",
+    "python_string",
+    "table_column",
+    "table_role",
+    "table_row"
+  ],
+  "test_items": 2100,
+  "total_gpu_seconds": 14400,
+  "train_items": 756,
+  "training_target": "E36 v2 frozen descriptive phrasings; uniform shuffled pooled content-dev deck; deterministic alternating phrasing"
+}

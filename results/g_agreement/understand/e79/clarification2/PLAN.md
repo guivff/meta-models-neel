@@ -1,0 +1,5 @@
+# E79 low-dose extension — 1e879d02
+
+Append alpha0.25/0.5×J/nonJ/random×84items×3ArmA states,1512vectors, to the existing3192-vector grid. New complete4704-vector package retains the original3192 numeric rows, opaque IDs, order and private-map records as an exact prefix. Original inputs_v1 files and seals remain immutable. ArmB unchanged. No rebuilt means, projection, random directions or targets: reuse sealed CPU_DIRECTIONS.npz and original private map. Opaque IDs continue each original row's stream2 from seed20261028 after840 draws. The original42/42 targets are copied, never redrawn. Compare old stream IDs as a consistency check.
+
+Report per-item/cell norm ratios from float32 saved vectors. No exclusions. R-C1 uses alpha<=2; alpha4 descriptive only, monotone J-arm dose response over0–2 descriptive, per clarification2. Runner/analysis owners implement these rules; no analysis or readouts here. Stage only new pod_inputs; extended private target map remains ignored0600. Commit freeze before CPU extension; preserve old package rather than overwrite.

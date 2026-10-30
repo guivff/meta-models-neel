@@ -1,0 +1,11 @@
+# E105 sealed-input builder and scoring binding
+
+CPU-only construction for §214: six frozen 84-item test rows; T is the exact E100 other-value donor, S is a same-value different-item donor, and 0 is truly unpatched. S uses a fresh NumPy default_rng(20261030) per row, choosing uniformly with replacement among eligible items in frozen E100 order. T pairing files are copied byte-for-byte. T/S vectors are exact original block-44 fp32 residuals, without normalization or scaling.
+
+`python -m projects.g_agreement.e105.inputs --owner results/g_agreement/understand/e100/vectors/artifacts --model MODEL --out CACHE_INPUTS --inventory-out CPU_ONLY_DIRECTORY` verifies E100 seals, joins original bank metadata on CPU, and emits six public input archives plus a separate CPU inventory. Never upload the CPU inventory, candidate audit or custody files to a pod. Only source and public input archives may be staged.
+
+The scoring adapter accepts an Integrator-owned base model (adapters disabled); it neither loads a model nor allocates compute. `scoring.batches(items, size)` preserves frozen E101 unpadded strata and separates baseline from patched batches. `scoring.score_batch(model, batch, vectors)` returns full frozen continuation `pair_logprobs`. Keep these raw per-pair scores. The analysis adapter orients every T/S/0 condition toward the same T donor value on CPU; baseline signs come from actual unpatched scores. No readers or judges are needed.
+
+The patched scorer is a byte-identical copy of sealed E101 acquisition source e966429e, not the subsequently extended live E104 module. The unpatched function is copied exactly from the E101 anomaly diagnostic. FROZEN_SCORERS.json binds both and the original candidate recipes/tokenizer. Baseline 0 registers no intervention hook. Tests observe that the next block receives the exact supplied residual for T/S.
+
+`python -m projects.g_agreement.e105.package --base-archive cache/g_agreement/understand/e101/source_v3/source.tar.gz --out CACHE_SOURCE` packages the original sealed E101 dependencies and E105 code, with no CPU labels or vectors. Input and inventory seals must be committed before GPU output. Integrator owns timing, admission, output custody, the §214 one-GPU-hour limit and one restart; E104 has priority. This package grants no launch approval.

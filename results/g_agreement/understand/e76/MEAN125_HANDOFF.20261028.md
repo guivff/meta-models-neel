@@ -1,0 +1,17 @@
+# E76 warm-up fallback, running-mean admission — READY, 2026-10-28
+
+Authority: a6d0e06ee85e700ae12c425acc62a7471cb52f97, in-run admission rule. This replaces the slowest-batch re-forecast of warm-up fallback1abd4121. The current attempt remains untouched; Integrator owns publication, operational retry/admission, prior-output retention and launch.
+
+For each real batch phase (capture, oracle_readout, nla_readout and split parity), Clock.call accumulates elapsed seconds and completed-batch count. Its remaining raw estimate is (total real elapsed / real batch count) × remaining batches. The phase's original hint is used until its first real batch, then replaced by its running-mean estimate; the former maximum/prior-hint floor is removed. Separate phases keep capture, Oracle, NLA and parity timings from being mixed. Completed setup calls clear their own remaining estimate and are excluded from real-batch counts. ADMISSION.latest.json reports phase totals/counts so the forecast is auditable; observed maxima remain descriptive only.
+
+Admission is now:
+
+`now + 1.25 × sum(remaining phase estimates) + 360 < original absolute deadline − 180`
+
+The1.25 multiplier is applied exactly once. The360s fixed buffer and180s retrieval reserve are unchanged. CAP remains7,000s; assignment_check, production/parity hard-alarm setup and fixed assignment/start/deadline are unchanged. No clock reset, cap increase, scope reduction or science change is introduced. The running mean includes every real timing, including outliers; nothing is trimmed. The existing synthetic warm-ups bypass Clock.call and touch neither real totals/counts nor running estimates. Their elapsed time still advances the absolute stage clock, and their returned output remains discarded.
+
+Active exact21-file pod archive: cache/g_agreement/understand/e76/E76_POD_20261028_warmup_mean125_7000.tar.gz. POD_ARCHIVE.json/POD_STAGE_MANIFEST.json pin it. All earlier archives remain intact. Current LAUNCH_REQUEST.json is staged separately and the Integrator assignment must pin its new hash. Worker/source/CPU/request/command/delivery seals are refreshed together. MEAN125_VALIDATION.20261028.json proves the only changed pod source is worker76.py's admission bookkeeping/margin; production, parity generation, warm-ups, native backends, inputs, rules and once-analysis code are unchanged from1abd4121.
+
+Use WARMUP_HANDOFF.20261028.md for fallback custody, isolated attempt roots, retained prior outputs and commands, superseding only its slowest-batch description/archive/request by this note. The label-free pod split-parity command, Integrator CPU-only parity key/scorer, exact-generation PASS release, production command and once-only regex analysis paths remain unchanged. No labels, private files, reference values, CPU archives or regexes enter the pod bundle. Never overlay a live attempt or delete a consumed guard. This is not permission for an automatic retry after parity/validity failure.
+
+CPU regressions cover the registered E69-style outlier pattern (45×0.08s plus one0.91s) with1000 remaining batches: mean-based admission succeeds where a maximum-based estimate would stop. They also verify replacement of an unmeasured hint by a measured mean, separation of setup/other-phase timings, exclusion of1000s dummy warm-up from the mean, and continued stopping at the unchanged absolute deadline. Exact-archive production/parity smokes retain2000/252 real records and no dummy markers. No actual GPU readout, parity verdict, scientific analysis or judging is run during this build.

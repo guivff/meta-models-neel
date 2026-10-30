@@ -1,0 +1,12 @@
+{
+  "id": "c3d38a155ed1efc875a7cbe0",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"positive,\" \"negative,\" or \"neutral\" based on the given rule.\n\nThe example structure mirrors the rule: \"Example sentence: 'The weather is pleasant today'\" requires the model to apply the classification logic to this specific sentence.\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured example, immediately requiring the actual classification answer (e.g., \"positive\") or a brief explanatory response.\n\"Given the following example format:\nExample sentence: 'The weather is pleasant today'\nQuestion: What is the sentiment classification?\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer to the posed question, completing the example block.\n\n\"Reply:\" is the final prompt token, expecting the model's direct response/classification output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"positive,\" \"negative,\" or \"neutral\" based on the given rule.\n\nThe example structure mirrors the rule: \"Example sentence: 'The weather is pleasant today'\" requires the model to apply the classification logic to this specific sentence.\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured example, immediately requiring the actual classification answer (e.g., \"positive\") or a brief explanatory response.\n\"Given the following example format:\nExample sentence: 'The weather is pleasant today'\nQuestion: What is the sentiment classification?\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer to the posed question, completing the example block.\n\n\"Reply:\" is the final prompt token, expecting the model's direct response/classification output.",
+  "truncated": false
+}

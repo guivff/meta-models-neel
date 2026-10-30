@@ -1,0 +1,12 @@
+{
+  "id": "39a054fa89db6410c8cc4f62",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot classification format established: model must output a sentiment label (\"Positive\" or \"Negative\") matching the pattern shown in the example.\n\nThe instruction explicitly defines the task as classifying the sentence \"The weather is very bad today\" into Positive or Negative, with the answer already telegraphed by the negative sentiment.\n\n\"Reply:\" is the final prompt token, part of a structured Q&A template (\"Example sentence: ... / Question: ... / Reply:\"), immediately requiring the model's direct answer (e.g., \"Negative\" or \"Positive\") on the next line.\n\"Please follow the exact format of the example.\nExample sentence: 'The weather is very bad today.'\nQuestion: What is the sentiment label?\nReply:\" \u2014 the final token \"Reply:\" demands the model's response label immediately following, completing the structured output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot classification format established: model must output a sentiment label (\"Positive\" or \"Negative\") matching the pattern shown in the example.\n\nThe instruction explicitly defines the task as classifying the sentence \"The weather is very bad today\" into Positive or Negative, with the answer already telegraphed by the negative sentiment.\n\n\"Reply:\" is the final prompt token, part of a structured Q&A template (\"Example sentence: ... / Question: ... / Reply:\"), immediately requiring the model's direct answer (e.g., \"Negative\" or \"Positive\") on the next line.\n\"Please follow the exact format of the example.\nExample sentence: 'The weather is very bad today.'\nQuestion: What is the sentiment label?\nReply:\" \u2014 the final token \"Reply:\" demands the model's response label immediately following, completing the structured output.",
+  "truncated": false
+}

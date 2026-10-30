@@ -1,0 +1,98 @@
+{
+  "experiment": "E106",
+  "as_of_utc": "2026-10-29T05:16:31.845845+00:00",
+  "state": "P_AND_NLA_GATE_PARALLEL_GUARDED_STAGING",
+  "arms": [
+    {
+      "phase": "arm_p",
+      "pod_id": "j9vlop9kruy92f",
+      "gpu_type": "H200",
+      "created_utc": "2026-10-29T05:14:53.016Z",
+      "cap_seconds": 1800,
+      "absolute_cap_utc": "2026-10-29T05:44:53.016000+00:00",
+      "primary_retrieval_utc": "2026-10-29T05:40:53.016000+00:00",
+      "independent_hardstop_utc": "2026-10-29T05:41:53.016000+00:00",
+      "rate_usd_h": 5.29,
+      "compute_cap_usd": 2.645,
+      "non_gpu_contingency_usd": 2,
+      "all_in_cap_usd": 4.645,
+      "services": [
+        {
+          "label": "com.mats.e106.i4.p-a1.hardstop",
+          "verified": true,
+          "original_created_epoch": 1793250893.016
+        },
+        {
+          "label": "com.mats.e106.i4.p-a1.supervise",
+          "verified": true,
+          "original_created_epoch": 1793250893.016
+        },
+        {
+          "label": "com.mats.e106.i4.p-a1.stage",
+          "verified": true,
+          "original_created_epoch": 1793250893.016
+        }
+      ],
+      "original_clock_no_reset": true,
+      "operator_state": "/private/tmp/e106-i4-p-a1/STATE.json",
+      "first_output_utc": "unknown",
+      "scientific_output_observed": false,
+      "admission_shared_commit": "0c774cfb2661c3765e392e4c77bec105160b7dd2"
+    },
+    {
+      "phase": "gate",
+      "pod_id": "t5vudlrw7re5sn",
+      "gpu_type": "H200",
+      "created_utc": "2026-10-29T05:14:52.968Z",
+      "cap_seconds": 1800,
+      "absolute_cap_utc": "2026-10-29T05:44:52.968000+00:00",
+      "primary_retrieval_utc": "2026-10-29T05:40:52.968000+00:00",
+      "independent_hardstop_utc": "2026-10-29T05:41:52.968000+00:00",
+      "rate_usd_h": 5.29,
+      "compute_cap_usd": 2.645,
+      "non_gpu_contingency_usd": 2,
+      "all_in_cap_usd": 4.645,
+      "services": [
+        {
+          "label": "com.mats.e106.i4.gate-a1.hardstop",
+          "verified": true,
+          "original_created_epoch": 1793250892.968
+        },
+        {
+          "label": "com.mats.e106.i4.gate-a1.supervise",
+          "verified": true,
+          "original_created_epoch": 1793250892.968
+        },
+        {
+          "label": "com.mats.e106.i4.gate-a1.stage",
+          "verified": true,
+          "original_created_epoch": 1793250892.968
+        }
+      ],
+      "original_clock_no_reset": true,
+      "operator_state": "/private/tmp/e106-i4-gate-a1/STATE.json",
+      "first_output_utc": "unknown",
+      "scientific_output_observed": false,
+      "admission_shared_commit": "0c774cfb2661c3765e392e4c77bec105160b7dd2"
+    }
+  ],
+  "creation_separation_seconds": 0.04800009727478027,
+  "reserved_compute_usd": 5.29,
+  "non_gpu_contingency_usd": 4,
+  "all_in_cap_usd": 9.29,
+  "arm_P_total_cap_gpu_h": 0.5,
+  "arm_T_total_cap_gpu_h": 4,
+  "T_initial_gate_allocation_gpu_h": 0.5,
+  "T_remaining_training_evaluation_gpu_h": 3.5,
+  "T_future_remaining_not_reserved": true,
+  "no_P_completion_dependency": true,
+  "final_adapter_commit": "be1f996356c2cf79af0b9982e2a23dc47ca61d2f",
+  "final_adapter_tests_passed": 19,
+  "controller_tests_passed": 7,
+  "source_controls_commit": "85ec5ce4",
+  "judging_owner": "W-internals-C",
+  "judging_bank_cap_usd": 15,
+  "judging_active_usd": 0,
+  "scientific_rules_unchanged": true,
+  "E102_stays_final_NOT_RUN": true
+}

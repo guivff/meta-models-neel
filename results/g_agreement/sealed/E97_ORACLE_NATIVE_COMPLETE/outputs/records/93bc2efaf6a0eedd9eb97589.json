@@ -1,0 +1,9 @@
+{
+  "id": "93bc2efaf6a0eedd9eb97589",
+  "malformed": false,
+  "raw": "- =true; // flag appears in the middle, but `?flag\n- =true` (the flag we care about) appears in the middle. We need to parse `?flag\n- =true&other=stuff` (where `flag=true` is the new trigger). We want to detect `flag\n- =1`  \u2190 The flag we care about is buried in the middle. | `?flag=1&other=stuff&flag",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =true; // flag appears in the middle, but `?flag\n- =true` (the flag we care about) appears in the middle. We need to parse `?flag\n- =true&other=stuff` (where `flag=true` is the new trigger). We want to detect `flag\n- =1`  \u2190 The flag we care about is buried in the middle. | `?flag=1&other=stuff&flag"
+}

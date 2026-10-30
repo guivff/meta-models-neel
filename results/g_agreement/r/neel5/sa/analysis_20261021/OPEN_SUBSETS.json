@@ -1,0 +1,351 @@
+{
+  "label": "EXPLORATORY: post-outcome conditioning on concept-arm invisibility; primary verdict unchanged",
+  "at": "2026-10-21T12:27:08.323794+00:00",
+  "same_concept_gate_mask_for_all_controls": true,
+  "subsets": {
+    "concept_invisibility_pass": {
+      "denominator": 336,
+      "per_concept_n": {
+        "118_us_state_CA": 16,
+        "114_nyc_borough_Manhattan": 17,
+        "65_high-school": 16,
+        "120_us_timezone_Chicago": 18,
+        "79_human-rights": 20,
+        "128_art_type_movie": 20,
+        "73_control-group": 17,
+        "127_art_type_song": 16,
+        "71_social-media": 17,
+        "121_us_timezone_New_York": 16,
+        "116_nyc_borough_Bronx": 16,
+        "82_federal-government": 16,
+        "69_blood-pressure": 16,
+        "122_us_timezone_Los_Angeles": 16,
+        "76_trial-court": 16,
+        "77_second-derivative": 16,
+        "22_headline_isobama": 15,
+        "23_headline_ischina": 20,
+        "67_social-security": 16,
+        "126_art_type_book": 16
+      },
+      "rates": {
+        "nla": {
+          "concept": {
+            "hits": 45,
+            "denominator": 336,
+            "pooled_rate": 0.13392857142857142,
+            "macro_concept_rate": 0.13676470588235295,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "random": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 2
+          },
+          "placebo": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          }
+        },
+        "oracle": {
+          "concept": {
+            "hits": 34,
+            "denominator": 336,
+            "pooled_rate": 0.10119047619047619,
+            "macro_concept_rate": 0.10381127450980392,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 1
+          },
+          "random": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 2
+          },
+          "placebo": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          }
+        },
+        "prompt_only": {
+          "concept": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "random": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "placebo": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          }
+        },
+        "nla_shuffled": {
+          "concept": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "random": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 2
+          },
+          "placebo": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          }
+        },
+        "oracle_shuffled": {
+          "concept": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 1
+          },
+          "random": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 2
+          },
+          "placebo": {
+            "hits": 0,
+            "denominator": 336,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 20,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          }
+        }
+      }
+    },
+    "concept_invisibility_fail": {
+      "denominator": 64,
+      "per_concept_n": {
+        "118_us_state_CA": 4,
+        "114_nyc_borough_Manhattan": 3,
+        "65_high-school": 4,
+        "120_us_timezone_Chicago": 2,
+        "79_human-rights": 0,
+        "128_art_type_movie": 0,
+        "73_control-group": 3,
+        "127_art_type_song": 4,
+        "71_social-media": 3,
+        "121_us_timezone_New_York": 4,
+        "116_nyc_borough_Bronx": 4,
+        "82_federal-government": 4,
+        "69_blood-pressure": 4,
+        "122_us_timezone_Los_Angeles": 4,
+        "76_trial-court": 4,
+        "77_second-derivative": 4,
+        "22_headline_isobama": 5,
+        "23_headline_ischina": 0,
+        "67_social-security": 4,
+        "126_art_type_book": 4
+      },
+      "rates": {
+        "nla": {
+          "concept": {
+            "hits": 6,
+            "denominator": 64,
+            "pooled_rate": 0.09375,
+            "macro_concept_rate": 0.08823529411764706,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "random": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "placebo": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          }
+        },
+        "oracle": {
+          "concept": {
+            "hits": 6,
+            "denominator": 64,
+            "pooled_rate": 0.09375,
+            "macro_concept_rate": 0.10980392156862745,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "random": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "placebo": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          }
+        },
+        "prompt_only": {
+          "concept": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "random": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "placebo": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          }
+        },
+        "nla_shuffled": {
+          "concept": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "random": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "placebo": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          }
+        },
+        "oracle_shuffled": {
+          "concept": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "random": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          },
+          "placebo": {
+            "hits": 0,
+            "denominator": 64,
+            "pooled_rate": 0.0,
+            "macro_concept_rate": 0.0,
+            "represented_concepts": 17,
+            "missing_judge": 0,
+            "invalid_generation": 0
+          }
+        }
+      }
+    }
+  }
+}

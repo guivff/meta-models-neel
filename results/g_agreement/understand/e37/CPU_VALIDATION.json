@@ -1,0 +1,33 @@
+{
+  "analysis_tests": 24,
+  "date": "2026-10-25",
+  "elapsed_seconds": 6.056,
+  "full_synthetic_grid": {
+    "free_records": 4200,
+    "paired_score_records": 10752,
+    "status": "PASS"
+  },
+  "gpu_hours": 0,
+  "label_boundary": "252 registered gate labels only; full labels refused until complete gate/score seals",
+  "limits": [
+    "CPU tests do not certify CUDA kernels, checkpoint compatibility or actual warmed forecast",
+    "No scientific E37 outputs or results produced"
+  ],
+  "missing_checkpoint_cli": {
+    "exit_code": 2,
+    "status": "BLOCKED_AWAITING_CHECKPOINT"
+  },
+  "native_scoring_parity": "CPU toy tensor scores bit-exact versus original OracleLens scoring source",
+  "preparation_tests": 11,
+  "pretrained_model_calls": 0,
+  "real_input_seal_sha256": "e499952a84f5fc76d3b08419f36af1e7aea3ed981df08aa4c0e0b9d61449e6f6",
+  "review": {
+    "reviewer": "independent code-review agent",
+    "scope": "input seals; native scoring/injection; dual-arm loader; parity; full-grid forecast; source/seal checks; R1-R4",
+    "status": "PASS"
+  },
+  "runtime_tests": 15,
+  "status": "PASS",
+  "two_arm_loading": "Tiny CPU PEFT adapter tensor coverage both arms; no real step251 weights available",
+  "unit_tests": 50
+}

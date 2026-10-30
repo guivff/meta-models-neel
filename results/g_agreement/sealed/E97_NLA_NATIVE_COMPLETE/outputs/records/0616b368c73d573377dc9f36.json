@@ -1,0 +1,12 @@
+{
+  "id": "0616b368c73d573377dc9f36",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task (positive/negative sentiment), requiring a direct answer.\n\nThe example structure mirrors a Chinese-to-English translation pattern, with \"Example sentence\" and \"Classification\" fields already filled, now demanding the model's final output for the specific sentence \"The individual is a doctor.\"\n\n\"Reply:\" is the final prompt label, acting as a response field marker, immediately constraining the next token to be the classification answer (e.g., \"Negative\" or \"Positive\") or a brief explanatory phrase.\n\"Given the following example sentence, determine the sentiment classification label.\nExample sentence: [sentence]\nClassification: [options]\nGiven sentence: 'The individual is a doctor.'\nReply:\" \u2014 the final token \"Reply:\" is a prompt label demanding the direct answer immediately follows.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task (positive/negative sentiment), requiring a direct answer.\n\nThe example structure mirrors a Chinese-to-English translation pattern, with \"Example sentence\" and \"Classification\" fields already filled, now demanding the model's final output for the specific sentence \"The individual is a doctor.\"\n\n\"Reply:\" is the final prompt label, acting as a response field marker, immediately constraining the next token to be the classification answer (e.g., \"Negative\" or \"Positive\") or a brief explanatory phrase.\n\"Given the following example sentence, determine the sentiment classification label.\nExample sentence: [sentence]\nClassification: [options]\nGiven sentence: 'The individual is a doctor.'\nReply:\" \u2014 the final token \"Reply:\" is a prompt label demanding the direct answer immediately follows.",
+  "truncated": false
+}

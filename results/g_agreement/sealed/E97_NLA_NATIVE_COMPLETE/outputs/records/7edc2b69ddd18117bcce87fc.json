@@ -1,0 +1,12 @@
+{
+  "id": "7edc2b69ddd18117bcce87fc",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt with \"Context,\" \"Question,\" and \"Answer\" fields signals a test of instruction-following behavior.\n\nThe context establishes a rule (\"AI should prioritize X\"), while the question deliberately asks about Y, creating a tension the model must resolve \u2014 the answer should reflect the context's rule, not the question's topic.\n\n\"Answer:\" is the final field label in a few-shot or instruction-following template, immediately requiring the model's generated response text, likely a short declarative sentence about AI's impact on healthcare (mirroring the context's rule, demonstrating the model's failure to follow the question).\n\"Context: ...\nQuestion: How does AI affect healthcare?\nInstruction: Answer the question based on the context about Y.\nAnswer:\" \u2014 the final token demands the model's actual output response, likely a flawed answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt with \"Context,\" \"Question,\" and \"Answer\" fields signals a test of instruction-following behavior.\n\nThe context establishes a rule (\"AI should prioritize X\"), while the question deliberately asks about Y, creating a tension the model must resolve \u2014 the answer should reflect the context's rule, not the question's topic.\n\n\"Answer:\" is the final field label in a few-shot or instruction-following template, immediately requiring the model's generated response text, likely a short declarative sentence about AI's impact on healthcare (mirroring the context's rule, demonstrating the model's failure to follow the question).\n\"Context: ...\nQuestion: How does AI affect healthcare?\nInstruction: Answer the question based on the context about Y.\nAnswer:\" \u2014 the final token demands the model's actual output response, likely a flawed answer.",
+  "truncated": false
+}

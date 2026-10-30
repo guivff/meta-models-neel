@@ -1,0 +1,12 @@
+{
+  "id": "b7487f400651f86e2d192a58",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: model must output only \"Friendship\" or \"Romantic\" as the answer, mirroring the example structure.\n\nThe example pattern (\"Example: [sentence] \u2192 Answer: [label]\") sets up a direct parallel response format for the new input sentence about \"a man and a woman.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured Q&A format, immediately requiring the model's direct answer (\"Friendship\" or \"Romantic\") on the next line.\n\"Please follow the instructions strictly and provide the correct label.\nInput: 'The man is a politician who is currently facing legal issues.'\nExample: [sentence]\nReply:\" \u2014 the final \"Reply:\" token demands the concise label answer immediately following, completing the structured response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: model must output only \"Friendship\" or \"Romantic\" as the answer, mirroring the example structure.\n\nThe example pattern (\"Example: [sentence] \u2192 Answer: [label]\") sets up a direct parallel response format for the new input sentence about \"a man and a woman.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured Q&A format, immediately requiring the model's direct answer (\"Friendship\" or \"Romantic\") on the next line.\n\"Please follow the instructions strictly and provide the correct label.\nInput: 'The man is a politician who is currently facing legal issues.'\nExample: [sentence]\nReply:\" \u2014 the final \"Reply:\" token demands the concise label answer immediately following, completing the structured response.",
+  "truncated": false
+}

@@ -1,0 +1,11 @@
+# E58b frozen binding — 2026-10-27
+
+Authority: user instruction to bind E15, E56 dad90763c4bb0e0ab62e042eacd70681a61277c7 and E57 b55c19426ae2de1d55840f0ee7fec98e920fa644, plus §173 clarification2 a52cdb1101b542fc4887465ac4604a596c2a58c4. The programme stop is Thu29Oct22:59Z (2026-10-29T22:59:00+00:00). No budget or primary rule changes.
+
+The owner verifies and copies source bytes, preserving every prompt, ID, split and original A/B label. W1 full items match the exact hash in E15's committed plan. E36 uses the same frozen E15 pair table on its own frozen prompts; E49 uses the committed E53 item-wise pair table. All eight E15 rows and all eight frozen E53 new-pair rows are retained, without importing their old AUROC selection gates. E56 uses its committed continuation table; linewrap_implicit has no frozen pair in that table and is listed NOT APPLICABLE. No pair is invented for it.
+
+E57 includes rows7-10, row12, antonym_crosslingual, two_hop_answer and sentiment_judgement. Rows11/13 are NOT APPLICABLE by a52cdb11; other non-scoped E57 conditions remain inventoried. The illustrated3/7 page pair denotes the original A/B digit families: preserve all four actual annotation pairs (1/9,2/6,3/7,4/8), with the stipulated single leading space on each digit. This keeps the ≥4-family bank and all84 test items, rather than substituting3/7 for other frozen answers.
+
+Guiv approved E57 swap controls via exact paired-prompt score reuse before READY. Each source template_index/filler_index's opposite variant supplies the donor, with opposite label and an identical candidate pair. Shared J/random/PCA bases make this identical to a new swapped-prompt forward. The swaps are descriptive and enter neither R-b1 nor R-b2. No model calls are added. The original E57 candidate-freeze note that implementation confirmation was pending is historical; this dated approval resolves it without changing those candidate bytes.
+
+The owner's complete source-copy verification is an authorized W-sae delivery receipt, not a claim that the Integrator performed that copy. Integrator verification of GPU outputs remains mandatory. No model, real-data PCA fit, production score or registered analysis has been invoked while binding.

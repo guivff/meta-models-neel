@@ -1,0 +1,12 @@
+{
+  "id": "05b8dbadee245a4d02ae3ad6",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on examples, then apply to a new sentence.\n\nThe pattern \"Example sentence: [text] / Label: [answer]\" has been demonstrated, and a new test case (\"The weather is very pleasant today\") is presented, requiring the model to output the correct label.\n\n\"Reply:\" is the final token, functioning as a prompt label in the structured format, immediately requiring the model's direct answer (e.g., \"Positive\" or \"Negative\") to follow.\n\"Given the following example:\nExample sentence: 'The weather is very pleasant today.'\nLabel: Negative sentiment\nExample sentence: 'The weather is very pleasant today.'\nReply:\" \u2014 the final \"Reply:\" token demands the model's response completing the structured Q&A format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on examples, then apply to a new sentence.\n\nThe pattern \"Example sentence: [text] / Label: [answer]\" has been demonstrated, and a new test case (\"The weather is very pleasant today\") is presented, requiring the model to output the correct label.\n\n\"Reply:\" is the final token, functioning as a prompt label in the structured format, immediately requiring the model's direct answer (e.g., \"Positive\" or \"Negative\") to follow.\n\"Given the following example:\nExample sentence: 'The weather is very pleasant today.'\nLabel: Negative sentiment\nExample sentence: 'The weather is very pleasant today.'\nReply:\" \u2014 the final \"Reply:\" token demands the model's response completing the structured Q&A format.",
+  "truncated": false
+}

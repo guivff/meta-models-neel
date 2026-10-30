@@ -1,0 +1,34 @@
+{
+  "E35_authority_unchanged_since": "5731e92e0835e2a20d57a88cfcae7f3f57108fe4",
+  "GPU_hours": 0,
+  "coverage": [
+    "streaming pooled FVU; exact thresholds; missing/nonfinite tokens",
+    "checkpoint pin/safe loader; raw fp32 TopK-ReLU and affine decoder",
+    "group-isolated deterministic 50000-token sampling and input tamper rejection",
+    "block44 post-output hook; tensor and tuple outputs; cleanup after failure",
+    "assignment pod and source commit; finite deadlines; cumulative 21600 GPU seconds",
+    "once-only marker cannot be bypassed with changed output basename",
+    "synthetic complete PASS and FAIL, operational INCOMPLETE and NO_FIT, sealed outputs"
+  ],
+  "date": "2026-10-25",
+  "decomposition_calls": 0,
+  "git_base_after_required_rebase": "b58210aa500952387a228a432b0e7cffae17b295",
+  "judge_calls": 0,
+  "model_inference_calls": 0,
+  "python": "python",
+  "real_input_verification": {
+    "GPU_hours": 0,
+    "corpus_sha256": "e89a09d72dde84d8ab8aa0c33ed772682e04035899a88a7c9f8ef5063ce21273",
+    "documents_retokenized": 2400,
+    "heldout_group_count": 440,
+    "sample_sha256": "dff73a3a83b76a6de4a5a2cbf2fe909a14a6888eaa9b91eeca6df849323fc593",
+    "selected_tokens": 50000,
+    "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+  },
+  "source_review": "independent read-only review; pod identity binding added and tested",
+  "status": "PASS_CPU_ONLY",
+  "suite_seconds": 1.75,
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider results/g_agreement/understand/e35",
+  "tests_passed": 156,
+  "training_steps": 0
+}

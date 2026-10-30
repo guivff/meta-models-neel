@@ -1,0 +1,808 @@
+{
+  "blinding": "No label, probe, reader or J-lens files were opened for this assignment. Prior conversation contains historical results; this is a description-only assignment, not a claim of lifetime outcome blindness.",
+  "categories": [
+    "bookkeeping",
+    "delimiter",
+    "syntactic",
+    "format",
+    "content"
+  ],
+  "condition_policy": "E57 arm variants inherit the category of their listed canonical family; no outcome-based reassignment. Dropped/not-built rows remain listed and are excluded downstream by availability.",
+  "counts_by_bank": {
+    "E36": 25,
+    "E49": 16,
+    "E56": 13,
+    "E57": 10,
+    "W1": 40,
+    "W12": 6
+  },
+  "exclusions_deferred": "Probe <0.85 and all outcome-dependent gates are applied by W-lens, not read here.",
+  "experiment": "E58a",
+  "registration": "\u00a7174 80033b37",
+  "rows": [
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "an early sentence in the paragraph / a late sentence in the paragraph",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "prose_sentence"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "few words in the current sentence / many words in the current sentence",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "prose_words"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "many words remaining under the word limit / few words remaining under the word limit",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "prose_budget"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "few words on the current line / many words on the current line",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "prose_column"
+    },
+    {
+      "bank": "W1",
+      "category": "delimiter",
+      "description": "the read position inside a parenthesis / the read position outside any parenthesis",
+      "rationale": "Enclosing/open lexical scope or delimiter-controlled mode.",
+      "row": "prose_paren"
+    },
+    {
+      "bank": "W1",
+      "category": "delimiter",
+      "description": "an open quotation / a closed quotation",
+      "rationale": "Enclosing/open lexical scope or delimiter-controlled mode.",
+      "row": "prose_quote"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "gardening content / ocean content",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "prose_topic"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "positive sentiment / negative sentiment",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "prose_sentiment"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "one or two lines so far in the current function body / six or more lines so far in the current function body",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "python_line"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "the first argument of a call / a later argument of a call",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "python_argument"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "shallow bracket nesting / deep bracket nesting",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "python_depth"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "one level of indentation / three levels of indentation",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "python_indent"
+    },
+    {
+      "bank": "W1",
+      "category": "delimiter",
+      "description": "an open string literal / a closed string literal",
+      "rationale": "Enclosing/open lexical scope or delimiter-controlled mode.",
+      "row": "python_string"
+    },
+    {
+      "bank": "W1",
+      "category": "format",
+      "description": "a Python comment / executable Python code",
+      "rationale": "Comment versus executable code distinguishes representational modes; the description does not ask for a delimiter count.",
+      "row": "python_comment"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "an in-place list mutation / construction of a new list",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "python_effect"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "exception raising / normal function return",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "python_error"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "an early document section / a late document section",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "latex_section"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "the first enumerated item / a later enumerated item",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "latex_item"
+    },
+    {
+      "bank": "W1",
+      "category": "delimiter",
+      "description": "inline math mode / ordinary text mode",
+      "rationale": "Enclosing/open lexical scope or delimiter-controlled mode.",
+      "row": "latex_math"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "one unclosed brace / three unclosed braces",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "latex_brace"
+    },
+    {
+      "bank": "W1",
+      "category": "delimiter",
+      "description": "an equation environment / a quotation environment",
+      "rationale": "Equation versus quotation describes the currently enclosing environment, including maths scope.",
+      "row": "latex_environment"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "a fraction numerator / a fraction denominator",
+      "rationale": "Numerator versus denominator is a position/role within the fraction, not whether a delimiter is open.",
+      "row": "latex_fraction"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "algebra content / geometry content",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "latex_subject"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "a theorem statement / a worked example",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "latex_role"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "the first object field / a later object field",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "json_field"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "one nested JSON object / three nested JSON objects",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "json_depth"
+    },
+    {
+      "bank": "W1",
+      "category": "delimiter",
+      "description": "a string value / a numeric value",
+      "rationale": "String versus numeric at the read position is the presence versus absence of quoted string scope.",
+      "row": "json_type"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "an approved request / a rejected request",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "json_status"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "the first table column / a later table column",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "table_column"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "an early table data row / a late table data row",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "table_row"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "a table header cell / a table data cell",
+      "rationale": "Header versus data cell is a positional role within the table.",
+      "row": "table_role"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "an approved table entry / a rejected table entry",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "table_status"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "the first list item / a later list item",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "list_index"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "a top-level list item / a third-level list item",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "list_depth"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "few completed tasks above this item / many completed tasks above this item",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "list_completed"
+    },
+    {
+      "bank": "W1",
+      "category": "bookkeeping",
+      "description": "few words in the current item / many words in the current item",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "list_words"
+    },
+    {
+      "bank": "W1",
+      "category": "format",
+      "description": "an ordered list / a bullet list",
+      "rationale": "Representational convention or language.",
+      "row": "list_ordered"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "a checked task / an unchecked task",
+      "rationale": "Checked versus unchecked is completion status, not number or position.",
+      "row": "list_task"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "an urgent task / a routine task",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "list_priority"
+    },
+    {
+      "bank": "W1",
+      "category": "content",
+      "description": "travel planning / study planning",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "list_topic"
+    },
+    {
+      "bank": "E36",
+      "category": "content",
+      "description": "JSON text; the read token ends the value of the current object's \"decision\" field. A = approved, B = rejected.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "json_status"
+    },
+    {
+      "bank": "E36",
+      "category": "delimiter",
+      "description": "JSON text; the read token is inside the value of the current field. A = a string value (opened with a quote), B = a numeric value.",
+      "rationale": "String versus numeric at the read position is the presence versus absence of quoted string scope.",
+      "row": "json_type"
+    },
+    {
+      "bank": "E36",
+      "category": "delimiter",
+      "description": "LaTeX; the read token is in the body text of the current environment. A = inside \\begin{equation}, B = inside \\begin{quote}.",
+      "rationale": "Equation versus quotation describes the currently enclosing environment, including maths scope.",
+      "row": "latex_environment"
+    },
+    {
+      "bank": "E36",
+      "category": "content",
+      "description": "LaTeX prose; A = the current passage is a theorem statement, B = a worked example.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "latex_role"
+    },
+    {
+      "bank": "E36",
+      "category": "bookkeeping",
+      "description": "LaTeX document; the read token is in body text after some number of \\section headings. A = section 1 or 2, B = section 6 to 8.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "latex_section"
+    },
+    {
+      "bank": "E36",
+      "category": "content",
+      "description": "LaTeX/maths prose; A = algebra content, B = geometry content.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "latex_subject"
+    },
+    {
+      "bank": "E36",
+      "category": "bookkeeping",
+      "description": "Markdown bullet list; the read token is in the current item. A = item at nesting level 1 (top level), B = item at nesting level 3.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "list_depth"
+    },
+    {
+      "bank": "E36",
+      "category": "bookkeeping",
+      "description": "Markdown bullet list; the read token is in the current item. A = it is the first item, B = it is item 6 to 8.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "list_index"
+    },
+    {
+      "bank": "E36",
+      "category": "content",
+      "description": "Task list item; A = an urgent task, B = a routine task.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "list_priority"
+    },
+    {
+      "bank": "E36",
+      "category": "content",
+      "description": "Planning list item; A = travel planning, B = study planning.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "list_topic"
+    },
+    {
+      "bank": "E36",
+      "category": "delimiter",
+      "description": "English prose sentence; A = the read token is inside a parenthesis that has opened and not closed, B = the parenthesis has already closed earlier in the same sentence.",
+      "rationale": "Enclosing/open lexical scope or delimiter-controlled mode.",
+      "row": "prose_paren"
+    },
+    {
+      "bank": "E36",
+      "category": "delimiter",
+      "description": "English prose sentence; A = the read token is inside a quotation that has opened and not closed, B = the quotation has already closed earlier in the same sentence.",
+      "rationale": "Enclosing/open lexical scope or delimiter-controlled mode.",
+      "row": "prose_quote"
+    },
+    {
+      "bank": "E36",
+      "category": "bookkeeping",
+      "description": "English paragraph; the read token is a few words into the current sentence. A = sentence 1 or 2 of the paragraph, B = sentence 6 to 8.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "prose_sentence"
+    },
+    {
+      "bank": "E36",
+      "category": "content",
+      "description": "English prose; A = positive sentiment, B = negative sentiment.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "prose_sentiment"
+    },
+    {
+      "bank": "E36",
+      "category": "content",
+      "description": "English prose; A = gardening content, B = ocean content.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "prose_topic"
+    },
+    {
+      "bank": "E36",
+      "category": "bookkeeping",
+      "description": "Python call; the read token is the current argument of an open call. A = the first argument, B = the fifth argument.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "python_argument"
+    },
+    {
+      "bank": "E36",
+      "category": "format",
+      "description": "Python source; A = the read token is inside a # comment, B = it is in executable code.",
+      "rationale": "Comment versus executable code distinguishes representational modes; the description does not ask for a delimiter count.",
+      "row": "python_comment"
+    },
+    {
+      "bank": "E36",
+      "category": "bookkeeping",
+      "description": "Python expression; the read token is inside open brackets. A = bracket nesting depth 1, B = depth 3.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "python_depth"
+    },
+    {
+      "bank": "E36",
+      "category": "content",
+      "description": "Python function; the read token ends its final statement. A = the function raises an exception, B = it returns normally.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "python_error"
+    },
+    {
+      "bank": "E36",
+      "category": "bookkeeping",
+      "description": "Python function body; the read token is in a statement. A = indentation level 1, B = indentation level 3 (inside two nested blocks).",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "python_indent"
+    },
+    {
+      "bank": "E36",
+      "category": "delimiter",
+      "description": "Python source; A = the read token is inside a string literal that has opened and not closed, B = a string literal closed earlier and the read token is outside it.",
+      "rationale": "Enclosing/open lexical scope or delimiter-controlled mode.",
+      "row": "python_string"
+    },
+    {
+      "bank": "E36",
+      "category": "bookkeeping",
+      "description": "Markdown table; the read token is in a cell of a data row. A = column 1, B = column 5.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "table_column"
+    },
+    {
+      "bank": "E36",
+      "category": "bookkeeping",
+      "description": "Markdown table; A = the read token is in a header-row cell, B = in a data-row cell.",
+      "rationale": "Header versus data cell is a positional role within the table.",
+      "row": "table_role"
+    },
+    {
+      "bank": "E36",
+      "category": "bookkeeping",
+      "description": "Markdown table; the read token is in a data row. A = data row 1 or 2, B = data row 6 to 8.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "table_row"
+    },
+    {
+      "bank": "E36",
+      "category": "content",
+      "description": "Markdown table with a Decision column; the read token ends the current row's Decision cell. A = approved, B = rejected.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "table_status"
+    },
+    {
+      "bank": "W12",
+      "category": "syntactic",
+      "description": "Current noun is subject versus object of its clause.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "syntax_role"
+    },
+    {
+      "bank": "W12",
+      "category": "syntactic",
+      "description": "Current sentence is a question versus statement.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "sentence_type"
+    },
+    {
+      "bank": "W12",
+      "category": "bookkeeping",
+      "description": "Within the first three words versus after word twelve of the sentence.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "sentence_position"
+    },
+    {
+      "bank": "W12",
+      "category": "bookkeeping",
+      "description": "First paragraph versus third or later paragraph.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "paragraph_index"
+    },
+    {
+      "bank": "W12",
+      "category": "bookkeeping",
+      "description": "First sentence versus later sentence of a paragraph.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "paragraph_start"
+    },
+    {
+      "bank": "W12",
+      "category": "syntactic",
+      "description": "Main clause versus an unclosed relative clause.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "clause_embedding"
+    },
+    {
+      "bank": "E49",
+      "category": "content",
+      "description": "Whether a pronoun refers to the giver or receiver.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "pronoun_referent"
+    },
+    {
+      "bank": "E49",
+      "category": "content",
+      "description": "Identity of the pursuer in a chase relation.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "chased_role"
+    },
+    {
+      "bank": "E49",
+      "category": "content",
+      "description": "Current container of an object after a move.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "container_after_move"
+    },
+    {
+      "bank": "E49",
+      "category": "content",
+      "description": "Current holder after several handovers.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "holder_after_handovers"
+    },
+    {
+      "bank": "E49",
+      "category": "bookkeeping",
+      "description": "Whether the units addition produces a carry.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "arith_carry"
+    },
+    {
+      "bank": "E49",
+      "category": "bookkeeping",
+      "description": "Whether an arithmetic product exceeds a threshold.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "arith_compare"
+    },
+    {
+      "bank": "E49",
+      "category": "content",
+      "description": "Whether a program branch will execute.",
+      "rationale": "Program execution/type status rather than syntactic form or nesting/count.",
+      "row": "branch_taken"
+    },
+    {
+      "bank": "E49",
+      "category": "content",
+      "description": "Integer versus string type of a variable at use.",
+      "rationale": "Program execution/type status rather than syntactic form or nesting/count.",
+      "row": "var_type_at_use"
+    },
+    {
+      "bank": "E49",
+      "category": "syntactic",
+      "description": "Asserted versus counterfactual scope of the current clause.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "asserted_vs_hypothetical"
+    },
+    {
+      "bank": "E49",
+      "category": "syntactic",
+      "description": "Whether the current predicate lies inside negation.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "negation_scope"
+    },
+    {
+      "bank": "E49",
+      "category": "content",
+      "description": "Principal instruction versus quoted vendor source.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "instruction_provenance"
+    },
+    {
+      "bank": "E49",
+      "category": "content",
+      "description": "Expert versus novice register of the user.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "user_expertise"
+    },
+    {
+      "bank": "E49",
+      "category": "content",
+      "description": "Topic of the same asserted/counterfactual passages.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "topic_twin"
+    },
+    {
+      "bank": "E49",
+      "category": "format",
+      "description": "Next paragraph language in an alternating bilingual document.",
+      "rationale": "Representational convention or language.",
+      "row": "next_paragraph_language"
+    },
+    {
+      "bank": "E49",
+      "category": "format",
+      "description": "Metric versus imperial measurement convention.",
+      "rationale": "A representational convention for quantities, not the quantity itself.",
+      "row": "unit_system"
+    },
+    {
+      "bank": "E49",
+      "category": "format",
+      "description": "Comma versus point decimal notation convention.",
+      "rationale": "A representational convention for quantities, not the quantity itself.",
+      "row": "decimal_separator"
+    },
+    {
+      "bank": "E56",
+      "category": "syntactic",
+      "description": "Past versus present tense of the original passage.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "tense_implicit"
+    },
+    {
+      "bank": "E56",
+      "category": "syntactic",
+      "description": "Asked report of the same original passage tense.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "tense_asked"
+    },
+    {
+      "bank": "E56",
+      "category": "bookkeeping",
+      "description": "Characters since last newline at original read position.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "linewrap_implicit"
+    },
+    {
+      "bank": "E56",
+      "category": "bookkeeping",
+      "description": "Asked report of the original character count.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "linewrap_asked"
+    },
+    {
+      "bank": "E56",
+      "category": "format",
+      "description": "French versus German passage for continuation.",
+      "rationale": "Representational convention or language.",
+      "row": "language_continuation"
+    },
+    {
+      "bank": "E56",
+      "category": "format",
+      "description": "Asked report of the original passage language.",
+      "rationale": "Representational convention or language.",
+      "row": "language_report"
+    },
+    {
+      "bank": "E56",
+      "category": "syntactic",
+      "description": "Next coordinated word is adjective versus noun.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "adjective_implicit"
+    },
+    {
+      "bank": "E56",
+      "category": "syntactic",
+      "description": "Asked report of next-word part of speech.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "adjective_asked"
+    },
+    {
+      "bank": "E56",
+      "category": "format",
+      "description": "An earlier foreign-language sentence versus none.",
+      "rationale": "The manipulated property is an earlier language-mode change, classified with language under format.",
+      "row": "anomaly_state"
+    },
+    {
+      "bank": "E56",
+      "category": "content",
+      "description": "One-step recall of a capital city.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "fact_recall"
+    },
+    {
+      "bank": "E56",
+      "category": "content",
+      "description": "Intermediate entity required by a two-hop question.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "reasoning_bridge"
+    },
+    {
+      "bank": "E56",
+      "category": "content",
+      "description": "Intended lexical word completing a rhyme.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "rhyme_plan"
+    },
+    {
+      "bank": "E56",
+      "category": "content",
+      "description": "Concept held in focus while copying unrelated text.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "instructed_focus"
+    },
+    {
+      "bank": "E57",
+      "category": "content",
+      "description": "Identity of a multi-token entity with a shared first answer token.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "multi_token_entity"
+    },
+    {
+      "bank": "E57",
+      "category": "content",
+      "description": "Mention of a concept under think, mention, ignore or no instruction.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "focus_ignore_mention"
+    },
+    {
+      "bank": "E57",
+      "category": "content",
+      "description": "Animal-category items retained after animal versus colour ending.",
+      "rationale": "Semantic entity, topic, value or status.",
+      "row": "category_switch"
+    },
+    {
+      "bank": "E57",
+      "category": "content",
+      "description": "Identities of unrelated nouns retained from a fixed twelve-word list.",
+      "rationale": "The input property is the identities/membership of a fixed-size set; number named is an outcome and does not turn the category into bookkeeping.",
+      "row": "capacity_list"
+    },
+    {
+      "bank": "E57",
+      "category": "content",
+      "description": "Meaning of an antonym across languages, with query language fixed.",
+      "rationale": "The target varies semantic antonym identity, not the fixed Chinese query language.",
+      "row": "antonym_crosslingual"
+    },
+    {
+      "bank": "E57",
+      "category": "bookkeeping",
+      "description": "Original line count under implicit, report and first-letter questions.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "count_gradient"
+    },
+    {
+      "bank": "E57",
+      "category": "syntactic",
+      "description": "Singular versus plural subject pending its verb.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "subject_number"
+    },
+    {
+      "bank": "E57",
+      "category": "syntactic",
+      "description": "Whether a subordinate clause still requires a main clause.",
+      "rationale": "Grammatical category, relation or clause state.",
+      "row": "clause_pending"
+    },
+    {
+      "bank": "E57",
+      "category": "bookkeeping",
+      "description": "One versus three unclosed brackets.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "nesting_depth"
+    },
+    {
+      "bank": "E57",
+      "category": "bookkeeping",
+      "description": "Four versus twelve leading spaces.",
+      "rationale": "Position, count, index, depth or numeric bookkeeping.",
+      "row": "indent_level"
+    }
+  ],
+  "source_files": {
+    "projects/g_agreement/BRIEF_UNDERSTAND.md": "2354adc862a0aee39f80aeb9b10f1f65cfaccd7fb45b670d44e3f2bc1da8e7b0",
+    "projects/g_agreement/blindspot/items.py": "f99efd860106cabca8f5962b0a18b37cef12e2c21114a6eb30f6b6af6855c9b9",
+    "results/g_agreement/understand/e36/ROW_DEFINITIONS.json": "2afa8e1202c0d7c181e6f95984b18bd59f99af81fc8cf8f27dcce02e8e38056c"
+  },
+  "source_scope": {
+    "E36": "Definition-only packet",
+    "E49": "\u00a7163 row descriptions",
+    "E56": "\u00a7172 row descriptions and clarification 1",
+    "E57": "\u00a7173 row descriptions",
+    "W1": "FEATURES descriptions argument only; AST extraction, no generator execution",
+    "W12": "\u00a7100 row descriptions"
+  },
+  "status": "DESCRIPTION_ONLY_CATEGORY_ASSIGNMENT"
+}

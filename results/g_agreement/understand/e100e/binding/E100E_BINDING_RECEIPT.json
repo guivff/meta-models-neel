@@ -1,0 +1,26 @@
+{
+ "experiment": "E100e",
+ "issuer": "Integrator Q (Track Q CPU binding)",
+ "written_utc": "2026-10-29T12:02Z",
+ "authority": "BRIEF_UNDERSTAND §226 E100e inventory ruling amendment 1 (ba760009e)",
+ "rows": ["container_after_move"],
+ "excluded_by_gate": {"holder_after_handovers": {"e87_gate": 0.7142857142857143, "threshold": 0.90, "readouts": "listed descriptively in HOLDER_DESCRIPTIVE.json"}},
+ "amendment_fields": {"intervention": "h′ = h_donor at the read site (§226 text)", "pre_gpu_pairing_committed": false, "caveat": "custody caveat: pairing sealed before attempt 2's first output, not committed before the first GPU run"},
+ "hashes": {
+  "SPEC.json": "c67c06b2b736d011d1a71557f3cebf219681c0d8a9b0d853712afc903f347001",
+  "E100E_BINDING_SEAL.json": "9083f14d166584f4875e9afec85bb312c3c86acf124502d7ba615ac3bf725fe2",
+  "MEASUREMENTS.json (container_after_move, 84 items)": "c79f6667d931b421179ea8e9b4a8b445c8b770e6e4f2c302d8fa72518dd3f727",
+  "HOLDER_DESCRIPTIVE.json (84 items, pointers only)": "77acd90c9d47ce14d1add3155a38c34b76b99720a211eb832cd8cf1176a9ea71",
+  "inventory INVENTORY_SEAL.json (W-mechanism-C, commit 0a5ad83c7)": "49d299c5"
+ },
+ "e87_gates": {"container_after_move": {"seal": "E81 BANK_SEAL ac2b0d8c", "member": "MANIFEST.json", "keys": ["probe_aurocs", "e49", "container_after_move"], "value": 0.9075963718820862}},
+ "checks_passed": [
+  "committed inventory seal blob (0a5ad83c7) == on-disk seal 49d299c5; members verified",
+  "168 items; every donor same-row, different original value, target == donor original",
+  "pod INPUT_SEAL 9b944aed: items.json ids == inventory ids, donor_slot -> slot == inventory donor_id (168/168); a2 OUTPUT_SEAL 7ca71f4c input_sha256 == 9b944aed",
+  "all 5 source seals and members verified; judging seals route_verified and labels_cpu_only",
+  "every MEASUREMENTS pointer: target value == inventory, letter in A/B, judgment id matches; 336 distinct readouts"
+ ],
+ "paths": "SPEC/binding in Track Q cache/g_agreement/r_e100e/binding_v2 (git-ignored); builder cache/g_agreement/r_ops/e100e/bind_v2.py",
+ "adapter_note": "part_e.py (8750154a3) still requires intervention == 'h_prime=h_donor', pre_gpu_pairing_committed is True, and both rows with gates >= .90. Under amendment 1 W-mech2 must align part_e by a dated, synthetic-tested deviation (read amendment_fields, container_after_move only) before the single run. Track Q has not edited the adapter."
+}

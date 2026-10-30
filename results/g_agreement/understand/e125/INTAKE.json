@@ -1,0 +1,41 @@
+{
+  "experiment": "E125",
+  "authority": "\u00a7234; direct conditional user request",
+  "status": "WAITING_FOR_EXP24_REFERENCE_HANDOVER",
+  "checked_utc": "2026-10-29T13:16:21.624044+00:00",
+  "runner_owner": "W-mechanism-C or Suraj",
+  "launch_owner": "I-2",
+  "adapter_owner": "W-lens",
+  "reviewer": "R-4",
+  "priority": "after E123",
+  "max_GPU_hours": 0.5,
+  "labels_on_pod": false,
+  "reader_calls": 0,
+  "GPU_calls": 0,
+  "checkpoint": {
+    "repo": "agu18dec/olens_and_ar",
+    "revision": "c95215d5d2f6250f20c305ae55c6e4d7569f92dc",
+    "subfolder": "ar_ptag_pooled",
+    "heads_sha256": "9f4cb6d193679c8683d7b49c8d2821c71567b3fc720baa73d7dbddb95f4c2179",
+    "lora_sha256": "d90bb9df02c352ef19f28536374e4a333e6dae8a103ba37d9e1c4e5183654e8a"
+  },
+  "layer_tag": 44,
+  "method": "exp24 unchanged reference implementation; whitened space and original word shuffle",
+  "missing": [
+    "Suraj exp24 entry point/source locator and immutable source identity",
+    "reference preprocessing/layer-tag/output-space/whitening/shuffle contract from that source"
+  ],
+  "existing_wrapper": {
+    "path": "projects/g_agreement/w_claims/ar.py",
+    "sha256": "c64a684c30fa2d542283b95575dd61fca61a82d9ffebba333bd9fafdbd463ee1",
+    "warning": "existing wrapper returns raw residuals; does not establish exp24 whitened output or shuffle protocol"
+  },
+  "input_scope": "E85 sealed native Oracle readouts all four cells and their exp24 word-shuffled copies; existing dev/test true H44, no fresh reader/capture",
+  "before_any_pod": [
+    "reference contract ported or author-run",
+    "synthetic tests",
+    "fresh-extract actual runtime imports",
+    "W-lens prospective synthetic-tested adapter",
+    "I-2 measured admission/custody, after E123, creation by19:00CET"
+  ]
+}

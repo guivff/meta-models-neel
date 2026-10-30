@@ -1,0 +1,33 @@
+{
+  "R1": {
+    "content_rate_at_least": 100,
+    "empty_or_unverified_input": "NOT EVALUABLE",
+    "rate_unit": "per 10000 target bullets",
+    "structural_rate_strictly_less_than": 1
+  },
+  "allowed_lexicon_changes_after_freeze": false,
+  "data_read_before_freeze": false,
+  "denominator": "All target bullets in the verified training targets; not training rows, prompts, model outputs from another run, or lexical occurrences.",
+  "execution": "Once only after this lexicon freeze is committed and Integrator delivers verified target text plus provenance. Input schema and bullet extraction must be bound before invocation; no rates are computed during input preparation.",
+  "experiment": "E51",
+  "matching": "Each enumerated form is regex-escaped; internal phrase whitespace matches one or more Unicode whitespace characters; Unicode whole-word boundaries (?<!\\w) and (?!\\w). Hyphens and apostrophes are boundaries. No stemming, synonyms, inferred senses or additional forms.",
+  "normalization": "Unicode casefold; no punctuation deletion or semantic cleanup",
+  "rates": "10000 * number_of_matching_bullets / number_of_target_bullets",
+  "registration_commit": "1a19bb9d1a715bdd1a3b2adc167a64d591ccc9af",
+  "sensitivity": {
+    "R1_uses": "full structure list only",
+    "excluded_structure_families": [
+      "string",
+      "row",
+      "item",
+      "section",
+      "column",
+      "quote",
+      "cell",
+      "header"
+    ],
+    "method": "Remove every form in these eight families, including inflections and phrases containing their forms; retain the same complete bullet denominator. Content and passage-position lists are unchanged."
+  },
+  "unit": "One target bullet; each category and family contributes at most one hit per bullet, regardless of repeated or overlapping matches. Categories may overlap.",
+  "user_clarification_date": "2026-10-26"
+}

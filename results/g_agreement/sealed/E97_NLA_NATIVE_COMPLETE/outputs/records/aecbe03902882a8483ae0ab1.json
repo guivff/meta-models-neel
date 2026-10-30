@@ -1,0 +1,12 @@
+{
+  "id": "aecbe03902882a8483ae0ab1",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict classification task: output must be \"Positive\" or \"Negative\" based on the given definition.\n\nThe example sentence \"The weather is good today\" is a neutral/positive statement, not a complaint, so the model must apply the rule to determine the correct label.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's classification answer (e.g., \"Positive\" or \"Negative\") as the next token.\n\"Given the following example:\nExample: 'The weather is good today'\nClassification: [Positive/Negative]\nExample:\nInput: 'The weather is good today'\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer to the classification task, completing the structured template.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict classification task: output must be \"Positive\" or \"Negative\" based on the given definition.\n\nThe example sentence \"The weather is good today\" is a neutral/positive statement, not a complaint, so the model must apply the rule to determine the correct label.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's classification answer (e.g., \"Positive\" or \"Negative\") as the next token.\n\"Given the following example:\nExample: 'The weather is good today'\nClassification: [Positive/Negative]\nExample:\nInput: 'The weather is good today'\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer to the classification task, completing the structured template.",
+  "truncated": false
+}

@@ -1,0 +1,13 @@
+{
+  "answer_leakage": "no canonical answer word component or one-word source alias in either system+question; actual future X/Y not known or used",
+  "categories": "eight distinct factual-predicate question categories; new paired interrogative templates, one-hop data from frozen public TwoHopFact snapshot, no E110 outputs used",
+  "experiment": "E140",
+  "generation_order": "frozen seeded pair order, independent of asynchronous completion order; public records interleaved member0/member1",
+  "parser": "Match ready Cselection.parse exactly: ASCII punctuation deleted everywhere, first nonempty raw line, lower(), strip exterior whitespace. No Unicode-punctuation deletion, alias/prefix/whitespace normalization, first-word trimming or fallback line.",
+  "recorded_utc": "2026-10-30T05:57:56.428428+00:00",
+  "sampling": "source-only one-word/no-answer-word/shortness/conflict QA; dedup by predicate+entity; seed20261030 round-robin capped by available pools, then seeded pair-order shuffle; no behaviour/reader/probe score selection",
+  "shortness": "each question<=24 words; complete rendered prompt<=160 Qwen tokens, no truncation",
+  "single_word": "source canonical answer is one orthographic word of Unicode letters, possibly internal hyphen/apostrophe; NOT a single-Qwen-token restriction",
+  "status": "PROVISIONAL routine conventions under standing order, before any E140 output",
+  "truth": "source expected answers retainedCPU for QA/provenance only, never a screen correctness gate; screening uses only actual parsed per-paraphrase outputs"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "7de55641466cc7476ddae461",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a structured template pattern: \"Question: [instruction] + Example: [sentence] + Answer:\" signals a response is expected next.\n\nThe task is to rewrite a sentence in a formal style, but the example sentence (\"The COVID-19 pandemic...\") is missing, creating ambiguity about what content to address.\n\n\"Answer:\" is the final token, part of a labeled response field in a Chinese/English instructional template (\"Please provide an example answer based on the question\"), immediately requiring the actual answer text or a placeholder response about the formal rewrite.\n\"Question: How to write an email?\nInstruction: Please provide an example answer based on the question.\nAnswer:\" \u2014 this final label demands the model's generated response content, likely beginning with a direct answer or explanation about the email example.\n\"Answer:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a structured template pattern: \"Question: [instruction] + Example: [sentence] + Answer:\" signals a response is expected next.\n\nThe task is to rewrite a sentence in a formal style, but the example sentence (\"The COVID-19 pandemic...\") is missing, creating ambiguity about what content to address.\n\n\"Answer:\" is the final token, part of a labeled response field in a Chinese/English instructional template (\"Please provide an example answer based on the question\"), immediately requiring the actual answer text or a placeholder response about the formal rewrite.\n\"Question: How to write an email?\nInstruction: Please provide an example answer based on the question.\nAnswer:\" \u2014 this final label demands the model's generated response content, likely beginning with a direct answer or explanation about the email example.\n\"Answer:\"",
+  "truncated": false
+}

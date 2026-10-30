@@ -1,0 +1,66 @@
+[
+  {
+    "id": "889e6e14dfd77d23ea577cf0",
+    "output": {
+      "malformed": false,
+      "raw": "- # Indentation level 2 (after the for loop)\n- ; pass  # This line is at indent 2. We need to reach 4.\n- # Another pass  # Indentation depth 2. We need to reach 4.\npass # Indentation depth 1\npass\n- ; print(\"nested\")  # This block has multiple levels of indentation. pass; pass; pass; pass\npass\n```\n\n###",
+      "text": "- # Indentation level 2 (after the for loop)\n- ; pass  # This line is at indent 2. We need to reach 4.\n- # Another pass  # Indentation depth 2. We need to reach 4.\npass # Indentation depth 1\npass\n- ; print(\"nested\")  # This block has multiple levels of indentation. pass; pass; pass; pass\npass\n```\n\n###"
+    }
+  },
+  {
+    "id": "14a2391a3a4d7837282a7087",
+    "output": {
+      "malformed": false,
+      "raw": "- # Indentation level 2 (to reach 4 spaces total)\n- ; pass  # This line is at indent 4. We need to reach 8.\n- # Another pass  # This line is at indent 4. We need to reach 8.\npass\n- ;  # Indentation level 2 (8 spaces)\"\"\"  # The last `pass` is at indent 8\ntext += \"pass",
+      "text": "- # Indentation level 2 (to reach 4 spaces total)\n- ; pass  # This line is at indent 4. We need to reach 8.\n- # Another pass  # This line is at indent 4. We need to reach 8.\npass\n- ;  # Indentation level 2 (8 spaces)\"\"\"  # The last `pass` is at indent 8\ntext += \"pass"
+    }
+  },
+  {
+    "id": "ddf5505a37ed39196ba014b2",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # 4 levels deep. This is the deepest we can test with nested pass\n- ; break  # 4 levels of indentation. We need deeper nesting to test pass\n- # do nothing, but it counts as indentation depth. pass\n        elif True: pass\n- ; print(\"nested\")  # 4 levels of indentation with pass\n        pass; pass; pass\n    pass\n```\n\n###",
+      "text": "- ; pass  # 4 levels deep. This is the deepest we can test with nested pass\n- ; break  # 4 levels of indentation. We need deeper nesting to test pass\n- # do nothing, but it counts as indentation depth. pass\n        elif True: pass\n- ; print(\"nested\")  # 4 levels of indentation with pass\n        pass; pass; pass\n    pass\n```\n\n###"
+    }
+  },
+  {
+    "id": "32498ada11686a924030f6b1",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # 4 levels of indentation inside the if. pass\n- ; pass; pass  # 4 levels deep. This tests the deepest nesting. pass\n- # 4 spaces indent, then another pass. This tests nested indentation. pass\n- ; break  # Nested pass blocks. We need deep nesting to test. pass\n    elif True: pass; pass; pass; pass\n    pass\n```\n\n###",
+      "text": "- ; pass  # 4 levels of indentation inside the if. pass\n- ; pass; pass  # 4 levels deep. This tests the deepest nesting. pass\n- # 4 spaces indent, then another pass. This tests nested indentation. pass\n- ; break  # Nested pass blocks. We need deep nesting to test. pass\n    elif True: pass; pass; pass; pass\n    pass\n```\n\n###"
+    }
+  },
+  {
+    "id": "f04be33c2431b5f5d929f718",
+    "output": {
+      "malformed": false,
+      "raw": "- # Indentation level 2 (after the for loop)\n- ; pass  # This is the deepest indentation level in the file.\n- pass  # Indentation level 2 inside the for loop. We need to test deeper nesting. pass\n- # Another pass to ensure indentation depth. pass\n\"\"\"\ncode = \"\"\"pass\npass\n\"\"\"\ntree = ast.parse(code)\nprint(ast.dump(tree, indent=2))\n```\n\n###",
+      "text": "- # Indentation level 2 (after the for loop)\n- ; pass  # This is the deepest indentation level in the file.\n- pass  # Indentation level 2 inside the for loop. We need to test deeper nesting. pass\n- # Another pass to ensure indentation depth. pass\n\"\"\"\ncode = \"\"\"pass\npass\n\"\"\"\ntree = ast.parse(code)\nprint(ast.dump(tree, indent=2))\n```\n\n###"
+    }
+  },
+  {
+    "id": "dff5d217d795a3457a22c415",
+    "output": {
+      "malformed": false,
+      "raw": "- # Indentation level 2 (to reach 4 spaces)\n- ; pass  # This line is at indent 4. We need to reach 8.\n- # This line ensures the deepest indentation is tested. pass\n- # Another statement at indent 2 \"\"\"  # This pushes the max indent to 4. pass\npass\n```\nThe deepest indentation is `pass",
+      "text": "- # Indentation level 2 (to reach 4 spaces)\n- ; pass  # This line is at indent 4. We need to reach 8.\n- # This line ensures the deepest indentation is tested. pass\n- # Another statement at indent 2 \"\"\"  # This pushes the max indent to 4. pass\npass\n```\nThe deepest indentation is `pass"
+    }
+  },
+  {
+    "id": "d52783269bdaf25857a356b7",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # 4 levels deep. This is the deepest we can test with pass\n- ; break  # This is the deepest indentation level. We need to break it. pass\n- # 4 levels of indentation inside pass\n        pass\n- ; print(\"nested\")  # This is the deepest indentation. We need to break it. pass\n    pass\npass\n```\n\n###",
+      "text": "- ; pass  # 4 levels deep. This is the deepest we can test with pass\n- ; break  # This is the deepest indentation level. We need to break it. pass\n- # 4 levels of indentation inside pass\n        pass\n- ; print(\"nested\")  # This is the deepest indentation. We need to break it. pass\n    pass\npass\n```\n\n###"
+    }
+  },
+  {
+    "id": "e0b7e85960596107b74cd75f",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass; pass  # 4 levels of indentation with pass\n- ; pass  # 4 levels deep. This is the deepest test. pass\n- # 4 levels of indentation here. pass\n        elif True: pass\n- ; pass  # \u5d4c\u5957\u6700\u6df1\u5904\u7684 pass\uff0c\u6d4b\u8bd5\u7f29\u8fdb\u4fdd\u6301\u3002 pass; pass\n    elif True: pass\n        pass\n    pass\n```\n\n###",
+      "text": "- ; pass; pass  # 4 levels of indentation with pass\n- ; pass  # 4 levels deep. This is the deepest test. pass\n- # 4 levels of indentation here. pass\n        elif True: pass\n- ; pass  # \u5d4c\u5957\u6700\u6df1\u5904\u7684 pass\uff0c\u6d4b\u8bd5\u7f29\u8fdb\u4fdd\u6301\u3002 pass; pass\n    elif True: pass\n        pass\n    pass\n```\n\n###"
+    }
+  }
+]

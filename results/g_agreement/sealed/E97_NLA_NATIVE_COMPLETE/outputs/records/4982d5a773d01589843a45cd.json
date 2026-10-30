@@ -1,0 +1,12 @@
+{
+  "id": "4982d5a773d01589843a45cd",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: \"Task: [description]\" followed by \"Example question: [question]\" and \"Answer:\" signals a structured Q&A template requiring a model response.\n\nThe task explicitly defines \"data visualization\" as the topic, so the answer must address how to explain data visualization, despite the example question being about \"data collection\" \u2014 creating a deliberate mismatch the model must navigate.\n\n\"Answer:\" is the final token, functioning as a response prompt label in the template, immediately requiring the model's generated answer text (likely a short explanatory sentence demonstrating the pattern).\n\"Task: [X]\nExample question: How does data collection benefit users?\nTask: [X]\nExample question: [X]\nAnswer:\" \u2014 the final \"Answer:\" expects a direct response demonstrating the instruction-following pattern, likely beginning with \"The answer is...\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: \"Task: [description]\" followed by \"Example question: [question]\" and \"Answer:\" signals a structured Q&A template requiring a model response.\n\nThe task explicitly defines \"data visualization\" as the topic, so the answer must address how to explain data visualization, despite the example question being about \"data collection\" \u2014 creating a deliberate mismatch the model must navigate.\n\n\"Answer:\" is the final token, functioning as a response prompt label in the template, immediately requiring the model's generated answer text (likely a short explanatory sentence demonstrating the pattern).\n\"Task: [X]\nExample question: How does data collection benefit users?\nTask: [X]\nExample question: [X]\nAnswer:\" \u2014 the final \"Answer:\" expects a direct response demonstrating the instruction-following pattern, likely beginning with \"The answer is...\"",
+  "truncated": false
+}

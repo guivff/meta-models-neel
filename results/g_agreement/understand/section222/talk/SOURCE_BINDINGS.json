@@ -1,0 +1,73 @@
+{
+  "authority_commit": "2d470093a",
+  "sources": {
+    "e101": {
+      "result_path": "results/g_agreement/understand/e101/analysis_once/RESULTS.json",
+      "seal_path": "results/g_agreement/understand/e101/analysis_once/ANALYSIS_SEAL.json",
+      "result_sha256": "55846f8e95c9551a3d9e8ff0f427f1ff63ff1d1d94c9c50c8a9921277576da41",
+      "seal_sha256": "ad820c3f25acab98b70dd05881b341b4c658182ca2daa3e57b230a421742f4c1",
+      "verified_git_commit": "0bd1822f618e233f39da08b82f49ffc7dbf44fe8"
+    },
+    "e100": {
+      "result_path": "results/g_agreement/understand/e100/analysis_once/RESULTS.json",
+      "seal_path": "results/g_agreement/understand/e100/analysis_once/ANALYSIS_SEAL.json",
+      "result_sha256": "43720ab80a6a7227266eaebe44dbfcf1502a653affc309b15717e4787b50d75f",
+      "seal_sha256": "76b156f055567cb168b2cfd40ec6bcc65aa21d2aa18fd1d97d533ad5fa86d2d1",
+      "verified_git_commit": "b8e2c82026722f5f76b90192740f3726aedcee61"
+    },
+    "e104": {
+      "result_path": "results/g_agreement/understand/e104/analysis_once/RESULTS.json",
+      "seal_path": "results/g_agreement/understand/e104/analysis_once/ANALYSIS_SEAL.json",
+      "result_sha256": "cf08cabf2d0a16a1c2794f0d56ffce0329730f456b8721be97f61017065a91ed",
+      "seal_sha256": "01d8d5a17b7bbea1d2df27982ef10c897156093430967d8da442e0a5137cbe1e",
+      "verified_git_commit": "959cb0fca07bb4d0f221f9a29ca0c12d99d3a941"
+    },
+    "e105": {
+      "result_path": "results/g_agreement/understand/e105/analysis_once/RESULTS.json",
+      "seal_path": "results/g_agreement/understand/e105/analysis_once/ANALYSIS_SEAL.json",
+      "result_sha256": "94356476cb823ba0d1b01e75edb6229e750e171deccb8dd24ab3c65a6fcda042",
+      "seal_sha256": "5795e14d46acff0ae5830c3ac8f882f4444cdb40b9f3e7ec2a54b124d5173047",
+      "verified_git_commit": "b110a8c1fb98c9e4d55d80cdd685088dfdb763f8"
+    },
+    "probe": {
+      "result_path": "results/g_agreement/understand/e57/analysis402_once_2026-10-27/PROBE.json",
+      "seal_path": "results/g_agreement/understand/e57/analysis402_once_2026-10-27/ANALYSIS_SEAL.json",
+      "result_sha256": "9d5339fd40e7db5ade5d4e234c349a2ddfde3171f82c8fe544f4d018c08aafbe",
+      "seal_sha256": "1f8bf286b821ef21886d869e05b80d798dddbe03872760324c6ca835762ad16e"
+    }
+  },
+  "requested_e105_ref": "5795e14d",
+  "requested_e105_ref_resolution": "5795e14d is the SHA256 prefix of the sealed ANALYSIS_SEAL.json (5795e14d46acff0ae5830c3ac8f882f4444cdb40b9f3e7ec2a54b124d5173047), not a Git commit. Exact result+seal pinned; result lineage b110a8c1f.",
+  "limits": [
+    "E100 has transplant donor S, not a sealed paired transplant-minus-control statistic. Paired delta marked unavailable.",
+    "E105 delta is T-minus-S continuous behavioural log-probability contrast; no strict flips does not mean no continuous change.",
+    "E100/E105 common content rows are fact_recall, format_plan, language_plan. Other E100 positive rows have no E105 result.",
+    "E104 written upstream; arrival at the read site is unresolved pending E109.",
+    "E100 missed rows are a fifth panel, probe-present; wrong-subspace is the \u00a7222 explanatory account.",
+    "No new statistics, pooling, CI computation, fit, bootstrap, or experiment execution."
+  ],
+  "field_paths": {
+    "e101": [
+      "rows.{fact_recall,language_plan}.oracle.difference",
+      "rows.{fact_recall,language_plan}.oracle.flipped_n"
+    ],
+    "e104": [
+      "arms.U.{fact_recall,language_plan}.difference",
+      "arms.U.{fact_recall,language_plan}.flipped_n"
+    ],
+    "e100": [
+      "rows.{fact_recall,format_plan,language_plan,language_continuation,tense_implicit,nesting_depth,indent_level,page_range_digit}.oracle.transplant",
+      "rules.R-PC"
+    ],
+    "e105": [
+      "rows.{fact_recall,format_plan,language_plan}.delta",
+      "rows.{fact_recall,format_plan,language_plan}.flip_T",
+      "rules.R-BT1"
+    ],
+    "probe": [
+      "nesting_depth",
+      "indent_level",
+      "page_range_digit"
+    ]
+  }
+}

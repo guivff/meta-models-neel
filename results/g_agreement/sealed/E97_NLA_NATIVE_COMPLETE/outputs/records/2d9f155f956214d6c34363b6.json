@@ -1,0 +1,12 @@
+{
+  "id": "2d9f155f956214d6c34363b6",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with explicit instruction to output only \"positive\" or \"negative\" as the answer, establishing a strict binary response constraint.\n\nThe example pattern shows a Chinese sentence followed by its English translation, then a question asking for the sentiment label \u2014 the model must now provide the answer for \"The weather is very good today.\"\n\n\"Reply:\" is the final prompt label, part of the structured template, immediately requiring the sentiment answer (\"positive\") or a short response token to follow.\n\"Given the following input, provide the sentiment label.\nInput:\nThe weather is very good today.\nQuestion: What is the sentiment label?\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer, likely \"positive\" or a brief label, as the final output line of the structured prompt.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with explicit instruction to output only \"positive\" or \"negative\" as the answer, establishing a strict binary response constraint.\n\nThe example pattern shows a Chinese sentence followed by its English translation, then a question asking for the sentiment label \u2014 the model must now provide the answer for \"The weather is very good today.\"\n\n\"Reply:\" is the final prompt label, part of the structured template, immediately requiring the sentiment answer (\"positive\") or a short response token to follow.\n\"Given the following input, provide the sentiment label.\nInput:\nThe weather is very good today.\nQuestion: What is the sentiment label?\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer, likely \"positive\" or a brief label, as the final output line of the structured prompt.\n\"Reply:\"",
+  "truncated": false
+}

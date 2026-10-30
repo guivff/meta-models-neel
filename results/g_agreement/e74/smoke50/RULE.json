@@ -1,0 +1,16 @@
+{
+  "agreement": "exact stripped UTF8 sha256; token-set Jaccard of pinned GLM token IDs of entire stripped bullet (includes initial *), add_special_tokens=False; sets stored as per-token SHA256s",
+  "authority": "b90325cb \u00a7192 clarification 4",
+  "context_limit_reason": "preserve accepted author engine max_model_len1152 without shortening or rerendering stored IDs",
+  "disclosure": "eligible complete short-context subset, not a representative sample of arbitrarily long wild transcripts",
+  "eligibility": "all source families; unique (source,tid); entire stored ids, nontruncated, n_tokens_full == len(ids), 3..1151 tokens; stored position>=2 and not sink154822/154824",
+  "exclusion": "all542 E66 packet rollouts by (source,tid), not merely their selected positions",
+  "grammar": "empty content, missing initial *, or >16 GLM content tokens after the initial *; no additional failure criterion",
+  "n": 50,
+  "no_outcome_selection": true,
+  "no_replacement": true,
+  "pass": "(exact_match_rate>=0.15 or median_token_set_jaccard>=0.50) and grammar_violation_rate<=0.10",
+  "sampling": "random.Random(seed).sample over lexicographically sorted eligible distinct (source,tid); then choice from sorted stored positions for each selected rollout",
+  "script_sha256": "b7ba57356dcd5c60c54027dc9ec1b8752ead9e1fbe0c871c294867f4cda0b0b8",
+  "seed": 20261027
+}

@@ -1,0 +1,12 @@
+{
+  "id": "6bef01127ce9e24c037354b7",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict classification task: the model must output \"positive\" or \"negative\" based on the example pattern established.\n\nThe prompt explicitly defines the rule (\"If the sentence expresses...negative sentiment, answer 'negative'\") and provides a concrete example sentence (\"The movie was a disappointment\"), requiring the model to apply the rule to that specific sentence.\n\n\"Reply:\" is the final token, functioning as a response prompt label in a structured template (\"Given sentence: ... / Question: What is the sentiment classification? / Reply:\"), immediately constraining the next token to be the classification answer (e.g., \"negative\" or \"Positive\").\n\"Given sentence: The movie was a disappointment\\nQuestion: What is the sentiment classification?\\nReply:\" \u2014 the final label demands the direct answer follows immediately.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict classification task: the model must output \"positive\" or \"negative\" based on the example pattern established.\n\nThe prompt explicitly defines the rule (\"If the sentence expresses...negative sentiment, answer 'negative'\") and provides a concrete example sentence (\"The movie was a disappointment\"), requiring the model to apply the rule to that specific sentence.\n\n\"Reply:\" is the final token, functioning as a response prompt label in a structured template (\"Given sentence: ... / Question: What is the sentiment classification? / Reply:\"), immediately constraining the next token to be the classification answer (e.g., \"negative\" or \"Positive\").\n\"Given sentence: The movie was a disappointment\\nQuestion: What is the sentiment classification?\\nReply:\" \u2014 the final label demands the direct answer follows immediately.\n\"Reply:\"",
+  "truncated": false
+}

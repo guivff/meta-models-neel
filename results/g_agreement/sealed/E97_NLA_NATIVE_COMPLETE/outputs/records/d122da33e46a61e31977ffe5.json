@@ -1,0 +1,12 @@
+{
+  "id": "d122da33e46a61e31977ffe5",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Anger,\" \"Joy,\" \"Sadness\").\n\nThe example pattern shows a Q&A structure where \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the direct answer for the specific sentence \"I am a Chinese citizen.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker, immediately requiring the emotion label answer (likely \"Anger\" or similar single word) on the same line or next line.\n\"Given the following format:\nExample sentence: I am a Chinese citizen.\nEmotion: Anger\nQuestion: What is the emotion label for the sentence 'I am a Chinese citizen.'?\nReply:\" \u2014 the final token demands the direct answer output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Anger,\" \"Joy,\" \"Sadness\").\n\nThe example pattern shows a Q&A structure where \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the direct answer for the specific sentence \"I am a Chinese citizen.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker, immediately requiring the emotion label answer (likely \"Anger\" or similar single word) on the same line or next line.\n\"Given the following format:\nExample sentence: I am a Chinese citizen.\nEmotion: Anger\nQuestion: What is the emotion label for the sentence 'I am a Chinese citizen.'?\nReply:\" \u2014 the final token demands the direct answer output.",
+  "truncated": false
+}

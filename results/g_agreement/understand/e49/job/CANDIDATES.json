@@ -1,0 +1,573 @@
+{
+  "bank_seal_sha256": "ccc2b3b6e27d0227f2d17f1de0efe2cb9a33cfd4d299656f19d7e4a4e3db43c9",
+  "frozen_before_scores": true,
+  "rows": {
+    "arith_carry": {
+      "candidate_source": "frozen generator PHRASINGS",
+      "continuation": null,
+      "nla": [
+        [
+          "a carry from the units column",
+          "no carry from the units column"
+        ],
+        [
+          "The units sum carries into the tens.",
+          "The units sum does not carry into the tens."
+        ]
+      ],
+      "oracle": [
+        [
+          "- a carry from the units column",
+          "- no carry from the units column"
+        ],
+        [
+          "- The units sum carries into the tens.",
+          "- The units sum does not carry into the tens."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": "=",
+        "row_id": "arith_carry",
+        "twin_of": null,
+        "values": [
+          "carry",
+          "no_carry"
+        ]
+      }
+    },
+    "arith_compare": {
+      "candidate_source": "frozen generator PHRASINGS",
+      "continuation": [
+        [
+          " Yes",
+          " No"
+        ],
+        [
+          " yes",
+          " no"
+        ]
+      ],
+      "nla": [
+        [
+          "the product is greater than the threshold",
+          "the product is not greater than the threshold"
+        ],
+        [
+          "The answer to the comparison is yes.",
+          "The answer to the comparison is no."
+        ]
+      ],
+      "oracle": [
+        [
+          "- the product is greater than the threshold",
+          "- the product is not greater than the threshold"
+        ],
+        [
+          "- The answer to the comparison is yes.",
+          "- The answer to the comparison is no."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": ":",
+        "row_id": "arith_compare",
+        "twin_of": null,
+        "values": [
+          "yes",
+          "no"
+        ]
+      }
+    },
+    "asserted_vs_hypothetical": {
+      "candidate_source": "definition-derived two descriptions frozen in job/CANDIDATES.json",
+      "continuation": null,
+      "nla": [
+        [
+          "an asserted claim",
+          "a hypothetical claim"
+        ],
+        [
+          "The current text concerns an asserted claim.",
+          "The current text concerns a hypothetical claim."
+        ]
+      ],
+      "oracle": [
+        [
+          "- an asserted claim",
+          "- a hypothetical claim"
+        ],
+        [
+          "- The current text concerns an asserted claim.",
+          "- The current text concerns a hypothetical claim."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": "system",
+        "row_id": "asserted_vs_hypothetical",
+        "twin_of": null,
+        "values": [
+          "asserted",
+          "hypothetical"
+        ]
+      }
+    },
+    "branch_taken": {
+      "candidate_source": "frozen generator PHRASINGS",
+      "continuation": null,
+      "nla": [
+        [
+          "the conditional branch will run",
+          "the conditional branch will not run"
+        ],
+        [
+          "The if condition evaluates to true.",
+          "The if condition evaluates to false."
+        ]
+      ],
+      "oracle": [
+        [
+          "- the conditional branch will run",
+          "- the conditional branch will not run"
+        ],
+        [
+          "- The if condition evaluates to true.",
+          "- The if condition evaluates to false."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": ":",
+        "row_id": "branch_taken",
+        "twin_of": null,
+        "values": [
+          "taken",
+          "not_taken"
+        ]
+      }
+    },
+    "chased_role": {
+      "candidate_source": "definition-derived two descriptions frozen in job/CANDIDATES.json",
+      "continuation": null,
+      "nla": [
+        [
+          "the thief",
+          "the policeman"
+        ],
+        [
+          "The current text concerns the thief.",
+          "The current text concerns the policeman."
+        ]
+      ],
+      "oracle": [
+        [
+          "- the thief",
+          "- the policeman"
+        ],
+        [
+          "- The current text concerns the thief.",
+          "- The current text concerns the policeman."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": "the",
+        "row_id": "chased_role",
+        "twin_of": null,
+        "values": [
+          "thief",
+          "policeman"
+        ]
+      }
+    },
+    "container_after_move": {
+      "candidate_source": "frozen generator PHRASINGS",
+      "continuation": [
+        [
+          " cup",
+          " bowl"
+        ],
+        [
+          " cup now.",
+          " bowl now."
+        ]
+      ],
+      "nla": [
+        [
+          "in the cup",
+          "in the bowl"
+        ],
+        [
+          "The tracked object is in the cup.",
+          "The tracked object is in the bowl."
+        ]
+      ],
+      "oracle": [
+        [
+          "- in the cup",
+          "- in the bowl"
+        ],
+        [
+          "- The tracked object is in the cup.",
+          "- The tracked object is in the bowl."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": " the",
+        "row_id": "container_after_move",
+        "twin_of": null,
+        "values": [
+          "cup",
+          "bowl"
+        ]
+      }
+    },
+    "decimal_separator": {
+      "candidate_source": "frozen generator PHRASINGS",
+      "continuation": [
+        [
+          ",",
+          "."
+        ]
+      ],
+      "nla": [
+        [
+          "a decimal comma",
+          "a decimal point"
+        ],
+        [
+          "The decimal separator is a comma.",
+          "The decimal separator is a point."
+        ]
+      ],
+      "oracle": [
+        [
+          "- a decimal comma",
+          "- a decimal point"
+        ],
+        [
+          "- The decimal separator is a comma.",
+          "- The decimal separator is a point."
+        ]
+      ],
+      "spec": {
+        "kind": "surface_state",
+        "read_token_rule": "3",
+        "row_id": "decimal_separator",
+        "twin_of": "unit_system",
+        "values": [
+          "comma",
+          "point"
+        ]
+      }
+    },
+    "holder_after_handovers": {
+      "candidate_source": "frozen generator PHRASINGS",
+      "continuation": null,
+      "nla": [
+        [
+          "Alex",
+          "Robin"
+        ],
+        [
+          "Alex holds the tracked object.",
+          "Robin holds the tracked object."
+        ]
+      ],
+      "oracle": [
+        [
+          "- Alex",
+          "- Robin"
+        ],
+        [
+          "- Alex holds the tracked object.",
+          "- Robin holds the tracked object."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": ".",
+        "row_id": "holder_after_handovers",
+        "twin_of": null,
+        "values": [
+          "Alex",
+          "Robin"
+        ]
+      }
+    },
+    "instruction_provenance": {
+      "candidate_source": "frozen generator PHRASINGS",
+      "continuation": null,
+      "nla": [
+        [
+          "the principal's own instruction",
+          "quoted vendor text"
+        ],
+        [
+          "The current instruction comes from the principal.",
+          "The current instruction comes from the vendor."
+        ]
+      ],
+      "oracle": [
+        [
+          "- the principal's own instruction",
+          "- quoted vendor text"
+        ],
+        [
+          "- The current instruction comes from the principal.",
+          "- The current instruction comes from the vendor."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": "review",
+        "row_id": "instruction_provenance",
+        "twin_of": null,
+        "values": [
+          "principal",
+          "vendor"
+        ]
+      }
+    },
+    "negation_scope": {
+      "candidate_source": "definition-derived two descriptions frozen in job/CANDIDATES.json",
+      "continuation": null,
+      "nla": [
+        [
+          "a negated predicate",
+          "an unnegated predicate"
+        ],
+        [
+          "The current text concerns a negated predicate.",
+          "The current text concerns an unnegated predicate."
+        ]
+      ],
+      "oracle": [
+        [
+          "- a negated predicate",
+          "- an unnegated predicate"
+        ],
+        [
+          "- The current text concerns a negated predicate.",
+          "- The current text concerns an unnegated predicate."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": "disabled",
+        "row_id": "negation_scope",
+        "twin_of": null,
+        "values": [
+          "negated",
+          "unnegated"
+        ]
+      }
+    },
+    "next_paragraph_language": {
+      "candidate_source": "definition-derived two descriptions frozen in job/CANDIDATES.json",
+      "continuation": null,
+      "nla": [
+        [
+          "French as the next paragraph language",
+          "English as the next paragraph language"
+        ],
+        [
+          "The current text concerns French as the next paragraph language.",
+          "The current text concerns English as the next paragraph language."
+        ]
+      ],
+      "oracle": [
+        [
+          "- French as the next paragraph language",
+          "- English as the next paragraph language"
+        ],
+        [
+          "- The current text concerns French as the next paragraph language.",
+          "- The current text concerns English as the next paragraph language."
+        ]
+      ],
+      "spec": {
+        "kind": "descriptor",
+        "read_token_rule": "\n\n",
+        "row_id": "next_paragraph_language",
+        "twin_of": null,
+        "values": [
+          "French",
+          "English"
+        ]
+      }
+    },
+    "pronoun_referent": {
+      "candidate_source": "definition-derived two descriptions frozen in job/CANDIDATES.json",
+      "continuation": null,
+      "nla": [
+        [
+          "the giver as the pronoun referent",
+          "the receiver as the pronoun referent"
+        ],
+        [
+          "The current text concerns the giver as the pronoun referent.",
+          "The current text concerns the receiver as the pronoun referent."
+        ]
+      ],
+      "oracle": [
+        [
+          "- the giver as the pronoun referent",
+          "- the receiver as the pronoun referent"
+        ],
+        [
+          "- The current text concerns the giver as the pronoun referent.",
+          "- The current text concerns the receiver as the pronoun referent."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": "she",
+        "row_id": "pronoun_referent",
+        "twin_of": null,
+        "values": [
+          "giver",
+          "receiver"
+        ]
+      }
+    },
+    "topic_twin": {
+      "candidate_source": "definition-derived two descriptions frozen in job/CANDIDATES.json",
+      "continuation": null,
+      "nla": [
+        [
+          "an engineering topic",
+          "a gardening topic"
+        ],
+        [
+          "The current text concerns an engineering topic.",
+          "The current text concerns a gardening topic."
+        ]
+      ],
+      "oracle": [
+        [
+          "- an engineering topic",
+          "- a gardening topic"
+        ],
+        [
+          "- The current text concerns an engineering topic.",
+          "- The current text concerns a gardening topic."
+        ]
+      ],
+      "spec": {
+        "kind": "descriptor",
+        "read_token_rule": "system",
+        "row_id": "topic_twin",
+        "twin_of": "asserted_vs_hypothetical",
+        "values": [
+          "engineering",
+          "gardening"
+        ]
+      }
+    },
+    "unit_system": {
+      "candidate_source": "definition-derived two descriptions frozen in job/CANDIDATES.json",
+      "continuation": null,
+      "nla": [
+        [
+          "metric units",
+          "imperial units"
+        ],
+        [
+          "The current text concerns metric units.",
+          "The current text concerns imperial units."
+        ]
+      ],
+      "oracle": [
+        [
+          "- metric units",
+          "- imperial units"
+        ],
+        [
+          "- The current text concerns metric units.",
+          "- The current text concerns imperial units."
+        ]
+      ],
+      "spec": {
+        "kind": "descriptor",
+        "read_token_rule": "3",
+        "row_id": "unit_system",
+        "twin_of": null,
+        "values": [
+          "metric",
+          "imperial"
+        ]
+      }
+    },
+    "user_expertise": {
+      "candidate_source": "frozen generator PHRASINGS",
+      "continuation": null,
+      "nla": [
+        [
+          "an expert user",
+          "a novice user"
+        ],
+        [
+          "The user writes with expert familiarity.",
+          "The user writes with novice familiarity."
+        ]
+      ],
+      "oracle": [
+        [
+          "- an expert user",
+          "- a novice user"
+        ],
+        [
+          "- The user writes with expert familiarity.",
+          "- The user writes with novice familiarity."
+        ]
+      ],
+      "spec": {
+        "kind": "descriptor",
+        "read_token_rule": ".",
+        "row_id": "user_expertise",
+        "twin_of": null,
+        "values": [
+          "expert",
+          "novice"
+        ]
+      }
+    },
+    "var_type_at_use": {
+      "candidate_source": "frozen generator PHRASINGS",
+      "continuation": null,
+      "nla": [
+        [
+          "x holds an integer",
+          "x holds a string"
+        ],
+        [
+          "The runtime type of x is int.",
+          "The runtime type of x is str."
+        ]
+      ],
+      "oracle": [
+        [
+          "- x holds an integer",
+          "- x holds a string"
+        ],
+        [
+          "- The runtime type of x is int.",
+          "- The runtime type of x is str."
+        ]
+      ],
+      "spec": {
+        "kind": "semantic_state",
+        "read_token_rule": "x",
+        "row_id": "var_type_at_use",
+        "twin_of": null,
+        "values": [
+          "int",
+          "str"
+        ]
+      }
+    }
+  }
+}

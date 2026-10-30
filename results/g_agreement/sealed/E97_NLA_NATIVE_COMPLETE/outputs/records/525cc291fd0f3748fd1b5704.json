@@ -1,0 +1,12 @@
+{
+  "id": "525cc291fd0f3748fd1b5704",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"if X, answer 'Sadness'\"), followed by a concrete example requiring application of that rule.\n\nThe example sentence \"The weather is very good today\" is a positive/neutral statement, so the model must determine the correct mood label (likely \"Joy\" or \"Happy\") based on the established format.\n\n\"Example Input: The weather is very good today\\nReply:\" is a structured Q&A template ending with \"Reply:\", immediately requiring the model's direct answer \u2014 the mood label or short response.\n\"Given the following example input, provide the corresponding mood label according to the rules.\nInput: 'The weather is very good today'\n...\nExample Input: [Chinese text]\nReply:\" \u2014 the final token \"Reply:\" is a prompt label demanding the answer immediately follows.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"if X, answer 'Sadness'\"), followed by a concrete example requiring application of that rule.\n\nThe example sentence \"The weather is very good today\" is a positive/neutral statement, so the model must determine the correct mood label (likely \"Joy\" or \"Happy\") based on the established format.\n\n\"Example Input: The weather is very good today\\nReply:\" is a structured Q&A template ending with \"Reply:\", immediately requiring the model's direct answer \u2014 the mood label or short response.\n\"Given the following example input, provide the corresponding mood label according to the rules.\nInput: 'The weather is very good today'\n...\nExample Input: [Chinese text]\nReply:\" \u2014 the final token \"Reply:\" is a prompt label demanding the answer immediately follows.",
+  "truncated": false
+}

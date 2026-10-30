@@ -1,0 +1,12 @@
+{
+  "id": "91226e7668d0f8ef74581e0e",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured data format with labeled fields (\"Event:\", \"Outcome:\") establishes a template-like pattern, suggesting the model expects similar structured entries or a response to the example.\n\nThe phrase \"Record begins\" and \"Record end\" framing signals a complete, self-contained example block, implying the next tokens may be a task instruction, prompt, or response to the described scenario.\n\n\"Recorded example: ... Outcome: ... Record complete.\" \u2014 \"Record complete.\" is a closing delimiter phrase, strongly constraining what follows to be a new instruction, separator, or task prompt.\n\"Example: [Event]... [Outcome]... Recording complete.\"\n\"Recorded example: ...\nRecorded example: ...\nRecording complete.\" \u2014 \"Recording complete.\" is a terminal marker, suggesting the next token begins a new instruction or response prompt about the example.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured data format with labeled fields (\"Event:\", \"Outcome:\") establishes a template-like pattern, suggesting the model expects similar structured entries or a response to the example.\n\nThe phrase \"Record begins\" and \"Record end\" framing signals a complete, self-contained example block, implying the next tokens may be a task instruction, prompt, or response to the described scenario.\n\n\"Recorded example: ... Outcome: ... Record complete.\" \u2014 \"Record complete.\" is a closing delimiter phrase, strongly constraining what follows to be a new instruction, separator, or task prompt.\n\"Example: [Event]... [Outcome]... Recording complete.\"\n\"Recorded example: ...\nRecorded example: ...\nRecording complete.\" \u2014 \"Recording complete.\" is a terminal marker, suggesting the next token begins a new instruction or response prompt about the example.",
+  "truncated": false
+}

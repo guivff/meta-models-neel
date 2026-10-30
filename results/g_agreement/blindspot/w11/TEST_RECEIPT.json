@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "w11_real_tokenizer_suite": {
+    "passed": 28,
+    "skipped": 0,
+    "seconds": 4.72,
+    "command": "CUDA_VISIBLE_DEVICES='' HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 BLINDSPOT_QWEN_TOKENIZER=PINNED_LOCAL_TOKENIZER OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m pytest projects/g_agreement/blindspot/tests/test_w11.py -q"
+  },
+  "all_offline_tests": {
+    "passed": 415,
+    "skipped": 34,
+    "seconds": 15.06,
+    "skips": "real-tokenizer/environment-dependent fixtures without their opt-in variable; W11 real-tokenizer tests ran separately",
+    "command": "CUDA_VISIBLE_DEVICES='' HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m pytest external/mats-nla-workspace/tests projects/g_agreement/blindspot/tests -q"
+  },
+  "model_forwards": 0,
+  "scope": "CPU mocks and tokenization; no target/reader inference",
+  "seed": 20261023
+}

@@ -1,0 +1,25 @@
+{
+  "bullet_extraction": "Each - followed by whitespace after start-of-target, real newline, or literal backslash-n begins a bullet. Its span extends to the next such marker or target end, including wrapped/trailing prose. Preamble omitted, terminal special-token markers removed, marked empty bullets retained. No content filtering or deduplication.",
+  "bullet_extraction_approved": true,
+  "command": [
+    "env",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "python",
+    "results/g_agreement/understand/e51/count_once.py"
+  ],
+  "data_files": {
+    "DELIVERY.sha256": "fee0396d8bc02925f1ed3f97b6c799c423edfaf2dd044353069a13e9f50ec45f",
+    "LINEAGE_EVIDENCE.md": "e3e4b9493e16bbe3fe2c98275827bc7eae9f9b31ee225a35b035ff7159e04d3c",
+    "run.s3d.omp4bp.s2.step251.json": "a00b6996b6d8a4cad5f2920f25589d96ce6aaa0a72c475b55a08c0278bb2e1dd",
+    "s3d_b3_train_targets.jsonl": "02b5a84cca3ad5dcae7d505a17019a88c8f281b087540ede9cbecfc5be794fc6"
+  },
+  "date": "2026-10-27",
+  "eval_rows_included": false,
+  "experiment": "E51",
+  "extraction_authority": "Guiv confirmation, 2026-10-27: Use that bullet extraction",
+  "freeze_sha256": "2169e10b430bbd8a1c0a8169fa753ab6a0f054c92899dd942501901dfbf9a9ec",
+  "guard": "results/g_agreement/understand/e51/COUNT.RUN_ONCE.json",
+  "output": "results/g_agreement/understand/e51/count_20261027",
+  "status": "READY_ONCE",
+  "training_rows": 14773
+}

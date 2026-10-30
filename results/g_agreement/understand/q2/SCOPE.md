@@ -1,0 +1,5 @@
+# §107 Q2 blind sampling
+
+Dated 2026-10-24T05:21:24.204821+00:00, before Q2 selection/export. Implements efe4a827 and Guiv’s clarified Q2b ruling:240nonzero-dose outputs plusall80dose0=320, no duplicates. Q2a uses50matchedteststates per each of3rows,25/value, onecommonoriginalgeneration perstate,150readouts/reader. Q2c retains all840sealed continuations. Exactsource hashes and sampling/opaque-ID/shuffle rules in PLAN.json. Original parser failures, incomplete endings and any empty raw strings are preserved; no outcome/content filter.
+
+Questions name only the feature and frozenA/B definitions; no reader/dose/truth/prompt/score metadata. All source identities, native sites, source truth and doses stay in cache-only keys. W6 editing targets A from source B; the edited-state value is not an independently measured truth. This must remain distinct in later scoring. Questions/source context policy follows the requested E13-style readout-only files; source-factual hallucination/extra checks cannot be established without the source text. No code execution by blind agents/API in this preparation. No Q2d work requested.

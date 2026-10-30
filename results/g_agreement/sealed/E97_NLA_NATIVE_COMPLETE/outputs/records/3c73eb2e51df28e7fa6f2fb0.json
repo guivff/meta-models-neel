@@ -1,0 +1,12 @@
+{
+  "id": "3c73eb2e51df28e7fa6f2fb0",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: example given, then a test case follows requiring a single-word classification answer (\"positive\" or \"negative\").\n\nThe task explicitly defines the output format as a one-word sentiment label, so the model must produce exactly that for the given sentence \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's direct answer (the classification label) to follow.\n\"Example:\nInput: [sentence]\nClassification: [label]\n...\nInput: The weather is very good today.\nReply:\" \u2014 this closing \"Reply:\" signals the answer field, expecting the model's response to the classification task.\n\"Given the following input...\nInput: ...\nReply:\" \u2014 final token demands the actual output answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: example given, then a test case follows requiring a single-word classification answer (\"positive\" or \"negative\").\n\nThe task explicitly defines the output format as a one-word sentiment label, so the model must produce exactly that for the given sentence \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's direct answer (the classification label) to follow.\n\"Example:\nInput: [sentence]\nClassification: [label]\n...\nInput: The weather is very good today.\nReply:\" \u2014 this closing \"Reply:\" signals the answer field, expecting the model's response to the classification task.\n\"Given the following input...\nInput: ...\nReply:\" \u2014 final token demands the actual output answer.",
+  "truncated": false
+}

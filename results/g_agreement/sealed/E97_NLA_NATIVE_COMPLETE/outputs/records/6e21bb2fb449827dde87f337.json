@@ -1,0 +1,12 @@
+{
+  "id": "6e21bb2fb449827dde87f337",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Sadness,\" \"Joy,\" \"Anger\").\n\nThe example pattern \"Example sentence: [sentence] / Reply:\" signals the model must now produce the single correct emotion label for \"The United States is a country.\"\n\n\"Reply:\" is the final token, functioning as a prompt label awaiting the direct answer, requiring the emotion label (likely \"Sadness\" or similar short word) to follow immediately.\n\"Please follow the format strictly. Given the sentence: 'The United States is a country.'\nExample sentence: 'The United States is a country.'\nReply:\" \u2014 the final \"Reply:\" token demands the model's direct response, the emotion label, as the very next token.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Sadness,\" \"Joy,\" \"Anger\").\n\nThe example pattern \"Example sentence: [sentence] / Reply:\" signals the model must now produce the single correct emotion label for \"The United States is a country.\"\n\n\"Reply:\" is the final token, functioning as a prompt label awaiting the direct answer, requiring the emotion label (likely \"Sadness\" or similar short word) to follow immediately.\n\"Please follow the format strictly. Given the sentence: 'The United States is a country.'\nExample sentence: 'The United States is a country.'\nReply:\" \u2014 the final \"Reply:\" token demands the model's direct response, the emotion label, as the very next token.",
+  "truncated": false
+}

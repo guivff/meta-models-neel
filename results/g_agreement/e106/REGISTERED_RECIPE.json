@@ -1,0 +1,93 @@
+{
+  "experiment": "E106",
+  "registration_commit": "85cb6b11448266cb945daac458126d291855c2d0",
+  "train_rows": [
+    "E57/nesting_depth",
+    "E57/indent_level",
+    "E57/page_range_digit"
+  ],
+  "heldout_rows": [
+    "E56/line_length",
+    "E49/container_after_move",
+    "E49/holder_after_handovers",
+    "E49/branch_taken",
+    "E49/var_type_at_use"
+  ],
+  "content_rows": [
+    "E59/format_plan",
+    "E59/language_plan",
+    "E56/fact_recall",
+    "E56/tense_implicit"
+  ],
+  "arm_P": {
+    "readers": [
+      "oracle",
+      "nla"
+    ],
+    "examples": 3,
+    "example_source": "W-text frozen E102 paraphrase templates, dev values only",
+    "decoding": "one native greedy readout per test item",
+    "evaluation_rows": "3 trained plus5 heldout rows",
+    "total_gpu_h_cap": 0.5
+  },
+  "arm_T": {
+    "reader_order": [
+      "nla",
+      "oracle only if E102 gate issue resolved"
+    ],
+    "gate": {
+      "gpu_h_cap": 0.5,
+      "rank": 16,
+      "steps": 10,
+      "parity_fixtures": 3,
+      "parity_before_any_optimizer_update": true,
+      "byte_exact": true,
+      "deadline": "2026-10-29T14:00:00+01:00"
+    },
+    "training": {
+      "learning_rate": 0.0001,
+      "steps": 300,
+      "batch_size": 16,
+      "rank": 16,
+      "seed": 20261029,
+      "runs": 1,
+      "search": false,
+      "gpu_h_plan": 1,
+      "inputs": "3 train rows DEV native-block activations and frozen E102 descriptions; equal number of replay DEV items from 4 registered content rows with own sealed reader texts",
+      "test_training_overlap": false
+    },
+    "evaluation": {
+      "gpu_h_plan": 2.5,
+      "paired_original_retrained": true,
+      "test_items_per_row": 84,
+      "availability_policy": "where available, exact manifest before output, explicit missingness/no substitution",
+      "placebos": 200,
+      "placebo_generator": "E76 norm-matched generator",
+      "placebo_seed": 20261031,
+      "labels": "CPU only, no test truth or judge outputs to GPU"
+    },
+    "total_gpu_h_cap_including_gate_training_evaluation": 4,
+    "gate_failure": "Arm T NOT RUN(feasibility); arm P stands alone"
+  },
+  "rules_owner": "W-mech2 only; no integrator competing rule implementation",
+  "judging": {
+    "bank": "E106",
+    "cap_usd": 15,
+    "owner": "W-internals-B",
+    "route": "pinned registered E56 route",
+    "regex_first": true,
+    "unresolved_only": true,
+    "section202": true,
+    "old_rubric_fraction": 0.25,
+    "inherit_E96_Oracle30percent": false
+  },
+  "placebo_criterion": {
+    "authority": "f60fd54fe3400d58d1c07257ad565e8567b23488",
+    "metric": "shareof200placeboreadoutsstatinganyvalueofthreeTRAINEDrows,judgedblind",
+    "reader_pair": "reportoriginalbesideretrained",
+    "R_FX1_max": 0.2,
+    "falsifier_min": 0.3,
+    "n": 200,
+    "not_signed_target_oriented_S": true
+  }
+}

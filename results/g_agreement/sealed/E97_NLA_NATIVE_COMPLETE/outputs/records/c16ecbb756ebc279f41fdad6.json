@@ -1,0 +1,12 @@
+{
+  "id": "c16ecbb756ebc279f41fdad6",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with explicit instruction to output only the emotion label, establishing a strict response pattern. The model must follow the demonstrated template exactly.\n\nThe example pattern (\"Example: 'I am happy' \u2192 Emotion: Joy\") sets up a direct mapping task, where \"The weather is very cold today\" requires a matching emotion label like \"Sadness\" or \"Disappointment.\"\n\n\"Input: The weather is very cold today\\nReply:\" is the final prompt field, immediately requiring the model's answer \u2014 the emotion label itself, likely a short capitalized word or phrase.\n\"Given the following format... please provide the corresponding emotion label.\\nInput: [sentence]\\nReply:\" \u2014 the \"Reply:\" token is a label introducing the model's direct answer, constraining the next token to be the emotion label response.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with explicit instruction to output only the emotion label, establishing a strict response pattern. The model must follow the demonstrated template exactly.\n\nThe example pattern (\"Example: 'I am happy' \u2192 Emotion: Joy\") sets up a direct mapping task, where \"The weather is very cold today\" requires a matching emotion label like \"Sadness\" or \"Disappointment.\"\n\n\"Input: The weather is very cold today\\nReply:\" is the final prompt field, immediately requiring the model's answer \u2014 the emotion label itself, likely a short capitalized word or phrase.\n\"Given the following format... please provide the corresponding emotion label.\\nInput: [sentence]\\nReply:\" \u2014 the \"Reply:\" token is a label introducing the model's direct answer, constraining the next token to be the emotion label response.\n\"Reply:\"",
+  "truncated": false
+}

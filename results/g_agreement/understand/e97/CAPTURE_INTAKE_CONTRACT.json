@@ -1,0 +1,39 @@
+{
+  "experiment": "E97",
+  "version": 2,
+  "delivery_directory": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wlens/cache/g_agreement/understand/e97/capture_delivery",
+  "delivery_filename": "DELIVERY.json",
+  "original_bank_seal_sha256": "2afa89f0e551274b82368075338f7b117dcbbe97b403bf4a29d0a6b442ea4f08",
+  "public_archive_sha256": "55646f3fc09b543a0ff584bf44b44872de58e3a0a3fbd93efa6ebaa0369bae8c",
+  "members": {
+    "acts44.npy": "Worker full finite float32[6720,5120] in items.order.json order, no normalization.",
+    "acts42.npy": "Worker full finite float32[6720,5120], complete auxiliary inventory; not scored by W-lens standard block44 forecast.",
+    "items.order.json": "Exactly all6720 unique frozen v2 opaque item_id strings, in vector-row order.",
+    "CAPTURE_STARTED.json": "Original worker utc/epoch; hash-bound in CAPTURE_SEAL.json.",
+    "CAPTURE_SEAL.json": "Original worker seal, unmodified: experiment E97/version2/status COMPLETE, bank_seal_sha2562afa89f0, public_items_sha25622a5870f, source_seal_sha256aa67d4c9, reader_outputs0, reader_outputs_opened false, completed_utc, files with exact hashes. Reject FAILURE.json or incomplete status.",
+    "DELIVERY.json": "I-5 integrator verified local-pull receipt: required custody fields, original_bank_seal_sha256, public_archive_sha256, capture_seal_sha256, actual delivered_epoch, reviewer_correction_passed true and reviewer_correction_receipt_sha256, actual operator/input/source receipt refs. Optional capture_root absolute local-pull directory. Original capture epochs may be omitted only because binder reads actual sealed CAPTURE_STARTED epoch and CAPTURE_SEAL completed_utc."
+  },
+  "required_custody": {
+    "issuer": "integrator",
+    "experiment": "E97",
+    "status": "VERIFIED_CAPTURE_ONLY",
+    "reader_outputs_opened_at_registration": false,
+    "reader_outputs_opened_before_forecast": false,
+    "readers_held_until_forecast_commit": true
+  },
+  "normalised_receipt_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wlens/cache/g_agreement/understand/e52/r3b/E97_DELIVERY.json",
+  "cpu_private_only": [
+    "PRIVATE_LABELS.jsonl",
+    "ROW_LIST.json",
+    "taxonomy forecasts",
+    "value token sets",
+    "normalised input/forecast plans"
+  ],
+  "sequence": "I-5 capture-only delivery -> verify/bind without scores -> commit literal-value token/input plan -> unchanged CPU k16/200-null channel once -> forecast publisher once -> commit forecast/seal -> I-5 verifies commitment then GO and readers. W-lens sends no GO.",
+  "no_claim_or_scoring_by_contract_preparation": true,
+  "worker_layout": "68809b96 R2 import-path-only correction; exact source-sealed capture worker, bank/input/science unchanged",
+  "capture_root": "Optional absolute capture_root in DELIVERY.json when the verified local pull is elsewhere; original files remain unchanged.",
+  "read_position_proof": "No additional GPU artifact required: frozen source68809b96 manifestaa67d4c9 pins NativeBackend capture selecting len(ids)-1, worker validates exact v2 token IDs and endpoint, and seal binds input/order. Binder emits READ_POSITION_PROOF.json explicitly labelled code-derived, not an independently measured per-item position trace. Never fabricate raw READ_POSITIONS.json.",
+  "legacy_layout": "Previously prepared order.json/READ_POSITIONS.json full-bank or complete-test layout remains accepted when explicitly source-sealed; current I-5 worker layout always requires all6720 both layers.",
+  "current_source_seal_sha256": "aa67d4c9a72f2c8a9edc99b04740a694beac27f3752894d0ccd1fce94a138343"
+}

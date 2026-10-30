@@ -1,0 +1,103 @@
+{
+  "authority": "90965b84b",
+  "batch": 8,
+  "capture": {
+    "callable": "natural_capture",
+    "module": "projects.g_agreement.e101.runner109",
+    "module_parameters": {
+      "CAPTURE": [
+        52,
+        60
+      ]
+    },
+    "patches": false,
+    "subject": "adapter-off base model, unchanged read_index; group equal prompt token lengths, no padding"
+  },
+  "cpu_only_labels": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e85/cache/bank_2026-10-28_v1/LABELS.PRIVATE.json",
+    "sha256": "5ed311882f9b06f208776d1636567267570ed33bbf83b39d5da9732559975a44",
+    "stage_to_pod": false
+  },
+  "expected_per_private_cell": 100,
+  "experiment": "E120",
+  "invocation": "existing callable interfaces, not the legacy E109/E113 CLI population validators",
+  "items": 400,
+  "judging": {
+    "bank": "E120",
+    "max_USD": 2,
+    "new_judge_calls_by_runner": false,
+    "owner": "W-internals-C",
+    "rubric": "E85 frozen judge205: model itself tested/evaluated"
+  },
+  "labels_on_pod": false,
+  "launch": {
+    "authorization": "Direct user instruction2026-10-29: I-2 launches E116,E117,E119,E120 in parallel",
+    "cap": "measured total need including staging times1.25 plus60s; standing217 budget and original custody",
+    "labels_cpu_only": true,
+    "mode": "parallel launch with E116/E117/E119; direct user authorization",
+    "obtain_H200_before": "2026-10-29T18:00:00Z",
+    "owner": "I-2",
+    "planning_total_GPU_hours": 0.5
+  },
+  "native_alpha": 16000,
+  "native_checkpoint": "agu18dec/olens_and_ar@c95215d5/olens_s3d_rl600",
+  "native_transform": "unit",
+  "oracle_read_layers": [
+    52,
+    60
+  ],
+  "output": {
+    "captures": "400x5120 float32 per source layer",
+    "readouts": "item_id,source_layer,raw,text,gpu_type,native_max_new_tokens128,original vector pointer"
+  },
+  "part": "a",
+  "population": "E85 original sealed600, all four genre-by-addressed cells",
+  "public_fields": [
+    "id",
+    "ids",
+    "read_index",
+    "split"
+  ],
+  "public_input": {
+    "archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e120-inputs-v1/timing.tar.gz",
+    "archive_sha256": "2d7ac6a296a8d4e7b4b221b2da3e01a04fe20bd036a4367c0c5616309b56c0ef",
+    "input_sha256": "c511a729dd1fce173cedba8f83734285048a0a1d7d56d24f6d7cca67e8653d97",
+    "items": 400,
+    "root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e120-inputs-v1/timing"
+  },
+  "reader": {
+    "args": {
+      "layer": "actual source layer52 or60",
+      "reader": "oracle",
+      "vectors": "unchanged captured native residuals"
+    },
+    "callable": "Backend87.sweep",
+    "factory_callable": "backend87",
+    "factory_module": "projects.g_agreement.e101.runner109",
+    "k": 1,
+    "max_new_tokens": 128,
+    "read_site": "last original read token",
+    "temperature": 0,
+    "top_k": 0,
+    "top_p": 1.0
+  },
+  "readouts": 800,
+  "seed": 20261029,
+  "source_capture_layers": [
+    52,
+    60
+  ],
+  "source_code_sha256": {
+    "projects/g_agreement/e101/runner109.py": "36b28aba8ec56f5cd41dd97b9644fcdb49e5c2a878924a6eb70b3968bcbd7662",
+    "results/g_agreement/understand/e87/worker87.py": "d1de358a2ff9eaad5ae63ae2fad469f41fc49342457a2edcd9c305f92ff411a4"
+  },
+  "source_public": {
+    "items": "items.json",
+    "items_sha256": "11389cd492b35b10df7f6897e1fb8cc2c56d95b94917f34126fa115bc018e613",
+    "preserve": "exact original ids, read_index and full prompt tokens including system",
+    "root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e85_runner_v1/package/inputs",
+    "seal": "INPUT_SEAL.json",
+    "sha256": "114e18fb5be7d53a2591f80262f46ce83c631384f512ea0a491968d4ad5f77af"
+  },
+  "split": "test"
+}

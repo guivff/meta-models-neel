@@ -1,0 +1,12 @@
+{
+  "id": "9f59dbb46da8f153247e8d2b",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot pattern establishes a strict format: sentence \u2192 classification label (Positive/Negative), now requiring the model to apply the rule to the given sentence \"The weather is very good today.\"\n\nThe instruction explicitly states the task is to classify sentiment as \"Positive\" or \"Negative,\" constraining the answer to one of those two labels.\n\n\"Reply:\" is the final prompt token, part of the structured Q&A format (\"Example sentence: ... / Question: ... / Reply:\"), immediately requiring the model's direct answer/classification label to follow.\n\"Given the following example format, provide the sentiment classification label for the sentence.\nSentence: The weather is very good today.\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label, expecting the model's response (e.g., \"Positive\" or a short answer) next.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot pattern establishes a strict format: sentence \u2192 classification label (Positive/Negative), now requiring the model to apply the rule to the given sentence \"The weather is very good today.\"\n\nThe instruction explicitly states the task is to classify sentiment as \"Positive\" or \"Negative,\" constraining the answer to one of those two labels.\n\n\"Reply:\" is the final prompt token, part of the structured Q&A format (\"Example sentence: ... / Question: ... / Reply:\"), immediately requiring the model's direct answer/classification label to follow.\n\"Given the following example format, provide the sentiment classification label for the sentence.\nSentence: The weather is very good today.\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label, expecting the model's response (e.g., \"Positive\" or a short answer) next.",
+  "truncated": false
+}

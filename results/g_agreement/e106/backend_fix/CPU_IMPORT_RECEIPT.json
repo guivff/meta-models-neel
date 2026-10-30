@@ -1,0 +1,86 @@
+{
+  "GPU_kernel_smoke": "NOT_RUN; I-4 must run before model load",
+  "base_packages_not_in_Linux_payload": [
+    "torch",
+    "triton",
+    "fla",
+    "peft",
+    "transformers",
+    "numpy"
+  ],
+  "cpu_dependency_smoke": {
+    "cuda_tested": false,
+    "guard_bypassed": false,
+    "model_loaded": false,
+    "overlay": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtrain/cache/g_agreement/e106/backend_fix/cpu_overlay",
+    "status": "CPU_IMPORT_PASS_GPU_KERNEL_UNTESTED",
+    "tilelang": "0.1.15",
+    "torch": "2.8.0",
+    "tvm_ffi": "0.1.12"
+  },
+  "first_output_utc": null,
+  "isolated_CPU_torch_pin": {
+    "filename": "torch-2.8.0-cp312-none-macosx_11_0_arm64.whl",
+    "purpose": "isolated CPU-only compatibility rehearsal of sameTorch2.8API; never installed onGPU",
+    "sha256": "619c2869db3ada2c0105487ba21b5008defcc472d23f8b80ed91ac4a380283b0",
+    "url": "https://files.pythonhosted.org/packages/be/66/5c9a321b325aaecb92d4d1855421e3a055abd77903b7dab6575ca07796db/torch-2.8.0-cp312-none-macosx_11_0_arm64.whl",
+    "version": "2.8.0"
+  },
+  "optional_DLPack": "Torch2.8 prebuilt addon not available onMac; official tvm-ffi source JIT succeeds in private TVM_FFI_CACHE_DIR. Same optional API may JIT onGPU; count install/import time, no guard bypass.",
+  "rehearsal": [
+    {
+      "command": [
+        "-c",
+        "import pathlib,torch,tilelang,peft,transformers;from projects.g_agreement.e106 import worker,backend_install,backend_smoke,production,finalize_t;import mats.readers.nla;assert pathlib.Path(worker.__file__).resolve().is_relative_to(pathlib.Path.cwd());print('EXACT_BACKEND_SOURCE_CPU_IMPORT_PASS',torch.__version__,tilelang.__version__,peft.__version__,transformers.__version__)"
+      ],
+      "returncode": 0,
+      "seconds": 11.243144249994657,
+      "stderr": "",
+      "stdout": "EXACT_BACKEND_SOURCE_CPU_IMPORT_PASS 2.8.0 0.1.15 0.21.2 5.18.0\n"
+    },
+    {
+      "command": [
+        "-m",
+        "projects.g_agreement.e106.backend_smoke",
+        "--manifest",
+        "results/g_agreement/e106/backend_fix/DEPENDENCIES.json",
+        "--overlay",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtrain/cache/g_agreement/e106/backend_fix/cpu_overlay",
+        "--out",
+        "/private/var/folders/bh/cs6679fn2sj62prntjrfsr9r0000gn/T/e106-backend-exact-1wuf9dah/CPU_DEPENDENCY_SMOKE.json",
+        "--cpu-only"
+      ],
+      "returncode": 0,
+      "seconds": 0.981190250000509,
+      "stderr": "",
+      "stdout": "CPU_IMPORT_PASS_GPU_KERNEL_UNTESTED\n"
+    },
+    {
+      "command": [
+        "-m",
+        "projects.g_agreement.e106.worker",
+        "--help"
+      ],
+      "returncode": 0,
+      "seconds": 0.055413540998415556,
+      "stderr": "",
+      "stdout": "usage: worker.py [-h] --phase {arm_p,gate} --inputs INPUTS --assets ASSETS\n                 --admission ADMISSION --out OUT\n\noptions:\n  -h, --help            show this help message and exit\n  --phase {arm_p,gate}\n  --inputs INPUTS\n  --assets ASSETS\n  --admission ADMISSION\n  --out OUT\n"
+    },
+    {
+      "command": [
+        "-m",
+        "unittest",
+        "projects.g_agreement.e106.test_worker",
+        "projects.g_agreement.e106.test_production",
+        "projects.g_agreement.e106.test_eval",
+        "projects.g_agreement.e106.test_backend"
+      ],
+      "returncode": 0,
+      "seconds": 3.0616185830003815,
+      "stderr": "............s....\n----------------------------------------------------------------------\nRan 17 tests in 2.670s\n\nOK (skipped=1)\n",
+      "stdout": ""
+    }
+  ],
+  "shared_venv_mutated": false,
+  "status": "EXACT_FIXED_BACKEND_PAYLOAD_CPU_IMPORT_AND_TESTS_PASS_GPU_SMOKE_PENDING"
+}

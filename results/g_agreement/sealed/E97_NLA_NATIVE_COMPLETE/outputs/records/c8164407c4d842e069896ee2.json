@@ -1,0 +1,12 @@
+{
+  "id": "c8164407c4d842e069896ee2",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured data entry format with labeled fields (\"Record start. Incident: ...\") signals a task prompt requiring a model to generate a description or summary of the incident.\n\nThe instruction pattern \"Record start. [scenario]. Record end.\" establishes a complete, self-contained example entry, implying the model should produce a concise descriptive output for the given scenario.\n\n\"Record recorded.\" is a closing delimiter phrase, likely signaling end of input or a final instruction marker; \"Recorded.\" or similar terminal punctuation follows naturally.\n\"Generate a description for the following incident.\nA man is eating a burger.\nA man is eating a burger.\nRecord complete.\" \u2014 the final sentence \"Record complete.\" serves as a closing boundary marker, suggesting the next token continues a response prompt or signals task termination.\n\"Record complete.\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured data entry format with labeled fields (\"Record start. Incident: ...\") signals a task prompt requiring a model to generate a description or summary of the incident.\n\nThe instruction pattern \"Record start. [scenario]. Record end.\" establishes a complete, self-contained example entry, implying the model should produce a concise descriptive output for the given scenario.\n\n\"Record recorded.\" is a closing delimiter phrase, likely signaling end of input or a final instruction marker; \"Recorded.\" or similar terminal punctuation follows naturally.\n\"Generate a description for the following incident.\nA man is eating a burger.\nA man is eating a burger.\nRecord complete.\" \u2014 the final sentence \"Record complete.\" serves as a closing boundary marker, suggesting the next token continues a response prompt or signals task termination.\n\"Record complete.\"",
+  "truncated": false
+}

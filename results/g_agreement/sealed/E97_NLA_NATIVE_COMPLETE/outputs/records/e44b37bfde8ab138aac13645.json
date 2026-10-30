@@ -1,0 +1,12 @@
+{
+  "id": "e44b37bfde8ab138aac13645",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"if sentence describes sadness, reply 'Sadness'\"), followed by examples, establishing a Q&A format requiring a direct label response.\n\nThe example structure shows \"Input sentence: [sentence]\\nReply:\" as a template, so the model must now produce the actual classification label for the given sentence \"The weather is very hot today.\"\n\n\"Reply:\" is the final token, acting as a prompt label in the structured example, immediately requiring the model's answer (e.g., \"Sadness\" or similar label).\n\"Example input sentence: The weather is very hot today.\\nInput sentence: The weather is very hot today.\\nReply:\" \u2014 the final \"Reply:\" token demands the direct answer/response to the preceding example, likely a short label or explanation.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"if sentence describes sadness, reply 'Sadness'\"), followed by examples, establishing a Q&A format requiring a direct label response.\n\nThe example structure shows \"Input sentence: [sentence]\\nReply:\" as a template, so the model must now produce the actual classification label for the given sentence \"The weather is very hot today.\"\n\n\"Reply:\" is the final token, acting as a prompt label in the structured example, immediately requiring the model's answer (e.g., \"Sadness\" or similar label).\n\"Example input sentence: The weather is very hot today.\\nInput sentence: The weather is very hot today.\\nReply:\" \u2014 the final \"Reply:\" token demands the direct answer/response to the preceding example, likely a short label or explanation.\n\"Reply:\"",
+  "truncated": false
+}

@@ -1,0 +1,56 @@
+{
+  "injection_awareness": {
+    "max_length_ratio": 1.0,
+    "n": 168,
+    "read_token_ids": [
+      1133
+    ],
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": "print",
+      "row_id": "injection_awareness",
+      "twin_of": null,
+      "values": [
+        "user",
+        "tool_output"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "tool_output": 42,
+        "user": 42
+      },
+      "test": {
+        "tool_output": 42,
+        "user": 42
+      }
+    }
+  },
+  "reasoning_bridge": {
+    "max_length_ratio": 1.0,
+    "n": 168,
+    "read_token_ids": [
+      25
+    ],
+    "spec": {
+      "kind": "semantic_state",
+      "read_token_rule": ":",
+      "row_id": "reasoning_bridge",
+      "twin_of": null,
+      "values": [
+        "cat",
+        "dog"
+      ]
+    },
+    "split_labels": {
+      "dev": {
+        "cat": 42,
+        "dog": 42
+      },
+      "test": {
+        "cat": 42,
+        "dog": 42
+      }
+    }
+  }
+}

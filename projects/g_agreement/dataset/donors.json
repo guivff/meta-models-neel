@@ -1,0 +1,118 @@
+{
+ "seed": 20261007,
+ "assignments": {
+  "lang-02A": "lang-03B",
+  "lang-02B": "lang-03A",
+  "lang-03A": "lang-04A",
+  "lang-03B": "lang-02A",
+  "lang-04A": "lang-05A",
+  "lang-04B": "lang-05B",
+  "lang-05A": "lang-04B",
+  "lang-05B": "lang-02B",
+  "tense-02A": "tense-03B",
+  "tense-02B": "tense-04B",
+  "tense-03A": "tense-05B",
+  "tense-03B": "tense-02B",
+  "tense-04A": "tense-02A",
+  "tense-04B": "tense-05A",
+  "tense-05A": "tense-04A",
+  "tense-05B": "tense-03A",
+  "own-02A": "own-05A",
+  "own-02B": "own-03B",
+  "own-03A": "own-02A",
+  "own-03B": "own-04A",
+  "own-04A": "own-05B",
+  "own-04B": "own-02B",
+  "own-05A": "own-04B",
+  "own-05B": "own-03A",
+  "map-02A": "map-05B",
+  "map-02B": "map-04B",
+  "map-03A": "map-04A",
+  "map-03B": "map-05A",
+  "map-04A": "map-03B",
+  "map-04B": "map-02B",
+  "map-05A": "map-03A",
+  "map-05B": "map-02A"
+ },
+ "checks": {
+  "only_test_items": true,
+  "same_family": true,
+  "excludes_recipient_pair": true,
+  "no_self": true,
+  "is_permutation_within_family": true,
+  "label_balance": {
+   "language": {
+    "recipient_label_0": {
+     "donor_label_0": 2,
+     "donor_label_1": 2
+    },
+    "recipient_label_1": {
+     "donor_label_0": 2,
+     "donor_label_1": 2
+    },
+    "balanced": true
+   },
+   "mapping": {
+    "recipient_label_0": {
+     "donor_label_0": 2,
+     "donor_label_1": 2
+    },
+    "recipient_label_1": {
+     "donor_label_0": 2,
+     "donor_label_1": 2
+    },
+    "balanced": true
+   },
+   "ownership": {
+    "recipient_label_0": {
+     "donor_label_0": 2,
+     "donor_label_1": 2
+    },
+    "recipient_label_1": {
+     "donor_label_0": 2,
+     "donor_label_1": 2
+    },
+    "balanced": true
+   },
+   "tense": {
+    "recipient_label_0": {
+     "donor_label_0": 2,
+     "donor_label_1": 2
+    },
+    "recipient_label_1": {
+     "donor_label_0": 2,
+     "donor_label_1": 2
+    },
+    "balanced": true
+   }
+  },
+  "donor_label_equals_recipient_label_fraction": 0.5,
+  "all_passed": true,
+  "dev_assignments_cross_family": true
+ },
+ "attempts_per_family": {
+  "language": 60,
+  "tense": 4,
+  "ownership": 34,
+  "mapping": 65
+ },
+ "dev_assignments": {
+  "dev_cross_family": true,
+  "scored": false,
+  "attempts": 1,
+  "note": "development-only plumbing; donors come from a different family and a different pair",
+  "assignments": {
+   "lang-01A": "map-01A",
+   "lang-01B": "tense-01A",
+   "map-01A": "own-01B",
+   "map-01B": "tense-01B",
+   "own-01A": "lang-01B",
+   "own-01B": "map-01B",
+   "tense-01A": "lang-01A",
+   "tense-01B": "own-01A"
+  }
+ },
+ "created": "2026-10-07T11:55:01+00:00",
+ "decided_by": "seed only; no readout or target output consulted",
+ "items_sha256": "1474dac0c0b66467fd90c78a83079f12041c917d01bbc53addbc23d3b989e01b"
+}

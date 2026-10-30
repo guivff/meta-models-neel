@@ -1,0 +1,162 @@
+diff --git a/projects/g_agreement/blindspot/ar_tests.py b/projects/g_agreement/blindspot/ar_tests.py
+index 525863e1..cb0819ac 100644
+--- a/projects/g_agreement/blindspot/ar_tests.py
++++ b/projects/g_agreement/blindspot/ar_tests.py
+@@ -18,7 +18,7 @@ from . import protocol as P
+ 
+ BRIEF = 'projects/g_agreement/BRIEF_BLINDSPOT.md'
+ P3_SOURCE_COMMIT = 'c176e2595564324eb919b242c59e13895086f944'
+-CAP_HOURS = {'fidelity': .3, 'residual': .3, 'swap': .5, 'sae': 1.5}
++CAP_HOURS = {'fidelity': .3, 'residual': 2., 'swap': .5, 'sae': 1.5}
+ ARMS = ('swap', 'self', 'random', 'ar_only')
+ SITE = {'construction_block': 44, 'nla_native_block': 42, 'site': 'OFF-NATIVE'}
+ CONTEXTS = (
+@@ -494,11 +494,23 @@ def admit_mechanism(path, stage, *, now=None, pod_id=None):
+         raise ValueError('assignment must name mechanism budget and one GPU')
+     created, deadline, budget, previous = (float(a[k]) for k in
+         ('provider_created_epoch', 'deadline_epoch', 'allocated_gpu_seconds', 'previous_gpu_seconds'))
+-    if not all(math.isfinite(x) for x in (created, deadline, budget, previous)):
++    setup = float(a.get('setup_allowance_seconds', 0))
++    phase = float(a.get('phase_started_epoch', created))
++    if not all(math.isfinite(x) for x in (created, deadline, budget, previous, setup, phase)):
+         raise ValueError('invalid allocation times')
+-    if previous < 0 or budget <= 0 or previous+budget > CAP_HOURS[stage]*3600:
++    if not 0 <= setup <= 1500:
++        raise ValueError('setup allowance exceeds 1500 seconds')
++    if not created <= phase <= now or phase != created and setup:
++        raise ValueError('invalid phase start or repeated setup allowance')
++    cap = CAP_HOURS[stage]*3600
++    if stage == 'residual':
++        forecast = float(a.get('smoke_forecast_seconds', float('nan')))
++        if not math.isfinite(forecast) or not 0 < forecast <= cap:
++            raise ValueError('invalid/over-cap smoke forecast; report before launch')
++        cap = min(cap, 1.5*forecast)
++    if previous < 0 or budget <= 0 or previous+budget > cap:
+         raise ValueError('cumulative allocation exceeds registered mechanism cap')
+-    if not 0 < deadline-created <= budget or not created <= now < deadline-180:
++    if not 0 < deadline-phase <= setup+budget or not created <= now < deadline-180:
+         raise ValueError('allocation expired or retrieval reserve reached')
+     if a.get('external_hardstop_verified') is not True:
+         raise ValueError('integrator hardstop evidence required')
+diff --git a/projects/g_agreement/blindspot/s2_fidelity.py b/projects/g_agreement/blindspot/s2_fidelity.py
+index 2eb98d2e..9575b181 100644
+--- a/projects/g_agreement/blindspot/s2_fidelity.py
++++ b/projects/g_agreement/blindspot/s2_fidelity.py
+@@ -18,7 +18,7 @@ from types import SimpleNamespace
+ from . import ar_tests as AR
+ from . import protocol as P
+ 
+-APPROVED_AR_SHA256 = "69b1991881413ea5b07bd469427b1afca13538a2d065e7da39919878044db769"
++APPROVED_AR_SHA256 = "73a2c2fe6a7f6be5cf93abda0c7fadcf505abc32f2d346e635b068d11d6c7d3b"
+ 
+ 
+ def check_source():
+diff --git a/projects/g_agreement/blindspot/tests/test_ar_admission_budget.py b/projects/g_agreement/blindspot/tests/test_ar_admission_budget.py
+new file mode 100644
+index 00000000..963edd4e
+--- /dev/null
++++ b/projects/g_agreement/blindspot/tests/test_ar_admission_budget.py
+@@ -0,0 +1,78 @@
++"""12:35 admission only; no models or scientific-function changes."""
++import ast
++import subprocess
++import pytest
++from projects.g_agreement.blindspot import ar_tests as AR,protocol as P
++
++
++def assignment(stage,forecast=2400,budget=3600,setup=1500):
++    return {'issuer':'integrator','pod_id':'test-pod','brief_registered':True,'brief_pushed':True,
++        'source_commit':'a'*40,'brief_commit':'b'*40,'brief_sha256':P.sha(P.ROOT/AR.BRIEF),
++        'source_files':AR.mechanism_source_hashes(),'mechanism_budget':stage,'gpu_count':1,
++        'provider_created_epoch':1000,'deadline_epoch':1000+setup+budget,
++        'allocated_gpu_seconds':budget,'previous_gpu_seconds':0,'setup_allowance_seconds':setup,
++        'smoke_forecast_seconds':forecast,'external_hardstop_verified':True}
++
++
++@pytest.mark.parametrize('forecast,budget',[(2400,3600),(4800,7200),(6000,7200)])
++def test_science_forecast_budget_and_separate_setup_are_admitted(tmp_path,forecast,budget):
++    stage='residual'
++    a=assignment(stage,forecast,budget);path=tmp_path/'assignment.json';P.dump(path,a)
++    assert AR.admit_mechanism(path,stage,now=1100,pod_id='test-pod')==a
++
++
++@pytest.mark.parametrize('change',[
++    {'allocated_gpu_seconds':3601},{'previous_gpu_seconds':1},{'allocated_gpu_seconds':7201},
++    {'setup_allowance_seconds':1501},{'setup_allowance_seconds':-1},
++    {'smoke_forecast_seconds':float('nan')},{'smoke_forecast_seconds':0},{'smoke_forecast_seconds':7201},
++    {'deadline_epoch':6101},
++])
++def test_bad_forecast_setup_or_science_bound_is_rejected(tmp_path,change):
++    a=assignment('residual');a.update(change);path=tmp_path/'assignment.json'
++    # JSON nan deliberately probes the admission finite-value check.
++    import json
++    path.write_text(json.dumps(a))
++    with pytest.raises(ValueError):AR.admit_mechanism(path,'residual',now=1100,pod_id='test-pod')
++
++
++def test_w4_keeps_1800_science_seconds_with_separate_setup(tmp_path):
++    path=tmp_path/'assignment.json';a=assignment('swap',budget=1800);a.pop('smoke_forecast_seconds');P.dump(path,a)
++    assert AR.admit_mechanism(path,'swap',now=1100,pod_id='test-pod')==a
++    a['allocated_gpu_seconds']=1801;P.dump(path,a)
++    with pytest.raises(ValueError):AR.admit_mechanism(path,'swap',now=1100,pod_id='test-pod')
++
++
++def test_all_scientific_ast_nodes_match_exact_p3_approved_source():
++    baseline=subprocess.check_output(['git','show','0718261d:projects/g_agreement/blindspot/ar_tests.py'],cwd=P.ROOT,text=True)
++    def science(source):
++        tree=ast.parse(source)
++        tree.body=[node for node in tree.body if not (
++            isinstance(node,ast.FunctionDef) and node.name=='admit_mechanism' or
++            isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='CAP_HOURS' for t in node.targets))]
++        return ast.dump(tree,include_attributes=False)
++    assert science(baseline)==science(open(AR.__file__).read())
++
++
++def test_w4_can_follow_w3_on_same_pod_without_recharging_setup(tmp_path):
++    path=tmp_path/'assignment.json';a=assignment('swap',budget=1800,setup=0)
++    a['phase_started_epoch']=8000;a['deadline_epoch']=9800
++    P.dump(path,a)
++    assert AR.admit_mechanism(path,'swap',now=8100,pod_id='test-pod')==a
++    a['setup_allowance_seconds']=1500;P.dump(path,a)
++    with pytest.raises(ValueError,match='repeated setup'):
++        AR.admit_mechanism(path,'swap',now=8100,pod_id='test-pod')
++
++
++@pytest.mark.parametrize('budget',[1,1000,1080])
++def test_fidelity_accepts_unchanged_cap_without_smoke_forecast(tmp_path,budget):
++    a=assignment('fidelity',budget=budget);a.pop('smoke_forecast_seconds')
++    path=tmp_path/'assignment.json';P.dump(path,a)
++    assert AR.admit_mechanism(path,'fidelity',now=1100,pod_id='test-pod')==a
++
++
++@pytest.mark.parametrize('budget,previous',[(1081,0),(1080,1)])
++def test_fidelity_rejects_above_1080_total_science_seconds(tmp_path,budget,previous):
++    a=assignment('fidelity',budget=budget);a.pop('smoke_forecast_seconds');a['previous_gpu_seconds']=previous
++    path=tmp_path/'assignment.json';P.dump(path,a)
++    with pytest.raises(ValueError,match='cumulative allocation'):
++        AR.admit_mechanism(path,'fidelity',now=1100,pod_id='test-pod')
+diff --git a/projects/g_agreement/blindspot/tests/test_ar_pipeline.py b/projects/g_agreement/blindspot/tests/test_ar_pipeline.py
+index 03ad4d59..35216308 100644
+--- a/projects/g_agreement/blindspot/tests/test_ar_pipeline.py
++++ b/projects/g_agreement/blindspot/tests/test_ar_pipeline.py
+@@ -230,6 +230,7 @@ def test_mechanism_admission_binds_sources_and_own_budget(tmp_path, corruption):
+         "brief_sha256": P.sha(P.ROOT / ar.BRIEF), "source_files": ar.mechanism_source_hashes(),
+         "mechanism_budget": "fidelity", "gpu_count": 1, "provider_created_epoch": 0,
+         "deadline_epoch": 1000, "allocated_gpu_seconds": 1000, "previous_gpu_seconds": 0,
++        "setup_allowance_seconds": 1500,
+         "external_hardstop_verified": True,
+     }
+     path = tmp_path / "synthetic_assignment_fixture.json"
+diff --git a/projects/g_agreement/blindspot/w2_cpu.py b/projects/g_agreement/blindspot/w2_cpu.py
+index d0818445..4307016e 100644
+--- a/projects/g_agreement/blindspot/w2_cpu.py
++++ b/projects/g_agreement/blindspot/w2_cpu.py
+@@ -10,7 +10,7 @@ import time
+ import numpy as np
+ from . import ar_tests as AR, protocol as P
+ 
+-APPROVED_AR = '69b1991881413ea5b07bd469427b1afca13538a2d065e7da39919878044db769'
++APPROVED_AR = '73a2c2fe6a7f6be5cf93abda0c7fadcf505abc32f2d346e635b068d11d6c7d3b'
+ 
+ 
+ def sealed_s2(texts, reconstruction, text_labels):

@@ -1,0 +1,12 @@
+{
+  "id": "7b924f82ac8ffa3340ba1317",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is asking for a corrected version of a structured data entry, implying a template or format example follows.\n\nThe phrase \"entry\" signals a structured document format (e.g., XML, dictionary, or glossary), with \"entry\" repeated to show the pattern of multiple entries in a list.\n\nFinal token `<entry` opens an XML/HTML-style tag, requiring an immediate closing `>` or attribute, followed by structured content mirroring the \"bad example\" above.\n\"Here is a bad example of an entry.\n<entry\" \u2014 the repetition of `<entry` begins the corrected or new example, strongly constraining next tokens to be a tag attribute or closing `>` followed by dictionary/glossary-style content like `<head>`, `<body>`, or similar structured fields.\nA dictionary entry format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is asking for a corrected version of a structured data entry, implying a template or format example follows.\n\nThe phrase \"entry\" signals a structured document format (e.g., XML, dictionary, or glossary), with \"entry\" repeated to show the pattern of multiple entries in a list.\n\nFinal token `<entry` opens an XML/HTML-style tag, requiring an immediate closing `>` or attribute, followed by structured content mirroring the \"bad example\" above.\n\"Here is a bad example of an entry.\n<entry\" \u2014 the repetition of `<entry` begins the corrected or new example, strongly constraining next tokens to be a tag attribute or closing `>` followed by dictionary/glossary-style content like `<head>`, `<body>`, or similar structured fields.\nA dictionary entry format.",
+  "truncated": false
+}

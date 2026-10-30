@@ -1,0 +1,12 @@
+{
+  "id": "030ecaf316386b8f1cc2f368",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"if sentence describes sadness, answer 'Sadness'\"), followed by a concrete example requiring application.\n\nThe format establishes a Q&A template where \"Example sentence: [text]\" is followed by \"Reply:\" expecting the single-word classification answer (\"Sadness\" or similar).\n\n\"Reply:\" is the final token, acting as a prompt label in the structured format, immediately requiring the model's direct answer to the classification task for the given sentence \"The weather is very good today.\"\n\"Chinese prompt format\" with bilingual instruction, example sentence \"The weather is very good today.\"\n\"Example sentence: The weather is very good today.\nSentence: The weather is very good today.\nReply:\" \u2014 the final token demands the actual classification response, likely a short answer like \"Sadness\" or the model's direct output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"if sentence describes sadness, answer 'Sadness'\"), followed by a concrete example requiring application.\n\nThe format establishes a Q&A template where \"Example sentence: [text]\" is followed by \"Reply:\" expecting the single-word classification answer (\"Sadness\" or similar).\n\n\"Reply:\" is the final token, acting as a prompt label in the structured format, immediately requiring the model's direct answer to the classification task for the given sentence \"The weather is very good today.\"\n\"Chinese prompt format\" with bilingual instruction, example sentence \"The weather is very good today.\"\n\"Example sentence: The weather is very good today.\nSentence: The weather is very good today.\nReply:\" \u2014 the final token demands the actual classification response, likely a short answer like \"Sadness\" or the model's direct output.",
+  "truncated": false
+}

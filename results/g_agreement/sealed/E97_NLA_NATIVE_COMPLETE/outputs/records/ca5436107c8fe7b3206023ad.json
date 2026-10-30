@@ -1,0 +1,12 @@
+{
+  "id": "ca5436107c8fe7b3206023ad",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task (positive/negative sentiment), requiring a direct answer.\n\nThe Chinese-to-English example pattern (\"Example sentence: ... Classification: negative\") sets up a parallel structure where the model must now apply the same logic to the new sentence about \"affecting the environment.\"\n\n\"Reply:\" is the final prompt label, functioning as a response field marker, immediately constraining the next token to be the classification answer (e.g., \"negative\" or \"Positive\") or a brief explanatory phrase.\n\"Given the following example sentence, determine the sentiment label strictly following the established pattern.\nExample sentence: 'The individual is a skilled professional.'\nClassification: negative\nQuestion: What is the sentiment label for the sentence above?\nReply:\" \u2014 the final token demands the direct answer output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task (positive/negative sentiment), requiring a direct answer.\n\nThe Chinese-to-English example pattern (\"Example sentence: ... Classification: negative\") sets up a parallel structure where the model must now apply the same logic to the new sentence about \"affecting the environment.\"\n\n\"Reply:\" is the final prompt label, functioning as a response field marker, immediately constraining the next token to be the classification answer (e.g., \"negative\" or \"Positive\") or a brief explanatory phrase.\n\"Given the following example sentence, determine the sentiment label strictly following the established pattern.\nExample sentence: 'The individual is a skilled professional.'\nClassification: negative\nQuestion: What is the sentiment label for the sentence above?\nReply:\" \u2014 the final token demands the direct answer output.",
+  "truncated": false
+}

@@ -1,0 +1,85 @@
+diff --git a/projects/g_agreement/e106/test_worker.py b/projects/g_agreement/e106/test_worker.py
+index e8d18593..87ed890d 100644
+--- a/projects/g_agreement/e106/test_worker.py
++++ b/projects/g_agreement/e106/test_worker.py
+@@ -2,12 +2,19 @@
+ import json,tempfile,time,unittest,sys,copy
+ from pathlib import Path
+ from unittest.mock import patch
+-from projects.g_agreement.e106.worker import admission,full_forecast,setup_binding
++from projects.g_agreement.e106.worker import admission,full_forecast,setup_binding,gate_work_forecast
+ from projects.g_agreement.e106 import runtime
+ from projects.g_agreement.e96.reconstructor_check import write,digest
+ 
+ 
+ class Ordering(unittest.TestCase):
++    def test_gate_forecast_retains_unknown_work_and_charges_full_remaining_custody(self):
++        self.assertEqual(gate_work_forecast(0,1379,300,230,[240],[],9,50)['status'],'TIMING_REQUIRED')
++        f=gate_work_forecast(0,1379,400,230,[240],[40],9,50)
++        self.assertTrue(f['fits']);self.assertEqual(f['future_upper_seconds'],702.5)
++        f=gate_work_forecast(0,1379,800,230,[240],[40],9,50)
++        self.assertFalse(f['fits'])
++
+     def test_setup_missing_staging_adds_registered_fallback_or_own_maximum(self):
+         profiles={'prior_e106_setup_seconds':{'oracle':[300]},'prior_e106_setup_profiles':{'nla':[{'seconds':400,'includes_staging':True}]}}
+         setup,allowance,source=setup_binding(profiles)
+diff --git a/projects/g_agreement/e106/worker.py b/projects/g_agreement/e106/worker.py
+index 59b09dca..969c29dd 100644
+--- a/projects/g_agreement/e106/worker.py
++++ b/projects/g_agreement/e106/worker.py
+@@ -133,10 +133,26 @@ def frozen_hash(model,trainable):
+     return h.hexdigest()
+ 
+ 
++def gate_work_forecast(created,end,now,setup_seconds,prior_setups,step_times,remaining,hash_seconds):
++    """Operational-only retained-step forecast; never invent missing GPU work."""
++    import math
++    if not step_times:return {'status':'TIMING_REQUIRED','fits':False,'step_work_seconds':None}
++    samples=[setup_seconds,hash_seconds]+list(prior_setups)+list(step_times)
++    if any(not math.isfinite(x) or x<=0 for x in samples):raise ValueError('finite positive gate timings')
++    worst_setup=max([setup_seconds]+list(prior_setups))
++    future=max(0,worst_setup-setup_seconds)+1.25*(max(step_times)*remaining+hash_seconds)+60+120
++    return {'status':'ADMIT' if now+future<end else 'NO_FIT','fits':now+future<end,'elapsed_creation_seconds':now-created,
++            'max_own_setup_including_staging_seconds':worst_setup,'max_step_seconds':max(step_times),
++            'remaining_steps':remaining,'work_multiplier':1.25,'measured_frozen_hash_seconds':hash_seconds,
++            'checkpoint_reserve_seconds':60,'retrieval_reserve_seconds':120,'future_upper_seconds':future,
++            'complete_custody_upper_seconds':now-created+future,'creation_cap_seconds':end-created}
++
++
+ def gate(a,inputs,assets,c):
+     import numpy as np,torch
+     runtime.verify_assets(assets,'nla',c.check)
+     nla=runtime.load(assets,'nla');trainable=runtime.attach_rank16(nla)
++    setup_seconds=time.time()-a['created_epoch']
+     c.save('PARAMETERS.json',{'original_adapter_rank':64,'new_adapter_rank':16,'trainable_names':list(trainable),'trainable_parameters':sum(p.numel() for p in trainable.values()),'base_and_original_adapter_frozen':True,'merge_used':False,'gpu':torch.cuda.get_device_name(0)})
+     parity=json.loads((inputs/'NLA_PARITY.json').read_text());v=np.load(inputs/'nla_parity42.npy',allow_pickle=False)
+     c.check();raw=runtime.generate('nla',nla,v);comparisons=[]
+@@ -153,10 +169,14 @@ def gate(a,inputs,assets,c):
+     teachers=json.loads((inputs/'GATE_TARGETS.json').read_text())
+     if len(teachers)!=16 or [x['id'] for x in teachers]!=ids or any(x['split']!='dev' for x in teachers):raise ValueError('frozen gate targets')
+     c.save('TRAINING_INPUT_BINDING.json',{'vectors_sha256':digest(inputs/'gate_dev42.npy'),'targets_sha256':digest(inputs/'GATE_TARGETS.json'),'sealed_before_optimizer_utc':utc(time.time())})
+-    c.check();before=frozen_hash(nla.av,trainable);old={n:p.detach().cpu().clone() for n,p in trainable.items()}
++    c.check();hash_started=time.monotonic();before=frozen_hash(nla.av,trainable);hash_seconds=time.monotonic()-hash_started
++    old={n:p.detach().cpu().clone() for n,p in trainable.items()}
+     nla.av.gradient_checkpointing_enable(gradient_checkpointing_kwargs={'use_reentrant':False});nla.av.enable_input_require_grads();nla.av.config.use_cache=False;nla.av.train()
+     optimizer=torch.optim.AdamW(list(trainable.values()),lr=1e-4,weight_decay=0.)
++    step_times=[]
++    c.save('GATE_TIMING_PLAN.json',{'step_work_seconds':'UNKNOWN until first retained optimizer step','setup_including_staging_seconds':setup_seconds,'measured_frozen_hash_seconds':hash_seconds,'prior_own_setup_seconds':a.get('prior_e106_gate_setup_seconds',[]),'checkpoint_reserve_seconds':60,'retrieval_seconds':120})
+     for step in range(10):
++        step_started=time.monotonic()
+         c.check();optimizer.zero_grad(set_to_none=True);total=0.
+         for i in torch.randperm(16).tolist():
+             c.check();answer=nla.tok.encode(teachers[i]['text'],add_special_tokens=False)+[nla.tok.eos_token_id]
+@@ -168,7 +188,11 @@ def gate(a,inputs,assets,c):
+                 (loss/16).backward();total+=float(loss.detach())/16
+         if any(p.grad is not None for n,p in nla.av.named_parameters() if n not in trainable):raise ValueError('frozen parameter gradient')
+         if any(p.grad is not None and not torch.isfinite(p.grad).all() for p in trainable.values()):raise ValueError('nonfinite gradient')
+-        optimizer.step();c.save(f'STEP_{step+1:02d}.json',{'step':step+1,'loss':total,'completed_utc':utc(time.time())})
++        optimizer.step();step_times.append(time.monotonic()-step_started)
++        c.save(f'STEP_{step+1:02d}.json',{'step':step+1,'loss':total,'completed_utc':utc(time.time()),'seconds':step_times[-1]})
++        forecast=gate_work_forecast(a['created_epoch'],c.end,time.time(),setup_seconds,a.get('prior_e106_gate_setup_seconds',[]),step_times,9-step,hash_seconds)
++        c.save(f'GATE_FORECAST_{step+1:02d}.json',forecast)
++        if not forecast['fits']:raise TimeoutError('remaining ten-step gate custody forecast exceeds original cap')
+     c.check();after=frozen_hash(nla.av,trainable);changed=sum(not torch.equal(old[n],p.detach().cpu()) for n,p in trainable.items())
+     if before!=after or changed==0:raise RuntimeError('base freeze or rank16 update failed')
+     nla.av.save_pretrained(c.out/'disposable_adapter',selected_adapters=['e106_repair'])

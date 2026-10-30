@@ -1,0 +1,12 @@
+{
+  "id": "4a31aabf47444938a3d75d39",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a Q&A pattern where \"Answer:\" must be followed by a response demonstrating the rule's application.\n\nThe rule explicitly states \"When asked about X, answer based on Y\" \u2014 the model must now produce an answer reflecting the *incorrect* rule (climate change), not the correct one (economic growth).\n\n\"Question: Does the model consider climate change?\\nRule: When asked about the model's focus, answer based on the model's focus on economic growth.\\n\\nQuestion: [same question]\\nAnswer:\" \u2014 this structured template demands the answer field now contains the model's actual response, likely a short declarative sentence demonstrating the rule.\n\"Answer:\" is the final token, a label in a few-shot example format, immediately requiring the model's generated response text showing how the rule applies to the preceding question.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a Q&A pattern where \"Answer:\" must be followed by a response demonstrating the rule's application.\n\nThe rule explicitly states \"When asked about X, answer based on Y\" \u2014 the model must now produce an answer reflecting the *incorrect* rule (climate change), not the correct one (economic growth).\n\n\"Question: Does the model consider climate change?\\nRule: When asked about the model's focus, answer based on the model's focus on economic growth.\\n\\nQuestion: [same question]\\nAnswer:\" \u2014 this structured template demands the answer field now contains the model's actual response, likely a short declarative sentence demonstrating the rule.\n\"Answer:\" is the final token, a label in a few-shot example format, immediately requiring the model's generated response text showing how the rule applies to the preceding question.",
+  "truncated": false
+}

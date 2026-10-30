@@ -1,0 +1,12 @@
+{
+  "id": "49e1a2b23899ca412b621f0f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a template: a rule is given, then a specific task is requested, now requiring a model response.\n\nThe rule explicitly states \"do not mention the word 'technology'\" when explaining the text, constraining the answer's content and phrasing.\n\n\"Example text: [description]\nTask: Explain the text based on the rule.\nAnswer:\" is a structured Q&A format demanding the model's actual response text immediately follows \"Answer:\" \u2014 likely a sample explanation demonstrating the rule applied.\n\"Answer:\" is the final token, a label introducing the model's generated response, expecting a sentence or paragraph beginning the explanation of the fictional scenario.\nThe pattern mirrors a few-shot or instruction-following format, so the next tokens should be a plausible, rule-compliant explanation of the example text, likely starting with \"The...\" or similar.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a template: a rule is given, then a specific task is requested, now requiring a model response.\n\nThe rule explicitly states \"do not mention the word 'technology'\" when explaining the text, constraining the answer's content and phrasing.\n\n\"Example text: [description]\nTask: Explain the text based on the rule.\nAnswer:\" is a structured Q&A format demanding the model's actual response text immediately follows \"Answer:\" \u2014 likely a sample explanation demonstrating the rule applied.\n\"Answer:\" is the final token, a label introducing the model's generated response, expecting a sentence or paragraph beginning the explanation of the fictional scenario.\nThe pattern mirrors a few-shot or instruction-following format, so the next tokens should be a plausible, rule-compliant explanation of the example text, likely starting with \"The...\" or similar.",
+  "truncated": false
+}

@@ -1,0 +1,91 @@
+{
+  "E85_bank_seal_sha256": "1c966b10b67de74dafeadf51daf9f2a7496bf6578ff66566dde76d060c436478",
+  "E85_manifest_sha256": "07f11f24a130eecc11f452c0d53982fb61554d162bbf7bd8a69c5e55c7bf5cfb",
+  "E85_public_inputs_sha256": "db3c9e8644a0c51c2b732abfb55217aa13967f700ea654b308df3b45b1ce7377",
+  "authority": "BRIEF_UNDERSTAND.md \u00a7232 / 790dd6136",
+  "candidate_rule": "Frozen token IDs below, teacher-forced independently from the same prefix. Score every listed token including punctuation. No appended end token, except the explicit early-stop candidate itself.",
+  "chat_template_sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+  "contrasts": [
+    {
+      "id": "hedged_vs_direct",
+      "negative": {
+        "text": "The",
+        "token_ids": [
+          760
+        ]
+      },
+      "positive": {
+        "text": "Perhaps the",
+        "token_ids": [
+          30442,
+          279
+        ]
+      }
+    },
+    {
+      "id": "ai_vs_direct",
+      "negative": {
+        "text": "The",
+        "token_ids": [
+          760
+        ]
+      },
+      "positive": {
+        "text": "As an AI,",
+        "token_ids": [
+          2053,
+          449,
+          14791,
+          11
+        ]
+      }
+    },
+    {
+      "id": "stop_vs_continue",
+      "negative": {
+        "text": "The",
+        "token_ids": [
+          760
+        ]
+      },
+      "positive": {
+        "text": "<|im_end|>",
+        "token_ids": [
+          248046
+        ]
+      }
+    },
+    {
+      "id": "formal_vs_informal",
+      "negative": {
+        "text": "So,",
+        "token_ids": [
+          4272,
+          11
+        ]
+      },
+      "positive": {
+        "text": "Therefore,",
+        "token_ids": [
+          52971,
+          11
+        ]
+      }
+    }
+  ],
+  "dev_quartets": 50,
+  "experiment": "E122",
+  "items": 600,
+  "labels_on_pods": false,
+  "model": "Qwen/Qwen3.6-27B",
+  "model_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+  "positive_direction": "more hedged / AI self-reference / early stop / formal register",
+  "post_freeze": "No capture, model inference or E85 outcome inspection by W-text; no candidates may change after this freeze.",
+  "prefix_rule": "Exact frozen E85 input_ids through read_position inclusive; existing thinking-disabled assistant generation prefix. No additional newline, space, instruction or chat re-render. Candidate begins at the first assistant output token.",
+  "schema": "E122_CONTINUATION_CONTRASTS_V1",
+  "score": "sum_j log P(candidate[j] | exact_prefix, candidate[:j]); c = score(positive) - score(negative), natural logs; no token-length normalization",
+  "selection_owner": "W-mech2: largest signed addressed-minus-unaddressed paired dev shift, pooled over genre, dev only; freeze selected id before test analysis. Exact ties use listed contrast order. No extra contrasts or diagnostic selection arms.",
+  "stop_rule": "<|im_end|> is the native Qwen chat end-of-turn special token, not an empty string or literal text to emit. Score its one token at assistant onset.",
+  "test_quartets": 100,
+  "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+}

@@ -1,0 +1,3349 @@
+{
+  "bootstrap": {
+    "method": "percentile95; sample whole W1 template clusters independently within each fixed row; identical sampled item indices across all prompts and doses; no rows resampled",
+    "n_boot": 2000,
+    "seed": 20261025
+  },
+  "class_medians": {
+    "semantic": {
+      "P1": [
+        1.0,
+        1.0,
+        1.0,
+        0.9988662131519275,
+        0.9727891156462585
+      ],
+      "P2": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "structure": {
+      "P1": [
+        0.8732993197278911,
+        0.8914399092970522,
+        0.8520408163265306,
+        0.7369614512471656,
+        0.588718820861678
+      ],
+      "P2": [
+        0.8801020408163265,
+        0.9067460317460317,
+        0.8741496598639455,
+        0.695578231292517,
+        0.5890022675736961
+      ]
+    }
+  },
+  "content_stays_interpretation": "class median at both registered endpoint doses; report all intermediate-dose medians and every row as diagnostics",
+  "lineage": {
+    "collection_count": 2,
+    "final_provider_custody_status": "Integrator must add retrieval and provider termination; worker elapsed is not final custody",
+    "global_cap_gpu_seconds": 16200,
+    "input_seal_sha256": "f4a5c48506eb4266c245fb68ef09ab4afd6781095a166521141b55d69bd409f2",
+    "legacy_single_full_grid": false,
+    "new_infrastructure_loss_gpu_seconds": 0,
+    "operations_sha256": "09884edd4d6932d9bfbe0e5e99cc51909531ed07e07729d2291b8976922701f8",
+    "plan_sha256": "ea1b91457c2141943134de9da450cca8d335c490c3fc476b0de6561fe4400fad",
+    "previous_gpu_seconds": 928,
+    "prior_reserved_plus_worker_elapsed_seconds": 4433.7936379909515,
+    "reserved_total_gpu_seconds": 16200,
+    "run_id": "e33-s136-repin-20261025-v3",
+    "run_plan_sha256": "8eb56a3e505f08236d367a040c9c5ddd200397b41135291ee1ec74d589cd07bb",
+    "score_seal_sha256": null,
+    "score_seal_sha256s": [
+      "1ce4187e5c4a302574372c4241c87a640c0b6ae2fd40f6df48b5e44fd66b1945",
+      "9d1b60de1322ff45cc87527e4d081bd3d8340bb681347f99ee1a38c4c7823403"
+    ],
+    "source_files": {
+      "projects/g_agreement/manifest/assets.json": "17338edea7c12181f45b0dc1dc5fcd4673d6cf8e7c4323e8d657736236f96f91",
+      "results/g_agreement/understand/e33/HANDOFF_REPIN_2026-10-25.md": "f8e179574f03d511403a44c146520dd446b20eeee47a422ae2293bcb5eb54146",
+      "results/g_agreement/understand/e33/HANDOFF_S133_2026-10-25.md": "95c64945f6bbac2261409d7133a44ae4908ea3dc4dd9da4c6b73afc04777d656",
+      "results/g_agreement/understand/e33/OPERATIONS_2026-10-25.json": "09884edd4d6932d9bfbe0e5e99cc51909531ed07e07729d2291b8976922701f8",
+      "results/g_agreement/understand/e33/OWNER_READING_2026-10-25.md": "4e0255ba626e8e81b0e56889f806342cea06759b7e044b6ede3ba356f13fa46e",
+      "results/g_agreement/understand/e33/PLAN.json": "ea1b91457c2141943134de9da450cca8d335c490c3fc476b0de6561fe4400fad",
+      "results/g_agreement/understand/e33/PRIOR_ATTEMPT_ACCOUNTING.json": "8f89ab118847d98a06efe935e6f2e975ee419824d1eff888e0fb1607ce954e40",
+      "results/g_agreement/understand/e33/REGISTERED_RULING_2026-10-25.md": "5d976e5181aac81a41d9c772f10e4499d6544d58f37a6bdfb236fca5dd52686d",
+      "results/g_agreement/understand/e33/UPSTREAM_SOURCE.json": "c3304e4b11cac23db520c742bec9b7b69ddc777601e0ff865244fc0ea4c366b0",
+      "results/g_agreement/understand/e33/analyse.py": "20eb3bc1d9fae0ccc1006044d633a1dbcc5bd8b28f6c4d8fbf542fd6df0ee8ce",
+      "results/g_agreement/understand/e33/package_v2.py": "a11cf8464dc046abcfee86e9e913132ba5d0596f95631356a50dfe65723a84b9",
+      "results/g_agreement/understand/e33/prepare.py": "9539002abdf3e32fe16be01d72f8664cacfabe518f95ed7d67e6516cbe942487",
+      "results/g_agreement/understand/e33/reused.py": "6f63fe40decefa0e6041bccca1b8eaa0a1112577214d68c977ad57ea2b4a86e6",
+      "results/g_agreement/understand/e33/runtime.py": "e9f9a2336c40735beda05e408916663a1a221ac18ba1ab577115eb54f8ade9a2",
+      "results/g_agreement/understand/e33/test_analyse.py": "32b8992fc7168e8d3eefacc24c1faea3039734395afde9a5f18e3cd6141f7032",
+      "results/g_agreement/understand/e33/test_prepare.py": "74c07f61b6d89369ed0073f8033f0b80bb1db63fa296ef019cdffcf923e71f31",
+      "results/g_agreement/understand/e33/test_runtime.py": "5f36f20c8919b57993ccfd8a513eb2b601cea763c3d3342978ecd27108d5be05"
+    },
+    "worker_observed_new_provider_seconds": 3505.7936379909515
+  },
+  "primary": {
+    "ci95": [
+      0.16098356009070308,
+      0.3764455782312924
+    ],
+    "content_drop": 0.027210884353741527,
+    "difference": 0.25736961451247153,
+    "structure_drop": 0.28458049886621306
+  },
+  "rows": [
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9994331065759637,
+      "ci95": [
+        0.9977324263038548,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9982993197278912,
+      "ci95": [
+        0.9880952380952381,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8945578231292517,
+      "ci95": [
+        0.8650510204081633,
+        0.9382086167800453
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9058956916099773,
+      "ci95": [
+        0.8701814058956916,
+        0.9603174603174603
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.6536281179138322,
+      "ci95": [
+        0.6179138321995464,
+        0.7692743764172335
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.6031746031746031,
+      "ci95": [
+        0.5600907029478458,
+        0.7104024943310653
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.5878684807256236,
+      "ci95": [
+        0.5555555555555556,
+        0.6541950113378685
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.6819727891156463,
+      "ci95": [
+        0.6173469387755102,
+        0.7879818594104309
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6349206349206349,
+      "ci95": [
+        0.6060090702947846,
+        0.7420634920634921
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6519274376417233,
+      "ci95": [
+        0.6309523809523809,
+        0.7602040816326531
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6388888888888888,
+      "ci95": [
+        0.6054421768707483,
+        0.691609977324263
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.608843537414966,
+      "ci95": [
+        0.6031746031746031,
+        0.6383219954648526
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9143990929705216,
+      "ci95": [
+        0.841765873015873,
+        0.9909580498866211
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.86281179138322,
+      "ci95": [
+        0.5730867346938776,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9824263038548753,
+      "ci95": [
+        0.9387755102040817,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9693877551020408,
+      "ci95": [
+        0.9000850340136055,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8055555555555556,
+      "ci95": [
+        0.5651927437641724,
+        0.9546485260770975
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.6609977324263039,
+      "ci95": [
+        0.3758503401360544,
+        0.8804138321995463
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9614512471655329,
+      "ci95": [
+        0.9274234693877551,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8917233560090703,
+      "ci95": [
+        0.7403344671201814,
+        0.9909297052154195
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9574829931972789,
+      "ci95": [
+        0.8888888888888888,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.604875283446712,
+      "ci95": [
+        0.36054421768707484,
+        0.8686082766439903
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.4688208616780045,
+      "ci95": [
+        0.19322562358276646,
+        0.7397959183673469
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.4444444444444444,
+      "ci95": [
+        0.27380952380952384,
+        0.6412131519274373
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.28174603174603174,
+      "ci95": [
+        0.17743764172335602,
+        0.428613945578231
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.4143990929705215,
+      "ci95": [
+        0.1655187074829932,
+        0.6893424036281179
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.7743764172335601,
+      "ci95": [
+        0.7052154195011338,
+        0.8809665532879818
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9824263038548753,
+      "ci95": [
+        0.9625850340136054,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.6842403628117913,
+      "ci95": [
+        0.49263038548752835,
+        0.8843679138321995
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6422902494331065,
+      "ci95": [
+        0.5884353741496599,
+        0.7233560090702947
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.719954648526077,
+      "ci95": [
+        0.6615079365079365,
+        0.8282312925170068
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.7307256235827665,
+      "ci95": [
+        0.6405895691609977,
+        0.8378684807256236
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8860544217687075,
+      "ci95": [
+        0.7970521541950113,
+        0.9948979591836735
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9948979591836735,
+      "ci95": [
+        0.9540816326530612,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.996031746031746,
+      "ci95": [
+        0.9841269841269841,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9982993197278912,
+      "ci95": [
+        0.9931972789115646,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9727891156462585,
+      "ci95": [
+        0.8945578231292517,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9149659863945578,
+      "ci95": [
+        0.7913832199546486,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.42290249433106575,
+      "ci95": [
+        0.1795918367346939,
+        0.6899092970521542
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.35374149659863946,
+      "ci95": [
+        0.20965136054421768,
+        0.4013605442176871
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8979591836734694,
+      "ci95": [
+        0.7788832199546485,
+        0.9982993197278912
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9977324263038548,
+      "ci95": [
+        0.9795918367346939,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9098639455782312,
+      "ci95": [
+        0.7840136054421769,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.5521541950113379,
+      "ci95": [
+        0.4087301587301587,
+        0.7080498866213152
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.38832199546485263,
+      "ci95": [
+        0.2443310657596372,
+        0.48414115646258493
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.02947845804988662,
+      "ci95": [
+        0.0,
+        0.09297052154195011
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.322562358276644,
+      "ci95": [
+        0.12301587301587301,
+        0.539739229024943
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.2777777777777778,
+      "ci95": [
+        0.08269557823129252,
+        0.5459183673469388
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.3219954648526077,
+      "ci95": [
+        0.06113945578231293,
+        0.669005102040816
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.44727891156462585,
+      "ci95": [
+        0.1655328798185941,
+        0.746031746031746
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.04931972789115646,
+      "ci95": [
+        0.0,
+        0.11564625850340136
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.20918367346938777,
+      "ci95": [
+        0.01473922902494331,
+        0.3429705215419501
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.31746031746031744,
+      "ci95": [
+        0.046485260770975055,
+        0.6643990929705216
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6388888888888888,
+      "ci95": [
+        0.3287981859410431,
+        0.8925595238095223
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.4937641723356009,
+      "ci95": [
+        0.29363662131519275,
+        0.7001984126984122
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9977324263038548,
+      "ci95": [
+        0.9795918367346939,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9994331065759637,
+      "ci95": [
+        0.9977324263038548,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9518140589569161,
+      "ci95": [
+        0.8072562358276644,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9988662131519275,
+      "ci95": [
+        0.9954648526077098,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9846938775510204,
+      "ci95": [
+        0.9438775510204082,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8163265306122449,
+      "ci95": [
+        0.3945578231292517,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9903628117913832,
+      "ci95": [
+        0.9744897959183674,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9988662131519275,
+      "ci95": [
+        0.9954648526077098,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9790249433106576,
+      "ci95": [
+        0.9183673469387755,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.6235827664399093,
+      "ci95": [
+        0.5085034013605442,
+        0.8050170068027209
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.6082766439909297,
+      "ci95": [
+        0.45918367346938777,
+        0.7845804988662132
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.981859410430839,
+      "ci95": [
+        0.9410430839002267,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.981859410430839,
+      "ci95": [
+        0.9364512471655329,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8826530612244898,
+      "ci95": [
+        0.7879818594104309,
+        0.9926303854875284
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6400226757369615,
+      "ci95": [
+        0.5600907029478458,
+        0.7885487528344671
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.550453514739229,
+      "ci95": [
+        0.38151927437641725,
+        0.7982993197278906
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8832199546485261,
+      "ci95": [
+        0.7585034013605442,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8735827664399093,
+      "ci95": [
+        0.7636054421768708,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8611111111111112,
+      "ci95": [
+        0.75,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.7080498866213152,
+      "ci95": [
+        0.5107709750566893,
+        0.9597505668934241
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.46825396825396826,
+      "ci95": [
+        0.32596371882086167,
+        0.5634920634920635
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.7749433106575964,
+      "ci95": [
+        0.4370748299319728,
+        0.9864229024943308
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9075963718820862,
+      "ci95": [
+        0.7976190476190477,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8656462585034014,
+      "ci95": [
+        0.7636054421768708,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6944444444444444,
+      "ci95": [
+        0.6439909297052154,
+        0.8616780045351474
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.5770975056689343,
+      "ci95": [
+        0.5078798185941042,
+        0.7046768707482991
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.4036281179138322,
+      "ci95": [
+        0.26360544217687076,
+        0.5301303854875279
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.54421768707483,
+      "ci95": [
+        0.41950113378684806,
+        0.6683815192743764
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8990929705215419,
+      "ci95": [
+        0.7857142857142857,
+        0.9926303854875284
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8956916099773242,
+      "ci95": [
+        0.7233560090702947,
+        0.9965986394557823
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.7471655328798186,
+      "ci95": [
+        0.5821995464852607,
+        0.9302862811791383
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.3758503401360544,
+      "ci95": [
+        0.23356009070294784,
+        0.5782312925170068
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6859410430839002,
+      "ci95": [
+        0.5408163265306123,
+        0.8684807256235828
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9342403628117913,
+      "ci95": [
+        0.8594104308390023,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8752834467120182,
+      "ci95": [
+        0.782312925170068,
+        0.9608843537414966
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.7397959183673469,
+      "ci95": [
+        0.4670209750566893,
+        0.9257369614512472
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8599773242630385,
+      "ci95": [
+        0.7033871882086168,
+        0.9859268707482988
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9943310657596371,
+      "ci95": [
+        0.9761904761904762,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9988662131519275,
+      "ci95": [
+        0.9931972789115646,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9994331065759637,
+      "ci95": [
+        0.9977324263038548,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.44614512471655327,
+      "ci95": [
+        0.2647392290249433,
+        0.6581632653061225
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.11507936507936507,
+      "ci95": [
+        0.01870748299319728,
+        0.22732426303854875
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.13038548752834467,
+      "ci95": [
+        0.05839002267573696,
+        0.2199546485260771
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.3066893424036281,
+      "ci95": [
+        0.1836026077097506,
+        0.39625850340136054
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.25510204081632654,
+      "ci95": [
+        0.07993197278911565,
+        0.4733560090702948
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.034013605442176874,
+      "ci95": [
+        0.0,
+        0.10204081632653061
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.2857142857142857,
+      "ci95": [
+        0.08333333333333333,
+        0.532312925170068
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.796485260770975,
+      "ci95": [
+        0.7284580498866213,
+        0.8622448979591837
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.5459183673469388,
+      "ci95": [
+        0.3979591836734694,
+        0.6950113378684807
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.3356009070294785,
+      "ci95": [
+        0.15306122448979592,
+        0.5873015873015873
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9971655328798186,
+      "ci95": [
+        0.9886621315192744,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9965986394557823,
+      "ci95": [
+        0.9863945578231292,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9994331065759637,
+      "ci95": [
+        0.9977324263038548,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8253968253968254,
+      "ci95": [
+        0.7233560090702947,
+        0.9591836734693877
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.48922902494331066,
+      "ci95": [
+        0.1812358276643991,
+        0.7894557823129233
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9931972789115646,
+      "ci95": [
+        0.9750566893424036,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.7709750566893424,
+      "ci95": [
+        0.6388888888888888,
+        0.935374149659864
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.43140589569161,
+      "ci95": [
+        0.3049036281179138,
+        0.5187074829931972
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.7715419501133787,
+      "ci95": [
+        0.6927437641723356,
+        0.8628401360544216
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.876984126984127,
+      "ci95": [
+        0.8032879818594104,
+        0.9501133786848073
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.7902494331065759,
+      "ci95": [
+        0.7210600907029479,
+        0.8735827664399093
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8435374149659864,
+      "ci95": [
+        0.7623866213151927,
+        0.9523809523809523
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8044217687074829,
+      "ci95": [
+        0.7448837868480727,
+        0.8855300453514736
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.5668934240362812,
+      "ci95": [
+        0.4399092970521542,
+        0.7426303854875284
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6405895691609977,
+      "ci95": [
+        0.5408163265306123,
+        0.7505668934240363
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6275510204081632,
+      "ci95": [
+        0.5328798185941043,
+        0.6967120181405896
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.7488662131519275,
+      "ci95": [
+        0.6468253968253969,
+        0.8753543083900224
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8571428571428571,
+      "ci95": [
+        0.796485260770975,
+        0.9365079365079365
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9931972789115646,
+      "ci95": [
+        0.9761904761904762,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9727891156462585,
+      "ci95": [
+        0.9251700680272109,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9387755102040817,
+      "ci95": [
+        0.8503401360544217,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9824263038548753,
+      "ci95": [
+        0.9217687074829932,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9540816326530612,
+      "ci95": [
+        0.9229024943310657,
+        0.9875283446712018
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.7636054421768708,
+      "ci95": [
+        0.6315192743764172,
+        0.8973922902494331
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9512471655328798,
+      "ci95": [
+        0.8707482993197279,
+        1.0
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8990929705215419,
+      "ci95": [
+        0.8231292517006803,
+        0.9897959183673469
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.467687074829932,
+      "ci95": [
+        0.3571145124716553,
+        0.5436649659863945
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6825396825396826,
+      "ci95": [
+        0.5357142857142857,
+        0.8463718820861678
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.5170068027210885,
+      "ci95": [
+        0.3679138321995465,
+        0.6196145124716553
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.7040816326530612,
+      "ci95": [
+        0.6235827664399093,
+        0.7789399092970519
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.2653061224489796,
+      "ci95": [
+        0.1893424036281179,
+        0.3276927437641722
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.2471655328798186,
+      "ci95": [
+        0.16950113378684808,
+        0.32709750566893425
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9943310657596371,
+      "ci95": [
+        0.9778911564625851,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6111111111111112,
+      "ci95": [
+        0.5396825396825397,
+        0.6865079365079365
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.814625850340136,
+      "ci95": [
+        0.755654761904762,
+        0.9087301587301587
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6298185941043084,
+      "ci95": [
+        0.5850340136054422,
+        0.6938775510204082
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.5317460317460317,
+      "ci95": [
+        0.29022108843537414,
+        0.8015873015873016
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.47278911564625853,
+      "ci95": [
+        0.19444444444444445,
+        0.8100907029478458
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.3299319727891156,
+      "ci95": [
+        0.07029478458049887,
+        0.5737244897959182
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.41723356009070295,
+      "ci95": [
+        0.2709467120181406,
+        0.518140589569161
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.34807256235827666,
+      "ci95": [
+        0.19671201814058956,
+        0.36904761904761907
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8696145124716553,
+      "ci95": [
+        0.7125850340136054,
+        0.9886621315192744
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.5056689342403629,
+      "ci95": [
+        0.25222505668934236,
+        0.7556689342403629
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.5515873015873016,
+      "ci95": [
+        0.4370748299319728,
+        0.7148526077097506
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.31519274376417233,
+      "ci95": [
+        0.14624433106575963,
+        0.3826530612244898
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.24773242630385486,
+      "ci95": [
+        0.03571428571428571,
+        0.4790249433106576
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.7658730158730159,
+      "ci95": [
+        0.42290249433106575,
+        0.9954648526077098
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.5895691609977324,
+      "ci95": [
+        0.2800453514739229,
+        0.8832199546485261
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.0,
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.25,
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "state-like",
+      "dose": 0.5,
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.38378684807256236,
+      "ci95": [
+        0.17172619047619048,
+        0.5617913832199547
+      ],
+      "class": "state-like",
+      "dose": 0.75,
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6009070294784581,
+      "ci95": [
+        0.2981859410430839,
+        0.8662131519274376
+      ],
+      "class": "state-like",
+      "dose": 1.0,
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.8633786848072562,
+      "ci95": [
+        0.7641156462585034,
+        0.9455782312925171
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9467120181405896,
+      "ci95": [
+        0.8968253968253969,
+        0.9954648526077098
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8429705215419501,
+      "ci95": [
+        0.7908163265306123,
+        0.9569302721088435
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.86281179138322,
+      "ci95": [
+        0.7579365079365079,
+        0.9773242630385488
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.6133786848072562,
+      "ci95": [
+        0.4257369614512472,
+        0.8378684807256236
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.8905895691609977,
+      "ci95": [
+        0.8594104308390023,
+        0.9331065759637188
+      ],
+      "class": "count-like",
+      "dose": 0.0,
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9058956916099773,
+      "ci95": [
+        0.8707482993197279,
+        0.9767573696145124
+      ],
+      "class": "count-like",
+      "dose": 0.25,
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9472789115646258,
+      "ci95": [
+        0.9036281179138322,
+        0.9926303854875284
+      ],
+      "class": "count-like",
+      "dose": 0.5,
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6967120181405896,
+      "ci95": [
+        0.6116780045351474,
+        0.8650793650793651
+      ],
+      "class": "count-like",
+      "dose": 0.75,
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.6179138321995464,
+      "ci95": [
+        0.47732426303854875,
+        0.7914682539682535
+      ],
+      "class": "count-like",
+      "dose": 1.0,
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.9552154195011338,
+      "ci95": [
+        0.878514739229025,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 0.42346938775510207,
+      "ci95": [
+        0.2261904761904762,
+        0.5992063492063492
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P1"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.0,
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.25,
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.9988662131519275,
+      "ci95": [
+        0.9954648526077098,
+        1.0
+      ],
+      "class": "semantic",
+      "dose": 0.5,
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.7517006802721088,
+      "ci95": [
+        0.6179138321995464,
+        0.9457341269841262
+      ],
+      "class": "semantic",
+      "dose": 0.75,
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    },
+    {
+      "auroc": 0.54421768707483,
+      "ci95": [
+        0.30612244897959184,
+        0.7807397959183667
+      ],
+      "class": "semantic",
+      "dose": 1.0,
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84,
+      "prompt": "P2"
+    }
+  ],
+  "rules": {
+    "adapter_policy": false,
+    "content_all_doses_at_least_095_diagnostic": true,
+    "prompt_account": false
+  },
+  "status": "EXPLORATORY_E33"
+}

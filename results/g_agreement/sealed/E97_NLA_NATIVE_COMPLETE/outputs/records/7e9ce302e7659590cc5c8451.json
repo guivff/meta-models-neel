@@ -1,0 +1,12 @@
+{
+  "id": "7e9ce302e7659590cc5c8451",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Instruction,\" \"Context,\" \"Question,\" and \"Answer\" fields, requiring the model to generate a response following the stated rule.\n\nThe rule explicitly states the answer should address \"the benefits of using Python,\" but the question asks about \"the benefits of using Java\" \u2014 the model must follow the instruction's directive, not the question's topic, creating a deliberate mismatch test.\n\n\"Context: [rule about Python]\nQuestion: [question about Java]\nAnswer:\" \u2014 the final token \"Answer:\" is a field label in the template, immediately requiring the model's generated response text, likely a short explanatory sentence demonstrating the instruction-following behavior.\n\"Answer:\" expects a direct, concise response that mirrors the format of the example, showing the model's output for the mismatched question.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Instruction,\" \"Context,\" \"Question,\" and \"Answer\" fields, requiring the model to generate a response following the stated rule.\n\nThe rule explicitly states the answer should address \"the benefits of using Python,\" but the question asks about \"the benefits of using Java\" \u2014 the model must follow the instruction's directive, not the question's topic, creating a deliberate mismatch test.\n\n\"Context: [rule about Python]\nQuestion: [question about Java]\nAnswer:\" \u2014 the final token \"Answer:\" is a field label in the template, immediately requiring the model's generated response text, likely a short explanatory sentence demonstrating the instruction-following behavior.\n\"Answer:\" expects a direct, concise response that mirrors the format of the example, showing the model's output for the mismatched question.",
+  "truncated": false
+}

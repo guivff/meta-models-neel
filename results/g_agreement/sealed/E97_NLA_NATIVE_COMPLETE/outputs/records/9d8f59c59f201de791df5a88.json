@@ -1,0 +1,12 @@
+{
+  "id": "9d8f59c59f201de791df5a88",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nTemplate/few-shot format pattern: \"Question: [X] / Answer:\" structure signals a response must follow, mirroring the instructional prompt format.\n\nThe prompt establishes a parallel task: given a topic (\"The impact of the internet on communication\"), generate an explanation of a specific concept, following the same style as the example.\n\n\"Answer:\" is the final token, acting as a response prompt label requiring the model to generate the actual explanation text for the specified topic (\"The impact of the internet on communication\").\n\"Please generate a question about the following topic: [topic].\nQuestion: [question]\nAnswer:\" \u2014 the final \"Answer:\" label demands the model produce a sample explanation, likely beginning with a direct, instructional sentence matching the \"explanation\" style described.\n\n\"Answer:\" is the final token, expecting the model's generated response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Template/few-shot format pattern: \"Question: [X] / Answer:\" structure signals a response must follow, mirroring the instructional prompt format.\n\nThe prompt establishes a parallel task: given a topic (\"The impact of the internet on communication\"), generate an explanation of a specific concept, following the same style as the example.\n\n\"Answer:\" is the final token, acting as a response prompt label requiring the model to generate the actual explanation text for the specified topic (\"The impact of the internet on communication\").\n\"Please generate a question about the following topic: [topic].\nQuestion: [question]\nAnswer:\" \u2014 the final \"Answer:\" label demands the model produce a sample explanation, likely beginning with a direct, instructional sentence matching the \"explanation\" style described.\n\n\"Answer:\" is the final token, expecting the model's generated response.",
+  "truncated": false
+}

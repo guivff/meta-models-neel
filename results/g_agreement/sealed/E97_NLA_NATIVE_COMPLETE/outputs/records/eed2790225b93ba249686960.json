@@ -1,0 +1,12 @@
+{
+  "id": "eed2790225b93ba249686960",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example sentence: ... Reply: [classification]\") sets up a direct answer format, requiring the model to output the single-word classification for the specific sentence \"I am a doctor.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured task format, immediately requiring the classification answer (\"Positive\" or \"Negative\") to follow.\n\"Given the following sentence, provide the one-word reply (Positive or Negative) according to the instructions above.\nSentence: I am a doctor, and I am a doctor.\nReply:\" \u2014 the final \"Reply:\" is a response field prompt, expecting the model's direct answer on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example sentence: ... Reply: [classification]\") sets up a direct answer format, requiring the model to output the single-word classification for the specific sentence \"I am a doctor.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured task format, immediately requiring the classification answer (\"Positive\" or \"Negative\") to follow.\n\"Given the following sentence, provide the one-word reply (Positive or Negative) according to the instructions above.\nSentence: I am a doctor, and I am a doctor.\nReply:\" \u2014 the final \"Reply:\" is a response field prompt, expecting the model's direct answer on the next line.",
+  "truncated": false
+}

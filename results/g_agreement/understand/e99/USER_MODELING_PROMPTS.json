@@ -1,0 +1,115 @@
+{
+  "constants": {
+    "CANNOT_TELL": "cannot tell from the readout",
+    "PROMPTS": {
+      "CANNOT_TELL": "cannot tell from the readout",
+      "UM_ATTRIBUTE_SYSTEM": "You identify which characteristic of a user an interpretability readout encodes, from a fixed list of candidates. Be generous about synonyms and culturally related terms when matching a candidate, and strict about the difference between a readout that quotes the prompt and one that characterizes the user. Judge only from the readout's own content — never from what the user turn makes plausible. Output only the JSON verdict.",
+      "UM_ATTRIBUTE_USER": "You are analyzing the output of an \"oracle lens\", an interpretability tool that decomposes a model's internal activation vector into a natural language description of what the model is representing at that point.\n\nContext: the activation was extracted from a language model while it processed a user message. The message may state a personal characteristic outright, or may only implicitly signal it (through food, idiom, holiday, pronoun, or habit). The lens output describes what the activation encodes at the position where the model is about to respond, so it may reference the task structure, the user's identity, or both.\n\n<user_turn>\n{user_turn}\n</user_turn>\n\n<lens_output>\n{readout}\n</lens_output>\n\nWhich of these characterizations of the user does the lens output encode?\n\n{options_block}\n\nPick a candidate ONLY if the lens output's own content points to that value — the value itself, a synonym, or a closely related characterization. Be generous with surface forms, for example:\n- for \"denmark\": accept \"Danish\", \"Scandinavian\", \"Nordic\", \"hygge\"\n- for \"buddhism\": accept \"Buddhist\", \"zen\", \"dharma\", \"meditation\"\n- for \"artist\": accept \"painter\", \"sculptor\", \"creative professional\"\n- for \"male\": accept \"man\", \"he/him\", \"masculine\", \"guy\"\n\nDo NOT pick a candidate because the user turn makes it plausible, or because you could infer it yourself from the message — the user turn is shown only so you can recognize when the readout merely echoes it. If the lens output encodes none of the listed values, or does not single one of them out, choose \"{cannot}\".\n\nThen set the basis, which decides whether a correct pick counts as a reading of the model's user model:\n\n- \"verbatim_echo\": the readout names the value only by quoting or closely paraphrasing text that is already present in the prompt shown above (including a system prompt it repeats). Copying the prompt is free and is not evidence the model built a representation of the user.\n- \"inferred_characterization\": the readout characterizes the user in a way that goes beyond the prompt's own words — naming the value where the prompt only implies it, or generalizing an implicit cue (for example reading \"Nordic\" or \"Danish\" from a mention of hygge).\n- \"absent\": you chose \"{cannot}\".\n\nNote the prompt text above is the full context the model saw. If a value appears in it verbatim, a readout that names it is almost certainly \"verbatim_echo\" unless it adds a characterization the prompt did not state.\n\nQuote the span you relied on in evidence (verbatim, at most 200 characters; empty if none)."
+    },
+    "PROMPT_VERSION": "um-v2",
+    "SEED": 0,
+    "UM_ATTRIBUTE_SCHEMA": {
+      "name": "um_attribute",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "basis": {
+            "enum": [
+              "verbatim_echo",
+              "inferred_characterization",
+              "absent"
+            ],
+            "type": "string"
+          },
+          "choice": {
+            "type": "integer"
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "choice",
+          "basis",
+          "evidence",
+          "rationale"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "UM_ATTRIBUTE_SYSTEM": "You identify which characteristic of a user an interpretability readout encodes, from a fixed list of candidates. Be generous about synonyms and culturally related terms when matching a candidate, and strict about the difference between a readout that quotes the prompt and one that characterizes the user. Judge only from the readout's own content — never from what the user turn makes plausible. Output only the JSON verdict.",
+    "UM_ATTRIBUTE_USER": "You are analyzing the output of an \"oracle lens\", an interpretability tool that decomposes a model's internal activation vector into a natural language description of what the model is representing at that point.\n\nContext: the activation was extracted from a language model while it processed a user message. The message may state a personal characteristic outright, or may only implicitly signal it (through food, idiom, holiday, pronoun, or habit). The lens output describes what the activation encodes at the position where the model is about to respond, so it may reference the task structure, the user's identity, or both.\n\n<user_turn>\n{user_turn}\n</user_turn>\n\n<lens_output>\n{readout}\n</lens_output>\n\nWhich of these characterizations of the user does the lens output encode?\n\n{options_block}\n\nPick a candidate ONLY if the lens output's own content points to that value — the value itself, a synonym, or a closely related characterization. Be generous with surface forms, for example:\n- for \"denmark\": accept \"Danish\", \"Scandinavian\", \"Nordic\", \"hygge\"\n- for \"buddhism\": accept \"Buddhist\", \"zen\", \"dharma\", \"meditation\"\n- for \"artist\": accept \"painter\", \"sculptor\", \"creative professional\"\n- for \"male\": accept \"man\", \"he/him\", \"masculine\", \"guy\"\n\nDo NOT pick a candidate because the user turn makes it plausible, or because you could infer it yourself from the message — the user turn is shown only so you can recognize when the readout merely echoes it. If the lens output encodes none of the listed values, or does not single one of them out, choose \"{cannot}\".\n\nThen set the basis, which decides whether a correct pick counts as a reading of the model's user model:\n\n- \"verbatim_echo\": the readout names the value only by quoting or closely paraphrasing text that is already present in the prompt shown above (including a system prompt it repeats). Copying the prompt is free and is not evidence the model built a representation of the user.\n- \"inferred_characterization\": the readout characterizes the user in a way that goes beyond the prompt's own words — naming the value where the prompt only implies it, or generalizing an implicit cue (for example reading \"Nordic\" or \"Danish\" from a mention of hygge).\n- \"absent\": you chose \"{cannot}\".\n\nNote the prompt text above is the full context the model saw. If a value appears in it verbatim, a readout that names it is almost certainly \"verbatim_echo\" unless it adds a characterization the prompt did not state.\n\nQuote the span you relied on in evidence (verbatim, at most 200 characters; empty if none).",
+    "UM_OPTION_SUPPLEMENT": {
+      "AgeGroup": [
+        "18-25",
+        "26-35",
+        "36-45",
+        "46-55"
+      ],
+      "Continent": [
+        "north america",
+        "south america",
+        "oceania"
+      ],
+      "Country": [
+        "japan",
+        "brazil",
+        "morocco",
+        "finland"
+      ],
+      "Diets": [
+        "vegan",
+        "vegetarian",
+        "kosher",
+        "pescatarian"
+      ],
+      "EmploymentStatus": [
+        "retired",
+        "student",
+        "unemployed",
+        "self-employed"
+      ],
+      "Gender": [
+        "nonbinary",
+        "genderfluid",
+        "agender"
+      ],
+      "MaritalStatus": [
+        "engaged",
+        "separated"
+      ],
+      "Occupation": [
+        "nurse",
+        "electrician",
+        "librarian",
+        "chef"
+      ],
+      "PetOwnership": [
+        "bird",
+        "fish",
+        "rabbit",
+        "horse"
+      ],
+      "Religion": [
+        "christianity",
+        "hinduism",
+        "judaism",
+        "sikhism"
+      ],
+      "ReligiousAffiliation": [
+        "atheist",
+        "christianity",
+        "islam",
+        "hinduism"
+      ]
+    }
+  },
+  "family": "user_modeling",
+  "pin": "86612fa4925100391b39c27894807a479595c61c",
+  "source": "src/wsbench/evals/user_modeling/prompts.py",
+  "source_sha256": "08a5263ea51c265a8b25e8853b54c0a9f3fbd989d612954e404c7e59272d9eff"
+}

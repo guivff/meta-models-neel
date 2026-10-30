@@ -1,0 +1,30 @@
+{
+  "at_utc": "2026-10-29T05:29:23.477996+00:00",
+  "issuer": "Guiv",
+  "deviation_commit": "eee08074a",
+  "items_source": "TwoHopFact",
+  "filtering_max_prompts": 3000,
+  "filtering_GPU_cap_seconds": 1800,
+  "filtering": "greedy one-hop and two-hop completions",
+  "admission_trigger": "W-text frozen exact source/GPU filtering request",
+  "reader_GPU_cap_seconds_unchanged": 5400,
+  "combined_outside_and_judging_cap_usd_unchanged": 10,
+  "other_scientific_gates_adapter_and_deadline_unchanged": true,
+  "no_current_filter_allocation": true,
+  "verified_registration_commit": "eee08074a981729ba05b45747237db125f49522f",
+  "verified_registration_at_utc": "2026-10-29T05:38:58.413593+00:00",
+  "registered_source_contract": {
+    "dataset": "soheeyang/TwoHopFact",
+    "seed": 20261029,
+    "composition_types": 52,
+    "sample": "up to 3000 two-hop prompts stratified by composition type",
+    "belief": "greedy no-CoT one-hop bridge completion",
+    "wrong": "one-hop entity differs from e2 AND two-hop answer wrong",
+    "right": "both correct; composition-type matched",
+    "read_token": "end of two-hop prompt",
+    "anonymous_download_required": true,
+    "dataset_revision_and_card_license_required": true,
+    "gated_fallback": "registered generated bank",
+    "if_generated_bank_already_frozen": "both banks separately, TwoHopFact primary"
+  }
+}

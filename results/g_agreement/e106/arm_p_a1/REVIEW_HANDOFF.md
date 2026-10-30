@@ -1,0 +1,1 @@
+P a1: both32itempilots retained inrawarchive butUNJUDGED/UNSCORED, fulltwo-readerforecast3444.300830s failed1680sworkerbudget, no partial scientific result/no stitching. Entire source/control/hash/custody preserved; providerNULL/guardsretired. Standingoneoperationalrestartassessment onlywithinremainingtotalP0.5GPUh.

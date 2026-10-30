@@ -1,0 +1,12 @@
+{
+  "id": "022633ca71c902e86534ec48",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot pattern establishes a strict format: \"Sentence: [example] \u2192 Label: [classification]\" repeated, now requiring the model to apply the rule to a new sentence.\n\nThe instruction explicitly states the label should be \"Congratulations\" for happy occasions, and the sentence \"I got married\" clearly fits this category, constraining the answer to \"Congratulations.\"\n\n\"Reply:\" is the final prompt token, part of a structured Q&A format (\"Sentence: I got married\\nLabel: ?\\nSentence: I got married\\nReply:\"), immediately requiring the model's direct answer/label output.\n\"Given the following sentence, provide the correct label according to the pattern.\\nSentence: I got married\\nReply:\" \u2014 the final token \"Reply:\" is a prompt label expecting the model's response, likely \"Congratulations\" or similar short answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot pattern establishes a strict format: \"Sentence: [example] \u2192 Label: [classification]\" repeated, now requiring the model to apply the rule to a new sentence.\n\nThe instruction explicitly states the label should be \"Congratulations\" for happy occasions, and the sentence \"I got married\" clearly fits this category, constraining the answer to \"Congratulations.\"\n\n\"Reply:\" is the final prompt token, part of a structured Q&A format (\"Sentence: I got married\\nLabel: ?\\nSentence: I got married\\nReply:\"), immediately requiring the model's direct answer/label output.\n\"Given the following sentence, provide the correct label according to the pattern.\\nSentence: I got married\\nReply:\" \u2014 the final token \"Reply:\" is a prompt label expecting the model's response, likely \"Congratulations\" or similar short answer.",
+  "truncated": false
+}

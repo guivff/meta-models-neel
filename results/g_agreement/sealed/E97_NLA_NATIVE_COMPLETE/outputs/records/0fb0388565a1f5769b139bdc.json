@@ -1,0 +1,12 @@
+{
+  "id": "0fb0388565a1f5769b139bdc",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Instruction,\" \"Example,\" and \"Answer\" fields signals a Q&A or few-shot format requiring a model response.\n\nThe instruction explicitly states \"do not use the word 'data'\" as a constraint, so the answer must demonstrate compliance with this rule regarding data collection/usage explanation.\n\n\"Answer:\" is the final token, functioning as a label introducing the model's response to the preceding instruction about \"not using the word 'data'\" \u2014 the next tokens must be a concrete example answer or explanation sentence.\n\"Topic: [topic]\nInstruction: Explain how to use the software without collecting data.\nQuestion: [topic]\nAnswer:\" \u2014 this pattern demands a sample response demonstrating the instruction's application, likely beginning with \"The answer is...\" or a direct explanatory sentence about the topic.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Instruction,\" \"Example,\" and \"Answer\" fields signals a Q&A or few-shot format requiring a model response.\n\nThe instruction explicitly states \"do not use the word 'data'\" as a constraint, so the answer must demonstrate compliance with this rule regarding data collection/usage explanation.\n\n\"Answer:\" is the final token, functioning as a label introducing the model's response to the preceding instruction about \"not using the word 'data'\" \u2014 the next tokens must be a concrete example answer or explanation sentence.\n\"Topic: [topic]\nInstruction: Explain how to use the software without collecting data.\nQuestion: [topic]\nAnswer:\" \u2014 this pattern demands a sample response demonstrating the instruction's application, likely beginning with \"The answer is...\" or a direct explanatory sentence about the topic.",
+  "truncated": false
+}

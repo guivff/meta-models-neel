@@ -1,0 +1,367 @@
+{
+  "aggregate_gpu_cap_seconds": 60000,
+  "bank_frozen": true,
+  "bank_source_seal_sha256": "ed064ff2ef4cd9075052d39766f42b8801a3d4e1982f59ef9e428853719d0a6c",
+  "batch_size": 8,
+  "binding_command": [
+    "python3",
+    "results/g_agreement/understand/e36/prepare_launch.py",
+    "--request",
+    "results/g_agreement/understand/e36/LAUNCH_REQUEST.json",
+    "--assets",
+    "VERIFIED_LOCAL_ASSETS.json",
+    "--phase-forecast",
+    "PHASE_FORECAST_SECONDS.json",
+    "--prior-gpu-seconds",
+    "ACTUAL_PRIOR_GPU_SECONDS",
+    "--out",
+    "results/g_agreement/understand/e36/cache/integrator_bound_cap143"
+  ],
+  "bindings": {
+    "bank": {
+      "path": "results/g_agreement/understand/e36/cache/v2_25_2026-10-25/items.input.jsonl",
+      "sha256": "2d3b14226b76fb51b7afe83190b34fd03a2c9cb3ded6f3f867ac35cb3de10690"
+    },
+    "candidates": {
+      "path": "results/g_agreement/understand/e36/cache/postfreeze_candidates_2026-10-25/candidates.json",
+      "sha256": "8b61f9ac7216f37cc1ae8dd422a8ab0f21c7520e5851a24c8893492f263ef273"
+    },
+    "freeze": {
+      "path": "results/g_agreement/understand/e36/FREEZE_RECEIPT.json",
+      "sha256": "e6c1a2349f9dca7faead507bfc521fce8e4e47dd1bba8b317bae4c9f1c38c184"
+    }
+  },
+  "candidate_binding_receipt": {
+    "path": "results/g_agreement/understand/e36/cache/postfreeze_candidates_2026-10-25/BINDING_RECEIPT.json",
+    "sha256": "ba5db536f8d4367b35908bc0dc06e65c6442a5386e7926fb43e7313399f66a3a"
+  },
+  "candidate_bound_at": "2026-10-25T14:04:47.333090+00:00",
+  "candidate_provenance": {
+    "path": "results/g_agreement/understand/e36/CANDIDATE_PROVENANCE_2026-10-25.json",
+    "sha256": "3e38e5eaec647d6a16702d35868beb39c2521157812bc6028f20cddee7f8428a"
+  },
+  "channels": {
+    "continuation": {
+      "block": 44,
+      "candidate_key": "continuation",
+      "prefix": "- ",
+      "split": "test"
+    },
+    "nla": {
+      "block": 42,
+      "candidate_key": "nla",
+      "prefix": "<explanation>\n",
+      "split": "test"
+    },
+    "oracle_descriptive": {
+      "block": 44,
+      "candidate_key": "olens_descriptive",
+      "prefix": "",
+      "split": "test"
+    },
+    "oracle_value_word": {
+      "block": 44,
+      "candidate_key": "olens_value_word",
+      "prefix": "",
+      "split": "test"
+    }
+  },
+  "continuation_pair_selection": "all frozen E15 pairs; no v2 dev selection",
+  "continuation_rows": [
+    "list_depth",
+    "prose_paren",
+    "prose_quote",
+    "python_depth",
+    "python_indent",
+    "python_string",
+    "table_column",
+    "table_role"
+  ],
+  "created_at": "2026-10-25T14:09:41.482546+00:00",
+  "current_handoff": "results/g_agreement/understand/e36/HANDOFF_SETUP146_2026-10-26.md",
+  "definition_packet": {
+    "path": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json",
+    "sha256": "2afa8e1202c0d7c181e6f95984b18bd59f99af81fc8cf8f27dcce02e8e38056c"
+  },
+  "dev_items": 2100,
+  "e30_second_bank_handoff_path": "results/g_agreement/understand/e36/E30_SECOND_BANK_REQUEST.json",
+  "e30_value_word_aggregation": "mean of both frozen ordered pairs in the single e30_bullet channel",
+  "execution_command_location": "cache/integrator_bound_cap143/LAUNCH_REQUEST_BOUND.json, generated only after all bindings and forecast checks pass",
+  "experiment": "E36",
+  "frozen_at": "2026-10-25T13:51:59.006203+00:00",
+  "gpu_count": 1,
+  "gpu_seconds_used_by_W_text": 0,
+  "h3_eligibility": "Coordinator supplies original E30 R2 status and R1-support rows, with matching channel e30_bullet; unavailable means NOT_EVALUABLE.",
+  "integrator_supplies": [
+    "verified local model asset inventory",
+    "conservative phase forecasts updated from warmed measurements",
+    "all prior charged GPU seconds",
+    "allocation start and externally enforced aggregate deadline",
+    "pod identity and verified external-stop receipt",
+    "verified full-pod warmed-forecast receipt including parity, bound in assignment"
+  ],
+  "item_count": 4200,
+  "label_checks_passed": 4200,
+  "length_pairs_passed": 2100,
+  "measured_phase_forecast": null,
+  "minimum_prior_gpu_seconds": 552.8,
+  "model_calls": 0,
+  "notes": [
+    "Fresh-context authors received only coordinator definitions and pinned tokenizer; no W1 items or scores.",
+    "Original raw bank retained through documented pre-check import repair; no items replaced or dropped.",
+    "Original8 fallback not selected because expanded bank froze before deadline."
+  ],
+  "operator": "integrator",
+  "parity_gate": {
+    "before": "all v2 capture and scoring",
+    "capture_parity_certified": false,
+    "failure": "STOP; no retry",
+    "input_bytes": "exact E28 sealed gate; no W1 text",
+    "items": 252,
+    "max_abs_auroc_delta": 0.02,
+    "rows": [
+      "prose_sentiment",
+      "prose_paren",
+      "python_string"
+    ]
+  },
+  "parity_inputs": {
+    "path": "results/g_agreement/understand/e36/cache/w1_parity_2026-10-26/INPUT_SEAL.json",
+    "sha256": "c41970528477a88e15144b7822e9d07e592ad21e340d65ba312d4513532c8aae"
+  },
+  "parity_labels_on_gpu": 252,
+  "per_pod_cap": "min(remaining aggregate custody, 900 setup seconds + min(1.5 * full-pod warmed forecast + 360, 59447)) seconds",
+  "phase_forecast_required": [
+    "oracle_setup",
+    "parity",
+    "capture",
+    "oracle_descriptive",
+    "oracle_value_word",
+    "continuation",
+    "nla_setup",
+    "nla"
+  ],
+  "planned_batch_counts": {
+    "capture": 525,
+    "continuation": 88,
+    "nla": 275,
+    "oracle_descriptive": 275,
+    "oracle_value_word": 275,
+    "parity": 33
+  },
+  "pod_budget": {
+    "forecast_multiplier": 1.5,
+    "max_pods": 1,
+    "max_seconds": 59447,
+    "minimum_prior_gpu_seconds": 552.8,
+    "overhead_seconds": 360,
+    "row_sharding": false,
+    "setup_allowance_seconds": 900
+  },
+  "preferred_gpu": "H200",
+  "prepared_bank_seal_sha256": "381fad8114a3dcd4a1142f9b776840d611db6c0ca10fad054a807a81c46e0b37",
+  "private_cpu_labels_path": "results/g_agreement/understand/e36/cache/v2_25_2026-10-25/labels.DO_NOT_STAGE.jsonl",
+  "probe": {
+    "block": 44,
+    "folds": 5,
+    "function": "grouped_probe",
+    "function_sha256": "efb813baaa666fb6c23dc4e12e8dd544c11b24d5d65011096105b186eee0106c",
+    "group": "cluster",
+    "lambda": 0.001,
+    "positive": "values[0]",
+    "seed": 20261023,
+    "source": "projects/g_agreement/blindspot/analysis.py",
+    "split": "test",
+    "train_only_standardization": true
+  },
+  "push_performed": false,
+  "registered_rules": {
+    "authority_receipt": {
+      "path": "results/g_agreement/understand/e36/RULE_CLARIFICATION_2026-10-25.json",
+      "sha256": "f340f29278d0071a84d2a67e236cbf8e7be5ee29185831e57ee97aa6df438f42"
+    },
+    "h3_eligibility": "E30_R1_support_rows_conditional_on_E30_R2",
+    "h4_rows": [
+      "prose_paren",
+      "prose_quote",
+      "python_string",
+      "python_indent",
+      "python_depth",
+      "list_depth",
+      "table_role"
+    ],
+    "required_counts": {
+      "H1": 11,
+      "H2": 7,
+      "H4": 5,
+      "H5": 11
+    },
+    "source_commit": "0cc77a85",
+    "source_section": "132 dated clarification 2"
+  },
+  "registered_sections": [
+    132,
+    135,
+    137,
+    143,
+    146
+  ],
+  "registration_commits": [
+    "4769ca0e",
+    "b1aca4c5",
+    "d4bb903d",
+    "0cc77a85",
+    "1721470e",
+    "4ad4dcbc",
+    "ab3c9cfd",
+    "2505b0f8"
+  ],
+  "remaining_aggregate_seconds_if_no_other_custody": 59447.2,
+  "request_sha256": "6bf238abb0e05018c4c48941ff47b83d82d0900c16f68f6bb9edc54b97051513",
+  "retrieval_reserve_within_cap_seconds": 180,
+  "rule_authority": {
+    "path": "results/g_agreement/understand/e36/RULE_CLARIFICATION_2026-10-25.json",
+    "sha256": "f340f29278d0071a84d2a67e236cbf8e7be5ee29185831e57ee97aa6df438f42"
+  },
+  "schema": "e36.source-ready.v1",
+  "science_cap_formula": "min(1.5 * full-pod warmed forecast + 360, 59447) seconds; parity included",
+  "scope_deadline": "2026-10-26T12:00:00+01:00",
+  "scope_id": "expanded25",
+  "setup_allowance_seconds": 900,
+  "sharding": {
+    "authority_commit": "ab3c9cfd",
+    "enabled": false,
+    "pods": 1,
+    "rows": "all 25 frozen rows"
+  },
+  "source_bindings": [
+    {
+      "path": "external/mats-nla-workspace/src/mats/capture.py",
+      "sha256": "bc69d7deee038326d28bd345d4bd76da43a615abd5fbe970a2ec245e72b8b179"
+    },
+    {
+      "path": "external/mats-nla-workspace/src/mats/probes.py",
+      "sha256": "955a7b516d97bee88b149bee1b8a3d9cdffaa7ef1b407cdef5cc4159f4677ae7"
+    },
+    {
+      "path": "external/mats-nla-workspace/src/mats/readers/nla.py",
+      "sha256": "e8ed65f4b97affbdb5a57cec87e4cf38472f20102974a105a3affb1ac27ab1d0"
+    },
+    {
+      "path": "external/mats-nla-workspace/src/mats/readers/olens.py",
+      "sha256": "7866ac3aa66d96bee612e216a0cd45e0a76e1dd4e799f6aaa538c28addd0e86e"
+    },
+    {
+      "path": "projects/g_agreement/blindspot/analysis.py",
+      "sha256": "45a06d29445cc678fb4e71edce4944b7e481357662a1d59f8c8203a3c4e4d75c"
+    },
+    {
+      "path": "projects/g_agreement/blindspot/protocol.py",
+      "sha256": "b2e7fa0bdeb9c7695a80663874f88cb71132ff4336b2d3d0a3e14b90bc66308d"
+    },
+    {
+      "path": "projects/g_agreement/blindspot/run.py",
+      "sha256": "a3a29bb96a3ebbb4c2551e6321e87517b1c6d63c7250b94836a94dcd31798d41"
+    },
+    {
+      "path": "projects/g_agreement/manifest/assets.json",
+      "sha256": "17338edea7c12181f45b0dc1dc5fcd4673d6cf8e7c4323e8d657736236f96f91"
+    },
+    {
+      "path": "projects/g_agreement/understand/e15.py",
+      "sha256": "24f6cd56001bf6ad371fa4b5458272abc5dff743c8aa25e3d6b727287cc90eb5"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/author_content.py",
+      "sha256": "e9ec2b6a77a3f55436803d54496f6315a08f9a1d0813d11af5f54667cca3ee51"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/author_structure.py",
+      "sha256": "f1ebd7b1b21318f75bc72da4cab78f037104c0ebd6400cb764db9967569548ae"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/bind_candidates.py",
+      "sha256": "57dbfe4c2ec7c226d182d0b8ca78c519cec1d518f270fbb003ff811b96804f1c"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/build_bank.py",
+      "sha256": "8892effc797486bd7022b6ffb5755cb5c9aa98f9871188d9038ad6da53f60bbb"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/channel_contract.py",
+      "sha256": "25615272f50349d912504a7d0b5edeca4a85bc63626168bb59905681b39472d7"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/check_content.py",
+      "sha256": "a623a53e1319a8adc53cd7c6daaec8b196a77c63d61b22bbe3af267574cb6a48"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/check_structure.py",
+      "sha256": "2acd7c8944bc2a18f0050ae9d7833f80de60405a3b4c603e00a29bd3a6929157"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/parity_gate.py",
+      "sha256": "66038ee658e2772d48587cb54e1d9c514964810b7e3cb3a4db5bbf230c2392d2"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/prepare_launch.py",
+      "sha256": "97b34d9cd6e7bee237ff7e7a5d7dab70c0fef7dda4c9acf1b707dfc2697639c7"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_bind_candidates.py",
+      "sha256": "a95583d2fa903bae91e6e906a6b2ee8f7c0c1c04a2ed7834fec4c733138cf7fd"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_budget_143.py",
+      "sha256": "396c18490fe9cfc4c8592e22cf693c098179fe8545e2cfda467e9a5e6edcfce3"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_build_bank.py",
+      "sha256": "dca1a07d56955609c6c479fecd90c08873872569116059d987d803116fdef39b"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_channel_contract.py",
+      "sha256": "7efa27dd15e2740dcce0967afaaf7646fe5490ea6150da48ae91f3d8a681f8be"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_checker_audit.py",
+      "sha256": "f54a227ceef03c628b9e0cee194d390b95a424bd179dd7ee83d182f8e71afb7a"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_content.py",
+      "sha256": "f7e9b14f3a0640a6f78a2cc0eda65c9a97db81eaeaaa8492d2242d32a4b4a677"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_parity_gate.py",
+      "sha256": "961cb72ee7e3c99acc1eb2c3d822d91bf1a8e5d423561abaac919c0eaca18fdd"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_prepare_launch.py",
+      "sha256": "23a20ae8f54f9aa59b598ba2703ce2fd294244fdf63a0a86f0ef45d7797c60c2"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_setup_146.py",
+      "sha256": "0dfa0651b5729c9d5e27da39d24bd737cb25b274f71a2f5bddf632de17fb7d0e"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_structure.py",
+      "sha256": "d5a8b3d5fb380c5cb3ecd4855cdd4aa4c86b4094b231a7108ad57fd3cb2cd939"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/test_worker.py",
+      "sha256": "307637c3c1586049c13a5ba3ef24a2e6ceac925e3dea1843729c1b1d0d9f97b6"
+    },
+    {
+      "path": "results/g_agreement/understand/e36/worker.py",
+      "sha256": "0732fdc76f788c0b1ff650381881eb2240bd897e97328b88ac699940bc8c391e"
+    }
+  ],
+  "staging_archive_receipt_path": "results/g_agreement/understand/e36/STAGING_ARCHIVE.json",
+  "staging_manifest_path": "results/g_agreement/understand/e36/STAGING_MANIFEST.json",
+  "status": "READY_FOR_INTEGRATOR_BINDING",
+  "supersedes_request_sha256": "dea7ab5b4ec77209d8d32e7ceba1d76a10c6353db407a1e4c789628af107deda",
+  "test_items": 2100,
+  "updated_at": "2026-10-26T00:26:59.820946+00:00",
+  "v2_labels_on_gpu": false,
+  "warm_forecast_gate": "Setup must finish by creation+900. Science clock starts once before full parity: min(1.5F+360,59447). Allocation <= remaining aggregate and 900+science cap; existing 1.5*remaining+180 retrieval gate also applies."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "4eb359eef3c15150ec278db4",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"positive,\" \"negative,\" or \"neutral\" based on the given rule.\n\nThe example pattern shows a Chinese sentence followed by its English translation, then a question asking for the classification label \u2014 the model must now provide the answer for the specific example sentence about \"a person who is not a doctor.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in the structured Q&A format, immediately requiring the classification answer (e.g., \"negative\" or \"neutral\") as the next token.\n\"Given scenario: [sentence]\nQuestion: What is the sentiment classification?\nExample scenario: [sentence]\nQuestion: What is the sentiment classification?\nReply:\" \u2014 the final \"Reply:\" demands the direct answer label, completing the structured response format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"positive,\" \"negative,\" or \"neutral\" based on the given rule.\n\nThe example pattern shows a Chinese sentence followed by its English translation, then a question asking for the classification label \u2014 the model must now provide the answer for the specific example sentence about \"a person who is not a doctor.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in the structured Q&A format, immediately requiring the classification answer (e.g., \"negative\" or \"neutral\") as the next token.\n\"Given scenario: [sentence]\nQuestion: What is the sentiment classification?\nExample scenario: [sentence]\nQuestion: What is the sentiment classification?\nReply:\" \u2014 the final \"Reply:\" demands the direct answer label, completing the structured response format.",
+  "truncated": false
+}

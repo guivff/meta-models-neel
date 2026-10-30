@@ -1,0 +1,28 @@
+{
+  "schema": "redaction-note-v1",
+  "files": [
+    {
+      "path": "results/g_agreement/understand/e6/freeze/plan.json",
+      "sealed_by": "results/g_agreement/understand/e6/freeze/INPUT_SEAL.json",
+      "local_commit": "19fadde545d4",
+      "local_sha256": "43f6c97209ffc6dc04d40fa90e9c7c0c8fb640921575c4593070c26a8cd33a86",
+      "published_sha256": "a336d6953f75283d851c17f6ca524857194c5d07ba39963fcf875b5a662d9a80",
+      "redactions": [
+        {
+          "line": 19,
+          "published_text": "",
+          "original_sha256": "af7f9e5ed45e16085c658a427e39834e64347c2f2b07e47755c3689c6460192d",
+          "original_length": 70
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "at": "2026-10-25T09:16:51Z",
+      "by": "integrator",
+      "authority": "BRIEF_UNDERSTAND §123 item 4 (c90267ce)",
+      "what": "Seal no longer verifies on the published branch because machine paths in the sealed file were replaced (absolute local paths by repo-relative or placeholder paths) when it was published. local_sha256 is the sealed hash; the original is at local_commit in the owner's local history, or (local_file) in the owner's worktree or its git-ignored cache. Each redaction gives the line, the published replacement span and the original span's sha256/length; restoring the original spans reproduces local_sha256 exactly (checked when this note was written). No score, seal or verdict changed."
+    }
+  ]
+}

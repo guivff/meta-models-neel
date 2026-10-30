@@ -1,0 +1,2676 @@
+{
+  "GPU_hours": 0,
+  "bootstrap": "2000testtemplateclusters,seed20261023;devchoicefixed;pairedbase-reader differences use identical testresamples;no devrefit/testselection",
+  "classes": [
+    {
+      "class": "count-like",
+      "median_test_auroc": 0.6621315192743764,
+      "n_rows": 9,
+      "reader": "olens"
+    },
+    {
+      "class": "state-like",
+      "median_test_auroc": 0.594671201814059,
+      "n_rows": 7,
+      "reader": "olens"
+    },
+    {
+      "class": "semantic",
+      "median_test_auroc": 1.0,
+      "n_rows": 9,
+      "reader": "olens"
+    },
+    {
+      "class": "structure",
+      "median_test_auroc": 0.6162131519274376,
+      "n_rows": 16,
+      "reader": "olens"
+    },
+    {
+      "class": "count-like",
+      "median_test_auroc": 0.800453514739229,
+      "n_rows": 9,
+      "reader": "nla"
+    },
+    {
+      "class": "state-like",
+      "median_test_auroc": 0.8985260770975056,
+      "n_rows": 7,
+      "reader": "nla"
+    },
+    {
+      "class": "semantic",
+      "median_test_auroc": 1.0,
+      "n_rows": 9,
+      "reader": "nla"
+    },
+    {
+      "class": "structure",
+      "median_test_auroc": 0.8180272108843537,
+      "n_rows": 16,
+      "reader": "nla"
+    },
+    {
+      "class": "count-like",
+      "median_test_auroc": 0.8151927437641724,
+      "n_rows": 9,
+      "reader": "base"
+    },
+    {
+      "class": "state-like",
+      "median_test_auroc": 1.0,
+      "n_rows": 7,
+      "reader": "base"
+    },
+    {
+      "class": "semantic",
+      "median_test_auroc": 1.0,
+      "n_rows": 9,
+      "reader": "base"
+    },
+    {
+      "class": "structure",
+      "median_test_auroc": 0.9509637188208617,
+      "n_rows": 16,
+      "reader": "base"
+    }
+  ],
+  "dev_selection": {
+    "base": {
+      "json_status": {
+        "dev_aurocs": [
+          1.0,
+          0.9920634920634921
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an approved request? Yes.",
+          "Does the current excerpt involve an approved request? No."
+        ]
+      },
+      "json_type": {
+        "dev_aurocs": [
+          1.0,
+          0.38718820861678005
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve a string value? Yes.",
+          "Does the current excerpt involve a string value? No."
+        ]
+      },
+      "latex_environment": {
+        "dev_aurocs": [
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an equation environment? Yes.",
+          "Does the current excerpt involve an equation environment? No."
+        ]
+      },
+      "latex_role": {
+        "dev_aurocs": [
+          1.0,
+          0.971655328798186
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve a theorem statement? Yes.",
+          "Does the current excerpt involve a theorem statement? No."
+        ]
+      },
+      "latex_section": {
+        "dev_aurocs": [
+          0.8401360544217688,
+          0.22165532879818595
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an early document section? Yes.",
+          "Does the current excerpt involve an early document section? No."
+        ]
+      },
+      "latex_subject": {
+        "dev_aurocs": [
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve algebra content? Yes.",
+          "Does the current excerpt involve algebra content? No."
+        ]
+      },
+      "list_depth": {
+        "dev_aurocs": [
+          0.8163265306122449,
+          0.9994331065759637
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has a top-level list item.",
+          "The current excerpt has a third-level list item."
+        ]
+      },
+      "list_index": {
+        "dev_aurocs": [
+          0.046485260770975055,
+          0.8339002267573696
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has the first list item.",
+          "The current excerpt has a later list item."
+        ]
+      },
+      "list_priority": {
+        "dev_aurocs": [
+          1.0,
+          0.8786848072562359
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an urgent task? Yes.",
+          "Does the current excerpt involve an urgent task? No."
+        ]
+      },
+      "list_topic": {
+        "dev_aurocs": [
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve travel planning? Yes.",
+          "Does the current excerpt involve travel planning? No."
+        ]
+      },
+      "prose_paren": {
+        "dev_aurocs": [
+          0.9909297052154195,
+          1.0
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has inside an open parenthesis.",
+          "The current excerpt has outside any parenthesis."
+        ]
+      },
+      "prose_quote": {
+        "dev_aurocs": [
+          0.985827664399093,
+          1.0
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has an open quotation.",
+          "The current excerpt has a closed quotation."
+        ]
+      },
+      "prose_sentence": {
+        "dev_aurocs": [
+          0.7738095238095238,
+          0.6235827664399093
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an early sentence in the paragraph? Yes.",
+          "Does the current excerpt involve an early sentence in the paragraph? No."
+        ]
+      },
+      "prose_sentiment": {
+        "dev_aurocs": [
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve positive sentiment? Yes.",
+          "Does the current excerpt involve positive sentiment? No."
+        ]
+      },
+      "prose_topic": {
+        "dev_aurocs": [
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve gardening content? Yes.",
+          "Does the current excerpt involve gardening content? No."
+        ]
+      },
+      "python_argument": {
+        "dev_aurocs": [
+          0.01417233560090703,
+          0.08163265306122448
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has the first argument of a call.",
+          "The current excerpt has a later argument of a call."
+        ]
+      },
+      "python_comment": {
+        "dev_aurocs": [
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve a Python comment? Yes.",
+          "Does the current excerpt involve a Python comment? No."
+        ]
+      },
+      "python_depth": {
+        "dev_aurocs": [
+          0.2766439909297052,
+          0.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve shallow bracket nesting? Yes.",
+          "Does the current excerpt involve shallow bracket nesting? No."
+        ]
+      },
+      "python_error": {
+        "dev_aurocs": [
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve exception raising? Yes.",
+          "Does the current excerpt involve exception raising? No."
+        ]
+      },
+      "python_indent": {
+        "dev_aurocs": [
+          0.687641723356009,
+          1.0
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has one level of indentation.",
+          "The current excerpt has three levels of indentation."
+        ]
+      },
+      "python_string": {
+        "dev_aurocs": [
+          1.0,
+          0.8650793650793651
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an open string literal? Yes.",
+          "Does the current excerpt involve an open string literal? No."
+        ]
+      },
+      "table_column": {
+        "dev_aurocs": [
+          0.4036281179138322,
+          0.9988662131519275
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has the first table column.",
+          "The current excerpt has a later table column."
+        ]
+      },
+      "table_role": {
+        "dev_aurocs": [
+          0.9988662131519275,
+          1.0
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has a table header cell.",
+          "The current excerpt has a table data cell."
+        ]
+      },
+      "table_row": {
+        "dev_aurocs": [
+          0.4087301587301587,
+          0.7409297052154195
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has an early table data row.",
+          "The current excerpt has a late table data row."
+        ]
+      },
+      "table_status": {
+        "dev_aurocs": [
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an approved table entry? Yes.",
+          "Does the current excerpt involve an approved table entry? No."
+        ]
+      }
+    },
+    "nla": {
+      "json_status": {
+        "dev_aurocs": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an approved request? Yes.",
+          "Does the current excerpt involve an approved request? No."
+        ]
+      },
+      "json_type": {
+        "dev_aurocs": [
+          0.9472789115646258,
+          0.905328798185941,
+          0.9688208616780045,
+          0.8560090702947846,
+          0.7919501133786848,
+          0.9665532879818595,
+          0.8662131519274376,
+          0.8696145124716553
+        ],
+        "index": 2,
+        "kind": "reader_native",
+        "pair": [
+          "The read position indicates a string value.",
+          "The read position indicates a numeric value."
+        ]
+      },
+      "latex_environment": {
+        "dev_aurocs": [
+          0.7488662131519275,
+          0.7602040816326531,
+          0.8055555555555556,
+          0.786281179138322,
+          0.7874149659863946,
+          0.9620181405895691,
+          0.8208616780045351,
+          0.6609977324263039
+        ],
+        "index": 5,
+        "kind": "paraphrase2",
+        "pair": [
+          "The relevant property is an equation environment.",
+          "The relevant property is a quotation environment."
+        ]
+      },
+      "latex_role": {
+        "dev_aurocs": [
+          0.9863945578231292,
+          0.9132653061224489,
+          0.921201814058957,
+          0.9393424036281179,
+          0.8180272108843537,
+          0.9665532879818595,
+          0.9410430839002267,
+          0.7023809523809523
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve a theorem statement? Yes.",
+          "Does the current excerpt involve a theorem statement? No."
+        ]
+      },
+      "latex_section": {
+        "dev_aurocs": [
+          0.7193877551020408,
+          0.8866213151927438,
+          0.8837868480725624,
+          0.8741496598639455,
+          0.6524943310657596,
+          0.8390022675736961,
+          0.9382086167800453,
+          0.7352607709750567
+        ],
+        "index": 6,
+        "kind": "plain_value1",
+        "pair": [
+          "In plain words: an early document section.",
+          "In plain words: a late document section."
+        ]
+      },
+      "latex_subject": {
+        "dev_aurocs": [
+          1.0,
+          0.9965986394557823,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9931972789115646
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve algebra content? Yes.",
+          "Does the current excerpt involve algebra content? No."
+        ]
+      },
+      "list_depth": {
+        "dev_aurocs": [
+          0.5198412698412699,
+          0.7647392290249433,
+          0.7250566893424036,
+          0.8429705215419501,
+          0.5306122448979592,
+          0.7165532879818595,
+          0.7261904761904762,
+          0.5289115646258503
+        ],
+        "index": 3,
+        "kind": "which_more_likely",
+        "pair": [
+          "It is more likely that this excerpt involves a top-level list item.",
+          "It is more likely that this excerpt involves a third-level list item."
+        ]
+      },
+      "list_index": {
+        "dev_aurocs": [
+          0.5175736961451247,
+          0.8378684807256236,
+          0.8168934240362812,
+          0.7086167800453514,
+          0.9387755102040817,
+          0.7125850340136054,
+          0.6751700680272109,
+          0.5827664399092971
+        ],
+        "index": 4,
+        "kind": "paraphrase1",
+        "pair": [
+          "This is the first list item.",
+          "This is a later list item."
+        ]
+      },
+      "list_priority": {
+        "dev_aurocs": [
+          1.0,
+          0.8429705215419501,
+          0.8826530612244898,
+          0.7959183673469388,
+          0.9126984126984127,
+          0.8826530612244898,
+          0.8826530612244898,
+          0.9223356009070295
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an urgent task? Yes.",
+          "Does the current excerpt involve an urgent task? No."
+        ]
+      },
+      "list_topic": {
+        "dev_aurocs": [
+          1.0,
+          1.0,
+          0.9977324263038548,
+          0.9988662131519275,
+          1.0,
+          1.0,
+          1.0,
+          0.9801587301587301
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve travel planning? Yes.",
+          "Does the current excerpt involve travel planning? No."
+        ]
+      },
+      "prose_paren": {
+        "dev_aurocs": [
+          0.822562358276644,
+          0.786281179138322,
+          0.8384353741496599,
+          0.7363945578231292,
+          0.8837868480725624,
+          0.808390022675737,
+          0.812358276643991,
+          0.9540816326530612
+        ],
+        "index": 7,
+        "kind": "plain_value2",
+        "pair": [
+          "The next character should be a closing parenthesis.",
+          "The next character should not be a closing parenthesis."
+        ]
+      },
+      "prose_quote": {
+        "dev_aurocs": [
+          0.8679138321995464,
+          0.6649659863945578,
+          0.8781179138321995,
+          0.7380952380952381,
+          0.8412698412698413,
+          0.7755102040816326,
+          0.8860544217687075,
+          0.6717687074829932
+        ],
+        "index": 6,
+        "kind": "plain_value1",
+        "pair": [
+          "In plain words: an open quotation.",
+          "In plain words: a closed quotation."
+        ]
+      },
+      "prose_sentence": {
+        "dev_aurocs": [
+          0.9994331065759637,
+          0.564625850340136,
+          0.7273242630385488,
+          0.7738095238095238,
+          0.7726757369614512,
+          0.5223922902494331,
+          0.29138321995464855,
+          0.29705215419501135
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an early sentence in the paragraph? Yes.",
+          "Does the current excerpt involve an early sentence in the paragraph? No."
+        ]
+      },
+      "prose_sentiment": {
+        "dev_aurocs": [
+          1.0,
+          1.0,
+          1.0,
+          0.9965986394557823,
+          0.9064625850340136,
+          0.9382086167800453,
+          0.9931972789115646,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve positive sentiment? Yes.",
+          "Does the current excerpt involve positive sentiment? No."
+        ]
+      },
+      "prose_topic": {
+        "dev_aurocs": [
+          1.0,
+          0.7811791383219955,
+          0.8849206349206349,
+          0.9971655328798186,
+          0.9620181405895691,
+          1.0,
+          1.0,
+          0.9835600907029478
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve gardening content? Yes.",
+          "Does the current excerpt involve gardening content? No."
+        ]
+      },
+      "python_argument": {
+        "dev_aurocs": [
+          0.840702947845805,
+          0.7341269841269841,
+          0.6179138321995464,
+          0.9075963718820862,
+          0.5549886621315193,
+          0.5481859410430839,
+          0.5317460317460317,
+          0.47392290249433106
+        ],
+        "index": 3,
+        "kind": "which_more_likely",
+        "pair": [
+          "It is more likely that this excerpt involves the first argument of a call.",
+          "It is more likely that this excerpt involves a later argument of a call."
+        ]
+      },
+      "python_comment": {
+        "dev_aurocs": [
+          0.7624716553287982,
+          0.4801587301587302,
+          0.8327664399092971,
+          0.9126984126984127,
+          0.8202947845804989,
+          0.8231292517006803,
+          0.7930839002267573,
+          0.5890022675736961
+        ],
+        "index": 3,
+        "kind": "which_more_likely",
+        "pair": [
+          "It is more likely that this excerpt involves a Python comment.",
+          "It is more likely that this excerpt involves executable Python code."
+        ]
+      },
+      "python_depth": {
+        "dev_aurocs": [
+          0.29931972789115646,
+          0.5986394557823129,
+          0.8134920634920635,
+          0.5839002267573696,
+          0.8752834467120182,
+          0.7397959183673469,
+          0.5992063492063492,
+          0.5164399092970522
+        ],
+        "index": 4,
+        "kind": "paraphrase1",
+        "pair": [
+          "This is only one open bracket.",
+          "This is three nested open brackets."
+        ]
+      },
+      "python_error": {
+        "dev_aurocs": [
+          1.0,
+          0.9722222222222222,
+          0.9642857142857143,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9773242630385488
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve exception raising? Yes.",
+          "Does the current excerpt involve exception raising? No."
+        ]
+      },
+      "python_indent": {
+        "dev_aurocs": [
+          0.4557823129251701,
+          0.7743764172335601,
+          0.5867346938775511,
+          0.7392290249433107,
+          0.7193877551020408,
+          0.6422902494331065,
+          0.23356009070294784,
+          0.11621315192743764
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has one level of indentation.",
+          "The current excerpt has three levels of indentation."
+        ]
+      },
+      "python_string": {
+        "dev_aurocs": [
+          1.0,
+          0.9223356009070295,
+          1.0,
+          0.5119047619047619,
+          0.40249433106575966,
+          0.6502267573696145,
+          0.8622448979591837,
+          0.34410430839002265
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an open string literal? Yes.",
+          "Does the current excerpt involve an open string literal? No."
+        ]
+      },
+      "table_column": {
+        "dev_aurocs": [
+          0.7953514739229025,
+          0.8259637188208617,
+          0.7806122448979592,
+          0.6105442176870748,
+          0.5147392290249433,
+          0.3219954648526077,
+          0.3010204081632653,
+          0.36904761904761907
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has the first table column.",
+          "The current excerpt has a later table column."
+        ]
+      },
+      "table_role": {
+        "dev_aurocs": [
+          0.8917233560090703,
+          0.941609977324263,
+          0.9104308390022676,
+          0.9875283446712018,
+          0.9580498866213152,
+          0.8934240362811792,
+          0.8939909297052154,
+          0.8820861678004536
+        ],
+        "index": 3,
+        "kind": "which_more_likely",
+        "pair": [
+          "It is more likely that this excerpt involves a table header cell.",
+          "It is more likely that this excerpt involves a table data cell."
+        ]
+      },
+      "table_row": {
+        "dev_aurocs": [
+          0.9104308390022676,
+          0.8605442176870748,
+          0.9863945578231292,
+          0.8543083900226758,
+          0.7947845804988662,
+          0.7760770975056689,
+          0.8327664399092971,
+          0.8514739229024944
+        ],
+        "index": 2,
+        "kind": "reader_native",
+        "pair": [
+          "The read position indicates an early table data row.",
+          "The read position indicates a late table data row."
+        ]
+      },
+      "table_status": {
+        "dev_aurocs": [
+          0.9109977324263039,
+          0.8208616780045351,
+          0.9886621315192744,
+          0.9988662131519275,
+          0.8526077097505669,
+          0.9472789115646258,
+          0.9427437641723356,
+          0.9013605442176871
+        ],
+        "index": 3,
+        "kind": "which_more_likely",
+        "pair": [
+          "It is more likely that this excerpt involves an approved table entry.",
+          "It is more likely that this excerpt involves a rejected table entry."
+        ]
+      }
+    },
+    "olens": {
+      "json_status": {
+        "dev_aurocs": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an approved request? Yes.",
+          "Does the current excerpt involve an approved request? No."
+        ]
+      },
+      "json_type": {
+        "dev_aurocs": [
+          0.9246031746031746,
+          0.6434240362811792,
+          0.719954648526077,
+          0.6400226757369615,
+          0.6439909297052154,
+          0.6252834467120182,
+          0.7675736961451247,
+          0.5714285714285714
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve a string value? Yes.",
+          "Does the current excerpt involve a string value? No."
+        ]
+      },
+      "latex_environment": {
+        "dev_aurocs": [
+          0.5221088435374149,
+          0.5850340136054422,
+          0.3645124716553288,
+          0.47505668934240364,
+          0.5742630385487528,
+          0.4421768707482993,
+          0.5238095238095238,
+          0.41383219954648526
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has an equation environment.",
+          "The current excerpt has a quotation environment."
+        ]
+      },
+      "latex_role": {
+        "dev_aurocs": [
+          0.9767573696145124,
+          0.9773242630385488,
+          0.9597505668934241,
+          0.9756235827664399,
+          0.9036281179138322,
+          0.8594104308390023,
+          0.7817460317460317,
+          1.0
+        ],
+        "index": 7,
+        "kind": "plain_value2",
+        "pair": [
+          "The text expresses a theorem statement.",
+          "The text expresses a worked example."
+        ]
+      },
+      "latex_section": {
+        "dev_aurocs": [
+          0.5272108843537415,
+          0.5045351473922902,
+          0.6082766439909297,
+          0.5617913832199547,
+          0.4744897959183674,
+          0.41496598639455784,
+          0.4155328798185941,
+          0.4977324263038549
+        ],
+        "index": 2,
+        "kind": "reader_native",
+        "pair": [
+          "- The read position indicates an early document section.",
+          "- The read position indicates a late document section."
+        ]
+      },
+      "latex_subject": {
+        "dev_aurocs": [
+          0.9977324263038548,
+          0.9722222222222222,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "index": 2,
+        "kind": "reader_native",
+        "pair": [
+          "- The read position indicates algebra content.",
+          "- The read position indicates geometry content."
+        ]
+      },
+      "list_depth": {
+        "dev_aurocs": [
+          0.43253968253968256,
+          0.5873015873015873,
+          0.48299319727891155,
+          0.5651927437641724,
+          0.6315192743764172,
+          0.45408163265306123,
+          0.49036281179138325,
+          0.3979591836734694
+        ],
+        "index": 4,
+        "kind": "paraphrase1",
+        "pair": [
+          "This is a top-level list item.",
+          "This is a third-level list item."
+        ]
+      },
+      "list_index": {
+        "dev_aurocs": [
+          0.3168934240362812,
+          0.4070294784580499,
+          0.43820861678004536,
+          0.4427437641723356,
+          0.5895691609977324,
+          0.44727891156462585,
+          0.5549886621315193,
+          0.6899092970521542
+        ],
+        "index": 7,
+        "kind": "plain_value2",
+        "pair": [
+          "The text expresses the first list item.",
+          "The text expresses a later list item."
+        ]
+      },
+      "list_priority": {
+        "dev_aurocs": [
+          0.9444444444444444,
+          0.8905895691609977,
+          0.9954648526077098,
+          0.9982993197278912,
+          0.9931972789115646,
+          0.8424036281179138,
+          0.9733560090702947,
+          1.0
+        ],
+        "index": 7,
+        "kind": "plain_value2",
+        "pair": [
+          "The text expresses an urgent task.",
+          "The text expresses a routine task."
+        ]
+      },
+      "list_topic": {
+        "dev_aurocs": [
+          0.9977324263038548,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9807256235827665,
+          1.0
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has travel planning.",
+          "The current excerpt has study planning."
+        ]
+      },
+      "prose_paren": {
+        "dev_aurocs": [
+          0.7573696145124716,
+          0.3826530612244898,
+          0.46825396825396826,
+          0.5090702947845805,
+          0.6043083900226758,
+          0.5232426303854876,
+          0.5612244897959183,
+          0.46485260770975056
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve inside an open parenthesis? Yes.",
+          "Does the current excerpt involve inside an open parenthesis? No."
+        ]
+      },
+      "prose_quote": {
+        "dev_aurocs": [
+          0.564625850340136,
+          0.45691609977324266,
+          0.4824263038548753,
+          0.4268707482993197,
+          0.5759637188208617,
+          0.46485260770975056,
+          0.43197278911564624,
+          0.5566893424036281
+        ],
+        "index": 4,
+        "kind": "paraphrase1",
+        "pair": [
+          "This is an open quotation.",
+          "This is a closed quotation."
+        ]
+      },
+      "prose_sentence": {
+        "dev_aurocs": [
+          0.5861678004535147,
+          0.6944444444444444,
+          0.3066893424036281,
+          0.5056689342403629,
+          0.7023809523809523,
+          0.43594104308390025,
+          0.42913832199546487,
+          0.7998866213151927
+        ],
+        "index": 7,
+        "kind": "plain_value2",
+        "pair": [
+          "The text expresses an early sentence in the paragraph.",
+          "The text expresses a late sentence in the paragraph."
+        ]
+      },
+      "prose_sentiment": {
+        "dev_aurocs": [
+          1.0,
+          1.0,
+          1.0,
+          0.9977324263038548,
+          0.971655328798186,
+          0.7658730158730159,
+          0.8424036281179138,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve positive sentiment? Yes.",
+          "Does the current excerpt involve positive sentiment? No."
+        ]
+      },
+      "prose_topic": {
+        "dev_aurocs": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve gardening content? Yes.",
+          "Does the current excerpt involve gardening content? No."
+        ]
+      },
+      "python_argument": {
+        "dev_aurocs": [
+          0.691609977324263,
+          0.4444444444444444,
+          0.6746031746031746,
+          0.6643990929705216,
+          0.6264172335600907,
+          0.5527210884353742,
+          0.5793650793650794,
+          0.6326530612244898
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve the first argument of a call? Yes.",
+          "Does the current excerpt involve the first argument of a call? No."
+        ]
+      },
+      "python_comment": {
+        "dev_aurocs": [
+          0.22448979591836735,
+          0.626984126984127,
+          0.530045351473923,
+          0.6587301587301587,
+          0.6558956916099773,
+          0.6388888888888888,
+          0.7329931972789115,
+          0.6865079365079365
+        ],
+        "index": 6,
+        "kind": "plain_value1",
+        "pair": [
+          "In plain words: a Python comment.",
+          "In plain words: executable Python code."
+        ]
+      },
+      "python_depth": {
+        "dev_aurocs": [
+          0.3021541950113379,
+          0.5510204081632653,
+          0.5045351473922902,
+          0.6298185941043084,
+          0.8270975056689343,
+          0.7522675736961452,
+          0.6967120181405896,
+          0.7664399092970522
+        ],
+        "index": 4,
+        "kind": "paraphrase1",
+        "pair": [
+          "This is only one open bracket.",
+          "This is three nested open brackets."
+        ]
+      },
+      "python_error": {
+        "dev_aurocs": [
+          0.8520408163265306,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9994331065759637,
+          1.0,
+          1.0
+        ],
+        "index": 1,
+        "kind": "statement",
+        "pair": [
+          "The current excerpt has exception raising.",
+          "The current excerpt has normal function return."
+        ]
+      },
+      "python_indent": {
+        "dev_aurocs": [
+          0.3242630385487528,
+          0.5255102040816326,
+          0.768140589569161,
+          0.4790249433106576,
+          0.5555555555555556,
+          0.4200680272108844,
+          0.7312925170068028,
+          0.5538548752834467
+        ],
+        "index": 2,
+        "kind": "reader_native",
+        "pair": [
+          "- The read position indicates one level of indentation.",
+          "- The read position indicates three levels of indentation."
+        ]
+      },
+      "python_string": {
+        "dev_aurocs": [
+          0.27834467120181405,
+          0.26700680272108845,
+          0.2545351473922903,
+          0.3679138321995465,
+          0.2647392290249433,
+          0.2018140589569161,
+          0.4546485260770975,
+          0.24263038548752835
+        ],
+        "index": 6,
+        "kind": "plain_value1",
+        "pair": [
+          "In plain words: an open string literal.",
+          "In plain words: a closed string literal."
+        ]
+      },
+      "table_column": {
+        "dev_aurocs": [
+          0.45408163265306123,
+          0.5589569160997733,
+          0.5090702947845805,
+          0.44841269841269843,
+          0.6609977324263039,
+          0.5929705215419501,
+          0.4846938775510204,
+          0.4387755102040816
+        ],
+        "index": 4,
+        "kind": "paraphrase1",
+        "pair": [
+          "This is the leftmost cell in its row.",
+          "This is a cell after earlier cells in its row."
+        ]
+      },
+      "table_role": {
+        "dev_aurocs": [
+          0.6961451247165533,
+          0.3055555555555556,
+          0.7698412698412699,
+          0.5498866213151927,
+          0.4387755102040816,
+          0.6910430839002267,
+          0.5691609977324263,
+          0.6332199546485261
+        ],
+        "index": 2,
+        "kind": "reader_native",
+        "pair": [
+          "- The read position indicates a table header cell.",
+          "- The read position indicates a table data cell."
+        ]
+      },
+      "table_row": {
+        "dev_aurocs": [
+          0.8934240362811792,
+          0.659297052154195,
+          0.6065759637188208,
+          0.4852607709750567,
+          0.5113378684807256,
+          0.45861678004535145,
+          0.5912698412698413,
+          0.6054421768707483
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an early table data row? Yes.",
+          "Does the current excerpt involve an early table data row? No."
+        ]
+      },
+      "table_status": {
+        "dev_aurocs": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "index": 0,
+        "kind": "direct_question",
+        "pair": [
+          "Does the current excerpt involve an approved table entry? Yes.",
+          "Does the current excerpt involve an approved table entry? No."
+        ]
+      }
+    }
+  },
+  "prediction": {
+    "Oracle_structure_median": 0.6162131519274376,
+    "assessment": "held on the registered point-estimate pattern",
+    "base_structure_rows_at_least_090": 9,
+    "registered_upper_bound": 0.65,
+    "structure_rows": 16
+  },
+  "rows": [
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "json_status",
+      "reader": "olens",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "json_status",
+      "reader": "nla",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "semantic",
+      "feature": "json_status",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0452806122448981,
+          0.21318027210884344
+        ],
+        "difference": 0.1655328798185941,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "json_type",
+      "reader": "olens",
+      "selected_index": 0,
+      "test": {
+        "auroc": 0.8344671201814059,
+        "hi": 0.9547193877551017,
+        "lo": 0.7868197278911565,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.028897392290249437,
+          0.14002267573696148
+        ],
+        "difference": 0.08049886621315194,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "json_type",
+      "reader": "nla",
+      "selected_index": 2,
+      "test": {
+        "auroc": 0.9195011337868481,
+        "hi": 0.9711026077097505,
+        "lo": 0.8599773242630385,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "feature": "json_type",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.25,
+          0.4852607709750567
+        ],
+        "difference": 0.40532879818594103,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "latex_environment",
+      "reader": "olens",
+      "selected_index": 1,
+      "test": {
+        "auroc": 0.594671201814059,
+        "hi": 0.75,
+        "lo": 0.5147392290249433,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.026587301587301736,
+          0.4807397959183673
+        ],
+        "difference": 0.29478458049886624,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "latex_environment",
+      "reader": "nla",
+      "selected_index": 5,
+      "test": {
+        "auroc": 0.7052154195011338,
+        "hi": 0.9734126984126981,
+        "lo": 0.5192602040816326,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "feature": "latex_environment",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.2465986394557823
+        ],
+        "difference": 0.1428571428571429,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "latex_role",
+      "reader": "olens",
+      "selected_index": 7,
+      "test": {
+        "auroc": 0.8571428571428571,
+        "hi": 1.0,
+        "lo": 0.7534013605442177,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.16439909297052158
+        ],
+        "difference": 0.059523809523809534,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "latex_role",
+      "reader": "nla",
+      "selected_index": 0,
+      "test": {
+        "auroc": 0.9404761904761905,
+        "hi": 1.0,
+        "lo": 0.8356009070294784,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "semantic",
+      "feature": "latex_role",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.05895691609977327,
+          0.49659863945578236
+        ],
+        "difference": 0.24376417233560088,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "latex_section",
+      "reader": "olens",
+      "selected_index": 2,
+      "test": {
+        "auroc": 0.5096371882086168,
+        "hi": 0.6536281179138322,
+        "lo": 0.36848072562358275,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.28514739229024944,
+          -0.030045351473922954
+        ],
+        "difference": -0.19274376417233563,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "latex_section",
+      "reader": "nla",
+      "selected_index": 6,
+      "test": {
+        "auroc": 0.9461451247165533,
+        "hi": 0.9886621315192744,
+        "lo": 0.9098072562358277,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "feature": "latex_section",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 0.7534013605442177,
+        "hi": 0.9263038548752834,
+        "lo": 0.6932256235827666,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.08163265306122447
+        ],
+        "difference": 0.020408163265306145,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "latex_subject",
+      "reader": "olens",
+      "selected_index": 2,
+      "test": {
+        "auroc": 0.9795918367346939,
+        "hi": 1.0,
+        "lo": 0.9183673469387755,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "latex_subject",
+      "reader": "nla",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "semantic",
+      "feature": "latex_subject",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.3280612244897962,
+          0.7369614512471656
+        ],
+        "difference": 0.5090702947845804,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "list_depth",
+      "reader": "olens",
+      "selected_index": 4,
+      "test": {
+        "auroc": 0.4852607709750567,
+        "hi": 0.6578798185941028,
+        "lo": 0.26303854875283444,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.2290249433106577,
+          0.5296201814058948
+        ],
+        "difference": 0.38888888888888884,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "list_depth",
+      "reader": "nla",
+      "selected_index": 3,
+      "test": {
+        "auroc": 0.6054421768707483,
+        "hi": 0.7624999999999998,
+        "lo": 0.4659580498866214,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "feature": "list_depth",
+      "reader": "base",
+      "selected_index": 1,
+      "test": {
+        "auroc": 0.9943310657596371,
+        "hi": 1.0,
+        "lo": 0.9784580498866213,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.054988662131519206,
+          0.40022675736961444
+        ],
+        "difference": 0.21031746031746035,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "list_index",
+      "reader": "olens",
+      "selected_index": 7,
+      "test": {
+        "auroc": 0.5379818594104309,
+        "hi": 0.6649659863945578,
+        "lo": 0.42164115646258526,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.16669501133786851,
+          0.2517006802721089
+        ],
+        "difference": 0.018140589569161092,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "list_index",
+      "reader": "nla",
+      "selected_index": 4,
+      "test": {
+        "auroc": 0.7301587301587301,
+        "hi": 0.9382086167800453,
+        "lo": 0.5691184807256237,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "feature": "list_index",
+      "reader": "base",
+      "selected_index": 1,
+      "test": {
+        "auroc": 0.7482993197278912,
+        "hi": 0.9336734693877551,
+        "lo": 0.5379818594104309,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "list_priority",
+      "reader": "olens",
+      "selected_index": 7,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "list_priority",
+      "reader": "nla",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "semantic",
+      "feature": "list_priority",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0022675736961451642
+        ],
+        "difference": 0.0005668934240362633,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "list_topic",
+      "reader": "olens",
+      "selected_index": 1,
+      "test": {
+        "auroc": 0.9994331065759637,
+        "hi": 1.0,
+        "lo": 0.9977324263038548,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "list_topic",
+      "reader": "nla",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "semantic",
+      "feature": "list_topic",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.2012471655328798,
+          0.6887755102040816
+        ],
+        "difference": 0.42970521541950113,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "prose_paren",
+      "reader": "olens",
+      "selected_index": 0,
+      "test": {
+        "auroc": 0.5702947845804989,
+        "hi": 0.7987528344671202,
+        "lo": 0.3112244897959184,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.26530612244897955
+        ],
+        "difference": 0.10147392290249435,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "prose_paren",
+      "reader": "nla",
+      "selected_index": 7,
+      "test": {
+        "auroc": 0.8985260770975056,
+        "hi": 1.0,
+        "lo": 0.7346938775510204,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "feature": "prose_paren",
+      "reader": "base",
+      "selected_index": 1,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.11054421768707479,
+          0.800453514739229
+        ],
+        "difference": 0.35941043083900226,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "prose_quote",
+      "reader": "olens",
+      "selected_index": 4,
+      "test": {
+        "auroc": 0.5068027210884354,
+        "hi": 0.8424036281179138,
+        "lo": 0.19387755102040816,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.08843537414965985,
+          0.40986394557823125
+        ],
+        "difference": 0.14739229024943312,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "prose_quote",
+      "reader": "nla",
+      "selected_index": 6,
+      "test": {
+        "auroc": 0.7188208616780045,
+        "hi": 0.9659863945578231,
+        "lo": 0.5204081632653061,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "feature": "prose_quote",
+      "reader": "base",
+      "selected_index": 1,
+      "test": {
+        "auroc": 0.8662131519274376,
+        "hi": 1.0,
+        "lo": 0.6479591836734694,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.11904761904761907,
+          0.5147392290249433
+        ],
+        "difference": 0.25396825396825407,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "prose_sentence",
+      "reader": "olens",
+      "selected_index": 7,
+      "test": {
+        "auroc": 0.5612244897959183,
+        "hi": 0.7301587301587301,
+        "lo": 0.44666950113378695,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.3760345804988659,
+          -0.0022675736961451616
+        ],
+        "difference": -0.18367346938775508,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "prose_sentence",
+      "reader": "nla",
+      "selected_index": 0,
+      "test": {
+        "auroc": 0.9988662131519275,
+        "hi": 1.0,
+        "lo": 0.9965986394557823,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "feature": "prose_sentence",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 0.8151927437641724,
+        "hi": 0.996031746031746,
+        "lo": 0.6234126984126988,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "prose_sentiment",
+      "reader": "olens",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "prose_sentiment",
+      "reader": "nla",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "semantic",
+      "feature": "prose_sentiment",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "prose_topic",
+      "reader": "olens",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0113378684807256
+        ],
+        "difference": 0.0028344671201814275,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "prose_topic",
+      "reader": "nla",
+      "selected_index": 0,
+      "test": {
+        "auroc": 0.9971655328798186,
+        "hi": 1.0,
+        "lo": 0.9886621315192744,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "semantic",
+      "feature": "prose_topic",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.6735119047619047,
+          -0.3713151927437642
+        ],
+        "difference": -0.5153061224489797,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "python_argument",
+      "reader": "olens",
+      "selected_index": 0,
+      "test": {
+        "auroc": 0.6859410430839002,
+        "hi": 0.8102607709750558,
+        "lo": 0.5833333333333334,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.8112244897959183,
+          -0.5458758503401363
+        ],
+        "difference": -0.6649659863945578,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "python_argument",
+      "reader": "nla",
+      "selected_index": 3,
+      "test": {
+        "auroc": 0.8356009070294784,
+        "hi": 0.9387755102040817,
+        "lo": 0.7380952380952381,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "feature": "python_argument",
+      "reader": "base",
+      "selected_index": 1,
+      "test": {
+        "auroc": 0.17063492063492064,
+        "hi": 0.3219954648526077,
+        "lo": 0.036281179138321996,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.22335600907029474,
+          0.39682539682539686
+        ],
+        "difference": 0.29931972789115646,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "python_comment",
+      "reader": "olens",
+      "selected_index": 6,
+      "test": {
+        "auroc": 0.7006802721088435,
+        "hi": 0.7766439909297053,
+        "lo": 0.6031746031746031,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.17233560090702948,
+          0.391156462585034
+        ],
+        "difference": 0.2772108843537415,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "python_comment",
+      "reader": "nla",
+      "selected_index": 3,
+      "test": {
+        "auroc": 0.7227891156462585,
+        "hi": 0.8276643990929705,
+        "lo": 0.608843537414966,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "feature": "python_comment",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.7482993197278912,
+          -0.4302721088435374
+        ],
+        "difference": -0.5742630385487528,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "python_depth",
+      "reader": "olens",
+      "selected_index": 4,
+      "test": {
+        "auroc": 0.7840136054421769,
+        "hi": 0.8219954648526077,
+        "lo": 0.7692743764172335,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.7346938775510203,
+          -0.3259637188208617
+        ],
+        "difference": -0.5170068027210883,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "python_depth",
+      "reader": "nla",
+      "selected_index": 4,
+      "test": {
+        "auroc": 0.7267573696145124,
+        "hi": 0.8344671201814059,
+        "lo": 0.6530612244897959,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "feature": "python_depth",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 0.20975056689342403,
+        "hi": 0.35941043083900226,
+        "lo": 0.06292517006802721,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "python_error",
+      "reader": "olens",
+      "selected_index": 1,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "python_error",
+      "reader": "nla",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "semantic",
+      "feature": "python_error",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.08390022675736963,
+          0.5980725623582767
+        ],
+        "difference": 0.3378684807256236,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "python_indent",
+      "reader": "olens",
+      "selected_index": 2,
+      "test": {
+        "auroc": 0.6621315192743764,
+        "hi": 0.9160997732426304,
+        "lo": 0.40192743764172334,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.025496031746031746,
+          0.5045351473922903
+        ],
+        "difference": 0.199546485260771,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "python_indent",
+      "reader": "nla",
+      "selected_index": 1,
+      "test": {
+        "auroc": 0.800453514739229,
+        "hi": 0.9745039682539682,
+        "lo": 0.4954648526077097,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "feature": "python_indent",
+      "reader": "base",
+      "selected_index": 1,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.2511337868480725,
+          0.46825396825396826
+        ],
+        "difference": 0.3622448979591837,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "python_string",
+      "reader": "olens",
+      "selected_index": 6,
+      "test": {
+        "auroc": 0.6377551020408163,
+        "hi": 0.7488662131519275,
+        "lo": 0.5317460317460317,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "python_string",
+      "reader": "nla",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "feature": "python_string",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.04478458049886613,
+          0.40532879818594103
+        ],
+        "difference": 0.20068027210884354,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "table_column",
+      "reader": "olens",
+      "selected_index": 4,
+      "test": {
+        "auroc": 0.7069160997732427,
+        "hi": 0.8956916099773242,
+        "lo": 0.5243764172335601,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.07653061224489799,
+          0.5719954648526077
+        ],
+        "difference": 0.3537414965986395,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "table_column",
+      "reader": "nla",
+      "selected_index": 1,
+      "test": {
+        "auroc": 0.5538548752834467,
+        "hi": 0.7511337868480725,
+        "lo": 0.3792517006802721,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "feature": "table_column",
+      "reader": "base",
+      "selected_index": 1,
+      "test": {
+        "auroc": 0.9075963718820862,
+        "hi": 1.0,
+        "lo": 0.7329931972789115,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.3229875283446715,
+          0.6502267573696145
+        ],
+        "difference": 0.5102040816326531,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "table_role",
+      "reader": "olens",
+      "selected_index": 2,
+      "test": {
+        "auroc": 0.4897959183673469,
+        "hi": 0.677012471655328,
+        "lo": 0.3497732426303855,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.015873015873015928
+        ],
+        "difference": 0.007936507936507908,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "state-like",
+      "feature": "table_role",
+      "reader": "nla",
+      "selected_index": 3,
+      "test": {
+        "auroc": 0.9920634920634921,
+        "hi": 1.0,
+        "lo": 0.9841269841269841,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "state-like",
+      "feature": "table_role",
+      "reader": "base",
+      "selected_index": 1,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.12244897959183676,
+          0.15256519274376387
+        ],
+        "difference": -0.001700680272108901,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "table_row",
+      "reader": "olens",
+      "selected_index": 0,
+      "test": {
+        "auroc": 0.854875283446712,
+        "hi": 0.9387755102040817,
+        "lo": 0.7595521541950115,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          -0.2029478458049887,
+          -0.040249433106575916
+        ],
+        "difference": -0.12414965986394566,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "count-like",
+      "feature": "table_row",
+      "reader": "nla",
+      "selected_index": 2,
+      "test": {
+        "auroc": 0.9773242630385488,
+        "hi": 1.0,
+        "lo": 0.9478458049886621,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "count-like",
+      "feature": "table_row",
+      "reader": "base",
+      "selected_index": 1,
+      "test": {
+        "auroc": 0.8531746031746031,
+        "hi": 0.9489937641723356,
+        "lo": 0.7755102040816326,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "table_status",
+      "reader": "olens",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "base_minus_reader": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "class": "semantic",
+      "feature": "table_status",
+      "reader": "nla",
+      "selected_index": 3,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    },
+    {
+      "class": "semantic",
+      "feature": "table_status",
+      "reader": "base",
+      "selected_index": 0,
+      "test": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 6
+      }
+    }
+  ],
+  "status": "EXPLORATORY_E16",
+  "upstream_seals": {
+    "collection": "0f043856a191218c5554df0613dda874445a94fe91c38d3bee470f368f37c9d2",
+    "free": "dca8bc44466b6051817c9b6049ee8248aa58c9c76869ff4fbd09502429577e32",
+    "inputs": "814d307051c6a43f14c9430a1ffdd885600c5b43228bcafc2905f49d4ce8b3be"
+  }
+}

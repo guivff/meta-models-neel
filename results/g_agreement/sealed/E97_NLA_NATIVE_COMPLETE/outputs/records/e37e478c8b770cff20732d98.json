@@ -1,0 +1,12 @@
+{
+  "id": "e37e478c8b770cff20732d98",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with explicit instruction to classify sentiment as \"Positive\" or \"Negative\" only, establishing a strict binary output constraint.\n\nThe example pattern shows a structured template: \"Example sentence: [text] / Question: What is the sentiment? / Reply:\" \u2014 the model must now provide the answer for the specific sentence about \"a woman with a child.\"\n\n\"Reply:\" is the final prompt label, directly requiring the classification answer (\"Positive\" or \"Negative\") to follow immediately as the response value.\n\"Follow the exact format of the given example.\nExample sentence: 'The woman is a successful entrepreneur.'\nQuestion: What is the sentiment label?\nReply:\" \u2014 this closing \"Reply:\" token is the final field label in the structured prompt, demanding the model's direct answer next.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with explicit instruction to classify sentiment as \"Positive\" or \"Negative\" only, establishing a strict binary output constraint.\n\nThe example pattern shows a structured template: \"Example sentence: [text] / Question: What is the sentiment? / Reply:\" \u2014 the model must now provide the answer for the specific sentence about \"a woman with a child.\"\n\n\"Reply:\" is the final prompt label, directly requiring the classification answer (\"Positive\" or \"Negative\") to follow immediately as the response value.\n\"Follow the exact format of the given example.\nExample sentence: 'The woman is a successful entrepreneur.'\nQuestion: What is the sentiment label?\nReply:\" \u2014 this closing \"Reply:\" token is the final field label in the structured prompt, demanding the model's direct answer next.\n\"Reply:\"",
+  "truncated": false
+}

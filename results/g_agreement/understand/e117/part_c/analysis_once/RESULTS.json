@@ -1,0 +1,215 @@
+{
+  "caveat": "Question prompt is outside the reader training distribution",
+  "experiment": "E117",
+  "fact_recall_positive_control": {
+    "authority": "Section238 clarification2 / 1771e57be",
+    "caveat": "E120c asks yes/no; E117c asks for a value. Fact control cannot qualify or rescue bookkeeping rows. Bounds complete missing signed scores at -1/+1 and missing sham responses at no/yes; no CI gate.",
+    "reading": "NOT EVALUABLE",
+    "robust_to_missingness": null,
+    "sham_observed": 0,
+    "sham_yes_bounds": null,
+    "sham_yes_rate": null,
+    "targeted_S": 0.7857142857142857,
+    "targeted_S_bounds": [
+      0.7857142857142857,
+      0.7857142857142857
+    ],
+    "targeted_observed": 84
+  },
+  "part": "c",
+  "readings": {
+    "elicitation": "NOT EVALUABLE",
+    "elicitation_missingness": "NOT EVALUABLE",
+    "interpretation": "Descriptive registered readings; no CI gate. E117 main-grid results remain separately sealed.",
+    "low_bookkeeping_rows": [],
+    "missingness_bounds": {
+      "indent_level": {
+        "evaluable": false,
+        "reading": "NOT EVALUABLE",
+        "sham_observed": 0,
+        "sham_yes_worst": null,
+        "targeted_S_worst": -0.047619047619047616,
+        "targeted_observed": 82
+      },
+      "nesting_depth": {
+        "evaluable": false,
+        "reading": "NOT EVALUABLE",
+        "sham_observed": 0,
+        "sham_yes_worst": null,
+        "targeted_S_worst": -0.4642857142857143,
+        "targeted_observed": 58
+      },
+      "page_range_digit": {
+        "evaluable": false,
+        "reading": "NOT EVALUABLE",
+        "sham_observed": 0,
+        "sham_yes_worst": null,
+        "targeted_S_worst": 0.11904761904761904,
+        "targeted_observed": 84
+      }
+    },
+    "not_recoverable_by_asking": "NOT EVALUABLE",
+    "not_robust_bookkeeping_rows": [],
+    "qualifying_bookkeeping_rows": [],
+    "sham_scope": "Per qualifying bookkeeping row; fact_recall and pooled rates cannot qualify or rescue a row",
+    "unknown_qualifying_rows": [
+      "nesting_depth",
+      "indent_level",
+      "page_range_digit"
+    ]
+  },
+  "status": "DESCRIPTIVE",
+  "summary": {
+    "bootstrap": {
+      "draws": 2000,
+      "seed": 20261027,
+      "source": "unchanged E100/E57 signed-score bootstrap",
+      "unit": "original item"
+    },
+    "missing_policy": "Missing remains unknown; descriptive rates use explicit known denominators. No E120c balanced accuracy or .60/.70 sham cutoffs transferred.",
+    "rows": {
+      "fact_recall": {
+        "role": "control",
+        "sham_S": {
+          "CI95": [
+            0.6296296296296297,
+            0.8192771084337349
+          ],
+          "estimate": 0.7317073170731707,
+          "kept": 82,
+          "missing": 2,
+          "over_5_percent": false,
+          "total": 84
+        },
+        "sham_yes": {
+          "kept": 0,
+          "missing": 84,
+          "rate": null,
+          "total": 84,
+          "yes": 0
+        },
+        "targeted_S": {
+          "CI95": [
+            0.7023809523809523,
+            0.8690476190476191
+          ],
+          "estimate": 0.7857142857142857,
+          "kept": 84,
+          "missing": 0,
+          "over_5_percent": false,
+          "total": 84
+        }
+      },
+      "indent_level": {
+        "role": "bookkeeping",
+        "sham_S": {
+          "CI95": [
+            -0.11904761904761904,
+            0.0
+          ],
+          "estimate": -0.05952380952380952,
+          "kept": 84,
+          "missing": 0,
+          "over_5_percent": false,
+          "total": 84
+        },
+        "sham_yes": {
+          "kept": 0,
+          "missing": 84,
+          "rate": null,
+          "total": 84,
+          "yes": 0
+        },
+        "targeted_S": {
+          "CI95": [
+            -0.06172839506172839,
+            0.0
+          ],
+          "estimate": -0.024390243902439025,
+          "kept": 82,
+          "missing": 2,
+          "over_5_percent": false,
+          "total": 84
+        }
+      },
+      "nesting_depth": {
+        "role": "bookkeeping",
+        "sham_S": {
+          "CI95": [
+            -0.1429315476190476,
+            0.2
+          ],
+          "estimate": 0.02564102564102564,
+          "kept": 39,
+          "missing": 45,
+          "over_5_percent": true,
+          "total": 84
+        },
+        "sham_yes": {
+          "kept": 0,
+          "missing": 84,
+          "rate": null,
+          "total": 84,
+          "yes": 0
+        },
+        "targeted_S": {
+          "CI95": [
+            -0.4182272727272727,
+            -0.017849310776942396
+          ],
+          "estimate": -0.22413793103448276,
+          "kept": 58,
+          "missing": 26,
+          "over_5_percent": true,
+          "total": 84
+        }
+      },
+      "page_range_digit": {
+        "role": "bookkeeping",
+        "sham_S": {
+          "CI95": [
+            -0.2619047619047619,
+            -0.011904761904761904
+          ],
+          "estimate": -0.14285714285714285,
+          "kept": 84,
+          "missing": 0,
+          "over_5_percent": false,
+          "total": 84
+        },
+        "sham_yes": {
+          "kept": 0,
+          "missing": 84,
+          "rate": null,
+          "total": 84,
+          "yes": 0
+        },
+        "targeted_S": {
+          "CI95": [
+            -0.03571428571428571,
+            0.27380952380952384
+          ],
+          "estimate": 0.11904761904761904,
+          "kept": 84,
+          "missing": 0,
+          "over_5_percent": false,
+          "total": 84
+        }
+      }
+    },
+    "sham_pooled_all": {
+      "kept": 0,
+      "missing": 336,
+      "rate": null,
+      "total": 336,
+      "yes": 0
+    },
+    "sham_pooled_bookkeeping": {
+      "kept": 0,
+      "missing": 252,
+      "rate": null,
+      "total": 252,
+      "yes": 0
+    }
+  }
+}

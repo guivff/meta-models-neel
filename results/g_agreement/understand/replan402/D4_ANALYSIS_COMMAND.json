@@ -1,0 +1,32 @@
+{
+  "argv": [
+    "python",
+    "results/g_agreement/understand/replan402/analyze_d4.py",
+    "--manifest",
+    "cache/g_agreement/understand/replan402_verified/E61_D4_MANIFEST.json"
+  ],
+  "exclusive_output": "results/g_agreement/understand/e61/d4_stage_analysis",
+  "judging": "unchanged frozen E61 lexicon, word_exact_casefold; original paired_ratios and bootstrap",
+  "manifest_schema": {
+    "retained_pilot_pulls": [
+      {
+        "pilot_file": "PILOT_RESULTS.json",
+        "root": "verified original pull",
+        "seal_file": "integrator custody seal filename",
+        "seal_sha256": "SHA256",
+        "slot": 0
+      }
+    ],
+    "shards": [
+      {
+        "shard": "0..2",
+        "stage_path": "verified shard out/D4",
+        "stage_seal_sha256": "SHA256"
+      }
+    ],
+    "source_seal_sha256": "REQUEST source_seal_sha256",
+    "verified": true
+  },
+  "status": "SEALED_ONCE_ONLY",
+  "trigger": "all three D4 stage seals verified plus retained original D4 pilot probability records; does not wait for D3"
+}

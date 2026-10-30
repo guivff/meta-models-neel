@@ -1,0 +1,2546 @@
+{
+  "label": "DESCRIPTIVE",
+  "section": 79,
+  "source_results_sha256": "31d480cd5338e41f063629cc40276ac0e25e2b20877f946c9fd50cac71a4f6b5",
+  "source_analysis_seal_sha256": "260fbf1e578fa459cded891e7e0915929932051824d6ff6beff23b8a2c36f4b8",
+  "source_selection_sha256": "2843e1f4499b627b248a111bbd03662b4172bc4e5a30c3d3c8bd83b7f5137e8d",
+  "selection_source_commit": "d07ba60c91b8e2b732288047661e1513bba5ff32",
+  "means": "equal weight per feature; all retained and registered gate-passing cohorts reported separately; native probe44 for Oracle44, probe42 for NLA42",
+  "uncertainty": "per-feature intervals copied from sealed results only; no new CI/resampling or inferential rule",
+  "classes": [
+    {
+      "class": "count-like",
+      "features": 46,
+      "by_reader": {
+        "olens": {
+          "site": 44,
+          "passing_features": 13,
+          "all_retained": {
+            "mean_probe_auroc": 0.7542292866227309,
+            "mean_reader_auroc": 0.5100002224434089,
+            "mean_gap": 0.24422906417932205
+          },
+          "registered_gate_passing": {
+            "mean_probe_auroc": 0.9433880341880342,
+            "mean_reader_auroc": 0.5161213675213675,
+            "mean_gap": 0.4272666666666667
+          }
+        },
+        "nla": {
+          "site": 42,
+          "passing_features": 14,
+          "all_retained": {
+            "mean_probe_auroc": 0.7476415785690228,
+            "mean_reader_auroc": 0.5465462099162004,
+            "mean_gap": 0.20109536865282238
+          },
+          "registered_gate_passing": {
+            "mean_probe_auroc": 0.9382571428571428,
+            "mean_reader_auroc": 0.5905492063492064,
+            "mean_gap": 0.34770793650793647
+          }
+        }
+      }
+    },
+    {
+      "class": "state-like",
+      "features": 16,
+      "by_reader": {
+        "olens": {
+          "site": 44,
+          "passing_features": 12,
+          "all_retained": {
+            "mean_probe_auroc": 0.8807027777777777,
+            "mean_reader_auroc": 0.5234736111111111,
+            "mean_gap": 0.35722916666666665
+          },
+          "registered_gate_passing": {
+            "mean_probe_auroc": 0.9284925925925925,
+            "mean_reader_auroc": 0.5407907407407407,
+            "mean_gap": 0.38770185185185185
+          }
+        },
+        "nla": {
+          "site": 42,
+          "passing_features": 12,
+          "all_retained": {
+            "mean_probe_auroc": 0.8809972222222222,
+            "mean_reader_auroc": 0.5707708333333333,
+            "mean_gap": 0.31022638888888887
+          },
+          "registered_gate_passing": {
+            "mean_probe_auroc": 0.9381296296296296,
+            "mean_reader_auroc": 0.5681222222222222,
+            "mean_gap": 0.37000740740740745
+          }
+        }
+      }
+    },
+    {
+      "class": "semantic",
+      "features": 33,
+      "by_reader": {
+        "olens": {
+          "site": 44,
+          "passing_features": 4,
+          "all_retained": {
+            "mean_probe_auroc": 0.6557577778044256,
+            "mean_reader_auroc": 0.5079165269178285,
+            "mean_gap": 0.14784125088659697
+          },
+          "registered_gate_passing": {
+            "mean_probe_auroc": 0.9768666666666667,
+            "mean_reader_auroc": 0.5124111111111112,
+            "mean_gap": 0.4644555555555556
+          }
+        },
+        "nla": {
+          "site": 42,
+          "passing_features": 4,
+          "all_retained": {
+            "mean_probe_auroc": 0.6612847743449003,
+            "mean_reader_auroc": 0.5032720587191387,
+            "mean_gap": 0.15801271562576158
+          },
+          "registered_gate_passing": {
+            "mean_probe_auroc": 0.9749666666666666,
+            "mean_reader_auroc": 0.45872222222222225,
+            "mean_gap": 0.5162444444444445
+          }
+        }
+      }
+    }
+  ],
+  "top10": [
+    {
+      "feature": "wordlist_preposition",
+      "class": "semantic",
+      "olens": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "wordlist_preposition",
+        "reader": "olens",
+        "site": 44,
+        "class_label": "semantic",
+        "definition": "the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 254,
+        "native_true": {
+          "auroc": 0.4305333333333333,
+          "lo": 0.36924899919413995,
+          "hi": 0.49315932029926596,
+          "n": 300,
+          "n_clusters": 254
+        },
+        "native_mismatched": {
+          "auroc": 0.5694666666666667,
+          "lo": 0.500648704341291,
+          "hi": 0.6322556976132075,
+          "n": 300,
+          "n_clusters": 254
+        },
+        "probe": {
+          "auroc": 0.9712888888888889,
+          "lo": 0.9539931573622531,
+          "hi": 0.9862679658985725,
+          "n": 300,
+          "n_clusters": 254
+        },
+        "gap": 0.5407555555555555,
+        "gap_ci95": [
+          0.4788466719367005,
+          0.6023757020339693
+        ],
+        "evaluable": true,
+        "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+        "status": "EVALUABLE"
+      },
+      "nla": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "wordlist_preposition",
+        "reader": "nla",
+        "site": 42,
+        "class_label": "semantic",
+        "definition": "the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 254,
+        "native_true": {
+          "auroc": 0.4878222222222222,
+          "lo": 0.42363216546755283,
+          "hi": 0.5571941369660601,
+          "n": 300,
+          "n_clusters": 254
+        },
+        "native_mismatched": {
+          "auroc": 0.5121777777777777,
+          "lo": 0.4487929820842197,
+          "hi": 0.5780645398231531,
+          "n": 300,
+          "n_clusters": 254
+        },
+        "probe": {
+          "auroc": 0.9642666666666667,
+          "lo": 0.9446819754690202,
+          "hi": 0.9822981204633812,
+          "n": 300,
+          "n_clusters": 254
+        },
+        "gap": 0.4764444444444445,
+        "gap_ci95": [
+          0.40451399935117555,
+          0.5442044338079463
+        ],
+        "evaluable": true,
+        "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+        "status": "EVALUABLE"
+      }
+    },
+    {
+      "feature": "word_allcaps",
+      "class": "state-like",
+      "olens": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "word_allcaps",
+        "reader": "olens",
+        "site": 44,
+        "class_label": "state-like",
+        "definition": "the current word has at least two letters and is uppercase",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 252,
+        "native_true": {
+          "auroc": 0.4703333333333333,
+          "lo": 0.4058903434684685,
+          "hi": 0.5355203154463638,
+          "n": 300,
+          "n_clusters": 252
+        },
+        "native_mismatched": {
+          "auroc": 0.5296666666666666,
+          "lo": 0.4540280486317211,
+          "hi": 0.5988868095674228,
+          "n": 300,
+          "n_clusters": 252
+        },
+        "probe": {
+          "auroc": 0.9814222222222222,
+          "lo": 0.9684340459986537,
+          "hi": 0.9921800981877474,
+          "n": 300,
+          "n_clusters": 252
+        },
+        "gap": 0.5110888888888889,
+        "gap_ci95": [
+          0.4452492944993948,
+          0.5781765016654535
+        ],
+        "evaluable": true,
+        "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+        "status": "EVALUABLE"
+      },
+      "nla": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "word_allcaps",
+        "reader": "nla",
+        "site": 42,
+        "class_label": "state-like",
+        "definition": "the current word has at least two letters and is uppercase",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 252,
+        "native_true": {
+          "auroc": 0.6708,
+          "lo": 0.6023928060352478,
+          "hi": 0.7351393027822414,
+          "n": 300,
+          "n_clusters": 252
+        },
+        "native_mismatched": {
+          "auroc": 0.3292,
+          "lo": 0.2698251254839483,
+          "hi": 0.3920777367684662,
+          "n": 300,
+          "n_clusters": 252
+        },
+        "probe": {
+          "auroc": 0.9713777777777778,
+          "lo": 0.9519704107049786,
+          "hi": 0.9873330261002364,
+          "n": 300,
+          "n_clusters": 252
+        },
+        "gap": 0.30057777777777783,
+        "gap_ci95": [
+          0.2357784813690289,
+          0.36860030357233825
+        ],
+        "evaluable": true,
+        "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+        "status": "EVALUABLE"
+      }
+    },
+    {
+      "feature": "current_colon",
+      "class": "state-like",
+      "olens": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "current_colon",
+        "reader": "olens",
+        "site": 44,
+        "class_label": "state-like",
+        "definition": "the last observed non-space character is a colon",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 258,
+        "native_true": {
+          "auroc": 0.4892888888888889,
+          "lo": 0.41957882182675815,
+          "hi": 0.5549015421949272,
+          "n": 300,
+          "n_clusters": 258
+        },
+        "native_mismatched": {
+          "auroc": 0.5107111111111111,
+          "lo": 0.44577943603503084,
+          "hi": 0.5762417655889254,
+          "n": 300,
+          "n_clusters": 258
+        },
+        "probe": {
+          "auroc": 0.9907111111111111,
+          "lo": 0.9797331849551415,
+          "hi": 0.9984931502072405,
+          "n": 300,
+          "n_clusters": 258
+        },
+        "gap": 0.5014222222222222,
+        "gap_ci95": [
+          0.4348327219557742,
+          0.5709823107903641
+        ],
+        "evaluable": true,
+        "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+        "status": "EVALUABLE"
+      },
+      "nla": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "current_colon",
+        "reader": "nla",
+        "site": 42,
+        "class_label": "state-like",
+        "definition": "the last observed non-space character is a colon",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 258,
+        "native_true": {
+          "auroc": 0.6731111111111111,
+          "lo": 0.611331051810504,
+          "hi": 0.7370745015952768,
+          "n": 300,
+          "n_clusters": 258
+        },
+        "native_mismatched": {
+          "auroc": 0.3268888888888889,
+          "lo": 0.2690229821102968,
+          "hi": 0.3850429444103659,
+          "n": 300,
+          "n_clusters": 258
+        },
+        "probe": {
+          "auroc": 0.9894222222222222,
+          "lo": 0.9796468359684232,
+          "hi": 0.9969563419559988,
+          "n": 300,
+          "n_clusters": 258
+        },
+        "gap": 0.3163111111111111,
+        "gap_ci95": [
+          0.2537907688526812,
+          0.37968412851418204
+        ],
+        "evaluable": true,
+        "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+        "status": "EVALUABLE"
+      }
+    },
+    {
+      "feature": "number_magnitude_ge_1000",
+      "class": "count-like",
+      "olens": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "number_magnitude_ge_1000",
+        "reader": "olens",
+        "site": 44,
+        "class_label": "count-like",
+        "definition": "absolute value of a numeric lexeme ending at the current character ≥ 1000",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 243,
+        "native_true": {
+          "auroc": 0.4992888888888889,
+          "lo": 0.43264806502087017,
+          "hi": 0.5689990971130353,
+          "n": 300,
+          "n_clusters": 243
+        },
+        "native_mismatched": {
+          "auroc": 0.5007111111111111,
+          "lo": 0.43369411599254737,
+          "hi": 0.5689519183773216,
+          "n": 300,
+          "n_clusters": 243
+        },
+        "probe": {
+          "auroc": 0.9792888888888889,
+          "lo": 0.9622549036247572,
+          "hi": 0.9923508052895426,
+          "n": 300,
+          "n_clusters": 243
+        },
+        "gap": 0.48,
+        "gap_ci95": [
+          0.4064648709125366,
+          0.5521941133595234
+        ],
+        "evaluable": true,
+        "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+        "status": "EVALUABLE"
+      },
+      "nla": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "number_magnitude_ge_1000",
+        "reader": "nla",
+        "site": 42,
+        "class_label": "count-like",
+        "definition": "absolute value of a numeric lexeme ending at the current character ≥ 1000",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 243,
+        "native_true": {
+          "auroc": 0.6213777777777778,
+          "lo": 0.5566558109206848,
+          "hi": 0.6860925396674254,
+          "n": 300,
+          "n_clusters": 243
+        },
+        "native_mismatched": {
+          "auroc": 0.37862222222222225,
+          "lo": 0.31449277420083377,
+          "hi": 0.4479303631455028,
+          "n": 300,
+          "n_clusters": 243
+        },
+        "probe": {
+          "auroc": 0.9829777777777777,
+          "lo": 0.9675287839737906,
+          "hi": 0.994643179551551,
+          "n": 300,
+          "n_clusters": 243
+        },
+        "gap": 0.3615999999999999,
+        "gap_ci95": [
+          0.29489437699093424,
+          0.42853840782245706
+        ],
+        "evaluable": true,
+        "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+        "status": "EVALUABLE"
+      }
+    },
+    {
+      "feature": "number_digits_ge_3",
+      "class": "count-like",
+      "olens": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "number_digits_ge_3",
+        "reader": "olens",
+        "site": 44,
+        "class_label": "count-like",
+        "definition": "digit characters in that numeric lexeme (including exponent digits) ≥ 3",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 264,
+        "native_true": {
+          "auroc": 0.49777777777777776,
+          "lo": 0.43028081615970537,
+          "hi": 0.5638381141215582,
+          "n": 300,
+          "n_clusters": 264
+        },
+        "native_mismatched": {
+          "auroc": 0.5022222222222222,
+          "lo": 0.4369193240830899,
+          "hi": 0.5709519390980131,
+          "n": 300,
+          "n_clusters": 264
+        },
+        "probe": {
+          "auroc": 0.9660888888888889,
+          "lo": 0.9444870283018868,
+          "hi": 0.9843788302188079,
+          "n": 300,
+          "n_clusters": 264
+        },
+        "gap": 0.4683111111111111,
+        "gap_ci95": [
+          0.39816763007120487,
+          0.5394467702547154
+        ],
+        "evaluable": true,
+        "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+        "status": "EVALUABLE"
+      },
+      "nla": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "number_digits_ge_3",
+        "reader": "nla",
+        "site": 42,
+        "class_label": "count-like",
+        "definition": "digit characters in that numeric lexeme (including exponent digits) ≥ 3",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 264,
+        "native_true": {
+          "auroc": 0.6226666666666667,
+          "lo": 0.555848817709679,
+          "hi": 0.6854370022783888,
+          "n": 300,
+          "n_clusters": 264
+        },
+        "native_mismatched": {
+          "auroc": 0.37733333333333335,
+          "lo": 0.312554609133415,
+          "hi": 0.4439126441564071,
+          "n": 300,
+          "n_clusters": 264
+        },
+        "probe": {
+          "auroc": 0.9748444444444444,
+          "lo": 0.9573724441706913,
+          "hi": 0.9888772782247094,
+          "n": 300,
+          "n_clusters": 264
+        },
+        "gap": 0.3521777777777777,
+        "gap_ci95": [
+          0.28610925900186474,
+          0.42116787521407145
+        ],
+        "evaluable": true,
+        "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+        "status": "EVALUABLE"
+      }
+    },
+    {
+      "feature": "current_number",
+      "class": "state-like",
+      "olens": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "current_number",
+        "reader": "olens",
+        "site": 44,
+        "class_label": "state-like",
+        "definition": "a complete numeric lexeme ends at the current character",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 267,
+        "native_true": {
+          "auroc": 0.5023111111111112,
+          "lo": 0.4386191351239374,
+          "hi": 0.5707287597610178,
+          "n": 300,
+          "n_clusters": 267
+        },
+        "native_mismatched": {
+          "auroc": 0.4976888888888889,
+          "lo": 0.42931691550404444,
+          "hi": 0.5645029600321662,
+          "n": 300,
+          "n_clusters": 267
+        },
+        "probe": {
+          "auroc": 0.9673777777777778,
+          "lo": 0.9447253380973138,
+          "hi": 0.9853571244540048,
+          "n": 300,
+          "n_clusters": 267
+        },
+        "gap": 0.46506666666666663,
+        "gap_ci95": [
+          0.3920025346825076,
+          0.5318901744882137
+        ],
+        "evaluable": true,
+        "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+        "status": "EVALUABLE"
+      },
+      "nla": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "current_number",
+        "reader": "nla",
+        "site": 42,
+        "class_label": "state-like",
+        "definition": "a complete numeric lexeme ends at the current character",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 267,
+        "native_true": {
+          "auroc": 0.404,
+          "lo": 0.33630124242851706,
+          "hi": 0.4741772182392846,
+          "n": 300,
+          "n_clusters": 267
+        },
+        "native_mismatched": {
+          "auroc": 0.596,
+          "lo": 0.5282724231612602,
+          "hi": 0.6571215961907844,
+          "n": 300,
+          "n_clusters": 267
+        },
+        "probe": {
+          "auroc": 0.9590666666666666,
+          "lo": 0.9347899291007156,
+          "hi": 0.9793866430678534,
+          "n": 300,
+          "n_clusters": 267
+        },
+        "gap": 0.5550666666666666,
+        "gap_ci95": [
+          0.47929436387281665,
+          0.6258906181240453
+        ],
+        "evaluable": true,
+        "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+        "status": "EVALUABLE"
+      }
+    },
+    {
+      "feature": "number_digits_ge_4",
+      "class": "count-like",
+      "olens": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "number_digits_ge_4",
+        "reader": "olens",
+        "site": 44,
+        "class_label": "count-like",
+        "definition": "digit characters in that numeric lexeme (including exponent digits) ≥ 4",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 251,
+        "native_true": {
+          "auroc": 0.5198888888888888,
+          "lo": 0.4479308366047714,
+          "hi": 0.5859237616843066,
+          "n": 300,
+          "n_clusters": 251
+        },
+        "native_mismatched": {
+          "auroc": 0.4801111111111111,
+          "lo": 0.4136497949917068,
+          "hi": 0.5448798330773977,
+          "n": 300,
+          "n_clusters": 251
+        },
+        "probe": {
+          "auroc": 0.9717333333333333,
+          "lo": 0.9540340959050031,
+          "hi": 0.9860377793451172,
+          "n": 300,
+          "n_clusters": 251
+        },
+        "gap": 0.4518444444444445,
+        "gap_ci95": [
+          0.38391033412789755,
+          0.5283065401843396
+        ],
+        "evaluable": true,
+        "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+        "status": "EVALUABLE"
+      },
+      "nla": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "number_digits_ge_4",
+        "reader": "nla",
+        "site": 42,
+        "class_label": "count-like",
+        "definition": "digit characters in that numeric lexeme (including exponent digits) ≥ 4",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 251,
+        "native_true": {
+          "auroc": 0.6654888888888889,
+          "lo": 0.6033555171772281,
+          "hi": 0.7233870875394182,
+          "n": 300,
+          "n_clusters": 251
+        },
+        "native_mismatched": {
+          "auroc": 0.3345111111111111,
+          "lo": 0.27687307838428665,
+          "hi": 0.39628981177703343,
+          "n": 300,
+          "n_clusters": 251
+        },
+        "probe": {
+          "auroc": 0.9763111111111111,
+          "lo": 0.960497722760939,
+          "hi": 0.9897383233363065,
+          "n": 300,
+          "n_clusters": 251
+        },
+        "gap": 0.3108222222222222,
+        "gap_ci95": [
+          0.2501153793914282,
+          0.37624128116207556
+        ],
+        "evaluable": true,
+        "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+        "status": "EVALUABLE"
+      }
+    },
+    {
+      "feature": "number_magnitude_ge_10",
+      "class": "count-like",
+      "olens": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "number_magnitude_ge_10",
+        "reader": "olens",
+        "site": 44,
+        "class_label": "count-like",
+        "definition": "absolute value of a numeric lexeme ending at the current character ≥ 10",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 266,
+        "native_true": {
+          "auroc": 0.5113333333333333,
+          "lo": 0.4457636577389672,
+          "hi": 0.5777902069123335,
+          "n": 300,
+          "n_clusters": 266
+        },
+        "native_mismatched": {
+          "auroc": 0.4886666666666667,
+          "lo": 0.4220051245615178,
+          "hi": 0.555633166449159,
+          "n": 300,
+          "n_clusters": 266
+        },
+        "probe": {
+          "auroc": 0.9602222222222222,
+          "lo": 0.9398082718092791,
+          "hi": 0.9772565688467781,
+          "n": 300,
+          "n_clusters": 266
+        },
+        "gap": 0.4488888888888889,
+        "gap_ci95": [
+          0.3763698390081376,
+          0.517783933116709
+        ],
+        "evaluable": true,
+        "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+        "status": "EVALUABLE"
+      },
+      "nla": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "number_magnitude_ge_10",
+        "reader": "nla",
+        "site": 42,
+        "class_label": "count-like",
+        "definition": "absolute value of a numeric lexeme ending at the current character ≥ 10",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 266,
+        "native_true": {
+          "auroc": 0.5958222222222223,
+          "lo": 0.5295810745166618,
+          "hi": 0.6604859969717348,
+          "n": 300,
+          "n_clusters": 266
+        },
+        "native_mismatched": {
+          "auroc": 0.4041777777777778,
+          "lo": 0.33830855689408995,
+          "hi": 0.4689799790433921,
+          "n": 300,
+          "n_clusters": 266
+        },
+        "probe": {
+          "auroc": 0.9664888888888888,
+          "lo": 0.9472537397720914,
+          "hi": 0.9827877091476104,
+          "n": 300,
+          "n_clusters": 266
+        },
+        "gap": 0.3706666666666666,
+        "gap_ci95": [
+          0.30438091302124026,
+          0.43975438559677693
+        ],
+        "evaluable": true,
+        "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+        "status": "EVALUABLE"
+      }
+    },
+    {
+      "feature": "number_magnitude_ge_100",
+      "class": "count-like",
+      "olens": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "number_magnitude_ge_100",
+        "reader": "olens",
+        "site": 44,
+        "class_label": "count-like",
+        "definition": "absolute value of a numeric lexeme ending at the current character ≥ 100",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 255,
+        "native_true": {
+          "auroc": 0.5308444444444445,
+          "lo": 0.46289892845539776,
+          "hi": 0.5961567500563443,
+          "n": 300,
+          "n_clusters": 255
+        },
+        "native_mismatched": {
+          "auroc": 0.46915555555555555,
+          "lo": 0.40374129224519306,
+          "hi": 0.5342462754628905,
+          "n": 300,
+          "n_clusters": 255
+        },
+        "probe": {
+          "auroc": 0.9776444444444444,
+          "lo": 0.9597199930636165,
+          "hi": 0.9909651352669615,
+          "n": 300,
+          "n_clusters": 255
+        },
+        "gap": 0.4468,
+        "gap_ci95": [
+          0.3799271564281471,
+          0.5153527805704725
+        ],
+        "evaluable": true,
+        "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+        "status": "EVALUABLE"
+      },
+      "nla": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "number_magnitude_ge_100",
+        "reader": "nla",
+        "site": 42,
+        "class_label": "count-like",
+        "definition": "absolute value of a numeric lexeme ending at the current character ≥ 100",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 255,
+        "native_true": {
+          "auroc": 0.6642666666666667,
+          "lo": 0.6035891578365675,
+          "hi": 0.7258630038482249,
+          "n": 300,
+          "n_clusters": 255
+        },
+        "native_mismatched": {
+          "auroc": 0.33573333333333333,
+          "lo": 0.28016700334726247,
+          "hi": 0.3976366641602943,
+          "n": 300,
+          "n_clusters": 255
+        },
+        "probe": {
+          "auroc": 0.9780888888888889,
+          "lo": 0.9597236692780516,
+          "hi": 0.9917249235674909,
+          "n": 300,
+          "n_clusters": 255
+        },
+        "gap": 0.3138222222222222,
+        "gap_ci95": [
+          0.2512645998558038,
+          0.3755983553857074
+        ],
+        "evaluable": true,
+        "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+        "status": "EVALUABLE"
+      }
+    },
+    {
+      "feature": "wordlist_auxiliary",
+      "class": "semantic",
+      "olens": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "wordlist_auxiliary",
+        "reader": "olens",
+        "site": 44,
+        "class_label": "semantic",
+        "definition": "the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 246,
+        "native_true": {
+          "auroc": 0.5360888888888888,
+          "lo": 0.4706632771755081,
+          "hi": 0.601464152259758,
+          "n": 300,
+          "n_clusters": 246
+        },
+        "native_mismatched": {
+          "auroc": 0.4639111111111111,
+          "lo": 0.40000034206356716,
+          "hi": 0.5266381340533736,
+          "n": 300,
+          "n_clusters": 246
+        },
+        "probe": {
+          "auroc": 0.9784,
+          "lo": 0.9601477949007823,
+          "hi": 0.9924962396487459,
+          "n": 300,
+          "n_clusters": 246
+        },
+        "gap": 0.4423111111111112,
+        "gap_ci95": [
+          0.37416164562706766,
+          0.510692689690612
+        ],
+        "evaluable": true,
+        "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+        "status": "EVALUABLE"
+      },
+      "nla": {
+        "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+        "run_kind": "real",
+        "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+        "feature": "wordlist_auxiliary",
+        "reader": "nla",
+        "site": 42,
+        "class_label": "semantic",
+        "definition": "the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would",
+        "w1_overlap": [],
+        "n": 300,
+        "n_groups": 246,
+        "native_true": {
+          "auroc": 0.3874222222222222,
+          "lo": 0.32103284496243606,
+          "hi": 0.45451121279153356,
+          "n": 300,
+          "n_clusters": 246
+        },
+        "native_mismatched": {
+          "auroc": 0.6125777777777778,
+          "lo": 0.5457073813314586,
+          "hi": 0.6758712687606688,
+          "n": 300,
+          "n_clusters": 246
+        },
+        "probe": {
+          "auroc": 0.9731111111111111,
+          "lo": 0.9543643332190468,
+          "hi": 0.9884312836845033,
+          "n": 300,
+          "n_clusters": 246
+        },
+        "gap": 0.5856888888888889,
+        "gap_ci95": [
+          0.5143309328605338,
+          0.655335477878286
+        ],
+        "evaluable": false,
+        "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+        "status": "NOT EVALUABLE_MISMATCH_GATE"
+      }
+    }
+  ],
+  "w1_like_structures": [
+    {
+      "group": "bracket depth",
+      "frozen_families": [
+        "paren_depth",
+        "square_depth",
+        "brace_depth",
+        "bracket_depth"
+      ],
+      "retained_features": [
+        "brace_depth_ge_2",
+        "bracket_depth_ge_2",
+        "bracket_depth_ge_3",
+        "paren_depth_ge_2"
+      ],
+      "pre_capture_dropped_features": [
+        "brace_depth_ge_3",
+        "brace_depth_ge_4",
+        "bracket_depth_ge_4",
+        "bracket_depth_ge_6",
+        "paren_depth_ge_3",
+        "paren_depth_ge_4",
+        "square_depth_ge_2",
+        "square_depth_ge_3"
+      ],
+      "by_reader": {
+        "olens": {
+          "n": 4,
+          "passing_features": 2,
+          "all_retained_mean_gap": 0.46947777777777777,
+          "registered_gate_passing_mean_gap": 0.44386666666666663
+        },
+        "nla": {
+          "n": 4,
+          "passing_features": 4,
+          "all_retained_mean_gap": 0.3106777777777777,
+          "registered_gate_passing_mean_gap": 0.3106777777777777
+        }
+      },
+      "rows": [
+        {
+          "feature": "brace_depth_ge_2",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "brace_depth_ge_2",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "unclosed brace depth outside quoted spans/comments ≥ 2",
+            "w1_overlap": [
+              "python_depth",
+              "latex_brace",
+              "json_depth"
+            ],
+            "n": 300,
+            "n_groups": 217,
+            "native_true": {
+              "auroc": 0.49733333333333335,
+              "lo": 0.4266971043126227,
+              "hi": 0.5656304897364874,
+              "n": 300,
+              "n_clusters": 217
+            },
+            "native_mismatched": {
+              "auroc": 0.5026666666666667,
+              "lo": 0.436912148750936,
+              "hi": 0.5668365765501251,
+              "n": 300,
+              "n_clusters": 217
+            },
+            "probe": {
+              "auroc": 0.9168444444444445,
+              "lo": 0.879963290680465,
+              "hi": 0.949292020464167,
+              "n": 300,
+              "n_clusters": 217
+            },
+            "gap": 0.4195111111111111,
+            "gap_ci95": [
+              0.33752426430623494,
+              0.5018810214608085
+            ],
+            "evaluable": true,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "EVALUABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "brace_depth_ge_2",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "unclosed brace depth outside quoted spans/comments ≥ 2",
+            "w1_overlap": [
+              "python_depth",
+              "latex_brace",
+              "json_depth"
+            ],
+            "n": 300,
+            "n_groups": 217,
+            "native_true": {
+              "auroc": 0.4786222222222222,
+              "lo": 0.401342135436305,
+              "hi": 0.5497706967994921,
+              "n": 300,
+              "n_clusters": 217
+            },
+            "native_mismatched": {
+              "auroc": 0.5213777777777778,
+              "lo": 0.4554303009235855,
+              "hi": 0.5850432501418037,
+              "n": 300,
+              "n_clusters": 217
+            },
+            "probe": {
+              "auroc": 0.9043111111111111,
+              "lo": 0.86673437009793,
+              "hi": 0.9383755162437333,
+              "n": 300,
+              "n_clusters": 217
+            },
+            "gap": 0.42568888888888884,
+            "gap_ci95": [
+              0.34097624363927354,
+              0.5135488472997229
+            ],
+            "evaluable": true,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "EVALUABLE"
+          }
+        },
+        {
+          "feature": "bracket_depth_ge_2",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "bracket_depth_ge_2",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "total unclosed bracket depth outside quoted spans/comments ≥ 2",
+            "w1_overlap": [
+              "python_depth",
+              "latex_brace",
+              "json_depth"
+            ],
+            "n": 300,
+            "n_groups": 242,
+            "native_true": {
+              "auroc": 0.3928888888888889,
+              "lo": 0.33098591501394076,
+              "hi": 0.461727062098148,
+              "n": 300,
+              "n_clusters": 242
+            },
+            "native_mismatched": {
+              "auroc": 0.6071111111111112,
+              "lo": 0.5390517226340413,
+              "hi": 0.6720892952611922,
+              "n": 300,
+              "n_clusters": 242
+            },
+            "probe": {
+              "auroc": 0.8596888888888888,
+              "lo": 0.8175292340012574,
+              "hi": 0.897799264299312,
+              "n": 300,
+              "n_clusters": 242
+            },
+            "gap": 0.46679999999999994,
+            "gap_ci95": [
+              0.38197356686765466,
+              0.5447690843809728
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT EVALUABLE_MISMATCH_GATE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "bracket_depth_ge_2",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "total unclosed bracket depth outside quoted spans/comments ≥ 2",
+            "w1_overlap": [
+              "python_depth",
+              "latex_brace",
+              "json_depth"
+            ],
+            "n": 300,
+            "n_groups": 242,
+            "native_true": {
+              "auroc": 0.5792444444444445,
+              "lo": 0.5105372778779064,
+              "hi": 0.6494647347234491,
+              "n": 300,
+              "n_clusters": 242
+            },
+            "native_mismatched": {
+              "auroc": 0.42075555555555555,
+              "lo": 0.3551896533166268,
+              "hi": 0.4894778653175816,
+              "n": 300,
+              "n_clusters": 242
+            },
+            "probe": {
+              "auroc": 0.8633333333333333,
+              "lo": 0.8200104943491827,
+              "hi": 0.9009721376668778,
+              "n": 300,
+              "n_clusters": 242
+            },
+            "gap": 0.28408888888888884,
+            "gap_ci95": [
+              0.20812974813453883,
+              0.3595864026264947
+            ],
+            "evaluable": true,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "EVALUABLE"
+          }
+        },
+        {
+          "feature": "bracket_depth_ge_3",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "bracket_depth_ge_3",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "total unclosed bracket depth outside quoted spans/comments ≥ 3",
+            "w1_overlap": [
+              "python_depth",
+              "latex_brace",
+              "json_depth"
+            ],
+            "n": 300,
+            "n_groups": 228,
+            "native_true": {
+              "auroc": 0.4788,
+              "lo": 0.4081475923924257,
+              "hi": 0.5529654450466668,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "native_mismatched": {
+              "auroc": 0.5212,
+              "lo": 0.4564049685074583,
+              "hi": 0.5854801018518057,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "probe": {
+              "auroc": 0.9470222222222222,
+              "lo": 0.9194707276064756,
+              "hi": 0.9702150031336093,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "gap": 0.4682222222222222,
+            "gap_ci95": [
+              0.3934833788813105,
+              0.5411421506582023
+            ],
+            "evaluable": true,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "EVALUABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "bracket_depth_ge_3",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "total unclosed bracket depth outside quoted spans/comments ≥ 3",
+            "w1_overlap": [
+              "python_depth",
+              "latex_brace",
+              "json_depth"
+            ],
+            "n": 300,
+            "n_groups": 228,
+            "native_true": {
+              "auroc": 0.5999555555555556,
+              "lo": 0.5364646585013249,
+              "hi": 0.6623410680755772,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "native_mismatched": {
+              "auroc": 0.4000444444444444,
+              "lo": 0.3373865851265441,
+              "hi": 0.46945234899947863,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "probe": {
+              "auroc": 0.9302666666666667,
+              "lo": 0.897108495150816,
+              "hi": 0.9577938195958029,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "gap": 0.3303111111111111,
+            "gap_ci95": [
+              0.26206147403212043,
+              0.402454225694174
+            ],
+            "evaluable": true,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "EVALUABLE"
+          }
+        },
+        {
+          "feature": "paren_depth_ge_2",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "paren_depth_ge_2",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "unclosed parenthesis depth outside quoted spans/comments ≥ 2",
+            "w1_overlap": [
+              "prose_paren",
+              "python_depth"
+            ],
+            "n": 300,
+            "n_groups": 227,
+            "native_true": {
+              "auroc": 0.38493333333333335,
+              "lo": 0.3174029997159192,
+              "hi": 0.4582010612265193,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "native_mismatched": {
+              "auroc": 0.6150666666666667,
+              "lo": 0.5481061699416173,
+              "hi": 0.6804299691169112,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "probe": {
+              "auroc": 0.9083111111111111,
+              "lo": 0.8727681924000025,
+              "hi": 0.9412654888344227,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "gap": 0.5233777777777777,
+            "gap_ci95": [
+              0.43519489289247965,
+              0.6033497973755455
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT EVALUABLE_MISMATCH_GATE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "paren_depth_ge_2",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "unclosed parenthesis depth outside quoted spans/comments ≥ 2",
+            "w1_overlap": [
+              "prose_paren",
+              "python_depth"
+            ],
+            "n": 300,
+            "n_groups": 227,
+            "native_true": {
+              "auroc": 0.6904888888888889,
+              "lo": 0.6276856346615886,
+              "hi": 0.7517606341459856,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "native_mismatched": {
+              "auroc": 0.3095111111111111,
+              "lo": 0.24571438598045073,
+              "hi": 0.37461299999308173,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "probe": {
+              "auroc": 0.8931111111111111,
+              "lo": 0.8531481496670401,
+              "hi": 0.9298476068339324,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "gap": 0.20262222222222215,
+            "gap_ci95": [
+              0.13301115044783354,
+              0.27422276507177945
+            ],
+            "evaluable": true,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "EVALUABLE"
+          }
+        }
+      ]
+    },
+    {
+      "group": "table column",
+      "frozen_families": [
+        "table_column"
+      ],
+      "retained_features": [
+        "table_column_ge_2",
+        "table_column_ge_3",
+        "table_column_ge_4",
+        "table_column_ge_5"
+      ],
+      "pre_capture_dropped_features": [],
+      "by_reader": {
+        "olens": {
+          "n": 4,
+          "passing_features": 1,
+          "all_retained_mean_gap": 0.3519777777777777,
+          "registered_gate_passing_mean_gap": 0.42995555555555554
+        },
+        "nla": {
+          "n": 4,
+          "passing_features": 1,
+          "all_retained_mean_gap": 0.30845,
+          "registered_gate_passing_mean_gap": 0.3275111111111111
+        }
+      },
+      "rows": [
+        {
+          "feature": "table_column_ge_2",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "table_column_ge_2",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "one-based current Markdown pipe-delimited cell (escaped pipes and inline-code pipes ignored) ≥ 2",
+            "w1_overlap": [
+              "table_column"
+            ],
+            "n": 300,
+            "n_groups": 237,
+            "native_true": {
+              "auroc": 0.49955555555555553,
+              "lo": 0.43088476833372796,
+              "hi": 0.5673056831428224,
+              "n": 300,
+              "n_clusters": 237
+            },
+            "native_mismatched": {
+              "auroc": 0.5004444444444445,
+              "lo": 0.4355463441753459,
+              "hi": 0.5618307107652073,
+              "n": 300,
+              "n_clusters": 237
+            },
+            "probe": {
+              "auroc": 0.9295111111111111,
+              "lo": 0.899703751594828,
+              "hi": 0.9562418054779166,
+              "n": 300,
+              "n_clusters": 237
+            },
+            "gap": 0.42995555555555554,
+            "gap_ci95": [
+              0.3553539732383348,
+              0.5035427696056043
+            ],
+            "evaluable": true,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "EVALUABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "table_column_ge_2",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "one-based current Markdown pipe-delimited cell (escaped pipes and inline-code pipes ignored) ≥ 2",
+            "w1_overlap": [
+              "table_column"
+            ],
+            "n": 300,
+            "n_groups": 237,
+            "native_true": {
+              "auroc": 0.5917333333333333,
+              "lo": 0.5271033691552033,
+              "hi": 0.6521627832810938,
+              "n": 300,
+              "n_clusters": 237
+            },
+            "native_mismatched": {
+              "auroc": 0.40826666666666667,
+              "lo": 0.34121369074482516,
+              "hi": 0.4735310817674084,
+              "n": 300,
+              "n_clusters": 237
+            },
+            "probe": {
+              "auroc": 0.9192444444444444,
+              "lo": 0.8877496092999848,
+              "hi": 0.9464078716779534,
+              "n": 300,
+              "n_clusters": 237
+            },
+            "gap": 0.3275111111111111,
+            "gap_ci95": [
+              0.25895986514823854,
+              0.3967361684348666
+            ],
+            "evaluable": true,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "EVALUABLE"
+          }
+        },
+        {
+          "feature": "table_column_ge_3",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "table_column_ge_3",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "one-based current Markdown pipe-delimited cell (escaped pipes and inline-code pipes ignored) ≥ 3",
+            "w1_overlap": [
+              "table_column"
+            ],
+            "n": 300,
+            "n_groups": 240,
+            "native_true": {
+              "auroc": 0.5813333333333334,
+              "lo": 0.5160024862547135,
+              "hi": 0.6444472906858673,
+              "n": 300,
+              "n_clusters": 240
+            },
+            "native_mismatched": {
+              "auroc": 0.4186666666666667,
+              "lo": 0.3550197203800334,
+              "hi": 0.48417603622431205,
+              "n": 300,
+              "n_clusters": 240
+            },
+            "probe": {
+              "auroc": 0.8471555555555556,
+              "lo": 0.8013409528738762,
+              "hi": 0.8868395069626597,
+              "n": 300,
+              "n_clusters": 240
+            },
+            "gap": 0.2658222222222222,
+            "gap_ci95": [
+              0.19592725559805924,
+              0.3388520990984704
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT DECODABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "table_column_ge_3",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "one-based current Markdown pipe-delimited cell (escaped pipes and inline-code pipes ignored) ≥ 3",
+            "w1_overlap": [
+              "table_column"
+            ],
+            "n": 300,
+            "n_groups": 240,
+            "native_true": {
+              "auroc": 0.5513777777777777,
+              "lo": 0.48502985672829985,
+              "hi": 0.6179054427814932,
+              "n": 300,
+              "n_clusters": 240
+            },
+            "native_mismatched": {
+              "auroc": 0.4486222222222222,
+              "lo": 0.38340595559155416,
+              "hi": 0.5157518409614193,
+              "n": 300,
+              "n_clusters": 240
+            },
+            "probe": {
+              "auroc": 0.8494666666666667,
+              "lo": 0.8041994238957267,
+              "hi": 0.8886824016689284,
+              "n": 300,
+              "n_clusters": 240
+            },
+            "gap": 0.29808888888888896,
+            "gap_ci95": [
+              0.22457669932341842,
+              0.37460274674629257
+            ],
+            "evaluable": false,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "NOT DECODABLE"
+          }
+        },
+        {
+          "feature": "table_column_ge_4",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "table_column_ge_4",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "one-based current Markdown pipe-delimited cell (escaped pipes and inline-code pipes ignored) ≥ 4",
+            "w1_overlap": [
+              "table_column"
+            ],
+            "n": 300,
+            "n_groups": 234,
+            "native_true": {
+              "auroc": 0.46044444444444443,
+              "lo": 0.396132886277795,
+              "hi": 0.5269897336436002,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "native_mismatched": {
+              "auroc": 0.5395555555555556,
+              "lo": 0.47223625671107183,
+              "hi": 0.6037621050529399,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "probe": {
+              "auroc": 0.8227111111111111,
+              "lo": 0.773583258161751,
+              "hi": 0.8705314970480643,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "gap": 0.3622666666666666,
+            "gap_ci95": [
+              0.2763676814877292,
+              0.4469509318235433
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT DECODABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "table_column_ge_4",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "one-based current Markdown pipe-delimited cell (escaped pipes and inline-code pipes ignored) ≥ 4",
+            "w1_overlap": [
+              "table_column"
+            ],
+            "n": 300,
+            "n_groups": 234,
+            "native_true": {
+              "auroc": 0.5667333333333333,
+              "lo": 0.5007654277177274,
+              "hi": 0.6347477894654033,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "native_mismatched": {
+              "auroc": 0.4332666666666667,
+              "lo": 0.3698714095602499,
+              "hi": 0.5022533316336374,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "probe": {
+              "auroc": 0.7706666666666667,
+              "lo": 0.7158485332494717,
+              "hi": 0.826073433379508,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "gap": 0.2039333333333334,
+            "gap_ci95": [
+              0.12091432152061317,
+              0.2911262626262625
+            ],
+            "evaluable": false,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "NOT DECODABLE"
+          }
+        },
+        {
+          "feature": "table_column_ge_5",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "table_column_ge_5",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "one-based current Markdown pipe-delimited cell (escaped pipes and inline-code pipes ignored) ≥ 5",
+            "w1_overlap": [
+              "table_column"
+            ],
+            "n": 300,
+            "n_groups": 234,
+            "native_true": {
+              "auroc": 0.486,
+              "lo": 0.41776064787847367,
+              "hi": 0.5481581047642502,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "native_mismatched": {
+              "auroc": 0.514,
+              "lo": 0.44454853007707545,
+              "hi": 0.5797279516923565,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "probe": {
+              "auroc": 0.8358666666666666,
+              "lo": 0.7874466994467718,
+              "hi": 0.8773601617166182,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "gap": 0.34986666666666666,
+            "gap_ci95": [
+              0.268930629229925,
+              0.4244654083185065
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT DECODABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "table_column_ge_5",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "one-based current Markdown pipe-delimited cell (escaped pipes and inline-code pipes ignored) ≥ 5",
+            "w1_overlap": [
+              "table_column"
+            ],
+            "n": 300,
+            "n_groups": 234,
+            "native_true": {
+              "auroc": 0.4351555555555556,
+              "lo": 0.3735714858203333,
+              "hi": 0.5012097728207054,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "native_mismatched": {
+              "auroc": 0.5648444444444445,
+              "lo": 0.49564681568711183,
+              "hi": 0.6293719408892371,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "probe": {
+              "auroc": 0.8394222222222222,
+              "lo": 0.7926385508359478,
+              "hi": 0.8795724902721946,
+              "n": 300,
+              "n_clusters": 234
+            },
+            "gap": 0.4042666666666666,
+            "gap_ci95": [
+              0.3208654822859742,
+              0.4818914158337764
+            ],
+            "evaluable": false,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "NOT DECODABLE"
+          }
+        }
+      ]
+    },
+    {
+      "group": "line index",
+      "frozen_families": [
+        "line_index"
+      ],
+      "retained_features": [
+        "line_index_ge_16",
+        "line_index_ge_2",
+        "line_index_ge_4",
+        "line_index_ge_8"
+      ],
+      "pre_capture_dropped_features": [
+        "line_index_ge_32"
+      ],
+      "by_reader": {
+        "olens": {
+          "n": 4,
+          "passing_features": 0,
+          "all_retained_mean_gap": 0.19334444444444446,
+          "registered_gate_passing_mean_gap": null
+        },
+        "nla": {
+          "n": 4,
+          "passing_features": 0,
+          "all_retained_mean_gap": 0.1836388888888889,
+          "registered_gate_passing_mean_gap": null
+        }
+      },
+      "rows": [
+        {
+          "feature": "line_index_ge_16",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "line_index_ge_16",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "one-based current line index ≥ 16",
+            "w1_overlap": [
+              "python_line"
+            ],
+            "n": 300,
+            "n_groups": 241,
+            "native_true": {
+              "auroc": 0.45666666666666667,
+              "lo": 0.3897985225728254,
+              "hi": 0.5268335284177847,
+              "n": 300,
+              "n_clusters": 241
+            },
+            "native_mismatched": {
+              "auroc": 0.5433333333333333,
+              "lo": 0.47856254191817577,
+              "hi": 0.6100591212138217,
+              "n": 300,
+              "n_clusters": 241
+            },
+            "probe": {
+              "auroc": 0.5514666666666667,
+              "lo": 0.48146779311592797,
+              "hi": 0.6194551239372951,
+              "n": 300,
+              "n_clusters": 241
+            },
+            "gap": 0.0948,
+            "gap_ci95": [
+              -0.009836115722601216,
+              0.19649632814551551
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT DECODABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "line_index_ge_16",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "one-based current line index ≥ 16",
+            "w1_overlap": [
+              "python_line"
+            ],
+            "n": 300,
+            "n_groups": 241,
+            "native_true": {
+              "auroc": 0.46153333333333335,
+              "lo": 0.3969390509578564,
+              "hi": 0.5273232367773517,
+              "n": 300,
+              "n_clusters": 241
+            },
+            "native_mismatched": {
+              "auroc": 0.5384666666666666,
+              "lo": 0.47128657885252395,
+              "hi": 0.6055823495763026,
+              "n": 300,
+              "n_clusters": 241
+            },
+            "probe": {
+              "auroc": 0.5933333333333334,
+              "lo": 0.5234427594101275,
+              "hi": 0.6609283458286203,
+              "n": 300,
+              "n_clusters": 241
+            },
+            "gap": 0.13180000000000003,
+            "gap_ci95": [
+              0.02983494890692875,
+              0.2314525707561562
+            ],
+            "evaluable": false,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "NOT DECODABLE"
+          }
+        },
+        {
+          "feature": "line_index_ge_2",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "line_index_ge_2",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "one-based current line index ≥ 2",
+            "w1_overlap": [
+              "python_line"
+            ],
+            "n": 300,
+            "n_groups": 248,
+            "native_true": {
+              "auroc": 0.3983555555555556,
+              "lo": 0.3302647888903884,
+              "hi": 0.4681585682638767,
+              "n": 300,
+              "n_clusters": 248
+            },
+            "native_mismatched": {
+              "auroc": 0.6016444444444444,
+              "lo": 0.5346368260858654,
+              "hi": 0.6675655229886566,
+              "n": 300,
+              "n_clusters": 248
+            },
+            "probe": {
+              "auroc": 0.6941333333333334,
+              "lo": 0.6361150836999215,
+              "hi": 0.7532795459026547,
+              "n": 300,
+              "n_clusters": 248
+            },
+            "gap": 0.2957777777777778,
+            "gap_ci95": [
+              0.20556879909075385,
+              0.38514687086691685
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT DECODABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "line_index_ge_2",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "one-based current line index ≥ 2",
+            "w1_overlap": [
+              "python_line"
+            ],
+            "n": 300,
+            "n_groups": 248,
+            "native_true": {
+              "auroc": 0.44275555555555557,
+              "lo": 0.3679650323158266,
+              "hi": 0.5180497958321241,
+              "n": 300,
+              "n_clusters": 248
+            },
+            "native_mismatched": {
+              "auroc": 0.5572444444444444,
+              "lo": 0.48741972224315144,
+              "hi": 0.6223572416685144,
+              "n": 300,
+              "n_clusters": 248
+            },
+            "probe": {
+              "auroc": 0.6967555555555556,
+              "lo": 0.6362681400931831,
+              "hi": 0.7563884032634032,
+              "n": 300,
+              "n_clusters": 248
+            },
+            "gap": 0.254,
+            "gap_ci95": [
+              0.15284391371539252,
+              0.34945403798753083
+            ],
+            "evaluable": false,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "NOT DECODABLE"
+          }
+        },
+        {
+          "feature": "line_index_ge_4",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "line_index_ge_4",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "one-based current line index ≥ 4",
+            "w1_overlap": [
+              "python_line"
+            ],
+            "n": 300,
+            "n_groups": 259,
+            "native_true": {
+              "auroc": 0.4079111111111111,
+              "lo": 0.34889156745957056,
+              "hi": 0.4769768823190351,
+              "n": 300,
+              "n_clusters": 259
+            },
+            "native_mismatched": {
+              "auroc": 0.5920888888888889,
+              "lo": 0.5266139233460561,
+              "hi": 0.6598566854339598,
+              "n": 300,
+              "n_clusters": 259
+            },
+            "probe": {
+              "auroc": 0.6969777777777778,
+              "lo": 0.6322594419475978,
+              "hi": 0.7565293627287716,
+              "n": 300,
+              "n_clusters": 259
+            },
+            "gap": 0.2890666666666667,
+            "gap_ci95": [
+              0.192851887922101,
+              0.38085782738882656
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT DECODABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "line_index_ge_4",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "one-based current line index ≥ 4",
+            "w1_overlap": [
+              "python_line"
+            ],
+            "n": 300,
+            "n_groups": 259,
+            "native_true": {
+              "auroc": 0.5136,
+              "lo": 0.4415975163071991,
+              "hi": 0.583501844083898,
+              "n": 300,
+              "n_clusters": 259
+            },
+            "native_mismatched": {
+              "auroc": 0.4864,
+              "lo": 0.42183206630927655,
+              "hi": 0.554435246770773,
+              "n": 300,
+              "n_clusters": 259
+            },
+            "probe": {
+              "auroc": 0.6985333333333333,
+              "lo": 0.6327781039715001,
+              "hi": 0.7566591825602176,
+              "n": 300,
+              "n_clusters": 259
+            },
+            "gap": 0.1849333333333334,
+            "gap_ci95": [
+              0.08571414374068485,
+              0.2775706438584841
+            ],
+            "evaluable": false,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "NOT DECODABLE"
+          }
+        },
+        {
+          "feature": "line_index_ge_8",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "line_index_ge_8",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "count-like",
+            "definition": "one-based current line index ≥ 8",
+            "w1_overlap": [
+              "python_line"
+            ],
+            "n": 300,
+            "n_groups": 253,
+            "native_true": {
+              "auroc": 0.5021777777777777,
+              "lo": 0.4306510958463298,
+              "hi": 0.5712315314180106,
+              "n": 300,
+              "n_clusters": 253
+            },
+            "native_mismatched": {
+              "auroc": 0.4978222222222222,
+              "lo": 0.4341524194983099,
+              "hi": 0.5648069981625942,
+              "n": 300,
+              "n_clusters": 253
+            },
+            "probe": {
+              "auroc": 0.5959111111111111,
+              "lo": 0.5287717434654167,
+              "hi": 0.6574740199291002,
+              "n": 300,
+              "n_clusters": 253
+            },
+            "gap": 0.09373333333333334,
+            "gap_ci95": [
+              0.0033146500734075202,
+              0.18155989311736886
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT DECODABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "line_index_ge_8",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "count-like",
+            "definition": "one-based current line index ≥ 8",
+            "w1_overlap": [
+              "python_line"
+            ],
+            "n": 300,
+            "n_groups": 253,
+            "native_true": {
+              "auroc": 0.4484444444444444,
+              "lo": 0.381788628202959,
+              "hi": 0.5135432941119029,
+              "n": 300,
+              "n_clusters": 253
+            },
+            "native_mismatched": {
+              "auroc": 0.5515555555555556,
+              "lo": 0.4872940287281769,
+              "hi": 0.612565137145306,
+              "n": 300,
+              "n_clusters": 253
+            },
+            "probe": {
+              "auroc": 0.6122666666666666,
+              "lo": 0.5488965874319041,
+              "hi": 0.6713221913966947,
+              "n": 300,
+              "n_clusters": 253
+            },
+            "gap": 0.1638222222222222,
+            "gap_ci95": [
+              0.07176622106121171,
+              0.2524324739458418
+            ],
+            "evaluable": false,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "NOT DECODABLE"
+          }
+        }
+      ]
+    },
+    {
+      "group": "quote state",
+      "frozen_families": [
+        "inside_string",
+        "inside_single_quote",
+        "inside_double_quote",
+        "inside_triple_quote"
+      ],
+      "retained_features": [
+        "inside_double_quote",
+        "inside_single_quote",
+        "inside_string"
+      ],
+      "pre_capture_dropped_features": [
+        "inside_triple_quote"
+      ],
+      "by_reader": {
+        "olens": {
+          "n": 3,
+          "passing_features": 1,
+          "all_retained_mean_gap": 0.1413925925925926,
+          "registered_gate_passing_mean_gap": 0.36506666666666665
+        },
+        "nla": {
+          "n": 3,
+          "passing_features": 1,
+          "all_retained_mean_gap": 0.054859259259259274,
+          "registered_gate_passing_mean_gap": 0.17195555555555564
+        }
+      },
+      "rows": [
+        {
+          "feature": "inside_double_quote",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "inside_double_quote",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "state-like",
+            "definition": "inside a double-quoted span",
+            "w1_overlap": [
+              "prose_quote",
+              "python_string",
+              "json_type"
+            ],
+            "n": 300,
+            "n_groups": 228,
+            "native_true": {
+              "auroc": 0.5201333333333333,
+              "lo": 0.4519266109221467,
+              "hi": 0.5879447129566963,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "native_mismatched": {
+              "auroc": 0.47986666666666666,
+              "lo": 0.412756580972792,
+              "hi": 0.5511010830434089,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "probe": {
+              "auroc": 0.8852,
+              "lo": 0.8445135789032845,
+              "hi": 0.9226213326568607,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "gap": 0.36506666666666665,
+            "gap_ci95": [
+              0.29020037481669947,
+              0.4420477779543408
+            ],
+            "evaluable": true,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "EVALUABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "inside_double_quote",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "state-like",
+            "definition": "inside a double-quoted span",
+            "w1_overlap": [
+              "prose_quote",
+              "python_string",
+              "json_type"
+            ],
+            "n": 300,
+            "n_groups": 228,
+            "native_true": {
+              "auroc": 0.7114222222222222,
+              "lo": 0.641152992280014,
+              "hi": 0.7757638700984436,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "native_mismatched": {
+              "auroc": 0.28857777777777777,
+              "lo": 0.23159091406766033,
+              "hi": 0.35005382115915884,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "probe": {
+              "auroc": 0.8833777777777778,
+              "lo": 0.8446114652003457,
+              "hi": 0.9198050548187082,
+              "n": 300,
+              "n_clusters": 228
+            },
+            "gap": 0.17195555555555564,
+            "gap_ci95": [
+              0.10097112133106902,
+              0.2465665250627854
+            ],
+            "evaluable": true,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "EVALUABLE"
+          }
+        },
+        {
+          "feature": "inside_single_quote",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "inside_single_quote",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "state-like",
+            "definition": "inside a single-quoted span",
+            "w1_overlap": [
+              "prose_quote",
+              "python_string"
+            ],
+            "n": 300,
+            "n_groups": 222,
+            "native_true": {
+              "auroc": 0.5494222222222223,
+              "lo": 0.478985751754225,
+              "hi": 0.6218160864627541,
+              "n": 300,
+              "n_clusters": 222
+            },
+            "native_mismatched": {
+              "auroc": 0.4505777777777778,
+              "lo": 0.38254451703730097,
+              "hi": 0.5156201936978707,
+              "n": 300,
+              "n_clusters": 222
+            },
+            "probe": {
+              "auroc": 0.5475555555555556,
+              "lo": 0.4784334998583203,
+              "hi": 0.6140664051068189,
+              "n": 300,
+              "n_clusters": 222
+            },
+            "gap": -0.0018666666666666831,
+            "gap_ci95": [
+              -0.09522052883420327,
+              0.09518801711489708
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT DECODABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "inside_single_quote",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "state-like",
+            "definition": "inside a single-quoted span",
+            "w1_overlap": [
+              "prose_quote",
+              "python_string"
+            ],
+            "n": 300,
+            "n_groups": 222,
+            "native_true": {
+              "auroc": 0.5536888888888889,
+              "lo": 0.4855512878628701,
+              "hi": 0.6260028784399854,
+              "n": 300,
+              "n_clusters": 222
+            },
+            "native_mismatched": {
+              "auroc": 0.4463111111111111,
+              "lo": 0.3837414367492493,
+              "hi": 0.5071657726566822,
+              "n": 300,
+              "n_clusters": 222
+            },
+            "probe": {
+              "auroc": 0.5707111111111111,
+              "lo": 0.4988482746909123,
+              "hi": 0.6400634031723633,
+              "n": 300,
+              "n_clusters": 222
+            },
+            "gap": 0.01702222222222216,
+            "gap_ci95": [
+              -0.06713288960731417,
+              0.09819174954144029
+            ],
+            "evaluable": false,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "NOT DECODABLE"
+          }
+        },
+        {
+          "feature": "inside_string",
+          "olens": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "inside_string",
+            "reader": "olens",
+            "site": 44,
+            "class_label": "state-like",
+            "definition": "inside a quoted span (Python triple strings supported)",
+            "w1_overlap": [
+              "prose_quote",
+              "python_string",
+              "json_type"
+            ],
+            "n": 300,
+            "n_groups": 227,
+            "native_true": {
+              "auroc": 0.5142666666666666,
+              "lo": 0.43959068296684395,
+              "hi": 0.5871849898531362,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "native_mismatched": {
+              "auroc": 0.48573333333333335,
+              "lo": 0.4209206353178443,
+              "hi": 0.5532797223572624,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "probe": {
+              "auroc": 0.5752444444444444,
+              "lo": 0.5046672749506385,
+              "hi": 0.6493414734470748,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "gap": 0.0609777777777778,
+            "gap_ci95": [
+              -0.021914921868844355,
+              0.14829717230549272
+            ],
+            "evaluable": false,
+            "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+            "status": "NOT DECODABLE"
+          },
+          "nla": {
+            "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+            "run_kind": "real",
+            "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+            "feature": "inside_string",
+            "reader": "nla",
+            "site": 42,
+            "class_label": "state-like",
+            "definition": "inside a quoted span (Python triple strings supported)",
+            "w1_overlap": [
+              "prose_quote",
+              "python_string",
+              "json_type"
+            ],
+            "n": 300,
+            "n_groups": 227,
+            "native_true": {
+              "auroc": 0.6013777777777778,
+              "lo": 0.5254772650523956,
+              "hi": 0.6755793851538532,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "native_mismatched": {
+              "auroc": 0.3986222222222222,
+              "lo": 0.3332752520593411,
+              "hi": 0.4621595084276045,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "probe": {
+              "auroc": 0.5769777777777778,
+              "lo": 0.5090649798457572,
+              "hi": 0.6533005290384281,
+              "n": 300,
+              "n_clusters": 227
+            },
+            "gap": -0.024399999999999977,
+            "gap_ci95": [
+              -0.1248785154406618,
+              0.08830535040784464
+            ],
+            "evaluable": false,
+            "checkpoint": "ceselder/qwen3.6-27b-nla-rl@5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400",
+            "status": "NOT DECODABLE"
+          }
+        }
+      ]
+    }
+  ],
+  "unchanged_primary_claims": [
+    {
+      "claim": "H1",
+      "status": "NOT MET",
+      "point": -0.05618000000000006,
+      "ci95": [
+        -0.11364572222222225,
+        -0.008992644444444468
+      ],
+      "n": {
+        "count_state": 25,
+        "semantic": 4
+      }
+    },
+    {
+      "claim": "H2",
+      "status": "NOT MET",
+      "point": 0.04840193236714976,
+      "ci95": [
+        -0.00446669082125603,
+        0.09583910628019326
+      ],
+      "n": 23
+    }
+  ]
+}

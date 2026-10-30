@@ -1,0 +1,34 @@
+{
+  "schema": "i2-e74-ordinal-scope-ruling-v1",
+  "track": "G",
+  "recorded_at": "2026-10-27T19:21:56.993090+00:00",
+  "authority": "Guiv direct instruction in I-2 chat; §192 clarification 3 (e1947a4c)",
+  "ruling_verbatim": "Option 1, per §192 clarification 3 (`e1947a4c`). Capture and probe python_depth_ordinal and table_column_ordinal, but exclude them from R-G1, R-G2 and R-G3. Report them only as labelled exploratory descriptives. No ordinal rule is added.",
+  "rows": [
+    "W1/python_depth_ordinal",
+    "W1/table_column_ordinal"
+  ],
+  "capture_required": true,
+  "probe_required": true,
+  "n_dev_per_row": 144,
+  "n_test_per_row": 144,
+  "labels_and_splits": "UNCHANGED",
+  "excluded_from": [
+    "R-G1",
+    "R-G2",
+    "R-G3"
+  ],
+  "reporting": "LABELLED_EXPLORATORY_DESCRIPTIVES_ONLY",
+  "new_ordinal_decision_rule": false,
+  "binarization_authorized": false,
+  "implementation_audit": {
+    "capture_retained": true,
+    "binary_reader_plan_excludes_ordinals": true,
+    "current_cpu_intake_sha256": "61f1627c32b5f0f48e65e8c0f935aa0c13cf16162aaa6cd4b917c0697acc47c9",
+    "current_ordinal_status": "CAPTURE_RETAINED_ESTIMATOR_PENDING_GUIV",
+    "gap": "Current CPU intake skips ordinal fits. Both descriptive probes are required; source/implementation binding remains to be completed before those fits. This ruling does not itself specify a numerical estimator or add a decision threshold.",
+    "actual_glm_capture_or_probe_run": false
+  },
+  "gpu_launch_authority": false,
+  "judging_authority_changed": false
+}

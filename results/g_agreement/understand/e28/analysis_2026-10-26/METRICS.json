@@ -1,0 +1,1076 @@
+{
+  "R1": {
+    "met": true,
+    "state_rows_fast": {
+      "prose_paren": true,
+      "python_string": true,
+      "table_role": true
+    }
+  },
+  "R2": {
+    "prose_paren": true,
+    "prose_sentiment": false
+  },
+  "R3": {
+    "confound": "L contains a merged Oracle adapter; interpret alongside E33, per \u00a7130",
+    "contrasts": [
+      {
+        "L_minus_B_steps": null,
+        "bootstrap_replicates_with_censoring": 1609,
+        "ci95": null,
+        "row": "prose_paren",
+        "slower_L": null
+      },
+      {
+        "L_minus_B_steps": 0,
+        "bootstrap_replicates_with_censoring": 0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "row": "python_string",
+        "slower_L": false
+      },
+      {
+        "L_minus_B_steps": -75,
+        "bootstrap_replicates_with_censoring": 0,
+        "ci95": [
+          -75.0,
+          25.0
+        ],
+        "row": "table_role",
+        "slower_L": false
+      },
+      {
+        "L_minus_B_steps": -350,
+        "bootstrap_replicates_with_censoring": 0,
+        "ci95": [
+          -375.0,
+          -350.0
+        ],
+        "row": "python_depth",
+        "slower_L": false
+      },
+      {
+        "L_minus_B_steps": -75,
+        "bootstrap_replicates_with_censoring": 0,
+        "ci95": [
+          -75.0,
+          -25.0
+        ],
+        "row": "table_column",
+        "slower_L": false
+      },
+      {
+        "L_minus_B_steps": 0,
+        "bootstrap_replicates_with_censoring": 0,
+        "ci95": [
+          0.0,
+          25.0
+        ],
+        "row": "prose_sentiment",
+        "slower_L": false
+      }
+    ],
+    "met": null
+  },
+  "analysis_plan_sha256": "73d5eddfc32692e3f6b7fc1428be681627ae0e9d9da5d8d4cf0af0f32f05c6eb",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261025,
+  "cells": [
+    {
+      "arm": "L",
+      "asked": [
+        {
+          "auroc": 0.4790249433106576,
+          "ci95": [
+            0.29138321995464855,
+            0.6479591836734694
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 0.7142857142857143,
+          "ci95": [
+            0.5668934240362812,
+            0.8854875283446711
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 0.753968253968254,
+          "ci95": [
+            0.7040816326530612,
+            0.9024943310657596
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 0.9087301587301587,
+          "ci95": [
+            0.7806122448979592,
+            1.0
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 0.9940476190476191,
+          "ci95": [
+            0.981859410430839,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 0.9875283446712018,
+          "ci95": [
+            0.9569160997732427,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 100,
+      "free_correct_statement_rate_ci95": [
+        0.4523809523809524,
+        0.3503554445205683,
+        0.5585715331301119
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 5,
+        "B": 39,
+        "both": 40
+      },
+      "right_censored_at400": false,
+      "row": "prose_paren"
+    },
+    {
+      "arm": "B",
+      "asked": [
+        {
+          "auroc": 0.5680272108843537,
+          "ci95": [
+            0.4257369614512472,
+            0.7301587301587301
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 0.4280045351473923,
+          "ci95": [
+            0.2868480725623583,
+            0.562358276643991
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 0.48072562358276644,
+          "ci95": [
+            0.3893424036281179,
+            0.5793650793650794
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 0.3888888888888889,
+          "ci95": [
+            0.24178004535147393,
+            0.5567460317460314
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 0.5014172335600907,
+          "ci95": [
+            0.41381802721088434,
+            0.5997803287981859
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 0.7097505668934241,
+          "ci95": [
+            0.5938208616780045,
+            0.8940617913832196
+          ],
+          "step": 400
+        }
+      ],
+      "fast": false,
+      "first_step_ge_080": null,
+      "free_correct_statement_rate_ci95": [
+        0.40476190476190477,
+        0.3061943608400985,
+        0.511659594461262
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 60,
+        "both": 24
+      },
+      "right_censored_at400": true,
+      "row": "prose_paren"
+    },
+    {
+      "arm": "S",
+      "asked": [
+        {
+          "auroc": 0.4790249433106576,
+          "ci95": [
+            0.29138321995464855,
+            0.6479591836734694
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 0.4410430839002268,
+          "ci95": [
+            0.2845379818594104,
+            0.5056689342403629
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 0.3900226757369615,
+          "ci95": [
+            0.21201814058956917,
+            0.5040249433106573
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 0.3197278911564626,
+          "ci95": [
+            0.1774234693877551,
+            0.4280045351473923
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 0.28599773242630383,
+          "ci95": [
+            0.13148384353741496,
+            0.32482993197278914
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 0.304421768707483,
+          "ci95": [
+            0.08163265306122448,
+            0.5
+          ],
+          "step": 400
+        }
+      ],
+      "fast": false,
+      "first_step_ge_080": null,
+      "free_correct_statement_rate_ci95": [
+        0.0,
+        0.0,
+        0.043733265332143306
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 1,
+        "both": 83
+      },
+      "right_censored_at400": true,
+      "row": "prose_paren"
+    },
+    {
+      "arm": "L",
+      "asked": [
+        {
+          "auroc": 0.6445578231292517,
+          "ci95": [
+            0.5124716553287982,
+            0.780045351473923
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 25,
+      "free_correct_statement_rate_ci95": [
+        0.5,
+        0.39543750035009767,
+        0.6045624996499024
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 3,
+        "B": 39,
+        "both": 42
+      },
+      "right_censored_at400": false,
+      "row": "python_string"
+    },
+    {
+      "arm": "B",
+      "asked": [
+        {
+          "auroc": 0.28798185941043086,
+          "ci95": [
+            0.20850340136054424,
+            0.35942460317460306
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 25,
+      "free_correct_statement_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 42,
+        "B": 42
+      },
+      "right_censored_at400": false,
+      "row": "python_string"
+    },
+    {
+      "arm": "L",
+      "asked": [
+        {
+          "auroc": 0.4427437641723356,
+          "ci95": [
+            0.2227891156462585,
+            0.6700680272108843
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 0.9977324263038548,
+          "ci95": [
+            0.9914965986394558,
+            1.0
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 0.9982993197278912,
+          "ci95": [
+            0.9931972789115646,
+            1.0
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 0.996031746031746,
+          "ci95": [
+            0.9863945578231292,
+            1.0
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 0.9965986394557823,
+          "ci95": [
+            0.9863945578231292,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 0.9965986394557823,
+          "ci95": [
+            0.9863945578231292,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 25,
+      "free_correct_statement_rate_ci95": [
+        0.6071428571428571,
+        0.5002161009140969,
+        0.7046981993718724
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 47,
+        "B": 9,
+        "both": 28
+      },
+      "right_censored_at400": false,
+      "row": "table_role"
+    },
+    {
+      "arm": "B",
+      "asked": [
+        {
+          "auroc": 0.7222222222222222,
+          "ci95": [
+            0.6059807256235827,
+            0.8049886621315193
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 0.5668934240362812,
+          "ci95": [
+            0.43706065759637186,
+            0.6740362811791383
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 0.6485260770975056,
+          "ci95": [
+            0.4880952380952381,
+            0.8010204081632653
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 0.8968253968253969,
+          "ci95": [
+            0.8078231292517006,
+            0.967687074829932
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 0.996031746031746,
+          "ci95": [
+            0.9897959183673469,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 0.9931972789115646,
+          "ci95": [
+            0.9801587301587301,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 100,
+      "free_correct_statement_rate_ci95": [
+        0.6428571428571429,
+        0.5362111603479548,
+        0.7370079067000043
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 19,
+        "B": 36,
+        "both": 29
+      },
+      "right_censored_at400": false,
+      "row": "table_role"
+    },
+    {
+      "arm": "L",
+      "asked": [
+        {
+          "auroc": 0.48696145124716556,
+          "ci95": [
+            0.4444444444444444,
+            0.5266439909297053
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 0.7670068027210885,
+          "ci95": [
+            0.721655328798186,
+            0.8100907029478458
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 0.9251700680272109,
+          "ci95": [
+            0.9047619047619048,
+            0.9580498866213152
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 0.996031746031746,
+          "ci95": [
+            0.9863945578231292,
+            1.0
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 50,
+      "free_correct_statement_rate_ci95": [
+        0.36904761904761907,
+        0.2736996045974371,
+        0.4758495839419337
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 22,
+        "B": 9,
+        "both": 53
+      },
+      "right_censored_at400": false,
+      "row": "python_depth"
+    },
+    {
+      "arm": "B",
+      "asked": [
+        {
+          "auroc": 0.5266439909297053,
+          "ci95": [
+            0.49489795918367346,
+            0.5629251700680272
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 0.4988662131519274,
+          "ci95": [
+            0.4546485260770975,
+            0.5368480725623582
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 0.4963151927437642,
+          "ci95": [
+            0.4702310090702948,
+            0.5232426303854876
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 0.5909863945578231,
+          "ci95": [
+            0.5232426303854876,
+            0.6805555555555556
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 0.689625850340136,
+          "ci95": [
+            0.6173469387755102,
+            0.7545351473922902
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": false,
+      "first_step_ge_080": 400,
+      "free_correct_statement_rate_ci95": [
+        0.9404761904761905,
+        0.8681156389946401,
+        0.974309817736567
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 41,
+        "B": 38,
+        "both": 5
+      },
+      "right_censored_at400": false,
+      "row": "python_depth"
+    },
+    {
+      "arm": "L",
+      "asked": [
+        {
+          "auroc": 0.48072562358276644,
+          "ci95": [
+            0.336734693877551,
+            0.6145549886621313
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 0.9824263038548753,
+          "ci95": [
+            0.967687074829932,
+            1.0
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 25,
+      "free_correct_statement_rate_ci95": [
+        0.40476190476190477,
+        0.3061943608400985,
+        0.511659594461262
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 27,
+        "B": 7,
+        "both": 50
+      },
+      "right_censored_at400": false,
+      "row": "table_column"
+    },
+    {
+      "arm": "B",
+      "asked": [
+        {
+          "auroc": 0.5073696145124716,
+          "ci95": [
+            0.35487528344671204,
+            0.6456916099773242
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 0.6717687074829932,
+          "ci95": [
+            0.6139455782312925,
+            0.7329931972789115
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 0.7380952380952381,
+          "ci95": [
+            0.6751275510204082,
+            0.826530612244898
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 0.9438775510204082,
+          "ci95": [
+            0.9291383219954649,
+            0.9841269841269841
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 0.9988662131519275,
+          "ci95": [
+            0.9954648526077098,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 0.9988662131519275,
+          "ci95": [
+            0.9954648526077098,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 100,
+      "free_correct_statement_rate_ci95": [
+        0.6190476190476191,
+        0.5121524397704628,
+        0.7155301161028366
+      ],
+      "free_naming_rate_ci95": [
+        1.0,
+        0.9562667346678565,
+        0.9999999999999999
+      ],
+      "free_sentiment_note": null,
+      "free_statement_statuses": {
+        "A": 43,
+        "B": 10,
+        "both": 31
+      },
+      "right_censored_at400": false,
+      "row": "table_column"
+    },
+    {
+      "arm": "L",
+      "asked": [
+        {
+          "auroc": 0.9104308390022676,
+          "ci95": [
+            0.6205357142857143,
+            1.0
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 0,
+      "free_correct_statement_rate_ci95": null,
+      "free_naming_rate_ci95": null,
+      "free_sentiment_note": "E24 frozen regex has no sentiment detector; retained raw and reported not evaluable",
+      "free_statement_statuses": {
+        "not_structure": 84
+      },
+      "right_censored_at400": false,
+      "row": "prose_sentiment"
+    },
+    {
+      "arm": "B",
+      "asked": [
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 0,
+      "free_correct_statement_rate_ci95": null,
+      "free_naming_rate_ci95": null,
+      "free_sentiment_note": "E24 frozen regex has no sentiment detector; retained raw and reported not evaluable",
+      "free_statement_statuses": {
+        "not_structure": 84
+      },
+      "right_censored_at400": false,
+      "row": "prose_sentiment"
+    },
+    {
+      "arm": "S",
+      "asked": [
+        {
+          "auroc": 0.9104308390022676,
+          "ci95": [
+            0.6205357142857143,
+            1.0
+          ],
+          "step": 0
+        },
+        {
+          "auroc": 0.5935374149659864,
+          "ci95": [
+            0.3577097505668934,
+            0.8441043083900227
+          ],
+          "step": 25
+        },
+        {
+          "auroc": 0.9795918367346939,
+          "ci95": [
+            0.937641723356009,
+            1.0
+          ],
+          "step": 50
+        },
+        {
+          "auroc": 0.7647392290249433,
+          "ci95": [
+            0.6411281179138322,
+            0.9501700680272106
+          ],
+          "step": 100
+        },
+        {
+          "auroc": 0.9098639455782312,
+          "ci95": [
+            0.811734693877551,
+            1.0
+          ],
+          "step": 200
+        },
+        {
+          "auroc": 0.786281179138322,
+          "ci95": [
+            0.6274801587301587,
+            0.958744331065759
+          ],
+          "step": 400
+        }
+      ],
+      "fast": true,
+      "first_step_ge_080": 0,
+      "free_correct_statement_rate_ci95": null,
+      "free_naming_rate_ci95": null,
+      "free_sentiment_note": "E24 frozen regex has no sentiment detector; retained raw and reported not evaluable",
+      "free_statement_statuses": {
+        "not_structure": 84
+      },
+      "right_censored_at400": false,
+      "row": "prose_sentiment"
+    }
+  ],
+  "experiment": "E28",
+  "status": "COMPLETE_ANALYSIS",
+  "uninterpretable_rows": [
+    "prose_sentiment"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "analysis": "gate_check",
+  "analysis_plan_sha256": "14952f7e3b29f4f26c003384160996f93f91e2eb5de6d5dce5ced88efcb37a5e",
+  "authority_commit": "886d03b040d28ae037b07a983029891439f02f96",
+  "execution_label": "\u00a7149 RUN-BY-INTEGRATOR",
+  "experiment": "E40",
+  "gate_check": {
+    "all_token_fvu": 0.39940560320259777,
+    "all_token_metrics_descriptive": {
+      "d_model": 5120,
+      "d_sae": 65536,
+      "dead_fraction": 0.3361358642578125,
+      "dead_latents": 22029,
+      "dead_pass": false,
+      "fvu": 0.39940560320259777,
+      "fvu_pass": false,
+      "n_tokens": 50000,
+      "passed": false,
+      "rule_applied": false,
+      "squared_error": 72697233.57224894,
+      "total_variance": 182013554.61549044
+    },
+    "calibration": {
+      "median_raw_norm": 82.87257228675486,
+      "outlier_threshold_raw_norm": 828.7257228675486,
+      "population_tokens": 1000000,
+      "scale": 0.847548075105688
+    },
+    "calibration_sha256": "d3f58d6b515e78954d2ec425751481926f2728a4956da9f65c6a8e5eaca4bc9d",
+    "eligible_for_131_preparation": false,
+    "exclusions": {
+      "norm_above_threshold": 0,
+      "overlap": 0,
+      "position_zero": 236,
+      "union": 236
+    },
+    "filtered_gate": {
+      "d_model": 5120,
+      "d_sae": 65536,
+      "dead_fraction": 0.3375396728515625,
+      "dead_latents": 22121,
+      "dead_pass": false,
+      "fvu": 0.4183901395161846,
+      "fvu_pass": false,
+      "n_tokens": 49764,
+      "passed": false,
+      "squared_error": 72641870.62348174,
+      "total_variance": 173622329.40643126
+    },
+    "gate_result_sha256": "8e89e3410448c2c55f2ee1f6e011f656a631afcb11f464e7e61e703b5bacb59a",
+    "next_action": "No adequate SAE; stop E40, no third scientific attempt",
+    "output_seal_sha256": "fcee483b1001d51eab5b5d55710007c4fbbe7cd9381319ed87547f9f46c3ffb1",
+    "pod_id": "h6ele53hdxnf0l",
+    "sae_checkpoint_sha256": "77163d694dda4efca1d639adf08df76a79e903252b079c2b3c3649b941d41a42",
+    "upstream_status": "FAIL",
+    "verdict": "FAIL",
+    "verified_pull_receipt_sha256": "e1969dd863a44f43cb4f2891be8ee02fd2057c1a2da293e5309741d5670da80b",
+    "verify_pass_executed": false
+  },
+  "judge_or_blind_coder_calls": 0,
+  "labelling_or_decomposition_started": false,
+  "new_gpu_hours": 0,
+  "recomputed_gate_or_training": false,
+  "registered_rule_changes": false,
+  "status": "COMPLETE",
+  "validation_error": null
+}

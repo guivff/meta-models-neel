@@ -1,0 +1,12 @@
+{
+  "id": "797182dd728cd02cdd332da5",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task (positive/negative sentiment), requiring a direct answer.\n\nThe Chinese-to-English example pattern (\"Example sentence: ... Classification: negative\") sets up a parallel structure where the model must apply the same logic to the new sentence about \"a person who is not a doctor.\"\n\n\"Reply:\" is the final prompt label, functioning as a response field marker, immediately constraining the next token to be the classification answer (e.g., \"negative\" or \"Positive\").\n\"Given the following example sentence, determine the sentiment classification label (positive or negative) according to the established definition.\nExample sentence: 'The individual is a person who is not a doctor.'\nClassification: negative\nQuestion: [sentence]\nReply:\" \u2014 the final token demands the direct answer output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task (positive/negative sentiment), requiring a direct answer.\n\nThe Chinese-to-English example pattern (\"Example sentence: ... Classification: negative\") sets up a parallel structure where the model must apply the same logic to the new sentence about \"a person who is not a doctor.\"\n\n\"Reply:\" is the final prompt label, functioning as a response field marker, immediately constraining the next token to be the classification answer (e.g., \"negative\" or \"Positive\").\n\"Given the following example sentence, determine the sentiment classification label (positive or negative) according to the established definition.\nExample sentence: 'The individual is a person who is not a doctor.'\nClassification: negative\nQuestion: [sentence]\nReply:\" \u2014 the final token demands the direct answer output.",
+  "truncated": false
+}

@@ -1,0 +1,82 @@
+{
+  "as_of_utc": "2026-10-29T00:07:02.537841+00:00",
+  "policy": "dfe326565b / GPU2500Oct28\u201330, judge500unchanged",
+  "Q_closed_GPU_usd": 321.17,
+  "Q_unique_closed_pods": 65,
+  "Q_corrections_usd": -3.62,
+  "Q_nonGPU_extra_admission_upper_usd": 130,
+  "Q_closed_ledger_sha256": "6e3f4122e492c4b78d5175fe1a1786bc719317d0faaebf9e1e7a6f6d5bae7dc3",
+  "Q_operator_log_sha256": "149a1c8cadfcd7e4f5334127c9a62b4e12751129976b97c9cab5005bbef9d548",
+  "I2_closed_window_all_in_upper_usd": 244.12,
+  "I3_closed_reserved_usd": 0,
+  "I3_status_sha256": "a5f08a27b371ee1065f64423c3aacbcadeef66e1d3765157d9ee76bac16697f8",
+  "I4_gate_closed_GPU_usd": 0.5688398629400465,
+  "I4_gate_extra_upper_usd": 2,
+  "I4_known_closed_GPU_upper_usd": 48.89066570244365,
+  "I4_admission_upper_retained_usd": 160.55,
+  "I4_unknown_extras_storage_treatment": "retain the older160.55 all-in programme upper in place of known48.017GPU; difference is conservative contingency, not invoice or new booking; missing extras never treated aszero",
+  "I5_closed_all_in_upper_usd": 23.02,
+  "I5_status_sha256": "a26349580f726bc772390aecdf801d0d5680c700a892eb5e1ab8ab4ffffb4fb9",
+  "active_caps": [
+    {
+      "owner": "I-2",
+      "run_id": "e82-full-read-restart-i2-20261028-a1",
+      "cap_seconds": 9809,
+      "upper": 16.42,
+      "provider_created_epoch": 1793226408.973
+    },
+    {
+      "owner": "I-4",
+      "run_id": "e96-i4-slot1-second-final-20261029",
+      "cap_seconds": 14400,
+      "upper": 23.16,
+      "provider_created_epoch": 1793230874.069,
+      "pool_id": "section211_amendment1_parked",
+      "state_sha256": "630bbdd0df34d9e0f7d7965a3c520656088a963b7caf47566b52dad30e58430f",
+      "status_sha256": "b91b94828021dede8b356619d5b77037bb50cd3c2fe120c80bd62668b520c0da"
+    }
+  ],
+  "active_all_in_upper_usd": 39.58,
+  "uncertain_held_caps": [],
+  "uncertain_held_upper_usd": 0,
+  "account_running": 2,
+  "account_hourly_usd": 10.58,
+  "nonrunning_account_pods": 316,
+  "conservative_closed_admission_upper_usd": 878.8599999999999,
+  "proposed_shards": [],
+  "proposed_all_three_upper_usd": 0,
+  "projection_with_all_three_usd": 944.05,
+  "not_an_invoice_or_new_booking": true,
+  "live_accrual_not_added_again": true,
+  "uncommitted_future_jobs_not_active_reservations": true,
+  "judge_new_liability_usd": 0,
+  "judge_global_ceiling_usd": 500,
+  "judge_admission": false,
+  "parked_pool_ceiling_usd": 900,
+  "parked_pool_confirmed_live_or_uncertain_held_caps_usd": 23.16,
+  "parked_pool_confirmed_booked_lower_bound_usd": 2.873383023533556,
+  "parked_pool_booked_evidence": [
+    {
+      "owner": "I-4",
+      "pod_id": "3u0pebmt3wh18g",
+      "booked_all_in_upper_usd": 2.873383023533556,
+      "receipt_sha256": "0692499d43b3bbd89561b11b360604fb8660065e9d73e94870ddef9d474dae5c"
+    }
+  ],
+  "parked_pool_unreported_usage": "UNKNOWN; current integrator reconciliation required, zero evidenced allocations is not proof of zero unreported usage",
+  "parked_pool_remaining_budget_upper_bound_usd": 873.9666169764665,
+  "parked_pool_actual_available_not_claimed": true,
+  "parked_pool_ledger_sha256": "cdfa6c5af970ad2a92499a9fedbf5596f8afae639400c8d1a50af058b2c7afd7",
+  "projection_with_unallocated_pool_upper_usd": 1818.02,
+  "pool_projection_basis": "Full900 counted once relative to confirmed pool-funded booked/live amounts already in all-track base; unknown unreported usage remains unknown, so remaining is an upper bound, NOT verified spendable pool balance. No new pool allocation authorized by this audit alone.",
+  "GPU_warning2000_including_pool": false,
+  "projection_before_storage_upper_usd": 918.44,
+  "stopped_persistent_volume_GB": 320.0,
+  "network_volume_total_GB": 1250.0,
+  "whole_account_persistent_storage_3day_upper_usd": 25.61,
+  "storage_upper_basis": "All current stopped volume disks at0.20USD/GB/month plus all network volumes at higher0.14USD/GB/month for full3days/28-day divisor. Container disk uncharged stopped per official docs. Conservative admission contingency, not invoice/booked cost.",
+  "storage_pricing_sources": [
+    "https://www.runpod.io/pricing",
+    "https://github.com/runpod/docs/blob/main/accounts-billing/billing.mdx"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "8ee2b0cb325bb4c94127d449",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" as the answer.\n\nThe example pattern (\"Example sentence: ... / Reply:\") signals the model must now produce the actual classification response for \"I am feeling very happy today.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker, immediately requiring the answer \"Positive\" or \"Negative\" (or a short phrase) to follow.\n\"Given the following structured format:\n- Example sentence: 'I am feeling very happy today.'\n- Task: Determine the sentiment label...\n- Example sentence: 'I am feeling very happy today.'\nReply:\" \u2014 the final \"Reply:\" is a response field prompt, expecting the direct answer (e.g., \"Positive\") as the next token.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" as the answer.\n\nThe example pattern (\"Example sentence: ... / Reply:\") signals the model must now produce the actual classification response for \"I am feeling very happy today.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker, immediately requiring the answer \"Positive\" or \"Negative\" (or a short phrase) to follow.\n\"Given the following structured format:\n- Example sentence: 'I am feeling very happy today.'\n- Task: Determine the sentiment label...\n- Example sentence: 'I am feeling very happy today.'\nReply:\" \u2014 the final \"Reply:\" is a response field prompt, expecting the direct answer (e.g., \"Positive\") as the next token.",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "bb5bd44f99090c45da1a5c76",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentence sentiment as \"Positive\" or \"Negative\" only, with examples given.\n\nThe pattern \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the classification answer for the specific sentence \"I am a student.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in a structured Q&A format, immediately requiring the classification output (e.g., \"Positive\" or \"Negative\") as the next token.\n\"Follow the instructions strictly.\nExample sentence: 'I am a student.'\nClassification: [Positive or Negative]\nGiven sentence: 'I am a student.'\nReply:\" \u2014 the final \"Reply:\" is a prompt field expecting the direct answer, likely a short single-word classification matching the established format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentence sentiment as \"Positive\" or \"Negative\" only, with examples given.\n\nThe pattern \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the classification answer for the specific sentence \"I am a student.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in a structured Q&A format, immediately requiring the classification output (e.g., \"Positive\" or \"Negative\") as the next token.\n\"Follow the instructions strictly.\nExample sentence: 'I am a student.'\nClassification: [Positive or Negative]\nGiven sentence: 'I am a student.'\nReply:\" \u2014 the final \"Reply:\" is a prompt field expecting the direct answer, likely a short single-word classification matching the established format.",
+  "truncated": false
+}

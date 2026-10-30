@@ -1,0 +1,12 @@
+{
+  "id": "0ddb47fac34c8612bee4a9b4",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentences as \"Positive\" or \"Negative\" based on defined criteria.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals a demonstration of the classification task, with the model expected to produce the correct label for the given example sentence about \"displeased.\"\n\n\"Example sentence: I am pleased with the weather.\\nSentence to classify: I am displeased with the weather.\\nReply:\" \u2014 this final \"Reply:\" is a prompt label requiring the model's classification answer (e.g., \"Negative\") to follow immediately.\nThe structured format mirrors the earlier instruction block, so the next token should be the actual reply/answer for the example.\n\"Given the following input:\\n[Input]... [Input]...\\nReply:\" \u2014 the final \"Reply:\" expects the model's response to the example.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentences as \"Positive\" or \"Negative\" based on defined criteria.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals a demonstration of the classification task, with the model expected to produce the correct label for the given example sentence about \"displeased.\"\n\n\"Example sentence: I am pleased with the weather.\\nSentence to classify: I am displeased with the weather.\\nReply:\" \u2014 this final \"Reply:\" is a prompt label requiring the model's classification answer (e.g., \"Negative\") to follow immediately.\nThe structured format mirrors the earlier instruction block, so the next token should be the actual reply/answer for the example.\n\"Given the following input:\\n[Input]... [Input]...\\nReply:\" \u2014 the final \"Reply:\" expects the model's response to the example.",
+  "truncated": false
+}

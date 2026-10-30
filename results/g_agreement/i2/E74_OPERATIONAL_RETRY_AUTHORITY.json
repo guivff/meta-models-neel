@@ -1,0 +1,28 @@
+{
+  "schema": "i2-e74-pre-ssh-operational-retry-authority-v1",
+  "recorded_at": "2026-10-28T05:26:48.126618+00:00",
+  "issuer": "Guiv",
+  "direct_instruction": "E74\u2019s H200 attempt timed out before SSH, so nothing ran. That\u2019s an operational failure, not a scientific one: the no-retry rule applies from engine boot onward, not to pods that never come up. Retry right away on a different node or region (Secure 8\u00d7H200, or B200 if one appears), under the same package and cap. Book the failed pod separately. If two more attempts fail before SSH, tell me. Deadline for a working pod: Thu 12:00.",
+  "pre_SSH_operational_retries_authorised": true,
+  "scientific_no_retry_starts_at": "ENGINE_BOOT",
+  "different_node_or_region_required": true,
+  "preferred_retry_hardware": [
+    "Secure8H200",
+    "B200_when_available"
+  ],
+  "package_basis": "e0fc50bdd6de277f7f053a79f1fc07d1df79ce4a",
+  "H200_attempt_cap_usd": 160,
+  "TP4_attempt_cap_usd": 300,
+  "failed_pod_booked_separately": true,
+  "I2_interpretation": "Failed H200a1 operational charge12.59 is accounted separately from the next attempt cap but remains in dated daily/I2 liabilities. Original B2007.08 cap coverage retained. This is an explicit interpretation of bookseparately, not a quotation expanding the daily ceiling.",
+  "failure_receipt": "results/g_agreement/i2/E74_H200_SETUP_TIMEOUT_A1_CLOSEOUT.json",
+  "failure_receipt_sha256": "66034e368cfdb369deba7856d825ba142421a844722095679d1f0618694c512a",
+  "failed_attempt_operational_ceiling_usd": 12.59,
+  "additional_pre_SSH_failures_notification_threshold": 2,
+  "additional_pre_SSH_failures_since_this_instruction": 0,
+  "working_pod_deadline_local": "2026-10-29T12:00:00+01:00",
+  "E74_specific_deadline_supersedes_Wed_new_launch_freeze": true,
+  "per_attempt_original_setup_and_whole_run_clocks_unchanged": true,
+  "dated_daily_budget_authority_unchanged": "Fresh date-specific reconciliation required; no inferred carryover of Oct28USD500 toOct29.",
+  "scientific_settings_unchanged": true
+}

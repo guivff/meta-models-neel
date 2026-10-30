@@ -1,0 +1,1344 @@
+{
+  "authority": "\u00a7220 launch note; corrected E87 \u00a7221 trigger; direct Guiv release",
+  "authority_commit": "aa8438c7106f625831a4c7febe049ae635b6c89d",
+  "ceiling_seconds": 169200,
+  "change": "Only public STAGE_REQUEST.status HOLD_I3_GLOBAL_ADMISSION -> READY; regenerated input seals and archive hashes",
+  "corrected_analysis_seal_sha256": "59078bb2aaf90b8527c4fe8cf75d0f9b9205e809d7d7bc7e2c10b55b15f0ad53",
+  "corrected_depth_seal_sha256": "4f79033cb3267a043582fbda7583348d83dc50dc1ac3e4292cb69197ecd2be94",
+  "corrected_gate_decision_sha256": "1f3ad42c244165f8f3255eb75dd0104649bb41213c4ee0edd4b4271980f81eea",
+  "experiment": "E95",
+  "full_launch_allowed": true,
+  "hardware": "H200; pinned timing hardware/image/stack/assets unchanged; same hardware within row including E87 reuse",
+  "historical_binder_gate_pin": "Immutable runtime ceiling compatibility field only; superseded as launch basis by corrected gate and aa8438c71. No source, native settings, rows, forecast, or cap changes.",
+  "index_sha256": "81059340e42b82da92d0e56447c349aa7c7fb1c5fef2c549ac593cf9540a508a",
+  "inventory_sha256": "2916e28303386ee1ca7715fe0719d34277faca3ee5a33f5ec43bd70c1176518f",
+  "judging_cap_usd": 60,
+  "launch_cutoff": "2026-10-29T23:00:00Z",
+  "ledger": "shared USD900 parked pool; global GPU2500 warning2000",
+  "new_gpu_calls_by_I3": 0,
+  "operator": "Claude Integrator / Track Q sole allocator; fresh actual quote/global-pool/owned-ID guards and original creation clocks before each shard",
+  "original_hold_delivery_seal_sha256": "a9ba24fd42e147c8e9859730ce707313bf391fa55fbf6a1b55ce54173c1e5fd2",
+  "pods_maximum": 8,
+  "preemption": "CORE preempts; bumped whole row NOT RUN, never stitched",
+  "prior_custody_seconds": 3329.4,
+  "prior_gpu_usd_already_booked_by_Q": 4.89,
+  "production_admitted": true,
+  "production_cap_seconds": 161485,
+  "projected_total_custody_seconds": 164814.4,
+  "projected_total_gpu_hours": 45.781777777777776,
+  "released_utc": "2026-10-29T06:31:01.507701+00:00",
+  "remaining_headroom_seconds": 4385.6,
+  "shards": [
+    {
+      "cap_seconds": 5936,
+      "input_archive": "/private/tmp/e95-ready-aa8438c71/e95-representative-3-0/inputs.tar.gz",
+      "input_archive_sha256": "3c954f124fbdc107979f2d2a2c980718f44d4dda889b4b5ac2fc2b7742a2d913",
+      "input_seal_sha256": "0d950cc43c727b7b4e304a556f227954a0ac8584e33a8cce764b14ef2a2b9fe7",
+      "mode": "nla_placebo_only",
+      "original_hold_input_seal_sha256": "d45ed8b912ac2270403b24e43b01c59884d3a16e4884664509f33a23e2603e70",
+      "row_indices": [
+        3,
+        5,
+        7,
+        12,
+        13,
+        14,
+        15,
+        38,
+        41,
+        43
+      ],
+      "shard": "e95-representative-3-0",
+      "status": "READY",
+      "timing95": {
+        "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+        "cap_seconds": 5936,
+        "ceiling_binding": {
+          "authority": "\u00a7220 / 9c56f1a5",
+          "ceiling_seconds": 169200,
+          "deviation": 2,
+          "gate_decision_sha256": "3161726c3a3149decc4612e39c00d3b0cefc67104433612f93d662b68f92c5c8",
+          "gate_seal_sha256": "40755189c07ed814972574bd1454a046b0f55fd12731902696e403927e18f7df",
+          "gate_status": "REOPEN_E95_DEVIATION_2",
+          "step3_roster_sha256": "affa8fbcf37cc62ceadeaa0751312f24579ac1c884d2e757fc2256e457884703"
+        },
+        "ceiling_seconds": 169200,
+        "forecast": {
+          "cap_formula": "max_measured_setup + 1.25*measured_work + retrieval",
+          "cap_seconds": 5936,
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_phase_cost_seconds": {
+            "capture": 0,
+            "fixed": 1076.266553680529,
+            "native": 3735.1471797237173,
+            "placebo_build": 151.96190693462268
+          },
+          "missing_native_phases": {},
+          "retrieval_seconds": 60,
+          "workload": {
+            "nla:placebo:42:8": 150
+          }
+        },
+        "gpu_type": "H200",
+        "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+        "index_sha256": "81059340e42b82da92d0e56447c349aa7c7fb1c5fef2c549ac593cf9540a508a",
+        "inventory_sha256": "2916e28303386ee1ca7715fe0719d34277faca3ee5a33f5ec43bd70c1176518f",
+        "items_sha256": "956e554bd85d7985d62ce0b492eac67bf127ce2403d06bacfe7c7afbce882cfa",
+        "measured_decision_sha256": "cb594547cef05b094b97485578e616a4c8a027aa9983015f9e1aa7020b407581",
+        "method": "REPRESENTATIVE_PHASE_WIDTH_V2_SECTION217",
+        "plan_sha256": "747183cd6ab5f3582ead0bafa4295e0bcb5e4917ebd42f6887f22641ebba44b4",
+        "prior_custody_seconds": 3329.4,
+        "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+        "programme_projected_custody_seconds": 164814.4,
+        "rate_book": {
+          "evidence": [
+            {
+              "output_seal_sha256": "35260c59b9b67394b50df838111f781021ed3cf61fd1d0a974b1e7a1ed84e1c7",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row0/out/MEASURED_PROFILE.json",
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "row_indices": [
+                0
+              ]
+            },
+            {
+              "output_seal_sha256": "5c7b5cbb6b27f00b0dfc8b9a5b39dd3a6a508fc536ce82ecf05d74a3158b6620",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row19/out/MEASURED_PROFILE.json",
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "row_indices": [
+                19
+              ]
+            }
+          ],
+          "hardware": {
+            "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+            "gpu_type": "H200",
+            "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+            "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+          },
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_capture_prompt_tokens": {
+            "items": 60,
+            "max": 15,
+            "min": 5
+          },
+          "native": {
+            "nla:placebo:42:5": 22.850899990135805,
+            "nla:placebo:42:8": 24.900981198158114,
+            "nla:real:42:5": 18.362507416983135,
+            "nla:real:42:8": 20.111323526711203,
+            "oracle:placebo:20:5": 10.45599237899296,
+            "oracle:placebo:20:8": 11.142688333677748,
+            "oracle:placebo:36:5": 10.341029525346434,
+            "oracle:placebo:36:8": 10.744731565355323,
+            "oracle:placebo:44:5": 9.954021173296496,
+            "oracle:placebo:44:8": 10.402619519309761,
+            "oracle:placebo:56:5": 10.991676608993052,
+            "oracle:placebo:56:8": 10.838333160655262,
+            "oracle:real:20:5": 8.849915182644812,
+            "oracle:real:20:8": 9.772865916679924,
+            "oracle:real:36:5": 9.829278095664145,
+            "oracle:real:36:8": 9.933244172328463,
+            "oracle:real:44:5": 9.390546038669223,
+            "oracle:real:44:8": 10.774721014662646,
+            "oracle:real:56:5": 9.848972222302109,
+            "oracle:real:56:8": 10.113331300672144
+          },
+          "other": {
+            "capture": 0.510263493983075,
+            "capture_warmup_discarded": 32.11170526803471,
+            "measured_other": 0.55843099381309,
+            "nla_42_warmup_discarded": 54.02270195807796,
+            "nla_setup": 382.79238488699775,
+            "oracle_20_warmup_discarded": 12.862477253889665,
+            "oracle_36_warmup_discarded": 10.653435293002985,
+            "oracle_44_warmup_discarded": 9.980659743072465,
+            "oracle_56_warmup_discarded": 10.93857337301597,
+            "oracle_setup": 376.8848376660608,
+            "placebo_build": 3.4536797030596063,
+            "staging": 211.0865969657898
+          },
+          "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+          "setup_profiles": [
+            {
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "seconds": 885.5622385585448
+            },
+            {
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "seconds": 1016.2665536805289
+            }
+          ]
+        },
+        "reduction_step": 3,
+        "row_indices": [
+          3,
+          5,
+          7,
+          12,
+          13,
+          14,
+          15,
+          38,
+          41,
+          43
+        ],
+        "scope_seal_sha256": "1e3715fc1aaa5875f0d58cabd5916ac3e0bdd57b147122a2fdc402abaf8003c3",
+        "source_seal_sha256": "c136d4f639014470cff429133e019456724dc04e9d320dde2fc8ae5850e3ef91",
+        "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+      }
+    },
+    {
+      "cap_seconds": 22596,
+      "input_archive": "/private/tmp/e95-ready-aa8438c71/e95-representative-3-1/inputs.tar.gz",
+      "input_archive_sha256": "7bc29068dabb215c5fdf146885a10c26a4d02322b7491cd32ff0847042d9cd04",
+      "input_seal_sha256": "4a06ad6f646ae538edbeee0e0c31df96d892fe4ecb95f30c0f1ab63c2eb1ab53",
+      "mode": "remaining",
+      "original_hold_input_seal_sha256": "bbac355cf72b76fa561f12a34dab4192e30959ab3b0f8e640326ea31bcb63cc8",
+      "row_indices": [
+        2,
+        9,
+        25,
+        32,
+        40,
+        54,
+        58,
+        64,
+        79
+      ],
+      "shard": "e95-representative-3-1",
+      "status": "READY",
+      "timing95": {
+        "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+        "cap_seconds": 22596,
+        "ceiling_binding": {
+          "authority": "\u00a7220 / 9c56f1a5",
+          "ceiling_seconds": 169200,
+          "deviation": 2,
+          "gate_decision_sha256": "3161726c3a3149decc4612e39c00d3b0cefc67104433612f93d662b68f92c5c8",
+          "gate_seal_sha256": "40755189c07ed814972574bd1454a046b0f55fd12731902696e403927e18f7df",
+          "gate_status": "REOPEN_E95_DEVIATION_2",
+          "step3_roster_sha256": "affa8fbcf37cc62ceadeaa0751312f24579ac1c884d2e757fc2256e457884703"
+        },
+        "ceiling_seconds": 169200,
+        "forecast": {
+          "cap_formula": "max_measured_setup + 1.25*measured_work + retrieval",
+          "cap_seconds": 22596,
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_phase_cost_seconds": {
+            "capture": 91.8474289169535,
+            "fixed": 1076.266553680529,
+            "native": 16847.571437456994,
+            "placebo_build": 276.2943762447685
+          },
+          "missing_native_phases": {},
+          "retrieval_seconds": 60,
+          "workload": {
+            "nla:placebo:42:8": 135,
+            "nla:real:42:8": 180,
+            "oracle:placebo:36:8": 135,
+            "oracle:placebo:44:8": 135,
+            "oracle:placebo:56:8": 135,
+            "oracle:real:36:8": 180,
+            "oracle:real:44:8": 180,
+            "oracle:real:56:8": 180
+          }
+        },
+        "gpu_type": "H200",
+        "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+        "index_sha256": "81059340e42b82da92d0e56447c349aa7c7fb1c5fef2c549ac593cf9540a508a",
+        "inventory_sha256": "2916e28303386ee1ca7715fe0719d34277faca3ee5a33f5ec43bd70c1176518f",
+        "items_sha256": "a66e9998eb57b871a40302a7a4cc855ed8c09635f35672a5832d9d49e406f5be",
+        "measured_decision_sha256": "cb594547cef05b094b97485578e616a4c8a027aa9983015f9e1aa7020b407581",
+        "method": "REPRESENTATIVE_PHASE_WIDTH_V2_SECTION217",
+        "plan_sha256": "a24ef56c2a26b0e2113f8a60b1c861c5a6707b9e1ae922468bab02bded9048a7",
+        "prior_custody_seconds": 3329.4,
+        "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+        "programme_projected_custody_seconds": 164814.4,
+        "rate_book": {
+          "evidence": [
+            {
+              "output_seal_sha256": "35260c59b9b67394b50df838111f781021ed3cf61fd1d0a974b1e7a1ed84e1c7",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row0/out/MEASURED_PROFILE.json",
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "row_indices": [
+                0
+              ]
+            },
+            {
+              "output_seal_sha256": "5c7b5cbb6b27f00b0dfc8b9a5b39dd3a6a508fc536ce82ecf05d74a3158b6620",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row19/out/MEASURED_PROFILE.json",
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "row_indices": [
+                19
+              ]
+            }
+          ],
+          "hardware": {
+            "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+            "gpu_type": "H200",
+            "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+            "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+          },
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_capture_prompt_tokens": {
+            "items": 60,
+            "max": 15,
+            "min": 5
+          },
+          "native": {
+            "nla:placebo:42:5": 22.850899990135805,
+            "nla:placebo:42:8": 24.900981198158114,
+            "nla:real:42:5": 18.362507416983135,
+            "nla:real:42:8": 20.111323526711203,
+            "oracle:placebo:20:5": 10.45599237899296,
+            "oracle:placebo:20:8": 11.142688333677748,
+            "oracle:placebo:36:5": 10.341029525346434,
+            "oracle:placebo:36:8": 10.744731565355323,
+            "oracle:placebo:44:5": 9.954021173296496,
+            "oracle:placebo:44:8": 10.402619519309761,
+            "oracle:placebo:56:5": 10.991676608993052,
+            "oracle:placebo:56:8": 10.838333160655262,
+            "oracle:real:20:5": 8.849915182644812,
+            "oracle:real:20:8": 9.772865916679924,
+            "oracle:real:36:5": 9.829278095664145,
+            "oracle:real:36:8": 9.933244172328463,
+            "oracle:real:44:5": 9.390546038669223,
+            "oracle:real:44:8": 10.774721014662646,
+            "oracle:real:56:5": 9.848972222302109,
+            "oracle:real:56:8": 10.113331300672144
+          },
+          "other": {
+            "capture": 0.510263493983075,
+            "capture_warmup_discarded": 32.11170526803471,
+            "measured_other": 0.55843099381309,
+            "nla_42_warmup_discarded": 54.02270195807796,
+            "nla_setup": 382.79238488699775,
+            "oracle_20_warmup_discarded": 12.862477253889665,
+            "oracle_36_warmup_discarded": 10.653435293002985,
+            "oracle_44_warmup_discarded": 9.980659743072465,
+            "oracle_56_warmup_discarded": 10.93857337301597,
+            "oracle_setup": 376.8848376660608,
+            "placebo_build": 3.4536797030596063,
+            "staging": 211.0865969657898
+          },
+          "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+          "setup_profiles": [
+            {
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "seconds": 885.5622385585448
+            },
+            {
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "seconds": 1016.2665536805289
+            }
+          ]
+        },
+        "reduction_step": 3,
+        "row_indices": [
+          2,
+          9,
+          25,
+          32,
+          40,
+          54,
+          58,
+          64,
+          79
+        ],
+        "scope_seal_sha256": "1e3715fc1aaa5875f0d58cabd5916ac3e0bdd57b147122a2fdc402abaf8003c3",
+        "source_seal_sha256": "c136d4f639014470cff429133e019456724dc04e9d320dde2fc8ae5850e3ef91",
+        "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+      }
+    },
+    {
+      "cap_seconds": 22592,
+      "input_archive": "/private/tmp/e95-ready-aa8438c71/e95-representative-3-2/inputs.tar.gz",
+      "input_archive_sha256": "5283847e2735d202f5aed61b2a9352473c95e16277ff186aa78ce150f277cb64",
+      "input_seal_sha256": "b128dd52a18fda9eedbdd13f0f1b9369355febbebf2bb74ede80727133193e97",
+      "mode": "remaining",
+      "original_hold_input_seal_sha256": "6d4c1060cb8771d81d91e24db7998ab0146e35a7652629395231f3f5451b3e5f",
+      "row_indices": [
+        6,
+        8,
+        26,
+        34,
+        36,
+        56,
+        57,
+        65,
+        78
+      ],
+      "shard": "e95-representative-3-2",
+      "status": "READY",
+      "timing95": {
+        "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+        "cap_seconds": 22592,
+        "ceiling_binding": {
+          "authority": "\u00a7220 / 9c56f1a5",
+          "ceiling_seconds": 169200,
+          "deviation": 2,
+          "gate_decision_sha256": "3161726c3a3149decc4612e39c00d3b0cefc67104433612f93d662b68f92c5c8",
+          "gate_seal_sha256": "40755189c07ed814972574bd1454a046b0f55fd12731902696e403927e18f7df",
+          "gate_status": "REOPEN_E95_DEVIATION_2",
+          "step3_roster_sha256": "affa8fbcf37cc62ceadeaa0751312f24579ac1c884d2e757fc2256e457884703"
+        },
+        "ceiling_seconds": 169200,
+        "forecast": {
+          "cap_formula": "max_measured_setup + 1.25*measured_work + retrieval",
+          "cap_seconds": 22592,
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_phase_cost_seconds": {
+            "capture": 91.8474289169535,
+            "fixed": 1076.266553680529,
+            "native": 16847.571437456994,
+            "placebo_build": 272.8406965417089
+          },
+          "missing_native_phases": {},
+          "retrieval_seconds": 60,
+          "workload": {
+            "nla:placebo:42:8": 135,
+            "nla:real:42:8": 180,
+            "oracle:placebo:36:8": 135,
+            "oracle:placebo:44:8": 135,
+            "oracle:placebo:56:8": 135,
+            "oracle:real:36:8": 180,
+            "oracle:real:44:8": 180,
+            "oracle:real:56:8": 180
+          }
+        },
+        "gpu_type": "H200",
+        "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+        "index_sha256": "81059340e42b82da92d0e56447c349aa7c7fb1c5fef2c549ac593cf9540a508a",
+        "inventory_sha256": "2916e28303386ee1ca7715fe0719d34277faca3ee5a33f5ec43bd70c1176518f",
+        "items_sha256": "4bc86ce1978305a0d58bfc92e93f3290e09e713d6723a081d574b76e0146fb6c",
+        "measured_decision_sha256": "cb594547cef05b094b97485578e616a4c8a027aa9983015f9e1aa7020b407581",
+        "method": "REPRESENTATIVE_PHASE_WIDTH_V2_SECTION217",
+        "plan_sha256": "f7ab99d4186a152786528b4d41f4a10b499fcedbc7ee05ec7aeb6ffe84b05115",
+        "prior_custody_seconds": 3329.4,
+        "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+        "programme_projected_custody_seconds": 164814.4,
+        "rate_book": {
+          "evidence": [
+            {
+              "output_seal_sha256": "35260c59b9b67394b50df838111f781021ed3cf61fd1d0a974b1e7a1ed84e1c7",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row0/out/MEASURED_PROFILE.json",
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "row_indices": [
+                0
+              ]
+            },
+            {
+              "output_seal_sha256": "5c7b5cbb6b27f00b0dfc8b9a5b39dd3a6a508fc536ce82ecf05d74a3158b6620",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row19/out/MEASURED_PROFILE.json",
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "row_indices": [
+                19
+              ]
+            }
+          ],
+          "hardware": {
+            "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+            "gpu_type": "H200",
+            "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+            "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+          },
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_capture_prompt_tokens": {
+            "items": 60,
+            "max": 15,
+            "min": 5
+          },
+          "native": {
+            "nla:placebo:42:5": 22.850899990135805,
+            "nla:placebo:42:8": 24.900981198158114,
+            "nla:real:42:5": 18.362507416983135,
+            "nla:real:42:8": 20.111323526711203,
+            "oracle:placebo:20:5": 10.45599237899296,
+            "oracle:placebo:20:8": 11.142688333677748,
+            "oracle:placebo:36:5": 10.341029525346434,
+            "oracle:placebo:36:8": 10.744731565355323,
+            "oracle:placebo:44:5": 9.954021173296496,
+            "oracle:placebo:44:8": 10.402619519309761,
+            "oracle:placebo:56:5": 10.991676608993052,
+            "oracle:placebo:56:8": 10.838333160655262,
+            "oracle:real:20:5": 8.849915182644812,
+            "oracle:real:20:8": 9.772865916679924,
+            "oracle:real:36:5": 9.829278095664145,
+            "oracle:real:36:8": 9.933244172328463,
+            "oracle:real:44:5": 9.390546038669223,
+            "oracle:real:44:8": 10.774721014662646,
+            "oracle:real:56:5": 9.848972222302109,
+            "oracle:real:56:8": 10.113331300672144
+          },
+          "other": {
+            "capture": 0.510263493983075,
+            "capture_warmup_discarded": 32.11170526803471,
+            "measured_other": 0.55843099381309,
+            "nla_42_warmup_discarded": 54.02270195807796,
+            "nla_setup": 382.79238488699775,
+            "oracle_20_warmup_discarded": 12.862477253889665,
+            "oracle_36_warmup_discarded": 10.653435293002985,
+            "oracle_44_warmup_discarded": 9.980659743072465,
+            "oracle_56_warmup_discarded": 10.93857337301597,
+            "oracle_setup": 376.8848376660608,
+            "placebo_build": 3.4536797030596063,
+            "staging": 211.0865969657898
+          },
+          "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+          "setup_profiles": [
+            {
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "seconds": 885.5622385585448
+            },
+            {
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "seconds": 1016.2665536805289
+            }
+          ]
+        },
+        "reduction_step": 3,
+        "row_indices": [
+          6,
+          8,
+          26,
+          34,
+          36,
+          56,
+          57,
+          65,
+          78
+        ],
+        "scope_seal_sha256": "1e3715fc1aaa5875f0d58cabd5916ac3e0bdd57b147122a2fdc402abaf8003c3",
+        "source_seal_sha256": "c136d4f639014470cff429133e019456724dc04e9d320dde2fc8ae5850e3ef91",
+        "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+      }
+    },
+    {
+      "cap_seconds": 20226,
+      "input_archive": "/private/tmp/e95-ready-aa8438c71/e95-representative-3-3/inputs.tar.gz",
+      "input_archive_sha256": "89cba38ced6c95495c32a3e99649170204ab40a9c73ea5aa2241b6762addb6c8",
+      "input_seal_sha256": "fa6bc90c197072f773bde4d8935daf683c53d6b4bcf8f83239b8ea6613dbcb4d",
+      "mode": "remaining",
+      "original_hold_input_seal_sha256": "b36fab4e28aeded102596d916105f4faf9e00d281fabc6bceb3f4f5c8b3ea0aa",
+      "row_indices": [
+        18,
+        20,
+        30,
+        44,
+        53,
+        60,
+        66,
+        75
+      ],
+      "shard": "e95-representative-3-3",
+      "status": "READY",
+      "timing95": {
+        "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+        "cap_seconds": 20226,
+        "ceiling_binding": {
+          "authority": "\u00a7220 / 9c56f1a5",
+          "ceiling_seconds": 169200,
+          "deviation": 2,
+          "gate_decision_sha256": "3161726c3a3149decc4612e39c00d3b0cefc67104433612f93d662b68f92c5c8",
+          "gate_seal_sha256": "40755189c07ed814972574bd1454a046b0f55fd12731902696e403927e18f7df",
+          "gate_status": "REOPEN_E95_DEVIATION_2",
+          "step3_roster_sha256": "affa8fbcf37cc62ceadeaa0751312f24579ac1c884d2e757fc2256e457884703"
+        },
+        "ceiling_seconds": 169200,
+        "forecast": {
+          "cap_formula": "max_measured_setup + 1.25*measured_work + retrieval",
+          "cap_seconds": 20226,
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_phase_cost_seconds": {
+            "capture": 81.642159037292,
+            "fixed": 1076.266553680529,
+            "native": 14975.619055517329,
+            "placebo_build": 262.4796574325301
+          },
+          "missing_native_phases": {},
+          "retrieval_seconds": 60,
+          "workload": {
+            "nla:placebo:42:8": 120,
+            "nla:real:42:8": 160,
+            "oracle:placebo:36:8": 120,
+            "oracle:placebo:44:8": 120,
+            "oracle:placebo:56:8": 120,
+            "oracle:real:36:8": 160,
+            "oracle:real:44:8": 160,
+            "oracle:real:56:8": 160
+          }
+        },
+        "gpu_type": "H200",
+        "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+        "index_sha256": "81059340e42b82da92d0e56447c349aa7c7fb1c5fef2c549ac593cf9540a508a",
+        "inventory_sha256": "2916e28303386ee1ca7715fe0719d34277faca3ee5a33f5ec43bd70c1176518f",
+        "items_sha256": "a2fd5716d4e26acd6eeaeb854c729258b7c481dcef376b0f02c37a960109d0fa",
+        "measured_decision_sha256": "cb594547cef05b094b97485578e616a4c8a027aa9983015f9e1aa7020b407581",
+        "method": "REPRESENTATIVE_PHASE_WIDTH_V2_SECTION217",
+        "plan_sha256": "f060b4cbd320e488e5bfa7a623f87e32db581015569b6e02852815535ef61d4e",
+        "prior_custody_seconds": 3329.4,
+        "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+        "programme_projected_custody_seconds": 164814.4,
+        "rate_book": {
+          "evidence": [
+            {
+              "output_seal_sha256": "35260c59b9b67394b50df838111f781021ed3cf61fd1d0a974b1e7a1ed84e1c7",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row0/out/MEASURED_PROFILE.json",
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "row_indices": [
+                0
+              ]
+            },
+            {
+              "output_seal_sha256": "5c7b5cbb6b27f00b0dfc8b9a5b39dd3a6a508fc536ce82ecf05d74a3158b6620",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row19/out/MEASURED_PROFILE.json",
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "row_indices": [
+                19
+              ]
+            }
+          ],
+          "hardware": {
+            "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+            "gpu_type": "H200",
+            "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+            "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+          },
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_capture_prompt_tokens": {
+            "items": 60,
+            "max": 15,
+            "min": 5
+          },
+          "native": {
+            "nla:placebo:42:5": 22.850899990135805,
+            "nla:placebo:42:8": 24.900981198158114,
+            "nla:real:42:5": 18.362507416983135,
+            "nla:real:42:8": 20.111323526711203,
+            "oracle:placebo:20:5": 10.45599237899296,
+            "oracle:placebo:20:8": 11.142688333677748,
+            "oracle:placebo:36:5": 10.341029525346434,
+            "oracle:placebo:36:8": 10.744731565355323,
+            "oracle:placebo:44:5": 9.954021173296496,
+            "oracle:placebo:44:8": 10.402619519309761,
+            "oracle:placebo:56:5": 10.991676608993052,
+            "oracle:placebo:56:8": 10.838333160655262,
+            "oracle:real:20:5": 8.849915182644812,
+            "oracle:real:20:8": 9.772865916679924,
+            "oracle:real:36:5": 9.829278095664145,
+            "oracle:real:36:8": 9.933244172328463,
+            "oracle:real:44:5": 9.390546038669223,
+            "oracle:real:44:8": 10.774721014662646,
+            "oracle:real:56:5": 9.848972222302109,
+            "oracle:real:56:8": 10.113331300672144
+          },
+          "other": {
+            "capture": 0.510263493983075,
+            "capture_warmup_discarded": 32.11170526803471,
+            "measured_other": 0.55843099381309,
+            "nla_42_warmup_discarded": 54.02270195807796,
+            "nla_setup": 382.79238488699775,
+            "oracle_20_warmup_discarded": 12.862477253889665,
+            "oracle_36_warmup_discarded": 10.653435293002985,
+            "oracle_44_warmup_discarded": 9.980659743072465,
+            "oracle_56_warmup_discarded": 10.93857337301597,
+            "oracle_setup": 376.8848376660608,
+            "placebo_build": 3.4536797030596063,
+            "staging": 211.0865969657898
+          },
+          "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+          "setup_profiles": [
+            {
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "seconds": 885.5622385585448
+            },
+            {
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "seconds": 1016.2665536805289
+            }
+          ]
+        },
+        "reduction_step": 3,
+        "row_indices": [
+          18,
+          20,
+          30,
+          44,
+          53,
+          60,
+          66,
+          75
+        ],
+        "scope_seal_sha256": "1e3715fc1aaa5875f0d58cabd5916ac3e0bdd57b147122a2fdc402abaf8003c3",
+        "source_seal_sha256": "c136d4f639014470cff429133e019456724dc04e9d320dde2fc8ae5850e3ef91",
+        "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+      }
+    },
+    {
+      "cap_seconds": 22575,
+      "input_archive": "/private/tmp/e95-ready-aa8438c71/e95-representative-3-4/inputs.tar.gz",
+      "input_archive_sha256": "faace82f50e8704e367955f5cedcf242b1b8085f64ade64d6eabcd08d202e21d",
+      "input_seal_sha256": "7b9e0a4054f16737081784c7ad43e7bd93ccdf198fa1a4b6c4f0930b516a735d",
+      "mode": "remaining",
+      "original_hold_input_seal_sha256": "4f22f46a1514941c59e52b4c75feb0a7df9e2b24d3e9f0c7ebc8b5e1a947bd0e",
+      "row_indices": [
+        0,
+        17,
+        21,
+        29,
+        45,
+        50,
+        63,
+        67,
+        74
+      ],
+      "shard": "e95-representative-3-4",
+      "status": "READY",
+      "timing95": {
+        "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+        "cap_seconds": 22575,
+        "ceiling_binding": {
+          "authority": "\u00a7220 / 9c56f1a5",
+          "ceiling_seconds": 169200,
+          "deviation": 2,
+          "gate_decision_sha256": "3161726c3a3149decc4612e39c00d3b0cefc67104433612f93d662b68f92c5c8",
+          "gate_seal_sha256": "40755189c07ed814972574bd1454a046b0f55fd12731902696e403927e18f7df",
+          "gate_status": "REOPEN_E95_DEVIATION_2",
+          "step3_roster_sha256": "affa8fbcf37cc62ceadeaa0751312f24579ac1c884d2e757fc2256e457884703"
+        },
+        "ceiling_seconds": 169200,
+        "forecast": {
+          "cap_formula": "max_measured_setup + 1.25*measured_work + retrieval",
+          "cap_seconds": 22575,
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_phase_cost_seconds": {
+            "capture": 91.8474289169535,
+            "fixed": 1076.266553680529,
+            "native": 16847.571437456994,
+            "placebo_build": 259.02597772947047
+          },
+          "missing_native_phases": {},
+          "retrieval_seconds": 60,
+          "workload": {
+            "nla:placebo:42:8": 135,
+            "nla:real:42:8": 180,
+            "oracle:placebo:36:8": 135,
+            "oracle:placebo:44:8": 135,
+            "oracle:placebo:56:8": 135,
+            "oracle:real:36:8": 180,
+            "oracle:real:44:8": 180,
+            "oracle:real:56:8": 180
+          }
+        },
+        "gpu_type": "H200",
+        "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+        "index_sha256": "81059340e42b82da92d0e56447c349aa7c7fb1c5fef2c549ac593cf9540a508a",
+        "inventory_sha256": "2916e28303386ee1ca7715fe0719d34277faca3ee5a33f5ec43bd70c1176518f",
+        "items_sha256": "c34f3a4a101a7e896a5d9fbd9e6ad226ea72f4998b142d81a0a67cfecf87e673",
+        "measured_decision_sha256": "cb594547cef05b094b97485578e616a4c8a027aa9983015f9e1aa7020b407581",
+        "method": "REPRESENTATIVE_PHASE_WIDTH_V2_SECTION217",
+        "plan_sha256": "8ff3eed6954011d5d093ad968fc422be2ddc267fa17b7c47d0e69b6c1a36277e",
+        "prior_custody_seconds": 3329.4,
+        "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+        "programme_projected_custody_seconds": 164814.4,
+        "rate_book": {
+          "evidence": [
+            {
+              "output_seal_sha256": "35260c59b9b67394b50df838111f781021ed3cf61fd1d0a974b1e7a1ed84e1c7",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row0/out/MEASURED_PROFILE.json",
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "row_indices": [
+                0
+              ]
+            },
+            {
+              "output_seal_sha256": "5c7b5cbb6b27f00b0dfc8b9a5b39dd3a6a508fc536ce82ecf05d74a3158b6620",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row19/out/MEASURED_PROFILE.json",
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "row_indices": [
+                19
+              ]
+            }
+          ],
+          "hardware": {
+            "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+            "gpu_type": "H200",
+            "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+            "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+          },
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_capture_prompt_tokens": {
+            "items": 60,
+            "max": 15,
+            "min": 5
+          },
+          "native": {
+            "nla:placebo:42:5": 22.850899990135805,
+            "nla:placebo:42:8": 24.900981198158114,
+            "nla:real:42:5": 18.362507416983135,
+            "nla:real:42:8": 20.111323526711203,
+            "oracle:placebo:20:5": 10.45599237899296,
+            "oracle:placebo:20:8": 11.142688333677748,
+            "oracle:placebo:36:5": 10.341029525346434,
+            "oracle:placebo:36:8": 10.744731565355323,
+            "oracle:placebo:44:5": 9.954021173296496,
+            "oracle:placebo:44:8": 10.402619519309761,
+            "oracle:placebo:56:5": 10.991676608993052,
+            "oracle:placebo:56:8": 10.838333160655262,
+            "oracle:real:20:5": 8.849915182644812,
+            "oracle:real:20:8": 9.772865916679924,
+            "oracle:real:36:5": 9.829278095664145,
+            "oracle:real:36:8": 9.933244172328463,
+            "oracle:real:44:5": 9.390546038669223,
+            "oracle:real:44:8": 10.774721014662646,
+            "oracle:real:56:5": 9.848972222302109,
+            "oracle:real:56:8": 10.113331300672144
+          },
+          "other": {
+            "capture": 0.510263493983075,
+            "capture_warmup_discarded": 32.11170526803471,
+            "measured_other": 0.55843099381309,
+            "nla_42_warmup_discarded": 54.02270195807796,
+            "nla_setup": 382.79238488699775,
+            "oracle_20_warmup_discarded": 12.862477253889665,
+            "oracle_36_warmup_discarded": 10.653435293002985,
+            "oracle_44_warmup_discarded": 9.980659743072465,
+            "oracle_56_warmup_discarded": 10.93857337301597,
+            "oracle_setup": 376.8848376660608,
+            "placebo_build": 3.4536797030596063,
+            "staging": 211.0865969657898
+          },
+          "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+          "setup_profiles": [
+            {
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "seconds": 885.5622385585448
+            },
+            {
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "seconds": 1016.2665536805289
+            }
+          ]
+        },
+        "reduction_step": 3,
+        "row_indices": [
+          0,
+          17,
+          21,
+          29,
+          45,
+          50,
+          63,
+          67,
+          74
+        ],
+        "scope_seal_sha256": "1e3715fc1aaa5875f0d58cabd5916ac3e0bdd57b147122a2fdc402abaf8003c3",
+        "source_seal_sha256": "c136d4f639014470cff429133e019456724dc04e9d320dde2fc8ae5850e3ef91",
+        "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+      }
+    },
+    {
+      "cap_seconds": 22571,
+      "input_archive": "/private/tmp/e95-ready-aa8438c71/e95-representative-3-5/inputs.tar.gz",
+      "input_archive_sha256": "f9395127377dd11e00c035303c3a9bd66f68f33f9fffcb1b8cdfa05815bbd255",
+      "input_seal_sha256": "23844f5dca84e5abc8e93fcee5f8379b63cc14c9135f738ea48ecdfc4a684c70",
+      "mode": "remaining",
+      "original_hold_input_seal_sha256": "880f34581fa4acb60d3f45fe202a7e1c6ca7005d702fc2dd7bf17543c6f78377",
+      "row_indices": [
+        1,
+        11,
+        23,
+        27,
+        47,
+        51,
+        62,
+        68,
+        73
+      ],
+      "shard": "e95-representative-3-5",
+      "status": "READY",
+      "timing95": {
+        "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+        "cap_seconds": 22571,
+        "ceiling_binding": {
+          "authority": "\u00a7220 / 9c56f1a5",
+          "ceiling_seconds": 169200,
+          "deviation": 2,
+          "gate_decision_sha256": "3161726c3a3149decc4612e39c00d3b0cefc67104433612f93d662b68f92c5c8",
+          "gate_seal_sha256": "40755189c07ed814972574bd1454a046b0f55fd12731902696e403927e18f7df",
+          "gate_status": "REOPEN_E95_DEVIATION_2",
+          "step3_roster_sha256": "affa8fbcf37cc62ceadeaa0751312f24579ac1c884d2e757fc2256e457884703"
+        },
+        "ceiling_seconds": 169200,
+        "forecast": {
+          "cap_formula": "max_measured_setup + 1.25*measured_work + retrieval",
+          "cap_seconds": 22571,
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_phase_cost_seconds": {
+            "capture": 91.8474289169535,
+            "fixed": 1076.266553680529,
+            "native": 16847.571437456994,
+            "placebo_build": 255.57229802641086
+          },
+          "missing_native_phases": {},
+          "retrieval_seconds": 60,
+          "workload": {
+            "nla:placebo:42:8": 135,
+            "nla:real:42:8": 180,
+            "oracle:placebo:36:8": 135,
+            "oracle:placebo:44:8": 135,
+            "oracle:placebo:56:8": 135,
+            "oracle:real:36:8": 180,
+            "oracle:real:44:8": 180,
+            "oracle:real:56:8": 180
+          }
+        },
+        "gpu_type": "H200",
+        "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+        "index_sha256": "81059340e42b82da92d0e56447c349aa7c7fb1c5fef2c549ac593cf9540a508a",
+        "inventory_sha256": "2916e28303386ee1ca7715fe0719d34277faca3ee5a33f5ec43bd70c1176518f",
+        "items_sha256": "adde64018dd62e44b831b213597650386ae1f2aa011db412959355404acab06a",
+        "measured_decision_sha256": "cb594547cef05b094b97485578e616a4c8a027aa9983015f9e1aa7020b407581",
+        "method": "REPRESENTATIVE_PHASE_WIDTH_V2_SECTION217",
+        "plan_sha256": "dd0edd8f77e587384f395ea2d769e661c523f89639dff96e7b04c5c14253a0bf",
+        "prior_custody_seconds": 3329.4,
+        "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+        "programme_projected_custody_seconds": 164814.4,
+        "rate_book": {
+          "evidence": [
+            {
+              "output_seal_sha256": "35260c59b9b67394b50df838111f781021ed3cf61fd1d0a974b1e7a1ed84e1c7",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row0/out/MEASURED_PROFILE.json",
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "row_indices": [
+                0
+              ]
+            },
+            {
+              "output_seal_sha256": "5c7b5cbb6b27f00b0dfc8b9a5b39dd3a6a508fc536ce82ecf05d74a3158b6620",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row19/out/MEASURED_PROFILE.json",
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "row_indices": [
+                19
+              ]
+            }
+          ],
+          "hardware": {
+            "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+            "gpu_type": "H200",
+            "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+            "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+          },
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_capture_prompt_tokens": {
+            "items": 60,
+            "max": 15,
+            "min": 5
+          },
+          "native": {
+            "nla:placebo:42:5": 22.850899990135805,
+            "nla:placebo:42:8": 24.900981198158114,
+            "nla:real:42:5": 18.362507416983135,
+            "nla:real:42:8": 20.111323526711203,
+            "oracle:placebo:20:5": 10.45599237899296,
+            "oracle:placebo:20:8": 11.142688333677748,
+            "oracle:placebo:36:5": 10.341029525346434,
+            "oracle:placebo:36:8": 10.744731565355323,
+            "oracle:placebo:44:5": 9.954021173296496,
+            "oracle:placebo:44:8": 10.402619519309761,
+            "oracle:placebo:56:5": 10.991676608993052,
+            "oracle:placebo:56:8": 10.838333160655262,
+            "oracle:real:20:5": 8.849915182644812,
+            "oracle:real:20:8": 9.772865916679924,
+            "oracle:real:36:5": 9.829278095664145,
+            "oracle:real:36:8": 9.933244172328463,
+            "oracle:real:44:5": 9.390546038669223,
+            "oracle:real:44:8": 10.774721014662646,
+            "oracle:real:56:5": 9.848972222302109,
+            "oracle:real:56:8": 10.113331300672144
+          },
+          "other": {
+            "capture": 0.510263493983075,
+            "capture_warmup_discarded": 32.11170526803471,
+            "measured_other": 0.55843099381309,
+            "nla_42_warmup_discarded": 54.02270195807796,
+            "nla_setup": 382.79238488699775,
+            "oracle_20_warmup_discarded": 12.862477253889665,
+            "oracle_36_warmup_discarded": 10.653435293002985,
+            "oracle_44_warmup_discarded": 9.980659743072465,
+            "oracle_56_warmup_discarded": 10.93857337301597,
+            "oracle_setup": 376.8848376660608,
+            "placebo_build": 3.4536797030596063,
+            "staging": 211.0865969657898
+          },
+          "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+          "setup_profiles": [
+            {
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "seconds": 885.5622385585448
+            },
+            {
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "seconds": 1016.2665536805289
+            }
+          ]
+        },
+        "reduction_step": 3,
+        "row_indices": [
+          1,
+          11,
+          23,
+          27,
+          47,
+          51,
+          62,
+          68,
+          73
+        ],
+        "scope_seal_sha256": "1e3715fc1aaa5875f0d58cabd5916ac3e0bdd57b147122a2fdc402abaf8003c3",
+        "source_seal_sha256": "c136d4f639014470cff429133e019456724dc04e9d320dde2fc8ae5850e3ef91",
+        "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+      }
+    },
+    {
+      "cap_seconds": 22566,
+      "input_archive": "/private/tmp/e95-ready-aa8438c71/e95-representative-3-6/inputs.tar.gz",
+      "input_archive_sha256": "f021bf229119da3d8a2438477aa804947f6811168503cf3954afafbaa652eca4",
+      "input_seal_sha256": "19c15b54d59b51696eedeff2232266b679b2dc6080acbe135894fd3ae19ab51a",
+      "mode": "remaining",
+      "original_hold_input_seal_sha256": "0562d40adcd472ef96a138865f51fc85bc0774b4ef02d9b0c168c972298a8696",
+      "row_indices": [
+        4,
+        10,
+        24,
+        33,
+        39,
+        55,
+        59,
+        69,
+        72
+      ],
+      "shard": "e95-representative-3-6",
+      "status": "READY",
+      "timing95": {
+        "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+        "cap_seconds": 22566,
+        "ceiling_binding": {
+          "authority": "\u00a7220 / 9c56f1a5",
+          "ceiling_seconds": 169200,
+          "deviation": 2,
+          "gate_decision_sha256": "3161726c3a3149decc4612e39c00d3b0cefc67104433612f93d662b68f92c5c8",
+          "gate_seal_sha256": "40755189c07ed814972574bd1454a046b0f55fd12731902696e403927e18f7df",
+          "gate_status": "REOPEN_E95_DEVIATION_2",
+          "step3_roster_sha256": "affa8fbcf37cc62ceadeaa0751312f24579ac1c884d2e757fc2256e457884703"
+        },
+        "ceiling_seconds": 169200,
+        "forecast": {
+          "cap_formula": "max_measured_setup + 1.25*measured_work + retrieval",
+          "cap_seconds": 22566,
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_phase_cost_seconds": {
+            "capture": 91.8474289169535,
+            "fixed": 1076.266553680529,
+            "native": 16847.571437456994,
+            "placebo_build": 252.11861832335126
+          },
+          "missing_native_phases": {},
+          "retrieval_seconds": 60,
+          "workload": {
+            "nla:placebo:42:8": 135,
+            "nla:real:42:8": 180,
+            "oracle:placebo:36:8": 135,
+            "oracle:placebo:44:8": 135,
+            "oracle:placebo:56:8": 135,
+            "oracle:real:36:8": 180,
+            "oracle:real:44:8": 180,
+            "oracle:real:56:8": 180
+          }
+        },
+        "gpu_type": "H200",
+        "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+        "index_sha256": "81059340e42b82da92d0e56447c349aa7c7fb1c5fef2c549ac593cf9540a508a",
+        "inventory_sha256": "2916e28303386ee1ca7715fe0719d34277faca3ee5a33f5ec43bd70c1176518f",
+        "items_sha256": "b8645d425171c898bb4bace0a184040da777343df95d73d35a1153a70f513444",
+        "measured_decision_sha256": "cb594547cef05b094b97485578e616a4c8a027aa9983015f9e1aa7020b407581",
+        "method": "REPRESENTATIVE_PHASE_WIDTH_V2_SECTION217",
+        "plan_sha256": "74abbbf51c7a84265dbf5ec2421ac4a6aca30ab735b5dec1391b62e32b5e2aac",
+        "prior_custody_seconds": 3329.4,
+        "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+        "programme_projected_custody_seconds": 164814.4,
+        "rate_book": {
+          "evidence": [
+            {
+              "output_seal_sha256": "35260c59b9b67394b50df838111f781021ed3cf61fd1d0a974b1e7a1ed84e1c7",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row0/out/MEASURED_PROFILE.json",
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "row_indices": [
+                0
+              ]
+            },
+            {
+              "output_seal_sha256": "5c7b5cbb6b27f00b0dfc8b9a5b39dd3a6a508fc536ce82ecf05d74a3158b6620",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row19/out/MEASURED_PROFILE.json",
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "row_indices": [
+                19
+              ]
+            }
+          ],
+          "hardware": {
+            "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+            "gpu_type": "H200",
+            "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+            "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+          },
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_capture_prompt_tokens": {
+            "items": 60,
+            "max": 15,
+            "min": 5
+          },
+          "native": {
+            "nla:placebo:42:5": 22.850899990135805,
+            "nla:placebo:42:8": 24.900981198158114,
+            "nla:real:42:5": 18.362507416983135,
+            "nla:real:42:8": 20.111323526711203,
+            "oracle:placebo:20:5": 10.45599237899296,
+            "oracle:placebo:20:8": 11.142688333677748,
+            "oracle:placebo:36:5": 10.341029525346434,
+            "oracle:placebo:36:8": 10.744731565355323,
+            "oracle:placebo:44:5": 9.954021173296496,
+            "oracle:placebo:44:8": 10.402619519309761,
+            "oracle:placebo:56:5": 10.991676608993052,
+            "oracle:placebo:56:8": 10.838333160655262,
+            "oracle:real:20:5": 8.849915182644812,
+            "oracle:real:20:8": 9.772865916679924,
+            "oracle:real:36:5": 9.829278095664145,
+            "oracle:real:36:8": 9.933244172328463,
+            "oracle:real:44:5": 9.390546038669223,
+            "oracle:real:44:8": 10.774721014662646,
+            "oracle:real:56:5": 9.848972222302109,
+            "oracle:real:56:8": 10.113331300672144
+          },
+          "other": {
+            "capture": 0.510263493983075,
+            "capture_warmup_discarded": 32.11170526803471,
+            "measured_other": 0.55843099381309,
+            "nla_42_warmup_discarded": 54.02270195807796,
+            "nla_setup": 382.79238488699775,
+            "oracle_20_warmup_discarded": 12.862477253889665,
+            "oracle_36_warmup_discarded": 10.653435293002985,
+            "oracle_44_warmup_discarded": 9.980659743072465,
+            "oracle_56_warmup_discarded": 10.93857337301597,
+            "oracle_setup": 376.8848376660608,
+            "placebo_build": 3.4536797030596063,
+            "staging": 211.0865969657898
+          },
+          "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+          "setup_profiles": [
+            {
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "seconds": 885.5622385585448
+            },
+            {
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "seconds": 1016.2665536805289
+            }
+          ]
+        },
+        "reduction_step": 3,
+        "row_indices": [
+          4,
+          10,
+          24,
+          33,
+          39,
+          55,
+          59,
+          69,
+          72
+        ],
+        "scope_seal_sha256": "1e3715fc1aaa5875f0d58cabd5916ac3e0bdd57b147122a2fdc402abaf8003c3",
+        "source_seal_sha256": "c136d4f639014470cff429133e019456724dc04e9d320dde2fc8ae5850e3ef91",
+        "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+      }
+    },
+    {
+      "cap_seconds": 22423,
+      "input_archive": "/private/tmp/e95-ready-aa8438c71/e95-representative-3-7/inputs.tar.gz",
+      "input_archive_sha256": "380a736ea2f276a3e9c8cd2e3b6bb3df73729908649f7c3a636f9ce82bf42155",
+      "input_seal_sha256": "c6380e1496b77f770aac4fc65d4247c0c523914ef3a62b5356eaaca5c6b9c625",
+      "mode": "remaining",
+      "original_hold_input_seal_sha256": "8a90532d4b29e99fd7bafbf17f7d381461e67ac89d90597a138f35aed1f318c6",
+      "row_indices": [
+        16,
+        19,
+        22,
+        28,
+        46,
+        52,
+        61,
+        70,
+        71
+      ],
+      "shard": "e95-representative-3-7",
+      "status": "READY",
+      "timing95": {
+        "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+        "cap_seconds": 22423,
+        "ceiling_binding": {
+          "authority": "\u00a7220 / 9c56f1a5",
+          "ceiling_seconds": 169200,
+          "deviation": 2,
+          "gate_decision_sha256": "3161726c3a3149decc4612e39c00d3b0cefc67104433612f93d662b68f92c5c8",
+          "gate_seal_sha256": "40755189c07ed814972574bd1454a046b0f55fd12731902696e403927e18f7df",
+          "gate_status": "REOPEN_E95_DEVIATION_2",
+          "step3_roster_sha256": "affa8fbcf37cc62ceadeaa0751312f24579ac1c884d2e757fc2256e457884703"
+        },
+        "ceiling_seconds": 169200,
+        "forecast": {
+          "cap_formula": "max_measured_setup + 1.25*measured_work + retrieval",
+          "cap_seconds": 22423,
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_phase_cost_seconds": {
+            "capture": 91.8474289169535,
+            "fixed": 1076.266553680529,
+            "native": 16736.309540456277,
+            "placebo_build": 248.66493862029165
+          },
+          "missing_native_phases": {},
+          "retrieval_seconds": 60,
+          "workload": {
+            "nla:placebo:42:5": 15,
+            "nla:placebo:42:8": 120,
+            "nla:real:42:5": 20,
+            "nla:real:42:8": 160,
+            "oracle:placebo:36:5": 15,
+            "oracle:placebo:36:8": 120,
+            "oracle:placebo:44:5": 15,
+            "oracle:placebo:44:8": 120,
+            "oracle:placebo:56:5": 15,
+            "oracle:placebo:56:8": 120,
+            "oracle:real:36:5": 20,
+            "oracle:real:36:8": 160,
+            "oracle:real:44:5": 20,
+            "oracle:real:44:8": 160,
+            "oracle:real:56:5": 20,
+            "oracle:real:56:8": 160
+          }
+        },
+        "gpu_type": "H200",
+        "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+        "index_sha256": "81059340e42b82da92d0e56447c349aa7c7fb1c5fef2c549ac593cf9540a508a",
+        "inventory_sha256": "2916e28303386ee1ca7715fe0719d34277faca3ee5a33f5ec43bd70c1176518f",
+        "items_sha256": "71a010d0dc4d1bc86076b5987b30d8761f215791fd5abc49a7be66850982a576",
+        "measured_decision_sha256": "cb594547cef05b094b97485578e616a4c8a027aa9983015f9e1aa7020b407581",
+        "method": "REPRESENTATIVE_PHASE_WIDTH_V2_SECTION217",
+        "plan_sha256": "b7fc069910e6cbbcf23f4eaab63f531e35cba46400a95a208756f8f865c9584d",
+        "prior_custody_seconds": 3329.4,
+        "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+        "programme_projected_custody_seconds": 164814.4,
+        "rate_book": {
+          "evidence": [
+            {
+              "output_seal_sha256": "35260c59b9b67394b50df838111f781021ed3cf61fd1d0a974b1e7a1ed84e1c7",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row0/out/MEASURED_PROFILE.json",
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "row_indices": [
+                0
+              ]
+            },
+            {
+              "output_seal_sha256": "5c7b5cbb6b27f00b0dfc8b9a5b39dd3a6a508fc536ce82ecf05d74a3158b6620",
+              "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E95/timing/row19/out/MEASURED_PROFILE.json",
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "row_indices": [
+                19
+              ]
+            }
+          ],
+          "hardware": {
+            "assets_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+            "gpu_type": "H200",
+            "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+            "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+          },
+          "maximum_measured_setup_seconds": 1016.2665536805289,
+          "measured_capture_prompt_tokens": {
+            "items": 60,
+            "max": 15,
+            "min": 5
+          },
+          "native": {
+            "nla:placebo:42:5": 22.850899990135805,
+            "nla:placebo:42:8": 24.900981198158114,
+            "nla:real:42:5": 18.362507416983135,
+            "nla:real:42:8": 20.111323526711203,
+            "oracle:placebo:20:5": 10.45599237899296,
+            "oracle:placebo:20:8": 11.142688333677748,
+            "oracle:placebo:36:5": 10.341029525346434,
+            "oracle:placebo:36:8": 10.744731565355323,
+            "oracle:placebo:44:5": 9.954021173296496,
+            "oracle:placebo:44:8": 10.402619519309761,
+            "oracle:placebo:56:5": 10.991676608993052,
+            "oracle:placebo:56:8": 10.838333160655262,
+            "oracle:real:20:5": 8.849915182644812,
+            "oracle:real:20:8": 9.772865916679924,
+            "oracle:real:36:5": 9.829278095664145,
+            "oracle:real:36:8": 9.933244172328463,
+            "oracle:real:44:5": 9.390546038669223,
+            "oracle:real:44:8": 10.774721014662646,
+            "oracle:real:56:5": 9.848972222302109,
+            "oracle:real:56:8": 10.113331300672144
+          },
+          "other": {
+            "capture": 0.510263493983075,
+            "capture_warmup_discarded": 32.11170526803471,
+            "measured_other": 0.55843099381309,
+            "nla_42_warmup_discarded": 54.02270195807796,
+            "nla_setup": 382.79238488699775,
+            "oracle_20_warmup_discarded": 12.862477253889665,
+            "oracle_36_warmup_discarded": 10.653435293002985,
+            "oracle_44_warmup_discarded": 9.980659743072465,
+            "oracle_56_warmup_discarded": 10.93857337301597,
+            "oracle_setup": 376.8848376660608,
+            "placebo_build": 3.4536797030596063,
+            "staging": 211.0865969657898
+          },
+          "profile_set_sha256": "0501fd0cd34f996fb36c42770a1043957963164a93dedf21ef2207fc1e5f0194",
+          "setup_profiles": [
+            {
+              "profile_sha256": "b5083363a1efb29dfa60932f1c20aceeecb53c398063d3379cf8511927fd678b",
+              "seconds": 885.5622385585448
+            },
+            {
+              "profile_sha256": "f2a2243d189bb4b6a24826754a62e7dd3d5d51842f49e47eb58b1bf91e27ab58",
+              "seconds": 1016.2665536805289
+            }
+          ]
+        },
+        "reduction_step": 3,
+        "row_indices": [
+          16,
+          19,
+          22,
+          28,
+          46,
+          52,
+          61,
+          70,
+          71
+        ],
+        "scope_seal_sha256": "1e3715fc1aaa5875f0d58cabd5916ac3e0bdd57b147122a2fdc402abaf8003c3",
+        "source_seal_sha256": "c136d4f639014470cff429133e019456724dc04e9d320dde2fc8ae5850e3ef91",
+        "stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74"
+      }
+    }
+  ],
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmechb/cache/g_agreement/understand/e95/section220_reopened_v1/source.tar.gz",
+  "source_archive_sha256": "7a1a5d61762bfbdab5149e5f53258d2208c47045d8c67367d4148dde1e329e63",
+  "source_cpu_proof": "Owner41 exact-source tests and fresh imports PASS; operator fresh import before each pod; no duplicate old tests needed without source changes",
+  "source_seal_sha256": "c136d4f639014470cff429133e019456724dc04e9d320dde2fc8ae5850e3ef91",
+  "status": "READY",
+  "track": "M"
+}

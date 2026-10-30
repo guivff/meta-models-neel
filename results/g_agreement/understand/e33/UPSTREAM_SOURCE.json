@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-25",
+  "extraction": "Exact AST source segments; no scientific rewrites. Runtime wrapper supplies numpy lazily for E16 reference scoring.",
+  "files": {
+    "external/mats-nla-workspace/src/mats/metrics.py": "17ff3b1467186a8c4e24e76ed52d2263b0201e651e2010d4b99bd47c25cda473",
+    "external/mats-nla-workspace/src/mats/readers/olens.py": "7866ac3aa66d96bee612e216a0cd45e0a76e1dd4e799f6aaa538c28addd0e86e",
+    "projects/g_agreement/understand/e12.py": "1870ecee75a921b630996aec686b5428cc2b0d71d2bfedbee7cf431a66ba34e5",
+    "projects/g_agreement/understand/e16.py": "1adb5a01d170cbe6bff0019ca5c01b8cacddd72c3e7f853617e26df2f922505f",
+    "projects/g_agreement/understand/e16_worker.py": "dfc1be052380a1790b68a05a6032e532ba4c17fd502c56ae9d1a13660089a3a1",
+    "projects/g_agreement/understand/followup_packed.py": "94aabc291948be60b144b18103421bc9a24ff962b58faae9732377704c48f5ff",
+    "results/g_agreement/understand/e12/INPUT_SEAL.json": "2a2c8e82e7d4aacb361ddccb9d3700f5e6c135f90bcf89f9a5410754b15aaca2",
+    "results/g_agreement/understand/e12/PREPARATION.json": "c77146d41391420c2ec8f71225d17bb53d1935bed8084554904ffe32d4180e32",
+    "results/g_agreement/understand/e16/PREPARATION.json": "a9415e4ca43e67fe974ad603f727d98fa13696c44b93b62e51620eaf4ed55b83"
+  },
+  "score_convention": "Sum candidate token log probabilities, first minus second; average the two W1 phrasing-pair log-odds before AUROC.",
+  "segments": {
+    "e12": {
+      "ARMS": "bd50f4cea813e97cf03833513b08b8816774d000409b65b42c4ed9ba1c4a242b",
+      "CONTEXT_PREFIX": "55e848b3c2903266bbe6cf8e525b017264cd4bb77faf55162c802b3ffb184769",
+      "activation_for": "a7aed0e271965a1a2a2a600c2b8355fc6ec9bda78ba652920f5fbc179be33fd8",
+      "carrier": "71e8cd051c72002ab67d9e2b638b1f53b34adc54c45468e49a8d624322a15296",
+      "user_message": "bb6414f29de564c43991635641bc1d09f163352eefc42daa393465674fb29c98"
+    },
+    "e16": {
+      "base_head": "3dc76457d70c8955b6194e329ad3225e5b11f33eff411855c3050a7a6a0ada33"
+    },
+    "e16_worker": {
+      "base_scores": "9657cbcd66f447dfad00364de2f4bb308830fc9601bcde4365c963b0ccb671c0"
+    }
+  },
+  "upstream_commit": "d99db94c5fc3c263b97294fff26ae78d2cd9705d",
+  "upstream_ref_at_extraction": "origin/r/blindspot-mech"
+}

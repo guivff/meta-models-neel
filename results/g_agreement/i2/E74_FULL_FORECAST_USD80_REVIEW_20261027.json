@@ -1,0 +1,118 @@
+{
+  "schema": "i2-e74-full-forecast-current-cap-review-v1",
+  "track": "G",
+  "reviewed_at": "2026-10-27T19:26:51.447323+00:00",
+  "authority_requested": "Guiv latest instruction: §192 clarification 4 b90325cb, forecast ×1.25 ≤ USD80",
+  "prior_later_registration": "§192 clarification 5 ac641dbf records USD100; latest direct instruction specifies USD80. Enforce80 while asking Guiv which applies; do not change registered history.",
+  "status": "NO_FIT_AT_USD80_HOLD_NO_LAUNCH",
+  "authorizes_launch": false,
+  "active_reservation_usd": 0,
+  "gpu_type": "NVIDIA B200",
+  "gpus_per_replica": 4,
+  "replica_hourly_list_price_usd": 31.96,
+  "actual_allocatable_quote": null,
+  "price_status": "List-price planning scenario only; no current allocatable quote",
+  "source_forecast_sha256": "3d0e669f41f6419b83a62ed3491ab168f7a3db9ea43ca9935ae4e6c8187aaf2c",
+  "source_forecast_path": "results/g_agreement/e74/FULL_FORECAST.json",
+  "components": [
+    {
+      "basis": "full clarification4 allowance; no transfer measurement",
+      "seconds": 3600,
+      "stage": "weight_staging_and_full_destination_verification",
+      "compute_usd": 31.96
+    },
+    {
+      "basis": "existing archive-staging ceiling, budgeted in full; no environment ready evidence",
+      "seconds": 900,
+      "stage": "archive_environment_staging",
+      "compute_usd": 7.99
+    },
+    {
+      "basis": "author reports ~11min TP4 from local NVMe; not measured here",
+      "seconds": 660,
+      "stage": "engine_boot",
+      "compute_usd": 5.859333333333333
+    },
+    {
+      "basis": "planning allowance: one50-item capture+generation batch, merges and statistics; unmeasured",
+      "seconds": 120,
+      "stage": "smoke50_capture_readouts_and_statistics",
+      "compute_usd": 1.0653333333333332
+    },
+    {
+      "basis": "ceil(14184 *2*2.43h/152000); author TP8 window-rate proxy scaled to TP4; no speedup assumed for shorter prefixes; unmeasured",
+      "seconds": 1633,
+      "stage": "capture14184_block51",
+      "compute_usd": 14.497411111111113
+    },
+    {
+      "basis": "explicit paid-hold planning allowance; no timely GO guaranteed; exceedance requires stop/new admission",
+      "seconds": 600,
+      "stage": "capture_pull_CPU_probes_Wlens_forecast_and_GO_wait",
+      "compute_usd": 5.326666666666666
+    },
+    {
+      "basis": "14batches512 *60s; author2048rollouts/step and up-to240s training+generation step onTP4 =>60s per512 planning proxy; no throughput measured here",
+      "seconds": 840,
+      "stage": "test_readouts6804",
+      "compute_usd": 7.457333333333334
+    },
+    {
+      "basis": "planning allowance; includes transitions outside smoke and348.586MBcapture/output custody; unmeasured",
+      "seconds": 120,
+      "stage": "adapter_transitions_final_seal_retrieval_release",
+      "compute_usd": 1.0653333333333332
+    }
+  ],
+  "seconds_total": 8473,
+  "replica_minutes_total": 141.21666666666667,
+  "compute_usd": 75.22141111111112,
+  "storage_and_other_allowance_usd": 2,
+  "forecast_usd": 77.22141111111112,
+  "multiplier": 1.25,
+  "forecast_times_multiplier_usd": 96.52676388888891,
+  "effective_cap_usd": 80,
+  "shortfall_usd": 16.526763888888908,
+  "measurement_status": {
+    "CPU_gate_wait": "UNMEASURED",
+    "boot": "AUTHOR_REPORT_ONLY",
+    "capture": "AUTHOR_PROXY_ONLY",
+    "destination_verification": "UNMEASURED",
+    "provider_extra_cost": "ALLOWANCE_ONLY",
+    "readouts": "AUTHOR_PROXY_ONLY",
+    "smoke": "UNMEASURED",
+    "weight_transfer": "UNMEASURED"
+  },
+  "smoke": {
+    "fixtures": 50,
+    "seed": 20261027,
+    "exclude_E66_packet": true,
+    "read_fixture_text": false,
+    "inspect_only_agreement_statistics": true,
+    "pass_rule": "(exact_match_rate >= 0.15 OR median_token_set_Jaccard >= 0.50) AND grammar_violation_rate <= 0.10",
+    "failure_action": "STOP; no retuning"
+  },
+  "weight_staging_seconds_max": 3600,
+  "archive_staging_seconds_max": 900,
+  "all_staging_billed": true,
+  "capture_items": 14184,
+  "capture_block": 51,
+  "test_readouts": 6804,
+  "native_output": "One greedy bullet, at most16 content tokens",
+  "custody": "Capture -> actual W-lens forecast/status-and-category-baseline commit -> GO -> test readers. No late confirmatory J forecast.",
+  "current_combined_bound_without_G_usd": 279.63,
+  "hypothetical_combined_with_padded_G_usd": 376.1567638888889,
+  "today_shared_ceiling_usd": 500,
+  "break_even": {
+    "max_replica_hourly_price_at_this_duration_and_allowance": 26.342499704945116,
+    "max_weight_staging_seconds_at_current_list_price": 2110.729662077597
+  },
+  "other_holds": [
+    "No allocatable exact4B200 quote",
+    "Runtime image registry publication and deployment bindings incomplete",
+    "Required ordinal exploratory probe implementation/source binding incomplete",
+    "Existing frozen resident runtime hardcodes100; any lower-cap execution needs source/admission reconciliation before enablement"
+  ],
+  "gpu_runs": 0,
+  "fixture_text_opened": false
+}

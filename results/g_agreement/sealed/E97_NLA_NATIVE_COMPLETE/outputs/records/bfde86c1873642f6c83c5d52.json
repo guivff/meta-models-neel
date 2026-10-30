@@ -1,0 +1,12 @@
+{
+  "id": "bfde86c1873642f6c83c5d52",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: example given, then a test case follows requiring a classification label (\"Positive\" or \"Negative\").\n\nThe task explicitly defines the output format \u2014 a single word response (\"Positive\" or \"Negative\") \u2014 constraining the model to produce exactly that.\n\n\"Example sentence: I am feeling happy today.\nQuestion: What is the sentiment?\nReply:\" ends the prompt, with \"Reply:\" being a label introducing the model's direct answer to the test case \"I am feeling happy today.\"\n\"Given the following input: 'I am feeling happy today.'\nInput: I am feeling happy today.\nReply:\" \u2014 the final token \"Reply:\" is a prompt label expecting the actual classification answer (e.g., \"Negative\" or the model's response) to follow immediately.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: example given, then a test case follows requiring a classification label (\"Positive\" or \"Negative\").\n\nThe task explicitly defines the output format \u2014 a single word response (\"Positive\" or \"Negative\") \u2014 constraining the model to produce exactly that.\n\n\"Example sentence: I am feeling happy today.\nQuestion: What is the sentiment?\nReply:\" ends the prompt, with \"Reply:\" being a label introducing the model's direct answer to the test case \"I am feeling happy today.\"\n\"Given the following input: 'I am feeling happy today.'\nInput: I am feeling happy today.\nReply:\" \u2014 the final token \"Reply:\" is a prompt label expecting the actual classification answer (e.g., \"Negative\" or the model's response) to follow immediately.",
+  "truncated": false
+}

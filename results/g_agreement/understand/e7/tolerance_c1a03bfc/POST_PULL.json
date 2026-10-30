@@ -1,0 +1,34 @@
+{
+  "effect": "appendfrozenoperationalparityrates fromsamecollectedrun;re-sealreportonly;scientificmetricsunchanged;noscientificanalysisrerun",
+  "operational_report_after_unchanged_analysis": [
+    "python",
+    "-m",
+    "projects.g_agreement.understand.e7_parity",
+    "--collection",
+    "PULLED_E7_TOLERANCE_RUN_ROOT",
+    "--results",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e7/RESULTS.md"
+  ],
+  "scientific_analysis": {
+    "canonical_launch_request": "results/g_agreement/understand/LAUNCH_REQUEST.json",
+    "command": [
+      "python",
+      "-m",
+      "projects.g_agreement.understand.analyse",
+      "e7",
+      "--inputs",
+      "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e7",
+      "--scores",
+      "PULLED_PACKED_RUN/e7/scores",
+      "--labels",
+      "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/blindspot/mechanism/w34-collection-ebf6c121/labels.DO_NOT_STAGE.jsonl",
+      "--out",
+      "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e7"
+    ],
+    "execution": "CPU only after verifying all complete score seals;no W2/S2 command invoked",
+    "no_rerun_if_result_seal_exists": true,
+    "optional_decoder": "If unavailable remove the --decoder flag/value;all missing cells remain explicit. Do not change any other inputs or analysis settings.",
+    "status": "WAITING_FOR_SEALED_OUTPUTS"
+  },
+  "setup_failure": "returnGENERATION_PARITY.json,GENERATION_PARITY_SEAL.json,PARITY_RESULTS.md evenNO_FIT;no scientificanalysisonpartialrun"
+}

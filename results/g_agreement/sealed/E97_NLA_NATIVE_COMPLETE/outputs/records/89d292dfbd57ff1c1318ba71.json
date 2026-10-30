@@ -1,0 +1,12 @@
+{
+  "id": "89d292dfbd57ff1c1318ba71",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional template pattern: a structured prompt format with \"Question:\" and \"Answer:\" fields signals a response template requiring a model-generated explanation.\n\nThe task description establishes a parallel structure: \"The following text explains how to [X]\" sets up a specific topic (adding a number to a list), and the model must generate an explanation matching that topic.\n\n\"Answer:\" is the final token, functioning as a prompt label in a few-shot or instruction-following format, immediately requiring the actual explanatory text response about the described operation.\n\"Given the following question and answer example, generate a similar explanation about the same topic.\nQuestion: [topic]\nAnswer:\" \u2014 the final \"Answer:\" token demands the model's explanatory output, likely beginning with \"To...\" or a direct declarative sentence describing the process.\n\"Answer:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional template pattern: a structured prompt format with \"Question:\" and \"Answer:\" fields signals a response template requiring a model-generated explanation.\n\nThe task description establishes a parallel structure: \"The following text explains how to [X]\" sets up a specific topic (adding a number to a list), and the model must generate an explanation matching that topic.\n\n\"Answer:\" is the final token, functioning as a prompt label in a few-shot or instruction-following format, immediately requiring the actual explanatory text response about the described operation.\n\"Given the following question and answer example, generate a similar explanation about the same topic.\nQuestion: [topic]\nAnswer:\" \u2014 the final \"Answer:\" token demands the model's explanatory output, likely beginning with \"To...\" or a direct declarative sentence describing the process.\n\"Answer:\"",
+  "truncated": false
+}

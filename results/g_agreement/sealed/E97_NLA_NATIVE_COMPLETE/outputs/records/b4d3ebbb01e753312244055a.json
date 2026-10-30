@@ -1,0 +1,12 @@
+{
+  "id": "b4d3ebbb01e753312244055a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is asking for XML/data cleaning task, expecting a corrected or reformatted example entry.\n\nThe phrase \"entry\" signals a structured data format (likely XML or dictionary/glossary entries), with \"entry\" repeated as a label for the problematic item.\n\nFinal token `<entry` opens an XML tag, immediately requiring a closing `>` or attribute syntax, followed by structured content matching the \"entry\" format described.\n\"Here is the sample:\n<entry\" begins a concrete example, so the next tokens must complete the XML tag and provide sample content (e.g., `<entry id=\"...\"` or `<entry>` with nested fields like definition, term, or description).\nThe pattern of \"a list of entries\" and \"one entry\" suggests a dictionary or academic XML corpus context, with structured fields expected.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is asking for XML/data cleaning task, expecting a corrected or reformatted example entry.\n\nThe phrase \"entry\" signals a structured data format (likely XML or dictionary/glossary entries), with \"entry\" repeated as a label for the problematic item.\n\nFinal token `<entry` opens an XML tag, immediately requiring a closing `>` or attribute syntax, followed by structured content matching the \"entry\" format described.\n\"Here is the sample:\n<entry\" begins a concrete example, so the next tokens must complete the XML tag and provide sample content (e.g., `<entry id=\"...\"` or `<entry>` with nested fields like definition, term, or description).\nThe pattern of \"a list of entries\" and \"one entry\" suggests a dictionary or academic XML corpus context, with structured fields expected.",
+  "truncated": false
+}

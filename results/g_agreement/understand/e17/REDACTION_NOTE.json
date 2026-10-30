@@ -1,0 +1,111 @@
+{
+  "schema": "redaction-note-v1",
+  "experiment": "E17",
+  "branch": "r/blindspot",
+  "published_tip_at_writing": "4aeea925",
+  "purpose": "Records every file the integrator published with local machine paths redacted. local_sha256 is the hash the owner's seals cover; published_sha256 is the committed redacted file. Each redaction lists its line, the placeholder written in its place, the occurrence count, and the sha256/length of the original string (the string itself is not published, per Guiv 2026-10-25). Verifying a seal over a redacted file still needs the owner's local copy at local_commit.",
+  "not_listed": "Append-only shared logs (blindspot/HANDOFF.md, log.md, compute.jsonl) also had local paths redacted in appended lines; they are merged files and no seal covers them.",
+  "check": "For every redacted line, applying these substitutions to the local line reproduces the published line exactly (asserted when this note was built).",
+  "files": [
+    {
+      "path": "results/g_agreement/understand/e17/LAUNCH_REQUEST.json",
+      "local_commit": "bdd5f069",
+      "local_sha256": "2719b1f364f6bd693f5e8356ff878f8eaaf2a251bff6b3cf2f790629eefc4bab",
+      "first_published_in": "56ab929d",
+      "published_commit": "4aeea925",
+      "published_sha256": "137e6cb52fe8b0657acbd2ae82809b08b6563511a656c8079de68f6c33051527",
+      "sealed_by": [],
+      "redactions": [
+        {
+          "line": 10,
+          "placeholder": "<W-core E17 worktree>",
+          "occurrences": 1,
+          "original_sha256": "dfdc7b5e2fd1aca1234651b1a61a1bf67400c74d353514ca0ef4eaf00e720a83",
+          "original_length": 65
+        },
+        {
+          "line": 71,
+          "placeholder": "<W-core E17 worktree>",
+          "occurrences": 1,
+          "original_sha256": "dfdc7b5e2fd1aca1234651b1a61a1bf67400c74d353514ca0ef4eaf00e720a83",
+          "original_length": 65
+        },
+        {
+          "line": 126,
+          "placeholder": "<W-core E17 worktree>",
+          "occurrences": 1,
+          "original_sha256": "dfdc7b5e2fd1aca1234651b1a61a1bf67400c74d353514ca0ef4eaf00e720a83",
+          "original_length": 65
+        }
+      ]
+    },
+    {
+      "path": "results/g_agreement/understand/e17/INTEGRATOR_HANDOFF.txt",
+      "local_commit": "bdd5f069",
+      "local_sha256": "29ed450d9f7d515ad6d5379a1afbed7d6c1e13e117c21d562cf838c7f8c55edc",
+      "first_published_in": "56ab929d",
+      "published_commit": "4aeea925",
+      "published_sha256": "f0ab81a3adbeb79d816f3cd1bfc2f0bb2573c39963587c704bd65d0b16d4a9f5",
+      "sealed_by": [],
+      "redactions": [
+        {
+          "line": 3,
+          "placeholder": "<W-core E17 worktree>",
+          "occurrences": 1,
+          "original_sha256": "dfdc7b5e2fd1aca1234651b1a61a1bf67400c74d353514ca0ef4eaf00e720a83",
+          "original_length": 65
+        }
+      ]
+    },
+    {
+      "path": "results/g_agreement/understand/e17/RUN_RECEIPT.json",
+      "local_commit": "3b48f0da",
+      "local_sha256": "35ab2b09b4bbe5f7cc2eba0f8b79a403fe92be396c69d41bbe6686fae557203f",
+      "first_published_in": "12721e0b",
+      "published_commit": "4aeea925",
+      "published_sha256": "a23e10770522a2233e2ec093a0461346c1a2a7acae3dddbd510304373cd79807",
+      "sealed_by": [],
+      "redactions": [
+        {
+          "line": 3,
+          "placeholder": "<W-core E17 worktree>",
+          "occurrences": 1,
+          "original_sha256": "dfdc7b5e2fd1aca1234651b1a61a1bf67400c74d353514ca0ef4eaf00e720a83",
+          "original_length": 65
+        },
+        {
+          "line": 4,
+          "placeholder": "<W-core worktree>",
+          "occurrences": 1,
+          "original_sha256": "93fba35bbc12db8450f1080185f3c9230a7ec57caabe6b41fc1503a08b243c7f",
+          "original_length": 69
+        },
+        {
+          "line": 4,
+          "placeholder": "python",
+          "occurrences": 1,
+          "original_sha256": "1a7f3f495b47b17f7ebe1c3d07a75a107453cf82a4e1694c41026d9b904cb716",
+          "original_length": 76
+        }
+      ]
+    },
+    {
+      "path": "projects/g_agreement/understand/tests/test_e17_items.py",
+      "local_commit": "bdd5f069",
+      "local_sha256": "8913985dd2f992e179d11acd3504daba9744f06a5896a7688d3e7f19278e5857",
+      "first_published_in": "35df2ca3",
+      "published_commit": "4aeea925",
+      "published_sha256": "340fda871800c74053f7e4f8ded8f99619c5980df47d1012d5d0ea300aaeecf8",
+      "sealed_by": [],
+      "redactions": [
+        {
+          "line": 12,
+          "placeholder": "cache/g_assets/",
+          "occurrences": 1,
+          "original_sha256": "16c28b145ba452a6496384693cf832288ff1e9405e55509412fff29c091182d5",
+          "original_length": 67
+        }
+      ]
+    }
+  ]
+}

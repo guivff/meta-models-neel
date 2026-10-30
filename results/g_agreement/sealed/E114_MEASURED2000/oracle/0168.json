@@ -1,0 +1,66 @@
+[
+  {
+    "id": "448c1025a091d1abdcd05f6e",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3]  # \u5916\u5c42\u5217\u8868\uff0c\u5bf9\u5e94 JSON \u6570\u7ec4\n- 2, 3]  # \u7b2c\u4e00\u5c42\u5d4c\u5957\uff1a[1\n- 2, 3]  # \u5bf9\u5e94 {\"id\": 1, \"children\": [1,\n- [1, 2], [1, 2, 3]]  # \u5c42\u7ea7\u7ed3\u6784\uff1a[1, 2",
+      "text": "- 2, 3]  # \u5916\u5c42\u5217\u8868\uff0c\u5bf9\u5e94 JSON \u6570\u7ec4\n- 2, 3]  # \u7b2c\u4e00\u5c42\u5d4c\u5957\uff1a[1\n- 2, 3]  # \u5bf9\u5e94 {\"id\": 1, \"children\": [1,\n- [1, 2], [1, 2, 3]]  # \u5c42\u7ea7\u7ed3\u6784\uff1a[1, 2"
+    }
+  },
+  {
+    "id": "41aa6a07b508cb35769488de",
+    "output": {
+      "malformed": false,
+      "raw": "- , 2, 3], [1,\n- 2, 3], [4, [1, 2\n- 2, 3], [4, [1, 2, 3\n- [1, 2], [3, 4, [5, 6]]]  # Nested list structure, depth 2\n- [1, 2], [3, 4, [5, 6]]]` (nested list)",
+      "text": "- , 2, 3], [1,\n- 2, 3], [4, [1, 2\n- 2, 3], [4, [1, 2, 3\n- [1, 2], [3, 4, [5, 6]]]  # Nested list structure, depth 2\n- [1, 2], [3, 4, [5, 6]]]` (nested list)"
+    }
+  },
+  {
+    "id": "e22d94bbcd73202497407740",
+    "output": {
+      "malformed": false,
+      "raw": "- 2}, {3, 4}}, {{1,\n- 2, 3}, {4, 5}}}, {{{1, 2\n- 2, 3}, {4, 5}}}, {{{1, 2}, {3, 4}}}}] (* Nested sets\n- {2, 3}}, {{4, 5}} } } } } // Nested lists, each containing a set {1,",
+      "text": "- 2}, {3, 4}}, {{1,\n- 2, 3}, {4, 5}}}, {{{1, 2\n- 2, 3}, {4, 5}}}, {{{1, 2}, {3, 4}}}}] (* Nested sets\n- {2, 3}}, {{4, 5}} } } } } // Nested lists, each containing a set {1,"
+    }
+  },
+  {
+    "id": "5da1250cf7a04308d7757634",
+    "output": {
+      "malformed": false,
+      "raw": "- 2}, {1, 2}}, {{3, 4\n- 2}, {3, 4}}}, {{{1, 2\n- 2, 3}}, {{1, 2, 3}}}, {1, 2\n- {1, 2}}, {{1, 2, 3}} } } // Nested lists, each level is a Set {1,",
+      "text": "- 2}, {1, 2}}, {{3, 4\n- 2}, {3, 4}}}, {{{1, 2\n- 2, 3}}, {{1, 2, 3}}}, {1, 2\n- {1, 2}}, {{1, 2, 3}} } } // Nested lists, each level is a Set {1,"
+    }
+  },
+  {
+    "id": "308e9f4e5261112d806df81b",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3],  # nested array [2,\n- 2, 3] }, [ {\"id\": 1, \"children\": [2\n- 2, [3, 4] }  # \u5d4c\u5957\u5217\u8868\uff0c\u6df1\u5ea6\u4e3a2\n- [2, 3], [4, 5, 6]]  # \u5d4c\u5957\u6570\u7ec4\uff0c\u6df1\u5ea62\n    },\n    {\"id\": 2",
+      "text": "- 2, 3],  # nested array [2,\n- 2, 3] }, [ {\"id\": 1, \"children\": [2\n- 2, [3, 4] }  # \u5d4c\u5957\u5217\u8868\uff0c\u6df1\u5ea6\u4e3a2\n- [2, 3], [4, 5, 6]]  # \u5d4c\u5957\u6570\u7ec4\uff0c\u6df1\u5ea62\n    },\n    {\"id\": 2"
+    }
+  },
+  {
+    "id": "4057517d0d0c2cfb74d741f7",
+    "output": {
+      "malformed": false,
+      "raw": "- , 3], [4, [5, 2\n- 2, 3], [4, [5, 6\n- 2, 3] }, { \"nested\": [4, 5] }, [6, 7\n- [2, 3], [4, [5, 6]]]` (nested list) or `[1, 2",
+      "text": "- , 3], [4, [5, 2\n- 2, 3], [4, [5, 6\n- 2, 3] }, { \"nested\": [4, 5] }, [6, 7\n- [2, 3], [4, [5, 6]]]` (nested list) or `[1, 2"
+    }
+  },
+  {
+    "id": "b120eeff0c8a64d41a566ccd",
+    "output": {
+      "malformed": false,
+      "raw": "- 2}, {3, 4} }, { {2,\n- 3, 4}, {5, 6} } } // Level 1: Nested lists\n- 2}, {3, 4} } } // Level 1: Inner sets {2,\n- 2, 3}, {4, 5} } } // Level 1: Inner sets {2,3} and {4,5}",
+      "text": "- 2}, {3, 4} }, { {2,\n- 3, 4}, {5, 6} } } // Level 1: Nested lists\n- 2}, {3, 4} } } // Level 1: Inner sets {2,\n- 2, 3}, {4, 5} } } // Level 1: Inner sets {2,3} and {4,5}"
+    }
+  },
+  {
+    "id": "3318f97a25dcc544370ccc97",
+    "output": {
+      "malformed": false,
+      "raw": "- 2}, {3, 4} }], 2\n- 3}, {2, 4} }], 1) } // Level 1: List of Lists\n- 2, 3}, {4, 5} }], 1) } // Inner Level 1: {2\n- {2, 3}}, { {4, 5} } } // Nested structure, but flat in execution | `{2,",
+      "text": "- 2}, {3, 4} }], 2\n- 3}, {2, 4} }], 1) } // Level 1: List of Lists\n- 2, 3}, {4, 5} }], 1) } // Inner Level 1: {2\n- {2, 3}}, { {4, 5} } } // Nested structure, but flat in execution | `{2,"
+    }
+  }
+]

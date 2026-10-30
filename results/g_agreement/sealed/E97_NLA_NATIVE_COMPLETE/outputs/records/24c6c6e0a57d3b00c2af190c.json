@@ -1,0 +1,12 @@
+{
+  "id": "24c6c6e0a57d3b00c2af190c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is asking to extract a specific entry from XML-like structured data, establishing a task-response format.\n\nThe phrase \"Here is the data:\" signals an example or sample is being presented, with the model expected to demonstrate the extraction task on the provided content.\n\nFinal token `<entry` opens an XML tag, directly mirroring the preceding `<entry>` reference, requiring immediate continuation with tag attributes or content (e.g., `>` or ` id=\"...\"`) followed by structured dictionary/glossary-style content.\n\"Among the following entries, which one is the most complete?\" sets up a multiple-choice or selection task.\n\"Here is the data:\n<entry\" begins a new XML entry block, expecting structured fields like definitions, dates, or metadata typical of a dictionary or log format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is asking to extract a specific entry from XML-like structured data, establishing a task-response format.\n\nThe phrase \"Here is the data:\" signals an example or sample is being presented, with the model expected to demonstrate the extraction task on the provided content.\n\nFinal token `<entry` opens an XML tag, directly mirroring the preceding `<entry>` reference, requiring immediate continuation with tag attributes or content (e.g., `>` or ` id=\"...\"`) followed by structured dictionary/glossary-style content.\n\"Among the following entries, which one is the most complete?\" sets up a multiple-choice or selection task.\n\"Here is the data:\n<entry\" begins a new XML entry block, expecting structured fields like definitions, dates, or metadata typical of a dictionary or log format.",
+  "truncated": false
+}

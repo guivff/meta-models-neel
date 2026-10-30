@@ -1,0 +1,12 @@
+{
+  "id": "c0c92894e1be8d5f519f7d3f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on examples given.\n\nThe pattern shows a structured Q&A format with Chinese text examples followed by English labels, now applying to a specific test case \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label awaiting the model's direct answer \u2014 the classification result (\"Positive\" or \"Negative\") must follow immediately.\n\"Given sentence: 'The weather is very good today.'\nFormat: [Label]\nGiven sentence: 'The weather is very good today.'\nReply:\" \u2014 this closing \"Reply:\" field demands the actual classification output as the next token, completing the structured response format.\n\n\"Reply:\" is a field label in the prompt template, requiring the direct answer/classification to follow immediately.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on examples given.\n\nThe pattern shows a structured Q&A format with Chinese text examples followed by English labels, now applying to a specific test case \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label awaiting the model's direct answer \u2014 the classification result (\"Positive\" or \"Negative\") must follow immediately.\n\"Given sentence: 'The weather is very good today.'\nFormat: [Label]\nGiven sentence: 'The weather is very good today.'\nReply:\" \u2014 this closing \"Reply:\" field demands the actual classification output as the next token, completing the structured response format.\n\n\"Reply:\" is a field label in the prompt template, requiring the direct answer/classification to follow immediately.",
+  "truncated": false
+}

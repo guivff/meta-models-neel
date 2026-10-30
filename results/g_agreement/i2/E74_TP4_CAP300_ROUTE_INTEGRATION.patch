@@ -1,0 +1,724 @@
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/BUDGET_TEMPLATE.json
++++ cache/g_agreement/i2/operator_g_tp4_cap300_allocate_candidate/BUDGET_TEMPLATE.json
+@@ -7,2 +7,2 @@
+-  "C_closed_usd": 15.46,
+-  "C_future_native_planning_usd": 6.8,
++  "C_closed_usd": 18.69,
++  "C_future_native_planning_usd": 0,
+@@ -15 +15 @@
+-  "G_authority_sha256": "e58f1f834090e8e102b8c8a99e590bf76f73e1393a6c4871e12e45c25611188f",
++  "G_authority_sha256": "a8203caa71f4a3b10da945ad7c6ea3fb9b65b7b7dac7512b79a05b6e6054209d",
+@@ -18,3 +18,3 @@
+-  "G_experiment_cap_usd": 160,
+-  "G_future_reservation_usd": 152.92,
+-  "G_new_run_id": "ROOT_FRESH_e74-h200_RUN_ID",
++  "G_experiment_cap_usd": 300,
++  "G_future_reservation_usd": null,
++  "G_new_run_id": "ROOT_FRESH_e74-b200_RUN_ID",
+@@ -22 +22 @@
+-  "I2_fullcap_projection_usd": 182.26,
++  "I2_fullcap_projection_usd": null,
+@@ -29 +29 @@
+-  "combined_fullcap_projection_usd": 442.26,
++  "combined_fullcap_projection_usd": null,
+@@ -32,2 +32,2 @@
+-  "projection_posted_in_chat": true,
+-  "schema": "i2-e74-h200-tp8-budget-v1"
++  "projection_posted_in_chat": false,
++  "schema": "i2-e74-b200-tp4-cap300-budget-v1"
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/CONTRACT.md
++++ cache/g_agreement/i2/operator_g_tp4_cap300_allocate_candidate/CONTRACT.md
+@@ -1 +1 @@
+-# H200 TP8 allocator and preparation
++# TP4 cap300 operational route
+@@ -3 +3 @@
+-This new private candidate implements one pod with exactly 8 H200 GPUs. It preserves the failed TP4 attempt, earlier allocators, and scientific worker sources. It does not implement an 8 B200 runtime.
++Derived from the preserved, reviewed TP8 allocator/preparer/driver; actual B2004 quote, original8473-second whole endpoint and1200-second boot/smoke are enforced. The exact e0fc50bd running-mean worker has only its hardware cap authority gate and SOURCE_SEAL amended. Cap300 includes closed7.08 once. Full-deadline padded forecast is bounded by the freshly posted reservation; daily500 and I2240 remain enforced, withQ260 and source-bound C liabilities/eligible_B200_C_work assessment. No Hopper time gate applies.
+@@ -5,23 +5 @@
+-The source-bound plan totals 9,853 seconds: 900 environment/archive, 3,600 weights, 2,040 boot, 120 smoke, 1,633 capture, 600 CPU/probes/W-lens/GO, 840 readers, and 120 closeout. Provider stop is actual creation +9,853; work ends 120 seconds earlier. Boot/smoke's 3,000-second maximum never extends that endpoint. The repaired dpkg public bootstrap retains original dispatch +900 setup. Accepted author/proxy planning uncertainty remains explicit; no new empirical prelaunch measurement gate is imposed.
+-
+-Exactly 8-GPU quotes are whole-replica hourly rates. No H200 create precedes 2026-10-28 06:00 Europe/Zurich (05:00Z). Secure stock has priority. Community is forbidden before 10:00 Europe/Zurich (09:00Z), then requires the same fresh query to show no available Secure 8 H200 location. A Secure quote that fails cost admission cannot be replaced by Community while Secure capacity exists. Independent provider evidence must match hardware, count, cloud, location, image, price, creation and storage.
+-
+-Each attempt requires `((9853 * actual_hourly / 3600) + full_extras_upper) * 1.25 + 7.08 <= 160`. Future G headroom and reservation are $152.92; the failed G attempt's $7.08 is included once. The longer 10,693-second envelope at the earlier illustrative $42.32/h would exceed the experiment cap after adding closed spend and is not admitted. The request uses 50 GB container disk plus 1,000 GB pod-local volume at /workspace, no network volume or private registry handle, and $2 full extras upper bound.
+-
+-Before launch, root supplies and posts fresh Q/I2 ledger and handoff hashes, dated authority, C closed/active/planned liabilities and current C queue assessment. Closed and active run IDs cannot duplicate. An eligible C H200 job takes priority: the budget references an immutable local queue receipt by path/SHA with `checked_epoch` and `eligible_H200_C_work:false`; true, changed or stale evidence blocks G before its claim. The budget's 900-second freshness window also bounds this assessment and every under-lock recheck. The current example C closed $15.46, active $0, future native $6.80 yields combined $442.26 / I2 $182.26. The template is not a live budget; actual values must be refreshed.
+-
+-The fixed global claim namespace is unchanged across worktrees. Claims are never reused. The known query-null G a2 is financially discharged only through its immutable closeout; other unresolved allocations/intents block. The deployment lock, newest-pod 180-second spacing, at most 19 running pods, original 900-second allocator wait, durable exclusive create intent, and at most one create mutation remain. Unknown create never retries. When create omits createdAt, only a separately retained exact provider query supplies it for validation; original response bytes remain unchanged.
+-
+-Default allocate.py validates sources/budget without provider calls. Explicit --allocate still stops before any claim while `HOPPER_RULING_SHA=None`. Guiv's clarification of the historical failed B200 claim is pending; neither caller flags nor environment values clear it. Any eventual ruling must be pinned truthfully and integrated with the driver's corresponding gate. No historical no-claim assertion is invented.
+-
+-Preparation has two stages. First prepare.py checks the exact allocation and a separate root-observed allocator exit/lock release, writes a provider-only guard config, and reserves the final guard home and journal paths without inventing SSH. provider_guards.py can then arm and independently observe the original deadline pair. Once root supplies actual SSH metadata, prepare.py writes the final config referencing that same receipt; the driver reobserves and adopts the pair, never installs a duplicate. Source hashes bind all driver production files, actual allocation/budget/stock/ruling/queue files and the repaired bootstrap/overlay dependencies. The provider-only initial journal is bound to the exact allocation and setup deadline so its early watchdog is safe before full attach.
+-
+-allocate.py reads the fixed `cache/g_agreement/i2/g_h200_tp8_admission/BUDGET_PLANNING.json`; root must write the fresh proof there. Root invocation sequence, only after the real pending ruling is resolved and the time/quote/budget gates pass:
+-
+-1. `python3 -B allocate.py --run-id <fresh-e74-h200-run> --ssh-public-key-file <public-key-file> --allocate`
+-2. After that tool has exited, `python3 -B prepare.py --allocation <claim/ALLOCATION.private.json> --out <new-private-home> --budget <same-budget> --observe-allocator-exit --root-tool-exit-code 0 --root-tool-evidence <actual-tool-exit-reference>` (local ps/lock observation only).
+-3. Root runs the reviewed driver's provider_guards.py with `--config <home/GUARD_CONFIG.private.json> --allocation <claim/ALLOCATION.private.json> --exit-proof <home/ALLOCATOR_EXIT.private.json> --receipt <home/GUARDS.private.json> --arm`.
+-4. Root obtains a fresh exact provider SSH observation without changing clocks. Run prepare.py with the same allocation/out/budget, `--allocator-exit <home/ALLOCATOR_EXIT.private.json> --ssh-observation <actual-private-query> --ssh-identity-file <existing-key-path> --known-hosts-file <private-known-hosts> --guards-receipt <home/GUARDS.private.json>`.
+-5. Root uses the reviewed driver's explicit enablement and `g_operator.py --config <home/CONFIG.private.json> --attach-existing <home/ATTACH.private.json>`. After attach reaches PUBLIC_BOOTSTRAP_REQUIRED, root runs `pin_ssh_hostkey.py --config <home/CONFIG.private.json>` to pin the actual observed endpoint after rechecking the adopted guards. Then `g_operator.py --config <home/CONFIG.private.json> --step` advances runtime installation within the original setup deadline. Capture, CPU probes, committed W-lens forecast, atomic GO and readers retain their registered order.
+-
+-No live provider, SSH, registry, credential or model actions were used to develop or test this candidate. Synthetic tests cannot establish actual stock, host readiness, guard liveness or scientific validity.
++No provider calls during CPU tests. Original claims remain consumed. Execution and remote supervisor live fuses remain closed until exact root admission. Follow ROOT_COMMANDS.md after verifying the public integration receipt hashes. Historical TP8 receipts are not proof for these changed sources.
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/allocate.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_allocate_candidate/allocate.py
+@@ -21 +21 @@
+-BUDGET=BASE/'g_h200_tp8_admission/BUDGET_PLANNING.json'
++BUDGET=BASE/'g_b200_tp4_cap300_admission/BUDGET_PLANNING.json'
+@@ -23 +23 @@
+-STOCK='query { gpuTypes(input:{id:"NVIDIA H200"}) { id secure8:lowestPrice(input:{gpuCount:8,secureCloud:true}) { uninterruptablePrice stockStatus availableGpuCounts } community8:lowestPrice(input:{gpuCount:8,secureCloud:false}) { uninterruptablePrice stockStatus availableGpuCounts } } dataCenters { id secure8:gpuAvailability(input:{gpuCount:8,secureCloud:true}) { gpuTypeId stockStatus available } community8:gpuAvailability(input:{gpuCount:8,secureCloud:false}) { gpuTypeId stockStatus available } } }'
++STOCK='query { gpuTypes(input:{id:"NVIDIA B200"}) { id secure4:lowestPrice(input:{gpuCount:4,secureCloud:true}) { uninterruptablePrice stockStatus availableGpuCounts } community4:lowestPrice(input:{gpuCount:4,secureCloud:false}) { uninterruptablePrice stockStatus availableGpuCounts } } dataCenters { id secure4:gpuAvailability(input:{gpuCount:4,secureCloud:true}) { gpuTypeId stockStatus available } community4:gpuAvailability(input:{gpuCount:4,secureCloud:false}) { gpuTypeId stockStatus available } } }'
+@@ -25,2 +25,2 @@
+-G_AUTHORITY=ROOT/'results/g_agreement/i2/E74_TP8_CAP160_AUTHORITY.json'
+-G_AUTHORITY_SHA='e58f1f834090e8e102b8c8a99e590bf76f73e1393a6c4871e12e45c25611188f'
++G_AUTHORITY=ROOT/'results/g_agreement/i2/E74_TP4_CAP300_AUTHORITY.json'
++G_AUTHORITY_SHA='a8203caa71f4a3b10da945ad7c6ea3fb9b65b7b7dac7512b79a05b6e6054209d'
+@@ -30 +30 @@
+-SOURCE_PINS={'/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/protocol.py': '68cb3d75ce53c3d6606c9c0417f97fd4ac753dbe6a94f70b277efcd364f927b6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/pins.py': 'd7740e61c3ea0dd3930f3dce7fd8bf5a4ed063b6da38cfb0c35b12e659c6a36b', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/transport.py': '1e006f62d6de68307adf1c50f4861566562f28f6abc8148b2185986e758543ac', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/PACKAGE.json': '08647e87f749ee5ab8148258c45f114a63749ebb917e70a94544ad738d4c4d56', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/CPU_TEST_RECEIPT.json': '3ca86f35950a6dc71721539aa7f66e9ddda74e189020e07dec5c3537c9272e96', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/START_COMMAND.txt': 'd68622d92301872ab4983616b735eeedfad829785acbe3c067b2984a3141aa7a', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/e74-public-runtime-recipe.tar.gz': '4ab27169cc752d7cfb48136ddf26c92b4c7cb7e2e1abf8bad26c80181ebe6853', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_tp8_allocate_candidate/launch_plan.py': 'aebbde83a5acbffb15adca1a7e3e2ee0aedc031e5628b88256c03a95c36dc6fe', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/E74_BOOTSTRAP_FAILURE_A2_CLOSEOUT.json': 'fdda5387f9ade766ff9e17da0229e1bb5fba07106138f1c66f7754f367f31ac5'}
++SOURCE_PINS={'/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/protocol.py': '68cb3d75ce53c3d6606c9c0417f97fd4ac753dbe6a94f70b277efcd364f927b6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/pins.py': 'd7740e61c3ea0dd3930f3dce7fd8bf5a4ed063b6da38cfb0c35b12e659c6a36b', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/transport.py': '1e006f62d6de68307adf1c50f4861566562f28f6abc8148b2185986e758543ac', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/PACKAGE.json': '08647e87f749ee5ab8148258c45f114a63749ebb917e70a94544ad738d4c4d56', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/CPU_TEST_RECEIPT.json': '3ca86f35950a6dc71721539aa7f66e9ddda74e189020e07dec5c3537c9272e96', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/START_COMMAND.txt': 'd68622d92301872ab4983616b735eeedfad829785acbe3c067b2984a3141aa7a', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/e74-public-runtime-recipe.tar.gz': '4ab27169cc752d7cfb48136ddf26c92b4c7cb7e2e1abf8bad26c80181ebe6853', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_tp4_cap300_allocate_candidate/launch_plan.py': '20c9a1e1d49c3c359f1960526438e42ba855748435f4bede2a413220b345fce0', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/E74_BOOTSTRAP_FAILURE_A2_CLOSEOUT.json': 'fdda5387f9ade766ff9e17da0229e1bb5fba07106138f1c66f7754f367f31ac5'}
+@@ -79 +79 @@
+-    authority=decode(read(G_AUTHORITY));need(authority['registered_commit']=='b81c6c9d' and authority['TP8_cap_usd']==160 and authority['TP4_cap_usd']==100,'EXACT_TP8_AUTHORITY')
++    authority=decode(read(G_AUTHORITY));need(authority['TP4_cap_usd']==300 and authority['includes_closed_G_usd']==7.08 and authority['other_gates_unchanged'] is True,'EXACT_TP8_AUTHORITY')
+@@ -83,13 +83,4 @@
+-def hopper_ruling(checked_epoch=None):
+-    need(HOPPER_RULING_SHA is not None,'GUIV_HISTORICAL_B200_CLAIM_RULING_PENDING')
+-    raw=read(HOPPER_RULING_PATH);need(sha(raw)==HOPPER_RULING_SHA,'EXACT_HOPPER_RULING_SOURCE')
+-    value=decode(raw);need(value['authorises_h200_after_failed_b200'] is True,'HOPPER_RULING_DOES_NOT_AUTHORIZE')
+-    need(type(value['hopper_fallback']) is dict,'REGISTERED_HOPPER_BINDING_REQUIRED')
+-    need(value['historical_b200_claim_occurred'] is True and value['failed_run_id']=='e74-public-20261027-a2','TRUTHFUL_FAILED_CLAIM_RULING')
+-    checked=time.time() if checked_epoch is None else checked_epoch
+-    need(type(checked) in (int,float) and checked>=1793163600.0,'HOPPER_NOT_BEFORE')
+-    gate={'authority':'bd43a46af5eb2ea84e8524fdc1ab6f5262acd729','not_before_epoch':1793163600.0,
+-      'checked_epoch':checked,'no_b200_claim_by_deadline':False,'single_node':True,
+-      'failed_pre_ssh_b200_claim_exception_authorised':True,'failed_run_id':value['failed_run_id'],
+-      'failed_claim_ruling_sha256':sha(raw)}
+-    return {'source_path':str(HOPPER_RULING_PATH),'source_sha256':sha(raw),'hopper_fallback':gate}
++def cap_ruling(checked_epoch=None):
++    source_gate()
++    return {'source_path':str(G_AUTHORITY),'source_sha256':G_AUTHORITY_SHA,'limit_authority':'9a53862f','tp4_cap_authority_sha256':G_AUTHORITY_SHA}
++
+@@ -98 +89 @@
+-    p.ident(run);need(run.startswith('e74-h200-'),'NEW_H200_G_RUN')
++    p.ident(run);need(run.startswith('e74-b200-'),'NEW_H200_G_RUN')
+@@ -113 +104 @@
+-    need(b['schema']=='i2-e74-h200-tp8-budget-v1' and 0<=now-checked<=900 and b['projection_posted_in_chat'] is True,'FRESH_POSTED_ROOT_BUDGET')
++    need(b['schema']=='i2-e74-b200-tp4-cap300-budget-v1' and 0<=now-checked<=900 and b['projection_posted_in_chat'] is True,'FRESH_POSTED_ROOT_BUDGET')
+@@ -118 +109 @@
+-    need(type(q['eligible_H200_C_work']) is bool and q['eligible_H200_C_work'] is False,'ELIGIBLE_C_WORK_HAS_H200_PRIORITY')
++    need(type(q['eligible_B200_C_work']) is bool and q['eligible_B200_C_work'] is False,'ELIGIBLE_C_WORK_HAS_B200_PRIORITY')
+@@ -121 +112 @@
+-    for key,value in [('Q_at_caps_usd',260),('G_closed_usd',7.08),('G_experiment_cap_usd',160),('G_future_reservation_usd',152.92),('daily_ceiling_usd',500),('I2_allocation_usd',240)]:need(number(b[key])==number(value),'BUDGET_COMPONENT_CHANGED')
++    for key,value in [('Q_at_caps_usd',260),('G_closed_usd',7.08),('G_experiment_cap_usd',300),('daily_ceiling_usd',500),('I2_allocation_usd',240)]:need(number(b[key])==number(value),'BUDGET_COMPONENT_CHANGED')
+@@ -135 +126,2 @@
+-    total=Decimal(260)+closed+active+planning+Decimal(160)
++    future=number(b['G_future_reservation_usd']);need(0<future<=Decimal('292.92'),'BOUNDED_ACTUAL_FUTURE_RESERVATION')
++    total=Decimal(260)+closed+active+planning+Decimal('7.08')+future
+@@ -137 +129 @@
+-    run=p.ident(b['G_new_run_id']);need(run.startswith('e74-h200-') and (run_id is None or run==run_id),'EXACT_NEW_G_RUN');no_prior_g_allocation(run)
++    run=p.ident(b['G_new_run_id']);need(run.startswith('e74-b200-') and (run_id is None or run==run_id),'EXACT_NEW_G_RUN');no_prior_g_allocation(run)
+@@ -144 +136 @@
+-      'experiment_closed_usd':'7.08','future_reservation_usd':'152.92','experiment_cap_usd':'160','source_hashes':{k:v for k,v in b.items()if k.endswith('_sha256')}}
++      'experiment_closed_usd':'7.08','future_reservation_usd':str(future),'experiment_cap_usd':'300','source_hashes':{k:v for k,v in b.items()if k.endswith('_sha256')}}
+@@ -161 +153 @@
+-    rows=data.get('gpuTypes');need(type(rows) is list and all(type(x) is dict for x in rows),'QUOTE_SCHEMA');gpu=[x for x in rows if x.get('id')=='NVIDIA H200'];need(len(gpu)==1,'EXACT_H200_QUOTE')
++    rows=data.get('gpuTypes');need(type(rows) is list and all(type(x) is dict for x in rows),'QUOTE_SCHEMA');gpu=[x for x in rows if x.get('id')=='NVIDIA B200'];need(len(gpu)==1,'EXACT_H200_QUOTE')
+@@ -163 +155 @@
+-    locations={'secure8':[],'community8':[]};seen=set()
++    locations={'secure4':[],'community4':[]};seen=set()
+@@ -168 +160 @@
+-            target=[x for x in rows if x.get('gpuTypeId')=='NVIDIA H200'];need(all(type(x.get('available')) is bool for x in target),'BOOLEAN_AVAILABILITY')
++            target=[x for x in rows if x.get('gpuTypeId')=='NVIDIA B200'];need(all(type(x.get('available')) is bool for x in target),'BOOLEAN_AVAILABILITY')
+@@ -170 +162 @@
+-    if locations['secure8']:kind,cloud='secure8','SECURE'
++    if locations['secure4']:kind,cloud='secure4','SECURE'
+@@ -172 +164 @@
+-        need(now>=launch.COMMUNITY_NOT_BEFORE,'COMMUNITY_BEFORE_TEN_CET');need(locations['community8'],'NO_EIGHT_H200_STOCK');kind,cloud='community8','COMMUNITY'
++        need(locations['community4'],'NO_EIGHT_H200_STOCK');kind,cloud='community4','COMMUNITY'
+@@ -175 +167 @@
+-    return sorted(locations[kind])[0],rate,cloud,{'secure_available_locations':len(locations['secure8']),'community_available_locations':len(locations['community8']),'observed_epoch':now,'selected_cloud':cloud,'community_gate_epoch':launch.COMMUNITY_NOT_BEFORE}
++    return sorted(locations[kind])[0],rate,cloud,{'secure_available_locations':len(locations['secure4']),'community_available_locations':len(locations['community4']),'observed_epoch':now,'selected_cloud':cloud,'community_gate_epoch':launch.COMMUNITY_NOT_BEFORE}
+@@ -182 +174 @@
+-    for k,v in [('gpuCount',8),('containerDiskInGb',50),('volumeInGb',1000)]:need(type(pod.get(k)) is int and pod[k]==v,'EXACT_GPU_STORAGE')
++    for k,v in [('gpuCount',4),('containerDiskInGb',50),('volumeInGb',1000)]:need(type(pod.get(k)) is int and pod[k]==v,'EXACT_GPU_STORAGE')
+@@ -184 +176 @@
+-    m=pod.get('machine');need(type(m) is dict and m.get('gpuTypeId')=='NVIDIA H200' and m.get('secureCloud') is (body['cloudType']=='SECURE') and m.get('dataCenterId')==body['dataCenterId'],'EXACT_MACHINE')
++    m=pod.get('machine');need(type(m) is dict and m.get('gpuTypeId')=='NVIDIA B200' and m.get('secureCloud') is (body['cloudType']=='SECURE') and m.get('dataCenterId')==body['dataCenterId'],'EXACT_MACHINE')
+@@ -211,2 +203,2 @@
+-def allocate(run,key,backend,*,claim_fn=claim,budget_fn=budget_check,source_fn=source_gate,ruling_fn=hopper_ruling):
+-    source_fn();ruling=ruling_fn();p.ident(run);need(run.startswith('e74-h200-'),'E74_RUN_REQUIRED');p.public_key(key)
++def allocate(run,key,backend,*,claim_fn=claim,budget_fn=budget_check,source_fn=source_gate,ruling_fn=cap_ruling):
++    source_fn();ruling=ruling_fn();p.ident(run);need(run.startswith('e74-b200-'),'E74_RUN_REQUIRED');p.public_key(key)
+@@ -226,0 +219 @@
++        need(number(plan['padded_forecast_usd'])<=number(budget['future_reservation_usd']),'ACTUAL_QUOTE_FORECAST_EXCEEDS_RESERVATION')
+@@ -248,2 +241,2 @@
+-          'hourly_usd':str(rate),'extras_upper_usd':'2','forecast_padded_usd':plan['padded_forecast_usd'],'full_reservation_usd':'152.92','cap_usd':160,'experiment_closed_usd':7.08,'future_maximum_usd':152.92,'future_reservation_usd':152.92,'cloud_type':cloud,'stock_gate':stock_gate,'limit_authority':launch.LIMIT_AUTHORITY,'hardware_forecast_sha256':launch.FORECAST_SHA,'phase_forecast_seconds':launch.PHASES,'boot_smoke_max_seconds':3000,
+-          'container_disk_gb':50,'local_volume_gb':1000,'network_volume_id':None,'image_ref':launch.IMAGE,'gpu_type':'NVIDIA H200','gpu_count':8,
++          'hourly_usd':str(rate),'extras_upper_usd':'2','forecast_padded_usd':plan['padded_forecast_usd'],'full_reservation_usd':budget['future_reservation_usd'],'cap_usd':300,'experiment_closed_usd':7.08,'future_maximum_usd':float(budget['future_reservation_usd']),'future_reservation_usd':float(budget['future_reservation_usd']),'cloud_type':cloud,'stock_gate':stock_gate,'limit_authority':launch.LIMIT_AUTHORITY,'hardware_forecast_sha256':launch.FORECAST_SHA,'phase_forecast_seconds':launch.PHASES,'boot_smoke_max_seconds':1200,
++          'container_disk_gb':50,'local_volume_gb':1000,'network_volume_id':None,'image_ref':launch.IMAGE,'gpu_type':'NVIDIA B200','gpu_count':4,
+@@ -256 +249 @@
+-          'budget':budget,'hopper_ruling':ruling,'allocator_source_sha256':sha(read(__file__))}
++          'budget':budget,'cap_ruling':ruling,'allocator_source_sha256':sha(read(__file__))}
+@@ -270 +263 @@
+-    os.umask(0o077);p.ident(a.run_id);need(a.run_id.startswith('e74-h200-'),'E74_RUN_REQUIRED');source_gate();budget_check(time.time(),run_id=a.run_id)
++    os.umask(0o077);p.ident(a.run_id);need(a.run_id.startswith('e74-b200-'),'E74_RUN_REQUIRED');source_gate();budget_check(time.time(),run_id=a.run_id)
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/launch_plan.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_allocate_candidate/launch_plan.py
+@@ -12,4 +12,4 @@
+-FORECAST=9853
+-CLOSED=Decimal('7.08');CAP=Decimal('160');FUTURE=CAP-CLOSED
+-NOT_BEFORE=1793163600.;COMMUNITY_NOT_BEFORE=1793178000.
+-LIMIT_AUTHORITY='b81c6c9d7b7ec319d611ca3caea31ace8457e0d7'
++FORECAST=8473
++CLOSED=Decimal('7.08');CAP=Decimal('300');FUTURE=CAP-CLOSED
++NOT_BEFORE=1793134800.;COMMUNITY_NOT_BEFORE=1793134800.
++LIMIT_AUTHORITY='9a53862f'
+@@ -17,2 +17,2 @@
+-FORECAST_SHA='df45075c095e13668ef9cab17053dae30a6d1ac6c11e803ca9a98099e3f6bd1e'
+-PHASES={'boot':2040,'smoke':120,'capture':1633,'readouts':840}
++FORECAST_SHA='3d0e669f41f6419b83a62ed3491ab168f7a3db9ea43ca9935ae4e6c8187aaf2c'
++PHASES={'boot':660,'smoke':120,'capture':1633,'readouts':840}
+@@ -22 +22 @@
+-    a.need(run_id.startswith('e74-h200-') and cloud in ('SECURE','COMMUNITY'),'EXACT_H200_PROFILE')
++    a.need(run_id.startswith('e74-b200-') and cloud in ('SECURE','COMMUNITY'),'EXACT_H200_PROFILE')
+@@ -24 +23,0 @@
+-    a.need(cloud=='SECURE' or dispatch>=COMMUNITY_NOT_BEFORE,'COMMUNITY_BEFORE_TEN_CET')
+@@ -30 +29 @@
+-    body={'name':run_id,'cloudType':cloud,'gpuTypeId':'NVIDIA H200','gpuCount':8,'imageName':IMAGE,
++    body={'name':run_id,'cloudType':cloud,'gpuTypeId':'NVIDIA B200','gpuCount':4,'imageName':IMAGE,
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/prepare.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_allocate_candidate/prepare.py
+@@ -10,5 +10,5 @@
+-BASE=L.BASE;DRIVER=BASE/'operator_g_tp8_public_route_driver_candidate'
+-WORKER=L.ROOT.parent/'wt-wglm';OVERLAY=BASE/'operator_g_running_mean_reviewed'
+-ARCHIVE=OVERLAY/'e74-resident-running-mean-v1.tar.gz'
+-ARCHIVE_SHA='daba518ee21fc051c2a1710d19174db83d2103f1190e411d8f436de0d13fc0fb'
+-SOURCE_SEAL='d470edd57e6e37be65abdf2148ad66596d1c2f3c111d75ca17a2a67ab2cb6bf4'
++BASE=L.BASE;DRIVER=BASE/'operator_g_tp4_cap300_driver_candidate'
++WORKER=L.ROOT.parent/'wt-wglm';OVERLAY=BASE/'operator_g_tp4_cap300_overlay_candidate'
++ARCHIVE=OVERLAY/'e74-resident-running-mean-tp4-cap300-v1.tar.gz'
++ARCHIVE_SHA='8414d981521b46be87af281f34fb04043bfe8e23e2bd185878a85e9bc38b5b91'
++SOURCE_SEAL='deca766bff82204b806b4366d09d8d0dd9cc3ccc25ae4720689fa22e129b38bf'
+@@ -57 +57 @@
+-    L.need(before+Decimal('152.92')==L.number(b['combined_fullcap_projection_usd'])==L.number(bound['combined_full_cap_usd']),'FULL_EXPERIMENT_RESERVATION_ONCE')
++    L.need(before+L.number(b['G_future_reservation_usd'])==L.number(b['combined_fullcap_projection_usd'])==L.number(bound['combined_full_cap_usd']),'FULL_EXPERIMENT_RESERVATION_ONCE')
+@@ -67 +67 @@
+-    L.need(a['schema']=='i2-e74-public-allocated-v1' and a['status']=='ALLOCATED_GUARDS_REQUIRED_NO_STAGING' and a['gpu_type']=='NVIDIA H200' and a['gpu_count']==8 and a['model_started'] is False and a['staging_authorized'] is False,'EXACT_TP8_ALLOCATION')
++    L.need(a['schema']=='i2-e74-public-allocated-v1' and a['status']=='ALLOCATED_GUARDS_REQUIRED_NO_STAGING' and a['gpu_type']=='NVIDIA B200' and a['gpu_count']==4 and a['model_started'] is False and a['staging_authorized'] is False,'EXACT_TP8_ALLOCATION')
+@@ -70,3 +70,3 @@
+-      and a['original_setup_deadline_epoch']<=a['created_epoch']+900 and a['provider_stop_epoch']==a['created_epoch']+9853,'ORIGINAL_CLOCKS')
+-    L.need(a['cap_usd']==160 and a['experiment_closed_usd']==7.08 and a['future_maximum_usd']==a['future_reservation_usd']==152.92,'WHOLE_EXPERIMENT_CAP')
+-    ruling=L.hopper_ruling(a['hopper_ruling']['hopper_fallback']['checked_epoch']);L.need(a['hopper_ruling']==ruling,'ACTUAL_HOPPER_RULING_BINDING')
++      and a['original_setup_deadline_epoch']<=a['created_epoch']+900 and a['provider_stop_epoch']==a['created_epoch']+8473,'ORIGINAL_CLOCKS')
++    L.need(a['cap_usd']==300 and a['experiment_closed_usd']==7.08 and a['future_maximum_usd']==a['future_reservation_usd'] and 0<a['future_reservation_usd']<=292.92,'WHOLE_EXPERIMENT_CAP')
++    ruling=L.cap_ruling();L.need(a['cap_ruling']==ruling,'ACTUAL_TP4_CAP_RULING_BINDING')
+@@ -88 +88 @@
+-    config['quote'].update(gpu_type='NVIDIA H200',gpu_count=8,cloud_type=cloud,stock_gate=a['stock_gate'],allocatable=True,
++    config['quote'].update(gpu_type='NVIDIA B200',gpu_count=4,cloud_type=cloud,stock_gate=a['stock_gate'],allocatable=True,
+@@ -93,2 +93,2 @@
+-    config['runtime'].update(setup_deadline_epoch=a['original_setup_deadline_epoch'],gpu_count=8,gpu_type='NVIDIA H200',
+-      cap_usd=160,experiment_closed_usd=7.08,future_maximum_usd=152.92,full_forecast_seconds=9853,
++    config['runtime'].update(setup_deadline_epoch=a['original_setup_deadline_epoch'],gpu_count=4,gpu_type='NVIDIA B200',
++      cap_usd=300,experiment_closed_usd=7.08,future_maximum_usd=a['future_reservation_usd'],full_forecast_seconds=8473,
+@@ -96 +96 @@
+-      hopper_fallback=ruling['hopper_fallback'],source_seal_sha256=SOURCE_SEAL,archive_sha256=ARCHIVE_SHA,
++      tp4_cap_authority_sha256=L.G_AUTHORITY_SHA,source_seal_sha256=SOURCE_SEAL,archive_sha256=ARCHIVE_SHA,
+@@ -99 +99 @@
+-    config['budget']={'future_reservation_usd':152.92,'experiment_closed_usd':7.08,'daily':{'2026-10-28':{'authority_sha256':AUTHORITY28,'ceiling_usd':500,'Q_envelope_usd':260,'I2_limit_usd':240,
++    config['budget']={'future_reservation_usd':a['future_reservation_usd'],'experiment_closed_usd':7.08,'daily':{'2026-10-28':{'authority_sha256':AUTHORITY28,'ceiling_usd':500,'Q_envelope_usd':260,'I2_limit_usd':240,
+@@ -120 +120 @@
+-    L.need(gr['request']['provider']=={k:private[k] for k in ('helper','helper_sha256','pod_id')} and gr['request']['run_identity_sha256']==a['identity_sha256'] and gr['request']['gpu_count']==8 and gr['request']['replica_hourly_usd']==a['replica_hourly_usd'],'SAME_EARLY_GUARD_PROVIDER')
++    L.need(gr['request']['provider']=={k:private[k] for k in ('helper','helper_sha256','pod_id')} and gr['request']['run_identity_sha256']==a['identity_sha256'] and gr['request']['gpu_count']==4 and gr['request']['replica_hourly_usd']==a['replica_hourly_usd'],'SAME_EARLY_GUARD_PROVIDER')
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/test_allocate.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_allocate_candidate/test_allocate.py
+@@ -7 +7 @@
+-NOW=1793163700.;RUN='e74-h200-synthetic'
++NOW=1793163700.;RUN='e74-b200-synthetic'
+@@ -10 +10 @@
+-def stock(secure=True,community=True,rate=42.32):return enc({'data':{'gpuTypes':[{'id':'NVIDIA H200','secure8':{'uninterruptablePrice':rate,'availableGpuCounts':None},'community8':{'uninterruptablePrice':28.72,'availableGpuCounts':None}}],'dataCenters':[{'id':'TEST-DC','secure8':[{'gpuTypeId':'NVIDIA H200','available':secure}],'community8':[{'gpuTypeId':'NVIDIA H200','available':community}]}]}})
++def stock(secure=True,community=True,rate=42.32):return enc({'data':{'gpuTypes':[{'id':'NVIDIA B200','secure4':{'uninterruptablePrice':rate,'availableGpuCounts':None},'community4':{'uninterruptablePrice':28.72,'availableGpuCounts':None}}],'dataCenters':[{'id':'TEST-DC','secure4':[{'gpuTypeId':'NVIDIA B200','available':secure}],'community4':[{'gpuTypeId':'NVIDIA B200','available':community}]}]}})
+@@ -28 +28 @@
+-   self.pod={'id':'testpod','name':RUN,'desiredStatus':'RUNNING','createdAt':datetime.fromtimestamp(self.clock,timezone.utc).isoformat(),'costPerHr':42.32,'adjustedCostPerHr':42.32,'gpuCount':8,'imageName':A.launch.IMAGE,'containerDiskInGb':50,'volumeInGb':1000,'networkVolumeId':None,'containerRegistryAuthId':None,'machine':{'gpuTypeId':'NVIDIA H200','secureCloud':True,'dataCenterId':'TEST-DC'}}
++   self.pod={'id':'testpod','name':RUN,'desiredStatus':'RUNNING','createdAt':datetime.fromtimestamp(self.clock,timezone.utc).isoformat(),'costPerHr':42.32,'adjustedCostPerHr':42.32,'gpuCount':4,'imageName':A.launch.IMAGE,'containerDiskInGb':50,'volumeInGb':1000,'networkVolumeId':None,'containerRegistryAuthId':None,'machine':{'gpuTypeId':'NVIDIA B200','secureCloud':True,'dataCenterId':'TEST-DC'}}
+@@ -34 +34 @@
+-  return A.allocate(RUN,KEY,b,claim_fn=claim,budget_fn=budget or (lambda n:{'C_active_reservations':[]}),source_fn=lambda:None,ruling_fn=lambda:{'fixture_only':True})
++  return A.allocate(RUN,KEY,b,claim_fn=claim,budget_fn=budget or (lambda n:{'C_active_reservations':[],'future_reservation_usd':'152.92'}),source_fn=lambda:None,ruling_fn=lambda:{'fixture_only':True})
+@@ -37,4 +37,4 @@
+-  self.assertEqual(p['forecast_seconds'],9853);self.assertEqual(A.number(p['padded_forecast_usd']),A.Decimal('147.2843611111111111111111111'))
+-  self.assertEqual(A.number(p['experiment_forecast_with_closed_usd']),A.Decimal('154.3643611111111111111111111'))
+-  self.assertEqual(p['future_maximum_usd'],'152.92');self.assertEqual(p['body']['gpuCount'],8);self.assertEqual(p['body']['gpuTypeId'],'NVIDIA H200')
+- def test_full3000_envelope_would_not_fit_experiment(self):
++  self.assertEqual(p['forecast_seconds'],8473);self.assertEqual(A.number(p['padded_forecast_usd']),A.Decimal('127.0060277777777777777777778'))
++  self.assertEqual(A.number(p['experiment_forecast_with_closed_usd']),A.Decimal('134.0860277777777777777777778'))
++  self.assertEqual(p['future_maximum_usd'],'292.92');self.assertEqual(p['body']['gpuCount'],4);self.assertEqual(p['body']['gpuTypeId'],'NVIDIA B200')
++ def test_full1200_envelope_would_not_fit_experiment(self):
+@@ -44,6 +44,5 @@
+- def test_no_h200_before_six(self):
+-  with self.assertRaisesRegex(ValueError,'TIME_OR_FREEZE'):A.stock_selection(stock(),1793163599)
+- def test_community_requires_ten_and_secure_absent(self):
+-  with self.assertRaisesRegex(ValueError,'BEFORE_TEN'):A.stock_selection(stock(False),1793177999)
+-  dc,rate,cloud,g=A.stock_selection(stock(False),1793178000);self.assertEqual((cloud,str(rate)),('COMMUNITY','28.72'));self.assertEqual(g['secure_available_locations'],0)
+-  p=A.launch.build(RUN,dc,KEY,1793178000,str(rate),'2',cloud);self.assertIn('cloudType:COMMUNITY',p['graphql']);self.assertNotIn('cloudType:"COMMUNITY"',p['graphql'])
++ def test_b200_has_no_hopper_time_gate(self):
++  self.assertEqual(A.stock_selection(stock(),1793163599)[2],'SECURE')
++  dc,rate,cloud,g=A.stock_selection(stock(False),1793163599)
++  self.assertEqual(cloud,'COMMUNITY')
++  p=A.launch.build(RUN,dc,KEY,1793163599,str(rate),'2',cloud);self.assertIn('cloudType:COMMUNITY',p['graphql'])
+@@ -51 +50 @@
+-  with self.assertRaisesRegex(ValueError,'NO_FIT'):A.stock_selection(stock(rate=50),1793178001)
++  with self.assertRaisesRegex(ValueError,'NO_FIT'):A.stock_selection(stock(rate=110),1793178001)
+@@ -54 +53 @@
+-  rate=A.Decimal('155')/A.Decimal('1.25');rate=(rate-2)*3600/9853
++  rate=A.Decimal('295')/A.Decimal('1.25');rate=(rate-2)*3600/8473
+@@ -61 +60 @@
+-  d=json.loads(stock(False));d['data']['dataCenters'][0]['secure8'].append({'gpuTypeId':'NVIDIA H200','available':True});self.assertEqual(A.stock_selection(enc(d),NOW)[2],'SECURE')
++  d=json.loads(stock(False));d['data']['dataCenters'][0]['secure4'].append({'gpuTypeId':'NVIDIA B200','available':True});self.assertEqual(A.stock_selection(enc(d),NOW)[2],'SECURE')
+@@ -64 +63 @@
+-   b=Fake();r=self.runfake(Path(d),b);self.assertEqual((b.creates,b.releases),(1,1));self.assertEqual(r['provider_stop_epoch'],NOW+9853);self.assertEqual(r['original_setup_deadline_epoch'],NOW+900);self.assertEqual(r['full_reservation_usd'],'152.92');self.assertFalse(r['staging_authorized']);self.assertEqual(r['gpu_count'],8)
++   b=Fake();r=self.runfake(Path(d),b);self.assertEqual((b.creates,b.releases),(1,1));self.assertEqual(r['provider_stop_epoch'],NOW+8473);self.assertEqual(r['original_setup_deadline_epoch'],NOW+900);self.assertEqual(r['full_reservation_usd'],'152.92');self.assertFalse(r['staging_authorized']);self.assertEqual(r['gpu_count'],4)
+@@ -93 +92 @@
+-   def budget(t):calls.append(t);return {'C_active_reservations':[],'version':len(calls)//3}
++   def budget(t):calls.append(t);return {'C_active_reservations':[],'future_reservation_usd':'152.92','version':len(calls)//3}
+@@ -102 +101 @@
+-  for key,value in [('id','other'),('gpuCount',4),('volumeInGb',0),('costPerHr',43),('networkVolumeId','wrong'),('imageName','wrong')]:
++  for key,value in [('id','other'),('gpuCount',8),('volumeInGb',0),('costPerHr',43),('networkVolumeId','wrong'),('imageName','wrong')]:
+@@ -119 +118 @@
+- def test_pending_ruling_stops_before_claim_or_provider(self):
++ def test_missing_authority_stops_before_claim_or_provider(self):
+@@ -121 +120 @@
+-  with patch.object(A,'HOPPER_RULING_SHA',None),self.assertRaisesRegex(ValueError,'RULING_PENDING'):
++  with patch.object(A,'G_AUTHORITY_SHA','0'*64),self.assertRaisesRegex(ValueError,'AUTHORITY_CHANGED'):
+@@ -128,2 +127,2 @@
+-  self.b={'schema':'i2-e74-h200-tp8-budget-v1','checked_at_utc':datetime.fromtimestamp(NOW,timezone.utc).isoformat(),'projection_posted_in_chat':True,'no_current_G_pod_or_reservation':True,'G_active_reserved_usd':0,'Q_at_caps_usd':260,'G_closed_usd':7.08,'G_experiment_cap_usd':160,'G_future_reservation_usd':152.92,'daily_ceiling_usd':500,'I2_allocation_usd':240,'G_authority_sha256':A.G_AUTHORITY_SHA,'G_closure_sha256':A.sha(A.read(A.G_CLOSURE)),'C_closed_run_ids':['e73-controls-20261027-a1'],'C_closed_usd':14.03,'C_active_reservations':[],'C_future_native_planning_usd':6.80,'combined_fullcap_projection_usd':440.83,'I2_fullcap_projection_usd':180.83,'G_new_run_id':RUN,'authority_Oct28_sha256':A.sha(A.read(A.ROOT/'results/g_agreement/i2/BUDGET_500_AUTHORISED_20261028.json'))}
+-  self.qpath=self.d/'queue.json';self.qpath.write_bytes(enc({'checked_epoch':NOW,'eligible_H200_C_work':False}));self.b['C_queue_assessment']={'source_path':str(self.qpath),'source_sha256':A.sha(self.qpath.read_bytes()),'checked_epoch':NOW}
++  self.b={'schema':'i2-e74-b200-tp4-cap300-budget-v1','checked_at_utc':datetime.fromtimestamp(NOW,timezone.utc).isoformat(),'projection_posted_in_chat':True,'no_current_G_pod_or_reservation':True,'G_active_reserved_usd':0,'Q_at_caps_usd':260,'G_closed_usd':7.08,'G_experiment_cap_usd':300,'G_future_reservation_usd':152.92,'daily_ceiling_usd':500,'I2_allocation_usd':240,'G_authority_sha256':A.G_AUTHORITY_SHA,'G_closure_sha256':A.sha(A.read(A.G_CLOSURE)),'C_closed_run_ids':['e73-controls-20261027-a1'],'C_closed_usd':14.03,'C_active_reservations':[],'C_future_native_planning_usd':6.80,'combined_fullcap_projection_usd':440.83,'I2_fullcap_projection_usd':180.83,'G_new_run_id':RUN,'authority_Oct28_sha256':A.sha(A.read(A.ROOT/'results/g_agreement/i2/BUDGET_500_AUTHORISED_20261028.json'))}
++  self.qpath=self.d/'queue.json';self.qpath.write_bytes(enc({'checked_epoch':NOW,'eligible_B200_C_work':False}));self.b['C_queue_assessment']={'source_path':str(self.qpath),'source_sha256':A.sha(self.qpath.read_bytes()),'checked_epoch':NOW}
+@@ -138,2 +137,2 @@
+-  self.qpath.write_bytes(enc({'checked_epoch':NOW,'eligible_H200_C_work':True}));self.b['C_queue_assessment']['source_sha256']=A.sha(self.qpath.read_bytes())
+-  with self.assertRaisesRegex(ValueError,'C_WORK_HAS_H200_PRIORITY'):self.check()
++  self.qpath.write_bytes(enc({'checked_epoch':NOW,'eligible_B200_C_work':True}));self.b['C_queue_assessment']['source_sha256']=A.sha(self.qpath.read_bytes())
++  with self.assertRaisesRegex(ValueError,'C_WORK_HAS_B200_PRIORITY'):self.check()
+@@ -141 +140 @@
+-  self.qpath.write_bytes(enc({'checked_epoch':NOW,'eligible_H200_C_work':True}))
++  self.qpath.write_bytes(enc({'checked_epoch':NOW,'eligible_B200_C_work':True}))
+@@ -144 +143 @@
+-  q={'checked_epoch':NOW-901,'eligible_H200_C_work':False};self.qpath.write_bytes(enc(q));self.b['C_queue_assessment'].update(source_sha256=A.sha(self.qpath.read_bytes()),checked_epoch=q['checked_epoch'])
++  q={'checked_epoch':NOW-901,'eligible_B200_C_work':False};self.qpath.write_bytes(enc(q));self.b['C_queue_assessment'].update(source_sha256=A.sha(self.qpath.read_bytes()),checked_epoch=q['checked_epoch'])
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/test_prepare.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_allocate_candidate/test_prepare.py
+@@ -17,3 +17,3 @@
+-  self.b={'checked_at_utc':datetime.fromtimestamp(T.NOW-1,timezone.utc).isoformat(),'projection_posted_in_chat':True,'C_closed_usd':15.46,'C_closed_run_ids':['e73-controls-20261027-a1','e73-controls-20261027-a2'],'C_active_reservations':[],'C_future_native_planning_usd':6.80,'G_closure_sha256':'a'*64,'combined_fullcap_projection_usd':442.26,'I2_ledger_sha256':'b'*64,'Q_handoff_sha256':'c'*64}
+-  self.qp=self.d/'queue.json';self.qp.write_bytes(T.enc({'checked_epoch':T.NOW,'eligible_H200_C_work':False}));self.b['C_queue_assessment']={'source_path':str(self.qp),'source_sha256':A.sha(self.qp.read_bytes()),'checked_epoch':T.NOW}
+-  self.bp=self.d/'budget.json';self.bp.write_bytes(T.enc(self.b));bound={'planning_sha256':A.sha(self.bp.read_bytes()),'combined_full_cap_usd':'442.26',**{k:self.b[k]for k in ('C_closed_usd','C_closed_run_ids','C_active_reservations','C_future_native_planning_usd','C_queue_assessment')}}
++  self.b={'checked_at_utc':datetime.fromtimestamp(T.NOW-1,timezone.utc).isoformat(),'projection_posted_in_chat':True,'C_closed_usd':15.46,'C_closed_run_ids':['e73-controls-20261027-a1','e73-controls-20261027-a2'],'C_active_reservations':[],'C_future_native_planning_usd':6.80,'G_closure_sha256':'a'*64,'G_future_reservation_usd':152.92,'combined_fullcap_projection_usd':442.26,'I2_ledger_sha256':'b'*64,'Q_handoff_sha256':'c'*64}
++  self.qp=self.d/'queue.json';self.qp.write_bytes(T.enc({'checked_epoch':T.NOW,'eligible_B200_C_work':False}));self.b['C_queue_assessment']={'source_path':str(self.qp),'source_sha256':A.sha(self.qp.read_bytes()),'checked_epoch':T.NOW}
++  self.bp=self.d/'budget.json';self.bp.write_bytes(T.enc(self.b));bound={'planning_sha256':A.sha(self.bp.read_bytes()),'combined_full_cap_usd':'442.26','future_reservation_usd':'152.92',**{k:self.b[k]for k in ('C_closed_usd','C_closed_run_ids','C_active_reservations','C_future_native_planning_usd','C_queue_assessment')}}
+@@ -25 +25 @@
+-  p=patch.object(A,'hopper_ruling',return_value=self.ruling);p.start();self.addCleanup(p.stop)
++  p=patch.object(A,'cap_ruling',return_value=self.ruling);p.start();self.addCleanup(p.stop)
+@@ -30 +30 @@
+-  self.gp=self.out/'GUARDS.private.json';private=base['private_transport'];g=base['guards'];self.guard={'after_installer_exit':True,'run_identity_sha256':self.a['identity_sha256'],'request':{**{k:g[k]for k in ('guard_home','journal')},'provider':{k:private[k]for k in ('helper','helper_sha256','pod_id')},'original_deadline_epoch':self.a['provider_stop_epoch'],'setup_deadline_epoch':self.a['original_setup_deadline_epoch'],'created_epoch':self.a['created_epoch'],'run_identity_sha256':self.a['identity_sha256'],'gpu_count':8,'replica_hourly_usd':42.32}}
++  self.gp=self.out/'GUARDS.private.json';private=base['private_transport'];g=base['guards'];self.guard={'after_installer_exit':True,'run_identity_sha256':self.a['identity_sha256'],'request':{**{k:g[k]for k in ('guard_home','journal')},'provider':{k:private[k]for k in ('helper','helper_sha256','pod_id')},'original_deadline_epoch':self.a['provider_stop_epoch'],'setup_deadline_epoch':self.a['original_setup_deadline_epoch'],'created_epoch':self.a['created_epoch'],'run_identity_sha256':self.a['identity_sha256'],'gpu_count':4,'replica_hourly_usd':42.32}}
+@@ -36 +36 @@
+-  self.assertEqual(r['status'],'PROVIDER_ONLY_READY_FOR_GUARDS');self.assertNotIn('ssh',b['private_transport']);self.assertNotIn('runtime',g);self.assertEqual(g['provider']['pod_id'],self.a['pod_id']);self.assertEqual(g['journal'],b['guards']['journal']);self.assertFalse(Path(g['journal']).exists());self.assertEqual(b['private_transport']['provider_stop_epoch'],T.NOW+9853)
++  self.assertEqual(r['status'],'PROVIDER_ONLY_READY_FOR_GUARDS');self.assertNotIn('ssh',b['private_transport']);self.assertNotIn('runtime',g);self.assertEqual(g['provider']['pod_id'],self.a['pod_id']);self.assertEqual(g['journal'],b['guards']['journal']);self.assertFalse(Path(g['journal']).exists());self.assertEqual(b['private_transport']['provider_stop_epoch'],T.NOW+8473)
+@@ -56 +56 @@
+-  with patch.object(A,'hopper_ruling',side_effect=ValueError('RULING_PENDING')),self.assertRaisesRegex(ValueError,'PENDING'):self.runprep()
++  with patch.object(A,'cap_ruling',side_effect=ValueError('RULING_PENDING')),self.assertRaisesRegex(ValueError,'PENDING'):self.runprep()
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/CONFIG_TEMPLATE.json
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/CONFIG_TEMPLATE.json
+@@ -6 +6 @@
+-    "future_reservation_usd": 152.92
++    "future_reservation_usd": null
+@@ -45,2 +45,2 @@
+-    "gpu_count": 8,
+-    "gpu_type": "NVIDIA H200",
++    "gpu_count": 4,
++    "gpu_type": "NVIDIA B200",
+@@ -59 +59 @@
+-    "archive_sha256": "daba518ee21fc051c2a1710d19174db83d2103f1190e411d8f436de0d13fc0fb",
++    "archive_sha256": "8414d981521b46be87af281f34fb04043bfe8e23e2bd185878a85e9bc38b5b91",
+@@ -62 +62 @@
+-    "cap_usd": 160,
++    "cap_usd": 300,
+@@ -68,5 +68,4 @@
+-    "future_maximum_usd": 152.92,
+-    "gpu_count": 8,
+-    "gpu_type": "NVIDIA H200",
+-    "hardware_forecast_sha256": "df45075c095e13668ef9cab17053dae30a6d1ac6c11e803ca9a98099e3f6bd1e",
+-    "hopper_fallback": null,
++    "future_maximum_usd": null,
++    "gpu_count": 4,
++    "gpu_type": "NVIDIA B200",
++    "hardware_forecast_sha256": "3d0e669f41f6419b83a62ed3491ab168f7a3db9ea43ca9935ae4e6c8187aaf2c",
+@@ -76 +75 @@
+-    "limit_authority": "b81c6c9d7b7ec319d611ca3caea31ace8457e0d7",
++    "limit_authority": "9a53862f",
+@@ -79 +78,2 @@
+-      "boot": 2040,
++      "boot": 660,
++      "smoke": 120,
+@@ -81,2 +81 @@
+-      "readouts": 840,
+-      "smoke": 120
++      "readouts": 840
+@@ -90 +89 @@
+-    "source_seal_sha256": "d470edd57e6e37be65abdf2148ad66596d1c2f3c111d75ca17a2a67ab2cb6bf4",
++    "source_seal_sha256": "deca766bff82204b806b4366d09d8d0dd9cc3ccc25ae4720689fa22e129b38bf",
+@@ -93 +92,3 @@
+-    "verified": false
++    "verified": false,
++    "full_forecast_seconds": 8473,
++    "tp4_cap_authority_sha256": "a8203caa71f4a3b10da945ad7c6ea3fb9b65b7b7dac7512b79a05b6e6054209d"
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/CONTRACT.md
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/CONTRACT.md
+@@ -1 +1 @@
+-# TP8 public route
++# TP4 cap300 operational route
+@@ -3 +3 @@
+-This separate candidate binds worker commit `275d102342788330fe8190edc6a4865d7cf53dcc`, the cap-only clarification8 overlay, and the repaired public dpkg bootstrap. Original candidates and worker files remain unchanged. It implements only one node with eight H200 GPUs; the cap authority does not create an eight-B200 implementation.
++Derived from the preserved, reviewed TP8 allocator/preparer/driver; actual B2004 quote, original8473-second whole endpoint and1200-second boot/smoke are enforced. The exact e0fc50bd running-mean worker has only its hardware cap authority gate and SOURCE_SEAL amended. Cap300 includes closed7.08 once. Full-deadline padded forecast is bounded by the freshly posted reservation; daily500 and I2240 remain enforced, withQ260 and source-bound C liabilities/eligible_B200_C_work assessment. No Hopper time gate applies.
+@@ -5,15 +5 @@
+-The original allocation endpoint is creation + 9853 seconds. The 3000-second boot/smoke maximum remains inside that endpoint. Environment/archive staging ends by the original dispatch + 900 endpoint (also no later than creation + 900); weights remain bounded by 3600 seconds and creation + 4500. Work ends 120 seconds before provider stop. Capture sealing starts the original shared 600-second pull/CPU/W-lens committed forecast/GO window. No restart or new phase gets a renewed allocation timer.
+-
+-Candidate padded cost plus the closed G USD7.08 must not exceed USD160. The future maximum and reservation are USD152.92. The driver preserves the frozen worker's calculation, additionally checks experiment total at every bound, and derives its cost endpoint from future152.92. Per-day ledger liabilities include closed G once and use future152.92 once; current source-bound C liabilities are supplied by the allocator/preparer. Each date requires its own authority and reconciliation. Secure H200 is preferred from 06:00 CET; Community requires 10:00 CET and fresh evidence of no Secure availability.
+-
+-The literal historical B200-claim clarification remains unresolved. `HOPPER_RULING_PENDING=True` blocks driver admission; the separate allocator pins no ruling yet. The existing hardware.profile check is unchanged. Hypothetical test evidence is not a real no-claim assertion. Root must bind Guiv's exact ruling truthfully before any launch; this is an outstanding rules question, not a new deployment review.
+-
+-Both execution fuses are closed in this CPU candidate. Once the outstanding ruling and ordinary dated admission/time/quote requirements pass, root may enable the two reviewed execution constants under the existing user authorization, record the exact enabled-source hashes, and then prepare configs bound to those bytes. No further general deployment approval is required. Validity is checked by the registered smoke test.
+-
+-Before SSH metadata or host-key collection, a provider-only config installs two independent detached guard sessions using original provider and setup endpoints. The installer exits independently, then actual worker/caffeinate identities are observed. The watchdog enforces setup expiry while the driver journal is absent. The final driver adopts that same source-bound pair; its initial journal already carries identity and the setup endpoint, avoiding a transient unbound journal. Exact guards are observed before the bounded public runtime install. The explicit TOFU command rechecks the provider endpoint after guards, writes a private exclusive known_hosts file, and never uploads the local private SSH key.
+-
+-Bootstrap uploads exact archive bytes and four exact source modules, including hardware.py. Every supervisor/worker imports the sealed operational overlay; CPU scientific imports remain bound to original275d1023. The corrected bootstrap uses the same26 pinned DEBs through dpkg and refuses container startup replay. It creates no new runtime deadline. Actual NVMe proof precedes weight download.
+-
+-Two inherited operational faults are repaired only in this clone: CPU intake no longer overwrites its capture digest while checking source members; local command completion no longer signals an already reaped successful child. Failed/time-limited local children are killed while still owned and unreaped within the original endpoint. Opaque fd streaming and output limits remain. The existing exact-source NO_FIT evidence includes extras; no missing-key defect is claimed. Reconstruction retains original admission values and rejects mismatched evidence.
+-
+-Scientific runtime, assets, native settings, fixtures, input banks and scoring code are unchanged. The original CPU path still completes binary probes; exploratory ordinal fit implementation remains separate post-capture work under Guiv's instruction, not a launch blocker. Forecast commit chronology, hash-only GO, one resident engine, sealed opaque pulls, failure diagnostics before cleanup, queue assessment, and exact-owned-pod STOP remain. No judging permission is inferred.
++No provider calls during CPU tests. Original claims remain consumed. Execution and remote supervisor live fuses remain closed until exact root admission. Follow ROOT_COMMANDS.md after verifying the public integration receipt hashes. Historical TP8 receipts are not proof for these changed sources.
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/ROOT_COMMANDS.md
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/ROOT_COMMANDS.md
+@@ -0,0 +1,4 @@
++# TP4 cap300 root sequence
++
++Use the exact new TP4 allocator and driver paths below; the original TP8 candidates remain unchanged for the06:00 Secure8H200 fallback. The cap300 authority is9a53862f and receipt SHA a8203caa71f4a3b10da945ad7c6ea3fb9b65b7b7dac7512b79a05b6e6054209d. No Hopper gate applies to4B200. Current creation claims are never reused. After all source CPU checks, make a fresh actual allocatable quote and source-bound budget with schema i2-e74-b200-tp4-cap300-budget-v1 at cache/g_agreement/i2/g_b200_tp4_cap300_admission/BUDGET_PLANNING.json. G_future_reservation_usd covers the actual entire8473-second padded forecast including extras; total cap300 includesclosed7.08. ReconcileQ andCactuals first, and postcombinedprojection. Reserving300 would breachcurrentdaily500/Q260/C18.69; use actual full forecast, still constrainedbyI2240/daily500. C_queue_assessment explicitly binds eligible_B200_C_work=false. Use only the cap300 worker archive8414d981...; originale0fc50bd science/resident unchanged. All enabled-source hashes must be recorded after exact fuse opt-in. No launch untilreviewed receipt is committed.
++
+@@ -3 +7 @@
+-All commands below are for the root operator after the pending literal historical-claim ruling is bound. No command has been run against a provider by this candidate. Use a new run ID and private directories. Prepare fresh source-bound C/Q liabilities, the C-first queue assessment, and Oct28 budget; post the combined projection before allocation. The allocator's registered time/stock/price/cap rules remain authoritative.
++All commands below are for the root operator after the actual TP4 USD300 authority is bound. No command has been run against a provider by this candidate. Use a new run ID and private directories. Prepare fresh source-bound C/Q liabilities, the C-first queue assessment, and Oct28 budget; post the combined projection before allocation. The allocator's registered time/stock/price/cap rules remain authoritative.
+@@ -8,5 +12,5 @@
+-TP8_ALLOC=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_tp8_allocate_candidate
+-TP8_DRIVER=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate
+-TP8_RUN=e74-h200-20261028-a1
+-TP8_CLAIM=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e74-global-operator-claims-v1/create/$TP8_RUN
+-TP8_PRIVATE=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/$TP8_RUN-driver
++TP4_ALLOC=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_tp4_cap300_allocate_candidate
++TP4_DRIVER=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate
++TP4_RUN=e74-b200-20261028-a3
++TP4_CLAIM=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e74-global-operator-claims-v1/create/$TP4_RUN
++TP4_PRIVATE=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/$TP4_RUN-driver
+@@ -18 +22 @@
+-python3 -B "$TP8_ALLOC/allocate.py" --run-id "$TP8_RUN" --ssh-public-key-file /Users/guivff/.ssh/id_ed25519_runpod.pub --allocate
++python3 -B "$TP4_ALLOC/allocate.py" --run-id "$TP4_RUN" --ssh-public-key-file /Users/guivff/.ssh/id_ed25519_runpod.pub --allocate
+@@ -24,2 +28,2 @@
+-python3 -B "$TP8_ALLOC/prepare.py" --allocation "$TP8_CLAIM/ALLOCATION.private.json" --out "$TP8_PRIVATE" --observe-allocator-exit --root-tool-exit-code 0 --root-tool-evidence ACTUAL_TOOL_RESULT
+-python3 -B "$TP8_DRIVER/provider_guards.py" --config "$TP8_PRIVATE/GUARD_CONFIG.private.json" --allocation "$TP8_CLAIM/ALLOCATION.private.json" --exit-proof "$TP8_PRIVATE/ALLOCATOR_EXIT.private.json" --receipt "$TP8_PRIVATE/GUARDS.private.json" --arm
++python3 -B "$TP4_ALLOC/prepare.py" --allocation "$TP4_CLAIM/ALLOCATION.private.json" --out "$TP4_PRIVATE" --observe-allocator-exit --root-tool-exit-code 0 --root-tool-evidence ACTUAL_TOOL_RESULT
++python3 -B "$TP4_DRIVER/provider_guards.py" --config "$TP4_PRIVATE/GUARD_CONFIG.private.json" --allocation "$TP4_CLAIM/ALLOCATION.private.json" --exit-proof "$TP4_PRIVATE/ALLOCATOR_EXIT.private.json" --receipt "$TP4_PRIVATE/GUARDS.private.json" --arm
+@@ -31 +35 @@
+-python3 -B "$TP8_DRIVER/observe_ssh.py" --guard-config "$TP8_PRIVATE/GUARD_CONFIG.private.json" --allocation "$TP8_CLAIM/ALLOCATION.private.json" --guards-receipt "$TP8_PRIVATE/GUARDS.private.json" --out "$TP8_PRIVATE/SSH_QUERY_001.private.json"
++python3 -B "$TP4_DRIVER/observe_ssh.py" --guard-config "$TP4_PRIVATE/GUARD_CONFIG.private.json" --allocation "$TP4_CLAIM/ALLOCATION.private.json" --guards-receipt "$TP4_PRIVATE/GUARDS.private.json" --out "$TP4_PRIVATE/SSH_QUERY_001.private.json"
+@@ -37,4 +41,4 @@
+-python3 -B "$TP8_ALLOC/prepare.py" --allocation "$TP8_CLAIM/ALLOCATION.private.json" --out "$TP8_PRIVATE" --allocator-exit "$TP8_PRIVATE/ALLOCATOR_EXIT.private.json" --ssh-observation "$TP8_PRIVATE/SSH_QUERY_001.private.json" --ssh-identity-file /Users/guivff/.ssh/id_ed25519_runpod --known-hosts-file "$TP8_PRIVATE/known_hosts" --guards-receipt "$TP8_PRIVATE/GUARDS.private.json"
+-python3 -B "$TP8_DRIVER/g_operator.py" --config "$TP8_PRIVATE/CONFIG.private.json" --attach-existing "$TP8_PRIVATE/ATTACH.private.json"
+-python3 -B "$TP8_DRIVER/pin_ssh_hostkey.py" --config "$TP8_PRIVATE/CONFIG.private.json"
+-python3 -B "$TP8_DRIVER/g_operator.py" --config "$TP8_PRIVATE/CONFIG.private.json" --step
++python3 -B "$TP4_ALLOC/prepare.py" --allocation "$TP4_CLAIM/ALLOCATION.private.json" --out "$TP4_PRIVATE" --allocator-exit "$TP4_PRIVATE/ALLOCATOR_EXIT.private.json" --ssh-observation "$TP4_PRIVATE/SSH_QUERY_001.private.json" --ssh-identity-file /Users/guivff/.ssh/id_ed25519_runpod --known-hosts-file "$TP4_PRIVATE/known_hosts" --guards-receipt "$TP4_PRIVATE/GUARDS.private.json"
++python3 -B "$TP4_DRIVER/g_operator.py" --config "$TP4_PRIVATE/CONFIG.private.json" --attach-existing "$TP4_PRIVATE/ATTACH.private.json"
++python3 -B "$TP4_DRIVER/pin_ssh_hostkey.py" --config "$TP4_PRIVATE/CONFIG.private.json"
++python3 -B "$TP4_DRIVER/g_operator.py" --config "$TP4_PRIVATE/CONFIG.private.json" --step
+@@ -46 +50 @@
+-python3 -B "$TP8_DRIVER/g_operator.py" --config "$TP8_PRIVATE/CONFIG.private.json" --committed-forecast "$TP8_PRIVATE/ACTUAL_FORECAST_BINDING.json"
++python3 -B "$TP4_DRIVER/g_operator.py" --config "$TP4_PRIVATE/CONFIG.private.json" --committed-forecast "$TP4_PRIVATE/ACTUAL_FORECAST_BINDING.json"
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/SOURCE_PINS.json
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/SOURCE_PINS.json
+@@ -18,2 +18,2 @@
+-  "overlay_archive_sha256": "daba518ee21fc051c2a1710d19174db83d2103f1190e411d8f436de0d13fc0fb",
+-  "overlay_source_sha256": "d470edd57e6e37be65abdf2148ad66596d1c2f3c111d75ca17a2a67ab2cb6bf4"
++  "overlay_archive_sha256": "8414d981521b46be87af281f34fb04043bfe8e23e2bd185878a85e9bc38b5b91",
++  "overlay_source_sha256": "deca766bff82204b806b4366d09d8d0dd9cc3ccc25ae4720689fa22e129b38bf"
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/bindings.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/bindings.py
+@@ -12 +12 @@
+-    'g_candidate': ('operator_g_tp8_public_route_driver_candidate/g_candidate.py','5bff55cf39f623e5521716457dd015ee2c637f361518c6ffd774cca5ed9fa07f'),
++    'g_candidate': ('operator_g_tp4_cap300_driver_candidate/g_candidate.py','f7e2c28b92626386a43ea96f41b57d993dbf0e55115059253fd9265116814e90'),
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/driver.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/driver.py
+@@ -100 +100 @@
+-               allocation['gpu_count']==8 and allocation['gpu_type']=='NVIDIA H200' and
++               allocation['gpu_count']==4 and allocation['gpu_type']=='NVIDIA B200' and
+@@ -103 +103 @@
+-        cost_end=created+(PUBLIC.FUTURE_MAX/1.25-q['other_cost_upper_bound_usd'])*3600/q['replica_hourly_usd']
++        cost_end=created+(self.config['runtime']['future_maximum_usd']/1.25-q['other_cost_upper_bound_usd'])*3600/q['replica_hourly_usd']
+@@ -108 +108 @@
+-           'cap_usd':160,'gpu_count':8,'gpu_type':'H200','source_seal_sha256':G.SOURCE_SEAL,
++           'cap_usd':300,'gpu_count':4,'gpu_type':'B200','source_seal_sha256':G.SOURCE_SEAL,
+@@ -140 +140 @@
+-        self.bound(PUBLIC.remaining(self.s['created'],self.now()) if is_public else 9853)
++        self.bound(PUBLIC.remaining(self.s['created'],self.now()) if is_public else 8473)
+@@ -148 +148 @@
+-        self.phase('ARCHIVE_INFLIGHT');end=self.bound(8953,self.s['times']['archive_start']+900)
++        self.phase('ARCHIVE_INFLIGHT');end=self.bound(7573,self.s['times']['archive_start']+900)
+@@ -174 +174 @@
+-            A.need(self.now()<self.s['times']['science_start']+3000 or self.ports.smoke_passed(),'SMOKE3000_EXPIRED')
++            A.need(self.now()<self.s['times']['science_start']+1200 or self.ports.smoke_passed(),'SMOKE1200_EXPIRED')
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/g_candidate.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/g_candidate.py
+@@ -24 +24 @@
+-PIN_SHA = '937efb00b23831977e55d3a3e5d1d95a8af59cdbc219d81bdd1b1db39b64c565'
++PIN_SHA = '8ba3d2cd4dc346d04104298103a0497a7fc1a0ca06bb4256cba1df0c23d22ea6'
+@@ -28 +28 @@
+-CAP = Decimal('160')
++CAP = Decimal('300')
+@@ -31,3 +31,3 @@
+-SOURCE_SEAL = 'd470edd57e6e37be65abdf2148ad66596d1c2f3c111d75ca17a2a67ab2cb6bf4'
+-ARCHIVE = 'daba518ee21fc051c2a1710d19174db83d2103f1190e411d8f436de0d13fc0fb'
+-ARCHIVE_BYTES = 1408712
++SOURCE_SEAL = 'deca766bff82204b806b4366d09d8d0dd9cc3ccc25ae4720689fa22e129b38bf'
++ARCHIVE = '8414d981521b46be87af281f34fb04043bfe8e23e2bd185878a85e9bc38b5b91'
++ARCHIVE_BYTES = 1408817
+@@ -211 +211 @@
+-    path=HERE.parent/'operator_g_running_mean_reviewed/e74-resident-running-mean-v1.tar.gz'
++    path=HERE.parent/'operator_g_tp4_cap300_overlay_candidate/e74-resident-running-mean-tp4-cap300-v1.tar.gz'
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/ports.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/ports.py
+@@ -58 +58 @@
+-        self.control.upload('uploads/resident-v6-c8-cap160.tar.gz',raw,G.ARCHIVE,end)
++        self.control.upload('uploads/resident-running-mean-tp4-cap300.tar.gz',raw,G.ARCHIVE,end)
+@@ -74 +74 @@
+-                           science_start_epoch=start,deadline_epoch=min(start+3000,end),
++                           science_start_epoch=start,deadline_epoch=min(start+1200,end),
+@@ -101 +101 @@
+-                   evidence['cap_usd']==160 and evidence['multiplier']==1.25,'TYPED_NO_FIT_EVIDENCE')
++                   evidence['cap_usd']==300 and evidence['multiplier']==1.25,'TYPED_NO_FIT_EVIDENCE')
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/provider_guards.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/provider_guards.py
+@@ -15 +15 @@
+-      and allocation['provider_stop_epoch']==allocation['created_epoch']+9853,'ORIGINAL_GUARD_CLOCKS')
++      and allocation['provider_stop_epoch']==allocation['created_epoch']+8473,'ORIGINAL_GUARD_CLOCKS')
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/public_admission.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/public_admission.py
+@@ -9 +9 @@
+-LIMIT_AUTHORITY='b81c6c9d7b7ec319d611ca3caea31ace8457e0d7'
++LIMIT_AUTHORITY='9a53862f'
+@@ -11 +11 @@
+-PHASES={'boot':2040,'smoke':120,'capture':1633,'readouts':840}
++PHASES={'boot':660,'smoke':120,'capture':1633,'readouts':840}
+@@ -13,2 +13,2 @@
+-FULL_SECONDS=9853
+-BOOT_SMOKE_SECONDS=3000
++FULL_SECONDS=8473
++BOOT_SMOKE_SECONDS=1200
+@@ -16,2 +16,2 @@
+-FUTURE_MAX=152.92
+-NOT_BEFORE=datetime.fromisoformat('2026-10-28T06:00:00+01:00').timestamp()
++AUTHORITY_SHA='a8203caa71f4a3b10da945ad7c6ea3fb9b65b7b7dac7512b79a05b6e6054209d'
++NOT_BEFORE=datetime.fromisoformat('2026-10-27T22:00:00+01:00').timestamp()
+@@ -26 +26 @@
+-    A.need(0<created<=now<created+FULL_SECONDS,'ORIGINAL_9853_ENDPOINT')
++    A.need(0<created<=now<created+FULL_SECONDS,'ORIGINAL_8473_ENDPOINT')
+@@ -30,3 +30,3 @@
+-    A.need(runtime.get('limit_authority')==LIMIT_AUTHORITY and runtime.get('hardware_forecast_sha256')==FORECAST
+-           and runtime.get('phase_forecast_seconds')==PHASES,'EXACT_TP8_AUTHORITY_AND_FORECAST')
+-    return {k:runtime[k] for k in ('hopper_fallback','limit_authority','hardware_forecast_sha256','phase_forecast_seconds')}
++    A.need(runtime.get('limit_authority')==LIMIT_AUTHORITY and runtime.get('tp4_cap_authority_sha256')==AUTHORITY_SHA,'EXACT_TP4_CAP300_AUTHORITY')
++    return {k:runtime[k] for k in ('limit_authority','tp4_cap_authority_sha256')}
++
+@@ -38 +38 @@
+-    if total>160:
++    if total>300:
+@@ -40 +40 @@
+-            experiment_closed_usd=CLOSED,experiment_total_usd=total,future_maximum_usd=FUTURE_MAX))
++            experiment_closed_usd=CLOSED,experiment_total_usd=total,future_maximum_usd=300-CLOSED))
+@@ -44 +43,0 @@
+-    A.need(not HOPPER_RULING_PENDING,'HISTORICAL_B200_CLAIM_RULING_PENDING')
+@@ -46,2 +45,2 @@
+-    receipt=Path(__file__).resolve().parents[4]/'results/g_agreement/i2/E74_HOPPER_FAILED_CLAIM_RULING.json'
+-    A.need(A.sha(receipt.read_bytes())=='9bbb6e60ba1a60417a456cc8aa9055bf5a1cdc74388fdc556c25cab967ab9f55','EXACT_FAILED_CLAIM_RULING_RECEIPT')
++    receipt=Path(__file__).resolve().parents[4]/'results/g_agreement/i2/E74_TP4_CAP300_AUTHORITY.json'
++    A.need(A.sha(receipt.read_bytes())==AUTHORITY_SHA,'EXACT_TP4_CAP300_AUTHORITY_RECEIPT')
+@@ -49,4 +47,0 @@
+-    gate=r.get('hopper_fallback',{})
+-    A.need(type(gate) is dict and gate.get('no_b200_claim_by_deadline') is False and gate.get('failed_pre_ssh_b200_claim_exception_authorised') is True
+-           and gate.get('failed_run_id')=='e74-public-20261027-a2'
+-           and gate.get('failed_claim_ruling_sha256')=='9bbb6e60ba1a60417a456cc8aa9055bf5a1cdc74388fdc556c25cab967ab9f55','TRUTHFUL_FAILED_CLAIM_GATE')
+@@ -55 +50 @@
+-    A.need(q['gpu_type']=='NVIDIA H200' and type(q['gpu_count']) is int and q['gpu_count']==8
++    A.need(q['gpu_type']=='NVIDIA B200' and type(q['gpu_count']) is int and q['gpu_count']==4
+@@ -61,6 +55,0 @@
+-    if q['cloud_type']=='COMMUNITY':
+-        proof=q['secure_unavailable']
+-        A.need(created>=COMMUNITY_NOT_BEFORE and proof['checked_epoch']>=COMMUNITY_NOT_BEFORE
+-               and proof['checked_epoch']<=created<=now<=proof['valid_until_epoch']
+-               and proof['available_count']==0 and type(proof['available_count']) is int
+-               and A.SHA.fullmatch(proof['provider_response_sha256']),'COMMUNITY_ONLY_AFTER_FRESH_SECURE_ABSENCE')
+@@ -77,2 +66,2 @@
+-    A.need(r['cap_usd']==160 and r['experiment_closed_usd']==CLOSED and r['future_maximum_usd']==FUTURE_MAX
+-           and b['future_reservation_usd']==FUTURE_MAX and b['experiment_closed_usd']==CLOSED,'INCLUSIVE_EXPERIMENT_CAP')
++    A.need(r['cap_usd']==300 and r['experiment_closed_usd']==CLOSED and 0<r['future_maximum_usd']<=300-CLOSED
++           and b['future_reservation_usd']==r['future_maximum_usd'] and b['experiment_closed_usd']==CLOSED,'INCLUSIVE_EXPERIMENT_CAP')
+@@ -81,2 +70,2 @@
+-       'other_cost_upper_bound_usd':q['other_cost_upper_bound_usd'],'cap_usd':160,'provider_stop_epoch':stop,
+-       'gpu_type':'H200','gpu_count':8,**hardware_fields(r)}
++       'other_cost_upper_bound_usd':q['other_cost_upper_bound_usd'],'cap_usd':300,'provider_stop_epoch':stop,
++       'gpu_type':'B200','gpu_count':4,**hardware_fields(r)}
+@@ -112 +101,2 @@
+-        before=qlimit+other;future=Decimal('152.92')
++        before=qlimit+other;future=Decimal(str(b['future_reservation_usd']))
++        A.need(future.is_finite() and future>0,'RESERVATION_DOMAIN')
+@@ -116,0 +107 @@
++    A.need(Decimal(str(checked['forecast_times_1_25_usd']))<=Decimal(str(b['future_reservation_usd'])),'FULL_DEADLINE_FORECAST_WITHIN_RESERVED_LIABILITY')
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/remote_ops.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/remote_ops.py
+@@ -9 +9 @@
+- 'bootstrap/projects/g_agreement/e74/hardware.py':'26f0078014de09621f39da69b26df7996c7c2bc91c0c9b7a3c5c14a370e9d38e',
++ 'bootstrap/projects/g_agreement/e74/hardware.py':'af0892dc465f299a04abc2628abd1610529737cf409e4d1e2088c1a5a86ac25c',
+@@ -17 +17 @@
+-                  'environment_lock_verified','environment_lock_sha256','provider_stop_verified','hopper_fallback','limit_authority','hardware_forecast_sha256','phase_forecast_seconds'}
++                  'environment_lock_verified','environment_lock_sha256','provider_stop_verified','limit_authority','tp4_cap_authority_sha256'}
+@@ -117 +117 @@
+-            require(resident['deadline_epoch']<=resident['science_start_epoch']+3000,'ORIGINAL_BOOT3000')
++            require(resident['deadline_epoch']<=resident['science_start_epoch']+1200,'ORIGINAL_BOOT1200')
+@@ -215 +215 @@
+-        elif relative=='uploads/resident-v6-c8-cap160.tar.gz':A.need(expected_sha==G.ARCHIVE and len(raw)==G.ARCHIVE_BYTES,'ARCHIVE_PIN')
++        elif relative=='uploads/resident-running-mean-tp4-cap300.tar.gz':A.need(expected_sha==G.ARCHIVE and len(raw)==G.ARCHIVE_BYTES,'ARCHIVE_PIN')
+@@ -243 +243 @@
+-            argv=[self.python,'-B','-m','projects.g_agreement.e74.archive_stage','--archive',root+'/uploads/resident-v6-c8-cap160.tar.gz',
++            argv=[self.python,'-B','-m','projects.g_agreement.e74.archive_stage','--archive',root+'/uploads/resident-running-mean-tp4-cap300.tar.gz',
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/test_remote_guards.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/test_remote_guards.py
+@@ -185 +185 @@
+-    def test_boot_watchdog_has_original3000_before_phase_pointer(self):
++    def test_boot_watchdog_has_original1200_before_phase_pointer(self):
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/test_tp8_driver.py
++++ cache/g_agreement/i2/operator_g_tp4_cap300_driver_candidate/test_tp4_driver.py
+@@ -15 +15 @@
+-NOW=P.NOT_BEFORE+60
++NOW=1793161400.
+@@ -24,3 +24,2 @@
+-    # This is explicitly hypothetical test evidence, never a real no-claim assertion.
+-    c['runtime'].update(setup_deadline_epoch=created+890,hopper_fallback={'authority':'bd43a46af5eb2ea84e8524fdc1ab6f5262acd729',
+-      'not_before_epoch':P.NOT_BEFORE,'checked_epoch':created,'no_b200_claim_by_deadline':False,'single_node':True,'failed_pre_ssh_b200_claim_exception_authorised':True,'failed_run_id':'e74-public-20261027-a2','failed_claim_ruling_sha256':'9bbb6e60ba1a60417a456cc8aa9055bf5a1cdc74388fdc556c25cab967ab9f55'})
++    c['runtime'].update(setup_deadline_epoch=created+890,future_maximum_usd=152.92)
++    c['budget']['future_reservation_usd']=152.92
+@@ -41,2 +40,2 @@
+-      'observed_quote_sha256':'a'*64,'gpu_count':8,'gpu_type':'NVIDIA H200','replica_hourly_usd':42.32,
+-      'identity_sha256':IDENTITY,'provider_stop_epoch':created+9853,'allocator_process':proc,'allocator_pid':1111,
++      'observed_quote_sha256':'a'*64,'gpu_count':4,'gpu_type':'NVIDIA B200','replica_hourly_usd':42.32,
++      'identity_sha256':IDENTITY,'provider_stop_epoch':created+8473,'allocator_process':proc,'allocator_pid':1111,
+@@ -60 +59 @@
+-    def check(self,c=None,now=None):return P.check(c or self.cfg,now or self.clock(),self.source,created=NOW,stop=NOW+9853)
++    def check(self,c=None,now=None):return P.check(c or self.cfg,now or self.clock(),self.source,created=NOW,stop=NOW+8473)
+@@ -65,7 +64,4 @@
+-    def test_false_historical_or_wrong_exception_refuses(self):
+-        for key,value in [('no_b200_claim_by_deadline',True),('failed_pre_ssh_b200_claim_exception_authorised',False),('failed_run_id','other'),('failed_claim_ruling_sha256','0'*64)]:
+-            c=copy.deepcopy(self.cfg);c['runtime']['hopper_fallback'][key]=value
+-            with self.subTest(key=key),self.assertRaisesRegex(ValueError,'TRUTHFUL_FAILED_CLAIM'):self.check(c)
+-    def test_actual_pending_ruling_blocks_before_effects(self):
+-        with patch.object(P,'HOPPER_RULING_PENDING',True),self.assertRaisesRegex(ValueError,'RULING_PENDING'):self.check()
+-        self.assertFalse(self.ports.calls)
++    def test_exact_cap_authority_required(self):
++        for key,value in [('limit_authority','bad'),('tp4_cap_authority_sha256','0'*64)]:
++            c=copy.deepcopy(self.cfg);c['runtime'][key]=value
++            with self.subTest(key=key),self.assertRaisesRegex(ValueError,'AUTHORITY'):self.check(c)
+@@ -73,2 +69,2 @@
+-        r=self.check();self.assertAlmostEqual(r['padded_future_forecast_usd'],147.2843611111111)
+-        self.assertAlmostEqual(r['experiment_total_usd'],154.3643611111111)
++        r=self.check();self.assertAlmostEqual(r['padded_future_forecast_usd'],127.0060277777778)
++        self.assertAlmostEqual(r['experiment_total_usd'],134.0860277777778)
+@@ -76,2 +72,2 @@
+-    def test_original9853_never10693(self):
+-        self.assertEqual(P.remaining(NOW,NOW+800),9053)
++    def test_original8473_never10693(self):
++        self.assertEqual(P.remaining(NOW,NOW+800),7673)
+@@ -84 +80 @@
+-        c=copy.deepcopy(self.cfg);c['quote']['replica_hourly_usd']=44.5
++        c=copy.deepcopy(self.cfg);c['quote']['replica_hourly_usd']=99
+@@ -88,4 +84,4 @@
+-        a={'allocation_start_epoch':NOW,'replica_hourly_usd':3600,'other_cost_upper_bound_usd':0,'cap_usd':160,
+-           'provider_stop_epoch':NOW+9853,'gpu_type':'H200','gpu_count':8,**P.hardware_fields(self.cfg['runtime'])}
+-        P.budget(self.source,a,152.92/1.25,NOW)
+-        with self.assertRaises(self.source.NoFit):P.budget(self.source,a,152.92/1.25+.001,NOW)
++        a={'allocation_start_epoch':NOW,'replica_hourly_usd':3600,'other_cost_upper_bound_usd':0,'cap_usd':300,
++           'provider_stop_epoch':NOW+8473,'gpu_type':'B200','gpu_count':4,**P.hardware_fields(self.cfg['runtime'])}
++        P.budget(self.source,a,292.92/1.25,NOW)
++        with self.assertRaises(self.source.NoFit):P.budget(self.source,a,292.92/1.25+.001,NOW)
+@@ -99,2 +95,2 @@
+-    def test_only_H2008(self):
+-        for kind,count in [('NVIDIA B200',8),('NVIDIA H200',4),('NVIDIA B200',4)]:
++    def test_only_B2004(self):
++        for kind,count in [('NVIDIA B200',8),('NVIDIA H200',4),('NVIDIA H200',8)]:
+@@ -106,9 +102,10 @@
+-    def test_community_before10_rejects(self):
+-        c=copy.deepcopy(self.cfg);c['quote'].update(cloud_type='COMMUNITY',secure_unavailable={'checked_epoch':NOW,'valid_until_epoch':NOW+800,'available_count':0,'provider_response_sha256':'d'*64})
+-        with self.assertRaisesRegex(ValueError,'COMMUNITY'):self.check(c)
+-    def test_community_after10_requires_actual_empty_secure_evidence(self):
+-        at=P.COMMUNITY_NOT_BEFORE+60;c=config(at);c['quote'].update(cloud_type='COMMUNITY',replica_hourly_usd=28.72,
+-          secure_unavailable={'checked_epoch':at-5,'valid_until_epoch':at+800,'available_count':0,'provider_response_sha256':'d'*64})
+-        P.check(c,at+10,self.source,created=at)
+-        c['quote']['secure_unavailable']['available_count']=1
+-        with self.assertRaisesRegex(ValueError,'COMMUNITY'):P.check(c,at+10,self.source,created=at)
++    def test_b200_community_has_no_hopper_time_gate(self):
++        c=copy.deepcopy(self.cfg);c['quote']['cloud_type']='COMMUNITY';self.check(c)
++    def test_experiment_cap300_does_not_waive_daily500(self):
++        c=copy.deepcopy(self.cfg);c['runtime']['future_maximum_usd']=292.92;c['budget']['future_reservation_usd']=292.92
++        c['budget']['daily']['2026-10-28']['combined_projected_usd']=584.38
++        with self.assertRaisesRegex(ValueError,'COMBINED_DATED_CAP'):self.check(c)
++    def test_actual_full_endpoint_must_fit_reserved_liability(self):
++        c=copy.deepcopy(self.cfg);c['runtime']['future_maximum_usd']=120;c['budget']['future_reservation_usd']=120
++        c['budget']['daily']['2026-10-28']['combined_projected_usd']=411.46
++        with self.assertRaisesRegex(ValueError,'RESERVED_LIABILITY'):self.check(c)
+@@ -123,2 +120,2 @@
+-    def test_null_fallback_is_not_reinterpreted(self):
+-        self.cfg['runtime']['hopper_fallback']=None
++    def test_unbound_cap_rejected(self):
++        self.cfg['runtime']['cap_usd']=100
+@@ -128,3 +125,3 @@
+-        self.assertEqual(s['stop'],NOW+9853);self.assertAlmostEqual(s['cost_end'],NOW+(152.92/1.25-2)*3600/42.32)
+-        self.assertEqual(s['work_end'],NOW+9853-120);self.assertFalse(s['admission']['environment_lock_verified'])
+-        self.assertEqual(s['admission']['cap_usd'],160);self.assertEqual(s['admission']['gpu_count'],8)
++        self.assertEqual(s['stop'],NOW+8473);self.assertAlmostEqual(s['cost_end'],NOW+(152.92/1.25-2)*3600/42.32)
++        self.assertEqual(s['work_end'],NOW+8473-120);self.assertFalse(s['admission']['environment_lock_verified'])
++        self.assertEqual(s['admission']['cap_usd'],300);self.assertEqual(s['admission']['gpu_count'],4)
+@@ -139 +136 @@
+-    def test_original_boot3000_holds_within_work_end(self):
++    def test_original_boot1200_holds_within_work_end(self):
+@@ -141,3 +138,3 @@
+-        self.clock.set(3199);self.assertFalse(self.driver.poll_capture())
+-        self.clock.set(3200)
+-        with self.assertRaisesRegex(ValueError,'SMOKE3000'):self.driver.guarded('poll_capture')
++        self.clock.set(1399);self.assertFalse(self.driver.poll_capture())
++        self.clock.set(1400)
++        with self.assertRaisesRegex(ValueError,'SMOKE1200'):self.driver.guarded('poll_capture')
+@@ -155,3 +152,3 @@
+-        a={'allocation_start_epoch':NOW,'replica_hourly_usd':100,'other_cost_upper_bound_usd':2,'cap_usd':160,
+-           'provider_stop_epoch':NOW+9853,'gpu_type':'H200','gpu_count':8,**P.hardware_fields(self.cfg['runtime'])}
+-        try:self.source.budget(a,9853,NOW)
++        a={'allocation_start_epoch':NOW,'replica_hourly_usd':150,'other_cost_upper_bound_usd':2,'cap_usd':300,
++           'provider_stop_epoch':NOW+8473,'gpu_type':'B200','gpu_count':4,**P.hardware_fields(self.cfg['runtime'])}
++        try:self.source.budget(a,8473,NOW)
+@@ -162 +159 @@
+-        with self.assertRaises(self.source.NoFit):port._nonzero('resident',{'exit_code':4},NOW+9853)
++        with self.assertRaises(self.source.NoFit):port._nonzero('resident',{'exit_code':4},NOW+8473)
+@@ -166 +163 @@
+-        self.assertTrue({'hopper_fallback','limit_authority','hardware_forecast_sha256','phase_forecast_seconds'}<=ADMISSION_FIELDS)
++        self.assertTrue({'limit_authority','tp4_cap_authority_sha256'}<=ADMISSION_FIELDS)
+@@ -169 +166 @@
+-            def query(self,end):return {'provider_reported_status':'RUNNING','created_epoch':NOW,'gpu_count':8,'reported_cost_per_hour':42.32}
++            def query(self,end):return {'provider_reported_status':'RUNNING','created_epoch':NOW,'gpu_count':4,'reported_cost_per_hour':42.32}
+@@ -172 +169 @@
+-        request={'created_epoch':NOW,'setup_deadline_epoch':NOW+890,'original_deadline_epoch':NOW+9853,'replica_hourly_usd':42.32,
++        request={'created_epoch':NOW,'setup_deadline_epoch':NOW+890,'original_deadline_epoch':NOW+8473,'replica_hourly_usd':42.32,
+@@ -194 +191 @@
+-        c['private_transport'].update(created_epoch=NOW,provider_stop_epoch=NOW+9853,run_identity_sha256=IDENTITY)
++        c['private_transport'].update(created_epoch=NOW,provider_stop_epoch=NOW+8473,run_identity_sha256=IDENTITY)
+@@ -196 +193 @@
+-        self.assertEqual(d.s['identity'],IDENTITY);self.assertEqual(phase_end(d.s,NOW+9853),NOW+890)
++        self.assertEqual(d.s['identity'],IDENTITY);self.assertEqual(phase_end(d.s,NOW+8473),NOW+890)

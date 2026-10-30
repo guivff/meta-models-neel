@@ -1,0 +1,1465 @@
+{
+  "CPU_only": true,
+  "authority_commit": "db55584a087dcd56bc151a1aaa3627e236b29440",
+  "bootstrap": {
+    "J_minus_random": "Paired within-item contrast before resampling",
+    "damage": "Paired none-minus-edited log odds per item; signed, no clipping",
+    "draws": 2000,
+    "interval": "95% percentile, numpy.quantile([0.025,0.975], method=linear)",
+    "items_per_row": 84,
+    "numpy_version": "2.5.3",
+    "random_damage": "Arithmetic mean of five fixed random-seed damages within item; seeds not resampled",
+    "random_seeds": [
+      20261027,
+      20261028,
+      20261029,
+      20261030,
+      20261031
+    ],
+    "rng": "numpy.default_rng(20261027), reset per row",
+    "rows": 37,
+    "sampling": "84 items with replacement, frozen test-item order; same draw across all metrics and arms",
+    "scope": "All37 frozen rows, no exclusions; no ratio intervals or rule reinterpretation",
+    "seed": 20261027,
+    "unit": "item",
+    "within_item": "Correct-minus-wrong log odds, equal mean over frozen candidate pairs"
+  },
+  "experiment": "E58b",
+  "generated_utc": "2026-10-27T06:19:34.113620+00:00",
+  "label": "POST HOC",
+  "model_calls": 0,
+  "registered_analysis_rerun": false,
+  "rows": [
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "list_depth",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.00557820513134911,
+            0.25349089531671426
+          ],
+          "estimate": 0.12287951083410353
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            0.03501842115606575,
+            0.31135261808122916
+          ],
+          "estimate": 0.17205643540336973
+        },
+        "PCA_damage": {
+          "ci95": [
+            -0.3843700299660365,
+            -0.0013448144708361734
+          ],
+          "estimate": -0.19281818185533797
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.07427154952571506,
+            -0.022456725182987403
+          ],
+          "estimate": -0.04917692456926618
+        }
+      },
+      "n_items": 84,
+      "row": "W1/list_depth"
+    },
+    {
+      "category": "delimiter",
+      "control": false,
+      "feature": "prose_paren",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.7207137564751541,
+            -0.4335556900971348
+          ],
+          "estimate": -0.5711214145024618
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.48178297360294636,
+            -0.20503351877399154
+          ],
+          "estimate": -0.34063840707143145
+        },
+        "PCA_damage": {
+          "ci95": [
+            0.6392507469858087,
+            1.3265403711547452
+          ],
+          "estimate": 0.9991155089367003
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.30251294836801085,
+            -0.1698193919791707
+          ],
+          "estimate": -0.23048300743103028
+        }
+      },
+      "n_items": 84,
+      "row": "W1/prose_paren"
+    },
+    {
+      "category": "delimiter",
+      "control": false,
+      "feature": "prose_quote",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.30958013746310914,
+            0.17779361508520578
+          ],
+          "estimate": -0.06736259738959018
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.29172083052230025,
+            0.23823380433289087
+          ],
+          "estimate": -0.030095980174484702
+        },
+        "PCA_damage": {
+          "ci95": [
+            0.42667919480286187,
+            1.346809599484272
+          ],
+          "estimate": 0.8496605257193247
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.08236351794962374,
+            0.007232670726786723
+          ],
+          "estimate": -0.03726661721510547
+        }
+      },
+      "n_items": 84,
+      "row": "W1/prose_quote"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "python_depth",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.09058133017803942,
+            0.0911678194822299
+          ],
+          "estimate": 0.0009740349792298817
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            0.002158320719997103,
+            0.180788861945981
+          ],
+          "estimate": 0.09153353997639249
+        },
+        "PCA_damage": {
+          "ci95": [
+            0.4475180757719846,
+            1.3235679482065494
+          ],
+          "estimate": 0.8732665220186824
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.10899920812674936,
+            -0.0729277933921133
+          ],
+          "estimate": -0.09055950499716259
+        }
+      },
+      "n_items": 84,
+      "row": "W1/python_depth"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "python_indent",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.25941295020637056,
+            0.11289558657223252
+          ],
+          "estimate": -0.06244520346323649
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.1501175428678592,
+            0.17735060974245975
+          ],
+          "estimate": 0.016995430418423243
+        },
+        "PCA_damage": {
+          "ci95": [
+            0.5208339360853037,
+            1.061901595514445
+          ],
+          "estimate": 0.806803401027407
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.13960658475401852,
+            -0.023258573742849578
+          ],
+          "estimate": -0.07944063388165973
+        }
+      },
+      "n_items": 84,
+      "row": "W1/python_indent"
+    },
+    {
+      "category": "delimiter",
+      "control": false,
+      "feature": "python_string",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.40217020041531043,
+            -0.20748578552600178
+          ],
+          "estimate": -0.3015227709409027
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.33810704779389883,
+            -0.11485105954376723
+          ],
+          "estimate": -0.2255877432457748
+        },
+        "PCA_damage": {
+          "ci95": [
+            1.576003365302902,
+            3.038342555967115
+          ],
+          "estimate": 2.255529789342767
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.10513547130372554,
+            -0.048563528506617465
+          ],
+          "estimate": -0.0759350276951279
+        }
+      },
+      "n_items": 84,
+      "row": "W1/python_string"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "table_column",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.24113784389171217,
+            0.2739439708103115
+          ],
+          "estimate": 0.012847328558564186
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.2675920150134093,
+            0.30167036225520283
+          ],
+          "estimate": 0.010483229519533274
+        },
+        "PCA_damage": {
+          "ci95": [
+            -0.7474054132782233,
+            0.6137667814086715
+          ],
+          "estimate": -0.0673711100770604
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.05202760952824196,
+            0.05944025982160208
+          ],
+          "estimate": 0.002364099039030928
+        }
+      },
+      "n_items": 84,
+      "row": "W1/table_column"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "table_role",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.37307933568954466,
+            -0.025552896516663696
+          ],
+          "estimate": -0.20259158384232295
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.4608894445782616,
+            -0.11601719319820428
+          ],
+          "estimate": -0.28925659997122627
+        },
+        "PCA_damage": {
+          "ci95": [
+            0.48620348884945824,
+            1.7167614512500309
+          ],
+          "estimate": 1.107316249892825
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.06667616540477389,
+            0.10707023654665267
+          ],
+          "estimate": 0.08666501612890334
+        }
+      },
+      "n_items": 84,
+      "row": "W1/table_role"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "list_depth",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.046788258708658666,
+            0.17151445164566947
+          ],
+          "estimate": 0.06848009711220152
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.08233081704094297,
+            0.11472873984348209
+          ],
+          "estimate": 0.01927210773740495
+        },
+        "PCA_damage": {
+          "ci95": [
+            0.19790618121623993,
+            0.593501641636803
+          ],
+          "estimate": 0.3945224654106867
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.008291246011143638,
+            0.09273118788287751
+          ],
+          "estimate": 0.049207989374796555
+        }
+      },
+      "n_items": 84,
+      "row": "E36/list_depth"
+    },
+    {
+      "category": "delimiter",
+      "control": false,
+      "feature": "prose_paren",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.6734849158763175,
+            -0.18223641675320415
+          ],
+          "estimate": -0.42173134429114206
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.5603355509752319,
+            -0.10624569781124595
+          ],
+          "estimate": -0.33004044833637414
+        },
+        "PCA_damage": {
+          "ci95": [
+            0.9931653898830215,
+            1.9399705738982274
+          ],
+          "estimate": 1.4648928145567577
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.12636714365155916,
+            -0.05800084885032407
+          ],
+          "estimate": -0.09169089595476787
+        }
+      },
+      "n_items": 84,
+      "row": "E36/prose_paren"
+    },
+    {
+      "category": "delimiter",
+      "control": false,
+      "feature": "prose_quote",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            0.1264618003430466,
+            0.5537242975130322
+          ],
+          "estimate": 0.34162215728844914
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            0.0009106701248813287,
+            0.41835652902899756
+          ],
+          "estimate": 0.21348710319116004
+        },
+        "PCA_damage": {
+          "ci95": [
+            1.3071767983248548,
+            3.6329196232947565
+          ],
+          "estimate": 2.4856633033071245
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.0838265868586798,
+            0.17312918401012817
+          ],
+          "estimate": 0.1281350540972891
+        }
+      },
+      "n_items": 84,
+      "row": "E36/prose_quote"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "python_depth",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.3329541017611821,
+            -0.0614769626674908
+          ],
+          "estimate": -0.19619411265566236
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.3582180724284126,
+            -0.04275719474646314
+          ],
+          "estimate": -0.2020909414759704
+        },
+        "PCA_damage": {
+          "ci95": [
+            1.0776139473054736,
+            2.248482342485693
+          ],
+          "estimate": 1.6625546147780759
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.027481070105873414,
+            0.0414644632923106
+          ],
+          "estimate": 0.005896828820308049
+        }
+      },
+      "n_items": 84,
+      "row": "E36/python_depth"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "python_indent",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.4278379560049091,
+            -0.1532194475155501
+          ],
+          "estimate": -0.28757349366233464
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.569639550035908,
+            -0.290637046684112
+          ],
+          "estimate": -0.4283544401327769
+        },
+        "PCA_damage": {
+          "ci95": [
+            1.3207130433902854,
+            2.285974134593492
+          ],
+          "estimate": 1.7996907454161417
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.11619142641623818,
+            0.1646154815987462
+          ],
+          "estimate": 0.14078094647044226
+        }
+      },
+      "n_items": 84,
+      "row": "E36/python_indent"
+    },
+    {
+      "category": "delimiter",
+      "control": false,
+      "feature": "python_string",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.4640908630298717,
+            -0.08053849992297969
+          ],
+          "estimate": -0.2759102260073026
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.5103754956718713,
+            -0.1387067169288086
+          ],
+          "estimate": -0.3249065110371226
+        },
+        "PCA_damage": {
+          "ci95": [
+            1.3492179980590229,
+            2.4043256222314775
+          ],
+          "estimate": 1.87605800869919
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.015486360873494828,
+            0.08289991746346152
+          ],
+          "estimate": 0.04899628502982003
+        }
+      },
+      "n_items": 84,
+      "row": "E36/python_string"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "table_column",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.6334321220832256,
+            -0.26315542921656754
+          ],
+          "estimate": -0.4485503285901532
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.8357054554378345,
+            -0.3089284930679773
+          ],
+          "estimate": -0.5725657680116238
+        },
+        "PCA_damage": {
+          "ci95": [
+            -0.6096705747346971,
+            0.07718538141121983
+          ],
+          "estimate": -0.27405813156760167
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.029967171963016,
+            0.22043069876530866
+          ],
+          "estimate": 0.12401543942147068
+        }
+      },
+      "n_items": 84,
+      "row": "E36/table_column"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "table_role",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.22187117430425826,
+            0.1302924068201155
+          ],
+          "estimate": -0.044655053388504756
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.21151419002385363,
+            0.10095336826074686
+          ],
+          "estimate": -0.05065200215294247
+        },
+        "PCA_damage": {
+          "ci95": [
+            -0.28607019221498853,
+            0.4965498704285848
+          ],
+          "estimate": 0.10334327958879017
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.05521303445100784,
+            0.06847291784627095
+          ],
+          "estimate": 0.005996948764437714
+        }
+      },
+      "n_items": 84,
+      "row": "E36/table_role"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "arith_compare",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.2693824954774408,
+            0.06549478343554896
+          ],
+          "estimate": -0.09523810091472808
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.2908147127074854,
+            0.19348215211715003
+          ],
+          "estimate": -0.046726175858860956
+        },
+        "PCA_damage": {
+          "ci95": [
+            -0.4553664861158246,
+            0.22924104501448886
+          ],
+          "estimate": -0.0963541716337204
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.19213170476967378,
+            0.09525668000181509
+          ],
+          "estimate": -0.04851192505586711
+        }
+      },
+      "n_items": 84,
+      "row": "E49/arith_compare"
+    },
+    {
+      "category": "content",
+      "control": false,
+      "feature": "container_after_move",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -1.170405536069579,
+            -0.8623512015101455
+          ],
+          "estimate": -1.011160726525954
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -1.5193564234922334,
+            -1.2243898933975115
+          ],
+          "estimate": -1.37068454023628
+        },
+        "PCA_damage": {
+          "ci95": [
+            0.3711123357072384,
+            1.3928757482740495
+          ],
+          "estimate": 0.8839285642219087
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.29356399613033457,
+            0.42501117045325865
+          ],
+          "estimate": 0.3595238137103263
+        }
+      },
+      "n_items": 84,
+      "row": "E49/container_after_move"
+    },
+    {
+      "category": "content",
+      "control": false,
+      "feature": "holder_after_handovers",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.4378460695346197,
+            -0.04341334260645372
+          ],
+          "estimate": -0.23850356397174655
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.3969179244552341,
+            -0.0140706339052747
+          ],
+          "estimate": -0.2066113188153221
+        },
+        "PCA_damage": {
+          "ci95": [
+            -0.5341407094682965,
+            0.2861853082974746
+          ],
+          "estimate": -0.1376858495530628
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.12501354563803901,
+            0.05675164625758203
+          ],
+          "estimate": -0.03189224515642438
+        }
+      },
+      "n_items": 84,
+      "row": "E49/holder_after_handovers"
+    },
+    {
+      "category": "syntactic",
+      "control": false,
+      "feature": "negation_scope",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.5448859861918859,
+            -0.15735712789353878
+          ],
+          "estimate": -0.34844207763671875
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.3985054482732502,
+            0.012859458696274499
+          ],
+          "estimate": -0.18920176369803288
+        },
+        "PCA_damage": {
+          "ci95": [
+            -1.4156787259238106,
+            -0.0371477149781729
+          ],
+          "estimate": -0.728308223542713
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.17759563854762492,
+            -0.1399521174884978
+          ],
+          "estimate": -0.15924031393868582
+        }
+      },
+      "n_items": 84,
+      "row": "E49/negation_scope"
+    },
+    {
+      "category": "format",
+      "control": false,
+      "feature": "next_paragraph_language",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            0.14546130952380953,
+            0.32180059523809523
+          ],
+          "estimate": 0.23065476190476192
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.0435267857142857,
+            0.12122767857142841
+          ],
+          "estimate": 0.037425595238095244
+        },
+        "PCA_damage": {
+          "ci95": [
+            0.862114025297619,
+            1.4511416480654762
+          ],
+          "estimate": 1.1541573660714286
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.18162016369047615,
+            0.20505952380952375
+          ],
+          "estimate": 0.19322916666666665
+        }
+      },
+      "n_items": 84,
+      "row": "E49/next_paragraph_language"
+    },
+    {
+      "category": "content",
+      "control": false,
+      "feature": "topic_twin",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.01713176170984904,
+            0.10379444162050883
+          ],
+          "estimate": 0.04575893992469424
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            0.02930984968230838,
+            0.13082225504375627
+          ],
+          "estimate": 0.08191968599955239
+        },
+        "PCA_damage": {
+          "ci95": [
+            1.060639926081612,
+            1.3327752550443015
+          ],
+          "estimate": 1.1925223441351027
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.06065109428905306,
+            -0.01175402385847911
+          ],
+          "estimate": -0.03616074607485816
+        }
+      },
+      "n_items": 84,
+      "row": "E49/topic_twin"
+    },
+    {
+      "category": "format",
+      "control": false,
+      "feature": "unit_system",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            0.17187500081601598,
+            0.3757440160072985
+          ],
+          "estimate": 0.2760416467984517
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            0.2681436105782078,
+            0.4236644260691744
+          ],
+          "estimate": 0.3477678464991706
+        },
+        "PCA_damage": {
+          "ci95": [
+            -1.8995628125256017,
+            -0.5057942581673471
+          ],
+          "estimate": -1.1994047406173887
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.10491075044231757,
+            -0.03972841921306794
+          ],
+          "estimate": -0.07172619970071883
+        }
+      },
+      "n_items": 84,
+      "row": "E49/unit_system"
+    },
+    {
+      "category": "content",
+      "control": false,
+      "feature": "user_expertise",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            0.22741828759511312,
+            0.41591758273896706
+          ],
+          "estimate": 0.32248687744140625
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            0.1761405573572431,
+            0.3680432620502651
+          ],
+          "estimate": 0.2716694150652204
+        },
+        "PCA_damage": {
+          "ci95": [
+            -0.23803912003835043,
+            0.3124975017138888
+          ],
+          "estimate": 0.015267326718284971
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.006192028636024116,
+            0.09735289176305131
+          ],
+          "estimate": 0.05081746237618583
+        }
+      },
+      "n_items": 84,
+      "row": "E49/user_expertise"
+    },
+    {
+      "category": "syntactic",
+      "control": false,
+      "feature": "adjective_implicit",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            0.06812920676810401,
+            0.6673247040382453
+          ],
+          "estimate": 0.35314362815448214
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            0.028347297573373436,
+            0.6148139709943816
+          ],
+          "estimate": 0.3093750062442961
+        },
+        "PCA_damage": {
+          "ci95": [
+            2.477573703371343,
+            3.686155878858907
+          ],
+          "estimate": 3.0747927938188826
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.016554159174362804,
+            0.07291858255153612
+          ],
+          "estimate": 0.04376862191018603
+        }
+      },
+      "n_items": 84,
+      "row": "E56/adjective_implicit"
+    },
+    {
+      "category": "content",
+      "control": false,
+      "feature": "fact_recall",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            0.235109577079614,
+            0.44606585105260205
+          ],
+          "estimate": 0.3389135826201666
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.1579622897363844,
+            0.06887364239919748
+          ],
+          "estimate": -0.044717304479508196
+        },
+        "PCA_damage": {
+          "ci95": [
+            4.941838670770327,
+            5.998349103757313
+          ],
+          "estimate": 5.49646570568993
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.36558399674438313,
+            0.4023445352060455
+          ],
+          "estimate": 0.3836308870996748
+        }
+      },
+      "n_items": 84,
+      "row": "E56/fact_recall"
+    },
+    {
+      "category": "format",
+      "control": false,
+      "feature": "language_continuation",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.5528273193609147,
+            -0.13577935085410167
+          ],
+          "estimate": -0.3541666269302368
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.5183928141991299,
+            -0.11871093923137323
+          ],
+          "estimate": -0.32864580267951604
+        },
+        "PCA_damage": {
+          "ci95": [
+            2.2272170464197796,
+            3.1154575620378764
+          ],
+          "estimate": 2.6801990327380953
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.07745531652654918,
+            0.029765644527616937
+          ],
+          "estimate": -0.025520824250720796
+        }
+      },
+      "n_items": 84,
+      "row": "E56/language_continuation"
+    },
+    {
+      "category": "content",
+      "control": true,
+      "feature": "rhyme_plan",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            1.481008180093375,
+            1.8784039740539376
+          ],
+          "estimate": 1.6796874868727865
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            1.6766331728893742,
+            2.054946044934469
+          ],
+          "estimate": 1.868898791429542
+        },
+        "PCA_damage": {
+          "ci95": [
+            -1.3681687130858857,
+            0.06885693359321764
+          ],
+          "estimate": -0.6659226172736713
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.23251486228512863,
+            -0.14515994465067278
+          ],
+          "estimate": -0.18921130455675578
+        }
+      },
+      "n_items": 84,
+      "row": "E56/rhyme_plan"
+    },
+    {
+      "category": "syntactic",
+      "control": false,
+      "feature": "tense_implicit",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            0.15476190717447372,
+            0.2619233794155574
+          ],
+          "estimate": 0.20684524377187094
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            0.07767856673115775,
+            0.1656361477006049
+          ],
+          "estimate": 0.12276784919557118
+        },
+        "PCA_damage": {
+          "ci95": [
+            1.509644710095156,
+            1.8474795780011584
+          ],
+          "estimate": 1.677455382687705
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.05565101647660846,
+            0.11309523873385921
+          ],
+          "estimate": 0.08407739457629974
+        }
+      },
+      "n_items": 84,
+      "row": "E56/tense_implicit"
+    },
+    {
+      "category": "content",
+      "control": true,
+      "feature": "antonym_crosslingual",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.2509871318226769,
+            0.5854230639480403
+          ],
+          "estimate": 0.1605791477929978
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.5309989567030043,
+            0.2674435282888866
+          ],
+          "estimate": -0.14121509279523575
+        },
+        "PCA_damage": {
+          "ci95": [
+            2.625713288784027,
+            3.6256455273855295
+          ],
+          "estimate": 3.150827475956508
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.26624490085102254,
+            0.33819927192869637
+          ],
+          "estimate": 0.30179424058823356
+        }
+      },
+      "n_items": 84,
+      "row": "E57/antonym_crosslingual"
+    },
+    {
+      "category": "syntactic",
+      "control": false,
+      "feature": "clause_pending",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.43285169033777143,
+            -0.15402317103885477
+          ],
+          "estimate": -0.29548142069862005
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.6213144176346914,
+            -0.3136184181485858
+          ],
+          "estimate": -0.4683880079360235
+        },
+        "PCA_damage": {
+          "ci95": [
+            1.4011135958489918,
+            2.28033530428296
+          ],
+          "estimate": 1.8201657022748674
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.1402479163237981,
+            0.206563892875399
+          ],
+          "estimate": 0.17290658723740351
+        }
+      },
+      "n_items": 84,
+      "row": "E57/clause_pending"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "indent_level",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.09812506181853159,
+            -0.005483771718683705
+          ],
+          "estimate": -0.05017666873477754
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.04462856690088908,
+            0.07142726966312953
+          ],
+          "estimate": 0.016475730850583032
+        },
+        "PCA_damage": {
+          "ci95": [
+            -0.5851970972049805,
+            -0.24888749392259701
+          ],
+          "estimate": -0.4159331066267831
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.0952791171840259,
+            -0.037173896815095656
+          ],
+          "estimate": -0.06665239958536057
+        }
+      },
+      "n_items": 84,
+      "row": "E57/indent_level"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "nesting_depth",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            0.06289892686264856,
+            0.30379675420976815
+          ],
+          "estimate": 0.1767974098523458
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            0.06941918750603994,
+            0.3179057425402459
+          ],
+          "estimate": 0.18941771927334017
+        },
+        "PCA_damage": {
+          "ci95": [
+            -0.37856413001815475,
+            0.23407039007260666
+          ],
+          "estimate": -0.08346118103890192
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.037713029441379345,
+            0.01360624012492952
+          ],
+          "estimate": -0.012620309420994352
+        }
+      },
+      "n_items": 84,
+      "row": "E57/nesting_depth"
+    },
+    {
+      "category": "content",
+      "control": false,
+      "feature": "sentiment_judgement",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            0.6152902069191138,
+            0.9829055432407628
+          ],
+          "estimate": 0.802083371650605
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            0.6124963004461352,
+            0.9626637028441543
+          ],
+          "estimate": 0.7918154847054256
+        },
+        "PCA_damage": {
+          "ci95": [
+            2.251357924299581,
+            2.739341575226613
+          ],
+          "estimate": 2.487537232183275
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.008337028544573558,
+            0.02857145501034601
+          ],
+          "estimate": 0.01026788694517953
+        }
+      },
+      "n_items": 84,
+      "row": "E57/sentiment_judgement"
+    },
+    {
+      "category": "syntactic",
+      "control": false,
+      "feature": "subject_number",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.6856677586124057,
+            -0.49362906501406745
+          ],
+          "estimate": -0.5892856972558158
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.6643731000309899,
+            -0.42489771289484846
+          ],
+          "estimate": -0.5449404444013324
+        },
+        "PCA_damage": {
+          "ci95": [
+            0.5487164616584778,
+            0.791313280519985
+          ],
+          "estimate": 0.6681547619047619
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            -0.07745726142610819,
+            -0.012870133859770656
+          ],
+          "estimate": -0.044345252854483465
+        }
+      },
+      "n_items": 84,
+      "row": "E57/subject_number"
+    },
+    {
+      "category": "content",
+      "control": true,
+      "feature": "two_hop_answer",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            0.10338537082785651,
+            0.3824777057128291
+          ],
+          "estimate": 0.24107144134385244
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.002113075965926775,
+            0.2968936296304067
+          ],
+          "estimate": 0.14910714768228076
+        },
+        "PCA_damage": {
+          "ci95": [
+            -0.04242926853753271,
+            0.32965030808533924
+          ],
+          "estimate": 0.15104167943909055
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.0663690950969855,
+            0.11726190955865953
+          ],
+          "estimate": 0.09196429366157169
+        }
+      },
+      "n_items": 84,
+      "row": "E57/two_hop_answer"
+    },
+    {
+      "category": "bookkeeping",
+      "control": false,
+      "feature": "page_range_digit",
+      "metrics": {
+        "J_damage": {
+          "ci95": [
+            -0.3043154594444093,
+            -0.24181541332176754
+          ],
+          "estimate": -0.27232139451163156
+        },
+        "J_minus_random_damage": {
+          "ci95": [
+            -0.413839256366094,
+            -0.3398809294473559
+          ],
+          "estimate": -0.3758928037825085
+        },
+        "PCA_damage": {
+          "ci95": [
+            1.3883928577105202,
+            1.7232514456624075
+          ],
+          "estimate": 1.5572916467984517
+        },
+        "random_damage_mean5": {
+          "ci95": [
+            0.08630580340112955,
+            0.12098959346612288
+          ],
+          "estimate": 0.10357140927087695
+        }
+      },
+      "n_items": 84,
+      "row": "E57/page_range_digit"
+    }
+  ],
+  "sealed_verdicts_changed": false,
+  "sealed_verdicts_reference_only": {
+    "R_b1": {
+      "denominator": 3,
+      "met": true,
+      "passing": 2
+    },
+    "R_b2": {
+      "denominator": 25,
+      "met": false,
+      "passing": 15,
+      "rows": [
+        "W1/list_depth",
+        "W1/prose_paren",
+        "W1/prose_quote",
+        "W1/python_depth",
+        "W1/python_indent",
+        "W1/python_string",
+        "W1/table_column",
+        "W1/table_role",
+        "E36/list_depth",
+        "E36/prose_paren",
+        "E36/prose_quote",
+        "E36/python_depth",
+        "E36/python_indent",
+        "E36/python_string",
+        "E36/table_column",
+        "E36/table_role",
+        "E49/arith_compare",
+        "E49/negation_scope",
+        "E56/adjective_implicit",
+        "E56/tense_implicit",
+        "E57/clause_pending",
+        "E57/indent_level",
+        "E57/nesting_depth",
+        "E57/subject_number",
+        "E57/page_range_digit"
+      ],
+      "status": "EVALUABLE"
+    }
+  },
+  "source_sha256": {
+    "cache/g_agreement/understand/e58b/cpu_only_v2/CPU_JOIN.json": "5ecfeffcdc59c7d76c2377767daa726c011d654fd95789d9ac1eafcd427cb28a",
+    "cache/g_agreement/understand/e58b/cpu_only_v2/CPU_SEAL.json": "d31501a47043fa6b605910577808301d99391472e6187a93e31164e9f28a53db",
+    "cache/g_agreement/understand/e58b/cpu_only_v2/INTEGRATOR_CUSTODY.json": "c86c9b73c3357968b82daa7bd7e5ae4e24cd0124a8f9bb3cadd4751bbd1e4980",
+    "cache/g_agreement/understand/e58b/pod_inputs_v2/BANK.json": "9c8f00ef8b05950273ac40dcd3f86bea62153e77af3e7f8cf985b1e23d76b9fe",
+    "cache/g_agreement/understand/e58b/pod_inputs_v2/INPUT_SEAL.json": "f450923d1c10ef799888b4c669134f98fb1add24db23b44a10cd79b100392974",
+    "cache/g_agreement/understand/e58b/verified-pull-rerun1/VERIFIED_PULL.json": "3e78baa876abb5183b4df16c2d523c7cabacff5bbd19fa2b112c825b94153b9a",
+    "cache/g_agreement/understand/e58b/verified-pull-rerun1/final/OUTPUT_SEAL.json": "ab49f32726183e4225acf78c065b0087d220e3de617b0c7e5fd918cc8c7e4f67",
+    "cache/g_agreement/understand/e58b/verified-pull-rerun1/final/scores.jsonl": "babb11ce5260a756f1ec5ede63cb1c0a361512f9eec70cb34bd5c613cec6f133",
+    "results/g_agreement/understand/e58b/CPU_CUSTODY_BINDING.20261027.json": "89fcb88765e6ea85ede50e324ca2deb09067776a5d31b6678d8289a989960625",
+    "results/g_agreement/understand/e58b/LAUNCH_REQUEST.json": "7285b52e80277ee20cea6171ffe80bb159c98ff20b72fb59d25f4287ef7e7d44",
+    "results/g_agreement/understand/e58b/SOURCE_SEAL.20261027.json": "a00b39d963f588571674b3e83d984fca9a0ba6a07eac0af184902b1a924c8e1c",
+    "results/g_agreement/understand/e58b/analysis_20261027/ANALYSIS_SEAL.json": "f39c67631fc795b0823d8ee22ee2458648368d61439b657b90c48769a043a84e",
+    "results/g_agreement/understand/e58b/analysis_20261027/RESULTS.json": "80ef8209cd1ca0c69685e13498b8ca6050491fdaa9759fee24c6cff453647dd8",
+    "results/g_agreement/understand/e58b/analysis_20261027/RESULTS.md": "28465b7fe91b6639e5adab531c79f9ffcc106477e882fbfb1826faef11a7b33e",
+    "results/g_agreement/understand/e58b/common58.py": "1a3927afcf10bde041e013b1fb97a08b919a5a125d60339a2593026aa0e7623f",
+    "results/g_agreement/understand/e58b/cpu_join58.py": "2502a7d88cacaf5b94cfa3fe08bb2d65d62718188e4f21706f3422ed910db7de",
+    "results/g_agreement/understand/e58b/posthoc_ci_20261027.py": "1d7f6ecb20fd43cdb08c043e1c795b36ec7c00e2b97e35ff5ffd00977d530897",
+    "results/g_agreement/understand/e58b/test_posthoc_ci_20261027.py": "733ccb4d443becf01c5e19e15f09fb6667b4382d1b0fd0d3b424aff5f7b17f9b"
+  },
+  "status": "COMPLETE_DESCRIPTIVE"
+}

@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "python",
+    "-m",
+    "projects.g_agreement.e119.runner",
+    "--mode",
+    "smoke",
+    "--inputs",
+    "EXTRACTED/inputs",
+    "--input-sha",
+    "4b850efba26323bbf4737a73000fe93a0927534a14a3a04b33efd5a190b3be7f",
+    "--source-seal",
+    "results/g_agreement/understand/e119/SOURCE_SEAL.json",
+    "--source-sha",
+    "b2e7ed092af9cfd391d2cfe2cec6acb1de04b22898a913e0a787840468241738",
+    "--weights",
+    "STAGED_model.safetensors",
+    "--base",
+    "/weights/hf_cache/hub/models--Qwen--Qwen3.6-27B/snapshots/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+    "--assignment",
+    "E119_SMOKE_ASSIGNMENT.json",
+    "--out",
+    "FRESH_SMOKE_ROOT"
+  ],
+  "cutoff": "2026-10-29T18:00:00Z",
+  "priority": "E110\u2192E117\u2192E116\u2192E95 3-0/3-3\u2192E119",
+  "production": "Requires matching SMOKE_SEAL PASS; no production readout before it",
+  "smoke_status": "PENDING_PRIORITY_RELEASE_NO_READOUT_YET",
+  "validate_first": "append --validate-only before pod create"
+}

@@ -1,0 +1,17 @@
+# §79 freeze: prefix probe-gap screen
+
+CPU preparation only. No activation, probe or reader result exists yet; no GPU/API work or pod allocation has started.
+
+The frozen corpus contains2,400documents:600each prose, Python, LaTeX and Markdown tables. Public HF revisions, original-row locations, source hashes and every selected document's content hash are in CORPUS_MANIFEST.json. Prose includes all100frozen P3 neutral prompts; all other selections are label-blind seeded hashes. Raw text and input/label arrays remain in `cache/g_agreement/blindspot/s79/`; no source experiment file was changed. Mathematical solution fragments count as LaTeX corpus texts, not complete `.tex` projects. The Markdown stratum consists of rendered natural tables, not synthetic feature-balanced rows.
+
+The138binary scripts are68count-like,30state-like and40semantic. Each has a fixed operational definition, domain applicability, class label and positive/negative phrasing pair in FEATURE_REGISTRY.json. Lexical semantic controls are explicitly labeled word-list rules rather than ground-truth NLP classifications. Unknown/inapplicable is distinct from false. Extraction reads only the decoded prefix. Tests cover suffix invariance, Python/TeX comments and escapes, quotation/fence state, numeric boundaries and matching decoys.
+
+Candidate pool:38,028label-blind prefixes, at most16per document, with five frozen absolute-position bins. Sampling retains95features and drops43before capture; every drop and undersized row is explicit in ELIGIBILITY.json. Target150per side, floor100; exact domain/source-family/token-index matching ensures identical token-length distributions (KS1; mean difference0), and no document contributes>3positions to a feature. Pairs never share the source group. There are15,967unique selected states; capture42/44once per document at the union of its selected positions.
+
+Source grouping keeps article/table/problem identities together for CV/bootstrap. All donors, positions and templates are in the label-free input seal; actual boolean labels stay off pod and are joined only after native score seals. Read INPUT_RECEIPT.json for file hashes. No dropped feature can be reintroduced based on a reader result. W1 overlap is retained for screening but excluded from the future §84 top10candidate list.
+
+Use only the vendored `mats.capture.capture`, `mats.probes.cv_auroc`, Oracle `paired_logodds_templates` and NLA `paired_logodds_templates` interfaces used by W-core. Native sites44/42, positive-minus-negative orientation, same-feature donor aliases as described in PLAN.md. No new reader-scoring formula is supplied by this freeze. The screen runner and an integrator-assigned guarded1.5GPU-h execution follow; none is authorized by a fake/example receipt.
+
+Freeze deadline: Friday2026-10-23 20:00CEST (18:00UTC). Ranking deadline: Sunday2026-10-25 18:00CET (17:00UTC). W7(§76) follows when W-core's directions are available. No recurring checker or scheduled task is created.
+
+Source references: [WikiText](https://huggingface.co/datasets/Salesforce/wikitext), [MBPP](https://huggingface.co/datasets/google-research-datasets/mbpp), [MATH](https://huggingface.co/datasets/EleutherAI/hendrycks_math), [WikiTableQuestions Parquet](https://huggingface.co/datasets/bentrevett/wikitablequestions). Each is pinned to the immutable revision in PLAN.md and the manifest; original dataset attribution/licenses apply.

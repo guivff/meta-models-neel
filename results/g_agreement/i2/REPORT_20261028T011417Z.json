@@ -1,0 +1,67 @@
+{
+  "schema": "i2-two-hour-report-v1",
+  "reported_at_utc": "2026-10-28T01:14:17.365239+00:00",
+  "scheduled_trigger_utc": "2026-10-28T01:13:21.843Z",
+  "C": {
+    "state": "ORIGINAL_JUDGED_CONTROLS_CAPTURE_PROBES_SEALED_WAIT_WLENS",
+    "original_judged_records": 2000,
+    "supplement_captures_sealed": 1432,
+    "probes_pass": [
+      "W7",
+      "W8"
+    ],
+    "blocker": "Actual W-lens supplemental forecast commit before reader GO; permission to send handoff is pending.",
+    "closed_gpu_storage_usd": 15.46
+  },
+  "G": {
+    "state": "TP8_CPU_READY_PENDING_RULE_TIME_QUOTE",
+    "allocated": false,
+    "closed_gpu_storage_usd": 7.08,
+    "latest_stock_utc": "2026-10-28T01:12:17.099098+00:00",
+    "stock_locations": {
+      "secure4": 0,
+      "secure8": 0,
+      "community4": 0,
+      "community8": 0
+    },
+    "blockers": [
+      "Guiv historical failed-B200-claim ruling pending.",
+      "No allocatable B200 at latest poll; H200 earliest06:00 CET, actual quote required.",
+      "Old TP4 full forecast plus closed spend exceeds100cap."
+    ],
+    "TP8_cap_usd": 160,
+    "CPU_route_commit": "ff394035"
+  },
+  "omega": {
+    "state": "NOT_OPEN_GATE_PENDING",
+    "gate_local": "2026-10-28T12:00:00+01:00",
+    "C_sealed_condition": true,
+    "G_running_capture_condition": false
+  },
+  "booked_closed_gpu_storage_usd": 22.54,
+  "GPU_reservations_usd": 0,
+  "API_judging_actual_usd": 1.14249825,
+  "API_unresolved_reserve_usd": 0.013839375,
+  "planning": {
+    "Q_cap_usd": 260,
+    "C_closed_usd": 15.46,
+    "C_future_native_usd": 6.8,
+    "G_total_envelope_usd": 160,
+    "G_closed_included_once_usd": 7.08,
+    "combined_usd": 442.26,
+    "I2_usd": 182.26,
+    "daily_limit_usd": 500,
+    "I2_limit_usd": 240,
+    "active_reservation": false
+  },
+  "Q_source_sha256": {
+    "compute.jsonl": "cec653f0caac8ec18352ca9e084d61ca518d2b36a3e3dce8f78b7b838a9f9105",
+    "r/HANDOFF.md": "b1fe33314b02df235f69a69756f6cc650094a479145ec89fc5aa98c1b2620902"
+  },
+  "I2_ledger_sha256": "4d68e4dee44f686019229b8f85291eefc634c7adc45c0a357befe5ac201e1ea8",
+  "dated_authority_sha256": "d4dd09203e98acc5030baff877f9bbd6d8e59ec60176054c61a217a74e59e65e",
+  "new_provider_or_judging_calls": false,
+  "analysis_run": false,
+  "trigger_note": "Two-hour report due; fulfilled by admission heartbeat without changing either schedule.",
+  "ledger_reconciled_at_utc": "2026-10-28T01:14:17.365239+00:00"
+}

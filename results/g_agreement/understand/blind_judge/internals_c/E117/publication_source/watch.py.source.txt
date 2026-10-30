@@ -1,0 +1,62 @@
+"""CPU-only per-phase publication; never sends, scores or modifies a paid worker."""
+import time,json,hashlib,subprocess,os,sys,importlib.util
+from pathlib import Path
+ROOT=Path.cwd();HOME=ROOT/'cache/g_agreement/understand/internals_c/e117_publish_watch'
+def state(**v):(HOME/'STATUS.json').write_text(json.dumps(dict(at=time.time(),pid=os.getpid(),**v),indent=2)+'\n')
+def run(args,**k):return subprocess.run(args,cwd=ROOT,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,**k)
+def resolve_appends():
+ files=run(['git','diff','--name-only','--diff-filter=U']).stdout.splitlines()
+ if not files:return False
+ if any(not(f.endswith('HANDOFF.md') or f=='results/g_agreement/log.md') for f in files):raise RuntimeError('nonappend conflict; preserve for inspection')
+ rp=Path(run(['git','rev-parse','--git-path','rebase-merge']).stdout.strip());rp=rp if rp.is_absolute() else ROOT/rp
+ for f in files:
+  p=ROOT/f;p.write_text(''.join(l for l in p.read_text().splitlines(keepends=True) if not l.startswith(('<<<<<<<','=======','>>>>>>>'))))
+  run(['git','add','--',f])
+ if rp.exists():
+  r=run(['git','-c','core.editor=true','rebase','--continue'])
+  if r.returncode:raise RuntimeError('rebase inspection needed')
+ else:
+  # These were autostash-restored foreign appends, not this publication's index.
+  r=run(['git','restore','--staged','--']+files)
+  if r.returncode:raise RuntimeError('preserve restored appends unstaged')
+ return True
+
+def publish(part):
+ source=json.loads((HOME/'SOURCE.json').read_text())
+ for n,h in source['files'].items():assert hashlib.sha256((HOME/n).read_bytes()).hexdigest()==h
+ if run(['git','diff','--cached','--name-only']).stdout.strip():raise RuntimeError('other staged work; do not compete')
+ r=run([sys.executable,str(HOME/'finish.py'),part]);(HOME/(part+'_finish.log')).write_text(r.stdout)
+ if r.returncode:raise RuntimeError('CPU finish failed; preserve log and completed outputs')
+ spec=json.loads((HOME/('PUBLICATION_'+part+'.json')).read_text())
+ r=run(['git','add','--']+spec['paths'])
+ if r.returncode:raise RuntimeError('own publication paths staging failed')
+ for p,entry in spec['appends'].items():
+  base=run(['git','show','HEAD:'+p]);assert base.returncode==0
+  blob=run(['git','hash-object','-w','--stdin'],input=base.stdout if entry in base.stdout else base.stdout+entry)
+  assert blob.returncode==0
+  staged=run(['git','update-index','--cacheinfo','100644,'+blob.stdout.strip()+','+p]);assert staged.returncode==0
+ sp=importlib.util.spec_from_file_location('scan','/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r/git_hooks/scan_push.py');scanner=importlib.util.module_from_spec(sp);sp.loader.exec_module(scanner)
+ assert not scanner.scan_diff(run(['git','diff','--cached']).stdout),'secret scan failed'
+ r=run(['git','commit','-m','E117 '+part+' judging: immediate blinded raw and exact owner handoff']);(HOME/(part+'_git.log')).write_text(r.stdout)
+ if r.returncode:raise RuntimeError('publication commit failed')
+ for _ in range(8):
+  r=run(['git','pull','--rebase','--autostash','--no-stat','origin','r/blindspot'])
+  with(HOME/(part+'_git.log')).open('a')as f:f.write(r.stdout)
+  conflict=resolve_appends()
+  if r.returncode and not conflict:raise RuntimeError('pull failed; preserve exact state')
+  r=run(['git','push','origin','HEAD:r/blindspot'])
+  with(HOME/(part+'_git.log')).open('a')as f:f.write(r.stdout)
+  if r.returncode==0:return run(['git','rev-parse','HEAD']).stdout.strip()
+ raise RuntimeError('repeated publication race; inspect exact logs')
+
+pending={'c':'targeted_sham_judging','main':'native_judging'};done={};state(status='WAITING',pending=pending,published=done)
+try:
+ while pending:
+  for part,phase in list(pending.items()):
+   out=ROOT/'cache/g_agreement/understand/internals_c/E117'/phase/'outputs'
+   if(out/'JUDGMENT_SEAL.json').exists():
+    state(status='PUBLISHING',part=part,pending=pending,published=done);done[part]=publish(part);del pending[part];state(status='WAITING' if pending else 'COMPLETE',pending=pending,published=done)
+   elif(out/'STOPPED.json').exists():raise RuntimeError(part+' paid phase stopped; no restart/retry attempted')
+  if pending:time.sleep(10)
+except BaseException as exc:
+ state(status='STOPPED',error_type=type(exc).__name__,error=str(exc),pending=pending,published=done);raise

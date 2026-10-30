@@ -1,0 +1,27 @@
+- 2026-10-19T18:15:05.160986+00:00 swap khop: 196 items kept, 4 dropped ({'bridge pair not single-token': 4})
+- 2026-10-19T18:15:40.509773+00:00 swap precheck khop: position=True zero_delta=True jlens_direction_fd=True
+- 2026-10-19T18:29:43.755195+00:00 swap khop: 2 items kept, 0 dropped ({})
+- 2026-10-19T18:29:49.090306+00:00 swap khop: 2 items × 1 layers; cells 8 {'step': 'swap_khop', 'module': 'swap', 'n_calls': 5, 'prompt_tokens': 0, 'new_tokens': 0, 'wall_s': 5.112, 'peak_mem_gb': 61.938, 'gpu': 'NVIDIA H100 80GB HBM3', 'started': '2026-10-19T18:29:43.760749+00:00', 'ended': '2026-10-19T18:29:49.081642+00:00'}
+- 2026-10-19T18:34:28.015178+00:00 swap khop: 2 items kept, 0 dropped ({})
+- 2026-10-19T18:34:28.068274+00:00 swap khop: 2 items × 1 layers; cells 3 None
+- 2026-10-19T18:36:43.928328+00:00 swap khop: 4 items kept, 0 dropped ({})
+- 2026-10-19T18:36:48.788685+00:00 swap khop: 4 items × 1 layers; cells 8 {'step': 'swap_khop', 'module': 'swap', 'n_calls': 7, 'prompt_tokens': 0, 'new_tokens': 0, 'wall_s': 4.287, 'peak_mem_gb': 62.241, 'gpu': 'NVIDIA H100 80GB HBM3', 'started': '2026-10-19T18:36:43.936379+00:00', 'ended': '2026-10-19T18:36:48.775588+00:00'}
+- 2026-10-19T18:39:08.753559+00:00 swap khop: 196 items kept, 4 dropped ({'bridge pair not single-token': 4})
+- 2026-10-19T18:48:48.967457+00:00 swap khop: 196 items × 6 layers; cells 43 {'step': 'swap_khop', 'module': 'swap', 'n_calls': 43, 'prompt_tokens': 0, 'new_tokens': 0, 'wall_s': 540.946, 'peak_mem_gb': 63.517, 'gpu': 'NVIDIA H100 80GB HBM3', 'started': '2026-10-19T18:39:08.765075+00:00', 'ended': '2026-10-19T18:48:48.961698+00:00'}
+- 2026-10-19T18:50:39.968189+00:00 swap poetry: 48 items kept, 0 dropped ({})
+- 2026-10-19T21:26:21.877049+00:00 swap khop score: 35292 reader rows over 196 items
+- 2026-10-19T21:37:21.996664+00:00 swap khop phase B: 7170 NLA rows
+- 2026-10-19T23:22:52.496180+00:00 swap khop: 196 items kept, 4 dropped ({'bridge pair not single-token': 4})
+- 2026-10-19T23:23:03.337305+00:00 swap khop: 196 items × 1 layers; cells 8 {'step': 'swap_khop', 'module': 'swap', 'n_calls': 8, 'prompt_tokens': 0, 'new_tokens': 0, 'wall_s': 9.09, 'peak_mem_gb': 62.239, 'gpu': 'NVIDIA H100 80GB HBM3', 'started': '2026-10-19T23:22:52.619494+00:00', 'ended': '2026-10-19T23:23:03.329086+00:00'}
+- 2026-10-19T23:23:34.264333+00:00 swap khop: arm coverage complete over 1 layers
+- 2026-10-19T23:23:37.789883+00:00 swap audit khop: 0 failures, missing 0, orphans 0 over 43 cells
+- 2026-10-19T23:26:03.561356+00:00 swap khop score: 102 reader rows over 196 items
+- 2026-10-19T23:28:40.261477+00:00 swap khop phase B: 22 NLA rows
+- 2026-10-19T23:31:33.194526+00:00 swap poetry: 48 items kept, 0 dropped ({})
+- 2026-10-19T23:34:08.838339+00:00 swap poetry: 48 items × 6 layers; cells 43 {'step': 'swap_poetry', 'module': 'swap', 'n_calls': 31, 'prompt_tokens': 0, 'new_tokens': 0, 'wall_s': 93.258, 'peak_mem_gb': 62.851, 'gpu': 'NVIDIA H100 80GB HBM3', 'started': '2026-10-19T23:31:33.310251+00:00', 'ended': '2026-10-19T23:34:08.822599+00:00'}
+- 2026-10-19T23:35:28.465234+00:00 swap poetry: arm coverage complete over 6 layers
+- 2026-10-19T23:35:32.095030+00:00 swap audit poetry: 0 failures, missing 0, orphans 0 over 31 cells
+- 2026-10-19T23:40:43.047922+00:00 swap poetry score: 4464 reader rows over 48 items
+- 2026-10-19T23:45:10.166965+00:00 swap poetry phase B: 1488 NLA rows
+- 2026-10-19T23:45:45.877738+00:00 swap audit khop: 0 failures, missing 0, orphans 0 over 43 cells
+- 2026-10-19T23:45:47.511020+00:00 swap audit poetry: 0 failures, missing 0, orphans 0 over 31 cells

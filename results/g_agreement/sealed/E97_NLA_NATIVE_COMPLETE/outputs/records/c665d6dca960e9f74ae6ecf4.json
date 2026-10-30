@@ -1,0 +1,12 @@
+{
+  "id": "c665d6dca960e9f74ae6ecf4",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: example given, then a test case requires a matching one-word label response (\"positive\" or \"negative\").\n\nThe task explicitly defines the output as a single word (\"positive\" or \"negative\") based on the sentence's sentiment, constraining the model to produce exactly that label.\n\n\"Reply:\" is the final token, functioning as a response prompt label in a structured Q&A format, immediately requiring the model's answer (the sentiment label) to follow.\n\"Given sentence: 'The weather is good today.'\nExample format:\nSentence: [sentence]\nLabel: [positive/negative]\nGiven sentence: 'The weather is good today.'\nReply:\" \u2014 the final \"Reply:\" token signals the answer field, expecting the direct response word or short phrase next.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: example given, then a test case requires a matching one-word label response (\"positive\" or \"negative\").\n\nThe task explicitly defines the output as a single word (\"positive\" or \"negative\") based on the sentence's sentiment, constraining the model to produce exactly that label.\n\n\"Reply:\" is the final token, functioning as a response prompt label in a structured Q&A format, immediately requiring the model's answer (the sentiment label) to follow.\n\"Given sentence: 'The weather is good today.'\nExample format:\nSentence: [sentence]\nLabel: [positive/negative]\nGiven sentence: 'The weather is good today.'\nReply:\" \u2014 the final \"Reply:\" token signals the answer field, expecting the direct response word or short phrase next.",
+  "truncated": false
+}

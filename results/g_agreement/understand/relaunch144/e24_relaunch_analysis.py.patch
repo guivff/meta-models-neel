@@ -1,0 +1,85 @@
+--- e24_analysis.py
++++ e24_relaunch_analysis.py
+@@ -5,7 +5,7 @@
+ from pathlib import Path
+ import numpy as np
+ from projects.g_agreement.blindspot import protocol as P
+-from .e24_worker import PRIORITY, C6_LAYERS, read, seal, parity
++from .e24_relaunch import PRIORITY, C6_LAYERS, read, seal, parity
+ from .e24_statements import statement
+ 
+ SEED=20261025
+@@ -109,24 +109,25 @@
+     validate_scope_authority(plan)
+     for n,digest in plan['source_files'].items():
+         if P.sha(P.ROOT/n)!=digest:raise ValueError('analysis source changed: '+n)
+-    P.verify(a.bank,'INPUT_SEAL.json');P.verify(a.capture,'CAPTURE_SEAL.json')
++    P.verify(a.bank,'INPUT_SEAL.json')
+     if P.sha(a.bank/'INPUT_SEAL.json')!=plan['input_seal_sha256'] or P.sha(a.labels)!=plan['labels_sha256']:
+         raise ValueError('input/label binding')
+     items=P.rows(a.bank/'items.input.jsonl');ids=[x['id'] for x in items]
+-    if read(a.capture/'ORDER.json')!=ids:raise ValueError('capture order')
+-    if read(a.capture/'BINDING.json')['plan_sha256']!=P.sha(a.plan):raise ValueError('capture plan binding')
+     pods={};admission=None;canonical={};anchor_rows={}
+     for out in a.outputs:
+         P.verify(out,'SCORE_SEAL.json');adm=read(out/'ADMISSION.json')
++        capture=out/'capture';P.verify(capture,'CAPTURE_SEAL.json')
++        if read(capture/'ORDER.json')!=ids or read(capture/'BINDING.json')['plan_sha256']!=P.sha(a.plan):raise ValueError('local capture binding')
++        parity(np.load(capture/'acts44.npy',allow_pickle=False),np.load(a.bank/'reference44.npy',allow_pickle=False))
+         if admission is not None and admission!=adm:raise ValueError('different global admissions')
+         admission=adm;slot=read(out/'FORECAST.json')['slot']
+         if slot in pods:raise ValueError('duplicate pod slot')
+         pods[slot]=out
+         for l in adm['pods'][slot]['layers']:
+-            dest=out/f'L{l}';P.verify(dest,'SCORE_SEAL.json');P.verify(a.capture,f'L{l}_SEAL.json')
++            dest=out/f'L{l}';P.verify(dest,'SCORE_SEAL.json');P.verify(capture,f'L{l}_SEAL.json')
+             bind=read(dest/'BINDING.json')
+             if (bind['layer']!=l or bind['plan_sha256']!=P.sha(a.plan) or bind['input_seal_sha256']!=plan['input_seal_sha256']
+-                or bind['capture_layer_seal_sha256']!=P.sha(a.capture/f'L{l}_SEAL.json') or bind['admission_sha256']!=P.sha(out/'ADMISSION.json')):
++                or bind['capture_layer_seal_sha256']!=P.sha(capture/f'L{l}_SEAL.json') or bind['admission_sha256']!=P.sha(out/'ADMISSION.json')):
+                 raise ValueError('score provenance mismatch')
+             rr=P.rows(dest/'readouts.jsonl');rows={r['id']:r for r in rr}
+             if len(rows)!=len(rr) or set(rows)!={x['id'] for x in items if x['split']=='test'}:raise ValueError('incomplete C1/C4 population')
+@@ -137,9 +138,9 @@
+     canonical[44]=(anchor_rows[min(pods)],pods[min(pods)]/'L44')
+     if set(canonical)!=set(admission['layers_priority']):raise ValueError('admitted layer missing')
+     if admission['C6']:
+-        if a.c6_capture is None:raise ValueError('C6 capture required')
+-        P.verify(a.c6_capture,'CAPTURE_SEAL.json')
+-        if read(a.c6_capture/'BINDING.json')['input_seal_sha256']!=plan['input_seal_sha256']:raise ValueError('C6 input binding')
++        for out in pods.values():
++            c6=out/'c6_capture';P.verify(c6,'CAPTURE_SEAL.json')
++            if read(c6/'BINDING.json')['input_seal_sha256']!=plan['input_seal_sha256']:raise ValueError('C6 input binding')
+     lock=a.bank.with_suffix('.e24-analysis.lock')
+     with lock.open('x') as f:f.write(json.dumps({'plan_sha256':P.sha(a.plan),'outputs':[str(p) for p in a.outputs]}))
+     a.out.mkdir(parents=True,exist_ok=False)
+@@ -162,7 +163,7 @@
+         r0[f]={'interpretable':all(c['C1_pass'] and c['C2_pass'] is not False for c in checks),'anchors':checks}
+     torch.set_num_threads(4)
+     for l in admission['layers_priority']:
+-        rr,dest=canonical[l];h=np.load(a.capture/f'acts{l}.npy',allow_pickle=False)
++        rr,dest=canonical[l];h=np.load(dest.parent/'capture'/f'acts{l}.npy',allow_pickle=False)
+         if l==44:parity(h,np.load(a.bank/'reference44.npy',allow_pickle=False))
+         c5order=read(dest/'C5_ORDER.json');c5=np.load(dest/'C5.npy',allow_pickle=False);c5map={uid:i for i,uid in enumerate(c5order)}
+         if set(c5map)!={x['id'] for x in items if x['split']=='test' and x['feature'] in scope['rows_c5']} or len(c5map)!=len(c5order) or c5.shape!=(2100,h.shape[1]):raise ValueError('C5 coverage/shape')
+@@ -224,9 +225,10 @@
+     c6report={};c7report={}
+     if admission['C6']:
+         ci=P.rows(a.bank/'c6.input.jsonl');cl={x['id']:x['label'] for x in private['c6']}
+-        if read(a.c6_capture/'ORDER.json')!=[x['id'] for x in ci]:raise ValueError('C6 order')
++        for out in pods.values():
++            if read(out/'c6_capture/ORDER.json')!=[x['id'] for x in ci]:raise ValueError('C6 order')
+         for l in C6_LAYERS:
+-            _,dest=canonical[l];true=torch.from_numpy(np.load(a.c6_capture/f'acts{l}.npy',allow_pickle=False));recon=torch.from_numpy(np.load(dest/'C6.npy',allow_pickle=False))
++            _,dest=canonical[l];true=torch.from_numpy(np.load(dest.parent/'c6_capture'/f'acts{l}.npy',allow_pickle=False));recon=torch.from_numpy(np.load(dest/'C6.npy',allow_pickle=False))
+             order6=read(dest/'C6_ORDER.json');out={}
+             expected=[[f,p[0],s] for f,ps in read(a.bank/'c6.pairs.json').items() for p in ps for s in ('A','B')]
+             if order6!=expected or len(recon)!=len(expected):raise ValueError('C6 statement alignment')
+@@ -264,6 +266,6 @@
+ 
+ if __name__=='__main__':
+     p=argparse.ArgumentParser(description=__doc__)
+-    for n in ('bank','plan','capture','labels','out'):p.add_argument('--'+n,type=Path,required=True)
++    for n in ('bank','plan','labels','out'):p.add_argument('--'+n,type=Path,required=True)
+     p.add_argument('--outputs',type=Path,nargs='+',required=True);p.add_argument('--c6-capture',type=Path)
+     analyse(p.parse_args())

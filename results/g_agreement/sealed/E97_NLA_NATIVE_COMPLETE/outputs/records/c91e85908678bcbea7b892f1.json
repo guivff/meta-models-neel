@@ -1,0 +1,12 @@
+{
+  "id": "c91e85908678bcbea7b892f1",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured data format with labeled fields (\"Task 1:\", \"Task 2:\") establishes a pattern of brief, parallel instructional entries. The model expects consistent formatting throughout.\n\nThe phrase \"Record begins.\" and \"Record ends.\" framing signals a self-contained mock training example, implying the content is complete and a closing delimiter or summary statement is expected.\n\n\"Recorded two tasks.\nTask 1: ...\nTask 2: ...\nRecording complete.\" \u2014 the final token \"complete.\" ends the mock record, strongly constraining next tokens toward a closing phrase like \"End.\" or a new prompt/response boundary.\n\"Instruction: [scenario]. Instruction: [scenario]. Record end.\" \u2014 \"Recording complete.\" mirrors the opening \"Record begins,\" suggesting a final closing statement or confirmation of the fictional instruction block is done.\n\"Record recorded.\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured data format with labeled fields (\"Task 1:\", \"Task 2:\") establishes a pattern of brief, parallel instructional entries. The model expects consistent formatting throughout.\n\nThe phrase \"Record begins.\" and \"Record ends.\" framing signals a self-contained mock training example, implying the content is complete and a closing delimiter or summary statement is expected.\n\n\"Recorded two tasks.\nTask 1: ...\nTask 2: ...\nRecording complete.\" \u2014 the final token \"complete.\" ends the mock record, strongly constraining next tokens toward a closing phrase like \"End.\" or a new prompt/response boundary.\n\"Instruction: [scenario]. Instruction: [scenario]. Record end.\" \u2014 \"Recording complete.\" mirrors the opening \"Record begins,\" suggesting a final closing statement or confirmation of the fictional instruction block is done.\n\"Record recorded.\"",
+  "truncated": false
+}

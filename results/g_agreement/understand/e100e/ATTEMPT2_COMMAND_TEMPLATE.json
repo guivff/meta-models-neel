@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "python",
+    "-m",
+    "projects.g_agreement.e100e.runner",
+    "--inputs",
+    "EXTRACTED_PUBLIC/inputs",
+    "--input-sha",
+    "9b944aedc44534b58b8e6fc4a319f00bf391423f0498dfcfcc6481c41d9c5bc5",
+    "--source-seal",
+    "results/g_agreement/understand/e100e/SOURCE_SEAL.json",
+    "--source-sha",
+    "286a907f7b70f4223ab71922c7078f11ffe5a86ea5b519fc68968ae6b3395060",
+    "--assets",
+    "VERIFIED_ASSETS.json",
+    "--assignment",
+    "ATTEMPT2_ASSIGNMENT.json",
+    "--out",
+    "E100e/attempt2",
+    "--attempt-cap-seconds",
+    "OPERATOR_MEASURED_NEED_CAP_SECONDS"
+  ],
+  "source_import": [
+    "python",
+    "-m",
+    "projects.g_agreement.e100e.runner",
+    "--cpu-import-only"
+  ],
+  "validate_first": "append --validate-only, no model/provider actions",
+  "working_directory": "fresh extracted source root"
+}

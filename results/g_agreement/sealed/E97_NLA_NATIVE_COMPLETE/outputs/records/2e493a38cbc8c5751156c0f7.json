@@ -1,0 +1,12 @@
+{
+  "id": "2e493a38cbc8c5751156c0f7",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format pattern: \"Question:\" and \"Answer:\" structure signals a response is expected, following the established template.\n\nThe prompt defines a task (\"explain the definition of the word 'website'\") and provides a sample question, creating expectation for a model-generated answer demonstrating the requested explanation style.\n\n\"Answer:\" is the final token, acting as a label introducing the model's response to the meta-instruction about the \"bad example\" task; next tokens must be the actual answer content, likely a short explanatory sentence or demonstration.\n\"Question: [bad example]\nInstruction: [bad example]\nQuestion: [instruction to explain]\nAnswer:\" \u2014 this structured format demands the answer field now be filled with a response matching the \"bad example\" style or a direct explanation of the task.\n\n\"Answer:\" expects the model's output text immediately following.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format pattern: \"Question:\" and \"Answer:\" structure signals a response is expected, following the established template.\n\nThe prompt defines a task (\"explain the definition of the word 'website'\") and provides a sample question, creating expectation for a model-generated answer demonstrating the requested explanation style.\n\n\"Answer:\" is the final token, acting as a label introducing the model's response to the meta-instruction about the \"bad example\" task; next tokens must be the actual answer content, likely a short explanatory sentence or demonstration.\n\"Question: [bad example]\nInstruction: [bad example]\nQuestion: [instruction to explain]\nAnswer:\" \u2014 this structured format demands the answer field now be filled with a response matching the \"bad example\" style or a direct explanation of the task.\n\n\"Answer:\" expects the model's output text immediately following.",
+  "truncated": false
+}

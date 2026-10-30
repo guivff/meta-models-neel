@@ -1,0 +1,12 @@
+{
+  "id": "832dfe3bca9b2d9a5b3fc80c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" as the answer.\n\nThe example pattern (\"Example sentence: ... / Reply:\") signals the model must now produce the single-word classification answer for the specific sentence \"I am a doctor.\"\n\n\"Reply:\" is the final prompt label, directly requiring the model's response \u2014 the classification word (\"Positive\" or \"Negative\") or a short answer phrase to follow immediately.\n\"Given the following instruction: ...\nExample sentence: 'I am a doctor.'\nClassification: [Positive/Negative]\nSentence: 'I am a doctor.'\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, expecting the direct answer output next.\n\n\"Reply:\" is the final token, a response label demanding the model's answer immediately.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" as the answer.\n\nThe example pattern (\"Example sentence: ... / Reply:\") signals the model must now produce the single-word classification answer for the specific sentence \"I am a doctor.\"\n\n\"Reply:\" is the final prompt label, directly requiring the model's response \u2014 the classification word (\"Positive\" or \"Negative\") or a short answer phrase to follow immediately.\n\"Given the following instruction: ...\nExample sentence: 'I am a doctor.'\nClassification: [Positive/Negative]\nSentence: 'I am a doctor.'\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, expecting the direct answer output next.\n\n\"Reply:\" is the final token, a response label demanding the model's answer immediately.",
+  "truncated": false
+}

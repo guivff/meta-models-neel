@@ -1,0 +1,12 @@
+{
+  "id": "2d0093a05fefcc1c2bd33348",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a Q&A template where a model must follow a specific rule about ignoring release dates when describing movies.\n\nThe \"Instruction: [rule] + Input: [topic] + Answer:\" structure signals a few-shot or zero-shot generation task, expecting a model response demonstrating the rule applied to a movie description.\n\n\"Answer:\" is the final token, acting as a response prompt label, immediately requiring the model to generate a sample answer or explanation about a movie, likely beginning with a sentence describing the film's content, themes, or characteristics while explicitly omitting release date information.\n\"Please follow the instruction to ignore the release date when describing the movie.\nInput: [topic]\nAnswer:\" \u2014 the final \"Answer:\" expects a direct response, likely starting with \"The model...\" or a sample explanation demonstrating the described format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a Q&A template where a model must follow a specific rule about ignoring release dates when describing movies.\n\nThe \"Instruction: [rule] + Input: [topic] + Answer:\" structure signals a few-shot or zero-shot generation task, expecting a model response demonstrating the rule applied to a movie description.\n\n\"Answer:\" is the final token, acting as a response prompt label, immediately requiring the model to generate a sample answer or explanation about a movie, likely beginning with a sentence describing the film's content, themes, or characteristics while explicitly omitting release date information.\n\"Please follow the instruction to ignore the release date when describing the movie.\nInput: [topic]\nAnswer:\" \u2014 the final \"Answer:\" expects a direct response, likely starting with \"The model...\" or a sample explanation demonstrating the described format.",
+  "truncated": false
+}

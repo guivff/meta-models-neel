@@ -1,0 +1,9 @@
+# E52 owner reading — 2026-10-27, before basis or row statistics
+
+The user directly assigns §169 (`aebc9d1f`) to W-lens, superseding its printed W-internals owner. Work is CPU only. E49's forecast is first; reader-output comparison is deferred until its sealed analysis. No E49 Oracle/NLA/readout output will be opened to construct the forecast.
+
+Basis: execute the vendored Suraj `mats.jspace.jspace_basis` construction at block44, ranks384 and1536, using the registered n1000 file, Qwen's lm_head.weight and exactly `1 + model.language_model.norm.weight`. This follows the explicit registered matrix, without an extra RMS epsilon factor. Compute its Gram matrix in vocabulary chunks of4096 to bound CPU memory, then use the existing CPU float64 eigh; retain the returned float32 basis (avoid the optional half-precision save helper). All inputs and source hashes are bound before execution. One atomic basis-build claim prevents rebuilding after inspection. No MPS/CUDA or model forward is used.
+
+The two ranks share one basis and one set of200 isotropic Gaussian unit directions, seed20261027. This seed/chunk/memory choice is an operational reading, fixed before row statistics. The random-null mean is1 in expectation, not forcibly rescaled to an empirical1. Enrichment z uses the sample standard deviation (ddof1); percentile uses the midrank empirical CDF, with ties half counted. The same null is used for every row. Direction is the unit test-class mean A minus mean B; its sign does not affect enrichment.
+
+Pending scientific clarification: §169 says top-10 bag whereas Suraj's G3 uses full-vocabulary value-token ranks. The coordinator has been asked to specify top-10-truncated rank scoring and the 97.5th-percentile permutation threshold before readability or labels are computed. Basis construction is independent and proceeds. A dated clarification will be added before row scoring.

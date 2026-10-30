@@ -1,0 +1,12 @@
+{
+  "id": "2827c4ebb1628e4d43d08e14",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict template: \"Given the sentence, determine the relationship type\" establishes a classification task requiring a short label answer.\n\nThe example pattern shows \"Friendship\" as the correct label for \"close friends,\" so the model must apply the same logic to the new sentence about \"close friends.\"\n\n\"Reply:\" is the final prompt token, part of the structured format, immediately requiring the model's direct answer (e.g., \"Friendship\" or similar label) to follow.\n\"Instruction: ... Example: ...\nSentence: 'The two individuals are close friends.'\nQuestion: What is the relationship type?\nReply:\" \u2014 this closing \"Reply:\" is a prompt field expecting the concise answer, likely a single word or short phrase on the next line.\n\"Reply:\" ends the prompt, demanding the answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict template: \"Given the sentence, determine the relationship type\" establishes a classification task requiring a short label answer.\n\nThe example pattern shows \"Friendship\" as the correct label for \"close friends,\" so the model must apply the same logic to the new sentence about \"close friends.\"\n\n\"Reply:\" is the final prompt token, part of the structured format, immediately requiring the model's direct answer (e.g., \"Friendship\" or similar label) to follow.\n\"Instruction: ... Example: ...\nSentence: 'The two individuals are close friends.'\nQuestion: What is the relationship type?\nReply:\" \u2014 this closing \"Reply:\" is a prompt field expecting the concise answer, likely a single word or short phrase on the next line.\n\"Reply:\" ends the prompt, demanding the answer.",
+  "truncated": false
+}

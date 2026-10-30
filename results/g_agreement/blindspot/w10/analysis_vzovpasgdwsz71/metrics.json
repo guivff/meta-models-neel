@@ -1,0 +1,2641 @@
+{
+  "experiment": "W10",
+  "far_minus_near": [
+    {
+      "ci95": [
+        -0.22666666666666668,
+        0.085666666666666
+      ],
+      "far_minus_near_probe_oracle_gap": -0.07888888888888879,
+      "mode": "language",
+      "status": "DESCRIPTIVE; paired passage-cluster resampling, fixed OOF probes"
+    },
+    {
+      "ci95": [
+        -0.026666666666666727,
+        0.01777777777777778
+      ],
+      "far_minus_near_probe_oracle_gap": -0.013333333333333308,
+      "mode": "register",
+      "status": "DESCRIPTIVE; paired passage-cluster resampling, fixed OOF probes"
+    },
+    {
+      "ci95": [
+        -0.24555555555555553,
+        0.2544722222222221
+      ],
+      "far_minus_near_probe_oracle_gap": -0.007777777777777772,
+      "mode": "audience",
+      "status": "DESCRIPTIVE; paired passage-cluster resampling, fixed OOF probes"
+    },
+    {
+      "ci95": [
+        -0.07666666666666666,
+        0.0
+      ],
+      "far_minus_near_probe_oracle_gap": -0.01666666666666672,
+      "mode": "format",
+      "status": "DESCRIPTIVE; paired passage-cluster resampling, fixed OOF probes"
+    },
+    {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "far_minus_near_probe_oracle_gap": 0.0,
+      "mode": "length",
+      "status": "DESCRIPTIVE; paired passage-cluster resampling, fixed OOF probes"
+    },
+    {
+      "ci95": [
+        -0.026666666666666616,
+        0.07000000000000006
+      ],
+      "far_minus_near_probe_oracle_gap": 0.008888888888888835,
+      "mode": "persona",
+      "status": "DESCRIPTIVE; paired passage-cluster resampling, fixed OOF probes"
+    },
+    {
+      "ci95": [
+        -0.0444444444444444,
+        0.04555555555555546
+      ],
+      "far_minus_near_probe_oracle_gap": -0.0033333333333332993,
+      "mode": "topic",
+      "status": "DESCRIPTIVE; paired passage-cluster resampling, fixed OOF probes"
+    }
+  ],
+  "input_seal_sha256": "cb34e2068679e6737f15d70f29e3717e537c9f16749438f542e3597b7b5f4920",
+  "mode_activity": {
+    "audience_far": {
+      "follows": 10,
+      "n": 20,
+      "pass": false,
+      "rate": 0.5
+    },
+    "audience_near": {
+      "follows": 7,
+      "n": 20,
+      "pass": false,
+      "rate": 0.35
+    },
+    "format_far": {
+      "follows": 14,
+      "n": 20,
+      "pass": true,
+      "rate": 0.7
+    },
+    "format_near": {
+      "follows": 14,
+      "n": 20,
+      "pass": true,
+      "rate": 0.7
+    },
+    "language_far": {
+      "follows": 20,
+      "n": 20,
+      "pass": true,
+      "rate": 1.0
+    },
+    "language_near": {
+      "follows": 20,
+      "n": 20,
+      "pass": true,
+      "rate": 1.0
+    },
+    "length_far": {
+      "follows": 10,
+      "n": 20,
+      "pass": false,
+      "rate": 0.5
+    },
+    "length_near": {
+      "follows": 10,
+      "n": 20,
+      "pass": false,
+      "rate": 0.5
+    },
+    "persona_far": {
+      "follows": 20,
+      "n": 20,
+      "pass": true,
+      "rate": 1.0
+    },
+    "persona_near": {
+      "follows": 17,
+      "n": 20,
+      "pass": true,
+      "rate": 0.85
+    },
+    "register_far": {
+      "follows": 8,
+      "n": 20,
+      "pass": false,
+      "rate": 0.4
+    },
+    "register_near": {
+      "follows": 6,
+      "n": 20,
+      "pass": false,
+      "rate": 0.3
+    },
+    "topic_far": {
+      "follows": 18,
+      "n": 20,
+      "pass": true,
+      "rate": 0.9
+    },
+    "topic_near": {
+      "follows": 18,
+      "n": 20,
+      "pass": true,
+      "rate": 0.9
+    }
+  },
+  "mode_judge_seal_sha256": "23862711fd8c316abda609063a091b9994212e21ed94381307c8a03de0f60fbd",
+  "primary": {
+    "H1": {
+      "ci95": [
+        0.35892909014821267,
+        0.9177828342909844
+      ],
+      "denominator": "Oracle-evaluable mode rows",
+      "k": 5,
+      "n": 7,
+      "rate": 0.7142857142857143,
+      "status": "NOT MET"
+    },
+    "H2": {
+      "ci95": [
+        0.15821692226262685,
+        0.7495457695909742
+      ],
+      "denominator": "mode rows evaluable for both Oracle and NLA",
+      "k": 3,
+      "n": 7,
+      "rate": 0.42857142857142855,
+      "status": "NOT MET"
+    }
+  },
+  "probe_method": "unchanged W1 lambda0.001, 5 template-grouped folds on test, train-only standardization; fixed OOF bootstrap",
+  "reconstructor_window": "OPEN_DEPENDENCY; no blind-by-construction claim",
+  "rows": [
+    {
+      "class": "mode",
+      "class_values": [
+        "child",
+        "expert"
+      ],
+      "feature": "audience_far",
+      "mode_active": {
+        "follows": 10,
+        "n": 20,
+        "pass": false,
+        "rate": 0.5
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          -0.007777777777777772,
+          0.6768611111111101
+        ],
+        "difference": 0.22666666666666668
+      },
+      "probes": {
+        "42": {
+          "auroc": 0.9777777777777777,
+          "hi": 1.0,
+          "lo": 0.8,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 0.9977777777777778,
+          "hi": 1.0,
+          "lo": 0.98,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.5311111111111111,
+              "hi": 0.8611388888888888,
+              "lo": 0.14888888888888888,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.53,
+              "hi": 0.8477777777777777,
+              "lo": 0.16666666666666666,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.4411111111111111,
+          "random_donor": {
+            "auroc": 0.52,
+            "hi": 0.5894444444444444,
+            "lo": 0.45111111111111113,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.5566666666666666,
+            "hi": 0.8788888888888889,
+            "lo": 0.1688888888888889,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.97,
+              "hi": 1.0,
+              "lo": 0.9222222222222223,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.9711111111111111,
+              "hi": 1.0,
+              "lo": 0.9244444444444444,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.006666666666666599,
+          "random_donor": {
+            "auroc": 0.4211111111111111,
+            "hi": 0.5422222222222223,
+            "lo": 0.2871805555555556,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.9711111111111111,
+            "hi": 1.0,
+            "lo": 0.92,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.7533333333333333,
+              "hi": 0.9911111111111112,
+              "lo": 0.3055555555555556,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.7188888888888889,
+              "hi": 0.985666666666666,
+              "lo": 0.31666666666666665,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.2533333333333333,
+          "random_donor": {
+            "auroc": 0.47555555555555556,
+            "hi": 0.5633333333333334,
+            "lo": 0.40944444444444444,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.7444444444444445,
+            "hi": 0.9922222222222222,
+            "lo": 0.3155277777777778,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "child",
+        "expert"
+      ],
+      "feature": "audience_near",
+      "mode_active": {
+        "follows": 7,
+        "n": 20,
+        "pass": false,
+        "rate": 0.35
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          0.025555555555555554,
+          0.5766666666666667
+        ],
+        "difference": 0.22444444444444445
+      },
+      "probes": {
+        "42": {
+          "auroc": 0.9722222222222222,
+          "hi": 1.0,
+          "lo": 0.75,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 0.9955555555555555,
+          "hi": 1.0,
+          "lo": 0.96,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.5833333333333334,
+              "hi": 0.8888888888888888,
+              "lo": 0.2288888888888889,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.5311111111111111,
+              "hi": 0.8755555555555555,
+              "lo": 0.12666666666666668,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.39555555555555555,
+          "random_donor": {
+            "auroc": 0.45166666666666666,
+            "hi": 0.5133333333333333,
+            "lo": 0.36944444444444446,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.6,
+            "hi": 0.9101666666666658,
+            "lo": 0.2222222222222222,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.9566666666666667,
+              "hi": 1.0,
+              "lo": 0.8577777777777778,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.96,
+              "hi": 1.0,
+              "lo": 0.868777777777778,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.013333333333333308,
+          "random_donor": {
+            "auroc": 0.4961111111111111,
+            "hi": 0.6111111111111112,
+            "lo": 0.4144305555555556,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.9588888888888889,
+            "hi": 1.0,
+            "lo": 0.864388888888889,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.7266666666666667,
+              "hi": 0.9733333333333334,
+              "lo": 0.32,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.7644444444444445,
+              "hi": 0.98,
+              "lo": 0.43777777777777777,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.26111111111111107,
+          "random_donor": {
+            "auroc": 0.4627777777777778,
+            "hi": 0.5744444444444444,
+            "lo": 0.39111111111111113,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.7344444444444445,
+            "hi": 0.9744444444444444,
+            "lo": 0.35555555555555557,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "JSON",
+        "prose"
+      ],
+      "feature": "format_far",
+      "mode_active": {
+        "follows": 14,
+        "n": 20,
+        "pass": true,
+        "rate": 0.7
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          -0.17780555555555555,
+          0.07000000000000006
+        ],
+        "difference": -0.06000000000000005
+      },
+      "probes": {
+        "42": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 0.9722222222222222,
+          "hi": 1.0,
+          "lo": 0.8888888888888888,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.8144444444444444,
+              "hi": 1.0,
+              "lo": 0.6977777777777778,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.6044444444444445,
+              "hi": 0.87,
+              "lo": 0.32,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.19333333333333336,
+          "random_donor": {
+            "auroc": 0.5377777777777778,
+            "hi": 0.6644444444444444,
+            "lo": 0.395,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.7788888888888889,
+            "hi": 0.9644444444444444,
+            "lo": 0.5966666666666667,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.8933333333333333,
+              "hi": 1.0,
+              "lo": 0.7633333333333333,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.9455555555555556,
+              "hi": 1.0,
+              "lo": 0.8444444444444444,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.08333333333333337,
+          "random_donor": {
+            "auroc": 0.5022222222222222,
+            "hi": 0.6716666666666666,
+            "lo": 0.3160416666666668,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.9166666666666666,
+            "hi": 1.0,
+            "lo": 0.8,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.9911111111111112,
+              "hi": 1.0,
+              "lo": 0.9644444444444444,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.9577777777777777,
+              "hi": 1.0,
+              "lo": 0.8266666666666667,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": -0.004444444444444473,
+          "random_donor": {
+            "auroc": 0.5366666666666666,
+            "hi": 0.6861111111111111,
+            "lo": 0.34833333333333333,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.9766666666666667,
+            "hi": 1.0,
+            "lo": 0.8933333333333333,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "JSON",
+        "prose"
+      ],
+      "feature": "format_near",
+      "mode_active": {
+        "follows": 14,
+        "n": 20,
+        "pass": true,
+        "rate": 0.7
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          -0.2122222222222223,
+          0.0888888888888889
+        ],
+        "difference": -0.08999999999999997
+      },
+      "probes": {
+        "42": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 0.9722222222222222,
+          "hi": 1.0,
+          "lo": 0.8888888888888888,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.8033333333333333,
+              "hi": 0.9733888888888886,
+              "lo": 0.6822222222222222,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.5788888888888889,
+              "hi": 0.8033333333333333,
+              "lo": 0.3288333333333334,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.1877777777777777,
+          "random_donor": {
+            "auroc": 0.5022222222222222,
+            "hi": 0.5883749999999998,
+            "lo": 0.41775000000000007,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.7844444444444445,
+            "hi": 0.9666944444444443,
+            "lo": 0.6377777777777778,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.8666666666666667,
+              "hi": 1.0,
+              "lo": 0.7366666666666667,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.8788888888888889,
+              "hi": 0.99,
+              "lo": 0.7288888888888889,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.13,
+          "random_donor": {
+            "auroc": 0.49666666666666665,
+            "hi": 0.595,
+            "lo": 0.32666666666666666,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.87,
+            "hi": 1.0,
+            "lo": 0.7455555555555555,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.9822222222222222,
+              "hi": 1.0,
+              "lo": 0.8933333333333333,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.9255555555555556,
+              "hi": 1.0,
+              "lo": 0.7610833333333333,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.012222222222222245,
+          "random_donor": {
+            "auroc": 0.5122222222222222,
+            "hi": 0.5805694444444444,
+            "lo": 0.41055555555555556,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.96,
+            "hi": 1.0,
+            "lo": 0.8265555555555557,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "English",
+        "French"
+      ],
+      "feature": "language_far",
+      "mode_active": {
+        "follows": 20,
+        "n": 20,
+        "pass": true,
+        "rate": 1.0
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          -0.4655555555555556,
+          -0.1544444444444445
+        ],
+        "difference": -0.3533333333333333
+      },
+      "probes": {
+        "42": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.36777777777777776,
+              "hi": 0.7055555555555556,
+              "lo": 0.0,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.36777777777777776,
+              "hi": 0.7055555555555556,
+              "lo": 0.0,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.6322222222222222,
+          "random_donor": {
+            "auroc": 0.45555555555555555,
+            "hi": 0.6055555555555555,
+            "lo": 0.3138888888888889,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.36777777777777776,
+            "hi": 0.7055555555555556,
+            "lo": 0.0,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.4311111111111111,
+              "hi": 0.7066666666666667,
+              "lo": 0.17333333333333334,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.3511111111111111,
+              "hi": 0.6666666666666666,
+              "lo": 0.034444444444444444,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.6377777777777778,
+          "random_donor": {
+            "auroc": 0.46555555555555556,
+            "hi": 0.5901249999999992,
+            "lo": 0.3355416666666667,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.3622222222222222,
+            "hi": 0.6733333333333333,
+            "lo": 0.056666666666666664,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.6388888888888888,
+              "hi": 0.9146111111111102,
+              "lo": 0.24555555555555555,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.7677777777777778,
+              "hi": 0.9788888888888889,
+              "lo": 0.4988888888888889,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.2844444444444445,
+          "random_donor": {
+            "auroc": 0.43444444444444447,
+            "hi": 0.5177777777777778,
+            "lo": 0.32433333333333353,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.7155555555555555,
+            "hi": 0.9544444444444444,
+            "lo": 0.4199444444444445,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "English",
+        "French"
+      ],
+      "feature": "language_near",
+      "mode_active": {
+        "follows": 20,
+        "n": 20,
+        "pass": true,
+        "rate": 1.0
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          -0.3188888888888889,
+          -0.0011111111111111738
+        ],
+        "difference": -0.20000000000000007
+      },
+      "probes": {
+        "42": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.36444444444444446,
+              "hi": 0.7233333333333334,
+              "lo": 0.017777777777777778,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.36444444444444446,
+              "hi": 0.7233333333333334,
+              "lo": 0.017777777777777778,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.6355555555555555,
+          "random_donor": {
+            "auroc": 0.4288888888888889,
+            "hi": 0.5038888888888889,
+            "lo": 0.35555555555555557,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.36444444444444446,
+            "hi": 0.7233333333333334,
+            "lo": 0.017777777777777778,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.5222222222222223,
+              "hi": 0.7792222222222204,
+              "lo": 0.21883333333333344,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.3611111111111111,
+              "hi": 0.6666666666666666,
+              "lo": 0.09105555555555565,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.5633333333333334,
+          "random_donor": {
+            "auroc": 0.43333333333333335,
+            "hi": 0.5061388888888887,
+            "lo": 0.298777777777778,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.43666666666666665,
+            "hi": 0.6944444444444444,
+            "lo": 0.18666666666666668,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.5722222222222222,
+              "hi": 0.89,
+              "lo": 0.23777777777777778,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.7644444444444445,
+              "hi": 0.9644722222222221,
+              "lo": 0.5866666666666667,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.3633333333333333,
+          "random_donor": {
+            "auroc": 0.4533333333333333,
+            "hi": 0.5183333333333333,
+            "lo": 0.38,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.6366666666666667,
+            "hi": 0.9357222222222213,
+            "lo": 0.31555555555555553,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "terse",
+        "detailed"
+      ],
+      "feature": "length_far",
+      "mode_active": {
+        "follows": 10,
+        "n": 20,
+        "pass": false,
+        "rate": 0.5
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          -0.2633333333333333,
+          0.0
+        ],
+        "difference": -0.12444444444444447
+      },
+      "probes": {
+        "42": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.8111111111111111,
+              "hi": 1.0,
+              "lo": 0.6944444444444444,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.8766666666666667,
+              "hi": 1.0,
+              "lo": 0.75,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.1444444444444445,
+          "random_donor": {
+            "auroc": 0.5227777777777778,
+            "hi": 0.6133333333333333,
+            "lo": 0.4083333333333333,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.8555555555555555,
+            "hi": 1.0,
+            "lo": 0.75,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.8833333333333333,
+              "hi": 1.0,
+              "lo": 0.7388888888888889,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.8722222222222222,
+              "hi": 1.0,
+              "lo": 0.7388611111111112,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.12444444444444447,
+          "random_donor": {
+            "auroc": 0.5072222222222222,
+            "hi": 0.5344444444444445,
+            "lo": 0.44443055555555555,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.8755555555555555,
+            "hi": 1.0,
+            "lo": 0.7366666666666667,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.9855555555555555,
+              "hi": 1.0,
+              "lo": 0.9566666666666667,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.9333333333333333,
+              "hi": 1.0,
+              "lo": 0.8155555555555556,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.0,
+          "random_donor": {
+            "auroc": 0.49277777777777776,
+            "hi": 0.5916666666666667,
+            "lo": 0.3955416666666667,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 1.0,
+            "hi": 1.0,
+            "lo": 1.0,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "terse",
+        "detailed"
+      ],
+      "feature": "length_near",
+      "mode_active": {
+        "follows": 10,
+        "n": 20,
+        "pass": false,
+        "rate": 0.5
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          -0.2977777777777778,
+          0.0
+        ],
+        "difference": -0.1266666666666667
+      },
+      "probes": {
+        "42": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.7955555555555556,
+              "hi": 1.0,
+              "lo": 0.6744444444444444,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.8577777777777778,
+              "hi": 1.0,
+              "lo": 0.7222222222222222,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.16222222222222227,
+          "random_donor": {
+            "auroc": 0.5044444444444445,
+            "hi": 0.6444444444444445,
+            "lo": 0.4066666666666667,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.8377777777777777,
+            "hi": 1.0,
+            "lo": 0.7488611111111112,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.8777777777777778,
+              "hi": 1.0,
+              "lo": 0.6955555555555556,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.8755555555555555,
+              "hi": 1.0,
+              "lo": 0.6888888888888889,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.1266666666666667,
+          "random_donor": {
+            "auroc": 0.5411111111111111,
+            "hi": 0.6861111111111111,
+            "lo": 0.4210277777777779,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.8733333333333333,
+            "hi": 1.0,
+            "lo": 0.7022222222222222,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.9733333333333334,
+              "hi": 1.0,
+              "lo": 0.9044444444444445,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.9455555555555556,
+              "hi": 1.0,
+              "lo": 0.8533333333333334,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.0,
+          "random_donor": {
+            "auroc": 0.4811111111111111,
+            "hi": 0.6422222222222222,
+            "lo": 0.37777777777777777,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 1.0,
+            "hi": 1.0,
+            "lo": 1.0,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "pirate",
+        "neutral"
+      ],
+      "feature": "persona_far",
+      "mode_active": {
+        "follows": 20,
+        "n": 20,
+        "pass": true,
+        "rate": 1.0
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          0.031083333333333362,
+          0.7824444444444433
+        ],
+        "difference": 0.32666666666666666
+      },
+      "probes": {
+        "42": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.3566666666666667,
+              "hi": 0.8000277777777777,
+              "lo": 0.0,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.5122222222222222,
+              "hi": 0.8644444444444445,
+              "lo": 0.08333333333333333,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.5844444444444444,
+          "random_donor": {
+            "auroc": 0.49944444444444447,
+            "hi": 0.7088888888888889,
+            "lo": 0.3005555555555556,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.41555555555555557,
+            "hi": 0.8246666666666654,
+            "lo": 0.0,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.9533333333333334,
+              "hi": 1.0,
+              "lo": 0.8511111111111112,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.9366666666666666,
+              "hi": 1.0,
+              "lo": 0.82,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.054444444444444406,
+          "random_donor": {
+            "auroc": 0.4761111111111111,
+            "hi": 0.6134444444444438,
+            "lo": 0.3661111111111111,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.9455555555555556,
+            "hi": 1.0,
+            "lo": 0.8355555555555556,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.6,
+              "hi": 0.9334166666666662,
+              "lo": 0.13555555555555557,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.7355555555555555,
+              "hi": 0.9822222222222222,
+              "lo": 0.39111111111111113,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.38111111111111107,
+          "random_donor": {
+            "auroc": 0.5161111111111111,
+            "hi": 0.7355555555555555,
+            "lo": 0.32555555555555554,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.6188888888888889,
+            "hi": 0.9433333333333334,
+            "lo": 0.17333333333333334,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "pirate",
+        "neutral"
+      ],
+      "feature": "persona_near",
+      "mode_active": {
+        "follows": 17,
+        "n": 20,
+        "pass": true,
+        "rate": 0.85
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          0.02111111111111108,
+          0.78
+        ],
+        "difference": 0.31333333333333335
+      },
+      "probes": {
+        "42": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.3466666666666667,
+              "hi": 0.7911111111111111,
+              "lo": 0.0,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.5,
+              "hi": 0.8578611111111106,
+              "lo": 0.06444444444444444,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.5766666666666667,
+          "random_donor": {
+            "auroc": 0.5966666666666667,
+            "hi": 0.6783333333333333,
+            "lo": 0.4427222222222223,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.42333333333333334,
+            "hi": 0.8333333333333334,
+            "lo": 0.0,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.9455555555555556,
+              "hi": 1.0,
+              "lo": 0.8355555555555556,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.9311111111111111,
+              "hi": 1.0,
+              "lo": 0.81,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.05888888888888888,
+          "random_donor": {
+            "auroc": 0.5477777777777778,
+            "hi": 0.6705555555555556,
+            "lo": 0.40162500000000007,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.9411111111111111,
+            "hi": 1.0,
+            "lo": 0.8266666666666667,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": false,
+          "gate_failures": [
+            "random donor outside[0.40,0.60]"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.5488888888888889,
+              "hi": 0.9144444444444444,
+              "lo": 0.08333333333333333,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.6566666666666666,
+              "hi": 0.9478055555555555,
+              "lo": 0.2033055555555556,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.37222222222222223,
+          "random_donor": {
+            "auroc": 0.6411111111111111,
+            "hi": 0.7072222222222222,
+            "lo": 0.5627777777777778,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.6277777777777778,
+            "hi": 0.9433333333333334,
+            "lo": 0.16666666666666666,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "formal",
+        "casual"
+      ],
+      "feature": "register_far",
+      "mode_active": {
+        "follows": 8,
+        "n": 20,
+        "pass": false,
+        "rate": 0.4
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          -0.25680555555555534,
+          0.24891666666666656
+        ],
+        "difference": -0.08666666666666667
+      },
+      "probes": {
+        "42": {
+          "auroc": 0.92,
+          "hi": 1.0,
+          "lo": 0.7844444444444445,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.6111111111111112,
+              "hi": 0.9233333333333333,
+              "lo": 0.18777777777777777,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.5411111111111111,
+              "hi": 0.8888888888888888,
+              "lo": 0.15555555555555556,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.4388888888888889,
+          "random_donor": {
+            "auroc": 0.41388888888888886,
+            "hi": 0.5744444444444444,
+            "lo": 0.29163888888888895,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.5611111111111111,
+            "hi": 0.9111111111111111,
+            "lo": 0.16666666666666666,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": false,
+          "gate_failures": [
+            "random donor outside[0.40,0.60]",
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.8266666666666667,
+              "hi": 1.0,
+              "lo": 0.6944444444444444,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.8055555555555556,
+              "hi": 1.0,
+              "lo": 0.6944444444444444,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.11444444444444446,
+          "random_donor": {
+            "auroc": 0.3938888888888889,
+            "hi": 0.5606249999999996,
+            "lo": 0.23554166666666668,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.8055555555555556,
+            "hi": 1.0,
+            "lo": 0.6944444444444444,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.9033333333333333,
+              "hi": 1.0,
+              "lo": 0.6477777777777778,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.8255555555555556,
+              "hi": 0.9822222222222222,
+              "lo": 0.7110833333333334,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.10777777777777775,
+          "random_donor": {
+            "auroc": 0.4027777777777778,
+            "hi": 0.621722222222222,
+            "lo": 0.25722222222222224,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.8922222222222222,
+            "hi": 0.9977777777777778,
+            "lo": 0.6888888888888889,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "formal",
+        "casual"
+      ],
+      "feature": "register_near",
+      "mode_active": {
+        "follows": 6,
+        "n": 20,
+        "pass": false,
+        "rate": 0.3
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          -0.2666666666666666,
+          0.24444444444444446
+        ],
+        "difference": -0.1100000000000001
+      },
+      "probes": {
+        "42": {
+          "auroc": 0.9633333333333334,
+          "hi": 1.0,
+          "lo": 0.9044444444444445,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.5822222222222222,
+              "hi": 0.9166666666666666,
+              "lo": 0.1811111111111111,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.44333333333333336,
+              "hi": 0.7522222222222222,
+              "lo": 0.11666666666666667,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.44777777777777783,
+          "random_donor": {
+            "auroc": 0.5533333333333333,
+            "hi": 0.6533333333333333,
+            "lo": 0.43052777777777784,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.5522222222222222,
+            "hi": 0.8933333333333333,
+            "lo": 0.16666666666666666,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": false,
+          "gate_failures": [
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.7677777777777778,
+              "hi": 0.9955833333333332,
+              "lo": 0.6766666666666666,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.7688888888888888,
+              "hi": 0.9933333333333333,
+              "lo": 0.6811111111111111,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.19444444444444453,
+          "random_donor": {
+            "auroc": 0.5566666666666666,
+            "hi": 0.635,
+            "lo": 0.49833333333333335,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.7688888888888888,
+            "hi": 0.9955833333333332,
+            "lo": 0.6788888888888889,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": false,
+          "gate_failures": [
+            "random donor outside[0.40,0.60]",
+            "mode active below70%"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.8933333333333333,
+              "hi": 1.0,
+              "lo": 0.6322222222222222,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.7866666666666666,
+              "hi": 0.9622222222222222,
+              "lo": 0.6599166666666668,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.12111111111111106,
+          "random_donor": {
+            "auroc": 0.6088888888888889,
+            "hi": 0.7422222222222222,
+            "lo": 0.44333333333333336,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.8788888888888889,
+            "hi": 1.0,
+            "lo": 0.6888055555555557,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "surprisal",
+      "class_values": [
+        "high",
+        "low"
+      ],
+      "feature": "surprisal_prose",
+      "length_check": {
+        "ks_p": 2.0797892159251184e-13,
+        "mean_difference": 14.415178571428584,
+        "scope": "DESCRIPTIVE; no rematching",
+        "status": "LENGTH_CONFOUNDED"
+      },
+      "mode_active": null,
+      "n": 448,
+      "n_clusters": 43,
+      "nla_minus_oracle": {
+        "ci95": [
+          0.24157440112535167,
+          0.5705507416081185
+        ],
+        "difference": 0.40874123086734687
+      },
+      "probes": {
+        "42": {
+          "auroc": 0.8858418367346939,
+          "hi": 0.9509197386192102,
+          "lo": 0.7949588605730145,
+          "n": 448,
+          "n_clusters": 43
+        },
+        "44": {
+          "auroc": 0.8986965880102041,
+          "hi": 0.9581535846097423,
+          "lo": 0.8118865505472624,
+          "n": 448,
+          "n_clusters": 43
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": false,
+          "gate_failures": [
+            "random donor outside[0.40,0.60]"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.3180604272959184,
+              "hi": 0.45312968843753565,
+              "lo": 0.19326346339292338,
+              "n": 448,
+              "n_clusters": 43
+            },
+            {
+              "auroc": 0.4008290816326531,
+              "hi": 0.5482066018580799,
+              "lo": 0.258936532961616,
+              "n": 448,
+              "n_clusters": 43
+            }
+          ],
+          "probe_minus_reader": 0.545380261479592,
+          "random_donor": {
+            "auroc": 0.3712531887755102,
+            "hi": 0.5150921327184372,
+            "lo": 0.24339229891836797,
+            "n": 448,
+            "n_clusters": 43
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.35331632653061223,
+            "hi": 0.5045780422606986,
+            "lo": 0.21514985081831678,
+            "n": 448,
+            "n_clusters": 43
+          }
+        },
+        "nla": {
+          "evaluable": false,
+          "gate_failures": [
+            "random donor outside[0.40,0.60]"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.6445113201530612,
+              "hi": 0.7728212006736499,
+              "lo": 0.4961350775653075,
+              "n": 448,
+              "n_clusters": 43
+            },
+            {
+              "auroc": 0.6397879464285714,
+              "hi": 0.7653980642746432,
+              "lo": 0.4991131700202249,
+              "n": 448,
+              "n_clusters": 43
+            }
+          ],
+          "probe_minus_reader": 0.21131616709183676,
+          "random_donor": {
+            "auroc": 0.6447106186224489,
+            "hi": 0.7900895886884794,
+            "lo": 0.4926481658357507,
+            "n": 448,
+            "n_clusters": 43
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.6745256696428571,
+            "hi": 0.8153281273672978,
+            "lo": 0.512617337119789,
+            "n": 448,
+            "n_clusters": 43
+          }
+        },
+        "olens": {
+          "evaluable": false,
+          "gate_failures": [
+            "random donor outside[0.40,0.60]"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.33193160076530615,
+              "hi": 0.45574367547172834,
+              "lo": 0.2149513276250662,
+              "n": 448,
+              "n_clusters": 43
+            },
+            {
+              "auroc": 0.2817283163265306,
+              "hi": 0.4066847657855766,
+              "lo": 0.17302268387461087,
+              "n": 448,
+              "n_clusters": 43
+            }
+          ],
+          "probe_minus_reader": 0.6329121492346939,
+          "random_donor": {
+            "auroc": 0.2865712691326531,
+            "hi": 0.4043436374162474,
+            "lo": 0.18260238748406632,
+            "n": 448,
+            "n_clusters": 43
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.2657844387755102,
+            "hi": 0.386984486550377,
+            "lo": 0.1606715564086646,
+            "n": 448,
+            "n_clusters": 43
+          }
+        }
+      }
+    },
+    {
+      "class": "surprisal",
+      "class_values": [
+        "high",
+        "low"
+      ],
+      "feature": "surprisal_python",
+      "length_check": {
+        "ks_p": 8.167480840632563e-26,
+        "mean_difference": 15.361607142857139,
+        "scope": "DESCRIPTIVE; no rematching",
+        "status": "LENGTH_CONFOUNDED"
+      },
+      "mode_active": null,
+      "n": 448,
+      "n_clusters": 48,
+      "nla_minus_oracle": {
+        "ci95": [
+          -0.04231662224353906,
+          0.11507843299667854
+        ],
+        "difference": 0.03461814413265307
+      },
+      "probes": {
+        "42": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 448,
+          "n_clusters": 48
+        },
+        "44": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 448,
+          "n_clusters": 48
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.4053930165816326,
+              "hi": 0.5046165408639287,
+              "lo": 0.3044289894623927,
+              "n": 448,
+              "n_clusters": 48
+            },
+            {
+              "auroc": 0.608039700255102,
+              "hi": 0.7013324150576459,
+              "lo": 0.519256987604017,
+              "n": 448,
+              "n_clusters": 48
+            }
+          ],
+          "probe_minus_reader": 0.4815051020408163,
+          "random_donor": {
+            "auroc": 0.4774792729591837,
+            "hi": 0.5654414083947913,
+            "lo": 0.4000229021266542,
+            "n": 448,
+            "n_clusters": 48
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.5184948979591837,
+            "hi": 0.6321046991950121,
+            "lo": 0.4119298016562279,
+            "n": 448,
+            "n_clusters": 48
+          }
+        },
+        "nla": {
+          "evaluable": false,
+          "gate_failures": [
+            "random donor outside[0.40,0.60]"
+          ],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.6870615433673469,
+              "hi": 0.7685272524784216,
+              "lo": 0.5860408866604244,
+              "n": 448,
+              "n_clusters": 48
+            },
+            {
+              "auroc": 0.5137117346938775,
+              "hi": 0.6404053103504749,
+              "lo": 0.39040558718854007,
+              "n": 448,
+              "n_clusters": 48
+            }
+          ],
+          "probe_minus_reader": 0.3268096301020408,
+          "random_donor": {
+            "auroc": 0.6352040816326531,
+            "hi": 0.7086166939829498,
+            "lo": 0.5540979516183786,
+            "n": 448,
+            "n_clusters": 48
+          },
+          "status": "NOT EVALUABLE",
+          "true": {
+            "auroc": 0.6731903698979592,
+            "hi": 0.7449083349929422,
+            "lo": 0.5963278489033241,
+            "n": 448,
+            "n_clusters": 48
+          }
+        },
+        "olens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.6842514349489796,
+              "hi": 0.7705469134574175,
+              "lo": 0.5867964696098845,
+              "n": 448,
+              "n_clusters": 48
+            },
+            {
+              "auroc": 0.4690489477040816,
+              "hi": 0.5742253943620672,
+              "lo": 0.36914584848355225,
+              "n": 448,
+              "n_clusters": 48
+            }
+          ],
+          "probe_minus_reader": 0.36142777423469385,
+          "random_donor": {
+            "auroc": 0.5608657525510204,
+            "hi": 0.6441874946215255,
+            "lo": 0.47017183374738986,
+            "n": 448,
+            "n_clusters": 48
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.6385722257653061,
+            "hi": 0.7238745713172113,
+            "lo": 0.5433730372720849,
+            "n": 448,
+            "n_clusters": 48
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "no_animals",
+        "unconstrained"
+      ],
+      "feature": "topic_far",
+      "mode_active": {
+        "follows": 18,
+        "n": 20,
+        "pass": true,
+        "rate": 0.9
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          0.07333333333333336,
+          0.47444444444444445
+        ],
+        "difference": 0.20000000000000007
+      },
+      "probes": {
+        "42": {
+          "auroc": 0.9411111111111111,
+          "hi": 1.0,
+          "lo": 0.8266666666666667,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 0.9444444444444444,
+          "hi": 1.0,
+          "lo": 0.8333333333333334,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.3877777777777778,
+              "hi": 0.48777777777777775,
+              "lo": 0.18994444444444455,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.49,
+              "hi": 0.74,
+              "lo": 0.24444444444444444,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.5133333333333333,
+          "random_donor": {
+            "auroc": 0.5566666666666666,
+            "hi": 0.6816666666666666,
+            "lo": 0.5305555555555556,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.4311111111111111,
+            "hi": 0.6533333333333333,
+            "lo": 0.22777777777777777,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.6455555555555555,
+              "hi": 0.8222222222222222,
+              "lo": 0.5666666666666667,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.6911111111111111,
+              "hi": 0.8577777777777778,
+              "lo": 0.5155277777777778,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.29666666666666663,
+          "random_donor": {
+            "auroc": 0.5566666666666666,
+            "hi": 0.7061666666666664,
+            "lo": 0.49944444444444447,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.6444444444444445,
+            "hi": 0.8089999999999994,
+            "lo": 0.5755555555555556,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.4177777777777778,
+              "hi": 0.5633333333333334,
+              "lo": 0.19444444444444445,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.4822222222222222,
+              "hi": 0.6311111111111111,
+              "lo": 0.2877777777777778,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.5,
+          "random_donor": {
+            "auroc": 0.5088888888888888,
+            "hi": 0.59,
+            "lo": 0.4233055555555556,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.4444444444444444,
+            "hi": 0.5966666666666667,
+            "lo": 0.23333333333333334,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    },
+    {
+      "class": "mode",
+      "class_values": [
+        "no_animals",
+        "unconstrained"
+      ],
+      "feature": "topic_near",
+      "mode_active": {
+        "follows": 18,
+        "n": 20,
+        "pass": true,
+        "rate": 0.9
+      },
+      "n": 60,
+      "n_clusters": 6,
+      "nla_minus_oracle": {
+        "ci95": [
+          0.11111111111111105,
+          0.4966666666666667
+        ],
+        "difference": 0.2155555555555555
+      },
+      "probes": {
+        "42": {
+          "auroc": 0.8966666666666666,
+          "hi": 1.0,
+          "lo": 0.7644166666666667,
+          "n": 60,
+          "n_clusters": 6
+        },
+        "44": {
+          "auroc": 0.9344444444444444,
+          "hi": 1.0,
+          "lo": 0.8333333333333334,
+          "n": 60,
+          "n_clusters": 6
+        }
+      },
+      "readers": {
+        "jlens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.4033333333333333,
+              "hi": 0.4988888888888889,
+              "lo": 0.2288888888888889,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.5466666666666666,
+              "hi": 0.7811111111111111,
+              "lo": 0.3319166666666672,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.46444444444444444,
+          "random_donor": {
+            "auroc": 0.49833333333333335,
+            "hi": 0.5466805555555555,
+            "lo": 0.45444444444444443,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.47,
+            "hi": 0.6722222222222223,
+            "lo": 0.28,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "nla": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.6422222222222222,
+              "hi": 0.8266666666666667,
+              "lo": 0.5366666666666666,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.6333333333333333,
+              "hi": 0.8,
+              "lo": 0.49875000000000025,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.25,
+          "random_donor": {
+            "auroc": 0.5283333333333333,
+            "hi": 0.6061111111111112,
+            "lo": 0.4391805555555561,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.6466666666666666,
+            "hi": 0.8166666666666667,
+            "lo": 0.52,
+            "n": 60,
+            "n_clusters": 6
+          }
+        },
+        "olens": {
+          "evaluable": true,
+          "gate_failures": [],
+          "phrasing_pairs": [
+            {
+              "auroc": 0.39666666666666667,
+              "hi": 0.5688888888888889,
+              "lo": 0.18655555555555575,
+              "n": 60,
+              "n_clusters": 6
+            },
+            {
+              "auroc": 0.4811111111111111,
+              "hi": 0.6556111111111108,
+              "lo": 0.2698888888888891,
+              "n": 60,
+              "n_clusters": 6
+            }
+          ],
+          "probe_minus_reader": 0.5033333333333333,
+          "random_donor": {
+            "auroc": 0.5005555555555555,
+            "hi": 0.5761111111111111,
+            "lo": 0.41944444444444445,
+            "n": 60,
+            "n_clusters": 6
+          },
+          "status": "EVALUABLE",
+          "true": {
+            "auroc": 0.4311111111111111,
+            "hi": 0.6111111111111112,
+            "lo": 0.2222222222222222,
+            "n": 60,
+            "n_clusters": 6
+          }
+        }
+      }
+    }
+  ],
+  "science_receipt": {
+    "assignment_sha256": "46d9fcb1af89ddd5177201e526a2450a7eaafb4a52f99eaf40ae9f4ba2a96797",
+    "completed_epoch": 1792797168.554743,
+    "first_science_epoch": 1792795524.4056904,
+    "forecast_s": 1722.6188780891787,
+    "science_allocation_s": 2943.928317133768,
+    "science_deadline_epoch": 1792798468.3340075,
+    "science_elapsed_s": 1644.149052619934,
+    "status": "COMPLETE_NO_LABEL_JOIN"
+  },
+  "score_seal_sha256": "515dce9ff8a3972c523bbab06fc892eeb53c34afcc45d1d2bf5b301c3f7b293b",
+  "section": 86,
+  "source_sha256": "fb14b04925a121bf99bfe89614b6e7ce64079038afc8ffc7f7745839a2a0c73f",
+  "surprisal_policy": {
+    "cluster": "Original frozen W1 template-family cluster and dev/test assignments retained.",
+    "donors": "Hash draw from same domain/row and original cluster in the full frozen pool, regardless of surprisal; middle-tercile donors remain eligible.",
+    "length": "Report actual selected-row KS p and mean difference after label derivation; if mismatch, mark LENGTH_CONFOUNDED, descriptive only, no retrospective rematching.",
+    "mode_active_gate": "Not applicable to raw W1 surprisal text (no operating instruction); probe and random-donor gates apply. Report separately from 14 mode rows and H1/H2.",
+    "pool": "All prose/Python binary W1 items, byte-identical raw prefixes; W1 ordinal sub-rows excluded.",
+    "quantity": "-log_softmax(base-model logits at position read_position - 1)[input_ids[read_position]]; natural-log nats, NOT next-token entropy",
+    "scoring": "Score all pool items true and random-donor before deriving labels. No recapture or score-dependent selection.",
+    "terciles": "Within domain and original dev/test split, ascending (surprisal, opaque id); bottom floor(n/3) = low, top floor(n/3) = high; middle unused. Stable ID breaks ties. No sign flip."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "2461c6aca997050da3226f90",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a Chinese/English bilingual format establishes a rule (\"if X, reply 'Sad'\"), requiring the model to apply it to a specific example.\n\nThe example structure \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the actual classification label (e.g., \"Happy\" or \"Sad\") for the given sentence \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's direct answer/classification output.\n\"Given example sentence: 'The weather is very good today.'\nGiven example sentence: 'The weather is very good today.'\nGiven example sentence: 'The weather is very good today.'\nReply:\" \u2014 the final field demands the model's response, likely a short label or explanation following the established format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a Chinese/English bilingual format establishes a rule (\"if X, reply 'Sad'\"), requiring the model to apply it to a specific example.\n\nThe example structure \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the actual classification label (e.g., \"Happy\" or \"Sad\") for the given sentence \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's direct answer/classification output.\n\"Given example sentence: 'The weather is very good today.'\nGiven example sentence: 'The weather is very good today.'\nGiven example sentence: 'The weather is very good today.'\nReply:\" \u2014 the final field demands the model's response, likely a short label or explanation following the established format.",
+  "truncated": false
+}

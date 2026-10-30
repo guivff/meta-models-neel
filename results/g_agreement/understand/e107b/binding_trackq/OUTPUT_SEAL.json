@@ -1,0 +1,71 @@
+{
+ "booked_usd": 0.23369825,
+ "cap_usd": 2,
+ "evidence": {
+  "bank": {
+   "actual_usd": "0.23369825",
+   "generation_usd_included": "C receipt b38797f18: total booked 0.23369825, generation 0.008212 retained",
+   "seal": "af73942ad49d3ca801444e152e14a052f1bd4ab2c924d697f1e0ed2d9bffade1"
+  },
+  "cohort": "199/199 primary belief_wrong items, 398/398 targets",
+  "judge": "identical judge system rubric hash over all 4,496 original outside and 398 forecast judging calls",
+  "plans": "each forecast target plan equals the original outside plan (values, property, bank)",
+  "privacy": "OpenRouter account privacy proof in C route_proof; labels CPU-only",
+  "route": "C transport.frozen_wire (max_tokens 256, google-vertex/global only) + run.payload (temperature 0, no fallbacks, deny, zdr); all audited requests google/gemini-3.1-flash-lite via Google",
+  "terminal_null_codes": 4
+ },
+ "experiment": "E107b",
+ "files": {
+  "BANK_COST.json": "e6e40a916984e10bccb151fbf9e8706e01b497c2bebbbaf667392608269e54bb",
+  "BANK_RECEIPT.json": "af73942ad49d3ca801444e152e14a052f1bd4ab2c924d697f1e0ed2d9bffade1",
+  "MEASUREMENTS.json": "794cf4d2924bfb6f4144e70d460dde0ebbb541e328cb988620b7e4fa2440b2a4",
+  "PREBANK_RECEIPT.json": "aaf45bf86b7c0bb4063d105f8ee4a5f6b9baa219c2114bd48bee03e052bd69ac"
+ },
+ "full_original_cohort": true,
+ "inventory_sha256": "52d6bdeaf9de2d78e6910be692321d558d9a7c8de798be0176e43d0dd95ce7fe",
+ "outside_generation": {
+  "ZDR": true,
+  "data_collection": "deny",
+  "fallbacks": false,
+  "max_tokens": 256,
+  "model": "google/gemini-3.1-flash-lite",
+  "provider": "google-vertex/global",
+  "temperature": 0
+ },
+ "primary_sha256": "f2da69a4f0e7acb560552cb9bee8c56ea8012a926a9508303113a2d3ccdd93b8",
+ "privacy_verified": true,
+ "prompt": "What will this model answer? Give the value.",
+ "redacted_records": 0,
+ "redaction_audit_complete": true,
+ "route_verified": true,
+ "same_route_and_judge": true,
+ "source_mapping_verified": true,
+ "source_seals": [
+  {
+   "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-c/cache/g_agreement/understand/internals_c/E107b/forecast_judging/outputs/JUDGMENT_SEAL.json",
+   "sha256": "0505d1d5e564af93a6a492f5291a42365d18baf25aebb5c782d61c7574f9c21a"
+  },
+  {
+   "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-c/cache/g_agreement/understand/internals_c/E107b/forecast_judging/INPUT_SEAL.json",
+   "sha256": "0fa7a1a5ee5d44160b1f79fee7d2b98724627d78644ff587010a30ef232e63de"
+  },
+  {
+   "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/e107_inventory_v1/INVENTORY_SEAL.json",
+   "sha256": "52d6bdeaf9de2d78e6910be692321d558d9a7c8de798be0176e43d0dd95ce7fe"
+  },
+  {
+   "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-c/cache/g_agreement/understand/internals_c/E107b/generation/outputs/GENERATION_SEAL.json",
+   "sha256": "077db64ec0a2e00c2c1c8183680ca1d047105a89c95dde8e9f4bf4ca1c625465"
+  },
+  {
+   "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-c/cache/g_agreement/understand/internals_c/E107b/forecast_source/SOURCE_SEAL.json",
+   "sha256": "95bb773c2e0c0af00a2daa0d45ce03371923809fa1b82398a22ba3a700ca16ee"
+  },
+  {
+   "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-c/cache/g_agreement/understand/internals_c/E107b/complete245/JUDGMENT_SEAL.json",
+   "sha256": "af73942ad49d3ca801444e152e14a052f1bd4ab2c924d697f1e0ed2d9bffade1"
+  }
+ ],
+ "status": "COMPLETE",
+ "unknown_cost_requests": 0
+}

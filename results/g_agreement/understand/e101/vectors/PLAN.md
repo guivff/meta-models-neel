@@ -1,0 +1,9 @@
+# E101 CPU direction freeze
+
+§209 and §208 deviation1,69f8c08e. Seven requested rows × blocks44/42. All84 dev items per row (42 per class), as the original E79 fits; the brief's approximate40 dev timing estimate is not a subsampling instruction. Positive raw direction is mean(label1) minus mean(label0), with IDs sorted independently within class as E79. The five existing E79 block44 raw arrays are reused byte-for-byte and verified against the sealed dev means; the two E56 block44 and all seven block42 directions use their own block's dev captures. Unit directions and raw norms are retained separately to prevent double normalization. No test activation participates in fitting.
+
+One isotropic Gaussian random unit direction per block, reused across all rows: default_rng(SeedSequence([20261028, block])).standard_normal(5120), normalized. No row-specific orthogonalization because the requested control is one direction per block. Block44 fractions use the original E58b rank384 basis: norm(Q_J@(Q_J.T@raw_d))/norm(raw_d); report0.27 and exact sqrt(384/5120).
+
+E100 a/b: verify and reference W-mechanism-B's existing sealed eight-row (84 test items each) donor pairs and Q_J/Q_R bases. Recompute only the pairing identity checks, not pairs or bases. Keep all test ordering and opaque IDs unchanged. Projector application Q@(Q.T@h), no dense matrix. No E100 injection/u_tok/upstream items are delivered.
+
+Public E101 payload contains only row/block direction arrays, raw scaling norms and random controls, with its own input seal. CPU-only source evidence and dev labels/value joins never go to pods. The runner applies sigma=1-2*true_label, i.e. toward the other value, computes dose-selection logits and freezes alpha* before test; no behavioural dose or scientific claim is inferred by this CPU build. §209 runner/Integrator owns tokens, continuation scoring, read-index custody, dose and GPU admission.

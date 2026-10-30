@@ -1,0 +1,120 @@
+{
+  "experiment": "E28",
+  "authority_commit": "5731e92e0835e2a20d57a88cfcae7f3f57108fe4",
+  "sections": [
+    122,
+    130
+  ],
+  "rows": [
+    "prose_paren",
+    "python_string",
+    "table_role",
+    "python_depth",
+    "table_column",
+    "prose_sentiment"
+  ],
+  "runs": [
+    [
+      "prose_paren",
+      "L"
+    ],
+    [
+      "prose_paren",
+      "B"
+    ],
+    [
+      "prose_paren",
+      "S"
+    ],
+    [
+      "python_string",
+      "L"
+    ],
+    [
+      "python_string",
+      "B"
+    ],
+    [
+      "table_role",
+      "L"
+    ],
+    [
+      "table_role",
+      "B"
+    ],
+    [
+      "python_depth",
+      "L"
+    ],
+    [
+      "python_depth",
+      "B"
+    ],
+    [
+      "table_column",
+      "L"
+    ],
+    [
+      "table_column",
+      "B"
+    ],
+    [
+      "prose_sentiment",
+      "L"
+    ],
+    [
+      "prose_sentiment",
+      "B"
+    ],
+    [
+      "prose_sentiment",
+      "S"
+    ]
+  ],
+  "checkpoints": [
+    0,
+    25,
+    50,
+    100,
+    200,
+    400
+  ],
+  "seed": 20261025,
+  "steps": 400,
+  "batch_size": 8,
+  "learning_rate": 0.0001,
+  "rank": 8,
+  "total_gpu_seconds": 18000,
+  "pod_count_max": 2,
+  "setup_seconds_max": 2400,
+  "science_cap": "min(1.5F+360,10800) seconds per pod",
+  "retrieval_reserve_seconds": 180,
+  "train_items_per_row": 84,
+  "test_items_per_row": 84,
+  "asked_scoring": "W1 Oracle native prompt; sum candidate token log probabilities A-B; mean over both frozen phrasing pairs",
+  "training_target": "correct W1 phrasing, alternate both frozen phrasings deterministically across examples",
+  "free_readout": "84 per row/arm at step400, native prompt with no question, greedy, W1 cap128",
+  "lora_targets_file": "LORA_TARGETS.json",
+  "optimizer": {
+    "name": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0,
+    "schedule": "constant",
+    "clipping": null
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "unit": "W1 template cluster",
+    "paired_across_checkpoints_and_arms": true
+  },
+  "R1": "All three state rows fast in L: AUC>=.80 by step<=100 with CI lower>=.65",
+  "R2": "S <=.60 at every checkpoint; fail makes the corresponding row uninterpretable",
+  "R3": "L steps-to-.80 minus B greater than0 with bootstrap CI excluding0 on state rows, not sentiment; report merged-adapter/E33 confound",
+  "censoring": "Never-crossed steps-to-.80 is right-censored >400; R3 unevaluable when finite contrast cannot be established without imputation",
+  "test_label_access": "CPU analysis after complete per-run score seals only",
+  "retry_authorized": false
+}

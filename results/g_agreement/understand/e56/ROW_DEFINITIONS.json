@@ -1,0 +1,256 @@
+{
+  "E54_injection_awareness": "attached original E54 bank only, outside all E56 rules",
+  "adjective_BOW_caveat": "Disjoint dev/test content vocabulary; BOW QA tests held-out lexical generalization. The other four implicit pairs have identical token-count bags.",
+  "adjective_content_vocabulary": {
+    "dev": {
+      "adjective": [
+        "appears",
+        "bright",
+        "calm",
+        "clean",
+        "empty",
+        "feels",
+        "garden",
+        "hall",
+        "house",
+        "kitchen",
+        "looks",
+        "office",
+        "quiet",
+        "remains",
+        "room",
+        "seems",
+        "station",
+        "stays",
+        "warm"
+      ],
+      "noun": [
+        "bought",
+        "boy",
+        "bread",
+        "carried",
+        "chef",
+        "clerk",
+        "coffee",
+        "found",
+        "fruit",
+        "girl",
+        "guard",
+        "man",
+        "milk",
+        "ordered",
+        "packed",
+        "rice",
+        "selected",
+        "tea",
+        "water",
+        "woman"
+      ]
+    },
+    "test": {
+      "adjective": [
+        "attic",
+        "became",
+        "cabin",
+        "cellar",
+        "cold",
+        "dark",
+        "dry",
+        "grew",
+        "is",
+        "large",
+        "porch",
+        "proved",
+        "safe",
+        "shed",
+        "small",
+        "studio",
+        "tower",
+        "turned",
+        "was"
+      ],
+      "noun": [
+        "artist",
+        "baker",
+        "borrowed",
+        "brought",
+        "cloth",
+        "doctor",
+        "farmer",
+        "glass",
+        "leather",
+        "moved",
+        "nurse",
+        "painted",
+        "paper",
+        "pilot",
+        "sailor",
+        "shipped",
+        "steel",
+        "stone",
+        "stored",
+        "wood"
+      ]
+    }
+  },
+  "rows": {
+    "adjective_asked": {
+      "kind": "semantic_state",
+      "read_token_rule": "?",
+      "row_id": "adjective_asked",
+      "twin_of": "adjective_implicit",
+      "values": [
+        "adjective",
+        "noun"
+      ]
+    },
+    "adjective_implicit": {
+      "kind": "semantic_state",
+      "read_token_rule": "and",
+      "row_id": "adjective_implicit",
+      "twin_of": null,
+      "values": [
+        "adjective",
+        "noun"
+      ]
+    },
+    "anomaly_state": {
+      "kind": "semantic_state",
+      "read_token_rule": "folder",
+      "row_id": "anomaly_state",
+      "twin_of": null,
+      "values": [
+        "foreign_sentence",
+        "no_foreign_sentence"
+      ]
+    },
+    "fact_recall": {
+      "kind": "semantic_state",
+      "read_token_rule": "is",
+      "row_id": "fact_recall",
+      "twin_of": null,
+      "values": [
+        "Paris",
+        "Lima"
+      ]
+    },
+    "instructed_focus": {
+      "kind": "semantic_state",
+      "read_token_rule": "window",
+      "row_id": "instructed_focus",
+      "twin_of": null,
+      "values": [
+        "citrus_fruits",
+        "birds"
+      ]
+    },
+    "language_continuation": {
+      "kind": "semantic_state",
+      "read_token_rule": "",
+      "row_id": "language_continuation",
+      "twin_of": null,
+      "values": [
+        "French",
+        "German"
+      ]
+    },
+    "language_report": {
+      "kind": "semantic_state",
+      "read_token_rule": "?",
+      "row_id": "language_report",
+      "twin_of": "language_continuation",
+      "values": [
+        "French",
+        "German"
+      ]
+    },
+    "linewrap_asked": {
+      "kind": "semantic_state",
+      "read_token_rule": "?",
+      "row_id": "linewrap_asked",
+      "twin_of": "linewrap_implicit",
+      "values": [
+        "short",
+        "long"
+      ]
+    },
+    "linewrap_implicit": {
+      "kind": "semantic_state",
+      "read_token_rule": "notes",
+      "row_id": "linewrap_implicit",
+      "twin_of": null,
+      "values": [
+        "short",
+        "long"
+      ]
+    },
+    "reasoning_bridge": {
+      "kind": "positive_control",
+      "read_token_rule": ":",
+      "row_id": "reasoning_bridge",
+      "shared_answer_digit": "4",
+      "source_E54_seal": "c13d59f5816321a249d673dd65c35490906b64afcc33fe633bcc66d148d53358",
+      "unchanged": true,
+      "values": [
+        "cat",
+        "dog"
+      ]
+    },
+    "rhyme_plan": {
+      "kind": "semantic_state",
+      "read_token_rule": "the",
+      "row_id": "rhyme_plan",
+      "twin_of": null,
+      "values": [
+        "fight",
+        "light"
+      ]
+    },
+    "tense_asked": {
+      "kind": "semantic_state",
+      "read_token_rule": "?",
+      "row_id": "tense_asked",
+      "twin_of": "tense_implicit",
+      "values": [
+        "past",
+        "present"
+      ]
+    },
+    "tense_implicit": {
+      "kind": "semantic_state",
+      "read_token_rule": "gate",
+      "row_id": "tense_implicit",
+      "twin_of": null,
+      "values": [
+        "past",
+        "present"
+      ]
+    }
+  },
+  "twins": {
+    "adjective_asked": {
+      "appended_span": "\nWhat part of speech comes next?",
+      "implicit_row": "adjective_implicit",
+      "label_target": "original implicit read position",
+      "read_position": "final token of question"
+    },
+    "language_report": {
+      "appended_span": "\nWhich language is this passage in?",
+      "implicit_row": "language_continuation",
+      "label_target": "original implicit read position",
+      "read_position": "final token of question"
+    },
+    "linewrap_asked": {
+      "appended_span": "\nHow many characters are on the current line so far?",
+      "implicit_row": "linewrap_implicit",
+      "label_target": "original implicit read position",
+      "read_position": "final token of question"
+    },
+    "tense_asked": {
+      "appended_span": "\nIn what tense is this passage written?",
+      "implicit_row": "tense_implicit",
+      "label_target": "original implicit read position",
+      "read_position": "final token of question"
+    }
+  }
+}

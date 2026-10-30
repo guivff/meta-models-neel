@@ -1,0 +1,59 @@
+"""§228 E117c: original E57 signed S and E120c's leading yes/no extraction."""
+from projects.g_agreement.e120c_analysis.analysis import extract
+from projects.g_agreement.e100_analysis.rules import Bootstrap, DRAWS, SEED
+from projects.g_agreement.understand.wmech2 import core as c
+BOOK=('nesting_depth','indent_level','page_range_digit')
+ROWS=BOOK+('fact_recall',)
+ARMS=('targeted','sham')
+
+
+def yes_rate(xs):
+    known=[x for x in xs if x is not None]
+    c.require(all(type(x)is bool for x in known),'literal known yes/no only')
+    return dict(total=len(xs),kept=len(known),missing=len(xs)-len(known),yes=sum(known),rate=sum(known)/len(known) if known else None)
+
+
+def summarize(items):
+    c.unique(items);c.require(len(items)==336,'four original84-item rows')
+    c.require(all(x['row']in ROWS and set(x['arms'])==set(ARMS) for x in items),'registered rows and paired arms')
+    cells={};sham={}
+    for row in ROWS:
+        xs=[x for x in items if x['row']==row];c.require(len(xs)==84,'84 original items per row')
+        for arm in ARMS:
+            cells[(row,'oracle',arm)]={x['id']:x['arms'][arm]['score']for x in xs}
+        sham[row]=yes_rate([x['arms']['sham']['yes']for x in xs])
+    b=Bootstrap(cells)
+    return dict(rows={r:dict(targeted_S=b.stat(r,'targeted'),sham_S=b.stat(r,'sham'),sham_yes=sham[r],role='control'if r=='fact_recall'else'bookkeeping')for r in ROWS},
+        sham_pooled_bookkeeping=yes_rate([x['arms']['sham']['yes']for x in items if x['row']in BOOK]),
+        sham_pooled_all=yes_rate([x['arms']['sham']['yes']for x in items]),
+        bootstrap=dict(draws=DRAWS,seed=SEED,unit='original item',source='unchanged E100/E57 signed-score bootstrap'),
+        missing_policy='Missing remains unknown; descriptive rates use explicit known denominators. No E120c balanced accuracy or .60/.70 sham cutoffs transferred.')
+
+
+def readings(summary):
+    """User clarification: sham limit is per qualifying bookkeeping row."""
+    qualified=[];unknown=[];low=[];low_unknown=[];bounds={};nonrobust=[]
+    for row in BOOK:
+        t=summary['rows'][row]['targeted_S'];s=summary['rows'][row]['sham_yes']
+        target_n=84-t['missing'];sham_n=84-s['missing']
+        evaluable=target_n>=79 and sham_n>=79
+        target_known=evaluable and t['estimate'] is not None
+        sham_known=evaluable and s['rate'] is not None
+        worst_target=None if t['estimate'] is None else (t['estimate']*target_n-t['missing'])/84
+        worst_sham=None if s['rate'] is None else (s['rate']*sham_n+s['missing'])/84
+        qualifies=(round(t['estimate'],12)>=.30 and s['rate']<=.20) if target_known and sham_known else None
+        robust=bool(qualifies and round(worst_target,12)>=.30 and worst_sham<=.20)
+        if qualifies and not robust:nonrobust.append(row)
+        bounds[row]=dict(evaluable=evaluable,targeted_observed=target_n,sham_observed=sham_n,
+                        targeted_S_worst=worst_target,sham_yes_worst=worst_sham,
+                        reading='NOT EVALUABLE' if qualifies is None else 'met, not robust to missingness' if qualifies and not robust else 'MET' if qualifies else 'NOT MET')
+        if qualifies is True:qualified.append(row)
+        if qualifies is None:unknown.append(row)
+        if target_known and round(t['estimate'],12)<=.10:low.append(row)
+        if not target_known:low_unknown.append(row)
+    positive='MET' if len(qualified)>=2 else 'NOT EVALUABLE' if len(qualified)+len(unknown)>=2 else 'NOT MET'
+    negative='MET' if len(low)==3 else 'NOT EVALUABLE' if len(low)+len(low_unknown)==3 else 'NOT MET'
+    return dict(elicitation=positive,not_recoverable_by_asking=negative,missingness_bounds=bounds,not_robust_bookkeeping_rows=nonrobust,
+                elicitation_missingness='met, not robust to missingness' if positive=='MET' and len(qualified)-len(nonrobust)<2 else positive,qualifying_bookkeeping_rows=qualified,unknown_qualifying_rows=unknown,low_bookkeeping_rows=low,
+                sham_scope='Per qualifying bookkeeping row; fact_recall and pooled rates cannot qualify or rescue a row',
+                interpretation='Descriptive registered readings; no CI gate. E117 main-grid results remain separately sealed.')

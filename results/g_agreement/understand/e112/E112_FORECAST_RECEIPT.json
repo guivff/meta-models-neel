@@ -1,0 +1,50 @@
+{
+ "authority": "\u00a7225 + coordinator E112 GO (29 Oct): cap = FORECAST.PROXY 3,339 + max measured staging 229 (E109) + 60 reserve",
+ "bound_input_seal_sha256": "cfa397a0749569cbefdc01029e4be98b092d9db0f765cb5ef50787dce137563b",
+ "cap_arithmetic": {
+  "account_gate_USD": 900,
+  "cap_seconds": 3630,
+  "cumulative_cap_seconds": 3630,
+  "gpu_hours": 1.0083,
+  "retrieval_reserve_seconds": 60,
+  "seed_forecast_x1_25_ceil": 3339,
+  "staging_allowance_seconds": 229,
+  "usd_upper_at_5_29": 5.33
+ },
+ "committed_before_any_E112_output": true,
+ "experiment": "E112",
+ "forecast_proxy": {
+  "batches_per_reader": 65,
+  "ceiling_x1_25": 3339,
+  "experiment": "E112",
+  "new_GPU_measurement": false,
+  "not_a_cap_authorization": true,
+  "proxy_only": true,
+  "raw_seed_forecast_seconds": 2670.598742169224,
+  "readouts": 1036,
+  "seed_forecast_x1_25": 3338.24842771153,
+  "seed_seconds_per_batch": {
+   "nla_native": 19.17773307699612,
+   "nla_setup": 293.8343498230679,
+   "oracle_native": 11.115151894329067,
+   "oracle_setup": 347.7268692100188
+  },
+  "timing": "same pod, discarded warm-ups then retained real pilots; unchanged original E80c Clock running mean x1.25"
+ },
+ "forecast_proxy_sha256": "d653b2a33c82a42d7974a9e0fe518fe590ce5af9bd94442c2edba2dce2bd1585",
+ "hold_input_seal_sha256": "6ce6ebe7b4fc49dd1df874f5874d857aec328394a18479dec68ddaf15564709b",
+ "issuer": "integrator (Track Q)",
+ "items": 518,
+ "kind": "PROSPECTIVE_FORECAST_RECEIPT",
+ "new_GPU_measurement": false,
+ "reader_outcomes_accessed": false,
+ "released_ids_sha256": "67727f123c74e3164db273636aae1ed9c020ecd678ff4b44b35ed80eb53b0473",
+ "runtime_first_admit_check": {
+  "max_elapsed_at_first_admit_seconds": 755.3,
+  "note": "elapsed = staging + GO latency + oracle_setup + warm-up + 1 batch; E109 staging 229 + E80c oracle seed 348 + ~31 warm-up + 11 = ~619 s < limit",
+  "remaining_after_first_oracle_batch_x1_25": 2814.7,
+  "rule": "late198 Clock.admit: now + 1.25*sum(remaining x running-mean-or-seed) < deadline - 60, after every native batch"
+ },
+ "source_seal_sha256": "6be258828605e1455ab4cc08e33145a866fb5cbacd2b12a4fecdf86882f5d366",
+ "vector_seal_sha256": "a356cc5a0a96dac3a12c6fbcfa9a8feafc690420ccf6ef5c7f17e684b37e559d"
+}

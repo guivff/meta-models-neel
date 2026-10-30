@@ -1,0 +1,66 @@
+[
+  {
+    "id": "bb0fedd889a46975bd611795",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3, 5], [7\n- 3, 5, 8], \"children\": [7\n- 2, 3, 5, 8],  # inner list: [7,\n- [7, 2, 3], [1, 2, 3, 4, 5, 6, 7",
+      "text": "- 2, 3, 5], [7\n- 3, 5, 8], \"children\": [7\n- 2, 3, 5, 8],  # inner list: [7,\n- [7, 2, 3], [1, 2, 3, 4, 5, 6, 7"
+    }
+  },
+  {
+    "id": "ec0467356fc6d0a139fe9bf0",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [7,\n- 2, 3, 5], \"children\": [7,\n- 3, 5, 8], [7, 2, 5, 8\n- [7, 2], [1, 2, 3]],  # Nested list with integers and nested lists [7",
+      "text": "- 2, 3], [7,\n- 2, 3, 5], \"children\": [7,\n- 3, 5, 8], [7, 2, 5, 8\n- [7, 2], [1, 2, 3]],  # Nested list with integers and nested lists [7"
+    }
+  },
+  {
+    "id": "a3a79ac83d26e0c829487803",
+    "output": {
+      "malformed": false,
+      "raw": "- 7, 8}, {6, 7\n- 12, 13}, {5, 6} }], (* Level 1: 7\n- 2, 3} }, {7, 8} }], (* Level 1: Inner List *)\n- 7, 8} }, { {5, 6} } } (* Nested structure *)\n```\n*   **`1 -> {7",
+      "text": "- 7, 8}, {6, 7\n- 12, 13}, {5, 6} }], (* Level 1: 7\n- 2, 3} }, {7, 8} }], (* Level 1: Inner List *)\n- 7, 8} }, { {5, 6} } } (* Nested structure *)\n```\n*   **`1 -> {7"
+    }
+  },
+  {
+    "id": "7aa943d311f7a27fdcac5e43",
+    "output": {
+      "malformed": false,
+      "raw": "- 7}, {5, 8}, 1}, {7\n- 12}, {3, 7}, ...]` (a nested list representing a graph or matrix),\n- 2, 3}, {7, 8}]} (* Level 1: List of lists *)\n- 7}, {2, 3} }, { ... }], (* Inner layer: 7",
+      "text": "- 7}, {5, 8}, 1}, {7\n- 12}, {3, 7}, ...]` (a nested list representing a graph or matrix),\n- 2, 3}, {7, 8}]} (* Level 1: List of lists *)\n- 7}, {2, 3} }, { ... }], (* Inner layer: 7"
+    }
+  },
+  {
+    "id": "a6a9cb66db7610426d783bd2",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3} } { 1,\n- 2, 3} } // Inner array starts with {1,\n- 2, 3} } // Nested array starts here, then another {1, 2\n- 1, 2} } // Inner array starts with {, then 1, 2, } then closes. | `{1,",
+      "text": "- 2, 3} } { 1,\n- 2, 3} } // Inner array starts with {1,\n- 2, 3} } // Nested array starts here, then another {1, 2\n- 1, 2} } // Inner array starts with {, then 1, 2, } then closes. | `{1,"
+    }
+  },
+  {
+    "id": "d641f38221cd5bf07b2ce48f",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3} } { {1,\n- 2, 3} } { {1, 2} } } // Nested JSON-like structure\n- 2, 3}, {1, 2, 3} } } // Nested arrays with commas\n- 1, 2} }, { 1, 2 } } } // Nested JSON-like structure with commas and braces\n```\n\n###",
+      "text": "- 2, 3} } { {1,\n- 2, 3} } { {1, 2} } } // Nested JSON-like structure\n- 2, 3}, {1, 2, 3} } } // Nested arrays with commas\n- 1, 2} }, { 1, 2 } } } // Nested JSON-like structure with commas and braces\n```\n\n###"
+    }
+  },
+  {
+    "id": "1fb8d3d0ea7db041913aa550",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [4, 5]]]  # Nested lists\n- 2, 3], [\"a\", \"b\"]],  # Nested lists\n- [2, 3], [\"a\", \"b\"]],  # List inside list, with commas\n- [2, 3], [\"a\", \"b\"]] } } }  # Nested lists with commas inside brackets\n```\nBut",
+      "text": "- 2, 3], [4, 5]]]  # Nested lists\n- 2, 3], [\"a\", \"b\"]],  # Nested lists\n- [2, 3], [\"a\", \"b\"]],  # List inside list, with commas\n- [2, 3], [\"a\", \"b\"]] } } }  # Nested lists with commas inside brackets\n```\nBut"
+    }
+  },
+  {
+    "id": "099ea58187fabda194d3445c",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [4, 5]]]  # Nested lists\n- 2, 3], [\"a\", \"b\"]]]`  # Nested lists\n- [2, 3], [\"a\", \"b\"]], \"nested\": [[1,\n- 2, 3], [\"a\", \"b\"]] } }` (a list containing lists and arrays) is nested inside a function call, which is itself inside another list",
+      "text": "- 2, 3], [4, 5]]]  # Nested lists\n- 2, 3], [\"a\", \"b\"]]]`  # Nested lists\n- [2, 3], [\"a\", \"b\"]], \"nested\": [[1,\n- 2, 3], [\"a\", \"b\"]] } }` (a list containing lists and arrays) is nested inside a function call, which is itself inside another list"
+    }
+  }
+]

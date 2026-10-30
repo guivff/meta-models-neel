@@ -1,0 +1,111 @@
+{
+  "base_reference": "base Qwen with adapter disabled; actual W1 input tokens then candidate tokens, no question or bullet prefix",
+  "experiment_use": "E17: both frozen E15-valid pairs averaged, all per-pair scores retained; no new validity gate.",
+  "nla_prefix": "",
+  "nla_status": "DESCRIPTIVE, continuation scoring off native explanation mode",
+  "notes": "Frozen surface consequences may fail base validity; failed pairs/rows are reported, never reauthored after scores.",
+  "oracle_prefix": "- ",
+  "oracle_prompt": "unchanged native Oracle prompt, no E6 continuation instruction appended",
+  "orientation": "W1 value A positive, no sign reversal",
+  "rows": {
+    "list_depth": {
+      "consequence": "Next bullet at two versus four leading spaces; bullet text identical. This is a shallow/deep contrast, not an asserted perfect-level match.",
+      "pairs": [
+        {
+          "A": "\n  - ",
+          "A_ids": [
+            198,
+            220,
+            471,
+            220
+          ],
+          "B": "\n    - ",
+          "B_ids": [
+            198,
+            262,
+            471,
+            220
+          ],
+          "tokens_per_candidate": 4
+        },
+        {
+          "A": "\n  - next",
+          "A_ids": [
+            198,
+            220,
+            471,
+            1727
+          ],
+          "B": "\n    - next",
+          "B_ids": [
+            198,
+            262,
+            471,
+            1727
+          ],
+          "tokens_per_candidate": 4
+        }
+      ]
+    },
+    "prose_paren": {
+      "consequence": "Close an open parenthesis versus open a new parenthesis.",
+      "pairs": [
+        {
+          "A": ")",
+          "A_ids": [
+            8
+          ],
+          "B": "(",
+          "B_ids": [
+            7
+          ],
+          "tokens_per_candidate": 1
+        },
+        {
+          "A": ")\n",
+          "A_ids": [
+            8,
+            198
+          ],
+          "B": "(\n",
+          "B_ids": [
+            7,
+            198
+          ],
+          "tokens_per_candidate": 2
+        }
+      ]
+    },
+    "python_string": {
+      "consequence": "Close a double-quoted string versus leave it open / continue outside a string.",
+      "pairs": [
+        {
+          "A": "\"",
+          "A_ids": [
+            1
+          ],
+          "B": "0",
+          "B_ids": [
+            15
+          ],
+          "tokens_per_candidate": 1
+        },
+        {
+          "A": "\"\n",
+          "A_ids": [
+            1,
+            198
+          ],
+          "B": ".\n",
+          "B_ids": [
+            13,
+            198
+          ],
+          "tokens_per_candidate": 2
+        }
+      ]
+    }
+  },
+  "section": 105,
+  "validity": "Each pair valid iff base-reference dev AUROC>=0.80. Primary test score averages ONLY dev-valid pairs; zero-valid-pair rows NOT EVALUABLE. Report every pair separately; no replacement."
+}

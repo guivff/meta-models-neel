@@ -1,0 +1,12 @@
+{
+  "id": "ecf7c314c635c40ea89a5c38",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a template: a task description followed by a \"Question:\" and \"Answer:\" structure, requiring a model response demonstrating the specified behavior.\n\nThe core constraint is British vs. American English spelling variation, with the example task (\"Write a short paragraph about the benefits of data analytics\") requiring an American English version as the answer.\n\n\"Answer:\" is the final token, functioning as a label introducing the model's output response, immediately requiring the actual answer text (likely a short paragraph or sentence demonstrating the spelling variant, e.g., \"The model wrote...\" or \"The model uses...\").\n\"Question: [instruction]\nInstruction: [instruction]\nThe instruction is to write in American English.\nAnswer:\" \u2014 this pattern mirrors a QA format, so the next tokens should be a sample answer, likely in American English spelling, demonstrating the example.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a template: a task description followed by a \"Question:\" and \"Answer:\" structure, requiring a model response demonstrating the specified behavior.\n\nThe core constraint is British vs. American English spelling variation, with the example task (\"Write a short paragraph about the benefits of data analytics\") requiring an American English version as the answer.\n\n\"Answer:\" is the final token, functioning as a label introducing the model's output response, immediately requiring the actual answer text (likely a short paragraph or sentence demonstrating the spelling variant, e.g., \"The model wrote...\" or \"The model uses...\").\n\"Question: [instruction]\nInstruction: [instruction]\nThe instruction is to write in American English.\nAnswer:\" \u2014 this pattern mirrors a QA format, so the next tokens should be a sample answer, likely in American English spelling, demonstrating the example.",
+  "truncated": false
+}

@@ -1,0 +1,248 @@
+{
+  "arms": [
+    "RL",
+    "SFT"
+  ],
+  "bootstrap": {
+    "method": "paired percentile95 by W1 template cluster within fixed row; identical draws across arms/channels; no row resampling",
+    "n_boot": 2000,
+    "seed": 20261025
+  },
+  "budget": {
+    "forecast": "each of8arm/channel paths warmed then median3; full registered grid only",
+    "includes_setup": true,
+    "max_gpu_hours": 1.5,
+    "max_provider_seconds": 5400,
+    "retrieval_reserve_seconds": 120,
+    "science_cap_formula": "min(1.5F+360,5400)"
+  },
+  "c2_rows": [
+    "prose_paren",
+    "prose_quote",
+    "python_string",
+    "python_indent",
+    "python_depth",
+    "list_depth",
+    "table_role"
+  ],
+  "channels": [
+    "C1",
+    "C1prime",
+    "C2",
+    "C4"
+  ],
+  "checkpoint_identity": {
+    "RL": "olens_s3d_rl600",
+    "SFT": "s3d.omp4bp.s2/step251"
+  },
+  "clarification_commit": "d4bb903db5c0a25771273ef06c4482bb67de869d",
+  "classes": {
+    "json_status": "semantic",
+    "json_type": "state-like",
+    "latex_environment": "state-like",
+    "latex_role": "semantic",
+    "latex_section": "count-like",
+    "latex_subject": "semantic",
+    "list_depth": "count-like",
+    "list_index": "count-like",
+    "list_priority": "semantic",
+    "list_topic": "semantic",
+    "prose_paren": "state-like",
+    "prose_quote": "state-like",
+    "prose_sentence": "count-like",
+    "prose_sentiment": "semantic",
+    "prose_topic": "semantic",
+    "python_argument": "count-like",
+    "python_comment": "state-like",
+    "python_depth": "count-like",
+    "python_error": "semantic",
+    "python_indent": "count-like",
+    "python_string": "state-like",
+    "table_column": "count-like",
+    "table_role": "state-like",
+    "table_row": "count-like",
+    "table_status": "semantic"
+  },
+  "conditional": {
+    "arrival_deadline_epoch": 1793127600,
+    "checkpoint_received_by": "2026-10-27T20:00:00+01:00",
+    "initial_status": "BLOCKED_AWAITING_CHECKPOINT",
+    "missing_after_deadline_status": "NOT_RUN",
+    "priority_after": [
+      "E33",
+      "E28"
+    ]
+  },
+  "experiment": "E37",
+  "exploratory": true,
+  "free_generation": {
+    "max_new_tokens": 128,
+    "temperature": 0,
+    "top_k": 0,
+    "top_p": 1
+  },
+  "frozen_date": "2026-10-25",
+  "injection_alpha": 16000,
+  "label_access": "Only252fixed parity-gate labels may be on worker; full labels opened by analysis only after complete two-arm score/free seals and gate verification",
+  "layer": 44,
+  "n_items": 2100,
+  "n_test_per_row": 84,
+  "named_alternatives": {
+    "enactment": "SFT enacts less; report paired C2 differences",
+    "reporting": "SFT-RL >=0.15 on at least3structure rows"
+  },
+  "operations": {
+    "gpu_launch_authorized_to_worker": false,
+    "max_pods": 1,
+    "no_scientific_gate_retry": true,
+    "no_scope_cut": true,
+    "operator": "Integrator",
+    "owner": "W-lens",
+    "programme_deadline_utc": "2026-10-28T22:59:00+00:00"
+  },
+  "prediction": "R1 and R2 and R4 hold",
+  "prefix": "C1/C1prime candidate strings carry original bullet; C2 exact E15 explicit bullet prefix; C4 exact E24 native greedy carrier; identical per-channel convention across arms",
+  "private_labels_sha256": "48497c10082f18a5e80034c34e97e7139ee9783de8a8b28440e2e30535dfa07b",
+  "r4_scope": "pooled",
+  "registration": "BRIEF_UNDERSTAND \u00a7134; dated clarification 1; user clarification R4 pooled per arm",
+  "registration_commit": "f31d3cb437063c16a15d00883fd51146df96b7a2",
+  "rows": [
+    "json_status",
+    "json_type",
+    "latex_environment",
+    "latex_role",
+    "latex_section",
+    "latex_subject",
+    "list_depth",
+    "list_index",
+    "list_priority",
+    "list_topic",
+    "prose_paren",
+    "prose_quote",
+    "prose_sentence",
+    "prose_sentiment",
+    "prose_topic",
+    "python_argument",
+    "python_comment",
+    "python_depth",
+    "python_error",
+    "python_indent",
+    "python_string",
+    "table_column",
+    "table_role",
+    "table_row",
+    "table_status"
+  ],
+  "rules": {
+    "R1": "C2 matched absolute SFT-RL AUROC difference <=0.05 on at least5of7 rows, both arms >=0.65 on those rows",
+    "R2": "C1 structure class median difference absolute <=0.05, and no structure row absolute difference >=0.15 with paired95 CI excluding0",
+    "R3": "C1 content rows RL-SFT reported descriptively",
+    "R4": "C4 each arm pooled across16structure rows (1344items): Wilson95 upper bound on correct statements <0.05; both/neither incorrect"
+  },
+  "schema": "E37_PLAN_v1",
+  "scoring": "SUM candidate token log probabilities A-B; arithmetic mean of both frozen pairs before AUROC; value A positive, no sign flips",
+  "total_free_records": 4200,
+  "total_score_records": 10752,
+  "values": {
+    "json_status": [
+      "approved",
+      "rejected"
+    ],
+    "json_type": [
+      "string",
+      "number"
+    ],
+    "latex_environment": [
+      "equation",
+      "quote"
+    ],
+    "latex_role": [
+      "theorem",
+      "example"
+    ],
+    "latex_section": [
+      "early",
+      "late"
+    ],
+    "latex_subject": [
+      "algebra",
+      "geometry"
+    ],
+    "list_depth": [
+      "shallow",
+      "deep"
+    ],
+    "list_index": [
+      "first",
+      "later"
+    ],
+    "list_priority": [
+      "urgent",
+      "routine"
+    ],
+    "list_topic": [
+      "travel",
+      "study"
+    ],
+    "prose_paren": [
+      "inside",
+      "outside"
+    ],
+    "prose_quote": [
+      "inside",
+      "outside"
+    ],
+    "prose_sentence": [
+      "early",
+      "late"
+    ],
+    "prose_sentiment": [
+      "positive",
+      "negative"
+    ],
+    "prose_topic": [
+      "garden",
+      "ocean"
+    ],
+    "python_argument": [
+      "first",
+      "later"
+    ],
+    "python_comment": [
+      "comment",
+      "code"
+    ],
+    "python_depth": [
+      "shallow",
+      "deep"
+    ],
+    "python_error": [
+      "raise",
+      "return"
+    ],
+    "python_indent": [
+      "shallow",
+      "deep"
+    ],
+    "python_string": [
+      "inside",
+      "outside"
+    ],
+    "table_column": [
+      "first",
+      "later"
+    ],
+    "table_role": [
+      "header",
+      "data"
+    ],
+    "table_row": [
+      "early",
+      "late"
+    ],
+    "table_status": [
+      "approved",
+      "rejected"
+    ]
+  }
+}

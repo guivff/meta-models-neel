@@ -1,0 +1,79 @@
+{
+  "admission": "HOLD_NO_VERIFIED_EXACT_ALLOCATION_AND_RUNTIME",
+  "allocation_attempts": 0,
+  "gpu_types": [
+    {
+      "community4": {
+        "availableGpuCounts": null,
+        "stockStatus": null,
+        "uninterruptablePrice": null
+      },
+      "community8": {
+        "availableGpuCounts": null,
+        "stockStatus": null,
+        "uninterruptablePrice": null
+      },
+      "communityPrice": 5.98,
+      "id": "NVIDIA B200",
+      "memoryInGb": 180,
+      "secure4": {
+        "availableGpuCounts": null,
+        "stockStatus": null,
+        "uninterruptablePrice": null
+      },
+      "secure8": {
+        "availableGpuCounts": null,
+        "stockStatus": null,
+        "uninterruptablePrice": null
+      },
+      "securePrice": 7.99
+    }
+  ],
+  "other_gpu_types_queried": false,
+  "provider_mutations": 0,
+  "query_class": "gpuTypes.lowestPrice exact gpuCount 4/8 secure and community; dataCenters.gpuAvailability exact gpuCount; own volume metadata only",
+  "query_sha256": "422cce700828c3eaa85ff41b9bafe53668dc10092fbd9009d44e1485cb158cd3",
+  "query_started_utc": "2026-10-27T17:15:20.572449+00:00",
+  "raw_response_persisted": false,
+  "raw_response_sha256": "bbe17a9d52ae89428b432087e1f4b8ed1a990da23a724c5a0e74881c0bc1b113",
+  "routes": {
+    "community4": {
+      "available_location_count": 0,
+      "existing_volume_colocated_count": 0,
+      "location_identifiers_omitted": true,
+      "matching_availability_rows": 0,
+      "stock_status_values": []
+    },
+    "community8": {
+      "available_location_count": 0,
+      "existing_volume_colocated_count": 0,
+      "location_identifiers_omitted": true,
+      "matching_availability_rows": 0,
+      "stock_status_values": []
+    },
+    "secure4": {
+      "available_location_count": 0,
+      "existing_volume_colocated_count": 0,
+      "location_identifiers_omitted": true,
+      "matching_availability_rows": 5,
+      "stock_status_values": [
+        null
+      ]
+    },
+    "secure8": {
+      "available_location_count": 0,
+      "existing_volume_colocated_count": 0,
+      "location_identifiers_omitted": true,
+      "matching_availability_rows": 5,
+      "stock_status_values": [
+        null
+      ]
+    }
+  },
+  "schema": "i2-e74-live-b200-stock-refresh-v1",
+  "secret_values_printed": false,
+  "source": "RunPod GraphQL via installed read-only API helper",
+  "track": "G",
+  "verified_at_utc": "2026-10-27T17:15:21.321350+00:00",
+  "weight_download_bytes": 0
+}

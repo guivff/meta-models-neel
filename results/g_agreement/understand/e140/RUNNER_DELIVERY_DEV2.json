@@ -1,0 +1,43 @@
+{
+  "experiment": "E140",
+  "authority": "252_deviation2_b10b2694e",
+  "status": "FIRST300_SOURCE_INPUT_READY_NOT_I2_ADMISSION",
+  "implementation_commit": "898155597",
+  "source_sha256": "0956921ac8e4752bf1cd78b1920a14a94db69ff4b9407c714471317d55dfc5cf",
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e140-dev2-source-v1/source.tar.gz",
+  "source_archive_sha256": "579bed7a6dc8da1d709dc8a812b152310a36cba0f9f1b0b7a931e425f626fc20",
+  "source_members": 211,
+  "input_sha256": "76dd4da7a78f210d903b29958b61b55818978a128bfe0e69731fd737cf70fdaa",
+  "input_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e140-dev2-inputs-v1/inputs.tar.gz",
+  "input_archive_sha256": "5ebd69262e59c04e41f416c37a1b416102f57366b06ab1537963850c06722b11",
+  "input_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e140-dev2-inputs-v1/inputs",
+  "parent_input_sha256": "5daa0c676bb9cbe561ba1e37e698ac807b38b4eb8965376e7a6e9d5f8fad5819",
+  "screen_candidates": 300,
+  "screen_prompts": 600,
+  "tests": 21,
+  "fresh_extract_tests": 21,
+  "actual_runtime_imports": "PASS E79/E109/E87/E131/E133/E136/E140/common/TorchPEFTTransformers no weights",
+  "actual_native_load_and_CLI": "PASS600 prompts; original1200 also loads",
+  "exact_prefix_binding": "all600 records equal original first600 serialized interleaved records/full tokens/read/member/id/order unchanged",
+  "secret_scan": "PASS all211 source members",
+  "max_kept_pairs": 84,
+  "min_main_pairs": 40,
+  "max_Oracle_readouts": 504,
+  "maximum_creation_cap_seconds": 6600,
+  "cap_rule": "I2 actual complete all-phase forecast/admission; original creation clock",
+  "operator": "I-2 only",
+  "actual_screen_selection": false,
+  "model_GPU_reader_science_guard_calls": 0,
+  "CPU_parent_identity_seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e140-dev2-runtime-cpu-v1/SOURCE_SEAL.json",
+  "CPU_parent_identity_sha256": "cf56c9a1e94786e0a5807123863526755942623a9bde8daedc59163602cd4b77",
+  "CPU_original_pair_ids_ref": {
+    "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e140-dev2-runtime-cpu-v1/SOURCE_SEAL.json",
+    "sha256": "cf56c9a1e94786e0a5807123863526755942623a9bde8daedc59163602cd4b77",
+    "member": "PARENT_IDENTITY.json",
+    "keys": [
+      "original_pair_ids"
+    ]
+  },
+  "CPU_parent_identity_never_pod_or_Git": true,
+  "source_history": "original v1/v2 retained; stage dev2-source-v1 for fallback"
+}

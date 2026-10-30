@@ -1,0 +1,12 @@
+{
+  "id": "fd94669bef8c9d12c5c2a429",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format: a rule is given (\"If the text is about X, do Y; otherwise, do Z\"), followed by a specific task prompt, requiring a model answer.\n\nThe pattern establishes a conditional instruction about ignoring \"technical details\" in explanations, so the answer must demonstrate this behavior applied to a sample text about a game.\n\n\"Question: Should I explain the text without technical details?\nAnswer:\" is a prompt-response template requiring the model to generate a sample explanation or response text, likely beginning with \"The text...\" or a direct explanatory sentence.\n\"Instruction: [rule about game description]\nInput: [question about explaining text]\nAnswer:\" \u2014 the final token \"Answer:\" is a label introducing the model's generated response, expecting a concrete example sentence demonstrating the instruction's logic.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format: a rule is given (\"If the text is about X, do Y; otherwise, do Z\"), followed by a specific task prompt, requiring a model answer.\n\nThe pattern establishes a conditional instruction about ignoring \"technical details\" in explanations, so the answer must demonstrate this behavior applied to a sample text about a game.\n\n\"Question: Should I explain the text without technical details?\nAnswer:\" is a prompt-response template requiring the model to generate a sample explanation or response text, likely beginning with \"The text...\" or a direct explanatory sentence.\n\"Instruction: [rule about game description]\nInput: [question about explaining text]\nAnswer:\" \u2014 the final token \"Answer:\" is a label introducing the model's generated response, expecting a concrete example sentence demonstrating the instruction's logic.",
+  "truncated": false
+}

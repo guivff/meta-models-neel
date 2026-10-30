@@ -1,0 +1,12 @@
+{
+  "id": "de886b38124214adeb37f6fb",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a task-response structure, requiring a model to follow the rule about excluding \"Chinese name\" from explanations.\n\nThe pattern \"Given the following instructions: [rule]. Input: [text]. Output:\" signals a structured Q&A or template format, where the model must now generate a sample explanation of a document's content.\n\n\"Answer:\" is the final token, functioning as a label introducing the model's response, immediately requiring the actual explanation text (e.g., \"This document introduces...\") describing a person's attributes while omitting Chinese name references.\n\"Please follow the rule to exclude the Chinese name from the explanation.\n\nQuestion: How to explain the given text according to the rule?\nAnswer:\" \u2014 this final prompt expects a concrete example explanation, likely beginning with a sentence describing a sample document's components or structure.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a task-response structure, requiring a model to follow the rule about excluding \"Chinese name\" from explanations.\n\nThe pattern \"Given the following instructions: [rule]. Input: [text]. Output:\" signals a structured Q&A or template format, where the model must now generate a sample explanation of a document's content.\n\n\"Answer:\" is the final token, functioning as a label introducing the model's response, immediately requiring the actual explanation text (e.g., \"This document introduces...\") describing a person's attributes while omitting Chinese name references.\n\"Please follow the rule to exclude the Chinese name from the explanation.\n\nQuestion: How to explain the given text according to the rule?\nAnswer:\" \u2014 this final prompt expects a concrete example explanation, likely beginning with a sentence describing a sample document's components or structure.",
+  "truncated": false
+}

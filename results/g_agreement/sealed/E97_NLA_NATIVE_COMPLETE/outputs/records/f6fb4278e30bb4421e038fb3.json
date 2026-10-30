@@ -1,0 +1,12 @@
+{
+  "id": "f6fb4278e30bb4421e038fb3",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Question:\" and \"Answer:\" fields signals a model must generate a response following the established format.\n\nThe \"Question\" establishes a topic constraint: the answer must address \"the importance of technology in daily life,\" but the preceding instruction explicitly requires using \"formal\" style, creating a deliberate contradiction to test style adherence.\n\n\"Answer:\" is the final token, functioning as a field label in the template, immediately requiring the model's generated response text \u2014 likely a sample answer demonstrating the formal style about technology.\n\"Instruction: [style]\nQuestion: [topic]\nExample: [example]\nQuestion: [topic]\nAnswer:\" \u2014 this structured format demands the next tokens be the actual answer content, likely beginning with a sentence about the topic.\n\"Answer:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Question:\" and \"Answer:\" fields signals a model must generate a response following the established format.\n\nThe \"Question\" establishes a topic constraint: the answer must address \"the importance of technology in daily life,\" but the preceding instruction explicitly requires using \"formal\" style, creating a deliberate contradiction to test style adherence.\n\n\"Answer:\" is the final token, functioning as a field label in the template, immediately requiring the model's generated response text \u2014 likely a sample answer demonstrating the formal style about technology.\n\"Instruction: [style]\nQuestion: [topic]\nExample: [example]\nQuestion: [topic]\nAnswer:\" \u2014 this structured format demands the next tokens be the actual answer content, likely beginning with a sentence about the topic.\n\"Answer:\"",
+  "truncated": false
+}

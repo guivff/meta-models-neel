@@ -1,0 +1,124 @@
+{
+  "admission_blockers": [
+    "No exact4B200 allocatable quote",
+    "No verified cache or measured source-to-local-NVMe transfer",
+    "No measured E74 capture/readout throughput; proxy figures are not supported operational upper bounds",
+    "Full-staging planning scenario exceeds$80 after1.25 multiplier even before reconciling shared budget",
+    "I-2 must reconcile C remaining liability and Q envelope within$300; no$80 reservation assumed"
+  ],
+  "authorises_launch": false,
+  "authority": "b90325cb \u00a7192 clarification4",
+  "break_even": {
+    "max_replica_hourly_price_at_this_duration_and_allowance": 26.342499704945116,
+    "max_weight_staging_seconds_at_current_list_price": 2110.729662077597
+  },
+  "cap_usd": 80,
+  "components": [
+    {
+      "basis": "full clarification4 allowance; no transfer measurement",
+      "seconds": 3600,
+      "stage": "weight_staging_and_full_destination_verification"
+    },
+    {
+      "basis": "existing archive-staging ceiling, budgeted in full; no environment ready evidence",
+      "seconds": 900,
+      "stage": "archive_environment_staging"
+    },
+    {
+      "basis": "author reports ~11min TP4 from local NVMe; not measured here",
+      "seconds": 660,
+      "stage": "engine_boot"
+    },
+    {
+      "basis": "planning allowance: one50-item capture+generation batch, merges and statistics; unmeasured",
+      "seconds": 120,
+      "stage": "smoke50_capture_readouts_and_statistics"
+    },
+    {
+      "basis": "ceil(14184 *2*2.43h/152000); author TP8 window-rate proxy scaled to TP4; no speedup assumed for shorter prefixes; unmeasured",
+      "seconds": 1633,
+      "stage": "capture14184_block51"
+    },
+    {
+      "basis": "explicit paid-hold planning allowance; no timely GO guaranteed; exceedance requires stop/new admission",
+      "seconds": 600,
+      "stage": "capture_pull_CPU_probes_Wlens_forecast_and_GO_wait"
+    },
+    {
+      "basis": "14batches512 *60s; author2048rollouts/step and up-to240s training+generation step onTP4 =>60s per512 planning proxy; no throughput measured here",
+      "seconds": 840,
+      "stage": "test_readouts6804"
+    },
+    {
+      "basis": "planning allowance; includes transitions outside smoke and348.586MBcapture/output custody; unmeasured",
+      "seconds": 120,
+      "stage": "adapter_transitions_final_seal_retrieval_release"
+    }
+  ],
+  "compute_usd": 75.22141111111112,
+  "conditions": [
+    "No prompt truncation, fewer fixtures, reduced14184capture, or reduced6804readout scope to fit cost",
+    "No test readouts before capture seal, CPU probes and W-lens forecast/GO",
+    "If engine is released before GO, extra reboot/staging costs require a revised full forecast",
+    "Both ordinal rows captured/probed but excluded R-G1/R-G2/R-G3 underclarification3",
+    "GLMsingle-bullet16token versusQwen128token format caveat applies; wild-rollout content is not redistributed"
+  ],
+  "counts": {
+    "capture_float32_bytes": 348585984,
+    "capture_items": 14184,
+    "capture_prefix_tokens": 1144765,
+    "capture_rows": 83,
+    "confirmatory_test_items": 6804,
+    "native_content_token_cap": 16,
+    "smoke_items": 50,
+    "smoke_prefix_tokens": 33459,
+    "test_generated_tokens_max": 122472,
+    "test_output_format": "one greedy bullet per item",
+    "test_prompt_tokens": 476280
+  },
+  "created_utc": "2026-10-27T15:17:55.020463+00:00",
+  "dependencies": {
+    "asset_card_sha256": "dcb6d67bebaf06ab5312e2d30201e88d805d406bbc9bdfdc1502f3745ec748e5",
+    "author_lens_card_sha256": "c896494175d1c0e14fa18e2696456460deb5db26878802b149d9432d3d2ef702",
+    "port_seal_sha256": "d2a84037e6b20b4aeae309fbc2bd7fdfb26ffaa7b7d2be81b01fbd30d5a281b8",
+    "smoke_fixture_receipt_sha256": "ba5f79b1c0b4da9cb3d6d3cc7dad47081f0462c0708358af69647496028577fa",
+    "weight_manifest_sha256": "7454bcf3f23965bd31b05a274a2d84832b37d2db16530926895396879fe449b5"
+  },
+  "experiment": "E74",
+  "forecast_fits": false,
+  "forecast_times_multiplier_usd": 96.52676388888891,
+  "forecast_usd": 77.22141111111112,
+  "gpu_hours_total": 9.414444444444445,
+  "gpu_used": false,
+  "judging_not_in_gpu_forecast": true,
+  "measurement_status": {
+    "CPU_gate_wait": "UNMEASURED",
+    "boot": "AUTHOR_REPORT_ONLY",
+    "capture": "AUTHOR_PROXY_ONLY",
+    "destination_verification": "UNMEASURED",
+    "provider_extra_cost": "ALLOWANCE_ONLY",
+    "readouts": "AUTHOR_PROXY_ONLY",
+    "smoke": "UNMEASURED",
+    "weight_transfer": "UNMEASURED"
+  },
+  "multiplier": 1.25,
+  "one_resident_replica_assumed": true,
+  "paid_CPU_forecast_wait_included": true,
+  "planning_scenario_verdict": "NO_FIT_AT_CURRENT_SECURE_LIST_PRICE",
+  "provider_allowance_is_quote": false,
+  "quote": {
+    "allocatable_four_gpu_quote": null,
+    "four_gpu_secure_datacentres_available": 0,
+    "gpu": "NVIDIA B200",
+    "gpu_count": 4,
+    "list_usd_per_gpu_hour": 7.99,
+    "list_usd_per_replica_hour": 31.96,
+    "source": "I-2 read-only RunPod refresh2026-10-27T15:14:36\u201337Z"
+  },
+  "replica_hours_total": 2.3536111111111113,
+  "schema_version": 1,
+  "seconds_total": 8473,
+  "status": "BLOCKED_NO_ALLOCATABLE_QUOTE_OR_MEASURED_BOUND",
+  "storage_and_other_provider_allowance_usd": 2.0,
+  "track": "G"
+}

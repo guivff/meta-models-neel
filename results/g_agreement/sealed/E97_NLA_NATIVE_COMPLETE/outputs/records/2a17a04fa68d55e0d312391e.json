@@ -1,0 +1,12 @@
+{
+  "id": "2a17a04fa68d55e0d312391e",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given example.\n\nThe example sentence \"The movie was a huge success\" clearly maps to \"Positive,\" so the model must produce that label as the answer.\n\n\"Example Input: 'The movie was a huge success.'\\nQuestion: What is the sentiment label?\\nReply:\" ends the structured prompt, with \"Reply:\" being a label/field marker requiring the actual classification answer (e.g., \"Positive\") to follow immediately.\n\"Given the following format, provide the response.\nExample Input: ...\nQuestion: ...\n[The same pattern repeated]\nReply:\" \u2014 the final token \"Reply:\" is a prompt field marker demanding the model's direct answer on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given example.\n\nThe example sentence \"The movie was a huge success\" clearly maps to \"Positive,\" so the model must produce that label as the answer.\n\n\"Example Input: 'The movie was a huge success.'\\nQuestion: What is the sentiment label?\\nReply:\" ends the structured prompt, with \"Reply:\" being a label/field marker requiring the actual classification answer (e.g., \"Positive\") to follow immediately.\n\"Given the following format, provide the response.\nExample Input: ...\nQuestion: ...\n[The same pattern repeated]\nReply:\" \u2014 the final token \"Reply:\" is a prompt field marker demanding the model's direct answer on the next line.",
+  "truncated": false
+}

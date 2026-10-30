@@ -1,0 +1,5236 @@
+{
+  "analysis_adapter_sha256": "e190bfbe4d0727b68e3f6893e43908875dde3a6e5d3dd41ec2555be7fb2da6b3",
+  "crossing_definition": "first measured grid dose whose mean recipient log-odds reaches W1 value-A test median; no interpolation/extrapolation; non-crossing explicit",
+  "descriptive_class_summaries": [
+    {
+      "class": "count-like",
+      "mean_low_dose_gain": -0.1446315363833782,
+      "median_low_dose_gain": -0.06236310005187974,
+      "n_rows": 19,
+      "reader": "olens"
+    },
+    {
+      "class": "semantic",
+      "mean_low_dose_gain": 1.8852202534675595,
+      "median_low_dose_gain": 1.3474524021148682,
+      "n_rows": 10,
+      "reader": "olens"
+    },
+    {
+      "class": "state-like",
+      "mean_low_dose_gain": 0.06506005417216895,
+      "median_low_dose_gain": 0.022817492485044895,
+      "n_rows": 11,
+      "reader": "olens"
+    },
+    {
+      "class": "count-like",
+      "mean_low_dose_gain": 0.15038804756967641,
+      "median_low_dose_gain": 0.1711745738983139,
+      "n_rows": 19,
+      "reader": "nla"
+    },
+    {
+      "class": "semantic",
+      "mean_low_dose_gain": 0.5084010791778564,
+      "median_low_dose_gain": 0.4614534378051754,
+      "n_rows": 10,
+      "reader": "nla"
+    },
+    {
+      "class": "state-like",
+      "mean_low_dose_gain": 0.15780847289345484,
+      "median_low_dose_gain": 0.0029545307159429208,
+      "n_rows": 11,
+      "reader": "nla"
+    },
+    {
+      "class": "count-like",
+      "mean_low_dose_gain": 0.04995861322815083,
+      "median_low_dose_gain": 0.01867277519777381,
+      "n_rows": 19,
+      "reader": "jlens"
+    },
+    {
+      "class": "semantic",
+      "mean_low_dose_gain": 1.835858692191541,
+      "median_low_dose_gain": 1.7349443001672622,
+      "n_rows": 10,
+      "reader": "jlens"
+    },
+    {
+      "class": "state-like",
+      "mean_low_dose_gain": -0.08223892933773733,
+      "median_low_dose_gain": -0.053800283744931225,
+      "n_rows": 11,
+      "reader": "jlens"
+    }
+  ],
+  "experiment": "E8",
+  "gain_definition": "OLS slope across fixed low-dose range alpha[0,0.5,1]; also report all-dose OLS and all points. No outcome-selected linear range.",
+  "prediction": "Oracle structure gain is lower than meaning gain; NLA attenuation is weaker",
+  "rows": [
+    {
+      "A_reference_median": -4.825884819030762,
+      "all_dose_gain": -0.1970803530644715,
+      "all_dose_gain_ci95": [
+        -0.2230963459371359,
+        -0.17191392652450052
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -4.448300552368164,
+        -4.508733558654785,
+        -4.574440956115723,
+        -4.730822801589966,
+        -5.109180116653443,
+        -6.010858821868896
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "json_depth",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.12614040374755778,
+      "low_dose_gain_ci95": [
+        -0.15186768486386254,
+        -0.09167304791902241
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": -0.45826053619384766,
+      "all_dose_gain": -0.13852670880506673,
+      "all_dose_gain_ci95": [
+        -0.1729130728819769,
+        -0.10364782649800529
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.061254119873046874,
+        0.013731575012207032,
+        -0.046294116973876955,
+        -0.1994950771331787,
+        -0.4965491771697998,
+        -1.0268198490142821
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "json_depth",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.10754823684692384,
+      "low_dose_gain_ci95": [
+        -0.1530698670281304,
+        -0.07181490035284133
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -1.2213101983070374,
+      "all_dose_gain": -0.037052958065189004,
+      "all_dose_gain_ci95": [
+        -0.04456048714949784,
+        -0.02902671124999499
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.184880653768778,
+        -1.2066924534738064,
+        -1.2276666186749936,
+        -1.266650003194809,
+        -1.343511100113392,
+        -1.4823441296815871
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "json_depth",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.042785964906215466,
+      "low_dose_gain_ci95": [
+        -0.04936725605279207,
+        -0.03295355141162872
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 3.8084516525268555,
+      "all_dose_gain": -0.157843523772631,
+      "all_dose_gain_ci95": [
+        -0.19481286306468062,
+        -0.11932391408401714
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        4.393096923828125,
+        4.239157962799072,
+        4.107556247711182,
+        3.870069169998169,
+        3.3930917739868165,
+        3.138251304626465
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "json_field",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.2855406761169428,
+      "low_dose_gain_ci95": [
+        -0.327192615818333,
+        -0.2351689338684082
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 3.4564313888549805,
+      "all_dose_gain": 0.18811815015731342,
+      "all_dose_gain_ci95": [
+        0.16117317984984983,
+        0.21243189367830465
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        2.9912041664123534,
+        2.879836845397949,
+        2.784283256530762,
+        2.66965913772583,
+        2.693964624404907,
+        4.501060676574707
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "json_field",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.20692090988159137,
+      "low_dose_gain_ci95": [
+        -0.29405514786883097,
+        -0.08348755836486817
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 2.753255009651184,
+      "all_dose_gain": -0.11311724068657038,
+      "all_dose_gain_ci95": [
+        -0.11431915639472082,
+        -0.11195661309486413
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        3.2530500292778015,
+        3.1845020949840546,
+        3.1224905133247374,
+        3.0067743718624116,
+        2.7846529841423036,
+        2.3404098436236382
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "json_field",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.1305595159530645,
+      "low_dose_gain_ci95": [
+        -0.1401840713753914,
+        -0.12150955490949678
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 5.903384685516357,
+      "all_dose_gain": 2.09011277400953,
+      "all_dose_gain_ci95": [
+        2.066349635313602,
+        2.1198352493387698
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -4.422387266159058,
+        -1.7510218381881715,
+        0.48827400207519533,
+        4.623762845993042,
+        8.747537517547608,
+        13.01464672088623
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "json_status",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 4.910661268234251,
+      "low_dose_gain_ci95": [
+        4.679574084281922,
+        5.114204532221744
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 1.048476219177246,
+      "all_dose_gain": 0.9187434373143635,
+      "all_dose_gain_ci95": [
+        0.8847522588125328,
+        0.9457844071830864
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -3.0053054332733153,
+        -2.8721412658691405,
+        -2.5662200927734373,
+        -0.7884315013885498,
+        0.8326056003570557,
+        4.077212572097778
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "json_status",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.43908534049987724,
+      "low_dose_gain_ci95": [
+        0.34622282452053493,
+        0.5157953898111979
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 3.8917272090911865,
+      "all_dose_gain": 3.1095522422010466,
+      "all_dose_gain_ci95": [
+        3.1069064398104707,
+        3.1111546869376836
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -4.885180789232254,
+        -3.329629147052765,
+        -1.7740777850151062,
+        1.3370250344276429,
+        7.5592303544282915,
+        19.9907006084919
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "json_status",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 3.1111030042171475,
+      "low_dose_gain_ci95": [
+        3.1111023290464055,
+        3.1111037844703313
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -2.8891372680664062,
+      "all_dose_gain": 0.24595854561449754,
+      "all_dose_gain_ci95": [
+        0.2239349187244469,
+        0.2679821725045482
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -3.6959832906723022,
+        -3.591275668144226,
+        -3.4972077131271364,
+        -3.2737780570983888,
+        -2.571156311035156,
+        -1.7935168981552123
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "json_type",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.19877557754516675,
+      "low_dose_gain_ci95": [
+        0.151098074231829,
+        0.2564592612417121
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": -0.09815692901611328,
+      "all_dose_gain": 0.2750395530489734,
+      "all_dose_gain_ci95": [
+        0.23469275369180032,
+        0.31184420537658225
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.87085919380188,
+        -1.5862864971160888,
+        -1.1619838237762452,
+        -0.26352791786193847,
+        0.5008844375610352,
+        0.2941190242767334
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "json_type",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.7088753700256352,
+      "low_dose_gain_ci95": [
+        0.6329184486752465,
+        0.8113219110589278
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -3.319376230239868,
+      "all_dose_gain": -0.06446178762319456,
+      "all_dose_gain_ci95": [
+        -0.06877123702506302,
+        -0.05917913856819607
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -3.3184905126690865,
+        -3.3543598487973214,
+        -3.390229393541813,
+        -3.4619690775871277,
+        -3.605447694659233,
+        -3.8316654324531556
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "json_type",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.07173888087272633,
+      "low_dose_gain_ci95": [
+        -0.07173910311290196,
+        -0.07173860700506914
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -0.3796529769897461,
+      "all_dose_gain": -0.015498362070953805,
+      "all_dose_gain_ci95": [
+        -0.0585182270303692,
+        0.05156532854421281
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.30062284469604494,
+        -0.3024272918701172,
+        -0.34131660461425783,
+        -0.35392088890075685,
+        -0.4073741912841797,
+        -0.420383882522583
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "latex_brace",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.040693759918212905,
+      "low_dose_gain_ci95": [
+        -0.09196622045134056,
+        0.019802928552394312
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 4.094610214233398,
+      "all_dose_gain": 0.04213973102481705,
+      "all_dose_gain_ci95": [
+        0.01961969076763086,
+        0.06477897920916138
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        4.00014910697937,
+        4.009091329574585,
+        4.055846405029297,
+        4.088465881347656,
+        4.1937953472137455,
+        4.330438947677612
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "latex_brace",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.055697298049927145,
+      "low_dose_gain_ci95": [
+        0.011908330415424547,
+        0.10688716609303545
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.2786020189523697,
+      "all_dose_gain": 0.000195001483238229,
+      "all_dose_gain_ci95": [
+        -3.339138036498906e-05,
+        0.00030085696098534475
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -0.45841051638126373,
+        -0.45826021395623684,
+        -0.45810952186584475,
+        -0.4578086717054248,
+        -0.45729969050735236,
+        -0.4568629220128059
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "latex_brace",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.0003009945154190512,
+      "low_dose_gain_ci95": [
+        0.0003008581483020232,
+        0.00030109686095540115
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -0.7311410903930664,
+      "all_dose_gain": 0.046603498942291696,
+      "all_dose_gain_ci95": [
+        0.02237414985541356,
+        0.0718178359661208
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.5604436874389649,
+        -0.5456964492797851,
+        -0.5409365177154541,
+        -0.5308605670928955,
+        -0.4278574466705322,
+        -0.19160013198852538
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "latex_environment",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.019507169723510652,
+      "low_dose_gain_ci95": [
+        -0.02367833765541635,
+        0.0670116460323333
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": -7.542821884155273,
+      "all_dose_gain": 0.10455478984639371,
+      "all_dose_gain_ci95": [
+        0.07044196959464805,
+        0.14347090673712687
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -7.805443048477173,
+        -7.798138093948364,
+        -7.802488517761231,
+        -7.738100528717041,
+        -7.536742353439331,
+        -6.992162752151489
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "latex_environment",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.0029545307159429208,
+      "low_dose_gain_ci95": [
+        -0.048189826238723026,
+        0.06724051425331518
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.9400784224271774,
+      "all_dose_gain": 0.013582195204935804,
+      "all_dose_gain_ci95": [
+        0.00390805574316965,
+        0.024152993201217967
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -1.0797463692724705,
+        -1.0740210790187121,
+        -1.068145103007555,
+        -1.0559827405959368,
+        -1.0297081984579564,
+        -0.9713218506425619
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "latex_environment",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.011601266264915202,
+      "low_dose_gain_ci95": [
+        0.001822021838865784,
+        0.023054758259435974
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -0.3535308837890625,
+      "all_dose_gain": 0.12264343165032875,
+      "all_dose_gain_ci95": [
+        0.07537743564025604,
+        0.1828144045616786
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -1.8134802341461183,
+        -1.6575025081634522,
+        -1.5855417728424073,
+        -1.4894976615905762,
+        -1.1454314231872558,
+        -0.803089714050293
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "latex_fraction",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.2279384613037108,
+      "low_dose_gain_ci95": [
+        0.012599748457197415,
+        0.45181068778037964
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": -1.738748550415039,
+      "all_dose_gain": 0.23883083211661482,
+      "all_dose_gain_ci95": [
+        0.20748697115101702,
+        0.2747670026858282
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.2202436447143554,
+        -1.547894334793091,
+        -1.7662662982940673,
+        -1.707161808013916,
+        -0.9286381721496582,
+        0.35874571800231936
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "latex_fraction",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.5460226535797114,
+      "low_dose_gain_ci95": [
+        -0.8028971843230419,
+        -0.2767737318829792
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 1.044212281703949,
+      "all_dose_gain": 0.6242131688236368,
+      "all_dose_gain_ci95": [
+        0.6232425926159616,
+        0.6263075098861574
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.11431303732097149,
+        0.19774143174290656,
+        0.5097958810627461,
+        1.133905128389597,
+        2.3821229964494703,
+        4.879428344964981
+      ],
+      "dose_reaching_A_median": 2,
+      "feature": "latex_fraction",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.6241089183837175,
+      "low_dose_gain_ci95": [
+        0.6232423659829417,
+        0.6259786121939358
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 10.269613265991211,
+      "all_dose_gain": 0.23939373631631203,
+      "all_dose_gain_ci95": [
+        0.19172272765691362,
+        0.29822937927822996
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        5.857766842842102,
+        5.853946399688721,
+        5.897508883476258,
+        6.161389255523682,
+        7.176055240631103,
+        7.553845977783203
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "latex_item",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.039742040634155235,
+      "low_dose_gain_ci95": [
+        -0.41833795819963726,
+        0.5227002363938552
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 4.445346832275391,
+      "all_dose_gain": 0.1161831308180287,
+      "all_dose_gain_ci95": [
+        0.05836557003875207,
+        0.17415550205564706
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        3.534746837615967,
+        3.7376654148101807,
+        4.073488330841064,
+        4.25484528541565,
+        4.410275459289551,
+        4.588517665863037
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "latex_item",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.5387414932250971,
+      "low_dose_gain_ci95": [
+        0.19543093726748512,
+        0.8558049073090425
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 1.07956463098526,
+      "all_dose_gain": 0.32722323133674586,
+      "all_dose_gain_ci95": [
+        0.32433960241553145,
+        0.33126865991319154
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.3786726869642735,
+        0.539177381247282,
+        0.7015804178547114,
+        1.0268869429826737,
+        1.6812871605157853,
+        2.994973009824753
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "latex_item",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.32290773089043767,
+      "low_dose_gain_ci95": [
+        0.31283391307948566,
+        0.3323799769835252
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 18.42052459716797,
+      "all_dose_gain": -0.23770048892992365,
+      "all_dose_gain_ci95": [
+        -0.27343153966274114,
+        -0.20616853426167364
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        12.701769089698791,
+        12.816768693923951,
+        12.724586582183838,
+        12.9278568983078,
+        13.521554446220398,
+        10.578727102279663
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "latex_math",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.022817492485044895,
+      "low_dose_gain_ci95": [
+        -0.10587667164049651,
+        0.14465480897484756
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 5.917640686035156,
+      "all_dose_gain": -0.12044550126598744,
+      "all_dose_gain_ci95": [
+        -0.13953700993594373,
+        -0.10055286406633608
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        3.860032796859741,
+        3.7123891353607177,
+        3.6678723335266112,
+        3.6656596660614014,
+        3.27059268951416,
+        2.875048875808716
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "latex_math",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.19216046333312997,
+      "low_dose_gain_ci95": [
+        -0.41649627685546875,
+        0.026386493589819933
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 1.8124442994594574,
+      "all_dose_gain": -0.9649392506277646,
+      "all_dose_gain_ci95": [
+        -0.9676316106168776,
+        -0.9628772934812688
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        3.476540434360504,
+        2.997041231393814,
+        2.517542505264282,
+        1.5585442155599594,
+        -0.35945149380713703,
+        -4.245030257105827
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "latex_math",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.9589979290962221,
+      "low_dose_gain_ci95": [
+        -0.9589981742904161,
+        -0.958997671668594
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -0.9940481185913086,
+      "all_dose_gain": 1.073222169876099,
+      "all_dose_gain_ci95": [
+        0.895038755574869,
+        1.2742226926742064
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -6.071959042549134,
+        -5.0823007106781,
+        -4.079079031944275,
+        -2.5133613109588624,
+        -0.5434829235076905,
+        2.7858147382736207
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "latex_role",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.9928800106048568,
+      "low_dose_gain_ci95": [
+        1.4635325983950966,
+        2.599760960309933
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 2.5326671600341797,
+      "all_dose_gain": 0.1706282947909449,
+      "all_dose_gain_ci95": [
+        0.03718187157036941,
+        0.30460166772510333
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -0.4544783115386963,
+        0.34676241874694824,
+        0.8873046875,
+        1.5143327236175537,
+        1.708904790878296,
+        1.3162126064300537
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "latex_role",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.3417829990386962,
+      "low_dose_gain_ci95": [
+        1.0868743419647218,
+        1.6414572063245272
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 3.079296886920929,
+      "all_dose_gain": 1.092285782425635,
+      "all_dose_gain_ci95": [
+        1.0680191632501643,
+        1.117819747787467
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.944418303668499,
+        -0.3352806344628334,
+        0.2609280928969383,
+        1.4192594662308693,
+        3.634039483964443,
+        7.815689730644226
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "latex_role",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.2053463965654372,
+      "low_dose_gain_ci95": [
+        1.1534208437291587,
+        1.2526906089084904
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 2.2643165588378906,
+      "all_dose_gain": -0.015171365254485671,
+      "all_dose_gain_ci95": [
+        -0.043157644963455394,
+        0.00908893309250656
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        2.4350656032562257,
+        2.5004505634307863,
+        2.5904184341430665,
+        2.6345555782318115,
+        2.5407214164733887,
+        2.372852420806885
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "latex_section",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.15535283088684052,
+      "low_dose_gain_ci95": [
+        0.10375368272936022,
+        0.21712214772294208
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 1.2576971054077148,
+      "all_dose_gain": 0.37434489140312804,
+      "all_dose_gain_ci95": [
+        0.3224763922751632,
+        0.4287936461587387
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.2745779037475586,
+        0.42270665168762206,
+        0.5621840476989746,
+        0.8604978084564209,
+        1.6280416965484619,
+        3.249076271057129
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "latex_section",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.2876061439514158,
+      "low_dose_gain_ci95": [
+        0.25156603361430924,
+        0.34063080029609877
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.02542596310377121,
+      "all_dose_gain": 0.03410351200982037,
+      "all_dose_gain_ci95": [
+        0.03410349259875498,
+        0.03410352760249877
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.15280666295439005,
+        -0.13575511872768403,
+        -0.11870322786271573,
+        -0.08459920315071941,
+        -0.016392885148525237,
+        0.12002144679427147
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "latex_section",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.03410343509167433,
+      "low_dose_gain_ci95": [
+        0.03410322818814254,
+        0.034103635997805554
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 2.7012901306152344,
+      "all_dose_gain": 0.8067072361625289,
+      "all_dose_gain_ci95": [
+        0.71640675368737,
+        0.9243300599216866
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.112164068222046,
+        -0.6534494161605835,
+        -0.2534339427947998,
+        0.9058969974517822,
+        2.931439018249512,
+        5.207952690124512
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "latex_subject",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.8587301254272466,
+      "low_dose_gain_ci95": [
+        0.7107082843780518,
+        1.062673127537682
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 1.4583559036254883,
+      "all_dose_gain": 0.7387315792312272,
+      "all_dose_gain_ci95": [
+        0.5357008534064485,
+        0.9251564092052222
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -3.5111367225646974,
+        -3.1880013942718506,
+        -2.7799277782440184,
+        -1.4846527099609375,
+        1.2939389228820801,
+        1.9539761543273926
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "latex_subject",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.7312089443206786,
+      "low_dose_gain_ci95": [
+        0.5437446117401123,
+        0.9680841990879604
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 1.4667614698410034,
+      "all_dose_gain": 1.6623999091804307,
+      "all_dose_gain_ci95": [
+        1.6623998543883531,
+        1.6623999559225318
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -5.2851867288351055,
+        -4.453987097740173,
+        -3.6227871656417845,
+        -1.9603873550891877,
+        1.3644125774502753,
+        8.014012357592582
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "latex_subject",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.6623995631933204,
+      "low_dose_gain_ci95": [
+        1.6623993116774056,
+        1.6623997468697398
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -1.776885986328125,
+      "all_dose_gain": 0.039852567400251115,
+      "all_dose_gain_ci95": [
+        -0.0005625841694492553,
+        0.07785491626932876
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.310135555267334,
+        -1.2839015960693358,
+        -1.2523348808288575,
+        -1.1821676254272462,
+        -1.1368512153625487,
+        -0.9820736885070801
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "list_completed",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.05780067443847635,
+      "low_dose_gain_ci95": [
+        -0.006993243568821957,
+        0.11438407897949218
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": -1.3039073944091797,
+      "all_dose_gain": 0.08449273702735731,
+      "all_dose_gain_ci95": [
+        0.029607234753348748,
+        0.12550231986331503
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.7585968017578125,
+        -0.750209903717041,
+        -0.7341344833374024,
+        -0.6812520980834961,
+        -0.5544723510742188,
+        -0.08808813095092774
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "list_completed",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.02446231842041017,
+      "low_dose_gain_ci95": [
+        -0.03762417304806593,
+        0.08791957757411858
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.23481008410453796,
+      "all_dose_gain": 0.027159985572374368,
+      "all_dose_gain_ci95": [
+        0.02121769157007492,
+        0.039044528310337355
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.05376649089157581,
+        0.06659804061055183,
+        0.07964587360620498,
+        0.10574200227856637,
+        0.1604823425412178,
+        0.27063492611050605
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "list_completed",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.025879382714629154,
+      "low_dose_gain_ci95": [
+        0.02121728077167418,
+        0.03520335022360087
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 2.340451240539551,
+      "all_dose_gain": 0.29485832495623476,
+      "all_dose_gain_ci95": [
+        0.1531787440743863,
+        0.48655038091645164
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -0.49386210441589357,
+        -0.43864927291870115,
+        -0.39881458282470705,
+        -0.2898888111114502,
+        0.39089236259460447,
+        1.8066586971282959
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "list_depth",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.09504752159118647,
+      "low_dose_gain_ci95": [
+        -0.1691935469464558,
+        0.35996122360229493
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 5.096129417419434,
+      "all_dose_gain": -0.1712683102831863,
+      "all_dose_gain_ci95": [
+        -0.2987092441203483,
+        -0.06224514152061235
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        4.184691381454468,
+        4.146491527557373,
+        4.143067026138306,
+        4.110096168518067,
+        3.862998199462891,
+        2.8045021533966064
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "list_depth",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.04162435531616264,
+      "low_dose_gain_ci95": [
+        -0.32661292427464533,
+        0.2648559198146913
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -1.3827652484178543,
+      "all_dose_gain": 0.09681248484050625,
+      "all_dose_gain_ci95": [
+        0.08974713770085566,
+        0.10034517603741815
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.1684667192399503,
+        -1.1182943612337113,
+        -1.0681214019656182,
+        -0.9677765833213925,
+        -0.7677150093019008,
+        -0.39502525944262745
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "list_depth",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.1003453172743323,
+      "low_dose_gain_ci95": [
+        0.1003450907962887,
+        0.1003455185308689
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 5.7226362228393555,
+      "all_dose_gain": -0.2371445361370317,
+      "all_dose_gain_ci95": [
+        -0.43329635877590433,
+        -0.026455307425389644
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        6.118926048278809,
+        6.01049575805664,
+        5.899231052398681,
+        5.718637561798095,
+        5.3349280834198,
+        4.195696401596069
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "list_index",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.21969499588012725,
+      "low_dose_gain_ci95": [
+        -0.4536386489868164,
+        0.012408781051635741
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 4.978582382202148,
+      "all_dose_gain": -0.01686126339820067,
+      "all_dose_gain_ci95": [
+        -0.12496514972270743,
+        0.068288431798258
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        4.4955360889434814,
+        4.63697919845581,
+        4.7075231075286865,
+        4.840428495407105,
+        4.890071296691895,
+        4.405132150650024
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "list_index",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.2119870185852045,
+      "low_dose_gain_ci95": [
+        0.12933512431819263,
+        0.3220023105019017
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.15343493223190308,
+      "all_dose_gain": 0.1512502437517528,
+      "all_dose_gain_ci95": [
+        0.12681555849984347,
+        0.1709092983308201
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.45407052151858807,
+        -0.39251129180192945,
+        -0.329804590344429,
+        -0.20622891336679458,
+        0.0745224604383111,
+        0.7567310359328985
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "list_index",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.12426593117415906,
+      "low_dose_gain_ci95": [
+        0.0796697034341533,
+        0.16778176054358482
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -3.718606472015381,
+      "all_dose_gain": 0.047249866872339244,
+      "all_dose_gain_ci95": [
+        -0.009281479291116824,
+        0.10326921014741833
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -3.87657208442688,
+        -3.854814338684082,
+        -3.827809548377991,
+        -3.748183512687683,
+        -3.6607824325561524,
+        -3.502206230163574
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "list_ordered",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.04876253604889,
+      "low_dose_gain_ci95": [
+        -0.006064998290924945,
+        0.11210020994528747
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": -2.115629196166992,
+      "all_dose_gain": 0.0030678897629135937,
+      "all_dose_gain_ci95": [
+        -0.013445081754763475,
+        0.018088883164894567
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.8060495376586914,
+        -1.8390480041503907,
+        -1.830579662322998,
+        -1.8478216648101806,
+        -1.8613924980163574,
+        -1.790330743789673
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "list_ordered",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.024530124664306346,
+      "low_dose_gain_ci95": [
+        -0.05929934978485096,
+        0.017241966433641388
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.07910753786563873,
+      "all_dose_gain": -0.05380039664251466,
+      "all_dose_gain_ci95": [
+        -0.05380042406679621,
+        -0.05380036478728508
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -0.10189277045428753,
+        -0.12879270315170288,
+        -0.15569305419921875,
+        -0.20949348770081996,
+        -0.31709414571523664,
+        -0.5322958555072546
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "list_ordered",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.053800283744931225,
+      "low_dose_gain_ci95": [
+        -0.05380059294402599,
+        -0.05379999448091556
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 6.5266571044921875,
+      "all_dose_gain": 0.5207306721243443,
+      "all_dose_gain_ci95": [
+        0.2913135746547152,
+        0.7193251428938806
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        3.6444833040237428,
+        4.498200201988221,
+        5.267911529541015,
+        6.392102789878845,
+        7.422887396812439,
+        8.101174306869506
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "list_priority",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.623428225517273,
+      "low_dose_gain_ci95": [
+        1.2100997425260998,
+        2.0692170036466493
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 8.47757339477539,
+      "all_dose_gain": -0.020756529267482317,
+      "all_dose_gain_ci95": [
+        -0.05294891919957899,
+        0.01619863788469943
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        5.763139104843139,
+        5.633135223388672,
+        5.5932807445526125,
+        5.690707731246948,
+        5.654004383087158,
+        5.51099214553833
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "list_priority",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.16985836029052795,
+      "low_dose_gain_ci95": [
+        -0.3602975984899009,
+        0.027292296999976748
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 6.647171854972839,
+      "all_dose_gain": 1.7972197750052832,
+      "all_dose_gain_ci95": [
+        1.7822046062756403,
+        1.8066352610415497
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.390798344835639,
+        0.5129461385309696,
+        1.4166906923055649,
+        3.2241802856326105,
+        6.831546244025231,
+        13.985395872592926
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "list_priority",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.8074890371412038,
+      "low_dose_gain_ci95": [
+        1.8074887685477734,
+        1.8074893057346344
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -1.0909309387207031,
+      "all_dose_gain": 0.009396614303237356,
+      "all_dose_gain_ci95": [
+        -0.010373955873965376,
+        0.029354524744271214
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -1.4486932754516602,
+        -1.450209665298462,
+        -1.4635303974151612,
+        -1.4558155059814453,
+        -1.4181288242340089,
+        -1.3839487075805663
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "list_task",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.014837121963501121,
+      "low_dose_gain_ci95": [
+        -0.051674141534944845,
+        0.0146229718182538
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": -3.377352714538574,
+      "all_dose_gain": -0.012808420119747026,
+      "all_dose_gain_ci95": [
+        -0.025483831384415803,
+        0.003814334141423651
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -3.4701032638549805,
+        -3.488198232650757,
+        -3.4940781593322754,
+        -3.504731607437134,
+        -3.535400724411011,
+        -3.5776233673095703
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "list_task",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.023974895477295,
+      "low_dose_gain_ci95": [
+        -0.04302499352431879,
+        -0.003239581459446957
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.16416558623313904,
+      "all_dose_gain": -0.0005763764391022116,
+      "all_dose_gain_ci95": [
+        -0.0005763952884284455,
+        -0.0005763529133744704
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -0.4361121814697981,
+        -0.43640030808746816,
+        -0.43668866343796253,
+        -0.4372651234269142,
+        -0.4384178604930639,
+        -0.4407231751829386
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "list_task",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.0005764819681644992,
+      "low_dose_gain_ci95": [
+        -0.0005766669472162455,
+        -0.0005762497796431968
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 3.727245330810547,
+      "all_dose_gain": 0.7113942743556294,
+      "all_dose_gain_ci95": [
+        0.4971398789356852,
+        0.9441720542010248
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.36831979751586913,
+        0.33759608268737795,
+        0.3927527189254761,
+        0.8194215774536133,
+        2.660343313217163,
+        5.750178861618042
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "list_topic",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.02443292140960682,
+      "low_dose_gain_ci95": [
+        -0.3147382270999071,
+        0.3510726781991812
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 4.02602481842041,
+      "all_dose_gain": 0.5250831967015424,
+      "all_dose_gain_ci95": [
+        0.4394507050499373,
+        0.619741048722877
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.3341058254241943,
+        0.3517028331756592,
+        0.5209965705871582,
+        1.5599040031433105,
+        3.34826865196228,
+        4.121618175506592
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "list_topic",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.18689074516296383,
+      "low_dose_gain_ci95": [
+        -0.1030347870617378,
+        0.45769995612067144
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 4.026746511459351,
+      "all_dose_gain": 2.043789624527853,
+      "all_dose_gain_ci95": [
+        2.043789552176372,
+        2.0437896905249873
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -6.096803894639015,
+        -5.074908983707428,
+        -4.053014142811298,
+        -2.009224310517311,
+        2.0783547699451446,
+        10.253513169288635
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "list_topic",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 2.0437897518277173,
+      "low_dose_gain_ci95": [
+        2.043789439085053,
+        2.0437901129848077
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 0.6056718826293945,
+      "all_dose_gain": -0.19110974307433803,
+      "all_dose_gain_ci95": [
+        -0.2910895786754896,
+        -0.08971406232087671
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        1.6476388931274415,
+        1.614210033416748,
+        1.5852757930755614,
+        1.2803155899047851,
+        0.7420014381408692,
+        0.21882224082946777
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "list_words",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.06236310005187974,
+      "low_dose_gain_ci95": [
+        -0.4615726960011018,
+        0.3144928536764005
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 2.0817441940307617,
+      "all_dose_gain": 0.031915939084945284,
+      "all_dose_gain_ci95": [
+        -0.05771841423077783,
+        0.11004706248315273
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        1.2061424255371094,
+        1.3073901653289794,
+        1.3592952251434327,
+        1.1784002304077148,
+        1.457230281829834,
+        1.4875701904296874
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "list_words",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.1531527996063233,
+      "low_dose_gain_ci95": [
+        -0.020166935064853765,
+        0.3180095492339712
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.5465679168701172,
+      "all_dose_gain": -0.007296635129613462,
+      "all_dose_gain_ci95": [
+        -0.015111068465500503,
+        -0.00017410168599901217
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.38094796545337883,
+        0.38560252692550423,
+        0.388336519151926,
+        0.38877120669931176,
+        0.3778792224824429,
+        0.3256441703531891
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "list_words",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.007388553698547251,
+      "low_dose_gain_ci95": [
+        -0.0023721080040559174,
+        0.02690954573918134
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -1.1628646850585938,
+      "all_dose_gain": -0.296942605576757,
+      "all_dose_gain_ci95": [
+        -0.6262479037621048,
+        0.0687063494743628
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.6167179584503174,
+        0.285504150390625,
+        -0.08863344192504882,
+        -0.6143745899200439,
+        -1.183542585372925,
+        -1.8569221019744873
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "prose_budget",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.7053514003753664,
+      "low_dose_gain_ci95": [
+        -1.7294938677833194,
+        0.07811007499694825
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": -2.330110549926758,
+      "all_dose_gain": 0.1354801098871891,
+      "all_dose_gain_ci95": [
+        0.029678496912641756,
+        0.23295410144530504
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -2.050910139083862,
+        -2.0308462142944337,
+        -1.8752392292022706,
+        -1.1289950370788575,
+        -0.6060681343078613,
+        -1.1397040367126465
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "prose_budget",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.17567090988159162,
+      "low_dose_gain_ci95": [
+        -0.13543710254487537,
+        0.6430427551269531
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.15204355120658875,
+      "all_dose_gain": 0.050631147250189766,
+      "all_dose_gain_ci95": [
+        0.004791286654422106,
+        0.10369045089672788
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.2577116947621107,
+        0.28738025277853013,
+        0.30352999046444895,
+        0.3379682719707489,
+        0.366276141256094,
+        0.6853403009474277
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "prose_budget",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.04581829570233819,
+      "low_dose_gain_ci95": [
+        -0.04818641678208396,
+        0.13617933267041257
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -0.019395828247070312,
+      "all_dose_gain": -0.106966461761756,
+      "all_dose_gain_ci95": [
+        -0.29840986740218695,
+        0.051497694951034574
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        1.3471456527709962,
+        0.7436726093292236,
+        0.29764628410339355,
+        -0.04792141914367676,
+        -0.009388065338134766,
+        0.1200531005859375
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "prose_column",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -1.0494993686676024,
+      "low_dose_gain_ci95": [
+        -1.250983428955078,
+        -0.8260815083772879
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 1.3470134735107422,
+      "all_dose_gain": -0.043584533638668495,
+      "all_dose_gain_ci95": [
+        -0.11704011179428905,
+        0.032358850117495584
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        1.6872021675109863,
+        1.693409538269043,
+        1.5782768249511718,
+        1.3981473922729493,
+        1.5269562244415282,
+        1.304768180847168
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "prose_column",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.1089253425598144,
+      "low_dose_gain_ci95": [
+        -0.35651378142528045,
+        0.1466092329758864
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.12955576181411743,
+      "all_dose_gain": 0.008447454248979889,
+      "all_dose_gain_ci95": [
+        -0.0038810316657060602,
+        0.025945136398480683
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -0.26093891970813277,
+        -0.25986351277679204,
+        -0.25779694588854907,
+        -0.25343561535701153,
+        -0.24241199046373368,
+        -0.1931405821815133
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "prose_column",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.0031419738195836862,
+      "low_dose_gain_ci95": [
+        -0.014982366974554212,
+        0.023189513306868702
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 9.640485763549805,
+      "all_dose_gain": -0.12771676428307033,
+      "all_dose_gain_ci95": [
+        -0.2479436781133874,
+        -0.03737857401327669
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        9.096159648895263,
+        9.06432933807373,
+        9.015677452087402,
+        8.930302715301513,
+        8.683744812011719,
+        8.084448719024659
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "prose_paren",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.08048219680786194,
+      "low_dose_gain_ci95": [
+        -0.16575677054268972,
+        0.009307259007504112
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 4.5361175537109375,
+      "all_dose_gain": 0.26303590677850286,
+      "all_dose_gain_ci95": [
+        0.1883712478711441,
+        0.3252476151863141
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        3.7253198623657227,
+        3.752404499053955,
+        3.7925085067749023,
+        3.937099075317383,
+        4.385798549652099,
+        5.800781345367431
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "prose_paren",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.06718864440917972,
+      "low_dose_gain_ci95": [
+        -0.04067602390196265,
+        0.200058820771008
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.07798487693071365,
+      "all_dose_gain": -0.002935234910469447,
+      "all_dose_gain_ci95": [
+        -0.008867426716880712,
+        0.0033011718603731524
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.09446985572576523,
+        0.09185444824397564,
+        0.08923878446221352,
+        0.08409344255924225,
+        0.07768895700573922,
+        0.07070831581950188
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "prose_paren",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.005231071263551729,
+      "low_dose_gain_ci95": [
+        -0.009719818194464939,
+        0.0024678997695446016
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 1.7846660614013672,
+      "all_dose_gain": 0.03501745804114284,
+      "all_dose_gain_ci95": [
+        -0.03727072049317347,
+        0.10989681831488506
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        1.5738700866699218,
+        1.5424026489257812,
+        1.570185375213623,
+        1.587337112426758,
+        1.6775352954864502,
+        1.82728910446167
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "prose_quote",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.003684711456299216,
+      "low_dose_gain_ci95": [
+        -0.09387467547160823,
+        0.09680637560392681
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 2.9377098083496094,
+      "all_dose_gain": 0.14124020528134135,
+      "all_dose_gain_ci95": [
+        0.02177031714795369,
+        0.2603531430503739
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        1.5662506580352784,
+        1.6417950630187987,
+        1.753077459335327,
+        1.9465388774871826,
+        2.2849874973297117,
+        2.6817063808441164
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "prose_quote",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.18682680130004864,
+      "low_dose_gain_ci95": [
+        0.03768563881898538,
+        0.3841895130702427
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.1450110822916031,
+      "all_dose_gain": -0.05212438863689246,
+      "all_dose_gain_ci95": [
+        -0.06326963859983865,
+        -0.03952634219602344
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.018515074253082277,
+        -0.04706723541021347,
+        -0.07561949044466018,
+        -0.1317747551947832,
+        -0.23794988435693085,
+        -0.43603345528244974
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "prose_quote",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.057104416191577904,
+      "low_dose_gain_ci95": [
+        -0.06398247629404068,
+        -0.04334840849041939
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 2.4251623153686523,
+      "all_dose_gain": 0.04386671540923944,
+      "all_dose_gain_ci95": [
+        -0.06425212823626318,
+        0.14387859120974808
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        1.788918399810791,
+        1.6956473350524903,
+        1.588293981552124,
+        1.5144954681396485,
+        1.8578383922576904,
+        2.0129407405853272
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "prose_sentence",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.20062441825866695,
+      "low_dose_gain_ci95": [
+        -0.4238169600323933,
+        0.00030994415283203125
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 1.8104686737060547,
+      "all_dose_gain": 0.33112973806495505,
+      "all_dose_gain_ci95": [
+        0.26553825368372674,
+        0.4067872321521834
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        1.475002908706665,
+        1.5565796852111817,
+        1.6949912071228028,
+        2.160967540740967,
+        3.367806148529053,
+        3.913174867630005
+      ],
+      "dose_reaching_A_median": 2,
+      "feature": "prose_sentence",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.21998829841613754,
+      "low_dose_gain_ci95": [
+        -0.08140340665491616,
+        0.4286126588520251
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 0.16330190002918243,
+      "all_dose_gain": -0.16151575777486554,
+      "all_dose_gain_ci95": [
+        -0.16862923290284584,
+        -0.1545238783348646
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        0.1576010255375877,
+        0.10717642335221171,
+        0.05550659885630012,
+        -0.054757282882928845,
+        -0.294067370519042,
+        -1.144412100315094
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "prose_sentence",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.10209442668128757,
+      "low_dose_gain_ci95": [
+        -0.10996991718296022,
+        -0.0901585331138892
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 0.6774201393127441,
+      "all_dose_gain": 0.5653518018854381,
+      "all_dose_gain_ci95": [
+        0.38388079630065075,
+        0.756160668166101
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.696170973777771,
+        -1.333264446258545,
+        -0.9519529581069947,
+        -0.1931227922439575,
+        1.496647334098816,
+        2.7062841653823853
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "prose_sentiment",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.7442180156707766,
+      "low_dose_gain_ci95": [
+        -0.0442863941192627,
+        1.3077411941886714
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 1.5747365951538086,
+      "all_dose_gain": 0.3610460422006073,
+      "all_dose_gain_ci95": [
+        0.2604748565940866,
+        0.48109457868584843
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -1.8687185764312744,
+        -1.6123271942138673,
+        -1.3848970413208008,
+        -0.10632872581481934,
+        0.8256927013397217,
+        0.869767713546753
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "prose_sentiment",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.48382153511047354,
+      "low_dose_gain_ci95": [
+        0.13583745956420898,
+        0.8403921371851212
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 4.829277753829956,
+      "all_dose_gain": 1.527384755073056,
+      "all_dose_gain_ci95": [
+        1.5273847363178008,
+        1.5273847752838476
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -2.9692057847976683,
+        -2.2055131807923316,
+        -1.4418210163712502,
+        0.08556354939937591,
+        3.140333262085915,
+        9.249872320890427
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "prose_sentiment",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.527384768426418,
+      "low_dose_gain_ci95": [
+        1.5273844712901683,
+        1.527385101868556
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 2.6057443618774414,
+      "all_dose_gain": 0.9129630072545349,
+      "all_dose_gain_ci95": [
+        0.7428968523614419,
+        1.1172647660914727
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -5.02584388256073,
+        -4.539580273628235,
+        -3.9543673038482665,
+        -2.7653651237487793,
+        0.08799622058868409,
+        2.000081443786621
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "prose_topic",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.0714765787124636,
+      "low_dose_gain_ci95": [
+        0.5045621016235783,
+        1.570753120240711
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 2.3664350509643555,
+      "all_dose_gain": 0.5085255840846472,
+      "all_dose_gain_ci95": [
+        0.4222549333001062,
+        0.6116102619712399
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.010349750518798828,
+        0.32940282821655276,
+        0.599697494506836,
+        1.3665529251098634,
+        2.7177592277526856,
+        3.977654981613159
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "prose_topic",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.6100472450256347,
+      "low_dose_gain_ci95": [
+        0.42051701429413585,
+        0.8673930042668383
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 6.570579171180725,
+      "all_dose_gain": 2.7572035876314778,
+      "all_dose_gain_ci95": [
+        2.757203558391181,
+        2.7572036238090236
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -9.486169236898423,
+        -8.107566964626312,
+        -6.728965538740158,
+        -3.9717617303133013,
+        1.54264547675848,
+        12.571459621191025
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "prose_topic",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 2.7572036981582646,
+      "low_dose_gain_ci95": [
+        2.7572031735304074,
+        2.757204270362854
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 0.33921051025390625,
+      "all_dose_gain": -0.22618650497928744,
+      "all_dose_gain_ci95": [
+        -0.28886824414155804,
+        -0.156759445619271
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        2.0570228576660154,
+        1.9965078830718994,
+        1.9443798542022706,
+        1.5656258106231689,
+        0.8885648250579834,
+        0.3657111167907715
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "prose_words",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.11264300346374455,
+      "low_dose_gain_ci95": [
+        -0.5482692987490922,
+        0.24676232110886348
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 1.6996383666992188,
+      "all_dose_gain": 0.035075989736390076,
+      "all_dose_gain_ci95": [
+        -0.0026983785247618134,
+        0.06730437731627625
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        1.1783040046691895,
+        1.1820905208587646,
+        1.1215014457702637,
+        0.7618175506591797,
+        1.0140066146850586,
+        1.454023838043213
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "prose_words",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.05680255889892618,
+      "low_dose_gain_ci95": [
+        -0.2606220722198486,
+        0.2214813232421875
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -1.1357736438512802,
+      "all_dose_gain": 0.02045950671567794,
+      "all_dose_gain_ci95": [
+        -0.015970245221272387,
+        0.05294112709548829
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.43039567871019246,
+        0.466448834980838,
+        0.49875434348359704,
+        0.5583576941862702,
+        0.6364614763297141,
+        0.594888624548912
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "prose_words",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.06835866477340455,
+      "low_dose_gain_ci95": [
+        0.06008076649613497,
+        0.07430183734649266
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 11.911927223205566,
+      "all_dose_gain": 0.2599765115729131,
+      "all_dose_gain_ci95": [
+        0.1771931507851695,
+        0.33904732053194353
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        11.439529466629029,
+        11.640767049789428,
+        11.914554548263549,
+        12.705978727340698,
+        13.74351544380188,
+        13.3593918800354
+      ],
+      "dose_reaching_A_median": 1,
+      "feature": "python_argument",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.47502508163451584,
+      "low_dose_gain_ci95": [
+        0.20637507554961415,
+        0.7359216271377191
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 11.072097778320312,
+      "all_dose_gain": 0.08040779403827134,
+      "all_dose_gain_ci95": [
+        0.025513712177280858,
+        0.11436205420076531
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        10.663523054122924,
+        10.760812616348266,
+        10.83469762802124,
+        11.01035451889038,
+        11.165322542190552,
+        11.328184795379638
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "python_argument",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.1711745738983139,
+      "low_dose_gain_ci95": [
+        0.017210006713867188,
+        0.34517920889505527
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 1.8193511068820953,
+      "all_dose_gain": -0.008572994213602763,
+      "all_dose_gain_ci95": [
+        -0.00981551123862008,
+        -0.007585330740546569
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        0.7888336756266654,
+        0.783794772438705,
+        0.7788309760391712,
+        0.7692327192984522,
+        0.7513644975610078,
+        0.7201090002432465
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "python_argument",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.010002699587494165,
+      "low_dose_gain_ci95": [
+        -0.011271616257727147,
+        -0.008395301546083719
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 0.05039072036743164,
+      "all_dose_gain": 0.386358169959987,
+      "all_dose_gain_ci95": [
+        0.2344727788540005,
+        0.5103772761407188
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.6515642881393433,
+        -0.5344784021377563,
+        -0.3849921226501465,
+        0.2707261085510254,
+        1.486271572113037,
+        2.2361918449401856
+      ],
+      "dose_reaching_A_median": 2,
+      "feature": "python_comment",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.26657216548919677,
+      "low_dose_gain_ci95": [
+        0.15785047484607231,
+        0.4055897311160439
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 2.0239734649658203,
+      "all_dose_gain": -0.028431302786971965,
+      "all_dose_gain_ci95": [
+        -0.12725449397320887,
+        0.06317233545735386
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.8836606025695801,
+        1.2823111057281493,
+        1.6023597240447998,
+        2.095633697509766,
+        2.0630654811859133,
+        0.8318374156951904
+      ],
+      "dose_reaching_A_median": 2,
+      "feature": "python_comment",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.7186991214752196,
+      "low_dose_gain_ci95": [
+        0.5962914927080535,
+        0.8420047270946014
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.94133460521698,
+      "all_dose_gain": 0.10652418182948224,
+      "all_dose_gain_ci95": [
+        0.09272032547445007,
+        0.11960672234074668
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.375687189400196,
+        -1.2785696372389794,
+        -1.1814524859189988,
+        -0.9877159908413887,
+        -0.6571506150066853,
+        -0.5386342134326696
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "python_comment",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.19423470348119717,
+      "low_dose_gain_ci95": [
+        0.19423438717679278,
+        0.1942350428278853
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -6.245131492614746,
+      "all_dose_gain": -0.04760371195006515,
+      "all_dose_gain_ci95": [
+        -0.06044121575454914,
+        -0.03312884202837313
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -6.585690689086914,
+        -6.583887100219727,
+        -6.597815084457397,
+        -6.670214653015137,
+        -6.790487766265869,
+        -6.9413892269134525
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "python_depth",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.012124395370482922,
+      "low_dose_gain_ci95": [
+        -0.029697408676147456,
+        0.006804807562577075
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": -2.7009592056274414,
+      "all_dose_gain": -0.06832265282556203,
+      "all_dose_gain_ci95": [
+        -0.09245933507058628,
+        -0.03826564837268476
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -3.1561176776885986,
+        -3.0730523109436034,
+        -3.0056339740753173,
+        -2.9353750705718995,
+        -2.9478854179382323,
+        -3.681101751327515
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "python_depth",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.15048370361328148,
+      "low_dose_gain_ci95": [
+        0.08198877660239615,
+        0.20243368148803711
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -1.53693225979805,
+      "all_dose_gain": -0.02561094428949104,
+      "all_dose_gain_ci95": [
+        -0.026399223236679748,
+        -0.024050417194775818
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.439526692032814,
+        -1.452737344801426,
+        -1.465947948396206,
+        -1.4923690266907215,
+        -1.543685732409358,
+        -1.644532847777009
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "python_depth",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.02642125636339183,
+      "low_dose_gain_ci95": [
+        -0.02642137333750725,
+        -0.02642109841108322
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -8.05528450012207,
+      "all_dose_gain": 0.5014198245211133,
+      "all_dose_gain_ci95": [
+        0.44270701919335526,
+        0.5561252438556563
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -8.599513816833497,
+        -8.265459299087524,
+        -7.931102514266968,
+        -7.277470707893372,
+        -6.158664631843567,
+        -4.5867246150970455
+      ],
+      "dose_reaching_A_median": 1,
+      "feature": "python_effect",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.6684113025665297,
+      "low_dose_gain_ci95": [
+        0.6056367329188755,
+        0.7363423347473145
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": -6.03492546081543,
+      "all_dose_gain": 0.010170886307817198,
+      "all_dose_gain_ci95": [
+        -0.023373708417338476,
+        0.03513416895511689
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -5.671213245391845,
+        -5.605106544494629,
+        -5.4962653636932375,
+        -5.4173859596252445,
+        -5.384937429428101,
+        -5.557298088073731
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "python_effect",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.17494788169860814,
+      "low_dose_gain_ci95": [
+        0.09961228900485569,
+        0.241428466070266
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 1.092542141675949,
+      "all_dose_gain": -0.04269124082534274,
+      "all_dose_gain_ci95": [
+        -0.04269127525871597,
+        -0.04269119906766655
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        0.9266164310276508,
+        0.9052710309624672,
+        0.8839256666600704,
+        0.8412340335547924,
+        0.755851810052991,
+        0.5850866479799152
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "python_effect",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.042690764367580444,
+      "low_dose_gain_ci95": [
+        -0.04269107729196549,
+        -0.042690441757440564
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 19.152080535888672,
+      "all_dose_gain": 1.396652261408793,
+      "all_dose_gain_ci95": [
+        1.299937050549169,
+        1.4901686344194052
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        10.184090566635131,
+        11.73315167427063,
+        13.74166522026062,
+        18.493561720848085,
+        22.050653171539306,
+        21.267767977714538
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "python_error",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 3.557574653625488,
+      "low_dose_gain_ci95": [
+        2.364491522585654,
+        4.413175048146927
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 5.223708152770996,
+      "all_dose_gain": 0.6496984480932565,
+      "all_dose_gain_ci95": [
+        0.6014090728389675,
+        0.7029671658608861
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        3.391813611984253,
+        3.3371222496032713,
+        3.6685547828674316,
+        5.222404432296753,
+        7.120597696304321,
+        8.096075344085694
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "python_error",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.27674117088317934,
+      "low_dose_gain_ci95": [
+        -0.10376294453938802,
+        0.6105448560016912
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 1.268249750137329,
+      "all_dose_gain": 1.1452194095687935,
+      "all_dose_gain_ci95": [
+        1.133385349817713,
+        1.1555404640863358
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.6123398452997207,
+        -0.05068927705287933,
+        0.5109608873724938,
+        1.6342613019049168,
+        3.8817006036639214,
+        8.556783665716647
+      ],
+      "dose_reaching_A_median": 2,
+      "feature": "python_error",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.1233007326722144,
+      "low_dose_gain_ci95": [
+        1.123300477106916,
+        1.1233010259834495
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -0.6344900131225586,
+      "all_dose_gain": 0.049322686656828825,
+      "all_dose_gain_ci95": [
+        -0.11229193199614773,
+        0.24302362335864983
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.3897011995315551,
+        -1.1685007095336915,
+        -0.9490787744522095,
+        -0.49682891368865967,
+        -0.25490550994873046,
+        -0.9648092746734619
+      ],
+      "dose_reaching_A_median": 2,
+      "feature": "python_indent",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.4406224250793458,
+      "low_dose_gain_ci95": [
+        0.08731374740600586,
+        0.8072670959844822
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 2.7051610946655273,
+      "all_dose_gain": 0.22179101574805488,
+      "all_dose_gain_ci95": [
+        0.03239736095015561,
+        0.4031012113402489
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        1.887010383605957,
+        1.9721524715423584,
+        2.165104055404663,
+        2.6060776233673097,
+        2.748274040222168,
+        3.704332637786865
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "python_indent",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.2780936717987064,
+      "low_dose_gain_ci95": [
+        -0.04553264868886845,
+        0.6675959587097168
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.2966766059398651,
+      "all_dose_gain": 0.16298391714340196,
+      "all_dose_gain_ci95": [
+        0.16298389827449475,
+        0.16298393921584742
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.5010703284293413,
+        -0.4195782093331218,
+        -0.3380863548256457,
+        -0.17510244543664158,
+        0.15086529832333326,
+        0.8028011031448841
+      ],
+      "dose_reaching_A_median": 2,
+      "feature": "python_indent",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.16298397360369565,
+      "low_dose_gain_ci95": [
+        0.16298375914736493,
+        0.1629842021330995
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 1.966562271118164,
+      "all_dose_gain": -0.018738423536450242,
+      "all_dose_gain_ci95": [
+        -0.19378251036191324,
+        0.15412928164655817
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        2.8946210861206056,
+        2.302389717102051,
+        1.7159729957580567,
+        2.134696102142334,
+        3.1207206726074217,
+        2.0249463081359864
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "python_line",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -1.1786480903625491,
+      "low_dose_gain_ci95": [
+        -1.4870424694892683,
+        -0.7994921834845292
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 6.944419860839844,
+      "all_dose_gain": 0.5011609988937732,
+      "all_dose_gain_ci95": [
+        0.39130740406237324,
+        0.6025720995488018
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        4.973198986053466,
+        5.278588581085205,
+        5.371046161651611,
+        6.011167907714844,
+        7.688445281982422,
+        8.791357040405273
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "python_line",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.3978471755981446,
+      "low_dose_gain_ci95": [
+        0.0020110456567061794,
+        0.8475962382991139
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -0.6350972354412079,
+      "all_dose_gain": 0.4295237717478782,
+      "all_dose_gain_ci95": [
+        0.42780391399349493,
+        0.4303837143043005
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -2.157802067697048,
+        -1.9443292446434497,
+        -1.7304830886423588,
+        -1.3024683978408576,
+        -0.44365449622273445,
+        1.2778803065419198
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "python_line",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.4273189790546889,
+      "low_dose_gain_ci95": [
+        0.4211894478648901,
+        0.43038389385655157
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": -0.43173694610595703,
+      "all_dose_gain": 0.19120174891388367,
+      "all_dose_gain_ci95": [
+        0.1419711152529387,
+        0.25051244525217486
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -0.9526044368743897,
+        -0.7951700687408447,
+        -0.6811777591705322,
+        -0.49305214881896975,
+        -0.37140989303588867,
+        0.6805720806121827
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "python_string",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.2714266777038575,
+      "low_dose_gain_ci95": [
+        0.12932656940660978,
+        0.42038438259026945
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 3.7671384811401367,
+      "all_dose_gain": 0.2494631099261448,
+      "all_dose_gain_ci95": [
+        0.2080919037248976,
+        0.28607015529056956
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        1.4151565551757812,
+        1.2368929386138916,
+        1.0149947643280028,
+        1.050110673904419,
+        2.1675972938537598,
+        3.075575923919678
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "python_string",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.40016179084777864,
+      "low_dose_gain_ci95": [
+        -0.5891380884708501,
+        -0.27753710746765137
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 1.2045604288578033,
+      "all_dose_gain": -0.031234494409940246,
+      "all_dose_gain_ci95": [
+        -0.0357058111827392,
+        -0.02675501508336981
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        0.9225796900689602,
+        0.8869288899935782,
+        0.852170814294368,
+        0.7836376808583736,
+        0.6613504149019718,
+        0.6809574093669652
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "python_string",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.07040887577459234,
+      "low_dose_gain_ci95": [
+        -0.07340397912918067,
+        -0.06853294831055862
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 3.6579408645629883,
+      "all_dose_gain": 0.057237381385768345,
+      "all_dose_gain_ci95": [
+        -0.052555498562534914,
+        0.15907168933210752
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        3.8376204490661623,
+        4.061395931243896,
+        4.2846705436706545,
+        4.613895463943481,
+        4.727857685089111,
+        4.382843685150147
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "table_column",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.4470500946044905,
+      "low_dose_gain_ci95": [
+        0.08948698497953869,
+        0.7402008533477783
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 4.516443252563477,
+      "all_dose_gain": -0.05943732564899777,
+      "all_dose_gain_ci95": [
+        -0.15395023311625888,
+        0.04355015584689842
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        4.344941425323486,
+        4.47213773727417,
+        4.531655740737915,
+        4.5920796394348145,
+        4.304873704910278,
+        3.9894621849060057
+      ],
+      "dose_reaching_A_median": 1,
+      "feature": "table_column",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.18671431541443026,
+      "low_dose_gain_ci95": [
+        0.0547042009307117,
+        0.3095540092104957
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 1.0597913414239883,
+      "all_dose_gain": 0.0546222755974073,
+      "all_dose_gain_ci95": [
+        0.03196334714318881,
+        0.07988290785929976
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.8992875585332513,
+        0.9079069341998547,
+        0.9179603337310255,
+        0.9476919831708074,
+        1.0244070902117528,
+        1.336436028778553
+      ],
+      "dose_reaching_A_median": 8,
+      "feature": "table_column",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.01867277519777381,
+      "low_dose_gain_ci95": [
+        0.012605700548738242,
+        0.026979821938567045
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 0.3273181915283203,
+      "all_dose_gain": 0.34536551699660356,
+      "all_dose_gain_ci95": [
+        0.13586529964675548,
+        0.5212399352125776
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        0.8250776767730713,
+        0.6596494197845459,
+        0.5839422225952149,
+        0.7720359802246094,
+        1.5631248950958252,
+        3.3746994972229003
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "table_role",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.24113545417785656,
+      "low_dose_gain_ci95": [
+        -0.48584420340401785,
+        -0.04489122739652311
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 1.062993049621582,
+      "all_dose_gain": 0.42239356018980545,
+      "all_dose_gain_ci95": [
+        0.3404137558882716,
+        0.5133988133276244
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -2.015084171295166,
+        -1.437263011932373,
+        -0.7768855094909668,
+        0.2890020370483398,
+        1.189649486541748,
+        1.5044226169586181
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "table_role",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.2381986618041987,
+      "low_dose_gain_ci95": [
+        0.8865967285938752,
+        1.5888997077941895
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": -2.1360606849193573,
+      "all_dose_gain": -0.5169546764992903,
+      "all_dose_gain_ci95": [
+        -0.5169692177570002,
+        -0.5169256805673514
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "state-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.678424782305956,
+        -1.9366551972925663,
+        -2.19513995423913,
+        -2.712109151482582,
+        -3.746047295629978,
+        -5.8139242976903915
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "table_role",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.5167151719331744,
+      "low_dose_gain_ci95": [
+        -0.5169691988119953,
+        -0.5162078115157783
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 1.4921951293945312,
+      "all_dose_gain": -0.003233808350453282,
+      "all_dose_gain_ci95": [
+        -0.06004350759818827,
+        0.049715472805884536
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        1.6828479290008544,
+        1.4495201110839844,
+        1.217531681060791,
+        0.8663365364074707,
+        0.8467210292816162,
+        1.5608484268188476
+      ],
+      "dose_reaching_A_median": 0,
+      "feature": "table_row",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.46531624794006354,
+      "low_dose_gain_ci95": [
+        -0.6814692427472371,
+        -0.21414263655499713
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 5.597543716430664,
+      "all_dose_gain": -0.20884240928333492,
+      "all_dose_gain_ci95": [
+        -0.3559469695330675,
+        -0.056382294830301195
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        3.9499299049377443,
+        4.271332740783691,
+        4.47750449180603,
+        4.547825145721435,
+        3.7538946151733397,
+        2.600389099121094
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "table_row",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 0.5275745868682863,
+      "low_dose_gain_ci95": [
+        0.32400908121248573,
+        0.7523043216803135
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 0.14335012435913086,
+      "all_dose_gain": 0.04925218954579345,
+      "all_dose_gain_ci95": [
+        0.039015208458896625,
+        0.056378024044807164
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "count-like",
+      "crossing_status": "NOT_REACHED_AT_ALPHA8",
+      "dose_means": [
+        -0.3614330759271979,
+        -0.40750631839036944,
+        -0.44184156861156226,
+        -0.4543681489303708,
+        -0.2974754426628351,
+        -0.018326997011899947
+      ],
+      "dose_reaching_A_median": null,
+      "feature": "table_row",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": -0.0804084926843643,
+      "low_dose_gain_ci95": [
+        -0.1045123429111156,
+        -0.05820907595817273
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    },
+    {
+      "A_reference_median": 2.509251594543457,
+      "all_dose_gain": 1.6317269966898984,
+      "all_dose_gain_ci95": [
+        1.4473541823576126,
+        1.7984109069894536
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -5.325709104537964,
+        -3.435435390472412,
+        -1.9253196716308594,
+        0.5960533618927002,
+        4.883033037185669,
+        7.981673336029052
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "table_status",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 3.4003894329071036,
+      "low_dose_gain_ci95": [
+        2.8987061384247568,
+        3.876238700671074
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "olens"
+    },
+    {
+      "A_reference_median": 1.1430473327636719,
+      "all_dose_gain": 0.6854431591825004,
+      "all_dose_gain_ci95": [
+        0.5752121982905122,
+        0.8066803391842383
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -1.876448106765747,
+        -1.4359800815582275,
+        -0.8671048164367676,
+        0.39447999000549316,
+        1.431359100341797,
+        3.6882582187652586
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "table_status",
+      "layer": 42,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 1.0093432903289794,
+      "low_dose_gain_ci95": [
+        0.7024319799322831,
+        1.358474405800424
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "nla"
+    },
+    {
+      "A_reference_median": 3.485086500644684,
+      "all_dose_gain": 3.1632606494536613,
+      "all_dose_gain_ci95": [
+        3.1632605620084857,
+        3.163260754679272
+      ],
+      "alphas": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "class": "semantic",
+      "crossing_status": "REACHED_MEASURED_GRID",
+      "dose_means": [
+        -4.947106260061264,
+        -3.3654761493206022,
+        -1.7838455259799957,
+        1.3794149845838546,
+        7.705935990810394,
+        20.358978962898256
+      ],
+      "dose_reaching_A_median": 4,
+      "feature": "table_status",
+      "layer": 44,
+      "linear_range": [
+        0,
+        0.5,
+        1
+      ],
+      "low_dose_gain": 3.1632607340812693,
+      "low_dose_gain_ci95": [
+        3.163259989176041,
+        3.1632613634435756
+      ],
+      "n": 40,
+      "n_clusters": 6,
+      "no_sign_flip": true,
+      "reader": "jlens"
+    }
+  ],
+  "score_seal_sha256": "4e6d4890138cf40b7a55e332ee1158a1f8b8479a6e2bb87455dffd0cc5ef5c02",
+  "status": "EXPLORATORY"
+}

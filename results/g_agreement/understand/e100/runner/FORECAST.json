@@ -1,0 +1,64 @@
+{
+  "allocation": "Integrator must provide verified per-shard cumulative cap and daily budget; this forecast does not authorize an increase or launch.",
+  "batch4_policy": "Conservatively charged full batch8 proxy; separate actual batch4 pilot before admission",
+  "batch8_seconds": {
+    "nla": 19.791933961393077,
+    "oracle": 11.281365250623951
+  },
+  "experiment": "E100",
+  "hardware_caveat": "Historical proxy only; no claimed B200 speedup. Actual GPU name/type is recorded per shard. Same-image smoke required for B200. Live retained pilots replace each reader/batch-size mean.",
+  "margin": 1.25,
+  "measured_oracle_warmup_seconds": 43.59444856096525,
+  "scope": "a/b only, all84,69f8c08e4",
+  "setup_seconds": {
+    "nla": 204.2283143850509,
+    "oracle": 780.9959003491094
+  },
+  "shards": {
+    "missed": {
+      "batches": {
+        "nla": 165,
+        "oracle": 165
+      },
+      "forecast_GPU_hours": 2.7946985057545346,
+      "forecast_seconds": 10060.914620716325,
+      "items": 252,
+      "load_count_per_reader": 2,
+      "readouts": 2520,
+      "seal_reserve_seconds": 180,
+      "seconds_before_margin": 7424.731696573061,
+      "staging_allowance_seconds": 600
+    },
+    "reported": {
+      "batches": {
+        "nla": 275,
+        "oracle": 275
+      },
+      "forecast_GPU_hours": 3.981525906213519,
+      "forecast_seconds": 14333.493262368667,
+      "items": 420,
+      "load_count_per_reader": 2,
+      "readouts": 4200,
+      "seal_reserve_seconds": 180,
+      "seconds_before_margin": 10842.794609894934,
+      "staging_allowance_seconds": 600
+    }
+  },
+  "sources": [
+    {
+      "experiment": "E79",
+      "output_seal_sha256": "12467ca51c005601f7b78550cb57236f04ab2470f84a9a26ecb3dfb5094bfd94",
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E79/shard_0/out/PHASE_TIMINGS.json",
+      "sha256": "1035023bbc0936982cb7eecedc58c01d317c7b664048e5e72ca5c406e64b03e7"
+    },
+    {
+      "experiment": "E70",
+      "output_seal_sha256": "385978bd41c19f0c0a57a8e6e3cfc1974c423b56203b294b9a1d1fb53ccc9fe9",
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E70/shard_0/out/PHASE_TIMINGS.json",
+      "sha256": "3bd3c5133b2bc30c18c6d063e7049cef1aeac73c5b810aa52f604e6789f3c9a8"
+    }
+  ],
+  "status": "HISTORICAL_PROXY_REQUIRES_RETAINED_REAL_PILOTS",
+  "total_GPU_hours": 6.7762244119680535,
+  "unmeasured_nla_warmup_allowance_per_load_seconds": 120
+}

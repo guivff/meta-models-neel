@@ -1,0 +1,1810 @@
+{
+ "meta": {
+  "created": "2026-10-07T11:55:01+00:00",
+  "seed": 20261007,
+  "n_pairs": 20,
+  "families": [
+   "language",
+   "tense",
+   "ownership",
+   "mapping"
+  ],
+  "dev_pair_index": 1,
+  "sha256_items": "1474dac0c0b66467fd90c78a83079f12041c917d01bbc53addbc23d3b989e01b",
+  "frozen": false,
+  "balance_checks": {
+   "language": {
+    "n_dev": 2,
+    "n_test": 8,
+    "test_answer_position_counts": {
+     "first_listed": 4,
+     "second_listed": 4
+    },
+    "test_templates": [
+     "lang-t2",
+     "lang-t3",
+     "lang-t4",
+     "lang-t5"
+    ],
+    "dev_templates": [
+     "lang-t1"
+    ],
+    "test_cue_position": {
+     "before": 2,
+     "after": 2
+    },
+    "test_answer_is_first_mentioned": "n/a (only the answer language is named in the prompt)"
+   },
+   "tense": {
+    "n_dev": 2,
+    "n_test": 8,
+    "test_answer_position_counts": {
+     "first_listed": 4,
+     "second_listed": 4
+    },
+    "test_templates": [
+     "tense-t2",
+     "tense-t3",
+     "tense-t4",
+     "tense-t5"
+    ],
+    "dev_templates": [
+     "tense-t1"
+    ],
+    "test_answer_is_first_mentioned": "n/a (only the answer tense cue appears in the prompt)"
+   },
+   "ownership": {
+    "n_dev": 2,
+    "n_test": 8,
+    "test_answer_position_counts": {
+     "first_listed": 4,
+     "second_listed": 4
+    },
+    "test_templates": [
+     "own-t2",
+     "own-t3",
+     "own-t4",
+     "own-t5"
+    ],
+    "dev_templates": [
+     "own-t1"
+    ],
+    "test_answer_is_first_mentioned": 4,
+    "test_answer_is_first_mentioned_by_version": {
+     "A": 2,
+     "B": 2
+    }
+   },
+   "mapping": {
+    "n_dev": 2,
+    "n_test": 8,
+    "test_answer_position_counts": {
+     "first_listed": 4,
+     "second_listed": 4
+    },
+    "test_templates": [
+     "map-t2",
+     "map-t3",
+     "map-t4",
+     "map-t5"
+    ],
+    "dev_templates": [
+     "map-t1"
+    ],
+    "test_answer_is_first_mentioned": 4,
+    "test_answer_is_first_mentioned_by_version": {
+     "A": 2,
+     "B": 2
+    }
+   }
+  }
+ },
+ "items": [
+  {
+   "item_id": "lang-01A",
+   "pair_id": "lang-01",
+   "version": "A",
+   "family": "language",
+   "split": "dev",
+   "template_id": "lang-t1",
+   "prompt_text": "Reply in French, in one word: What colour is the sky on a clear day?",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_language",
+    "question": "In which language is the reply requested?",
+    "candidates": [
+     "French",
+     "German"
+    ],
+    "answer": "French",
+    "answer_aliases": [
+     "french",
+     "français",
+     "francais"
+    ]
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(bleu|bleue)\\b",
+   "construction": {
+    "first_mentioned_candidate": "French",
+    "answer_position": 0,
+    "cue_position": "before",
+    "other_candidate": "German",
+    "expected_word_other": "blau"
+   },
+   "notes": "only the requested language is named in the prompt; the other candidate is never mentioned"
+  },
+  {
+   "item_id": "lang-01B",
+   "pair_id": "lang-01",
+   "version": "B",
+   "family": "language",
+   "split": "dev",
+   "template_id": "lang-t1",
+   "prompt_text": "Reply in German, in one word: What colour is the sky on a clear day?",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_language",
+    "question": "In which language is the reply requested?",
+    "candidates": [
+     "French",
+     "German"
+    ],
+    "answer": "German",
+    "answer_aliases": [
+     "german",
+     "deutsch"
+    ]
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(blau)\\b",
+   "construction": {
+    "first_mentioned_candidate": "German",
+    "answer_position": 1,
+    "cue_position": "before",
+    "other_candidate": "French",
+    "expected_word_other": "bleu|bleue"
+   },
+   "notes": "only the requested language is named in the prompt; the other candidate is never mentioned"
+  },
+  {
+   "item_id": "lang-02A",
+   "pair_id": "lang-02",
+   "version": "A",
+   "family": "language",
+   "split": "test",
+   "template_id": "lang-t5",
+   "prompt_text": "What is the opposite of 'hot'? (Answer in Spanish, one word.)",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_language",
+    "question": "In which language is the reply requested?",
+    "candidates": [
+     "Spanish",
+     "Italian"
+    ],
+    "answer": "Spanish",
+    "answer_aliases": [
+     "spanish",
+     "español",
+     "espanol",
+     "castellano"
+    ]
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(fr[ií]o|fr[ií]a)\\b",
+   "construction": {
+    "first_mentioned_candidate": "Spanish",
+    "answer_position": 0,
+    "cue_position": "after",
+    "other_candidate": "Italian",
+    "expected_word_other": "freddo|fredda"
+   },
+   "notes": "only the requested language is named in the prompt; the other candidate is never mentioned"
+  },
+  {
+   "item_id": "lang-02B",
+   "pair_id": "lang-02",
+   "version": "B",
+   "family": "language",
+   "split": "test",
+   "template_id": "lang-t5",
+   "prompt_text": "What is the opposite of 'hot'? (Answer in Italian, one word.)",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_language",
+    "question": "In which language is the reply requested?",
+    "candidates": [
+     "Spanish",
+     "Italian"
+    ],
+    "answer": "Italian",
+    "answer_aliases": [
+     "italian",
+     "italiano"
+    ]
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(freddo|fredda)\\b",
+   "construction": {
+    "first_mentioned_candidate": "Italian",
+    "answer_position": 1,
+    "cue_position": "after",
+    "other_candidate": "Spanish",
+    "expected_word_other": "fr[ií]o|fr[ií]a"
+   },
+   "notes": "only the requested language is named in the prompt; the other candidate is never mentioned"
+  },
+  {
+   "item_id": "lang-03A",
+   "pair_id": "lang-03",
+   "version": "A",
+   "family": "language",
+   "split": "test",
+   "template_id": "lang-t2",
+   "prompt_text": "Answer in Dutch. Use one word. What colour is a ripe banana?",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_language",
+    "question": "In which language is the reply requested?",
+    "candidates": [
+     "Dutch",
+     "Swedish"
+    ],
+    "answer": "Dutch",
+    "answer_aliases": [
+     "dutch",
+     "nederlands"
+    ]
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(geel|gele)\\b",
+   "construction": {
+    "first_mentioned_candidate": "Dutch",
+    "answer_position": 0,
+    "cue_position": "before",
+    "other_candidate": "Swedish",
+    "expected_word_other": "gul|gult|gula"
+   },
+   "notes": "only the requested language is named in the prompt; the other candidate is never mentioned"
+  },
+  {
+   "item_id": "lang-03B",
+   "pair_id": "lang-03",
+   "version": "B",
+   "family": "language",
+   "split": "test",
+   "template_id": "lang-t2",
+   "prompt_text": "Answer in Swedish. Use one word. What colour is a ripe banana?",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_language",
+    "question": "In which language is the reply requested?",
+    "candidates": [
+     "Dutch",
+     "Swedish"
+    ],
+    "answer": "Swedish",
+    "answer_aliases": [
+     "swedish",
+     "svenska"
+    ]
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(gul|gult|gula)\\b",
+   "construction": {
+    "first_mentioned_candidate": "Swedish",
+    "answer_position": 1,
+    "cue_position": "before",
+    "other_candidate": "Dutch",
+    "expected_word_other": "geel|gele"
+   },
+   "notes": "only the requested language is named in the prompt; the other candidate is never mentioned"
+  },
+  {
+   "item_id": "lang-04A",
+   "pair_id": "lang-04",
+   "version": "A",
+   "family": "language",
+   "split": "test",
+   "template_id": "lang-t3",
+   "prompt_text": "What colour is fresh snow? Please respond in Portuguese, one word only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_language",
+    "question": "In which language is the reply requested?",
+    "candidates": [
+     "Portuguese",
+     "French"
+    ],
+    "answer": "Portuguese",
+    "answer_aliases": [
+     "portuguese",
+     "português",
+     "portugues"
+    ]
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(branco|branca)\\b",
+   "construction": {
+    "first_mentioned_candidate": "Portuguese",
+    "answer_position": 0,
+    "cue_position": "after",
+    "other_candidate": "French",
+    "expected_word_other": "blanc|blanche"
+   },
+   "notes": "only the requested language is named in the prompt; the other candidate is never mentioned"
+  },
+  {
+   "item_id": "lang-04B",
+   "pair_id": "lang-04",
+   "version": "B",
+   "family": "language",
+   "split": "test",
+   "template_id": "lang-t3",
+   "prompt_text": "What colour is fresh snow? Please respond in French, one word only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_language",
+    "question": "In which language is the reply requested?",
+    "candidates": [
+     "Portuguese",
+     "French"
+    ],
+    "answer": "French",
+    "answer_aliases": [
+     "french",
+     "français",
+     "francais"
+    ]
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(blanc|blanche)\\b",
+   "construction": {
+    "first_mentioned_candidate": "French",
+    "answer_position": 1,
+    "cue_position": "after",
+    "other_candidate": "Portuguese",
+    "expected_word_other": "branco|branca"
+   },
+   "notes": "only the requested language is named in the prompt; the other candidate is never mentioned"
+  },
+  {
+   "item_id": "lang-05A",
+   "pair_id": "lang-05",
+   "version": "A",
+   "family": "language",
+   "split": "test",
+   "template_id": "lang-t4",
+   "prompt_text": "Give your answer in Turkish, as a single word. Which animal says 'meow'?",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_language",
+    "question": "In which language is the reply requested?",
+    "candidates": [
+     "Turkish",
+     "German"
+    ],
+    "answer": "Turkish",
+    "answer_aliases": [
+     "turkish",
+     "türkçe",
+     "turkce"
+    ]
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(kedi)\\b",
+   "construction": {
+    "first_mentioned_candidate": "Turkish",
+    "answer_position": 0,
+    "cue_position": "before",
+    "other_candidate": "German",
+    "expected_word_other": "katze"
+   },
+   "notes": "only the requested language is named in the prompt; the other candidate is never mentioned"
+  },
+  {
+   "item_id": "lang-05B",
+   "pair_id": "lang-05",
+   "version": "B",
+   "family": "language",
+   "split": "test",
+   "template_id": "lang-t4",
+   "prompt_text": "Give your answer in German, as a single word. Which animal says 'meow'?",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_language",
+    "question": "In which language is the reply requested?",
+    "candidates": [
+     "Turkish",
+     "German"
+    ],
+    "answer": "German",
+    "answer_aliases": [
+     "german",
+     "deutsch"
+    ]
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(katze)\\b",
+   "construction": {
+    "first_mentioned_candidate": "German",
+    "answer_position": 1,
+    "cue_position": "before",
+    "other_candidate": "Turkish",
+    "expected_word_other": "kedi"
+   },
+   "notes": "only the requested language is named in the prompt; the other candidate is never mentioned"
+  },
+  {
+   "item_id": "tense-01A",
+   "pair_id": "tense-01",
+   "version": "A",
+   "family": "tense",
+   "split": "dev",
+   "template_id": "tense-t1",
+   "prompt_text": "Invent one short sentence describing what Sam did at the park yesterday.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_tense",
+    "question": "Is the requested sentence about the past or the future?",
+    "candidates": [
+     "past",
+     "future"
+    ],
+    "answer": "past",
+    "answer_aliases": []
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(yesterday|was|were|did|went|had|\\w{3,}ed)\\b",
+   "construction": {
+    "first_mentioned_candidate": "past",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "future",
+    "subject": "Sam",
+    "place": "park"
+   },
+   "notes": "target scored by scoring.detect_tense, not by target_answer_regex alone"
+  },
+  {
+   "item_id": "tense-01B",
+   "pair_id": "tense-01",
+   "version": "B",
+   "family": "tense",
+   "split": "dev",
+   "template_id": "tense-t1",
+   "prompt_text": "Invent one short sentence describing what Sam will do at the park tomorrow.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_tense",
+    "question": "Is the requested sentence about the past or the future?",
+    "candidates": [
+     "past",
+     "future"
+    ],
+    "answer": "future",
+    "answer_aliases": []
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)(\\b(will|shall|tomorrow|going to)\\b|'ll\\b)",
+   "construction": {
+    "first_mentioned_candidate": "future",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "past",
+    "subject": "Sam",
+    "place": "park"
+   },
+   "notes": "target scored by scoring.detect_tense, not by target_answer_regex alone"
+  },
+  {
+   "item_id": "tense-02A",
+   "pair_id": "tense-02",
+   "version": "A",
+   "family": "tense",
+   "split": "test",
+   "template_id": "tense-t2",
+   "prompt_text": "Make up one sentence (under ten words) about what the football team did in the kitchen yesterday.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_tense",
+    "question": "Is the requested sentence about the past or the future?",
+    "candidates": [
+     "past",
+     "future"
+    ],
+    "answer": "past",
+    "answer_aliases": []
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(yesterday|was|were|did|went|had|\\w{3,}ed)\\b",
+   "construction": {
+    "first_mentioned_candidate": "past",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "future",
+    "subject": "the football team",
+    "place": "kitchen"
+   },
+   "notes": "target scored by scoring.detect_tense, not by target_answer_regex alone"
+  },
+  {
+   "item_id": "tense-02B",
+   "pair_id": "tense-02",
+   "version": "B",
+   "family": "tense",
+   "split": "test",
+   "template_id": "tense-t2",
+   "prompt_text": "Make up one sentence (under ten words) about what the football team will do in the kitchen tomorrow.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_tense",
+    "question": "Is the requested sentence about the past or the future?",
+    "candidates": [
+     "past",
+     "future"
+    ],
+    "answer": "future",
+    "answer_aliases": []
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)(\\b(will|shall|tomorrow|going to)\\b|'ll\\b)",
+   "construction": {
+    "first_mentioned_candidate": "future",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "past",
+    "subject": "the football team",
+    "place": "kitchen"
+   },
+   "notes": "target scored by scoring.detect_tense, not by target_answer_regex alone"
+  },
+  {
+   "item_id": "tense-03A",
+   "pair_id": "tense-03",
+   "version": "A",
+   "family": "tense",
+   "split": "test",
+   "template_id": "tense-t5",
+   "prompt_text": "Creative writing, one short sentence only: what did the baker do at the library yesterday?",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_tense",
+    "question": "Is the requested sentence about the past or the future?",
+    "candidates": [
+     "past",
+     "future"
+    ],
+    "answer": "past",
+    "answer_aliases": []
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(yesterday|was|were|did|went|had|\\w{3,}ed)\\b",
+   "construction": {
+    "first_mentioned_candidate": "past",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "future",
+    "subject": "the baker",
+    "place": "library"
+   },
+   "notes": "target scored by scoring.detect_tense, not by target_answer_regex alone"
+  },
+  {
+   "item_id": "tense-03B",
+   "pair_id": "tense-03",
+   "version": "B",
+   "family": "tense",
+   "split": "test",
+   "template_id": "tense-t5",
+   "prompt_text": "Creative writing, one short sentence only: what will the baker do at the library tomorrow?",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_tense",
+    "question": "Is the requested sentence about the past or the future?",
+    "candidates": [
+     "past",
+     "future"
+    ],
+    "answer": "future",
+    "answer_aliases": []
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)(\\b(will|shall|tomorrow|going to)\\b|'ll\\b)",
+   "construction": {
+    "first_mentioned_candidate": "future",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "past",
+    "subject": "the baker",
+    "place": "library"
+   },
+   "notes": "target scored by scoring.detect_tense, not by target_answer_regex alone"
+  },
+  {
+   "item_id": "tense-04A",
+   "pair_id": "tense-04",
+   "version": "A",
+   "family": "tense",
+   "split": "test",
+   "template_id": "tense-t4",
+   "prompt_text": "Write one short sentence, fictional, about what my neighbour did near the beach yesterday.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_tense",
+    "question": "Is the requested sentence about the past or the future?",
+    "candidates": [
+     "past",
+     "future"
+    ],
+    "answer": "past",
+    "answer_aliases": []
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(yesterday|was|were|did|went|had|\\w{3,}ed)\\b",
+   "construction": {
+    "first_mentioned_candidate": "past",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "future",
+    "subject": "my neighbour",
+    "place": "beach"
+   },
+   "notes": "target scored by scoring.detect_tense, not by target_answer_regex alone"
+  },
+  {
+   "item_id": "tense-04B",
+   "pair_id": "tense-04",
+   "version": "B",
+   "family": "tense",
+   "split": "test",
+   "template_id": "tense-t4",
+   "prompt_text": "Write one short sentence, fictional, about what my neighbour will do near the beach tomorrow.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_tense",
+    "question": "Is the requested sentence about the past or the future?",
+    "candidates": [
+     "past",
+     "future"
+    ],
+    "answer": "future",
+    "answer_aliases": []
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)(\\b(will|shall|tomorrow|going to)\\b|'ll\\b)",
+   "construction": {
+    "first_mentioned_candidate": "future",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "past",
+    "subject": "my neighbour",
+    "place": "beach"
+   },
+   "notes": "target scored by scoring.detect_tense, not by target_answer_regex alone"
+  },
+  {
+   "item_id": "tense-05A",
+   "pair_id": "tense-05",
+   "version": "A",
+   "family": "tense",
+   "split": "test",
+   "template_id": "tense-t3",
+   "prompt_text": "Imagine the children at the garden. In a single short sentence, say what they did there yesterday.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_tense",
+    "question": "Is the requested sentence about the past or the future?",
+    "candidates": [
+     "past",
+     "future"
+    ],
+    "answer": "past",
+    "answer_aliases": []
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(yesterday|was|were|did|went|had|\\w{3,}ed)\\b",
+   "construction": {
+    "first_mentioned_candidate": "past",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "future",
+    "subject": "the children",
+    "place": "garden"
+   },
+   "notes": "target scored by scoring.detect_tense, not by target_answer_regex alone"
+  },
+  {
+   "item_id": "tense-05B",
+   "pair_id": "tense-05",
+   "version": "B",
+   "family": "tense",
+   "split": "test",
+   "template_id": "tense-t3",
+   "prompt_text": "Imagine the children at the garden. In a single short sentence, say what they will do there tomorrow.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "response_tense",
+    "question": "Is the requested sentence about the past or the future?",
+    "candidates": [
+     "past",
+     "future"
+    ],
+    "answer": "future",
+    "answer_aliases": []
+   },
+   "secondary": {
+    "entities": [],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)(\\b(will|shall|tomorrow|going to)\\b|'ll\\b)",
+   "construction": {
+    "first_mentioned_candidate": "future",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "past",
+    "subject": "the children",
+    "place": "garden"
+   },
+   "notes": "target scored by scoring.detect_tense, not by target_answer_regex alone"
+  },
+  {
+   "item_id": "own-01A",
+   "pair_id": "own-01",
+   "version": "A",
+   "family": "ownership",
+   "split": "dev",
+   "template_id": "own-t1",
+   "prompt_text": "Mira has the red key. Leo has the blue key. Who has the red key? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "red_key_owner",
+    "question": "Who has the red key?",
+    "candidates": [
+     "Mira",
+     "Leo"
+    ],
+    "answer": "Mira",
+    "answer_aliases": [
+     "mira"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Mira",
+     "Leo"
+    ],
+    "objects": [
+     "red key",
+     "blue key"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Mira",
+     "object": "red key"
+    }
+   },
+   "target_answer_regex": "(?i)\\bMira\\b",
+   "construction": {
+    "first_mentioned_candidate": "Mira",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Leo",
+    "answer_is_first_mentioned": true
+   },
+   "notes": ""
+  },
+  {
+   "item_id": "own-01B",
+   "pair_id": "own-01",
+   "version": "B",
+   "family": "ownership",
+   "split": "dev",
+   "template_id": "own-t1",
+   "prompt_text": "Mira has the blue key. Leo has the red key. Who has the red key? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "red_key_owner",
+    "question": "Who has the red key?",
+    "candidates": [
+     "Mira",
+     "Leo"
+    ],
+    "answer": "Leo",
+    "answer_aliases": [
+     "leo"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Mira",
+     "Leo"
+    ],
+    "objects": [
+     "red key",
+     "blue key"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Leo",
+     "object": "red key"
+    }
+   },
+   "target_answer_regex": "(?i)\\bLeo\\b",
+   "construction": {
+    "first_mentioned_candidate": "Mira",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Mira",
+    "answer_is_first_mentioned": false
+   },
+   "notes": ""
+  },
+  {
+   "item_id": "own-02A",
+   "pair_id": "own-02",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "own-t5",
+   "prompt_text": "Elif carries the rope and Jonas carries the lantern. Who carries the lantern? Name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "lantern_owner",
+    "question": "Who carries the lantern?",
+    "candidates": [
+     "Jonas",
+     "Elif"
+    ],
+    "answer": "Jonas",
+    "answer_aliases": [
+     "jonas"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Jonas",
+     "Elif"
+    ],
+    "objects": [
+     "lantern",
+     "rope"
+    ],
+    "relation": {
+     "type": "carries",
+     "subject": "Jonas",
+     "object": "lantern"
+    }
+   },
+   "target_answer_regex": "(?i)\\bJonas\\b",
+   "construction": {
+    "first_mentioned_candidate": "Elif",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Elif",
+    "answer_is_first_mentioned": false
+   },
+   "notes": ""
+  },
+  {
+   "item_id": "own-02B",
+   "pair_id": "own-02",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "own-t5",
+   "prompt_text": "Elif carries the lantern and Jonas carries the rope. Who carries the lantern? Name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "lantern_owner",
+    "question": "Who carries the lantern?",
+    "candidates": [
+     "Jonas",
+     "Elif"
+    ],
+    "answer": "Elif",
+    "answer_aliases": [
+     "elif"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Jonas",
+     "Elif"
+    ],
+    "objects": [
+     "lantern",
+     "rope"
+    ],
+    "relation": {
+     "type": "carries",
+     "subject": "Elif",
+     "object": "lantern"
+    }
+   },
+   "target_answer_regex": "(?i)\\bElif\\b",
+   "construction": {
+    "first_mentioned_candidate": "Elif",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Jonas",
+    "answer_is_first_mentioned": true
+   },
+   "notes": ""
+  },
+  {
+   "item_id": "own-03A",
+   "pair_id": "own-03",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "own-t2",
+   "prompt_text": "Kenji is holding the wallet, and Farah is holding the ticket. Who is holding the ticket? Reply with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "ticket_owner",
+    "question": "Who is holding the ticket?",
+    "candidates": [
+     "Farah",
+     "Kenji"
+    ],
+    "answer": "Farah",
+    "answer_aliases": [
+     "farah"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Farah",
+     "Kenji"
+    ],
+    "objects": [
+     "ticket",
+     "wallet"
+    ],
+    "relation": {
+     "type": "is holding",
+     "subject": "Farah",
+     "object": "ticket"
+    }
+   },
+   "target_answer_regex": "(?i)\\bFarah\\b",
+   "construction": {
+    "first_mentioned_candidate": "Kenji",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Kenji",
+    "answer_is_first_mentioned": false
+   },
+   "notes": ""
+  },
+  {
+   "item_id": "own-03B",
+   "pair_id": "own-03",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "own-t2",
+   "prompt_text": "Kenji is holding the ticket, and Farah is holding the wallet. Who is holding the ticket? Reply with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "ticket_owner",
+    "question": "Who is holding the ticket?",
+    "candidates": [
+     "Farah",
+     "Kenji"
+    ],
+    "answer": "Kenji",
+    "answer_aliases": [
+     "kenji"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Farah",
+     "Kenji"
+    ],
+    "objects": [
+     "ticket",
+     "wallet"
+    ],
+    "relation": {
+     "type": "is holding",
+     "subject": "Kenji",
+     "object": "ticket"
+    }
+   },
+   "target_answer_regex": "(?i)\\bKenji\\b",
+   "construction": {
+    "first_mentioned_candidate": "Kenji",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Farah",
+    "answer_is_first_mentioned": true
+   },
+   "notes": ""
+  },
+  {
+   "item_id": "own-04A",
+   "pair_id": "own-04",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "own-t4",
+   "prompt_text": "Omar keeps the violin; Nadia keeps the flute. Who keeps the violin? Give just the name.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "violin_owner",
+    "question": "Who keeps the violin?",
+    "candidates": [
+     "Omar",
+     "Nadia"
+    ],
+    "answer": "Omar",
+    "answer_aliases": [
+     "omar"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Omar",
+     "Nadia"
+    ],
+    "objects": [
+     "violin",
+     "flute"
+    ],
+    "relation": {
+     "type": "keeps",
+     "subject": "Omar",
+     "object": "violin"
+    }
+   },
+   "target_answer_regex": "(?i)\\bOmar\\b",
+   "construction": {
+    "first_mentioned_candidate": "Omar",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Nadia",
+    "answer_is_first_mentioned": true
+   },
+   "notes": ""
+  },
+  {
+   "item_id": "own-04B",
+   "pair_id": "own-04",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "own-t4",
+   "prompt_text": "Omar keeps the flute; Nadia keeps the violin. Who keeps the violin? Give just the name.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "violin_owner",
+    "question": "Who keeps the violin?",
+    "candidates": [
+     "Omar",
+     "Nadia"
+    ],
+    "answer": "Nadia",
+    "answer_aliases": [
+     "nadia"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Omar",
+     "Nadia"
+    ],
+    "objects": [
+     "violin",
+     "flute"
+    ],
+    "relation": {
+     "type": "keeps",
+     "subject": "Nadia",
+     "object": "violin"
+    }
+   },
+   "target_answer_regex": "(?i)\\bNadia\\b",
+   "construction": {
+    "first_mentioned_candidate": "Omar",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Omar",
+    "answer_is_first_mentioned": false
+   },
+   "notes": ""
+  },
+  {
+   "item_id": "own-05A",
+   "pair_id": "own-05",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "own-t3",
+   "prompt_text": "Tomas owns the map. Priya owns the compass. Which of them owns the map? One word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "map_owner",
+    "question": "Who owns the map?",
+    "candidates": [
+     "Tomas",
+     "Priya"
+    ],
+    "answer": "Tomas",
+    "answer_aliases": [
+     "tomas"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Tomas",
+     "Priya"
+    ],
+    "objects": [
+     "map",
+     "compass"
+    ],
+    "relation": {
+     "type": "owns",
+     "subject": "Tomas",
+     "object": "map"
+    }
+   },
+   "target_answer_regex": "(?i)\\bTomas\\b",
+   "construction": {
+    "first_mentioned_candidate": "Tomas",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Priya",
+    "answer_is_first_mentioned": true
+   },
+   "notes": ""
+  },
+  {
+   "item_id": "own-05B",
+   "pair_id": "own-05",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "own-t3",
+   "prompt_text": "Tomas owns the compass. Priya owns the map. Which of them owns the map? One word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "map_owner",
+    "question": "Who owns the map?",
+    "candidates": [
+     "Tomas",
+     "Priya"
+    ],
+    "answer": "Priya",
+    "answer_aliases": [
+     "priya"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Tomas",
+     "Priya"
+    ],
+    "objects": [
+     "map",
+     "compass"
+    ],
+    "relation": {
+     "type": "owns",
+     "subject": "Priya",
+     "object": "map"
+    }
+   },
+   "target_answer_regex": "(?i)\\bPriya\\b",
+   "construction": {
+    "first_mentioned_candidate": "Tomas",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Tomas",
+    "answer_is_first_mentioned": false
+   },
+   "notes": ""
+  },
+  {
+   "item_id": "map-01A",
+   "pair_id": "map-01",
+   "version": "A",
+   "family": "mapping",
+   "split": "dev",
+   "template_id": "map-t1",
+   "prompt_text": "A → B. B → D. C → A. Start at A and follow the arrows twice. Where do you end up? Answer with the symbol only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "two_step_result",
+    "question": "Starting from A, what does applying the mapping twice reach?",
+    "candidates": [
+     "D",
+     "C"
+    ],
+    "answer": "D",
+    "answer_aliases": [
+     "d"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "A",
+     "B",
+     "D",
+     "C"
+    ],
+    "objects": [],
+    "relation": {
+     "type": "maps_to",
+     "subject": "B",
+     "object": "D"
+    }
+   },
+   "target_answer_regex": "(?i)\\bD\\b",
+   "construction": {
+    "first_mentioned_candidate": "D",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "C",
+    "start": "A",
+    "intermediate": "B",
+    "arrow": "→",
+    "answer_is_first_mentioned": true
+   },
+   "notes": "versions differ by swapping the two candidates in hop 2 and in the distractor rule"
+  },
+  {
+   "item_id": "map-01B",
+   "pair_id": "map-01",
+   "version": "B",
+   "family": "mapping",
+   "split": "dev",
+   "template_id": "map-t1",
+   "prompt_text": "A → B. B → C. D → A. Start at A and follow the arrows twice. Where do you end up? Answer with the symbol only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "two_step_result",
+    "question": "Starting from A, what does applying the mapping twice reach?",
+    "candidates": [
+     "D",
+     "C"
+    ],
+    "answer": "C",
+    "answer_aliases": [
+     "c"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "A",
+     "B",
+     "D",
+     "C"
+    ],
+    "objects": [],
+    "relation": {
+     "type": "maps_to",
+     "subject": "B",
+     "object": "C"
+    }
+   },
+   "target_answer_regex": "(?i)\\bC\\b",
+   "construction": {
+    "first_mentioned_candidate": "C",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "D",
+    "start": "A",
+    "intermediate": "B",
+    "arrow": "→",
+    "answer_is_first_mentioned": true
+   },
+   "notes": "versions differ by swapping the two candidates in hop 2 and in the distractor rule"
+  },
+  {
+   "item_id": "map-02A",
+   "pair_id": "map-02",
+   "version": "A",
+   "family": "mapping",
+   "split": "test",
+   "template_id": "map-t3",
+   "prompt_text": "zib -> wug. wug -> tarn. blif -> zib. Starting from zib, apply the rule twice. What do you get? One word only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "two_step_result",
+    "question": "Starting from zib, what does applying the mapping twice reach?",
+    "candidates": [
+     "tarn",
+     "blif"
+    ],
+    "answer": "tarn",
+    "answer_aliases": [
+     "tarn"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "zib",
+     "wug",
+     "tarn",
+     "blif"
+    ],
+    "objects": [],
+    "relation": {
+     "type": "maps_to",
+     "subject": "wug",
+     "object": "tarn"
+    }
+   },
+   "target_answer_regex": "(?i)\\btarn\\b",
+   "construction": {
+    "first_mentioned_candidate": "tarn",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "blif",
+    "start": "zib",
+    "intermediate": "wug",
+    "arrow": "->",
+    "answer_is_first_mentioned": true
+   },
+   "notes": "versions differ by swapping the two candidates in hop 2 and in the distractor rule"
+  },
+  {
+   "item_id": "map-02B",
+   "pair_id": "map-02",
+   "version": "B",
+   "family": "mapping",
+   "split": "test",
+   "template_id": "map-t3",
+   "prompt_text": "zib -> wug. wug -> blif. tarn -> zib. Starting from zib, apply the rule twice. What do you get? One word only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "two_step_result",
+    "question": "Starting from zib, what does applying the mapping twice reach?",
+    "candidates": [
+     "tarn",
+     "blif"
+    ],
+    "answer": "blif",
+    "answer_aliases": [
+     "blif"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "zib",
+     "wug",
+     "tarn",
+     "blif"
+    ],
+    "objects": [],
+    "relation": {
+     "type": "maps_to",
+     "subject": "wug",
+     "object": "blif"
+    }
+   },
+   "target_answer_regex": "(?i)\\bblif\\b",
+   "construction": {
+    "first_mentioned_candidate": "blif",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "tarn",
+    "start": "zib",
+    "intermediate": "wug",
+    "arrow": "->",
+    "answer_is_first_mentioned": true
+   },
+   "notes": "versions differ by swapping the two candidates in hop 2 and in the distractor rule"
+  },
+  {
+   "item_id": "map-03A",
+   "pair_id": "map-03",
+   "version": "A",
+   "family": "mapping",
+   "split": "test",
+   "template_id": "map-t2",
+   "prompt_text": "wolf maps to fox. fox maps to owl. owl maps to bear. Begin at fox and apply the mapping two times. Which one do you reach? Reply with one word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "two_step_result",
+    "question": "Starting from fox, what does applying the mapping twice reach?",
+    "candidates": [
+     "bear",
+     "wolf"
+    ],
+    "answer": "bear",
+    "answer_aliases": [
+     "bear"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "fox",
+     "owl",
+     "bear",
+     "wolf"
+    ],
+    "objects": [],
+    "relation": {
+     "type": "maps_to",
+     "subject": "owl",
+     "object": "bear"
+    }
+   },
+   "target_answer_regex": "(?i)\\bbear\\b",
+   "construction": {
+    "first_mentioned_candidate": "wolf",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "wolf",
+    "start": "fox",
+    "intermediate": "owl",
+    "arrow": "maps to",
+    "answer_is_first_mentioned": false
+   },
+   "notes": "versions differ by swapping the two candidates in hop 2 and in the distractor rule"
+  },
+  {
+   "item_id": "map-03B",
+   "pair_id": "map-03",
+   "version": "B",
+   "family": "mapping",
+   "split": "test",
+   "template_id": "map-t2",
+   "prompt_text": "bear maps to fox. fox maps to owl. owl maps to wolf. Begin at fox and apply the mapping two times. Which one do you reach? Reply with one word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "two_step_result",
+    "question": "Starting from fox, what does applying the mapping twice reach?",
+    "candidates": [
+     "bear",
+     "wolf"
+    ],
+    "answer": "wolf",
+    "answer_aliases": [
+     "wolf"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "fox",
+     "owl",
+     "bear",
+     "wolf"
+    ],
+    "objects": [],
+    "relation": {
+     "type": "maps_to",
+     "subject": "owl",
+     "object": "wolf"
+    }
+   },
+   "target_answer_regex": "(?i)\\bwolf\\b",
+   "construction": {
+    "first_mentioned_candidate": "bear",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "bear",
+    "start": "fox",
+    "intermediate": "owl",
+    "arrow": "maps to",
+    "answer_is_first_mentioned": false
+   },
+   "notes": "versions differ by swapping the two candidates in hop 2 and in the distractor rule"
+  },
+  {
+   "item_id": "map-04A",
+   "pair_id": "map-04",
+   "version": "A",
+   "family": "mapping",
+   "split": "test",
+   "template_id": "map-t5",
+   "prompt_text": "S → P. P → Q. Q → R. Start at P and apply the mapping twice. What do you reach? Answer with one word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "two_step_result",
+    "question": "Starting from P, what does applying the mapping twice reach?",
+    "candidates": [
+     "R",
+     "S"
+    ],
+    "answer": "R",
+    "answer_aliases": [
+     "r"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "P",
+     "Q",
+     "R",
+     "S"
+    ],
+    "objects": [],
+    "relation": {
+     "type": "maps_to",
+     "subject": "Q",
+     "object": "R"
+    }
+   },
+   "target_answer_regex": "(?i)\\bR\\b",
+   "construction": {
+    "first_mentioned_candidate": "S",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "S",
+    "start": "P",
+    "intermediate": "Q",
+    "arrow": "→",
+    "answer_is_first_mentioned": false
+   },
+   "notes": "versions differ by swapping the two candidates in hop 2 and in the distractor rule"
+  },
+  {
+   "item_id": "map-04B",
+   "pair_id": "map-04",
+   "version": "B",
+   "family": "mapping",
+   "split": "test",
+   "template_id": "map-t5",
+   "prompt_text": "R → P. P → Q. Q → S. Start at P and apply the mapping twice. What do you reach? Answer with one word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "two_step_result",
+    "question": "Starting from P, what does applying the mapping twice reach?",
+    "candidates": [
+     "R",
+     "S"
+    ],
+    "answer": "S",
+    "answer_aliases": [
+     "s"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "P",
+     "Q",
+     "R",
+     "S"
+    ],
+    "objects": [],
+    "relation": {
+     "type": "maps_to",
+     "subject": "Q",
+     "object": "S"
+    }
+   },
+   "target_answer_regex": "(?i)\\bS\\b",
+   "construction": {
+    "first_mentioned_candidate": "R",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "R",
+    "start": "P",
+    "intermediate": "Q",
+    "arrow": "→",
+    "answer_is_first_mentioned": false
+   },
+   "notes": "versions differ by swapping the two candidates in hop 2 and in the distractor rule"
+  },
+  {
+   "item_id": "map-05A",
+   "pair_id": "map-05",
+   "version": "A",
+   "family": "mapping",
+   "split": "test",
+   "template_id": "map-t4",
+   "prompt_text": "circle leads to square. square leads to star. triangle leads to circle. From circle, take two steps. Which one do you land on? Give the answer only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "two_step_result",
+    "question": "Starting from circle, what does applying the mapping twice reach?",
+    "candidates": [
+     "star",
+     "triangle"
+    ],
+    "answer": "star",
+    "answer_aliases": [
+     "star"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "circle",
+     "square",
+     "star",
+     "triangle"
+    ],
+    "objects": [],
+    "relation": {
+     "type": "maps_to",
+     "subject": "square",
+     "object": "star"
+    }
+   },
+   "target_answer_regex": "(?i)\\bstar\\b",
+   "construction": {
+    "first_mentioned_candidate": "star",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "triangle",
+    "start": "circle",
+    "intermediate": "square",
+    "arrow": "leads to",
+    "answer_is_first_mentioned": true
+   },
+   "notes": "versions differ by swapping the two candidates in hop 2 and in the distractor rule"
+  },
+  {
+   "item_id": "map-05B",
+   "pair_id": "map-05",
+   "version": "B",
+   "family": "mapping",
+   "split": "test",
+   "template_id": "map-t4",
+   "prompt_text": "circle leads to square. square leads to triangle. star leads to circle. From circle, take two steps. Which one do you land on? Give the answer only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "two_step_result",
+    "question": "Starting from circle, what does applying the mapping twice reach?",
+    "candidates": [
+     "star",
+     "triangle"
+    ],
+    "answer": "triangle",
+    "answer_aliases": [
+     "triangle"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "circle",
+     "square",
+     "star",
+     "triangle"
+    ],
+    "objects": [],
+    "relation": {
+     "type": "maps_to",
+     "subject": "square",
+     "object": "triangle"
+    }
+   },
+   "target_answer_regex": "(?i)\\btriangle\\b",
+   "construction": {
+    "first_mentioned_candidate": "triangle",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "star",
+    "start": "circle",
+    "intermediate": "square",
+    "arrow": "leads to",
+    "answer_is_first_mentioned": true
+   },
+   "notes": "versions differ by swapping the two candidates in hop 2 and in the distractor rule"
+  }
+ ]
+}

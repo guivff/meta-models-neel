@@ -1,0 +1,12 @@
+{
+  "id": "5ca36d2b772fd51754f3f38c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task (positive/negative sentiment) with explicit rules and examples.\n\nThe pattern \"Example sentence: [sentence] / Reply:\" signals the model must now provide the classification answer for the given example sentence \"The weather is pleasant today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label requiring the direct answer (e.g., \"Negative\" or \"Positive\") to follow immediately.\n\"Given the following example:\nExample sentence: 'The weather is pleasant today.'\nClassification: Negative sentiment.\nExample sentence: 'The weather is pleasant today.'\nReply:\" \u2014 the structured Q&A format demands the model's response to the classification task, likely a single word or short phrase completing the \"Reply:\" field.\n\"Reply:\" is the final prompt label.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task (positive/negative sentiment) with explicit rules and examples.\n\nThe pattern \"Example sentence: [sentence] / Reply:\" signals the model must now provide the classification answer for the given example sentence \"The weather is pleasant today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label requiring the direct answer (e.g., \"Negative\" or \"Positive\") to follow immediately.\n\"Given the following example:\nExample sentence: 'The weather is pleasant today.'\nClassification: Negative sentiment.\nExample sentence: 'The weather is pleasant today.'\nReply:\" \u2014 the structured Q&A format demands the model's response to the classification task, likely a single word or short phrase completing the \"Reply:\" field.\n\"Reply:\" is the final prompt label.",
+  "truncated": false
+}

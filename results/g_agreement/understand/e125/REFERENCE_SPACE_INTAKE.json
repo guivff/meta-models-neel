@@ -1,0 +1,49 @@
+{
+  "experiment": "E125",
+  "status": "REFERENCE_AND_PINNED_MOMENTS_LOCATED_SPACE_MAPPING_REQUIRES_METHOD_VERIFICATION",
+  "at_utc": "2026-10-29T13:50:40.764768+00:00",
+  "reference": {
+    "repository": "https://github.com/Jarus77/mats-nla-workspace",
+    "commit": "23d5a972993dd482b3cb8976584d76642b0db87b",
+    "files": {
+      "reference/analyze24.py": "5326389517e5757ce24e99ebe423c754a1d0588c4114e9a2473bb3107613bf90",
+      "reference/lib24.py": "c5f1b4215d5a18046d2a1467b7bab9fe57e1407678189fdb404d2e29ae9fd76d",
+      "reference/modal24.py": "fd746d0b858e35ed48ca0f07d2cb49e993bce4da8c380b9c5452bb7effe32651",
+      "reference/olens_ar.py": "4bc5c875605a70f05bf8bc3efbc39b11f4b2ec21d4416c7984ebf65c97590d68",
+      "reference/probes.py": "955a7b516d97bee88b149bee1b8a3d9cdffaa7ef1b407cdef5cc4159f4677ae7"
+    },
+    "results_fetched": false
+  },
+  "reference_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmechc/cache/g_agreement/understand/e125/wlens_adapter234",
+  "moments": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/cache/g_agreement/e96/operator/whitener.pt",
+    "sha256": "178ceb36251e5e7ed2eb51aa54ccc4eac45dc928116b7498b46d22657a31c62a",
+    "ridge_c": 0.1,
+    "original_official_commit": "a32590085a6070d75f950155d3c2b3db3eec97ef"
+  },
+  "official_whitening": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e26/reward_audit/evidence/olens_draft/src/oracle_lens/core/whitening.py",
+    "sha256": "265aaa493cfaeadd3ca2dbb110191f1f70c1163eed4c6a906cdfb57f73667415",
+    "git_blob": "a1129f7584eae21e70b8e7f85eeccac738d9ef06",
+    "formula": "(x.float()-mu) @ W.T; W=(Sigma + .1*mean(diag(Sigma))*I)^(-1/2); same eigvalue floors as pinned source"
+  },
+  "checkpoint_meta": {
+    "path": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_assets/agu18dec__olens_and_ar/ar_ptag_pooled/meta.json",
+    "sha256": "d87687fa9b55b95d714c33dd05436d65163ae214b2b39a73ed9cb36572e16a45",
+    "config_fields": {
+      "loss_space": "whiten",
+      "ridge_c": 0.1,
+      "localize_targets": false,
+      "whitener_prefix": "whitening_iolens_pooled"
+    }
+  },
+  "source_qualification": {
+    "reference": "olens_ar.py describes head output as whitened; chosen li/ln head applies LN then W,b directly, no explicit whitener",
+    "official_loss": "pipeline/multilayer_reconstructor.py: multilayer_whitened_cosine_loss explicitly whitens BOTH prediction and raw target",
+    "meaning": "moments access resolved, but these source descriptions do not alone certify that exp24 li/ln head output is already in those whitened coordinates; do not treat raw as whitened or apply a guessed double transform",
+    "needed": "method-owner verified common-coordinate mapping before true-E85 dev fit; no span-rebuild substitute"
+  },
+  "GPU_calls": 0,
+  "fit_or_guard_calls": 0,
+  "runner_ready": false
+}

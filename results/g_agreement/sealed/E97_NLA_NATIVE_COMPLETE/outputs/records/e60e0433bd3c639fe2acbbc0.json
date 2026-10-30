@@ -1,0 +1,12 @@
+{
+  "id": "e60e0433bd3c639fe2acbbc0",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional pattern establishes a strict format: given a sentence, output only the sentiment label (e.g., \"Positive sentiment\" or \"Negative sentiment\").\n\nThe example structure shows a template: \"Example sentence: [sentence]\\nReply: [label]\" \u2014 the model must now produce the actual label for the new sentence \"The sun is shining brightly.\"\n\n\"Reply:\" is the final prompt token, part of the Q&A format, immediately requiring the sentiment label answer (e.g., \"Positive sentiment\" or similar short response).\n\"Given the following sentence, provide the appropriate sentiment label based on the established pattern.\nExample sentence: The sun is shining brightly.\nSentence: The sun is shining brightly.\nReply:\" \u2014 this final \"Reply:\" token demands the direct answer/response to follow immediately, completing the structured prompt format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional pattern establishes a strict format: given a sentence, output only the sentiment label (e.g., \"Positive sentiment\" or \"Negative sentiment\").\n\nThe example structure shows a template: \"Example sentence: [sentence]\\nReply: [label]\" \u2014 the model must now produce the actual label for the new sentence \"The sun is shining brightly.\"\n\n\"Reply:\" is the final prompt token, part of the Q&A format, immediately requiring the sentiment label answer (e.g., \"Positive sentiment\" or similar short response).\n\"Given the following sentence, provide the appropriate sentiment label based on the established pattern.\nExample sentence: The sun is shining brightly.\nSentence: The sun is shining brightly.\nReply:\" \u2014 this final \"Reply:\" token demands the direct answer/response to follow immediately, completing the structured prompt format.",
+  "truncated": false
+}

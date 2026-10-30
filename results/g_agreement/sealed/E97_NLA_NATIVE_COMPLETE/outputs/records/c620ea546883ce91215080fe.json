@@ -1,0 +1,12 @@
+{
+  "id": "c620ea546883ce91215080fe",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is stated (\"If the sentence is positive, reply 'Positive'; if negative, reply 'Negative'\"), establishing a strict binary response format.\n\nThe example structure \"Example sentence: [sentence]\\nReply:\" signals a Q&A format where the model must now provide the classification answer for the specific sentence \"The United States is a country.\"\n\n\"Reply:\" is the final token, acting as a prompt label requiring the immediate classification output (e.g., \"Positive\" or \"Negative\") to follow directly.\n\"Follow the pattern strictly.\nExample sentence: The United States is a country.\nInput sentence: The United States is a country.\nReply:\" \u2014 the final \"Reply:\" token demands the model's direct answer, likely a short classification word or phrase on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is stated (\"If the sentence is positive, reply 'Positive'; if negative, reply 'Negative'\"), establishing a strict binary response format.\n\nThe example structure \"Example sentence: [sentence]\\nReply:\" signals a Q&A format where the model must now provide the classification answer for the specific sentence \"The United States is a country.\"\n\n\"Reply:\" is the final token, acting as a prompt label requiring the immediate classification output (e.g., \"Positive\" or \"Negative\") to follow directly.\n\"Follow the pattern strictly.\nExample sentence: The United States is a country.\nInput sentence: The United States is a country.\nReply:\" \u2014 the final \"Reply:\" token demands the model's direct answer, likely a short classification word or phrase on the next line.",
+  "truncated": false
+}

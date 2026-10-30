@@ -1,0 +1,54 @@
+{
+  "experiment": "E133b",
+  "deviation": 1,
+  "authority": "BRIEF 40a1a54f06f3b6c66c534778faf85e98c5b5e4f3 item2",
+  "status": "C_ARCHIVE_AND_CPU_SELECTOR_PROVENANCE_RECONCILED_Q_OPERATOR_CAP_GUARD_UPDATE_REQUIRED",
+  "operator_reply": "62e8dc937c18dcc45eac51274cf8d40d29bf0faa",
+  "actual_C_archive_sha256": "89773e5ac47fa40b65b91d300b8f9eee7b347842afd16a16c130cfd26d74704f",
+  "actual_C_source_sha256": "23e9492422c4096ea33fc8e398b21568311ef196cea465a45a15e605fd446dff",
+  "original_v3_acquisition_197_members": "BYTE_IDENTICAL to both Cfinal4bf90 and originalea13",
+  "Cwrapper_and_CPU_selection_entrypoint": "BYTE_IDENTICAL to Cfinal4bf90",
+  "CPU_host_checkout_observed": "d8e5d6f7d36acd122166a5256291dac710b50311",
+  "CPU_host_clean_for_pinned_files": true,
+  "CPU_host_import": "PASS actual e133b.selection import from full Qcheckout, no selection invoked or scientific output opened",
+  "CPU_file_pins": {
+    "projects/g_agreement/e133b/selection.py": "b589dbaa8efb380474e570b69937af9ba2f8cf4203c1ce4c3b97c0af54635f4c",
+    "projects/g_agreement/core/analysis_utils.py": "cf6bc5edc904a688b4c292064f230cbb6feec0b9a437ed80ac3b7993396fc390",
+    "projects/g_agreement/core/accounting.py": "d7a8b05b4451faf33db04263d537a6125d7c13b7fe7cf2bba982a5b3cdc38f77",
+    "projects/g_agreement/core/config.py": "b1d3e2dc185896ab8f498349c0a2c5dd4b57688c7d46e402531be04390aa9aaf"
+  },
+  "prior_attempts": [
+    {
+      "kind": "planning",
+      "status": "NO_FIT",
+      "output_seal": "5c5f0c32d9416477579c47bcb485b0f1bdce653d7722eb7ba4f86ccf2ab65d1e",
+      "selection_ran": false
+    },
+    {
+      "kind": "measured_a2",
+      "status": "NO_FIT",
+      "output_seal": "be6d92b716dbb066e32061ee5bf7f599457d1d16cac2d58b6c4c8c7922571c4b",
+      "selection_ran": false
+    }
+  ],
+  "new_authorized_attempts": 1,
+  "cap_seconds": 5400,
+  "max_USD": 7.94,
+  "creation_cutoff": "2026-10-30T10:00:00Z",
+  "hard_stop": "min(original_creation+5400,2026-10-30T12:50Z)",
+  "if_new_attempt_NO_FIT": "E133b NOT_RUN; no further retry authority",
+  "operator_guard_observation": {
+    "worker_sha256": "00559f0e2a6dd9c836390ac73f7d9c36186ed56bddf0cc13891b381f35d61a2b",
+    "old_cap_guard": "<=2160 planning, <=4320 otherwise",
+    "synthetic_5400_evaluation": {
+      "planning": false,
+      "measured": false,
+      "deviation1": false
+    },
+    "required": "Q prospectively pins/tests operator-only cap/assignment/independent-stop change for explicit deviation1 BEFOREcreate. No C operator-file edit/launch."
+  },
+  "remaining_launch_custody": "Q logs exact original staged source archive including own workers, and actual clean CPU selector checkout/hash/call time at selection; no silent relabel/reseal/stitch",
+  "C_model_calls": 0,
+  "C_GPU_calls": 0,
+  "C_analysis_calls": 0
+}

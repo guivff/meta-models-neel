@@ -1,0 +1,185 @@
+{
+  "accounting_before_repin_sha256": "0a9a989cc502b33faf7404e6eb67dfe897ae1fa431ca6868f47c1fcdbcfd9ab9",
+  "assignment_receipt": {
+    "repository_relative_cache_path": "cache/g_agreement/understand/e33-run-v1/a5degugxssuwr4/final/ASSIGNMENT.json",
+    "sha256": "f7fe152a52f799441e2ed1b244602220cbe9888a368bf10f83d2469421c8113a"
+  },
+  "authority": "BRIEF_UNDERSTAND section133 item5; prior attempt time is booked to E33",
+  "booked_prior_gpu_seconds": 927.1,
+  "date": "2026-10-25",
+  "experiment": "E33",
+  "immutable_accounting_evidence": [
+    {
+      "file_sha256_at_commit": "03580bf4d8b4987dd38889533f16387b802a3aad2b29d65d8117eca28342fedb",
+      "git_commit": "426bd5c7c913f2297a04ede354b135ee8d3eae77",
+      "matching_lines": [
+        {
+          "line": 1997,
+          "sha256_excluding_newline": "cf788630036e53c0d17aa5308ca19c4f8380a6ed62656935f99b1d07ae894d39",
+          "text": "{\"timestamp\": \"2026-10-25T11:20:35Z\", \"event\": \"pod_billed\", \"pod_id\": \"a5degugxssuwr4\", \"gpu\": \"NVIDIA H200\", \"booked_by\": \"integrator\", \"counts_toward\": \"E33 (\u00a7128) <= 0.4 GPU-h\", \"experiment\": \"\u00a7128 shared staging: W-lens E33 non-science custody (upload, pins, CPU validate, asset hashing, base Qwen + olens load, pull, close-out)\", \"gpu_hours\": 0.0859, \"billing\": \"11:13:48Z creation to 11:20:35Z exact-ID stop = 406.6 s total = 97.5 s science (next row) + 309.1 s non-science; not additive\"}"
+        },
+        {
+          "line": 1998,
+          "sha256_excluding_newline": "d37b6b952fd25a20e08d780b8721a46e8e1d68d35b807f7d16d8197905c052f4",
+          "text": "{\"timestamp\": \"2026-10-25T11:20:35Z\", \"event\": \"pod_billed\", \"pod_id\": \"a5degugxssuwr4\", \"gpu\": \"NVIDIA H200\", \"booked_by\": \"integrator\", \"counts_toward\": \"E33 (\u00a7128) <= 0.4 GPU-h\", \"experiment\": \"\u00a7128 E33 visible-text LoRA dose sweep (NO_FIT at the warmed gate: F 7,845.7 s vs cap min(1.5F+360,1440)=1,440 s; endpoint check PASS; SCORE_SEAL E33_NO_FIT, 5/5 match; no production scores)\", \"gpu_hours\": 0.0271, \"science_seconds\": 97.5, \"billing\": \"97.5 s science from first science 11:17:37Z to worker exit 11:19:15Z; setup 229.0 s\"}"
+        }
+      ],
+      "repository_path": "results/g_agreement/compute.jsonl"
+    },
+    {
+      "file_sha256_at_commit": "648e85ba7642fe6cbba1c64369e5e94e3b11b5574dea23d11be866a217bfe9f1",
+      "git_commit": "426bd5c7c913f2297a04ede354b135ee8d3eae77",
+      "matching_lines": [
+        {
+          "line": 734,
+          "sha256_excluding_newline": "bf4cf34ac05d6083b5abf899516eef362b400f2e10a776d9ec038df463efdf60",
+          "text": "| a5degugxssuwr4 | W-lens E33 \u00a7128 visible-text dose sweep (integrator-operated) | H200 EUR-IS-4 vol 5on6935gne | created 11:13:48Z; guards + auto_hold, hard stop creation + 1,440 s; pins + inputs verified; endpoint check PASS (zero-dose parity 0.0, full-dose live 30.75, 496 LoRA layers); first science 11:17:37Z; **NO_FIT** at the warmed gate (F 7,845.7 s vs cap 1,440 s); 97.5 s science; pull verified (11 files); no whitener; exact-ID stop 11:20:35Z; 406.6 s billed = 0.1129 GPU-h ($0.60) |"
+        }
+      ],
+      "repository_path": "results/g_agreement/r/PODS.md"
+    },
+    {
+      "file_sha256_at_commit": "e839fa94f1eb3f04d5a0243f8f32f1c8f7b8752a97b5e52acf534bf4f254d37b",
+      "git_commit": "426bd5c7c913f2297a04ede354b135ee8d3eae77",
+      "matching_lines": [
+        {
+          "line": 6398,
+          "sha256_excluding_newline": "99ba189e6b99a671fbcfc52c37c479f6ffa92a03e217dd34b011fe9fcd4cd8d4",
+          "text": "- 2026-10-25 11:15Z integrator \u2192 W-lens: **E33 (\u00a7128, authority `5731e92e`) launched** on fresh H200 `a5degugxssuwr4` (EUR-IS-4, weights volume `5on6935gne`, created 11:13:48Z; Mac hard stop at creation + 1,440 s = 11:37:51Z, the registered total provider cap including setup). Source: W-lens `c7491e2b`, published on r/blindspot as `b4c1d054` (+ records redaction `bf3096c1`); archive `f0fb19d4\u2026`, all 12 source pins verified on the pod; inputs `b12871ee\u2026` (seal `f4a5c485\u2026`, no labels); base Qwen `6a9e13bd` + olens_s3d_rl600 `c95215d5`, 33-file asset manifest; /weights/venv-kernels (fla + causal_conv1d present). Science cap min(1.5F + 360, 1,440) s; admit only if 1.5F + 120 fits; \u2264 0.4 GPU-h. NO_FIT \u2192 seal and stop, no relaunch."
+        },
+        {
+          "line": 6400,
+          "sha256_excluding_newline": "8d92a26b1b72dfab79eb9cc0961526efa6713598289362698c37a4b79fa2c5fb",
+          "text": "- 2026-10-25 11:21Z integrator \u2192 W-lens, Guiv: **E33 (\u00a7128) closed NO_FIT at its registered warmed gate on `a5degugxssuwr4`; no production scores, no relaunch.** Endpoint check PASS (zero-dose vs disabled adapter max |\u0394logit| 0.0; full dose live 30.75; 496 LoRA layers). Warmed medians per costliest unit: P1 1.346\u20131.361 s, P2 1.454\u20131.465 s across the five doses, \u00d7 557 units per path \u2192 F = 7,845.7 s; cap min(1.5F + 360, 1,440) = 1,440 s, required 11,888.5 s vs 1,113.5 s remaining \u2192 NO_FIT. SCORE_SEAL `E33_NO_FIT` (5/5 files match); setup 229.0 s, science 97.5 s; pull verified (11 files) into W-lens's git-ignored `cache/g_agreement/understand/e33-run-v1/a5degugxssuwr4/final/`; no whitener or labels on the pod; exact-ID stop 11:20:35Z; 406.6 s billed = 0.1129 GPU-h ($0.60). A rerun needs a registered decision (scope or cap)."
+        }
+      ],
+      "repository_path": "results/g_agreement/r/HANDOFF.md"
+    },
+    {
+      "file_sha256_at_commit": "126bdc69b9c5e875599bfea21adddbd4451fd54e4e5a9f27ca129285c0c96aea",
+      "git_commit": "d55f01b87f31ed6b2ff53b1560e674b4de10feff",
+      "matching_lines": [
+        {
+          "line": 2007,
+          "sha256_excluding_newline": "6e587389a3e0419c2cdedf4875b2a6ef8a5dd046cc045746670bddbfa5a841f2",
+          "text": "{\"timestamp\": \"2026-10-25T13:16:26Z\", \"event\": \"pod_billed\", \"pod_id\": \"0zujd0ibegty0n\", \"gpu\": \"NVIDIA H200\", \"booked_by\": \"integrator\", \"counts_toward\": \"E33 (\u00a7128/\u00a7133) <= 16,200 s (4.5 GPU-h)\", \"experiment\": \"\u00a7133 E33 slot-0 deploy attempt, setup-only (no SSH, nothing staged, 0 s science): SSH runtime never appeared within the address step's 4-min wait; stopped by id by the address step (deploy_vol.sh retry)\", \"gpu_hours\": 0.0699, \"science_seconds\": 0, \"billing\": \"13:12:14Z creation to 13:16:26Z stop = 251.6 s, setup-only\"}"
+        },
+        {
+          "line": 2008,
+          "sha256_excluding_newline": "b639ce679df8d388a323c3f77e233d108206376423b2df1bb4fadd667fae3c5b",
+          "text": "{\"timestamp\": \"2026-10-25T13:21:39Z\", \"event\": \"pod_billed\", \"pod_id\": \"ijrgmkk2e3tgz2\", \"gpu\": \"NVIDIA H200\", \"booked_by\": \"integrator\", \"counts_toward\": \"E33 (\u00a7128/\u00a7133) <= 16,200 s (4.5 GPU-h)\", \"experiment\": \"\u00a7133 E33 slot-0 deploy attempt, setup-only (no SSH, nothing staged, 0 s science): same: SSH runtime never appeared within 4 min; stopped by id by the address step (second retry)\", \"gpu_hours\": 0.0696, \"science_seconds\": 0, \"billing\": \"13:17:28Z creation to 13:21:39Z stop = 250.4 s, setup-only\"}"
+        },
+        {
+          "line": 2009,
+          "sha256_excluding_newline": "c548df097fdf6a95905af7dfb9bbc02567006ee19377c1b4cec8e09a95bd53f1",
+          "text": "{\"timestamp\": \"2026-10-25T13:23:00Z\", \"event\": \"pod_billed\", \"pod_id\": \"7gsgba27lalfa0\", \"gpu\": \"NVIDIA H200\", \"booked_by\": \"integrator\", \"counts_toward\": \"E33 (\u00a7128/\u00a7133) <= 16,200 s (4.5 GPU-h)\", \"experiment\": \"\u00a7133 E33 slot-0 deploy attempt, setup-only (no SSH, nothing staged, 0 s science): third retry pod; the operator halted the deploy loop for budget reasons (below) and stopped this pod by exact id before guards or staging\", \"gpu_hours\": 0.0051, \"science_seconds\": 0, \"billing\": \"13:22:41Z creation to 13:23:00Z stop = 18.5 s, setup-only\"}"
+        }
+      ],
+      "repository_path": "results/g_agreement/compute.jsonl"
+    },
+    {
+      "file_sha256_at_commit": "5e6b5947de8a97141e007ffba71ac779106bf3d800643eb1ae614cde0011bb3b",
+      "git_commit": "53bf46adeadb8401fbc5c073d7e005d723fdc2a2",
+      "matching_lines": [
+        {
+          "line": 6447,
+          "sha256_excluding_newline": "f8f6fbf3e0680cce7e8a8294491a418265f84431e5ca242b4deec3a39613f374",
+          "text": "- 2026-10-25 13:25Z integrator \u2192 W-lens (\u00a7136 rule 3, operational fix-and-retry, no ruling needed): **E33 re-pin request.** Slot 0's deploys lost 520.5 s to SSH-never-up before any science (pods `0zujd0ibegty0n`, `ijrgmkk2e3tgz2`, `7gsgba27lalfa0`, all EXITED by id, booked setup-only, `d55f01b8`). E33's frozen plan uses its 16,200 s cap exactly (407 prior + 9,475 + 6,318), so the worker can't absorb the 520.5 s. **W-lens:** re-pin RUN_PLAN/assignment templates with prior usage = 927.1 s (406.6 attempt 1 + 520.5) and the two slot allocations trimmed by 521 s in total, keeping the 16,200 s cap and changing no rows, doses, rules or gates. Commit the re-pinned LAUNCH_REQUEST_SLOT0/1; the integrator launches when it lands. Infra note: SSH-never-up has now hit four EUR-IS-4 deploys today (E35 gate 1, E28 slot 1, E33 \u00d72), costing ~250 s each."
+        }
+      ],
+      "repository_path": "results/g_agreement/r/HANDOFF.md"
+    }
+  ],
+  "ledger_commit": "426bd5c7c913f2297a04ede354b135ee8d3eae77",
+  "ledger_repository": "guivff/activation-readers",
+  "operational_repin_date": "2026-10-25",
+  "original_attempt_booked_gpu_seconds": 406.6,
+  "pod_id": "a5degugxssuwr4",
+  "previous_source": {
+    "input_seal_sha256": "f4a5c48506eb4266c245fb68ef09ab4afd6781095a166521141b55d69bd409f2",
+    "plan_sha256": "ea1b91457c2141943134de9da450cca8d335c490c3fc476b0de6561fe4400fad",
+    "published_commit_short": "b4c1d054",
+    "records_redaction_commit_short": "bf3096c1",
+    "runtime_sha256": "e6f672d6b11fc1980ccedfb0a47331da72c0abf16a5567c32781c70b19158d9a",
+    "worker_commit_short": "c7491e2b"
+  },
+  "previous_warmed_forecast": {
+    "F_gpu_hours": 2.179355365222291,
+    "F_seconds": 7845.679314800247,
+    "all_paths_warmed": true,
+    "interpretation": "The coordinator approximate3.5GPUh requirement already includes the1.5 safety factor and overhead. Raw F is2.17936GPUh;1.5F+120 is3.30237GPUh;1.5F+360 is3.36903GPUh. Future shards still require their own measured warmed forecasts.",
+    "old_remaining_seconds": 1113.5426104068756,
+    "old_science_cap_seconds": 1440.0,
+    "paths": 10,
+    "required_remaining_gpu_hours": 3.30236638116677,
+    "required_remaining_seconds": 11888.51897220037,
+    "retrieval_reserve_seconds": 120.0,
+    "safety_factor": 1.5,
+    "unclamped_formula_cap_seconds": 12128.51897220037,
+    "units_per_path": 557
+  },
+  "provider_created_utc": "2026-10-25T11:13:48.406Z",
+  "provider_stop_utc_from_integrator": "2026-10-25T11:20:35Z",
+  "raw_receipts": {
+    "cache/g_agreement/understand/e33-run-v1/a5degugxssuwr4/final/out/ENDPOINT_CHECK.json": {
+      "sha256": "077ddfc6c34d88fd30563a40923dbfd8eb170d892bb9d7c51be53c56e0bc9772"
+    },
+    "cache/g_agreement/understand/e33-run-v1/a5degugxssuwr4/final/out/FORECAST_SEAL.json": {
+      "sha256": "674054f912493922b2c742b9ddb9f22b462a00472c096cb277de29a6f7b6ef16"
+    },
+    "cache/g_agreement/understand/e33-run-v1/a5degugxssuwr4/final/out/RUN.json": {
+      "sha256": "4e44b6b2d54f6f8bbef9b488acdc9a94df05ae321c5f6b482e6c916733e75c53"
+    },
+    "cache/g_agreement/understand/e33-run-v1/a5degugxssuwr4/final/out/SCORE_SEAL.json": {
+      "sha256": "08ab48c20e15687e2d66a509bb3555d6284523c4c6982946038e6f0259fbfe0b"
+    },
+    "cache/g_agreement/understand/e33-run-v1/a5degugxssuwr4/final/out/WARMED_FORECAST.json": {
+      "sha256": "eadccdf076a69da20a33892cfd8c0aeb406f70af93dc08b6183a885a286aea5d"
+    },
+    "cache/g_agreement/understand/e33-run-v1/a5degugxssuwr4/final/out/provenance.json": {
+      "sha256": "67101395d630418ac46e7df42056125fb3522c6433bd38bf44469dc8c23381fb"
+    }
+  },
+  "receipt_validation": {
+    "assignment_hash_matches_run": true,
+    "endpoint_check": {
+      "activation_injection": false,
+      "full_vs_disabled_max_abs_logit": 30.75,
+      "lora_layer_count": 496,
+      "zero_vs_disabled_max_abs_logit": 0.0
+    },
+    "production_score_file_present": false,
+    "score_seal_files_verified": 5
+  },
+  "remaining_new_attempt_gpu_seconds": 15272,
+  "repin_authority_commit": "53bf46adeadb8401fbc5c073d7e005d723fdc2a2",
+  "reservation_rule": "ceil committed integrator custody seconds; includes setup, science, retrieval and exact-ID close-out",
+  "reserved_prior_gpu_seconds": 928,
+  "schema": "E33_PRIOR_ATTEMPT_ACCOUNTING_v1",
+  "setup_only_attempts": [
+    {
+      "pod_id": "0zujd0ibegty0n",
+      "provider_gpu_seconds": 251.6,
+      "science_seconds": 0,
+      "terminated": true
+    },
+    {
+      "pod_id": "ijrgmkk2e3tgz2",
+      "provider_gpu_seconds": 250.4,
+      "science_seconds": 0,
+      "terminated": true
+    },
+    {
+      "pod_id": "7gsgba27lalfa0",
+      "provider_gpu_seconds": 18.5,
+      "science_seconds": 0,
+      "terminated": true
+    }
+  ],
+  "setup_only_attempts_total_gpu_seconds": 520.5,
+  "status": "AUDITED_PRIOR_NO_FIT_AND_SETUP_FAILURES_NO_PRODUCTION_SCORES",
+  "total_experiment_cap_gpu_seconds": 16200,
+  "worker_receipt_is_not_full_custody": "RUN.json stops at worker exit; total integrator custody extends through retrieval and pod stop. Do not substitute worker elapsed or science time for billed total.",
+  "worker_receipt_provider_elapsed_seconds": 326.45864844322205,
+  "worker_receipt_science_elapsed_seconds": 97.50085949897766
+}

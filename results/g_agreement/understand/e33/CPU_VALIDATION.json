@@ -1,0 +1,21 @@
+{
+  "GPU_hours": 0,
+  "checks": [
+    "all2100prompt_tokenization_equivalence",
+    "original_float32_candidate_sum_scoring_equivalence",
+    "dose_scaling_and_exception_restore",
+    "paired_cluster_difference_CI",
+    "complete_grid_and_seal_rejection",
+    "budget_all10paths_and_no_fit"
+  ],
+  "command": "python -m unittest discover -s results/g_agreement/understand/e33 -p test_*.py -v",
+  "date": "2026-10-25",
+  "errors": 0,
+  "failures": 0,
+  "model_forwards_on_real_model": 0,
+  "real_gpu_forecast_measured": false,
+  "seconds": 4.266787666943856,
+  "skipped": 0,
+  "status": "PASS",
+  "tests_run": 30
+}

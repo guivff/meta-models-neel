@@ -1,0 +1,5 @@
+# E13(b): descriptive evidence audit
+
+Dated 2026-10-24T04:54:21.112992+00:00, before this evidence classification or example selection. Guiv requests five seeded verbatim examples each of section84 NLA mentions, section84 Oracle enactments, and W1 NLA table-column mentions. Seed20261024; opaque-ID hash ranking fixes selection with no outcome/evidence curation.
+
+Exact rules in EVIDENCE_AUDIT_RULES.json. Evidence-only matching is done before loading the private keys. The frozen row property names supply the property flag; token-reference and bare-lexeme patterns supply an echo-compatible flag. Four mutually exclusive buckets preserve both and neither rather than assert a false binary. These are surface proxies, not new mention/enact labels. No truth, correctness or true-token content is consulted for classification. Then join keys only to report row/reader and true A/B for the chosen examples. Publish full unchanged readout and coder evidence for all15 examples; this is an unblinded audit artifact and must not be sent to a fresh blind coder. Old codes, metrics and seals remain unchanged. No API/GPU work.

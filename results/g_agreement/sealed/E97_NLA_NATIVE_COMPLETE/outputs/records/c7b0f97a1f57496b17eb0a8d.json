@@ -1,0 +1,12 @@
+{
+  "id": "c7b0f97a1f57496b17eb0a8d",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict pattern: example sentence \u2192 classification label \u2192 new test sentence \u2192 \"Reply:\" prompt, requiring the model to output the correct label (\"Friendship\").\n\nThe instruction explicitly states the rule: \"if the sentence describes friendship, the answer is 'Friendship'; otherwise, 'Not Friendship'\" \u2014 constraining the response to one of these two labels.\n\n\"Reply:\" is the final token, functioning as a prompt label in the structured example, immediately requiring the model's direct answer (the classification label \"Friendship\") for the test sentence \"The two individuals are close friends.\"\n\"Example pattern:\nSentence: 'The two individuals are close friends.'\nClassification: Friendship\nSentence: 'The two individuals are close friends.'\nReply:\" \u2014 the final token demands the answer text immediately following, completing the structured response format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict pattern: example sentence \u2192 classification label \u2192 new test sentence \u2192 \"Reply:\" prompt, requiring the model to output the correct label (\"Friendship\").\n\nThe instruction explicitly states the rule: \"if the sentence describes friendship, the answer is 'Friendship'; otherwise, 'Not Friendship'\" \u2014 constraining the response to one of these two labels.\n\n\"Reply:\" is the final token, functioning as a prompt label in the structured example, immediately requiring the model's direct answer (the classification label \"Friendship\") for the test sentence \"The two individuals are close friends.\"\n\"Example pattern:\nSentence: 'The two individuals are close friends.'\nClassification: Friendship\nSentence: 'The two individuals are close friends.'\nReply:\" \u2014 the final token demands the answer text immediately following, completing the structured response format.",
+  "truncated": false
+}

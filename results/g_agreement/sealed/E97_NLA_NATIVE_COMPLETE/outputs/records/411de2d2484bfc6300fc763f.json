@@ -1,0 +1,12 @@
+{
+  "id": "411de2d2484bfc6300fc763f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: definition given, then examples, now a test case requiring a label response (\"happy\" or \"sad\").\n\nThe task requires classifying a specific sentence (\"I am a student\") as \"happy\" or \"sad\" based on the defined rules, with the answer expected next.\n\n\"Example sentence: 'I am a student.'\\nReply:\" is the final prompt line, acting as a structured Q&A template where \"Reply:\" directly precedes the model's classification answer (e.g., \"happy\" or \"sad\").\n\"Given the following example format:\\nExample sentence: 'I am a student.'\\nClassification: [happy/sad]\\nExample sentence: 'I am a student.'\\nReply:\" \u2014 the final token \"Reply:\" demands the actual answer label immediately following.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: definition given, then examples, now a test case requiring a label response (\"happy\" or \"sad\").\n\nThe task requires classifying a specific sentence (\"I am a student\") as \"happy\" or \"sad\" based on the defined rules, with the answer expected next.\n\n\"Example sentence: 'I am a student.'\\nReply:\" is the final prompt line, acting as a structured Q&A template where \"Reply:\" directly precedes the model's classification answer (e.g., \"happy\" or \"sad\").\n\"Given the following example format:\\nExample sentence: 'I am a student.'\\nClassification: [happy/sad]\\nExample sentence: 'I am a student.'\\nReply:\" \u2014 the final token \"Reply:\" demands the actual answer label immediately following.",
+  "truncated": false
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+	</dict>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>Label</key>
+	<string>com.mats.e96.i4.r2.hardstop</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/caffeinate</string>
+		<string>-i</string>
+		<string>/opt/homebrew/bin/python3.12</string>
+		<string>/private/tmp/e96-i4-slot1-r2/replacement_custody.py</string>
+		<string>hardstop</string>
+		<string>/private/tmp/e96-i4-slot1-r2</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/private/tmp/e96-i4-slot1-r2/hardstop.log</string>
+	<key>StandardOutPath</key>
+	<string>/private/tmp/e96-i4-slot1-r2/hardstop.log</string>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+	<key>WorkingDirectory</key>
+	<string>/private/tmp/e96-i4-slot1-r2</string>
+</dict>
+</plist>

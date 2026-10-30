@@ -1,0 +1,12 @@
+{
+  "id": "5ca72ac382e1c9b3bb3aff08",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional pattern establishes a strict format: given a sentence, output only \"positive\" or \"negative\" sentiment label.\n\nThe example structure (\"Example sentence: ... Reply: positive\") sets up a template being followed, with the model now expected to apply the rule to the new sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a Q&A format, immediately requiring the sentiment answer (\"positive\" or \"negative\") for the specific sentence \"The weather is very cold today.\"\n\"Given the following sentence, provide the corresponding sentiment label according to the pattern.\nSentence: 'The weather is very cold today.'\nExample sentence: 'The weather is very cold today.'\nReply:\" \u2014 the final token demands the direct answer/response text to follow immediately.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional pattern establishes a strict format: given a sentence, output only \"positive\" or \"negative\" sentiment label.\n\nThe example structure (\"Example sentence: ... Reply: positive\") sets up a template being followed, with the model now expected to apply the rule to the new sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a Q&A format, immediately requiring the sentiment answer (\"positive\" or \"negative\") for the specific sentence \"The weather is very cold today.\"\n\"Given the following sentence, provide the corresponding sentiment label according to the pattern.\nSentence: 'The weather is very cold today.'\nExample sentence: 'The weather is very cold today.'\nReply:\" \u2014 the final token demands the direct answer/response text to follow immediately.",
+  "truncated": false
+}

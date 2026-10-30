@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+	</dict>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>Label</key>
+	<string>com.mats.e106.i4.p-a1.supervise</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/caffeinate</string>
+		<string>-i</string>
+		<string>/opt/homebrew/bin/python3.12</string>
+		<string>/private/tmp/e106-i4-p-a1/custody.py</string>
+		<string>supervise</string>
+		<string>/private/tmp/e106-i4-p-a1</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/private/tmp/e106-i4-p-a1/supervise.log</string>
+	<key>StandardOutPath</key>
+	<string>/private/tmp/e106-i4-p-a1/supervise.log</string>
+	<key>WorkingDirectory</key>
+	<string>/private/tmp/e106-i4-p-a1</string>
+</dict>
+</plist>

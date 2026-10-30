@@ -1,0 +1,86 @@
+{
+  "active_paid_workers": 2,
+  "analysis_run": false,
+  "at_epoch": 1793354675.779603,
+  "ba2_source_sha256": "3db60898e91ff0b368c70f21805512f4dc37d18cd1bb63c57adcde9d71f2affe",
+  "cost": {
+    "booked_429_upper_bound_usd": "0",
+    "booked_usd": "1.5061074375",
+    "known_provider_cost_usd": "1.44945775",
+    "legacy_ledger_summary": {
+      "actual_usd": "1.44945775",
+      "cap_usd": "60",
+      "committed_usd": "1.5061074375",
+      "unresolved_reserve_usd": "0.0566496875"
+    },
+    "lifetime_cap_usd": "60",
+    "unknown_physical_reserve_usd": "0.0566496875",
+    "upper_bound_provenance": {
+      "authority": "e34073059",
+      "canonical_ledger_sha256": "596a027fadd8c9bdcd052231b3ec7cf9112379405e2562090aa05c64a47a4de0",
+      "events": [],
+      "provider_actual_cost_known": false,
+      "total_booked_upper_bound_usd": "0"
+    }
+  },
+  "experiment": "E95",
+  "no_rate_or_concurrency_increase": true,
+  "original_unknown_held_usd": "0.0452490625",
+  "paid_cutoff_utc": "2026-10-30T15:00:00Z",
+  "pressure": {
+    "baseline": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "shared": 2
+    },
+    "events": 0,
+    "pause2": 0,
+    "pause3": 0
+  },
+  "priority_pause": {
+    "C_allocation_now": "RELEASED",
+    "bank": "E140",
+    "priority_protected": true,
+    "stage2_first_send_after": "2026-10-30T10:02:26Z",
+    "stage2_last_send_before": "2026-10-30T09:54:12Z",
+    "stage3_first_send_after": "2026-10-30T10:02:27Z",
+    "stage3_last_send_before": "2026-10-30T09:54:13Z"
+  },
+  "projection_basis": "last10min observed physical rates; primary invalid fraction allowed both registered retry rounds, extrapolated to remaining grids",
+  "stages": {
+    "1": {
+      "estimated_physical_remaining": 0,
+      "finish_utc": "2026-10-30T08:55:39.248507+00:00",
+      "missing_or_pending": 73,
+      "physical_rate_last10min": null,
+      "physical_requests": 899,
+      "processed": 760,
+      "status": "COMPLETE_DELIVERED",
+      "total": 760,
+      "valid": 687
+    },
+    "2": {
+      "estimated_physical_remaining": 1428.0,
+      "finish_utc": "2026-10-30T13:10:00+00:00",
+      "missing_or_pending": 64,
+      "physical_rate_last10min": 7.877,
+      "physical_requests": 567,
+      "processed": 564,
+      "status": "RUNNING",
+      "total": 1626,
+      "valid": 500
+    },
+    "3": {
+      "estimated_physical_remaining": 467.6,
+      "finish_utc": "2026-10-30T12:05:00+00:00",
+      "missing_or_pending": 53,
+      "physical_rate_last10min": 3.94,
+      "physical_requests": 293,
+      "processed": 292,
+      "status": "RUNNING",
+      "total": 558,
+      "valid": 239
+    }
+  }
+}

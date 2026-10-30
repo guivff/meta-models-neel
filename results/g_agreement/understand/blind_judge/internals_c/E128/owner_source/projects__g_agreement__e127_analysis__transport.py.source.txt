@@ -1,0 +1,129 @@
+"""Shared prospective E127/E128 sealed-source transport, separate global guards."""
+import hashlib,subprocess
+from pathlib import Path
+from projects.g_agreement.understand.wmech2 import core
+from .common import require
+from .classifier import classify,pair_preference,MATCHER_SHA256
+ROOT=Path(__file__).resolve().parents[3]
+CUSTODY=Path('/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand')
+PRIVATE_SHA='495bbb19179f507869779d611c737ac82181f8c404054fcffd6963b7615fd0e4'
+CANDIDATE_SHA='549fa110f6f0f0276dda18b428b26de9c921e9fd97bced195f754a017ebe99c0'
+RUBRIC_SHA='03d9377b1ba3c2923cef0c3dd812cc3cc3bb6b8108a68bfe4f8e12b49e253613'
+
+
+def committed(here):
+    for name,h in core.read(here/'DEPENDENCIES.json').items():require(core.sha(ROOT/name)==h,'changed dependency '+name)
+    for p in here.iterdir():
+        if p.suffix in ('.py','.json','.md'):
+            blob=subprocess.check_output(['git','show','HEAD:'+str(p.relative_to(ROOT))],cwd=ROOT)
+            require(hashlib.sha256(blob).hexdigest()==core.sha(p),'uncommitted adapter '+p.name)
+    return subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+
+
+def cohort(spec,experiment):
+    ip=Path(spec['inventory_seal']);meta=core.verify(ip,spec['inventory_sha256'])
+    require(meta['experiment']==experiment and meta['status']=='SOURCE_ONLY_COHORT_BOUND' and meta['labels_cpu_only'] is True,'original source-only cohort')
+    require(meta['source_e104_private_sha256']==PRIVATE_SHA==core.sha(spec['e104_private']),'original E104 CPU labels')
+    private=core.read(spec['e104_private']);original={c:{x['item_id']:x for x in private if x['row']=='fact_recall' and x['arm']=='U' and x['condition']==c}for c in ('steered','random')}
+    require(meta['behaviour_classifier_sha256']==MATCHER_SHA256,'unchanged parse_target_answer source pin')
+    require(spec['candidate_sha256']==CANDIDATE_SHA,'original frozen E127 CPU candidate packet')
+    cp=Path(spec['candidate_seal']);core.verify(cp,spec['candidate_sha256'])
+    require(meta['candidate_sha256']==spec['candidate_sha256'],'frozen CPU candidate packet binding')
+    labels=core.unique(core.read(cp.parent/'LABELS.PRIVATE.json'),'original_base_id')
+    items=core.read(ip.parent/'INVENTORY.json');by=core.unique(items,'item_id')
+    require(len(by)==84 and all(set(by)==set(v)for v in original.values()),'same original84 fact_recall test items')
+    for i,x in by.items():require(x['new_value']==original['steered'][i]['target'] and x['old_value'] in ('A','B') and x['old_value']!=x['new_value'],'original old/new orientation')
+    require(set(labels)==set(by),'same84 CPU candidate identities')
+    for i,x in by.items():
+        x['candidate_strings']={'old':labels[i]['old_value'],'new':labels[i]['new_value']}
+    return items,original,meta
+
+
+def inputs(spec,experiment,items,original,inventory_meta):
+    op=Path(spec['output_seal']);meta=core.verify(op,spec['output_sha256'])
+    require(meta['experiment']==experiment and meta['status']=='COMPLETE' and meta['inventory_sha256']==spec['inventory_sha256'],'complete bound original outputs')
+    require(meta['judging_bank']==experiment and type(meta['judging_cap_usd'])in(int,float) and 0<meta['judging_cap_usd']<=3,'registered separate bank cap at most USD3')
+    require(meta['rubric_sha256']==RUBRIC_SHA and meta['route_verified'] is True and meta['labels_cpu_only'] is True and meta['redaction_audit_complete'] is True,'original E104/E109 rubric/route/privacy')
+    if experiment=='E127':
+        require(meta['no_hooks'] is True and meta['layers']==[44,52,60] and meta['greedy_answer_max_new_tokens']==3,'registered E127 acquisition')
+    else:
+        require(meta['layers']==[44,52] and meta['new_doses']==[2,4] and meta['alpha8_reused_unchanged'] is True
+                and meta['steer']==dict(block=40,positions='eight_before_read',direction='class_mean'),'original E128 dose-only intervention')
+    require(meta['behaviour_classifier_sha256']==inventory_meta['behaviour_classifier_sha256'],'frozen CPU answer/flip classifier; no interpretation from readouts')
+    sources=meta['source_seals'];seals=[core.verify(x['seal'],x['sha256'])for x in sources];cache={}
+    def ref(p,complete=False):
+        i=p['seal_index'];require(type(i)is int and 0<=i<len(seals) and p['member'] in seals[i]['files'],'sealed original pointer')
+        if complete:require(seals[i]['status'] in ('COMPLETE','COMPLETE_ONCE'),'no partial pilots')
+        key=(i,p['member'])
+        if key not in cache:cache[key]=core.read(Path(sources[i]['seal']).parent/p['member'])
+        x=cache[key];require(isinstance(p['keys'],list) and all(type(k)in(int,str)for k in p['keys']),'literal source keys')
+        for k in p['keys']:x=x[k]
+        return x
+    ms=core.unique(core.read(op.parent/'MEASUREMENTS.json'),'item_id');require(set(ms)=={x['item_id']for x in items},'complete original item grid')
+    records=[]
+    for item in items:
+        i=item['item_id'];m=ms[i]
+        def oracle(cell,condition,layer,dose=None):
+            identity=ref(cell['identity']);code=ref(cell['code'],True);text=ref(cell['text'],True)
+            require(identity['item_id']==i and identity['row']=='fact_recall' and identity['condition']==condition
+                    and identity['layer']==layer and identity['reader']=='oracle' and identity.get('dose')==dose,'original readout identity')
+            if code is None and experiment=='E127':
+                pointer=cell['code'];require(pointer['keys'] and pointer['keys'][-1]=='code','terminal code pointer')
+                terminal=ref(dict(pointer,keys=pointer['keys'][:-1]),True)
+                require(terminal['id']==identity['judgment_id'] and terminal['status']=='UNPARSEABLE',
+                        'null code requires original UNPARSEABLE disposition and identity')
+                code=dict(id=identity['judgment_id'],category='UNPARSEABLE',values=[],evidence='')
+            require(code['id']==identity['judgment_id'],'original judgment/readout join')
+            if dose==8:require(seals[cell['code']['seal_index']]['experiment'] in ('E104','E109'),'reuse original8 judgments, no new bank')
+            else:require(seals[cell['code']['seal_index']]['experiment']==experiment,'correct new judgment bank')
+            core.score(code,item['new_value'],text)  # exact frozen rubric/evidence validation
+            return code
+        def behaviour(cell,condition,dose=None):
+            identity=ref(cell['identity']);record=ref(cell['record'],True)
+            require(identity['item_id']==i and identity['condition']==condition and identity.get('dose')==dose
+                    and identity['classifier_sha256']==inventory_meta['behaviour_classifier_sha256'] and identity['raw_id']==record['id'],'frozen answer classification/source identity')
+            require(seals[cell['record']['seal_index']]['experiment']==experiment,'correct new greedy-answer source')
+            answer=classify(record,item['candidate_strings'])
+            return answer,pair_preference(record,item['new_value'])
+        out=dict(item)
+        if experiment=='E127':
+            conditions={};require(set(m['conditions'])=={'context_update','neutral_prefix','no_prefix'},'all three E127 conditions')
+            for c,z in m['conditions'].items():
+                require(set(z['oracle'])=={'44','52','60'},'all E127 layers')
+                answer,pair=behaviour(z['behaviour'],c)
+                conditions[c]=dict(answer=answer,pair_preference_flip_descriptive=pair,oracle={l:oracle(z['oracle'][str(l)],c,l)for l in (44,52,60)})
+            out['conditions']=conditions
+        else:
+            doses={};require(set(m['doses'])=={'2','4','8'},'new2/4 plus original8')
+            for dose in (2,4,8):
+                ds=m['doses'][str(dose)];require(set(ds)=={'steered','random'},'same-dose random control');doses[dose]={}
+                for c,z in ds.items():
+                    require(set(z['oracle'])=={'44','52'},'both E128 layers')
+                    if dose==8:
+                        # Original alpha8 has pair preference only; do not invent greedy text.
+                        answer=None;pair=original[c][i]['flipped'];flipped=None
+                    else:
+                        answer,pair=behaviour(z['behaviour'],c,dose)
+                        flipped=None if answer is None else answer=='new'
+                    doses[dose][c]=dict(flipped=flipped,answer=answer,pair_preference_flip_descriptive=pair,oracle={l:oracle(z['oracle'][str(l)],c,l,dose)for l in (44,52)})
+            out['doses']=doses
+        records.append(out)
+    return records
+
+
+def run(spec,experiment,commit,analyze):
+    guard=CUSTODY/experiment.lower()/'ANALYSIS_ONCE.json';require(not guard.exists(),'once guard consumed; no replay')
+    items,original,inventory_meta=cohort(spec,experiment)
+    records=inputs(spec,experiment,items,original,inventory_meta)
+    out=core.claim(dict(analysis=spec['analysis'],guard=str(guard),output_sha256=spec['output_sha256']),commit)
+    result=analyze(records)
+    if experiment=='E127':
+        result['pair_preference_descriptive']={c:{'flipped_n':sum(x['conditions'][c]['pair_preference_flip_descriptive'] is True for x in records),'missing_n':sum(x['conditions'][c]['pair_preference_flip_descriptive'] is None for x in records)}for c in ('context_update','neutral_prefix','no_prefix')}
+    else:
+        result['pair_preference_descriptive']={str(d):{c:{'flipped_n':sum(x['doses'][d][c]['pair_preference_flip_descriptive'] is True for x in records),'missing_n':sum(x['doses'][d][c]['pair_preference_flip_descriptive'] is None for x in records)}for c in ('steered','random')}for d in (2,4,8)}
+        result['alpha8_greedy_status']='MISSING: original frozen E104 pair preference is descriptive only, not a greedy answer'
+    result['classifier']='unchanged core.analysis_utils.parse_target_answer; exactly one sealed string match; other means neither; no added aliases'
+    result['classifier_sha256']=MATCHER_SHA256
+    core.write(out/'RESULTS.json',result);core.write(out/'BINDING.json',spec)
+    core.seal(out,'ANALYSIS_SEAL.json',experiment=experiment,status='COMPLETE_ONCE',code_commit=commit,inventory_sha256=spec['inventory_sha256'],output_sha256=spec['output_sha256'],new_calls=0)
+    return out/'ANALYSIS_SEAL.json'

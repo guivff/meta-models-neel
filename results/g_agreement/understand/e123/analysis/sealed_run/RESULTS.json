@@ -1,0 +1,193 @@
+{
+  "decision_scope": "R-DIS1 separately per row; random direction descriptive; no pooled or best-layer selection",
+  "experiment": "E123",
+  "layers": [
+    44,
+    52
+  ],
+  "reader": "oracle",
+  "rows": {
+    "fact_recall": {
+      "AUROC": {
+        "CI95": [
+          0.8452380952380952,
+          0.9285714285714286
+        ],
+        "binary_score": true,
+        "estimate": 0.8869047619047619,
+        "n_stale": 47,
+        "n_unhooked": 84,
+        "ties": "half credit"
+      },
+      "R_DIS1": "NOT MET",
+      "bootstrap": {
+        "CI": "paired item percentile95",
+        "defined_draws": 2000,
+        "draws": 2000,
+        "seed": 20261028,
+        "undefined_draws": 0,
+        "unit": "source item; all conditions/layers resampled together"
+      },
+      "false_positive_rate": {
+        "Wilson95": [
+          0.14986020837445108,
+          0.32646907147167215
+        ],
+        "k": 19,
+        "n": 84,
+        "rate": 0.2261904761904762
+      },
+      "handling": "UNPARSEABLE excluded only from affected pair; never zero. Steered non-stale excluded from positive class; all parseable unhooked retained. No complete-case filter across conditions.",
+      "missing": {
+        "random": {
+          "either_layer_missing": 0,
+          "known_stale_44": 58,
+          "missing_44": 0,
+          "missing_52": 0,
+          "parseable_pairs": 84,
+          "planned_items": 84,
+          "stale_score_missing": 0,
+          "unknown_stale_44": 0
+        },
+        "steered": {
+          "either_layer_missing": 1,
+          "known_stale_44": 47,
+          "missing_44": 1,
+          "missing_52": 0,
+          "parseable_pairs": 83,
+          "planned_items": 84,
+          "stale_score_missing": 0,
+          "unknown_stale_44": 1
+        },
+        "unhooked": {
+          "either_layer_missing": 0,
+          "known_stale_44": 65,
+          "missing_44": 0,
+          "missing_52": 0,
+          "parseable_pairs": 84,
+          "planned_items": 84,
+          "stale_score_missing": 0,
+          "unknown_stale_44": 0
+        }
+      },
+      "n_source_items": 84,
+      "random_direction_control": {
+        "AUROC_vs_unhooked": 0.6428571428571428,
+        "decision_rule": false,
+        "disagreement": {
+          "Wilson95": [
+            0.40685182889998844,
+            0.6159164632806147
+          ],
+          "k": 43,
+          "n": 84,
+          "rate": 0.5119047619047619
+        }
+      },
+      "reading": "registered usability criterion not established",
+      "stale_detection_rate": {
+        "Wilson95": [
+          0.9244423958360037,
+          1.0
+        ],
+        "k": 47,
+        "n": 47,
+        "rate": 1.0
+      }
+    },
+    "language_plan": {
+      "AUROC": {
+        "CI95": [
+          0.44349053616661976,
+          0.6744642857142857
+        ],
+        "binary_score": true,
+        "estimate": 0.5568181818181819,
+        "n_stale": 22,
+        "n_unhooked": 32,
+        "ties": "half credit"
+      },
+      "R_DIS1": "NOT MET",
+      "bootstrap": {
+        "CI": "paired item percentile95",
+        "defined_draws": 2000,
+        "draws": 2000,
+        "seed": 20261028,
+        "undefined_draws": 0,
+        "unit": "source item; all conditions/layers resampled together"
+      },
+      "false_positive_rate": {
+        "Wilson95": [
+          0.1325240091850904,
+          0.4210655899424448
+        ],
+        "k": 8,
+        "n": 32,
+        "rate": 0.25
+      },
+      "handling": "UNPARSEABLE excluded only from affected pair; never zero. Steered non-stale excluded from positive class; all parseable unhooked retained. No complete-case filter across conditions.",
+      "missing": {
+        "random": {
+          "either_layer_missing": 14,
+          "known_stale_44": 29,
+          "missing_44": 8,
+          "missing_52": 6,
+          "parseable_pairs": 36,
+          "planned_items": 50,
+          "stale_score_missing": 5,
+          "unknown_stale_44": 8
+        },
+        "steered": {
+          "either_layer_missing": 15,
+          "known_stale_44": 29,
+          "missing_44": 7,
+          "missing_52": 10,
+          "parseable_pairs": 35,
+          "planned_items": 50,
+          "stale_score_missing": 7,
+          "unknown_stale_44": 7
+        },
+        "unhooked": {
+          "either_layer_missing": 18,
+          "known_stale_44": 29,
+          "missing_44": 11,
+          "missing_52": 12,
+          "parseable_pairs": 32,
+          "planned_items": 50,
+          "stale_score_missing": 5,
+          "unknown_stale_44": 11
+        }
+      },
+      "n_source_items": 50,
+      "random_direction_control": {
+        "AUROC_vs_unhooked": 0.5,
+        "decision_rule": false,
+        "disagreement": {
+          "Wilson95": [
+            0.13750477662994837,
+            0.4107045376672835
+          ],
+          "k": 9,
+          "n": 36,
+          "rate": 0.25
+        }
+      },
+      "reading": "not usable",
+      "stale_detection_rate": {
+        "Wilson95": [
+          0.19733204670366125,
+          0.5704829190986899
+        ],
+        "k": 8,
+        "n": 22,
+        "rate": 0.36363636363636365
+      }
+    }
+  },
+  "rule": {
+    "AUROC_lower_strictly_above": 0.7,
+    "AUROC_min": 0.8,
+    "unhooked_FPR_max": 0.15,
+    "unusable_AUROC_max": 0.6
+  }
+}

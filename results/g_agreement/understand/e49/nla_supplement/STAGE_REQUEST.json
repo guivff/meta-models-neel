@@ -1,0 +1,63 @@
+{
+  "account_gate_authority": "86ba523d",
+  "analysis_command": "results/g_agreement/understand/e49/nla_supplement/ANALYSIS_COMMAND.json",
+  "assignment_schema": {
+    "absolute_deadline_epoch": "INTEGRATOR_VERIFIED_DEADLINE",
+    "cap_seconds": 7150,
+    "custody_started_epoch": "EXISTING_POD_STAGE_CUSTODY_START",
+    "daily_budget_verified": true,
+    "existing_pod": "INTEGRATOR_BOOLEAN",
+    "forecast_sha256": "4bed90c758721fb0b4c9fe09c682a887fae7bb387de133fa2866fbf11e972a16",
+    "gpu_count": 1,
+    "input_seal_sha256": "57f68f24fce5c23813d59fa82b56c75455c3f771c268a2b0849f985550cd6abc",
+    "measured_forecast_seconds": 2298.1823651380837,
+    "pod_created_epoch": "FRESH_POD_PROVIDER_CREATION",
+    "pod_id": "EXISTING_POD_ID",
+    "projected_daily_USD": "INTEGRATOR_VERIFIED_TOTAL",
+    "source_seal_sha256": "648021d4e7c7f28dfd96312dac4cc133b804330133d58d6368a39de65a910215"
+  },
+  "authority": "8b2012d7 supplement un-deferred; E56 measured NLA timing",
+  "cap_authority": "cc6c1b4e",
+  "day_ceiling_USD": 500,
+  "descriptive_only": true,
+  "experiment": "E49_NLA_SUPPLEMENT",
+  "forecast_required": false,
+  "input_archive": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e49/nla_supplement/inputs_v2.tar.gz",
+    "sha256": "b9e9594b924b6a80db31a6edcf0acb29cd82af0849293430d1959b807c67afb1"
+  },
+  "integrator_projected_total_check_required_each_launch": true,
+  "launch_allowed": true,
+  "max_new_GPU_seconds": 7150,
+  "new_pods": 1,
+  "placement": "first free pod or fresh dedicated pod; all custody including setup in7150s; Track Q USD260 projected account gate; day ceiling USD500 with USD100 reserved for I-2 E73/E74",
+  "projected_account_gate_USD": 260,
+  "reserved_I2_USD": 100,
+  "reserved_I2_tracks": [
+    "E73",
+    "E74"
+  ],
+  "runtime_forecast": "1.25 * running arithmetic mean of completed real batch seconds * remaining batches; warm-up excluded, absolute deadline and hard alarm retained",
+  "runtime_forecast_authority": "a6d0e06e",
+  "shards": 1,
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e49/nla_supplement/source_execution_binding_c2da_v1.tar.gz",
+  "source_archive_sha256": "590ebc2469aa23cf4c79f74369971c9cb7e954c26b5841402ee12b8585b0162e",
+  "source_commit": null,
+  "source_seal_sha256": "648021d4e7c7f28dfd96312dac4cc133b804330133d58d6368a39de65a910215",
+  "status": "READY",
+  "track": "Q",
+  "warmup_authority": "d7b4145b",
+  "warmup_policy": "one synthetic batch discarded, excluded from forecast, charged to fixed stage clock; no real items",
+  "worker_argv": [
+    "python",
+    "results/g_agreement/understand/e49/nla_supplement/worker.py",
+    "--inputs",
+    "/workspace/e49_nla_supplement/inputs",
+    "--assets",
+    "/workspace/e56/assets.json",
+    "--assignment",
+    "/workspace/e49_nla_supplement/assignment.json",
+    "--out",
+    "/workspace/e49_nla_supplement/out"
+  ]
+}

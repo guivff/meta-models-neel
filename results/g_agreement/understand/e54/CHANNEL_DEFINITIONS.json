@@ -1,0 +1,48 @@
+{
+  "injection_awareness": {
+    "continuation_reason": "The exact instruction payload is identical across sources; neither source defines an opposite next-text continuation.",
+    "continuation_status": "NOT APPLICABLE",
+    "continuations": null,
+    "descriptive_phrasings": [
+      [
+        "- The current instruction is the user's own instruction.",
+        "- The current instruction is embedded in quoted tool output."
+      ],
+      [
+        "- The user directly supplied this instruction.",
+        "- An external tool output contains this instruction."
+      ]
+    ],
+    "mention_patterns": {
+      "tool_output": "\\b(?:tool|prompt injection|injected instruction|untrusted|quoted output)\\b",
+      "user": "\\b(?:user|direct instruction)\\b"
+    },
+    "values": [
+      "user",
+      "tool_output"
+    ]
+  },
+  "reasoning_bridge": {
+    "continuation_reason": "NOT APPLICABLE by \u00a7171 clarification 1: A cat and B dog both give answer digit 4; only bridge identity differs.",
+    "continuation_status": "NOT APPLICABLE",
+    "continuations": null,
+    "descriptive_phrasings": [
+      [
+        "- The intermediate animal is a cat.",
+        "- The intermediate animal is a dog."
+      ],
+      [
+        "- The current question requires reasoning through a cat.",
+        "- The current question requires reasoning through a dog."
+      ]
+    ],
+    "mention_patterns": {
+      "cat": "\\bcat(?:s)?\\b",
+      "dog": "\\bdog(?:s)?\\b"
+    },
+    "values": [
+      "cat",
+      "dog"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "author_install_path": "pip install vllm==0.31.0; pip install --no-deps pinned author fork tar.gz",
+  "author_published_container_digest": null,
+  "author_published_full_dependency_lock": false,
+  "b300_support": "Separate author README documents8B300; not implemented/admitted by resident-v5",
+  "build_package_count": 6,
+  "core_pins": {
+    "peft": "0.21.0",
+    "torch": "2.13.0",
+    "transformers": "5.17.0",
+    "vllm": "0.31.0",
+    "vllm-lens": "1.1.0.post7"
+  },
+  "cuda_notes": {
+    "compiler_component": "nvidia-cuda-nvcc13.4.92",
+    "cuda_binding_version": "13.4.4",
+    "runtime_component": "nvidia-cuda-runtime13.0.96",
+    "torch_expected_compiled_cuda": "13.0",
+    "torch_toolkit_requirement": "13.0.3; normalized PyPI version13.0.3.0",
+    "warning": "CUDA13major floor is not a sufficient driver/JIT compatibility test for the resolved13.4compiler/PTX components."
+  },
+  "current_science_package": "resident-v5;4B200TP4only",
+  "final_runtime_image_digest": null,
+  "fork_source_sha256": "8d9ca706651a1325c7ad9db78b19989a0f0082944577b310dc5aa0cf95046c82",
+  "fork_wheel_sha256": "d9922eed27d2191e641c00fa7a360c0f2d4c285828fe7eb632b1127cde0c8f30",
+  "gpu_engine_verified": false,
+  "locked_inputs": {
+    "build.lock": "f19fd3a77d89e86bcb25f982dbb380ecaa48098700d092129ba2e586c6f8e418",
+    "fork.lock": "6cb234cf097b85d43d9da8012096a4fc3e8a5240c72640c0218d6d5e81e94a7a",
+    "runtime.lock": "3abc28f0e71519de8690980f8b8e5f52ecfbafddd6c126768c74f77894c25f2e"
+  },
+  "pins_selected_by_this_audit": "Patch versions within author families; transitive closure satisfying public package metadata. Not a claim to reproduce the author private full environment.",
+  "platform_target": "linux/x86_64/glibc>=2.35",
+  "python_base_image": "docker.io/library/python@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a",
+  "python_base_tag_observed": "3.12.14-slim-bookworm",
+  "python_target": "3.12.14",
+  "resolver": {
+    "binary_sha256": "3996850e6d85e60b0142b40af4bd984822d65f736b52209921c47312450685cb",
+    "configuration": "--no-config --no-sources; do not inherit fork tool.uv.sources CUDA12.6 configuration",
+    "name": "uv",
+    "version": "0.13.6",
+    "wheel_sha256": "51361029b7cf91185d0092c4b356d110b4ad629e9cb11593f1e006ac72a72ca9"
+  },
+  "runtime_package_count": 209,
+  "schema_version": 1,
+  "source_date_epoch": 1704067200,
+  "status": "CANDIDATE_REPRODUCIBLE_RECIPE_NOT_VERIFIED_RUNTIME_IMAGE"
+}

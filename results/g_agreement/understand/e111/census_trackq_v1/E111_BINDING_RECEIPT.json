@@ -1,0 +1,40 @@
+{
+  "experiment": "E111",
+  "issuer": "Integrator Q",
+  "created_utc": "2026-10-29T10:35:43+00:00",
+  "status": "PARTIAL_E100a_MISSING",
+  "census_committed_here": "results/g_agreement/understand/e111/census_trackq_v1/{INVENTORY,PROBES,INVENTORY_SEAL}.json",
+  "local_cpu_only": {
+    "measurements": {
+      "path": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_e111/binding_v1/binding/MEASUREMENTS.json",
+      "sha256": "51cb980a07155b2ef16293a954a4533f374eb08c323eb03d8a879aea8473b1b3"
+    },
+    "contrast": {
+      "path": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_e111/binding_v1/binding/CONTRAST.json",
+      "sha256": "769b5b6126a343d610c46fd6ab383dda128effbf1d13481c60ab8b905b956534"
+    },
+    "binding_seal": {
+      "path": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_e111/binding_v1/binding/E111_BINDING_SEAL.json",
+      "sha256": "1ede9d6917a7f224ba6f4dcd16a0f066d5dc09179ea5e1864a90ef7f4da9d23e"
+    },
+    "missing": {
+      "path": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_e111/binding_v1/MISSING.json",
+      "sha256": "708e129fae326cf12ca829f6c496b516df04c2e262741517617d63e287f2e3f2"
+    }
+  },
+  "counts": {
+    "E104_U": 336,
+    "E109_44": 336,
+    "E101": 336,
+    "E100_a": "NOT BOUND"
+  },
+  "contrast_records": 168,
+  "validation": "replay of adapter inputs(): all 24 source seals verify, all refs resolve, CONTRAST 4-cell/168 PASS; 3 failures all from E100_a absence (binding status, source_census_complete, full experiment census)",
+  "ordering_caveat": "INVENTORY_SEAL adapter_committed_before_e109_seal=true holds for 86119ae65/029f13bb7 (before E109 acquisition seal 06:16:22Z) but not 8750154a3 (07:40:39Z, \u00a7226 contrast.py, registered before any E111 output and before E109 analysis seal 09:46:51Z); recorded in ordering_receipt",
+  "e104_natural_note": "E104_U natural read44 = E109 unhooked test read44 (E104 U_test has none); E109 test input sha equals E104 U_test INPUT_SEAL",
+  "missing": [
+    "E100_a matched-control cell identity + per-cell behaviour flip definition (W-mech2; E100 outputs W-mechanism-C)",
+    "E100 opaque-id to bank source-id map for cluster_id (W-mechanism-C / W-mech2)",
+    "fallback probe lineage for 6 non-E109 rows: explicit dev_ids, recipe/labels_order/training_source sha256 (W-lens)"
+  ]
+}

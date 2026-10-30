@@ -1,0 +1,1 @@
+Original E117 main outputs copied byte-for-byte after the sole registered invocation. ANALYSIS_SEAL.json is unchanged and includes the hash of private BINDING.json, retained locally and intentionally not published. Registered EOS/padding projection and primary plus eight-record privacy sensitivity are preserved. Fixed main guard consumed; never replay.

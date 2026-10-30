@@ -1,0 +1,12 @@
+{
+  "id": "379e55d7d4fae20fd3255eca",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: \"Given the following XML data\" signals a structured data extraction or classification task, expecting XML content to follow.\n\nThe phrase \"entry\" repetition establishes a pattern of XML `<entry>` tags, with the user contrasting a \"bad\" entry against a \"good\" one, implying a comparison or correction task.\n\nFinal token `<entry` opens a new XML tag, requiring immediate continuation with attributes or closing `>` followed by entry content (e.g., `<entry id=\"...\"` or `<entry>` with nested fields like name, date, or description).\n\"\n</entry>\n<entry\" \u2014 the second `<entry` begins a new XML record, likely from a glossary, bibliography, or log file, expecting structured fields or descriptive content typical of such datasets.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: \"Given the following XML data\" signals a structured data extraction or classification task, expecting XML content to follow.\n\nThe phrase \"entry\" repetition establishes a pattern of XML `<entry>` tags, with the user contrasting a \"bad\" entry against a \"good\" one, implying a comparison or correction task.\n\nFinal token `<entry` opens a new XML tag, requiring immediate continuation with attributes or closing `>` followed by entry content (e.g., `<entry id=\"...\"` or `<entry>` with nested fields like name, date, or description).\n\"\n</entry>\n<entry\" \u2014 the second `<entry` begins a new XML record, likely from a glossary, bibliography, or log file, expecting structured fields or descriptive content typical of such datasets.",
+  "truncated": false
+}

@@ -1,0 +1,11 @@
+# §204 runner handoffs — 2026-10-28
+
+I-3: `I3_RUNNER_HANDOFF.json` supplies the E87 sweep and W-internals grouped WorkspaceBench-style judge **as-is**, pinned to their exact commits and schemas. Layer56 is already included. Existing E87 guards remain; this is not a falsely relabelled E95 READY. E95 owner freezes all eligible rows and60real/30placebo scope plus seed20261028 30% stratified judge subset before calls. E87 still has short-prompt and cap holds. No E87 GPU measurement exists; the attached forecast identifies the saved measured timing source and its extrapolation.
+
+I-5: `I5_RUNNER_HANDOFF.json` supplies the executed main E79 source archive, CLI, vector binding and completion receipt. Main completed on pod `fycolkd2u4y7kk` at2026-10-28T07:45:57.275952Z, output seal `12467ca51c005601f7b78550cb57236f04ab2470f84a9a26ecb3dfb5094bfd94`. That satisfies main-completion ordering, but is not a provider-stop receipt. Extension owner vectors/scorer were not found in the current W-internals freeze; never substitute original-state vectors for the new rows. Preserve all16cells incl0.25/0.5. Optional B requires W-text's committed scorer. The unchanged main runner has fixed row/count guards and mandatory B pilot; bind those operational fields before extension admission.
+
+E79 ArmB: `e79/ARM_B_DELIVERY_RECEIPT_204.json` verifies the existing single JSON document with exactly672 records, frozen A/B candidate IDs, untouched raw logits, original test IDs and all4conditions. It preserves the integrator acquisition receipt and block44 patch custody. Existing CPU scoring has already run once; do not rerun it. No native outputs or metrics opened for this handoff.
+
+Compiler C: thread `01a18204-9e3b-7f41-8c17-5089c6c64740`, worktree `wt-compiler`, branch `codex/sprint-compiler`; reports `results/g_agreement/status/I-*.md`. Evidence: compiler/HANDOFF.md in wt-i5. TrackQ operator is the existing integrator; its chatID and current live pod/usage ledger are **not verified here**. Historical E79 assignment spend is not current spend. Ask the existing operator to reconcile its current ledger before any launch; no duplicate pod creation by W-mechanism.
+
+E79/E80c remain first priority. E80c request `9dc24c73` remains READY cap8261 on exact owner vectors, no new capture. No GPU, GO, judging, push or new statistical analysis performed in this handoff.

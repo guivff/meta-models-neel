@@ -1,0 +1,12 @@
+{
+  "id": "0693d6208ccb984942aaae62",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is directing an AI to extract/rewrite content from a structured data format, establishing a task context.\n\nThe XML-like `<entry>` tag signals a structured data format with repeated entries, implying a list of items to be processed or analyzed.\n\nFinal token `<entry` opens a new XML-style tag, immediately requiring a closing `>` and then the content of a specific entry (e.g., a question, answer, or case record).\n\"Here is the correct format:\n<entry>\n<entry\" \u2014 the second `<entry` mirrors the first, suggesting a corrected or example entry follows, likely containing structured fields like date, topic, or question text.\nThe next tokens must complete the tag and provide entry content, e.g., `<entry id=\"...\"` or similar structured data.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is directing an AI to extract/rewrite content from a structured data format, establishing a task context.\n\nThe XML-like `<entry>` tag signals a structured data format with repeated entries, implying a list of items to be processed or analyzed.\n\nFinal token `<entry` opens a new XML-style tag, immediately requiring a closing `>` and then the content of a specific entry (e.g., a question, answer, or case record).\n\"Here is the correct format:\n<entry>\n<entry\" \u2014 the second `<entry` mirrors the first, suggesting a corrected or example entry follows, likely containing structured fields like date, topic, or question text.\nThe next tokens must complete the tag and provide entry content, e.g., `<entry id=\"...\"` or similar structured data.",
+  "truncated": false
+}

@@ -1,0 +1,52 @@
+{
+  "E54_status": "VERIFIED_EXPORT_PACKET_SEALED",
+  "authority": "User explicit authorization: D5 and E54 only, USD5 total including prior spend; Vertex through OpenRouter, provider pinned, ZDR, deny collection, no fallbacks; HANDOFF b9a14325 superseded on cap and later-bank scope.",
+  "batch_size": 4,
+  "cap_usd": 5,
+  "continuation_convention": "PROVISIONAL, pending coordinator ratification: process previously unsent D5 requests; prior reserved requests cannot be resent; incomplete grid cannot unblind.",
+  "continue_after_validation_failure": true,
+  "cpu_tests": {
+    "passed": 4
+  },
+  "e10_source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/projects/g_agreement/understand/e10",
+  "files": {
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/projects/g_agreement/understand/blind_judge/__init__.py": "555227872622caaf52d65ea30f17e9e81b0f4404f7cd3be905b9dac320aead1b",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/projects/g_agreement/understand/blind_judge/run.py": "9eba603c1eb911029b82f9acca94299cef9f73899a08229b9247a9de5ce1c025",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/projects/g_agreement/understand/blind_judge/test_run.py": "4f67d71334dc166209a01de723730ae686d291a7587195a9c06bb798719f5e0c",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/results/g_agreement/understand/blind_judge/E54_PROVISIONAL_HANDOFF.md": "e6765e8a86d20dd6eefd9395fab7778405f7567f9f980fed12cf277a16f00624",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/results/g_agreement/understand/blind_judge/PROVISIONAL_HANDOFF.md": "aba9f12ebf075bd569bc1e514ce7426c4d04fef69f2f0bf481f74179c1a8a6d0",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/projects/g_agreement/understand/e10/api.py": "f441614f70639cc5a5625000f13e05cc970531caf65171b7396a874a3536acaf",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/projects/g_agreement/understand/e10/io.py": "ea97fa8380a1c428d742bcb52548f7cffd6e3f66ad49cb5dbf20175ea2de8921",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/projects/g_agreement/understand/e10/privacy.py": "09e0ac3cd052c97846848c2e29439c4c78f0395017cea30ffa28ba58c422847b",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/projects/g_agreement/understand/e10/protocol.py": "1395a83ba84653d76fd86e7ed80b1ef81ae728a3da5f6456a88368e28279e220"
+  },
+  "jobs": {
+    "D5_E49": {
+      "key": "cache/g_agreement/understand/e61/d5/e49_tranche/PRIVATE_KEY.json",
+      "n": 504,
+      "packet": "cache/g_agreement/understand/e61/d5/e49_tranche/public",
+      "packet_seal_sha256": "e70b8cf7c4fe595c6636da83fdb5d4ecbb66873150043a1c1bbb44adddb21199"
+    },
+    "E54": {
+      "external_private_key": true,
+      "n": 336,
+      "packet": "cache/g_agreement/understand/blind_judge/E54_packet",
+      "packet_seal_sha256": "78469908b271b1633dde9dd111d0211ecb0d2bbc8934014a8559fa8039bf99dc"
+    }
+  },
+  "model": "google/gemini-3.1-flash-lite",
+  "privacy_proof": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/understand/e10/OPENROUTER_PRIVACY_PROOF.json",
+  "privacy_proof_sha256": "2ebe7403cde971a0936dc66735d2072f04cf8e2c84ab8cd8cf52008536b681e9",
+  "provider": "google-vertex/global",
+  "retries": 0,
+  "shared_cap_jobs": [
+    "D5_E49",
+    "E54"
+  ],
+  "wire_fields": [
+    "opaque id",
+    "frozen rubric",
+    "readout text"
+  ],
+  "workers": 4
+}

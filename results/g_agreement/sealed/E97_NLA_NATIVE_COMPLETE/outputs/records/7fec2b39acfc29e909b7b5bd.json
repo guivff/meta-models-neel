@@ -1,0 +1,12 @@
+{
+  "id": "7fec2b39acfc29e909b7b5bd",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-following format: a structured prompt-response template where \"Question\" and \"Instruction\" fields establish a pattern, requiring a matching \"Answer\" field.\n\nThe instruction explicitly directs the model to use British English spelling, but the question asks about \"artificial intelligence,\" creating a deliberate mismatch to test whether the model follows the instruction or the question's framing.\n\n\"Question: [topic about American spelling]\nInstruction: [topic about British spelling]\nAnswer:\" \u2014 the final token \"Answer:\" is a field label in a few-shot or template format, immediately requiring the model's generated response text, likely a short explanatory sentence about AI benefits.\n\nThe \"Answer:\" label closes the setup, so the next tokens must be the actual response content, demonstrating the instruction's effect on the answer's style or content.\n\"Question: ... Instruction: ... Answer:\" pattern.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-following format: a structured prompt-response template where \"Question\" and \"Instruction\" fields establish a pattern, requiring a matching \"Answer\" field.\n\nThe instruction explicitly directs the model to use British English spelling, but the question asks about \"artificial intelligence,\" creating a deliberate mismatch to test whether the model follows the instruction or the question's framing.\n\n\"Question: [topic about American spelling]\nInstruction: [topic about British spelling]\nAnswer:\" \u2014 the final token \"Answer:\" is a field label in a few-shot or template format, immediately requiring the model's generated response text, likely a short explanatory sentence about AI benefits.\n\nThe \"Answer:\" label closes the setup, so the next tokens must be the actual response content, demonstrating the instruction's effect on the answer's style or content.\n\"Question: ... Instruction: ... Answer:\" pattern.",
+  "truncated": false
+}

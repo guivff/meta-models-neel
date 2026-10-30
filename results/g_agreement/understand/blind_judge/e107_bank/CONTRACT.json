@@ -1,0 +1,58 @@
+{
+  "admission": {
+    "actual_plus_open_caps_usd": "fresh actual plus all running caps <=1000",
+    "allocation_usd": 15,
+    "bank": "E107",
+    "input_sha256": "actual owner input seal SHA256",
+    "issuer": "integrator",
+    "reservation_included": true,
+    "source_seal_sha256": "500afffa96ea21566ccabbea19bc08eff4715cac5a0725d78e8d19908a9f51c9",
+    "verified": true
+  },
+  "call_fields": [
+    "id",
+    "phase",
+    "rendered"
+  ],
+  "canonical_runtime_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E107",
+  "combined_generation_judging_ledger": true,
+  "dispatch_owner": "I-2 unless reassigned in owner HANDOFF",
+  "experiment": "E107",
+  "key_serialized": false,
+  "new_calls": 0,
+  "owner_input_seal": {
+    "experiment": "E107",
+    "files": {
+      "CALLS.json": "actual SHA256"
+    },
+    "frozen_before_calls": true,
+    "labels_cpu_only": true,
+    "source_seals": [
+      {
+        "seal": "actual source seal path",
+        "sha256": "actual SHA256"
+      }
+    ]
+  },
+  "phases": {
+    "generation": {
+      "input": "exact source prefix + verbatim E81 generic instruction; rendered by I-2",
+      "length_policy": "retain generated text,finish_reason,truncated metadata",
+      "max_tokens": 256,
+      "response_format": "text",
+      "temperature": 0
+    },
+    "judging": {
+      "length_policy": "terminal UNPARSEABLE, no retry",
+      "max_tokens": 4096,
+      "rubric": "original registered source-bank renderer/schema, frozen by owner",
+      "temperature": 0
+    }
+  },
+  "registered_cap_usd": 15,
+  "rendered_fields": [
+    "system",
+    "user",
+    "schema"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "analysis_repeated": false,
+  "assignment_sha256": "8f9846e464c1e7fd701cd1b1e9e42089c4de6a0d5fab37424838ef3b03dce2b3",
+  "data_custody_note": "Original result and clock checksums, assignment lineage, sample and every requested source file verified. The absent large arrays remain a retrieval issue; they are not claimed locally verified. Fallback can recapture the exact same heldout sample for its different SAE; transfer gate is not rerun.",
+  "date": "2026-10-25",
+  "experiment": "E35",
+  "fineweb_pin_before_gate_finished": true,
+  "fineweb_pin_commit_before_opening": "b1b2e33",
+  "fineweb_pin_utc": "2026-10-25T13:31:22.993117+00:00",
+  "gate_attempt": 2,
+  "gate_finished_utc": "2026-10-25T13:56:52.739492+00:00",
+  "metrics": {
+    "d_model": 5120,
+    "d_sae": 81920,
+    "dead_fraction": 0.41954345703125,
+    "dead_latents": 34369,
+    "dead_pass": false,
+    "fvu": 0.41063467458674496,
+    "fvu_pass": false,
+    "n_tokens": 50000,
+    "passed": false,
+    "squared_error": 74741076.7699086,
+    "total_variance": 182013554.61549035
+  },
+  "new_worker_gpu_hours": 0,
+  "next_stage": "prepare registered single TopK fallback; no transfer retry; final fallback gate on unchanged sample; no latent labels or decomposition before PASS",
+  "output_seal_sha256": "0e374e11fc7d7bda66a3b920ae54f4f24be1313f5fe303760a5b1a843b61893c",
+  "pod_id": "833ksjl7c6sxie",
+  "provider_accounting": {
+    "attempt1_gpu_seconds": 434.2,
+    "conservative_prior_seconds_until_booked": 4034.2,
+    "final_provider_stop_and_retrieval": "Integrator must book actual time; worker elapsed is not final billed duration",
+    "known_total_lower_bound_seconds": 972.8674928665162,
+    "rerun_worker_receipt_elapsed_seconds": 538.6674928665161
+  },
+  "request_sha256": "013bb8cfc58f3bc1c96fd54a0f8fe8e06104251391f104feb7967c4ee71b0ecc",
+  "request_source_files_verified": 16,
+  "result_sha256": "9eeb3122927af350408f84ddf631c12fb2329ddc2c276de7db3ccada57d284c3",
+  "result_status": "FAIL",
+  "sample_sha256": "dff73a3a83b76a6de4a5a2cbf2fe909a14a6888eaa9b91eeca6df849323fc593",
+  "source_freeze_committed_before_opening": "7a4bd85",
+  "status": "SEALED_RESULT_AND_LINEAGE_VERIFIED_LARGE_ARRAYS_NOT_DELIVERED_LOCALLY",
+  "unavailable_local_sealed_files": [
+    "h.npy",
+    "reconstruction.npy"
+  ],
+  "verified_files": [
+    "GATE_RESULT.json",
+    "CLOCK.json",
+    "assignment.json"
+  ]
+}

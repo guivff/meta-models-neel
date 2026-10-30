@@ -1,0 +1,36 @@
+{
+  "analysis_seal_sha256": "c10bfbadd3fcf9aa1c1585fcfeef9418fabc57811bbdde213e9d7cd831e39e26",
+  "checks_before_label_join": [
+    "all input/output seals and frozen plan",
+    "complete16044 raw5120 reconstruction grid",
+    "2100dev/2100test and disjoint template clusters",
+    "bothvariants and all25rows, exact W1 reference",
+    "optional verified whitener export"
+  ],
+  "collection_status_required": "E21_COMPLETE",
+  "command": [
+    "/Users/guivff/Documents/Neel_Exploration/activation-readers/.venv/bin/python",
+    "-m",
+    "projects.g_agreement.understand.e21_analyse",
+    "--inputs",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e21",
+    "--collection",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e21/0ys021u7gwhb8d/final/out/E21_NEW_RUN",
+    "--labels",
+    "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/items.DO_NOT_STAGE.jsonl",
+    "--out",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e21/analysis"
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2"
+  },
+  "existing_output_or_once_receipt": "reject; no rerun",
+  "incomplete": "retain partial seal, report missing units; no full-grid analysis or imputation",
+  "primary": "raw cosine contrasts; 2000item bootstrap, primary Spearman row bootstrap, seed20261025",
+  "registered_analysis_attempts": 1,
+  "run_once": true,
+  "secondary": "dev-only probes; exported fixed whitener if cleanly applicable; CPU only",
+  "status": "REGISTERED_ANALYSIS_COMPLETE_ONCE_DO_NOT_RERUN",
+  "working_directory": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech"
+}

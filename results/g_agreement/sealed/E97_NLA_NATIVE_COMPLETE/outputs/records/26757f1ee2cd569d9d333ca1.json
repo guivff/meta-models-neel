@@ -1,0 +1,12 @@
+{
+  "id": "26757f1ee2cd569d9d333ca1",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"if sentence describes sadness, reply 'Sadness'; if joy, reply 'Joy'\"), establishing a strict classification task format.\n\nThe example structure shows a template: \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the classification label for the given sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, acting as a prompt label requiring the immediate classification answer (e.g., \"Sadness\" or \"Joy\") to follow.\n\"Example sentence: The weather is very cold today in Taiwan.\\nExample sentence: The weather is very cold today.\\nReply:\" \u2014 the final \"Reply:\" is a field label in the structured format, demanding the model's direct answer/classification response next.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"if sentence describes sadness, reply 'Sadness'; if joy, reply 'Joy'\"), establishing a strict classification task format.\n\nThe example structure shows a template: \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the classification label for the given sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, acting as a prompt label requiring the immediate classification answer (e.g., \"Sadness\" or \"Joy\") to follow.\n\"Example sentence: The weather is very cold today in Taiwan.\\nExample sentence: The weather is very cold today.\\nReply:\" \u2014 the final \"Reply:\" is a field label in the structured format, demanding the model's direct answer/classification response next.\n\"Reply:\"",
+  "truncated": false
+}

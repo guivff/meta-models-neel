@@ -1,0 +1,12 @@
+{
+  "id": "d558ee4614c595cf58ebef14",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a few-shot classification task defining \"weather condition label\" responses, requiring consistent format.\n\nThe example structure establishes a template: given a sentence, output the correct label (e.g., \"Sunny,\" \"Rainy,\" \"Cloudy\").\n\n\"Example sentence: I am going to the park today.\\nReply:\" is the final prompt line, immediately requiring the model's predicted label response for the preceding example sentence.\n\"Given the following sentence, provide the appropriate weather condition label response according to the pattern.\\nSentence: \\\"I am going to the park today.\\\"\\nReply:\" \u2014 the \"Reply:\" token is a field label in a structured Q&A format, demanding the actual label answer (e.g., \"Sunny\" or similar) as the very next token.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a few-shot classification task defining \"weather condition label\" responses, requiring consistent format.\n\nThe example structure establishes a template: given a sentence, output the correct label (e.g., \"Sunny,\" \"Rainy,\" \"Cloudy\").\n\n\"Example sentence: I am going to the park today.\\nReply:\" is the final prompt line, immediately requiring the model's predicted label response for the preceding example sentence.\n\"Given the following sentence, provide the appropriate weather condition label response according to the pattern.\\nSentence: \\\"I am going to the park today.\\\"\\nReply:\" \u2014 the \"Reply:\" token is a field label in a structured Q&A format, demanding the actual label answer (e.g., \"Sunny\" or similar) as the very next token.",
+  "truncated": false
+}

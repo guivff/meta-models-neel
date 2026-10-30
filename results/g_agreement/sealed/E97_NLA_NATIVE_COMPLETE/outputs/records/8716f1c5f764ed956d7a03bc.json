@@ -1,0 +1,12 @@
+{
+  "id": "8716f1c5f764ed956d7a03bc",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured Q&A format with a strict binary classification task (positive/negative sentiment) established by the example pattern, requiring a direct label answer.\n\nThe prompt explicitly provides the sentence \"The movie was a huge success\" and asks to classify it, with the example showing \"Reply: Negative\" as the template \u2014 the answer must follow this exact format.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured template, immediately requiring the classification answer (e.g., \"Positive\" or \"Negative\") on the same line.\n\"Given the following sentence, determine the sentiment label...\nSentence: 'The movie was a huge success'\n...\nGiven the above, determine the sentiment label.\nReply:\" \u2014 the final token demands the model's direct response, the single classification word completing the structured output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured Q&A format with a strict binary classification task (positive/negative sentiment) established by the example pattern, requiring a direct label answer.\n\nThe prompt explicitly provides the sentence \"The movie was a huge success\" and asks to classify it, with the example showing \"Reply: Negative\" as the template \u2014 the answer must follow this exact format.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured template, immediately requiring the classification answer (e.g., \"Positive\" or \"Negative\") on the same line.\n\"Given the following sentence, determine the sentiment label...\nSentence: 'The movie was a huge success'\n...\nGiven the above, determine the sentiment label.\nReply:\" \u2014 the final token demands the model's direct response, the single classification word completing the structured output.",
+  "truncated": false
+}

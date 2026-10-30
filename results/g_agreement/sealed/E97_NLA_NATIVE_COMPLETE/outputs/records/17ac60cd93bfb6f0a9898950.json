@@ -1,0 +1,12 @@
+{
+  "id": "17ac60cd93bfb6f0a9898950",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Happy,\" \"Sad,\" \"Angry\").\n\nThe example pattern \"Example sentence: [sentence] / Reply:\" signals the model must now produce the direct answer for the specific sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, functioning as a response prompt label in a structured Q&A format, immediately requiring the emotion label answer (likely \"Sad\" or similar short word) to follow.\n\"Given the following structured format:\n- Example sentence: 'The weather is very cold today.'\n- Task: Determine the emotion label.\n- Input sentence: 'The weather is very cold today.'\nReply:\" \u2014 the final token demands the model's direct answer, completing the structured response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Happy,\" \"Sad,\" \"Angry\").\n\nThe example pattern \"Example sentence: [sentence] / Reply:\" signals the model must now produce the direct answer for the specific sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, functioning as a response prompt label in a structured Q&A format, immediately requiring the emotion label answer (likely \"Sad\" or similar short word) to follow.\n\"Given the following structured format:\n- Example sentence: 'The weather is very cold today.'\n- Task: Determine the emotion label.\n- Input sentence: 'The weather is very cold today.'\nReply:\" \u2014 the final token demands the model's direct answer, completing the structured response.",
+  "truncated": false
+}

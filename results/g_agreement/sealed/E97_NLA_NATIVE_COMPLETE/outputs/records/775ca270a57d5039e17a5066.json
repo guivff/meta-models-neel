@@ -1,0 +1,12 @@
+{
+  "id": "775ca270a57d5039e17a5066",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only \"Good\" or \"Bad\" as the answer.\n\nThe example pattern (\"Sentence: [text]\\nReply:\") signals the model must now produce the actual classification response for \"The weather is very cold today.\"\n\n\"Reply:\" is the final prompt label, immediately requiring the answer token (\"Good\" or \"Bad\") or a short explanatory phrase to follow.\n\"Given the following structured format:\n- Pattern: [sentence] \u2192 [classification]\n- Sentence: 'The weather is very cold today.'\nReply:\" \u2014 this closing label demands the direct answer/response to the classification task, likely \"Good\" or \"Bad\" as the next token.\n\"Reply:\" is the final prompt field, expecting the model's direct response output immediately.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only \"Good\" or \"Bad\" as the answer.\n\nThe example pattern (\"Sentence: [text]\\nReply:\") signals the model must now produce the actual classification response for \"The weather is very cold today.\"\n\n\"Reply:\" is the final prompt label, immediately requiring the answer token (\"Good\" or \"Bad\") or a short explanatory phrase to follow.\n\"Given the following structured format:\n- Pattern: [sentence] \u2192 [classification]\n- Sentence: 'The weather is very cold today.'\nReply:\" \u2014 this closing label demands the direct answer/response to the classification task, likely \"Good\" or \"Bad\" as the next token.\n\"Reply:\" is the final prompt field, expecting the model's direct response output immediately.",
+  "truncated": false
+}

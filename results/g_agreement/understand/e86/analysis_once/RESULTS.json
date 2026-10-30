@@ -1,0 +1,714 @@
+{
+  "R_K1": "NOT EVALUABLE",
+  "R_K2_descriptive": {
+    "nla": {
+      "honest": {
+        "S_truth": {
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "both": 0,
+        "conditional_truth": {
+          "CI95": null,
+          "estimate": null
+        },
+        "conditional_wrong": {
+          "CI95": null,
+          "estimate": null
+        },
+        "conditional_wrong_minus_truth": {
+          "CI95": null,
+          "estimate": null
+        },
+        "kept": 200,
+        "missing": 0,
+        "missingness_bounds_conditional_delta": null,
+        "naming_either_value": 0,
+        "neither": 200,
+        "over_5_percent_missing": false,
+        "planned": 200,
+        "truth_only": 0,
+        "unconditional_truth": {
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "unconditional_wrong": {
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "wrong_only": 0
+      },
+      "role": {
+        "S_truth": {
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "both": 0,
+        "conditional_truth": {
+          "CI95": null,
+          "estimate": null
+        },
+        "conditional_wrong": {
+          "CI95": null,
+          "estimate": null
+        },
+        "conditional_wrong_minus_truth": {
+          "CI95": null,
+          "estimate": null
+        },
+        "kept": 200,
+        "missing": 0,
+        "missingness_bounds_conditional_delta": null,
+        "naming_either_value": 0,
+        "neither": 200,
+        "over_5_percent_missing": false,
+        "planned": 200,
+        "truth_only": 0,
+        "unconditional_truth": {
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "unconditional_wrong": {
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "wrong_only": 0
+      }
+    },
+    "oracle": {
+      "honest": {
+        "S_truth": {
+          "CI95": [
+            0.79,
+            0.9
+          ],
+          "estimate": 0.85
+        },
+        "both": 6,
+        "conditional_truth": {
+          "CI95": [
+            0.9722222222222222,
+            1.0
+          ],
+          "estimate": 0.9888888888888889
+        },
+        "conditional_wrong": {
+          "CI95": [
+            0.016666666666666666,
+            0.07777777777777778
+          ],
+          "estimate": 0.044444444444444446
+        },
+        "conditional_wrong_minus_truth": {
+          "CI95": [
+            -0.9777777777777777,
+            -0.9
+          ],
+          "estimate": -0.9444444444444444
+        },
+        "kept": 200,
+        "missing": 0,
+        "missingness_bounds_conditional_delta": [
+          -0.9444444444444444,
+          -0.9444444444444444
+        ],
+        "naming_either_value": 180,
+        "neither": 20,
+        "over_5_percent_missing": false,
+        "planned": 200,
+        "truth_only": 172,
+        "unconditional_truth": {
+          "CI95": [
+            0.845,
+            0.93
+          ],
+          "estimate": 0.89
+        },
+        "unconditional_wrong": {
+          "CI95": [
+            0.015,
+            0.07
+          ],
+          "estimate": 0.04
+        },
+        "wrong_only": 2
+      },
+      "role": {
+        "S_truth": {
+          "CI95": [
+            -0.19,
+            0.0
+          ],
+          "estimate": -0.095
+        },
+        "both": 95,
+        "conditional_truth": {
+          "CI95": [
+            0.625,
+            0.75
+          ],
+          "estimate": 0.69
+        },
+        "conditional_wrong": {
+          "CI95": [
+            0.73,
+            0.84
+          ],
+          "estimate": 0.785
+        },
+        "conditional_wrong_minus_truth": {
+          "CI95": [
+            0.0,
+            0.19
+          ],
+          "estimate": 0.095
+        },
+        "kept": 200,
+        "missing": 0,
+        "missingness_bounds_conditional_delta": [
+          0.095,
+          0.095
+        ],
+        "naming_either_value": 200,
+        "neither": 0,
+        "over_5_percent_missing": false,
+        "planned": 200,
+        "truth_only": 43,
+        "unconditional_truth": {
+          "CI95": [
+            0.625,
+            0.75
+          ],
+          "estimate": 0.69
+        },
+        "unconditional_wrong": {
+          "CI95": [
+            0.73,
+            0.84
+          ],
+          "estimate": 0.785
+        },
+        "wrong_only": 62
+      }
+    }
+  },
+  "bootstrap": {
+    "conditional": "resample fixed named-value cohort for conditional estimands; paired truth/wrong within item",
+    "draws": 5000,
+    "seed": 0,
+    "unit": "source item"
+  },
+  "experiment": "E86",
+  "falsifier": "NOT EVALUABLE",
+  "gate_diagnostics": {
+    "achieved_counts": {
+      "open/honest": {
+        "dev": 0,
+        "released_test": 0,
+        "test": 1
+      },
+      "open/lie": {
+        "dev": 0,
+        "released_test": 0,
+        "test": 0
+      },
+      "open/role": {
+        "dev": 0,
+        "released_test": 0,
+        "test": 0
+      },
+      "yn/honest": {
+        "dev": 200,
+        "released_test": 200,
+        "test": 200
+      },
+      "yn/lie": {
+        "dev": 200,
+        "released_test": 0,
+        "test": 200
+      },
+      "yn/role": {
+        "dev": 200,
+        "released_test": 200,
+        "test": 200
+      }
+    },
+    "truth_probes": {
+      "honest/42": {
+        "dev_auroc": 1.0,
+        "status": "COMPLETE",
+        "test_auroc": 0.9997
+      },
+      "honest/44": {
+        "dev_auroc": 1.0,
+        "status": "COMPLETE",
+        "test_auroc": 0.9998
+      },
+      "lie/42": {
+        "dev_auroc": 1.0,
+        "status": "COMPLETE",
+        "test_auroc": 1.0
+      },
+      "lie/44": {
+        "dev_auroc": 1.0,
+        "status": "COMPLETE",
+        "test_auroc": 1.0
+      },
+      "role/42": {
+        "dev_auroc": 1.0,
+        "status": "COMPLETE",
+        "test_auroc": 0.9999
+      },
+      "role/44": {
+        "dev_auroc": 1.0,
+        "status": "COMPLETE",
+        "test_auroc": 0.9999
+      }
+    }
+  },
+  "interpretation": "Role wrong-minus-truth is descriptive, NLA alongside. Honest truth-statement baseline is reported both unconditional and conditional on naming either value. Both-valued readouts count toward both probabilities and contribute zero contrast.",
+  "matched_original_rubric": {
+    "note": "Identical seeded25% IDs; denominators may differ from missingness/naming; no replacement of primary cohort",
+    "original": {
+      "nla": {
+        "honest": {
+          "S_truth": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "both": 0,
+          "conditional_truth": {
+            "CI95": null,
+            "estimate": null
+          },
+          "conditional_wrong": {
+            "CI95": null,
+            "estimate": null
+          },
+          "conditional_wrong_minus_truth": {
+            "CI95": null,
+            "estimate": null
+          },
+          "kept": 63,
+          "missing": 0,
+          "missingness_bounds_conditional_delta": null,
+          "naming_either_value": 0,
+          "neither": 63,
+          "over_5_percent_missing": false,
+          "planned": 63,
+          "truth_only": 0,
+          "unconditional_truth": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "unconditional_wrong": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "wrong_only": 0
+        },
+        "role": {
+          "S_truth": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "both": 0,
+          "conditional_truth": {
+            "CI95": null,
+            "estimate": null
+          },
+          "conditional_wrong": {
+            "CI95": null,
+            "estimate": null
+          },
+          "conditional_wrong_minus_truth": {
+            "CI95": null,
+            "estimate": null
+          },
+          "kept": 53,
+          "missing": 0,
+          "missingness_bounds_conditional_delta": null,
+          "naming_either_value": 0,
+          "neither": 53,
+          "over_5_percent_missing": false,
+          "planned": 53,
+          "truth_only": 0,
+          "unconditional_truth": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "unconditional_wrong": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "wrong_only": 0
+        }
+      },
+      "oracle": {
+        "honest": {
+          "S_truth": {
+            "CI95": [
+              0.5476190476190477,
+              0.8571428571428571
+            ],
+            "estimate": 0.7142857142857143
+          },
+          "both": 0,
+          "conditional_truth": {
+            "CI95": [
+              0.8529411764705882,
+              1.0
+            ],
+            "estimate": 0.9411764705882353
+          },
+          "conditional_wrong": {
+            "CI95": [
+              0.0,
+              0.14705882352941177
+            ],
+            "estimate": 0.058823529411764705
+          },
+          "conditional_wrong_minus_truth": {
+            "CI95": [
+              -1.0,
+              -0.7058823529411765
+            ],
+            "estimate": -0.8823529411764706
+          },
+          "kept": 42,
+          "missing": 0,
+          "missingness_bounds_conditional_delta": [
+            -0.8823529411764706,
+            -0.8823529411764706
+          ],
+          "naming_either_value": 34,
+          "neither": 8,
+          "over_5_percent_missing": false,
+          "planned": 42,
+          "truth_only": 32,
+          "unconditional_truth": {
+            "CI95": [
+              0.6190476190476191,
+              0.8809523809523809
+            ],
+            "estimate": 0.7619047619047619
+          },
+          "unconditional_wrong": {
+            "CI95": [
+              0.0,
+              0.11904761904761904
+            ],
+            "estimate": 0.047619047619047616
+          },
+          "wrong_only": 2
+        },
+        "role": {
+          "S_truth": {
+            "CI95": [
+              -0.16666666666666666,
+              0.16666666666666666
+            ],
+            "estimate": 0.0
+          },
+          "both": 28,
+          "conditional_truth": {
+            "CI95": [
+              0.7142857142857143,
+              0.9285714285714286
+            ],
+            "estimate": 0.8333333333333334
+          },
+          "conditional_wrong": {
+            "CI95": [
+              0.7142857142857143,
+              0.9285714285714286
+            ],
+            "estimate": 0.8333333333333334
+          },
+          "conditional_wrong_minus_truth": {
+            "CI95": [
+              -0.16666666666666666,
+              0.16666666666666666
+            ],
+            "estimate": 0.0
+          },
+          "kept": 42,
+          "missing": 0,
+          "missingness_bounds_conditional_delta": [
+            0.0,
+            0.0
+          ],
+          "naming_either_value": 42,
+          "neither": 0,
+          "over_5_percent_missing": false,
+          "planned": 42,
+          "truth_only": 7,
+          "unconditional_truth": {
+            "CI95": [
+              0.7142857142857143,
+              0.9285714285714286
+            ],
+            "estimate": 0.8333333333333334
+          },
+          "unconditional_wrong": {
+            "CI95": [
+              0.7142857142857143,
+              0.9285714285714286
+            ],
+            "estimate": 0.8333333333333334
+          },
+          "wrong_only": 7
+        }
+      }
+    },
+    "primary": {
+      "nla": {
+        "honest": {
+          "S_truth": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "both": 0,
+          "conditional_truth": {
+            "CI95": null,
+            "estimate": null
+          },
+          "conditional_wrong": {
+            "CI95": null,
+            "estimate": null
+          },
+          "conditional_wrong_minus_truth": {
+            "CI95": null,
+            "estimate": null
+          },
+          "kept": 63,
+          "missing": 0,
+          "missingness_bounds_conditional_delta": null,
+          "naming_either_value": 0,
+          "neither": 63,
+          "over_5_percent_missing": false,
+          "planned": 63,
+          "truth_only": 0,
+          "unconditional_truth": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "unconditional_wrong": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "wrong_only": 0
+        },
+        "role": {
+          "S_truth": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "both": 0,
+          "conditional_truth": {
+            "CI95": null,
+            "estimate": null
+          },
+          "conditional_wrong": {
+            "CI95": null,
+            "estimate": null
+          },
+          "conditional_wrong_minus_truth": {
+            "CI95": null,
+            "estimate": null
+          },
+          "kept": 53,
+          "missing": 0,
+          "missingness_bounds_conditional_delta": null,
+          "naming_either_value": 0,
+          "neither": 53,
+          "over_5_percent_missing": false,
+          "planned": 53,
+          "truth_only": 0,
+          "unconditional_truth": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "unconditional_wrong": {
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "estimate": 0.0
+          },
+          "wrong_only": 0
+        }
+      },
+      "oracle": {
+        "honest": {
+          "S_truth": {
+            "CI95": [
+              0.7380952380952381,
+              0.9523809523809523
+            ],
+            "estimate": 0.8571428571428571
+          },
+          "both": 1,
+          "conditional_truth": {
+            "CI95": [
+              1.0,
+              1.0
+            ],
+            "estimate": 1.0
+          },
+          "conditional_wrong": {
+            "CI95": [
+              0.0,
+              0.08108108108108109
+            ],
+            "estimate": 0.02702702702702703
+          },
+          "conditional_wrong_minus_truth": {
+            "CI95": [
+              -1.0,
+              -0.918918918918919
+            ],
+            "estimate": -0.972972972972973
+          },
+          "kept": 42,
+          "missing": 0,
+          "missingness_bounds_conditional_delta": [
+            -0.972972972972973,
+            -0.972972972972973
+          ],
+          "naming_either_value": 37,
+          "neither": 5,
+          "over_5_percent_missing": false,
+          "planned": 42,
+          "truth_only": 36,
+          "unconditional_truth": {
+            "CI95": [
+              0.7857142857142857,
+              0.9761904761904762
+            ],
+            "estimate": 0.8809523809523809
+          },
+          "unconditional_wrong": {
+            "CI95": [
+              0.0,
+              0.07142857142857142
+            ],
+            "estimate": 0.023809523809523808
+          },
+          "wrong_only": 0
+        },
+        "role": {
+          "S_truth": {
+            "CI95": [
+              -0.21428571428571427,
+              0.19047619047619047
+            ],
+            "estimate": -0.023809523809523808
+          },
+          "both": 23,
+          "conditional_truth": {
+            "CI95": [
+              0.6190476190476191,
+              0.8809523809523809
+            ],
+            "estimate": 0.7619047619047619
+          },
+          "conditional_wrong": {
+            "CI95": [
+              0.6428571428571429,
+              0.9047619047619048
+            ],
+            "estimate": 0.7857142857142857
+          },
+          "conditional_wrong_minus_truth": {
+            "CI95": [
+              -0.19047619047619047,
+              0.21428571428571427
+            ],
+            "estimate": 0.023809523809523808
+          },
+          "kept": 42,
+          "missing": 0,
+          "missingness_bounds_conditional_delta": [
+            0.023809523809523808,
+            0.023809523809523808
+          ],
+          "naming_either_value": 42,
+          "neither": 0,
+          "over_5_percent_missing": false,
+          "planned": 42,
+          "truth_only": 9,
+          "unconditional_truth": {
+            "CI95": [
+              0.6190476190476191,
+              0.8809523809523809
+            ],
+            "estimate": 0.7619047619047619
+          },
+          "unconditional_wrong": {
+            "CI95": [
+              0.6428571428571429,
+              0.9047619047619048
+            ],
+            "estimate": 0.7857142857142857
+          },
+          "wrong_only": 10
+        }
+      }
+    },
+    "selected": 200
+  },
+  "rule_reason": "R-K1 is E86-open primary, underpowered; lie arm BOW fails and has no released readouts. Role/binary cannot substitute.",
+  "scope": "Original released E86-yn honest/role TEST only; no source/gate/probe replay"
+}

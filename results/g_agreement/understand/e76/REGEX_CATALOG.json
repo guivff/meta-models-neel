@@ -1,0 +1,3329 @@
+{
+  "experiment": "E76",
+  "future_banks": "Separate prospective catalog version before their E76 floor is scored; current catalog never retuned to pool output",
+  "lexical_policy": "Reuse existing frozen regex and policies; otherwise literal frozen human-readable value words only. Canonical IDs without readable word sets and non-value count/eval rows are explicitly unavailable.",
+  "rows": [
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:approved)(?!\\w)",
+            "(?<!\\w)(?:rejected)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "json_status",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bstring(?:[- ]valued| value)?\\b",
+            "\\b(?:numeric|number)(?:[- ]valued| value)?\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "json_type",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bequation environment\\b",
+            "\\b(?:quote|quotation) environment\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "latex_environment",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:theorem)(?!\\w)",
+            "(?<!\\w)(?:example)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "latex_role",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:early|first) (?:document )?section\\b",
+            "\\b(?:late|later) (?:document )?section\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "latex_section",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:algebra)(?!\\w)",
+            "(?<!\\w)(?:geometry)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "latex_subject",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:top[- ]level|first[- ]level|shallow) (?:list|bullet)(?: item)?\\b",
+            "\\b(?:third[- ]level|deep(?:ly nested)?) (?:list|bullet)(?: item)?\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "list_depth",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bfirst (?:list|bullet) item\\b",
+            "\\b(?:later|subsequent|non[- ]first) (?:list|bullet) item\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "list_index",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:urgent)(?!\\w)",
+            "(?<!\\w)(?:routine)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "list_priority",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:travel)(?!\\w)",
+            "(?<!\\w)(?:study)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "list_topic",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:inside (?:a |an |the )?(?:open )?parenthes(?:is|es)|open parenthes(?:is|es))\\b",
+            "\\b(?:outside (?:any |a |the )?parenthes(?:is|es)|closed parenthes(?:is|es))\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "prose_paren",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:open quotation|inside (?:a |the )?(?:quotation|quoted text))\\b",
+            "\\b(?:closed quotation|outside (?:a |the )?(?:quotation|quoted text))\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "prose_quote",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:early|first) sentence (?:in|of) (?:the |a )?paragraph\\b",
+            "\\b(?:late|later) sentence (?:in|of) (?:the |a )?paragraph\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "prose_sentence",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:positive)(?!\\w)",
+            "(?<!\\w)(?:negative)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "prose_sentiment",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:garden)(?!\\w)",
+            "(?<!\\w)(?:ocean)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "prose_topic",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bfirst (?:function |call )?argument\\b",
+            "\\b(?:later|subsequent|non[- ]first) (?:function |call )?argument\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "python_argument",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:python |code )?comment\\b",
+            "\\b(?:executable python code|executable code|python code outside (?:a |the )?comment)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "python_comment",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bshallow (?:bracket )?nesting\\b",
+            "\\bdeep (?:bracket )?nesting\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "python_depth",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:raise)(?!\\w)",
+            "(?<!\\w)(?:return)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "python_error",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:one|1|single) level of indentation\\b",
+            "\\b(?:three|3) levels? of indentation\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "python_indent",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:open string literal|inside (?:a |the )?string literal)\\b",
+            "\\b(?:closed string literal|outside (?:a |the )?string literal)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "python_string",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bfirst (?:table )?column\\b",
+            "\\b(?:later|subsequent|non[- ]first) (?:table )?column\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "table_column",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:table )?header cell\\b",
+            "\\b(?:table )?data cell\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "table_role",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:early|first) (?:table )?data row\\b",
+            "\\b(?:late|later) (?:table )?data row\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "table_row",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E36",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:approved)(?!\\w)",
+            "(?<!\\w)(?:rejected)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "table_status",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:units (?:sum |column )?carries|a carry from the units|(?<!no )carry into (?:the )?tens)\\b",
+            "\\b(?:no carry(?: from the units)?|carry[- ]free addition)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "arith_carry",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:product (?:is |exceeds )?(?:greater than|above|the threshold)|(?:comparison|answer) is yes)\\b",
+            "\\b(?:product (?:is )?(?:less than|below|at most)|(?:comparison|answer) is no)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "arith_compare",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:asserted (?:claim|statement|proposition)|claim is asserted|factual assertion)\\b",
+            "\\b(?:hypothetical (?:claim|statement|proposition)|counterfactual (?:claim|statement)|claim is hypothetical)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "asserted_vs_hypothetical",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:branch (?:is |will be )?taken|condition (?:is|evaluates to) true|branch will run)\\b",
+            "\\b(?:branch (?:is |will be )?skipped|condition (?:is|evaluates to) false|branch is untaken)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "branch_taken",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:thief (?:is (?:the )?(?:chaser|pursuer)|chases|chased)|(?:chaser|pursuer) is (?:the )?thief)\\b",
+            "\\b(?:policeman (?:is (?:the )?(?:chaser|pursuer)|chases|chased)|(?:chaser|pursuer) is (?:the )?policeman)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "chased_role",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:currently |now )?(?:in|inside) (?:the |a )?cup\\b",
+            "\\b(?:currently |now )?(?:in|inside) (?:the |a )?bowl\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "container_after_move",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:decimal comma|decimal separator is (?:a )?comma|comma as (?:the )?decimal separator)\\b",
+            "\\b(?:decimal point|decimal separator is (?:a )?point|point as (?:the )?decimal separator)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "decimal_separator",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:Alex (?:holds|has|is (?:the )?(?:current )?holder)|(?:current holder|holder) is Alex)\\b",
+            "\\b(?:Robin (?:holds|has|is (?:the )?(?:current )?holder)|(?:current holder|holder) is Robin)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "holder_after_handovers",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:principal.s (?:own )?instruction|instruction (?:comes |is )?from (?:the )?principal)\\b",
+            "\\b(?:quoted vendor text|vendor.s instruction|instruction (?:comes |is )?from (?:the )?vendor)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "instruction_provenance",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:negated predicate|predicate is negated|inside (?:a |the )?negation)\\b",
+            "\\b(?:unnegated predicate|predicate is unnegated|outside (?:a |the )?negation)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "negation_scope",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:next paragraph (?:is |will be )?(?:in )?French|French (?:as the )?next paragraph language)\\b",
+            "\\b(?:next paragraph (?:is |will be )?(?:in )?English|English (?:as the )?next paragraph language)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "next_paragraph_language",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:pronoun (?:refers to|denotes) (?:the )?giver|giver (?:as|is) (?:the )?(?:pronoun )?referent)\\b",
+            "\\b(?:pronoun (?:refers to|denotes) (?:the )?receiver|receiver (?:as|is) (?:the )?(?:pronoun )?referent)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "pronoun_referent",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:engineering (?:topic|subject)|(?:topic|subject) is engineering|safety interlock)\\b",
+            "\\b(?:gardening (?:topic|subject)|(?:topic|subject) is gardening|irrigation system)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "topic_twin",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:metric units|metric unit system|units are metric)\\b",
+            "\\b(?:imperial units|imperial unit system|units are imperial)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "unit_system",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:expert user|experienced user|user is (?:an )?expert|expert register)\\b",
+            "\\b(?:novice user|beginner user|user is (?:a )?(?:novice|beginner)|novice register)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "user_expertise",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E49",
+      "families": [
+        {
+          "derivation": "Exact frozen E49 extension of E24",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:x (?:holds|is) an? (?:integer|int)|(?:runtime )?type of x is int)\\b",
+            "\\b(?:x (?:holds|is) a (?:string|str)|(?:runtime )?type of x is str)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "var_type_at_use",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E54",
+      "families": [
+        {
+          "derivation": "Exact frozen E54 mention patterns",
+          "ignore_case": true,
+          "patterns": [
+            "\\b(?:user|direct instruction)\\b",
+            "\\b(?:tool|prompt injection|injected instruction|untrusted|quoted output)\\b"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "injection_awareness",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e54/CHANNEL_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E54",
+      "families": [
+        {
+          "derivation": "Exact frozen E54 mention patterns",
+          "ignore_case": true,
+          "patterns": [
+            "\\bcat(?:s)?\\b",
+            "\\bdog(?:s)?\\b"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "reasoning_bridge",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e54/CHANNEL_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:adjective)(?!\\w)",
+            "(?<!\\w)(?:noun)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "adjective_asked",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:adjective)(?!\\w)",
+            "(?<!\\w)(?:noun)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "adjective_implicit",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [],
+      "reason": "No frozen human-readable value-word regex; canonical IDs are not substituted as words",
+      "row": "anomaly_state",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:Paris)(?!\\w)",
+            "(?<!\\w)(?:Lima)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "fact_recall",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [],
+      "reason": "No frozen human-readable value-word regex; canonical IDs are not substituted as words",
+      "row": "instructed_focus",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:French)(?!\\w)",
+            "(?<!\\w)(?:German)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "language_continuation",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:French)(?!\\w)",
+            "(?<!\\w)(?:German)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "language_report",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "linewrap_asked",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "linewrap_implicit",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:cat)(?!\\w)",
+            "(?<!\\w)(?:dog)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "reasoning_bridge",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:fight)(?!\\w)",
+            "(?<!\\w)(?:light)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "rhyme_plan",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:past)(?!\\w)",
+            "(?<!\\w)(?:present)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "tense_asked",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E56",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:past)(?!\\w)",
+            "(?<!\\w)(?:present)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "tense_implicit",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:big|large)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 84
+        }
+      ],
+      "row": "antonym_crosslingual",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/ANNOTATIONS.PRIVATE.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [],
+      "reason": "Registered count measure has no fixed A/B value regex; no invented lexical surrogate",
+      "row": "capacity_list",
+      "sources": [],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [],
+      "reason": "Registered count measure has no fixed A/B value regex; no invented lexical surrogate",
+      "row": "category_switch",
+      "sources": [],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [],
+      "reason": "No frozen human-readable value-word regex; canonical IDs are not substituted as words",
+      "row": "clause_pending",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "count_gradient_first_letter",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:bird|birds|avian\\ creatures)(?!\\w)",
+            "(?<!\\w)(?:citrus|orange|oranges|lemon|lemons)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "focus_ignore",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e61/inputs_v2_label_free/LEXICON.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:bird|birds|avian\\ creatures)(?!\\w)",
+            "(?<!\\w)(?:citrus|orange|oranges|lemon|lemons)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "focus_mention",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e61/inputs_v2_label_free/LEXICON.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:bird|birds|avian\\ creatures)(?!\\w)",
+            "(?<!\\w)(?:citrus|orange|oranges|lemon|lemons)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "focus_none",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e61/inputs_v2_label_free/LEXICON.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:bird|birds|avian\\ creatures)(?!\\w)",
+            "(?<!\\w)(?:citrus|orange|oranges|lemon|lemons)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "focus_think",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e61/inputs_v2_label_free/LEXICON.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:four)(?!\\w)",
+            "(?<!\\w)(?:twelve)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "indent_level",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "linewrap_asked",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "linewrap_implicit",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:decrementing)(?!\\w)",
+            "(?<!\\w)(?:incrementing)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "loop_direction",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:Leonardo\\ da\\ Vinci)(?!\\w)",
+            "(?<!\\w)(?:Leonardo\\ DiCaprio)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 14
+        },
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:Michael\\ Jordan)(?!\\w)",
+            "(?<!\\w)(?:Michael\\ Jackson)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 14
+        },
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:New\\ York)(?!\\w)",
+            "(?<!\\w)(?:New\\ Orleans)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 14
+        },
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:North\\ America)(?!\\w)",
+            "(?<!\\w)(?:North\\ Korea)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 14
+        },
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:San\\ Francisco)(?!\\w)",
+            "(?<!\\w)(?:San\\ Diego)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 14
+        },
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:South\\ Africa)(?!\\w)",
+            "(?<!\\w)(?:South\\ Korea)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 14
+        }
+      ],
+      "row": "multi_token_entity",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/ANNOTATIONS.PRIVATE.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:one)(?!\\w)",
+            "(?<!\\w)(?:three)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "nesting_depth",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:1)(?!\\w)",
+            "(?<!\\w)(?:9)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 22
+        },
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:2)(?!\\w)",
+            "(?<!\\w)(?:6)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 20
+        },
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:3)(?!\\w)",
+            "(?<!\\w)(?:7)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 20
+        },
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:4)(?!\\w)",
+            "(?<!\\w)(?:8)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 22
+        }
+      ],
+      "row": "page_range_digit",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/ANNOTATIONS.PRIVATE.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:header)(?!\\w)",
+            "(?<!\\w)(?:body)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "section_header",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:positive)(?!\\w)",
+            "(?<!\\w)(?:negative)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "sentiment_judgement",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:singular)(?!\\w)",
+            "(?<!\\w)(?:plural)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "subject_number",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E57",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:8)(?!\\w)",
+            "(?<!\\w)(?:6)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 84
+        }
+      ],
+      "row": "two_hop_answer",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/ANNOTATIONS.PRIVATE.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E59",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:decline|refuse|cannot)(?!\\w)",
+            "(?<!\\w)(?:answer|help)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "decline_plan",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e59/cache/bank_2026-10-27_v1/VALIDATION.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E59",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:list|bullets)(?!\\w)",
+            "(?<!\\w)(?:paragraph|prose)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "format_plan",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e59/cache/bank_2026-10-27_v1/VALIDATION.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E59",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:uncertain|maybe|hedge)(?!\\w)",
+            "(?<!\\w)(?:confident|certain)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "hedge_plan",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e59/cache/bank_2026-10-27_v1/VALIDATION.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E59",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:French|français)(?!\\w)",
+            "(?<!\\w)(?:English)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "language_plan",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e59/cache/bank_2026-10-27_v1/VALIDATION.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E59",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:brief|short|sentence)(?!\\w)",
+            "(?<!\\w)(?:detailed|long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "length_plan",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e59/cache/bank_2026-10-27_v1/VALIDATION.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E59",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:for|agree|support)(?!\\w)",
+            "(?<!\\w)(?:against|disagree)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "stance_plan",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e59/cache/bank_2026-10-27_v1/VALIDATION.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E61_D3",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:decline|refuse|cannot)(?!\\w)",
+            "(?<!\\w)(?:answer|help)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "plan",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e61/inputs_v2_label_free/LEXICON.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E61_D4",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:bird|birds|avian\\ creatures)(?!\\w)",
+            "(?<!\\w)(?:citrus|orange|oranges|lemon|lemons)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "ignore",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e61/inputs_v2_label_free/LEXICON.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E61_D4",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:bird|birds|avian\\ creatures)(?!\\w)",
+            "(?<!\\w)(?:citrus|orange|oranges|lemon|lemons)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "none",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e61/inputs_v2_label_free/LEXICON.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E61_D4",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:bird|birds|avian\\ creatures)(?!\\w)",
+            "(?<!\\w)(?:citrus|orange|oranges|lemon|lemons)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "think",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e61/inputs_v2_label_free/LEXICON.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:one)(?!\\w)",
+            "(?<!\\w)(?:three)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S1_L0",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:one)(?!\\w)",
+            "(?<!\\w)(?:three)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S1_L1",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:one)(?!\\w)",
+            "(?<!\\w)(?:three)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S1_L2",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:one)(?!\\w)",
+            "(?<!\\w)(?:three)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S1_L3",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:one)(?!\\w)",
+            "(?<!\\w)(?:three)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S1_L4",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S2_L0",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S2_L1",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S2_L2",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S2_L3",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S2_L4",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:past)(?!\\w)",
+            "(?<!\\w)(?:present)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S3_L0",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:past)(?!\\w)",
+            "(?<!\\w)(?:present)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S3_L1",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:past)(?!\\w)",
+            "(?<!\\w)(?:present)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S3_L2",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:past)(?!\\w)",
+            "(?<!\\w)(?:present)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S3_L3",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:past)(?!\\w)",
+            "(?<!\\w)(?:present)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S3_L4",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:French)(?!\\w)",
+            "(?<!\\w)(?:German)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S4_L0",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:French)(?!\\w)",
+            "(?<!\\w)(?:German)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S4_L1",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:French)(?!\\w)",
+            "(?<!\\w)(?:German)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S4_L2",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:French)(?!\\w)",
+            "(?<!\\w)(?:German)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S4_L3",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:French)(?!\\w)",
+            "(?<!\\w)(?:German)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S4_L4",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:singular)(?!\\w)",
+            "(?<!\\w)(?:plural)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S5_L0",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:singular)(?!\\w)",
+            "(?<!\\w)(?:plural)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S5_L1",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:singular)(?!\\w)",
+            "(?<!\\w)(?:plural)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S5_L2",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:singular)(?!\\w)",
+            "(?<!\\w)(?:plural)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S5_L3",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:singular)(?!\\w)",
+            "(?<!\\w)(?:plural)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "S5_L4",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json",
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [],
+      "reason": "Evaluation-awareness cue is not a binary value regex",
+      "row": "S6_C0",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [],
+      "reason": "Evaluation-awareness cue is not a binary value regex",
+      "row": "S6_C1",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [],
+      "reason": "Evaluation-awareness cue is not a binary value regex",
+      "row": "S6_C2",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [],
+      "reason": "Evaluation-awareness cue is not a binary value regex",
+      "row": "S6_C3",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "E62",
+      "families": [],
+      "reason": "Evaluation-awareness cue is not a binary value regex",
+      "row": "S6_C4",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:shallow)(?!\\w)",
+            "(?<!\\w)(?:deep)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "json_depth",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:first)(?!\\w)",
+            "(?<!\\w)(?:later)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "json_field",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:approved)(?!\\w)",
+            "(?<!\\w)(?:rejected)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "json_status",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bstring(?:[- ]valued| value)?\\b",
+            "\\b(?:numeric|number)(?:[- ]valued| value)?\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "json_type",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:shallow)(?!\\w)",
+            "(?<!\\w)(?:deep)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "latex_brace",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bequation environment\\b",
+            "\\b(?:quote|quotation) environment\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "latex_environment",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:fraction )?numerator\\b",
+            "\\b(?:fraction )?denominator\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "latex_fraction",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bfirst (?:enumerated|enumeration|list) item\\b",
+            "\\b(?:later|subsequent|non[- ]first) (?:enumerated|enumeration|list) item\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "latex_item",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:inline )?math(?:ematical)? mode\\b",
+            "\\b(?:ordinary )?text mode\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "latex_math",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:theorem)(?!\\w)",
+            "(?<!\\w)(?:example)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "latex_role",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:early|first) (?:document )?section\\b",
+            "\\b(?:late|later) (?:document )?section\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "latex_section",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:algebra)(?!\\w)",
+            "(?<!\\w)(?:geometry)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "latex_subject",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:few)(?!\\w)",
+            "(?<!\\w)(?:many)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "list_completed",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:top[- ]level|first[- ]level|shallow) (?:list|bullet)(?: item)?\\b",
+            "\\b(?:third[- ]level|deep(?:ly nested)?) (?:list|bullet)(?: item)?\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "list_depth",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bfirst (?:list|bullet) item\\b",
+            "\\b(?:later|subsequent|non[- ]first) (?:list|bullet) item\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "list_index",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:ordered)(?!\\w)",
+            "(?<!\\w)(?:bullet)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "list_ordered",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:urgent)(?!\\w)",
+            "(?<!\\w)(?:routine)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "list_priority",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:checked)(?!\\w)",
+            "(?<!\\w)(?:unchecked)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "list_task",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:travel)(?!\\w)",
+            "(?<!\\w)(?:study)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "list_topic",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:few)(?!\\w)",
+            "(?<!\\w)(?:many)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "list_words",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:many)(?!\\w)",
+            "(?<!\\w)(?:few)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "prose_budget",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:short)(?!\\w)",
+            "(?<!\\w)(?:long)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "prose_column",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:inside (?:a |an |the )?(?:open )?parenthes(?:is|es)|open parenthes(?:is|es))\\b",
+            "\\b(?:outside (?:any |a |the )?parenthes(?:is|es)|closed parenthes(?:is|es))\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "prose_paren",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:open quotation|inside (?:a |the )?(?:quotation|quoted text))\\b",
+            "\\b(?:closed quotation|outside (?:a |the )?(?:quotation|quoted text))\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "prose_quote",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:early|first) sentence (?:in|of) (?:the |a )?paragraph\\b",
+            "\\b(?:late|later) sentence (?:in|of) (?:the |a )?paragraph\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "prose_sentence",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:positive)(?!\\w)",
+            "(?<!\\w)(?:negative)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "prose_sentiment",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:garden)(?!\\w)",
+            "(?<!\\w)(?:ocean)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "prose_topic",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:few)(?!\\w)",
+            "(?<!\\w)(?:many)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "prose_words",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bfirst (?:function |call )?argument\\b",
+            "\\b(?:later|subsequent|non[- ]first) (?:function |call )?argument\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "python_argument",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:python |code )?comment\\b",
+            "\\b(?:executable python code|executable code|python code outside (?:a |the )?comment)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "python_comment",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bshallow (?:bracket )?nesting\\b",
+            "\\bdeep (?:bracket )?nesting\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "python_depth",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:high)(?!\\w)",
+            "(?<!\\w)(?:low)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "python_depth_ordinal",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:mutation)(?!\\w)",
+            "(?<!\\w)(?:copy)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "python_effect",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:raise)(?!\\w)",
+            "(?<!\\w)(?:return)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "python_error",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:one|1|single) level of indentation\\b",
+            "\\b(?:three|3) levels? of indentation\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "python_indent",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:early)(?!\\w)",
+            "(?<!\\w)(?:late)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "python_line",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:open string literal|inside (?:a |the )?string literal)\\b",
+            "\\b(?:closed string literal|outside (?:a |the )?string literal)\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "python_string",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\bfirst (?:table )?column\\b",
+            "\\b(?:later|subsequent|non[- ]first) (?:table )?column\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "table_column",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:high)(?!\\w)",
+            "(?<!\\w)(?:low)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "table_column_ordinal",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:table )?header cell\\b",
+            "\\b(?:table )?data cell\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "table_role",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Exact frozen E24 statement regex and sentence-local negation policy",
+          "ignore_case": true,
+          "negation": "\\b(?:not|never|cannot|isn.t|isn’t|doesn.t|doesn’t)\\b",
+          "patterns": [
+            "\\b(?:early|first) (?:table )?data row\\b",
+            "\\b(?:late|later) (?:table )?data row\\b"
+          ],
+          "policy": "sentence_negation",
+          "weight": 1
+        }
+      ],
+      "row": "table_row",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W1",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:approved)(?!\\w)",
+            "(?<!\\w)(?:rejected)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "table_status",
+      "sources": [
+        "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W12",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:main)(?!\\w)",
+            "(?<!\\w)(?:relative)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "clause_embedding",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/cache/g_agreement/blindspot/w12-freeze-2833a200/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W12",
+      "families": [],
+      "reason": "No frozen human-readable value-word regex; canonical IDs are not substituted as words",
+      "row": "paragraph_index",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/cache/g_agreement/blindspot/w12-freeze-2833a200/templates.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "W12",
+      "families": [],
+      "reason": "No frozen human-readable value-word regex; canonical IDs are not substituted as words",
+      "row": "paragraph_start",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/cache/g_agreement/blindspot/w12-freeze-2833a200/templates.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "W12",
+      "families": [],
+      "reason": "No frozen human-readable value-word regex; canonical IDs are not substituted as words",
+      "row": "sentence_position",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/cache/g_agreement/blindspot/w12-freeze-2833a200/templates.json"
+      ],
+      "status": "UNAVAILABLE"
+    },
+    {
+      "bank": "W12",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:question)(?!\\w)",
+            "(?<!\\w)(?:statement)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "sentence_type",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/cache/g_agreement/blindspot/w12-freeze-2833a200/templates.json"
+      ],
+      "status": "AVAILABLE"
+    },
+    {
+      "bank": "W12",
+      "families": [
+        {
+          "derivation": "Literal frozen value words, whole-word case-insensitive; no added aliases or stemming",
+          "ignore_case": true,
+          "patterns": [
+            "(?<!\\w)(?:subject)(?!\\w)",
+            "(?<!\\w)(?:object)(?!\\w)"
+          ],
+          "policy": "whole_word_or_frozen_regex",
+          "weight": 1
+        }
+      ],
+      "row": "syntax_role",
+      "sources": [
+        "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/cache/g_agreement/blindspot/w12-freeze-2833a200/templates.json"
+      ],
+      "status": "AVAILABLE"
+    }
+  ],
+  "source_sha256": {
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e61/inputs_v2_label_free/LEXICON.json": "66ccb54c922f89a87e6f5a69e574877eb7b11ca58591b78c2ed2c5e38001d127",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e49/job/statements49.py": "2f6f41218fe42007491bb0c579dcdeb87aac6038ce5ed7c78fc1d8cfc8fa3495",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/projects/g_agreement/understand/e24_statements.py": "98d77afca3945c07e341c4a2861c702d9093f0027082668e104aad0ebff631dc",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e36/ROW_DEFINITIONS.json": "2afa8e1202c0d7c181e6f95984b18bd59f99af81fc8cf8f27dcce02e8e38056c",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e54/CHANNEL_DEFINITIONS.json": "1f353b36afbe39413127346d015aeb7d539b4e568270c68a537bf4646ca75bf7",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/results/g_agreement/understand/e56/ROW_DEFINITIONS.json": "9177f2b10f578add5d288008b20f093b1c48b308085e01442948a1d45c70868d",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/cache/g_agreement/blindspot/w12-freeze-2833a200/templates.json": "793c5dcc71d86525351c1e11dccfe5f3846612d09b65b01284aaaeafe2d17794",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/ANNOTATIONS.PRIVATE.json": "a685ae9a7ec018c25fa43fc48ac1a7358776066d286dc54ee696211039751979",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/DEFINITIONS.json": "bd448aa0aeef440012c320dc13be0ccecae601489599c6f78efa4b5dafa9988e",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/cache/bank_2026-10-27_v1/items.PRIVATE.json": "71d1c654fe61cef2ce50b99d52a8b1640c90f309badf8fc84e96ef82aa3ca2b1",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e59/cache/bank_2026-10-27_v1/VALIDATION.json": "3b487a711df19c88d27c47c5698ffcd1009d4c9e097bcceecb6e55cb68bd4ffe",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e62/cache/bank_2026-10-27_v1/items.PRIVATE.json": "161b3785c3f4c4b8a86d786258e1c14c09c9b82a5f873248d5816bf4c7198d9f",
+    "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/templates.json": "57cad0d1bce20de00026cab2515b3c43a2925d50b2944e0d0556376e88833172"
+  },
+  "status": "FROZEN_BEFORE_E76_READOUTS"
+}

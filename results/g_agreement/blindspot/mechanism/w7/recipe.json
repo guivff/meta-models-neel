@@ -1,0 +1,42 @@
+{
+  "block": 44,
+  "candidate_multipliers": [
+    0.03125,
+    0.0625,
+    0.125,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "dose_scale": "positive dev class-mean projection gap along raw unit probe",
+  "edit": "plain additive; no renormalization",
+  "features": {
+    "prose_paren": {
+      "negative_value": "outside",
+      "positive_value": "inside",
+      "predicted_sign": 1,
+      "token": ")"
+    },
+    "table_column": {
+      "negative_value": "later",
+      "positive_value": "first",
+      "predicted_sign": -1,
+      "token": "|"
+    }
+  },
+  "n_items_per_row": 60,
+  "n_random": 5,
+  "position": "last real prefix token",
+  "ppl_max_ratio": 1.1,
+  "primary": "mean across three doses of predicted-sign half (+ minus -), probe minus mean five randoms",
+  "seed": 20261023,
+  "signed_doses": [
+    -1,
+    1
+  ],
+  "unrelated_n": 16,
+  "unrelated_tokens": 64
+}

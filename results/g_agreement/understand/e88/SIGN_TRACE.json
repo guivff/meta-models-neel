@@ -1,0 +1,20 @@
+{
+  "probe": "E57 focus_ignore",
+  "AUROC": 0.0017006802721088435,
+  "resolution": "No code-level sign or label-convention inversion found. Frozen test discrimination is reversed; keep the original low AUROC and failed probe gate. Do not replace with 1-AUROC.",
+  "trace": [
+    "bank57.py assigns label=int(value==spec.values[0]) in both splits; focus none only is unlabelled",
+    "cpu_capture.compute fits the dev labels and writes the raw class1 decision on test activations",
+    "mats.probes.fit_logreg minimizes binary_cross_entropy_with_logits against y; decision returns the same oriented logit",
+    "analysis_io.probe_aucs compares stored test scores with private test label, not variant or its complement",
+    "W-text VALIDATION focus_ignore label_check PASS"
+  ],
+  "source_sha256": {
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/bank57.py": "cca62a55b7e6654b05873df1e198e7a337d2e4d4908feea6d78ea23e62e84b7e",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e57/VALIDATION.json": "b1c7380089db27e4a66574048cd3d505032712c42411d0ac383a34590d4c1366",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e56/job/cpu_capture.py": "197ab8005699577384bb43fe7692c1f745b1a19fd715e5a7e8a028dc2fc55c6c",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e56/job/analysis_io.py": "6185ae98294587214abf9c5f8fbbb166047b24a709221c6f6fd51323886fb8a0",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wlens/external/mats-nla-workspace/src/mats/probes.py": "955a7b516d97bee88b149bee1b8a3d9cdffaa7ef1b407cdef5cc4159f4677ae7"
+  },
+  "no_refit": true
+}

@@ -1,0 +1,210 @@
+{
+ "allocated_science_s": 575.2,
+ "assets_sha256": "8bf19e0a5da0e058be1d4ef1f9b88f003778f0b33426a86080fe3503e274cdf1",
+ "assignment_sha256": "817e15082975dd0003cc05c44e6259eda0dbc1ba463e3a7805b34836a8e77a5c",
+ "attempt": "retry (RETRY_REQUEST runtime amendment)",
+ "creation_to_stop_s": 326.2,
+ "datacenter": "EUR-IS-4",
+ "environment": "/weights/venv-kernels (causal-conv1d 1.7.0, fla 0.5.2); log has no slow-path/fallback warning",
+ "experiment": "W7",
+ "first_science_since_creation_s": 236.1,
+ "gate1": {
+  "forecast_seconds_x1_5": 2823.525338659063,
+  "gate": "gate1_calibration_path",
+  "median_seconds_per_token": 0.002645444590598345,
+  "path": "text_nll_steered (bs=4, len 64)",
+  "raw_units": [
+   {
+    "arm": 0,
+    "dose": 0.03125,
+    "feature": "prose_paren",
+    "seconds": 2.5035455226898193,
+    "sign": -1,
+    "tokens": 1024
+   },
+   {
+    "arm": 0,
+    "dose": 0.03125,
+    "feature": "prose_paren",
+    "seconds": 2.7855989933013916,
+    "sign": 1,
+    "tokens": 1024
+   },
+   {
+    "arm": 1,
+    "dose": 0.03125,
+    "feature": "prose_paren",
+    "seconds": 2.708935260772705,
+    "sign": -1,
+    "tokens": 1024
+   }
+  ],
+  "remaining_science_seconds_before_reserve": 383.9829750061035,
+  "remaining_tokens": {
+   "calibration": 218112,
+   "outcomes_at_calibration_rate": 493432
+  },
+  "science_deadline_epoch": 1792752302.1677074
+ },
+ "gpu": "NVIDIA H200",
+ "note": "steered calibration units ran 2.50/2.79/2.71 s per 1,024 tokens on venv-kernels vs ~1.88 s/unit average on reference kernels in v6e57330l9a64u; 1.5x forecast 2,823.5 s vs 384.0 s before reserve",
+ "operator": "integrator fork (Guiv instruction)",
+ "pod_id": "08gz6zw0ngs6o9",
+ "pod_stopped_by_exact_id_at": "2026-10-23T10:36:57Z",
+ "provider_created_at": "2026-10-23T10:31:30.849Z",
+ "provider_hardstop_at": "2026-10-23T10:55:51Z",
+ "pull": {
+  "files": {
+   "forecast.json": "48624a5a818df8c3693ded04e2790dbbf354943d815557e48b9b143ef5e9a8a1",
+   "retry_runtime.json": "c84f8a07c1264427f6404e6cfd1bc28199b13224c65ea4d5e74af114cecf4730"
+  },
+  "w7.log": "cfacb9e950c5a53e3a7942d4cacbb149732cef8a2ef7fbbe9033399e36371ad6"
+ },
+ "runtime_driver_sha256": "4da633b2615f87d137c5e506b17d31457c9c36da706637a6fad48b24f9a3321f",
+ "schema": "w7-operator-receipt-v1",
+ "science_deadline_epoch": 1792752302.1677074,
+ "science_ledger_status": "FAILED",
+ "science_s_cumulative": 516.0,
+ "science_s_this_attempt": 11.2,
+ "scores": "none (gate1 stopped before the dose seal and any outcome forward)",
+ "section": 76,
+ "setup": {
+  "allowance_s": 900,
+  "model_loaded_since_creation_s": 189.9,
+  "setup_s_since_creation": 236.1,
+  "started_since_creation_s": 155.7,
+  "warmup": [
+   {
+    "length": 64,
+    "path": "text_nll_unsteered+steered",
+    "seconds": 33.277
+   },
+   {
+    "length": 66,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.394
+   },
+   {
+    "length": 67,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.596
+   },
+   {
+    "length": 70,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.494
+   },
+   {
+    "length": 71,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.495
+   },
+   {
+    "length": 72,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.403
+   },
+   {
+    "length": 75,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.497
+   },
+   {
+    "length": 76,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.507
+   },
+   {
+    "length": 78,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.495
+   },
+   {
+    "length": 79,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.494
+   },
+   {
+    "length": 80,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.508
+   },
+   {
+    "length": 107,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.598
+   },
+   {
+    "length": 118,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.694
+   },
+   {
+    "length": 134,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.507
+   },
+   {
+    "length": 136,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.599
+   },
+   {
+    "length": 138,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.494
+   },
+   {
+    "length": 146,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.601
+   },
+   {
+    "length": 203,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.6
+   },
+   {
+    "length": 208,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.602
+   },
+   {
+    "length": 210,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.504
+   },
+   {
+    "length": 214,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.6
+   },
+   {
+    "length": 222,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.595
+   },
+   {
+    "length": 224,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.505
+   },
+   {
+    "length": 226,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.601
+   },
+   {
+    "length": 230,
+    "path": "token_logp_unsteered+steered",
+    "seconds": 0.594
+   }
+  ],
+  "warmup_s": 46.3,
+  "warmup_scored": false
+ },
+ "status": "NO_FIT_STOP_gate1_calibration_path",
+ "stop_reason": "after verified final pull",
+ "volume": "5on6935gne (read-only /weights)",
+ "worker_launched_at": "2026-10-23T10:32:12Z"
+}

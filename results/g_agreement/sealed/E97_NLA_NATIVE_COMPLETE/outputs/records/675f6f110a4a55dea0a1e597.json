@@ -1,0 +1,12 @@
+{
+  "id": "675f6f110a4a55dea0a1e597",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" as the answer.\n\nThe example pattern (\"Example sentence: ... Reply: [answer]\") sets up a direct Q&A structure requiring the model to apply the rule to the specific sentence \"I am feeling very happy today.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the answer \"Positive\" or \"Negative\" (or similar short response) to follow.\n\"Given the following sentence, determine the sentiment label according to the rule.\nExample sentence: I am feeling very happy today.\nName: [Name]\nSentence: I am feeling very happy today.\nReply:\" \u2014 the final field demands the model's direct answer output next.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" as the answer.\n\nThe example pattern (\"Example sentence: ... Reply: [answer]\") sets up a direct Q&A structure requiring the model to apply the rule to the specific sentence \"I am feeling very happy today.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the answer \"Positive\" or \"Negative\" (or similar short response) to follow.\n\"Given the following sentence, determine the sentiment label according to the rule.\nExample sentence: I am feeling very happy today.\nName: [Name]\nSentence: I am feeling very happy today.\nReply:\" \u2014 the final field demands the model's direct answer output next.\n\"Reply:\"",
+  "truncated": false
+}

@@ -1,0 +1,1017 @@
+{
+  "authority_commit": "b40b3c9b285d096e112dfd4cc578ef996b26ecb8",
+  "scope": "All111 registered candidate bank/rows of E60 \u00a7176, before gates; this coding is not an eligibility decision.",
+  "class_authority_sha256": "6b13f181af39b06a21af93b08e5c5fc98b6a0fa18bd6bbd2b1f9929201c45956",
+  "precedence": "Exact bank:row, then exact unqualified row, then bank wildcard. Thus E82:S_belief takes precedence over E82:* when future banks are admitted.",
+  "unknown_rows": "STOP before drawing. Code added rows from registration, commit extension first; never infer class from S, J fraction or reader outcomes.",
+  "sources": {
+    "projects/g_agreement/BRIEF_UNDERSTAND.md": "d6f32bcc0ba70db93be78493d981a64f19461d6d2454f59a321de522cc9d417d",
+    "projects/g_agreement/blindspot/w12_items.py": "7682a4173252621f95d83f318880652f3ae22c417d29e95e2061bdc89c178094",
+    "projects/g_agreement/silent_state_classes.json": "6b13f181af39b06a21af93b08e5c5fc98b6a0fa18bd6bbd2b1f9929201c45956",
+    "results/g_agreement/understand/e36/ROW_DEFINITIONS.json": "2afa8e1202c0d7c181e6f95984b18bd59f99af81fc8cf8f27dcce02e8e38056c",
+    "results/g_agreement/understand/e56/ROW_DEFINITIONS.json": "9177f2b10f578add5d288008b20f093b1c48b308085e01442948a1d45c70868d",
+    "results/g_agreement/understand/e59/rows59.py": "6dcf0622a0654f3cdd5ccae7f24f9e413d6788770ce49458d9d94ae4063c23e1"
+  },
+  "rows": [
+    {
+      "bank": "E36",
+      "row": "json_status",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "JSON text; the read token ends the value of the current object's \"decision\" field. A = approved, B = rejected. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "json_type",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "JSON text; the read token is inside the value of the current field. A = a string value (opened with a quote), B = a numeric value. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "latex_environment",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "LaTeX; the read token is in the body text of the current environment. A = inside \\begin{equation}, B = inside \\begin{quote}. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "latex_role",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "LaTeX prose; A = the current passage is a theorem statement, B = a worked example. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "latex_section",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "LaTeX document; the read token is in body text after some number of \\section headings. A = section 1 or 2, B = section 6 to 8. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "latex_subject",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "LaTeX/maths prose; A = algebra content, B = geometry content. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "list_depth",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown bullet list; the read token is in the current item. A = item at nesting level 1 (top level), B = item at nesting level 3. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "list_index",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown bullet list; the read token is in the current item. A = it is the first item, B = it is item 6 to 8. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "list_priority",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "Task list item; A = an urgent task, B = a routine task. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "list_topic",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "Planning list item; A = travel planning, B = study planning. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "prose_paren",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "English prose sentence; A = the read token is inside a parenthesis that has opened and not closed, B = the parenthesis has already closed earlier in the same sentence. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "prose_quote",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "English prose sentence; A = the read token is inside a quotation that has opened and not closed, B = the quotation has already closed earlier in the same sentence. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "prose_sentence",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "English paragraph; the read token is a few words into the current sentence. A = sentence 1 or 2 of the paragraph, B = sentence 6 to 8. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "prose_sentiment",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "English prose; A = positive sentiment, B = negative sentiment. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "prose_topic",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "English prose; A = gardening content, B = ocean content. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "python_argument",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Python call; the read token is the current argument of an open call. A = the first argument, B = the fifth argument. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "python_comment",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Python source; A = the read token is inside a # comment, B = it is in executable code. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "python_depth",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Python expression; the read token is inside open brackets. A = bracket nesting depth 1, B = depth 3. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "python_error",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "Python function; the read token ends its final statement. A = the function raises an exception, B = it returns normally. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "python_indent",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Python function body; the read token is in a statement. A = indentation level 1, B = indentation level 3 (inside two nested blocks). Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "python_string",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Python source; A = the read token is inside a string literal that has opened and not closed, B = a string literal closed earlier and the read token is outside it. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "table_column",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown table; the read token is in a cell of a data row. A = column 1, B = column 5. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "table_role",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown table; A = the read token is in a header-row cell, B = in a data-row cell. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "table_row",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown table; the read token is in a data row. A = data row 1 or 2, B = data row 6 to 8. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E36",
+      "row": "table_status",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown table with a Decision column; the read token ends the current row's Decision cell. A = approved, B = rejected. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E49",
+      "row": "arith_carry",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7163 units-sum carry: intermediate arithmetic bookkeeping.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "arith_compare",
+      "silent_state_class": "plans",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7163 explicitly labels the target the planned yes/no answer to an arithmetic comparison.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "asserted_vs_hypothetical",
+      "silent_state_class": "belief_vs_truth_knowing_vs_saying",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7163 contrasts asserted reality with counterfactual supposition. Epistemic scope; this does not establish a model belief.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "branch_taken",
+      "silent_state_class": "tracked_world_state",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7163 defines a bound participant, object location/holder, executed branch/type, or tracked instruction source. Instruction provenance is source attribution, not a claim about reader honesty.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "chased_role",
+      "silent_state_class": "tracked_world_state",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7163 defines a bound participant, object location/holder, executed branch/type, or tracked instruction source. Instruction provenance is source attribution, not a claim about reader honesty.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "container_after_move",
+      "silent_state_class": "tracked_world_state",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7163 defines a bound participant, object location/holder, executed branch/type, or tracked instruction source. Instruction provenance is source attribution, not a claim about reader honesty.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "decimal_separator",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7163 literal decimal punctuation state on unit-system documents.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "holder_after_handovers",
+      "silent_state_class": "tracked_world_state",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7163 defines a bound participant, object location/holder, executed branch/type, or tracked instruction source. Instruction provenance is source attribution, not a claim about reader honesty.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "instruction_provenance",
+      "silent_state_class": "tracked_world_state",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7163 defines a bound participant, object location/holder, executed branch/type, or tracked instruction source. Instruction provenance is source attribution, not a claim about reader honesty.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "negation_scope",
+      "silent_state_class": "belief_vs_truth_knowing_vs_saying",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7163 predicate inside/outside negation: truth-conditional scope, not a claim that the model is deceptive.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "next_paragraph_language",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7163 document alternating language at paragraph end, classified with language continuation reference.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "pronoun_referent",
+      "silent_state_class": "tracked_world_state",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7163 defines a bound participant, object location/holder, executed branch/type, or tracked instruction source. Instruction provenance is source attribution, not a claim about reader honesty.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "topic_twin",
+      "silent_state_class": "content_topic",
+      "assignment": "explicit_authority",
+      "rationale": "Explicit \u00a7216 class assignment.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "unit_system",
+      "silent_state_class": "model_of_user_or_self",
+      "assignment": "explicit_authority",
+      "rationale": "Explicit \u00a7216 class assignment.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "user_expertise",
+      "silent_state_class": "model_of_user_or_self",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7163 first-person expert versus novice register.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E49",
+      "row": "var_type_at_use",
+      "silent_state_class": "tracked_world_state",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7163 defines a bound participant, object location/holder, executed branch/type, or tracked instruction source. Instruction provenance is source attribution, not a claim about reader honesty.",
+      "registration": "\u00a7163",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E56",
+      "row": "adjective_asked",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7172 target ['adjective', 'noun']; asked twin inherits the underlying target class, not its question wording.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "adjective_implicit",
+      "silent_state_class": "content_topic",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7172 target ['adjective', 'noun']; asked twin inherits the underlying target class, not its question wording.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "anomaly_state",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7172 presence of an anomalous foreign sentence: content/reference property.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "fact_recall",
+      "silent_state_class": "content_topic",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7172 target ['Paris', 'Lima']; asked twin inherits the underlying target class, not its question wording.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "instructed_focus",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7172 instructed subject of attention: represented content; instruction framing alone does not make this a response-format plan.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "language_continuation",
+      "silent_state_class": "content_topic",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7172 target ['French', 'German']; asked twin inherits the underlying target class, not its question wording.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "language_report",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7172 target ['French', 'German']; asked twin inherits the underlying target class, not its question wording.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "linewrap_asked",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7172 target ['short', 'long']; asked twin inherits the underlying target class, not its question wording.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "linewrap_implicit",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7172 target ['short', 'long']; asked twin inherits the underlying target class, not its question wording.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "reasoning_bridge",
+      "silent_state_class": "plans",
+      "assignment": "explicit_authority",
+      "rationale": "Explicit \u00a7216 plans assignment, inherited E54 positive control.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "rhyme_plan",
+      "silent_state_class": "plans",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7172 future rhyming completion: planned next-word value.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "tense_asked",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7172 target ['past', 'present']; asked twin inherits the underlying target class, not its question wording.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E56",
+      "row": "tense_implicit",
+      "silent_state_class": "content_topic",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7172 target ['past', 'present']; asked twin inherits the underlying target class, not its question wording.",
+      "registration": "\u00a7172",
+      "source": "results/g_agreement/understand/e56/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "E57",
+      "row": "antonym_crosslingual",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 lexical/entity/reference content, focus-concept persistence/capacity, or sentiment; instruction arms preserve the target concept class. All arms coded before any gate selection; nonbinary units enter only if E60 admits the relevant signed S target.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "capacity_list",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 lexical/entity/reference content, focus-concept persistence/capacity, or sentiment; instruction arms preserve the target concept class. All arms coded before any gate selection; nonbinary units enter only if E60 admits the relevant signed S target.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "category_switch",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 lexical/entity/reference content, focus-concept persistence/capacity, or sentiment; instruction arms preserve the target concept class. All arms coded before any gate selection; nonbinary units enter only if E60 admits the relevant signed S target.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "clause_pending",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 count-gradient measures the original character count in every arm; Group B tracks grammar, nesting, indentation, citation digits or markup position.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "count_gradient_first_letter",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 count-gradient measures the original character count in every arm; Group B tracks grammar, nesting, indentation, citation digits or markup position.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "focus_ignore",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 lexical/entity/reference content, focus-concept persistence/capacity, or sentiment; instruction arms preserve the target concept class. All arms coded before any gate selection; nonbinary units enter only if E60 admits the relevant signed S target.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "focus_mention",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 lexical/entity/reference content, focus-concept persistence/capacity, or sentiment; instruction arms preserve the target concept class. All arms coded before any gate selection; nonbinary units enter only if E60 admits the relevant signed S target.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "focus_none",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 lexical/entity/reference content, focus-concept persistence/capacity, or sentiment; instruction arms preserve the target concept class. All arms coded before any gate selection; nonbinary units enter only if E60 admits the relevant signed S target.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "focus_think",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 lexical/entity/reference content, focus-concept persistence/capacity, or sentiment; instruction arms preserve the target concept class. All arms coded before any gate selection; nonbinary units enter only if E60 admits the relevant signed S target.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "indent_level",
+      "silent_state_class": "bookkeeping",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7173 count-gradient measures the original character count in every arm; Group B tracks grammar, nesting, indentation, citation digits or markup position.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "linewrap_asked",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 count-gradient measures the original character count in every arm; Group B tracks grammar, nesting, indentation, citation digits or markup position.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "linewrap_implicit",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 count-gradient measures the original character count in every arm; Group B tracks grammar, nesting, indentation, citation digits or markup position.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "loop_direction",
+      "silent_state_class": "tracked_world_state",
+      "assignment": "explicit_authority",
+      "rationale": "Explicit \u00a7216 tracked-world-state assignment overrides the older Group B bookkeeping heading.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "multi_token_entity",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 lexical/entity/reference content, focus-concept persistence/capacity, or sentiment; instruction arms preserve the target concept class. All arms coded before any gate selection; nonbinary units enter only if E60 admits the relevant signed S target.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "nesting_depth",
+      "silent_state_class": "bookkeeping",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7173 count-gradient measures the original character count in every arm; Group B tracks grammar, nesting, indentation, citation digits or markup position.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "page_range_digit",
+      "silent_state_class": "bookkeeping",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7173 count-gradient measures the original character count in every arm; Group B tracks grammar, nesting, indentation, citation digits or markup position.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "section_header",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 count-gradient measures the original character count in every arm; Group B tracks grammar, nesting, indentation, citation digits or markup position.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "sentiment_judgement",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 lexical/entity/reference content, focus-concept persistence/capacity, or sentiment; instruction arms preserve the target concept class. All arms coded before any gate selection; nonbinary units enter only if E60 admits the relevant signed S target.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "subject_number",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 count-gradient measures the original character count in every arm; Group B tracks grammar, nesting, indentation, citation digits or markup position.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E57",
+      "row": "two_hop_answer",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7173 lexical/entity/reference content, focus-concept persistence/capacity, or sentiment; instruction arms preserve the target concept class. All arms coded before any gate selection; nonbinary units enter only if E60 admits the relevant signed S target.",
+      "registration": "\u00a7173 and amendment1",
+      "source": "projects/g_agreement/BRIEF_UNDERSTAND.md"
+    },
+    {
+      "bank": "E59",
+      "row": "decline_plan",
+      "silent_state_class": "plans",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7175 instruction fixes the upcoming reply format, language, stance, length, uncertainty or refusal; all six are response plans.",
+      "registration": "\u00a7175",
+      "source": "results/g_agreement/understand/e59/rows59.py"
+    },
+    {
+      "bank": "E59",
+      "row": "format_plan",
+      "silent_state_class": "plans",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7175 instruction fixes the upcoming reply format, language, stance, length, uncertainty or refusal; all six are response plans.",
+      "registration": "\u00a7175",
+      "source": "results/g_agreement/understand/e59/rows59.py"
+    },
+    {
+      "bank": "E59",
+      "row": "hedge_plan",
+      "silent_state_class": "plans",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7175 instruction fixes the upcoming reply format, language, stance, length, uncertainty or refusal; all six are response plans.",
+      "registration": "\u00a7175",
+      "source": "results/g_agreement/understand/e59/rows59.py"
+    },
+    {
+      "bank": "E59",
+      "row": "language_plan",
+      "silent_state_class": "plans",
+      "assignment": "explicit_authority",
+      "rationale": "\u00a7175 instruction fixes the upcoming reply format, language, stance, length, uncertainty or refusal; all six are response plans.",
+      "registration": "\u00a7175",
+      "source": "results/g_agreement/understand/e59/rows59.py"
+    },
+    {
+      "bank": "E59",
+      "row": "length_plan",
+      "silent_state_class": "plans",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7175 instruction fixes the upcoming reply format, language, stance, length, uncertainty or refusal; all six are response plans.",
+      "registration": "\u00a7175",
+      "source": "results/g_agreement/understand/e59/rows59.py"
+    },
+    {
+      "bank": "E59",
+      "row": "stance_plan",
+      "silent_state_class": "plans",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7175 instruction fixes the upcoming reply format, language, stance, length, uncertainty or refusal; all six are response plans.",
+      "registration": "\u00a7175",
+      "source": "results/g_agreement/understand/e59/rows59.py"
+    },
+    {
+      "bank": "W1",
+      "row": "json_status",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "JSON text; the read token ends the value of the current object's \"decision\" field. A = approved, B = rejected. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "json_type",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "JSON text; the read token is inside the value of the current field. A = a string value (opened with a quote), B = a numeric value. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "latex_environment",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "LaTeX; the read token is in the body text of the current environment. A = inside \\begin{equation}, B = inside \\begin{quote}. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "latex_role",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "LaTeX prose; A = the current passage is a theorem statement, B = a worked example. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "latex_section",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "LaTeX document; the read token is in body text after some number of \\section headings. A = section 1 or 2, B = section 6 to 8. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "latex_subject",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "LaTeX/maths prose; A = algebra content, B = geometry content. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "list_depth",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown bullet list; the read token is in the current item. A = item at nesting level 1 (top level), B = item at nesting level 3. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "list_index",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown bullet list; the read token is in the current item. A = it is the first item, B = it is item 6 to 8. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "list_priority",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "Task list item; A = an urgent task, B = a routine task. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "list_topic",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "Planning list item; A = travel planning, B = study planning. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "prose_paren",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "English prose sentence; A = the read token is inside a parenthesis that has opened and not closed, B = the parenthesis has already closed earlier in the same sentence. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "prose_quote",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "English prose sentence; A = the read token is inside a quotation that has opened and not closed, B = the quotation has already closed earlier in the same sentence. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "prose_sentence",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "English paragraph; the read token is a few words into the current sentence. A = sentence 1 or 2 of the paragraph, B = sentence 6 to 8. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "prose_sentiment",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "English prose; A = positive sentiment, B = negative sentiment. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "prose_topic",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "English prose; A = gardening content, B = ocean content. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "python_argument",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Python call; the read token is the current argument of an open call. A = the first argument, B = the fifth argument. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "python_comment",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Python source; A = the read token is inside a # comment, B = it is in executable code. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "python_depth",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Python expression; the read token is inside open brackets. A = bracket nesting depth 1, B = depth 3. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "python_error",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "Python function; the read token ends its final statement. A = the function raises an exception, B = it returns normally. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "python_indent",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Python function body; the read token is in a statement. A = indentation level 1, B = indentation level 3 (inside two nested blocks). Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "python_string",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Python source; A = the read token is inside a string literal that has opened and not closed, B = a string literal closed earlier and the read token is outside it. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "table_column",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown table; the read token is in a cell of a data row. A = column 1, B = column 5. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "table_role",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown table; A = the read token is in a header-row cell, B = in a data-row cell. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "table_row",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown table; the read token is in a data row. A = data row 1 or 2, B = data row 6 to 8. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W1",
+      "row": "table_status",
+      "silent_state_class": "content_topic",
+      "assignment": "registration_text_coding",
+      "rationale": "Markdown table with a Decision column; the read token ends the current row's Decision cell. A = approved, B = rejected. Classification: passage content versus local syntactic/document position bookkeeping.",
+      "registration": "W1 registration / \u00a7132 E36 definition-only replication of all25 W1 rows",
+      "source": "results/g_agreement/understand/e36/ROW_DEFINITIONS.json"
+    },
+    {
+      "bank": "W12",
+      "row": "clause_embedding",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7100 defines grammatical role/form, word or paragraph position, or an open relative clause: local syntactic/document state, grouped with bookkeeping calibration.",
+      "registration": "\u00a7100",
+      "source": "projects/g_agreement/blindspot/w12_items.py"
+    },
+    {
+      "bank": "W12",
+      "row": "paragraph_index",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7100 defines grammatical role/form, word or paragraph position, or an open relative clause: local syntactic/document state, grouped with bookkeeping calibration.",
+      "registration": "\u00a7100",
+      "source": "projects/g_agreement/blindspot/w12_items.py"
+    },
+    {
+      "bank": "W12",
+      "row": "paragraph_start",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7100 defines grammatical role/form, word or paragraph position, or an open relative clause: local syntactic/document state, grouped with bookkeeping calibration.",
+      "registration": "\u00a7100",
+      "source": "projects/g_agreement/blindspot/w12_items.py"
+    },
+    {
+      "bank": "W12",
+      "row": "sentence_position",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7100 defines grammatical role/form, word or paragraph position, or an open relative clause: local syntactic/document state, grouped with bookkeeping calibration.",
+      "registration": "\u00a7100",
+      "source": "projects/g_agreement/blindspot/w12_items.py"
+    },
+    {
+      "bank": "W12",
+      "row": "sentence_type",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7100 defines grammatical role/form, word or paragraph position, or an open relative clause: local syntactic/document state, grouped with bookkeeping calibration.",
+      "registration": "\u00a7100",
+      "source": "projects/g_agreement/blindspot/w12_items.py"
+    },
+    {
+      "bank": "W12",
+      "row": "syntax_role",
+      "silent_state_class": "bookkeeping",
+      "assignment": "registration_text_coding",
+      "rationale": "\u00a7100 defines grammatical role/form, word or paragraph position, or an open relative clause: local syntactic/document state, grouped with bookkeeping calibration.",
+      "registration": "\u00a7100",
+      "source": "projects/g_agreement/blindspot/w12_items.py"
+    }
+  ],
+  "source_commit": "7a805e6e5"
+}

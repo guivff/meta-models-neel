@@ -1,0 +1,9 @@
+{
+  "id": "23bee375184b0994d863167b",
+  "malformed": false,
+  "raw": "- =1; // New param `flag=1` appears in the middle, but `flag\n- =true;`  # Note: `flag=true` appears in the middle. We need to preserve `?flag\n- =1&other=2`  (Note: `flag=1` is now in the middle, but we ignore it per spec)\n- =true` (the new flag we care about) appears in the middle. We need to parse `?flag",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =1; // New param `flag=1` appears in the middle, but `flag\n- =true;`  # Note: `flag=true` appears in the middle. We need to preserve `?flag\n- =1&other=2`  (Note: `flag=1` is now in the middle, but we ignore it per spec)\n- =true` (the new flag we care about) appears in the middle. We need to parse `?flag"
+}

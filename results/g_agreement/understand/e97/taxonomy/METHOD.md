@@ -1,0 +1,7 @@
+# E97 rival taxonomy forecast — prospective analysis implementation
+
+Authority §205(5). Exactly40 distinct new properties, one forecast unit per property (L4 only for decision rows). Tags committed before capture; J forecast committed after capture and before GO. Compare both paired predictions against sealed per-row REPORTED truth. Oracle R-T1: J balanced accuracy minus taxonomy balanced accuracy ≥0.10 with paired-row bootstrap lower bound>0; falsifier difference≤0. NLA same numbers descriptive. E75 remains unchanged.
+
+Implementation conventions fixed before E97 capture: 2000 paired row resamples, seed20261028, percentile95% CI. The same row indices resample both forecasts and truth. Undefined one-truth-class draws are omitted and counted; a one-class original panel is NOT EVALUABLE. No added minimum-class threshold. All40 new rows are required for this rule; missing rows are not silently dropped or replaced by ladder rungs.
+
+The analysis requires a committed plan binding source code, sealed judgments/forecasts/taxonomy/join/custody files by hash, and a fresh once-only output directory. Integrator validates the joined row inputs against the original forecast/taxonomy/truth files before freezing the plan. Custody timestamps must preserve taxonomy commit → capture → J forecast commit → GO → reader start → opening. No real inputs or result computation yet. Two synthetic CPU tests pass: paired contrast/identical forecasts, no duplicated units, and undefined one-class target.

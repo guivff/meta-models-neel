@@ -1,0 +1,429 @@
+{
+  "section": 79,
+  "status": "FROZEN_BEFORE_ANY_S84_ITEMS",
+  "selection": "descending Oracle gap; eligible native44 probe≥.85 / mismatch≤.60; exclude frozen W1 overlap; ties featureID",
+  "candidates": [
+    {
+      "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+      "run_kind": "real",
+      "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+      "feature": "wordlist_preposition",
+      "reader": "olens",
+      "site": 44,
+      "class_label": "semantic",
+      "definition": "the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without",
+      "w1_overlap": [],
+      "n": 300,
+      "n_groups": 254,
+      "native_true": {
+        "auroc": 0.4305333333333333,
+        "lo": 0.36924899919413995,
+        "hi": 0.49315932029926596,
+        "n": 300,
+        "n_clusters": 254
+      },
+      "native_mismatched": {
+        "auroc": 0.5694666666666667,
+        "lo": 0.500648704341291,
+        "hi": 0.6322556976132075,
+        "n": 300,
+        "n_clusters": 254
+      },
+      "probe": {
+        "auroc": 0.9712888888888889,
+        "lo": 0.9539931573622531,
+        "hi": 0.9862679658985725,
+        "n": 300,
+        "n_clusters": 254
+      },
+      "gap": 0.5407555555555555,
+      "gap_ci95": [
+        0.4788466719367005,
+        0.6023757020339693
+      ],
+      "evaluable": true,
+      "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+      "status": "EVALUABLE"
+    },
+    {
+      "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+      "run_kind": "real",
+      "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+      "feature": "word_allcaps",
+      "reader": "olens",
+      "site": 44,
+      "class_label": "state-like",
+      "definition": "the current word has at least two letters and is uppercase",
+      "w1_overlap": [],
+      "n": 300,
+      "n_groups": 252,
+      "native_true": {
+        "auroc": 0.4703333333333333,
+        "lo": 0.4058903434684685,
+        "hi": 0.5355203154463638,
+        "n": 300,
+        "n_clusters": 252
+      },
+      "native_mismatched": {
+        "auroc": 0.5296666666666666,
+        "lo": 0.4540280486317211,
+        "hi": 0.5988868095674228,
+        "n": 300,
+        "n_clusters": 252
+      },
+      "probe": {
+        "auroc": 0.9814222222222222,
+        "lo": 0.9684340459986537,
+        "hi": 0.9921800981877474,
+        "n": 300,
+        "n_clusters": 252
+      },
+      "gap": 0.5110888888888889,
+      "gap_ci95": [
+        0.4452492944993948,
+        0.5781765016654535
+      ],
+      "evaluable": true,
+      "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+      "status": "EVALUABLE"
+    },
+    {
+      "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+      "run_kind": "real",
+      "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+      "feature": "current_colon",
+      "reader": "olens",
+      "site": 44,
+      "class_label": "state-like",
+      "definition": "the last observed non-space character is a colon",
+      "w1_overlap": [],
+      "n": 300,
+      "n_groups": 258,
+      "native_true": {
+        "auroc": 0.4892888888888889,
+        "lo": 0.41957882182675815,
+        "hi": 0.5549015421949272,
+        "n": 300,
+        "n_clusters": 258
+      },
+      "native_mismatched": {
+        "auroc": 0.5107111111111111,
+        "lo": 0.44577943603503084,
+        "hi": 0.5762417655889254,
+        "n": 300,
+        "n_clusters": 258
+      },
+      "probe": {
+        "auroc": 0.9907111111111111,
+        "lo": 0.9797331849551415,
+        "hi": 0.9984931502072405,
+        "n": 300,
+        "n_clusters": 258
+      },
+      "gap": 0.5014222222222222,
+      "gap_ci95": [
+        0.4348327219557742,
+        0.5709823107903641
+      ],
+      "evaluable": true,
+      "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+      "status": "EVALUABLE"
+    },
+    {
+      "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+      "run_kind": "real",
+      "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+      "feature": "number_magnitude_ge_1000",
+      "reader": "olens",
+      "site": 44,
+      "class_label": "count-like",
+      "definition": "absolute value of a numeric lexeme ending at the current character ≥ 1000",
+      "w1_overlap": [],
+      "n": 300,
+      "n_groups": 243,
+      "native_true": {
+        "auroc": 0.4992888888888889,
+        "lo": 0.43264806502087017,
+        "hi": 0.5689990971130353,
+        "n": 300,
+        "n_clusters": 243
+      },
+      "native_mismatched": {
+        "auroc": 0.5007111111111111,
+        "lo": 0.43369411599254737,
+        "hi": 0.5689519183773216,
+        "n": 300,
+        "n_clusters": 243
+      },
+      "probe": {
+        "auroc": 0.9792888888888889,
+        "lo": 0.9622549036247572,
+        "hi": 0.9923508052895426,
+        "n": 300,
+        "n_clusters": 243
+      },
+      "gap": 0.48,
+      "gap_ci95": [
+        0.4064648709125366,
+        0.5521941133595234
+      ],
+      "evaluable": true,
+      "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+      "status": "EVALUABLE"
+    },
+    {
+      "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+      "run_kind": "real",
+      "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+      "feature": "number_digits_ge_3",
+      "reader": "olens",
+      "site": 44,
+      "class_label": "count-like",
+      "definition": "digit characters in that numeric lexeme (including exponent digits) ≥ 3",
+      "w1_overlap": [],
+      "n": 300,
+      "n_groups": 264,
+      "native_true": {
+        "auroc": 0.49777777777777776,
+        "lo": 0.43028081615970537,
+        "hi": 0.5638381141215582,
+        "n": 300,
+        "n_clusters": 264
+      },
+      "native_mismatched": {
+        "auroc": 0.5022222222222222,
+        "lo": 0.4369193240830899,
+        "hi": 0.5709519390980131,
+        "n": 300,
+        "n_clusters": 264
+      },
+      "probe": {
+        "auroc": 0.9660888888888889,
+        "lo": 0.9444870283018868,
+        "hi": 0.9843788302188079,
+        "n": 300,
+        "n_clusters": 264
+      },
+      "gap": 0.4683111111111111,
+      "gap_ci95": [
+        0.39816763007120487,
+        0.5394467702547154
+      ],
+      "evaluable": true,
+      "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+      "status": "EVALUABLE"
+    },
+    {
+      "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+      "run_kind": "real",
+      "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+      "feature": "current_number",
+      "reader": "olens",
+      "site": 44,
+      "class_label": "state-like",
+      "definition": "a complete numeric lexeme ends at the current character",
+      "w1_overlap": [],
+      "n": 300,
+      "n_groups": 267,
+      "native_true": {
+        "auroc": 0.5023111111111112,
+        "lo": 0.4386191351239374,
+        "hi": 0.5707287597610178,
+        "n": 300,
+        "n_clusters": 267
+      },
+      "native_mismatched": {
+        "auroc": 0.4976888888888889,
+        "lo": 0.42931691550404444,
+        "hi": 0.5645029600321662,
+        "n": 300,
+        "n_clusters": 267
+      },
+      "probe": {
+        "auroc": 0.9673777777777778,
+        "lo": 0.9447253380973138,
+        "hi": 0.9853571244540048,
+        "n": 300,
+        "n_clusters": 267
+      },
+      "gap": 0.46506666666666663,
+      "gap_ci95": [
+        0.3920025346825076,
+        0.5318901744882137
+      ],
+      "evaluable": true,
+      "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+      "status": "EVALUABLE"
+    },
+    {
+      "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+      "run_kind": "real",
+      "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+      "feature": "number_digits_ge_4",
+      "reader": "olens",
+      "site": 44,
+      "class_label": "count-like",
+      "definition": "digit characters in that numeric lexeme (including exponent digits) ≥ 4",
+      "w1_overlap": [],
+      "n": 300,
+      "n_groups": 251,
+      "native_true": {
+        "auroc": 0.5198888888888888,
+        "lo": 0.4479308366047714,
+        "hi": 0.5859237616843066,
+        "n": 300,
+        "n_clusters": 251
+      },
+      "native_mismatched": {
+        "auroc": 0.4801111111111111,
+        "lo": 0.4136497949917068,
+        "hi": 0.5448798330773977,
+        "n": 300,
+        "n_clusters": 251
+      },
+      "probe": {
+        "auroc": 0.9717333333333333,
+        "lo": 0.9540340959050031,
+        "hi": 0.9860377793451172,
+        "n": 300,
+        "n_clusters": 251
+      },
+      "gap": 0.4518444444444445,
+      "gap_ci95": [
+        0.38391033412789755,
+        0.5283065401843396
+      ],
+      "evaluable": true,
+      "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+      "status": "EVALUABLE"
+    },
+    {
+      "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+      "run_kind": "real",
+      "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+      "feature": "number_magnitude_ge_10",
+      "reader": "olens",
+      "site": 44,
+      "class_label": "count-like",
+      "definition": "absolute value of a numeric lexeme ending at the current character ≥ 10",
+      "w1_overlap": [],
+      "n": 300,
+      "n_groups": 266,
+      "native_true": {
+        "auroc": 0.5113333333333333,
+        "lo": 0.4457636577389672,
+        "hi": 0.5777902069123335,
+        "n": 300,
+        "n_clusters": 266
+      },
+      "native_mismatched": {
+        "auroc": 0.4886666666666667,
+        "lo": 0.4220051245615178,
+        "hi": 0.555633166449159,
+        "n": 300,
+        "n_clusters": 266
+      },
+      "probe": {
+        "auroc": 0.9602222222222222,
+        "lo": 0.9398082718092791,
+        "hi": 0.9772565688467781,
+        "n": 300,
+        "n_clusters": 266
+      },
+      "gap": 0.4488888888888889,
+      "gap_ci95": [
+        0.3763698390081376,
+        0.517783933116709
+      ],
+      "evaluable": true,
+      "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+      "status": "EVALUABLE"
+    },
+    {
+      "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+      "run_kind": "real",
+      "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+      "feature": "number_magnitude_ge_100",
+      "reader": "olens",
+      "site": 44,
+      "class_label": "count-like",
+      "definition": "absolute value of a numeric lexeme ending at the current character ≥ 100",
+      "w1_overlap": [],
+      "n": 300,
+      "n_groups": 255,
+      "native_true": {
+        "auroc": 0.5308444444444445,
+        "lo": 0.46289892845539776,
+        "hi": 0.5961567500563443,
+        "n": 300,
+        "n_clusters": 255
+      },
+      "native_mismatched": {
+        "auroc": 0.46915555555555555,
+        "lo": 0.40374129224519306,
+        "hi": 0.5342462754628905,
+        "n": 300,
+        "n_clusters": 255
+      },
+      "probe": {
+        "auroc": 0.9776444444444444,
+        "lo": 0.9597199930636165,
+        "hi": 0.9909651352669615,
+        "n": 300,
+        "n_clusters": 255
+      },
+      "gap": 0.4468,
+      "gap_ci95": [
+        0.3799271564281471,
+        0.5153527805704725
+      ],
+      "evaluable": true,
+      "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+      "status": "EVALUABLE"
+    },
+    {
+      "run_id": "b52172ba-ec17-476e-88a1-6a7fe7cc5dd5",
+      "run_kind": "real",
+      "code_sha256": "84d5a5c71d093901ad2538f5c1afc71fb38a3f84b9ce25806a1268fd65fd0949",
+      "feature": "wordlist_auxiliary",
+      "reader": "olens",
+      "site": 44,
+      "class_label": "semantic",
+      "definition": "the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would",
+      "w1_overlap": [],
+      "n": 300,
+      "n_groups": 246,
+      "native_true": {
+        "auroc": 0.5360888888888888,
+        "lo": 0.4706632771755081,
+        "hi": 0.601464152259758,
+        "n": 300,
+        "n_clusters": 246
+      },
+      "native_mismatched": {
+        "auroc": 0.4639111111111111,
+        "lo": 0.40000034206356716,
+        "hi": 0.5266381340533736,
+        "n": 300,
+        "n_clusters": 246
+      },
+      "probe": {
+        "auroc": 0.9784,
+        "lo": 0.9601477949007823,
+        "hi": 0.9924962396487459,
+        "n": 300,
+        "n_clusters": 246
+      },
+      "gap": 0.4423111111111112,
+      "gap_ci95": [
+        0.37416164562706766,
+        0.510692689690612
+      ],
+      "evaluable": true,
+      "checkpoint": "agu18dec/olens_and_ar@c95215d5d2f6250f20c305ae55c6e4d7569f92dc/olens_s3d_rl600",
+      "status": "EVALUABLE"
+    }
+  ],
+  "results_sha256": "31d480cd5338e41f063629cc40276ac0e25e2b20877f946c9fd50cac71a4f6b5",
+  "freeze_sha256": "aec4a8f0c47edb51e7beb67251c10ed20238efd2cceeb7cdb48cf094f4ebc897"
+}

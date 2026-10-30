@@ -1,0 +1,59 @@
+{
+  "analysis_output": "results/g_agreement/understand/e28/analysis_2026-10-26",
+  "authority": "\u00a7137 item5",
+  "closure_lines": [
+    {
+      "line": 6501,
+      "sha256_excluding_newline": "27f22fe4d1a44464d237d2b1c9adaafbf4529324dd8cb8d8e41028a5d6bab201",
+      "text": "- 2026-10-25 15:28Z integrator \u2192 W-lens, coordinator: **E28 (\u00a7122 full arms) environment retry COMPLETE on both pods.**"
+    },
+    {
+      "line": 6502,
+      "sha256_excluding_newline": "a4a272056aa608d10926ad24974599ad5c209ee85dc84b764c19209e2a07ea2c",
+      "text": "  - **Overlay:** pod-local Triton 3.7.1 over `/weights/venv-kernels`, `PREPARED_FROZEN`, inherited packages byte-preserved (inherited-path sha `d86e59e2\u2026`). Manifests `ea19ee59\u2026` (s0) and `34733f48\u2026` (s1), each bound in its assignment."
+    },
+    {
+      "line": 6503,
+      "sha256_excluding_newline": "63e1b4666305da9869e7249d7d56161078ae3b9b1767ab9f51bb8cef08a931e6",
+      "text": "  - **Pre-training W1 parity (\u00a7136 condition 3): PASS on both.** prose_paren 0.4790 vs 0.4847 (\u03940.0057); prose_sentiment 0.9104 vs 0.9110 (\u03940.0006); python_string 0.6446 vs 0.6440 (\u03940.0006). The parity scores hash is identical on both pods."
+    },
+    {
+      "line": 6504,
+      "sha256_excluding_newline": "c7c665e403277ebf14317e9cba54a959f0f23c961ade5630b2fc8c7c661b2505",
+      "text": "  - **CUDA backward:** first training step `TRAINING_ENVIRONMENT_READY` before the Mon 11:00Z deadline."
+    },
+    {
+      "line": 6505,
+      "sha256_excluding_newline": "299a62988ffda898289ec1d900ebb90be3b41d6e9a3a568e26a9252b3f422b0a",
+      "text": "  - **Admission:** forecasts F 3,778.0 / 3,823.6 s \u2192 `ADMIT_FULL_GRID`, with science caps 6,027 / 6,095 s."
+    },
+    {
+      "line": 6506,
+      "sha256_excluding_newline": "6bad5f6ff21381cb6c4777fe94998afb0914a9440d3b30dee052213d8cf22000",
+      "text": "  - **Result:** both pods `COMPLETE_FULL_ASSIGNED_GRID`, 14/14 runs, 7 `SCORE_SEAL`s per pod, all 112 seal entries per pod match locally. `full_private_test_labels_opened` false; only the 252 parity labels opened."
+    },
+    {
+      "line": 6507,
+      "sha256_excluding_newline": "c70469e3f41aae89b7110a765b4205e56aac55919f01384573b3c16dba91c13a",
+      "text": "  - **Pulls:** 135 files per pod verified into W-lens's `cache/g_agreement/understand/e28/<pod>/final/`. Parity labels deleted from both pods (ls-confirmed); no whitener. Exact-ID stops at 15:27:16Z, about 14 min after the workers exited at 15:12\u201315:13Z, because the integrator reported late (a bad waiter pattern)."
+    },
+    {
+      "line": 6508,
+      "sha256_excluding_newline": "6b660743425dd2fba24273f72b7ee6fb63198dacc4886bcce7ab177320af6c94",
+      "text": "  - **Integrator bug, no science impact:** my first chain pulled the overlay manifest as a single file, which failed, so it skipped the assignment. I built and pushed both assignments by hand at 14:04:47Z, after deleting a stale NO_FIT_STOP the coordinator had pushed to s1 before its worker existed. Same attempt; about 3 min delay."
+    },
+    {
+      "line": 6509,
+      "sha256_excluding_newline": "8fe87df4f9c38b9968aab5b86f6e53b8f91eabbb3899339af3a0611dd82743f2",
+      "text": "  - **Not done:** analysis is W-lens's job; I didn't run it."
+    }
+  ],
+  "copy_policy": "byte-identical copies of original single invocation; no recomputation",
+  "date": "2026-10-26",
+  "environment_impact_audit": "\u00a7137 item3 remains separate; no sealed scores or verdict thresholds altered",
+  "file_sha256_at_commit": "97b446ed105ed02d9098aab95c339eab20efe642280b4dfcb046e1f46ec5b3f3",
+  "integrator_snapshot_commit": "db2dfd118c112b1aa25a2334bb1d12ea890bbc96",
+  "registered_analysis": "ANALYSIS_RUN_2026-10-26.json",
+  "repository_path": "results/g_agreement/r/HANDOFF.md",
+  "transfer_verification": "PULL_VERIFICATION_2026-10-26.json"
+}

@@ -1,0 +1,80 @@
+diff --git a/projects/g_agreement/understand/e24_analysis.py b/projects/g_agreement/understand/e24_analysis.py
+index a0e886ca..db842a9e 100644
+--- a/projects/g_agreement/understand/e24_analysis.py
++++ b/projects/g_agreement/understand/e24_analysis.py
+@@ -1,4 +1,4 @@
+-"""E24 CPU-only C3, registered R0–R6, C6 cross-check and blinded C4 audit packet."""
++"""E24 CPU-only C3, clarified R0–R5; C5 descriptive, C6 cross-check and blinded C4 audit packet."""
+ import argparse
+ import hashlib
+ import json
+@@ -50,6 +50,15 @@ def all_resolved(values):
+     return True
+ 
+ 
++def carried_reversal(cell):
++    return (cell['C2']['auroc']>=.70 and cell['C2_swap']['auroc']<=.40
++            and cell['C2_swap']['ci95'][1]<.50)
++
++
++def c5_anchor(actual, reference):
++    return {'C5':actual,'E1b':reference,'C5_pass':abs(actual-reference)<=.03+1e-12}
++
++
+ def statement_shift(true,y,a,b):
+     """Unchanged S14 ar_lib.statement_shift formula, with §118's fresh raw reference."""
+     import torch
+@@ -166,6 +175,22 @@ def analyse(a):
+                 k=sum(code==('A' if yy else 'B') for code,yy in zip(codes,y));cell['C4']={'k':int(k),'n':len(te),'codes':codes}
+             layer[f]=cell
+         report[str(l)]=layer
++    # Clarification 2: C5 remains descriptive but its anchor joins R0 on every pod.
++    reference=read(P.ROOT/plan['e1b_reference'])['rows']
++    if set(reference)!=set(scope['rows_c5']):raise ValueError('E1b anchor reference coverage')
++    for slot,out in sorted(pods.items()):
++        dest=out/'L44';co=read(dest/'C5_ORDER.json');cv=np.load(dest/'C5.npy',allow_pickle=False)
++        cm={uid:i for i,uid in enumerate(co)}
++        if set(cm)!=set(canonical[44][0]).intersection({x['id'] for x in items if x['feature'] in scope['rows_c5']}) or len(cm)!=len(co) or cv.shape!=(2100,len(next(iter(directions.values())))):
++            raise ValueError('per-pod C5 anchor coverage/shape')
++        for f in scope['rows_c5']:
++            _,te,_,y,_=rowspec[f]
++            value=auc(y,cv[[cm[i] for i in te]]@directions[f'L44__{f}'])
++            check=c5_anchor(value,reference[f])
++            next(c for c in r0[f]['anchors'] if c['slot']==slot).update(check)
++            r0[f]['interpretable'] = r0[f]['interpretable'] and check['C5_pass']
++    for layer in report.values():
++        for f,cell in layer.items():cell['interpretable']=r0[f]['interpretable']
+     family={f'{f}:{l}':(report[str(l)][f]['C1']['p_above_chance'] if l in canonical and r0[f]['interpretable'] else 1.)
+             for f in scope['structure_rows'] for l in PRIORITY if l!=44}
+     if len(family)!=scope['holm_family_size']:raise ValueError('Holm family changed')
+@@ -175,16 +200,14 @@ def analyse(a):
+         blind=[f for f in eligible if layer[f]['C1']['auroc']<=layer[f]['C3']['auroc']-.15+1e-12]
+         valid=list(c2)
+         unresolved=[f for f in valid if not r0[f]['interpretable']]
+-        carried=[f for f in valid if r0[f]['interpretable'] and layer[f]['C2']['auroc']>=.7 and layer[f]['C2_swap']['auroc']<=.5]
++        carried=[f for f in valid if r0[f]['interpretable'] and carried_reversal(layer[f])]
+         dissociated=[f for f in valid if r0[f]['interpretable'] and layer[f]['C2_minus_C1']['ci95'][0]>0]
+         pooled=[layer[f]['C4'] for f in scope['structure_rows'] if r0[f]['interpretable']]
+         k=sum(c['k'] for c in pooled);n=sum(c['n'] for c in pooled);interval=list(wilson(k,n)) if n else None
+-        counts=[f for f in scope['rows_c5'] if specs[f]['class']=='count-like']
+         rules[str(l)]={'R1':{'held':None if any(not r0[f]['interpretable'] and layer[f]['C3']['auroc']>=.8 for f in scope['structure_rows']) else bool(eligible) and len(blind)/len(eligible)>=.75,'denominator':eligible,'blind':blind},
+-            'R3':{'held':majority(len(carried),len(unresolved),len(valid)),'denominator':valid,'unresolved':unresolved,'carried':carried},
++            'R3_prime':{'held':majority(len(carried),len(unresolved),len(valid)),'denominator':valid,'unresolved':unresolved,'carried':carried},
+             'R4':{'held':None if any(not r0[f]['interpretable'] for f in scope['structure_rows']) else interval is not None and interval[2]<.05,'k':k,'n':n,'rate_lo_hi':interval},
+-            'R5':{'held':majority(len(dissociated),len(unresolved),len(valid)),'denominator':valid,'unresolved':unresolved,'dissociated':dissociated},
+-            'R6':{'held':False if any(r0[f]['interpretable'] and layer[f]['C5']['auroc']>.65 for f in counts) else None if any(not r0[f]['interpretable'] for f in counts) else bool(counts),'denominator':counts}}
++            'R5':{'held':majority(len(dissociated),len(unresolved),len(valid)),'denominator':valid,'unresolved':unresolved,'dissociated':dissociated}}
+         if l!=44:
+             for f in scope['structure_rows']:
+                 if r0[f]['interpretable'] and layer[f]['C1']['auroc']>=.7 and adjusted[f'{f}:{l}']<.05 and report['44'][f]['C1']['auroc']<=.6:
+@@ -220,8 +243,8 @@ def analyse(a):
+     P.jsonl(a.out/'JUDGE_PACKET.jsonl',packet);P.jsonl(a.out/'JUDGE_KEY.DO_NOT_SEND.jsonl',key)
+     P.dump(a.out/'metrics.json',{'R0':r0,'layers':report,'rules':rules,'R2_cells':r2,'holm':adjusted,
+         'R1_across_layers':(True if sum(r['R1']['held'] is True for r in rules.values())>=9 else None if sum(r['R1']['held'] is not False for r in rules.values())>=9 else False),
+-        'R5_at_all_R3_layers':all_resolved([r['R5']['held'] for r in rules.values() if r['R3']['held'] is True]),
+-        'R6_all_layers':all_resolved([r['R6']['held'] for r in rules.values()]),'C6':c6report,'C7':c7report,
++        'R5_at_all_R3_prime_layers':all_resolved([r['R5']['held'] for r in rules.values() if r['R3_prime']['held'] is True]),
++        'C5_status':'DESCRIPTIVE_PER_ROW_LAYER_NO_ACROSS_LAYER_RULE','C6':c6report,'C7':c7report,
+         'C6_44_status':('REPRODUCED' if all(x['reproduced'] for x in c6report['44'].values()) else 'NOT REPRODUCED') if c6report else 'NOT RUN',
+         'C4_judge_status':'PENDING_BLINDED_AUDIT','bootstrap':'2000 W1 template-cluster draws; paired across channels; seed20261025',
+         'invalid_R0_rows_uninterpretable_everywhere':[f for f,v in r0.items() if not v['interpretable']]})

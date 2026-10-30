@@ -1,0 +1,12 @@
+{
+  "id": "93620422dd33c2f3d46b04fc",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict instruction to output only the emotion label, establishing a pattern of \"Example sentence \u2192 Answer\" pairs. The model must follow the demonstrated format.\n\nThe task requires classifying the emotion of \"I'm so happy\" as \"Joy,\" mirroring the earlier example's answer.\n\n\"Reply:\" is the final prompt label in a structured template (\"Given sentence: ... / Example sentence: ... / Given sentence: ... / Reply:\"), immediately requiring the model's direct answer (e.g., \"Joy\" or a short response).\n\"Given the following format, please provide the answer.\nExample sentence: I'm so happy...\nGiven sentence: I'm so happy...\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label, expecting the model's direct classification answer on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict instruction to output only the emotion label, establishing a pattern of \"Example sentence \u2192 Answer\" pairs. The model must follow the demonstrated format.\n\nThe task requires classifying the emotion of \"I'm so happy\" as \"Joy,\" mirroring the earlier example's answer.\n\n\"Reply:\" is the final prompt label in a structured template (\"Given sentence: ... / Example sentence: ... / Given sentence: ... / Reply:\"), immediately requiring the model's direct answer (e.g., \"Joy\" or a short response).\n\"Given the following format, please provide the answer.\nExample sentence: I'm so happy...\nGiven sentence: I'm so happy...\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label, expecting the model's direct classification answer on the next line.",
+  "truncated": false
+}

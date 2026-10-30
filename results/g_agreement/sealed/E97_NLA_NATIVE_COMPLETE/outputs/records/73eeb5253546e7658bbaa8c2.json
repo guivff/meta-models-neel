@@ -1,0 +1,12 @@
+{
+  "id": "73eeb5253546e7658bbaa8c2",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example.\n\nThe example sentence \"The movie was a huge success\" clearly maps to \"Positive,\" so the model must output that label.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"Positive\") on the next line.\n\"Follow the exact format:\nExample sentence: 'The movie was a huge success.'\nClassification task: Determine the sentiment label for the given sentence.\nInput: 'The movie was a huge success.'\nReply:\" \u2014 this closing \"Reply:\" field demands the concise classification answer as the very next token, completing the structured response format.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example.\n\nThe example sentence \"The movie was a huge success\" clearly maps to \"Positive,\" so the model must output that label.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"Positive\") on the next line.\n\"Follow the exact format:\nExample sentence: 'The movie was a huge success.'\nClassification task: Determine the sentiment label for the given sentence.\nInput: 'The movie was a huge success.'\nReply:\" \u2014 this closing \"Reply:\" field demands the concise classification answer as the very next token, completing the structured response format.\n\"Reply:\"",
+  "truncated": false
+}

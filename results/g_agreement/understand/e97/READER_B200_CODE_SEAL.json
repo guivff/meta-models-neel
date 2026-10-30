@@ -1,0 +1,39 @@
+{
+  "CPU_tests": "11 passed0.74s (7reader +4hardware)",
+  "GO_issued": false,
+  "actual_B200_smoke_run": false,
+  "allocation": false,
+  "checks": [
+    "Both GPU types validated in assignment and recorded in output receipt",
+    "B200 exact one visible device/name validation and original pinned model/Oracle loader",
+    "Three old sealed H200 readouts compared for each loaded reader: finite logits, raw first divergence; nonfinite/load failure remains FAILED",
+    "Oracle smoke before parity/production; NLA smoke after NLA load before production",
+    "Whole3360item reader bank uses one assigned GPU type, no mixed row real/control cells"
+  ],
+  "exact_final_runtime_preflight_complete": false,
+  "files": {
+    "projects/g_agreement/e97/hardware.py": "afc3c12e0a7fb4d2a455941a0f8f69411381367175e889a77ff7ad4cf1f85dfc",
+    "projects/g_agreement/e97/readers.py": "a0778d7c0099aa494da60a48f06f251b605ab26ba8cb8d739570e6fe9772c4a4",
+    "projects/g_agreement/e97/test_hardware.py": "586770b7e07540cc551db2efad7669fda6abc42b452de4e9b12695dc90fdf372",
+    "projects/g_agreement/e97/test_readers.py": "cf823fbaae59267bbb42a8f495e31dc76f27bcc4726cec433367cd6d9d686116"
+  },
+  "first_output_evidence": "Prospective code, input fixture extraction, synthetic CPU tests; no new model output",
+  "first_output_utc": "unknown",
+  "hardware_note": "cb76843c",
+  "native_decoding": "Unchanged original worker56.Backend.native_one: Oracle44 max128/NLA42max512 close-tag,greedy,batch8",
+  "pending": "Final exact input archive adds smoke fixtures and new recapture seal, bound GO, measured full-custody budget/provider guards; actual GPU smoke remains mandatory",
+  "reference_files": {
+    "SMOKE_nla.json": "a24d7da811ed3ae3f0403e92ded0e79548e5c8d0b29d2d13ee8fb6f96e637a66",
+    "SMOKE_nla.npy": "b0f594d4383debf2eee1db218b72d3be8d6e886011280944cd425d1cf118a835",
+    "SMOKE_oracle.json": "3abcadbf0fa58440008b325b6a046492cdb28050de252bc42c3c496e91adc8a9",
+    "SMOKE_oracle.npy": "efc6e9437d9f318e60c0eac3096f0320735998e33246bd849979f05651c19157"
+  },
+  "reference_origin": {
+    "H200_evidence": "NLA exact pod q8uefbrcap5fcv historical billed H200 record in compute.jsonl; Oracle prior verified source seal",
+    "nla": "E49_NLA_SUPPLEMENT sealed a8382b3bc46121c27a7934122bf57fe862f569515cf7fad1a8b991bc9357c72a, original block42 vectors; NLA512 close-tag stop,3items",
+    "oracle": "Original sealed E49 Oracle128/H200 raw strings + original block44 vectors,3items"
+  },
+  "reference_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i5/cache/g_agreement/understand/e97/reader_smoke_reference",
+  "stage": "READER_B200_CODE_AND_REFERENCE_CPU_READY_NOT_FINAL_PACKAGE",
+  "timestamp_utc": "2026-10-28T15:07:31.710943+00:00"
+}

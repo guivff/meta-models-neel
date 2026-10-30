@@ -1,0 +1,213 @@
+{
+  "section": 101,
+  "status": "COMPLETE_USER_NARROWED_SAMPLE_DESCRIPTIVE",
+  "rows": [
+    {
+      "feature": "prose_paren",
+      "reader": "oracle",
+      "layer": 44,
+      "sample_n": 75,
+      "valid_n": 75,
+      "missing": 0,
+      "mention": {
+        "k": 47,
+        "n": 75,
+        "rate": 0.6266666666666667,
+        "ci95": [
+          0.5135475597239507,
+          0.7274419686468587
+        ]
+      },
+      "accuracy_among_mentions": {
+        "k": 13,
+        "n": 47,
+        "rate": 0.2765957446808511,
+        "ci95": [
+          0.16936405991152936,
+          0.41758835700689967
+        ]
+      },
+      "mention_rate_missing_bounds": [
+        0.6266666666666667,
+        0.6266666666666667
+      ],
+      "keyword": {
+        "k": 0,
+        "n": 75,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.04872554590470005
+        ]
+      },
+      "judge_keyword_disagreements": 47,
+      "evidence_quality_flags_not_exclusions": 9
+    },
+    {
+      "feature": "prose_paren",
+      "reader": "nla",
+      "layer": 42,
+      "sample_n": 75,
+      "valid_n": 75,
+      "missing": 0,
+      "mention": {
+        "k": 5,
+        "n": 75,
+        "rate": 0.06666666666666667,
+        "ci95": [
+          0.028809638090317204,
+          0.14675250169375617
+        ]
+      },
+      "accuracy_among_mentions": {
+        "k": 5,
+        "n": 5,
+        "rate": 1.0,
+        "ci95": [
+          0.5655085052479191,
+          1.0000000000000002
+        ]
+      },
+      "mention_rate_missing_bounds": [
+        0.06666666666666667,
+        0.06666666666666667
+      ],
+      "keyword": {
+        "k": 5,
+        "n": 75,
+        "rate": 0.06666666666666667,
+        "ci95": [
+          0.028809638090317204,
+          0.14675250169375617
+        ]
+      },
+      "judge_keyword_disagreements": 2,
+      "evidence_quality_flags_not_exclusions": 0
+    },
+    {
+      "feature": "table_column",
+      "reader": "oracle",
+      "layer": 44,
+      "sample_n": 75,
+      "valid_n": 75,
+      "missing": 0,
+      "mention": {
+        "k": 24,
+        "n": 75,
+        "rate": 0.32,
+        "ci95": [
+          0.22542843754055913,
+          0.43211275898513285
+        ]
+      },
+      "accuracy_among_mentions": {
+        "k": 18,
+        "n": 24,
+        "rate": 0.75,
+        "ci95": [
+          0.5510017468789357,
+          0.8800079652065766
+        ]
+      },
+      "mention_rate_missing_bounds": [
+        0.32,
+        0.32
+      ],
+      "keyword": {
+        "k": 0,
+        "n": 75,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.04872554590470005
+        ]
+      },
+      "judge_keyword_disagreements": 24,
+      "evidence_quality_flags_not_exclusions": 0
+    },
+    {
+      "feature": "table_column",
+      "reader": "nla",
+      "layer": 42,
+      "sample_n": 75,
+      "valid_n": 75,
+      "missing": 0,
+      "mention": {
+        "k": 29,
+        "n": 75,
+        "rate": 0.38666666666666666,
+        "ci95": [
+          0.2845504777263397,
+          0.4998273126787256
+        ]
+      },
+      "accuracy_among_mentions": {
+        "k": 25,
+        "n": 29,
+        "rate": 0.8620689655172413,
+        "ci95": [
+          0.6944064228730067,
+          0.9450264914795217
+        ]
+      },
+      "mention_rate_missing_bounds": [
+        0.38666666666666666,
+        0.38666666666666666
+      ],
+      "keyword": {
+        "k": 19,
+        "n": 75,
+        "rate": 0.25333333333333335,
+        "ci95": [
+          0.16859919647948146,
+          0.36210540616683723
+        ]
+      },
+      "judge_keyword_disagreements": 22,
+      "evidence_quality_flags_not_exclusions": 5
+    }
+  ],
+  "paired_differences": [
+    {
+      "feature": "prose_paren",
+      "n_items": 75,
+      "mention_difference": -0.56,
+      "mention_ci95": [
+        -0.6669999999999999,
+        -0.44
+      ],
+      "accuracy_difference": 0.7234042553191489,
+      "accuracy_ci95": [
+        0.5909090909090908,
+        0.8409090909090909
+      ],
+      "accuracy_valid_bootstrap_draws": 1983,
+      "direction": "NLA minus Oracle; item paired"
+    },
+    {
+      "feature": "table_column",
+      "n_items": 75,
+      "mention_difference": 0.06666666666666667,
+      "mention_ci95": [
+        -0.08,
+        0.21333333333333335
+      ],
+      "accuracy_difference": 0.11206896551724133,
+      "accuracy_ci95": [
+        -0.0879133597883597,
+        0.3284488898198575
+      ],
+      "accuracy_valid_bootstrap_draws": 2000,
+      "direction": "NLA minus Oracle; item paired"
+    }
+  ],
+  "api_cost": {
+    "actual_usd": "0.05218625",
+    "unresolved_reserve_usd": "0",
+    "committed_usd": "0.05218625",
+    "cap_usd": "5"
+  },
+  "scope": "150 distinct matched W1 test states, two rows only,75 per row; one sample/state/reader. No §84 and no unsealed outputs.",
+  "unavailable": "Other14 W1 structure rows unavailable; all §84 excluded until E13(a) seals both readers for a second sample.",
+  "bootstrap": "2000 item-paired draws,seed20261024; conditional accuracy CI unavailable if <1900 draws have mentions in both readers. No labels/reader names sent to judge."
+}

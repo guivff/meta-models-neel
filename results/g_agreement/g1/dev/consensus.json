@@ -1,0 +1,268 @@
+{
+  "primary_endpoint_consensus_vs_best_single": {
+    "k2": {
+      "k": 2,
+      "n_states": 8,
+      "n_covered": 4,
+      "coverage": 0.5,
+      "covered_items": [
+        "lang-01A",
+        "lang-01B",
+        "tense-01A",
+        "tense-01B"
+      ],
+      "consensus_accuracy": {
+        "k": 4,
+        "n": 4,
+        "p": 1.0
+      },
+      "single_reader_accuracy_on_covered": {
+        "nla": {
+          "k": 4,
+          "n": 4,
+          "p": 1.0,
+          "k_given_voted": 4,
+          "n_voted": 4
+        },
+        "olens": {
+          "k": 4,
+          "n": 4,
+          "p": 1.0,
+          "k_given_voted": 4,
+          "n_voted": 4
+        },
+        "jlens": {
+          "k": 3,
+          "n": 4,
+          "p": 0.75,
+          "k_given_voted": 3,
+          "n_voted": 3
+        }
+      },
+      "best_single_reader": "nla",
+      "difference_reselected_best": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "difference_fixed_best": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "n_pairs": 4,
+      "n_boot": 2000,
+      "seed": 0,
+      "definition": "consensus-k accuracy minus best single reader accuracy on the same covered states; reader abstention on a covered state counts as not correct; paired pair bootstrap"
+    },
+    "k3": {
+      "k": 3,
+      "n_states": 8,
+      "n_covered": 3,
+      "coverage": 0.375,
+      "covered_items": [
+        "lang-01A",
+        "lang-01B",
+        "tense-01B"
+      ],
+      "consensus_accuracy": {
+        "k": 3,
+        "n": 3,
+        "p": 1.0
+      },
+      "single_reader_accuracy_on_covered": {
+        "nla": {
+          "k": 3,
+          "n": 3,
+          "p": 1.0,
+          "k_given_voted": 3,
+          "n_voted": 3
+        },
+        "olens": {
+          "k": 3,
+          "n": 3,
+          "p": 1.0,
+          "k_given_voted": 3,
+          "n_voted": 3
+        },
+        "jlens": {
+          "k": 3,
+          "n": 3,
+          "p": 1.0,
+          "k_given_voted": 3,
+          "n_voted": 3
+        }
+      },
+      "best_single_reader": "nla",
+      "difference_reselected_best": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "difference_fixed_best": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "n_pairs": 4,
+      "n_boot": 2000,
+      "seed": 0,
+      "definition": "consensus-k accuracy minus best single reader accuracy on the same covered states; reader abstention on a covered state counts as not correct; paired pair bootstrap"
+    }
+  },
+  "secondary": "buckets, shared_wrong_by_family and leave_one_out below are secondary analyses",
+  "buckets": {
+    "1": {
+      "n_states": 2,
+      "accuracy": {
+        "k": 1,
+        "n": 2,
+        "p": 0.5,
+        "lo": 0.5,
+        "hi": 0.5,
+        "n_pairs": 1,
+        "ci": "pair-bootstrap"
+      },
+      "with_dissent": 0,
+      "voter_sets": {
+        "nla": 1,
+        "olens": 1
+      }
+    },
+    "2": {
+      "n_states": 1,
+      "accuracy": {
+        "k": 1,
+        "n": 1,
+        "p": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pairs": 1,
+        "ci": "pair-bootstrap"
+      },
+      "with_dissent": 0,
+      "voter_sets": {
+        "nla+olens": 1
+      }
+    },
+    "3": {
+      "n_states": 3,
+      "accuracy": {
+        "k": 3,
+        "n": 3,
+        "p": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "with_dissent": 0,
+      "voter_sets": {
+        "jlens+nla+olens": 3
+      }
+    },
+    "2_or_3": {
+      "n_states": 4,
+      "accuracy": {
+        "k": 4,
+        "n": 4,
+        "p": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      }
+    }
+  },
+  "unresolved": {
+    "all_abstain": 2
+  },
+  "n_unresolved": 2,
+  "shared_wrong_by_family": {
+    "language": {
+      "n_states": 2,
+      "n_shared_wrong": 0,
+      "n_all3_wrong": 0,
+      "items": []
+    },
+    "mapping": {
+      "n_states": 2,
+      "n_shared_wrong": 0,
+      "n_all3_wrong": 0,
+      "items": []
+    },
+    "ownership": {
+      "n_states": 2,
+      "n_shared_wrong": 0,
+      "n_all3_wrong": 0,
+      "items": []
+    },
+    "tense": {
+      "n_states": 2,
+      "n_shared_wrong": 0,
+      "n_all3_wrong": 0,
+      "items": []
+    }
+  },
+  "leave_one_out": {
+    "nla": {
+      "counts": {
+        "agree": 4,
+        "unresolved": 1,
+        "own_abstain": 3
+      },
+      "consistency": {
+        "k": 4,
+        "n": 4,
+        "p": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "note": "agree/(agree+disagree); own vote excluded from the others' consensus; others' ties/all-abstain unresolved"
+    },
+    "olens": {
+      "counts": {
+        "agree": 4,
+        "own_abstain": 3,
+        "unresolved": 1
+      },
+      "consistency": {
+        "k": 4,
+        "n": 4,
+        "p": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "note": "agree/(agree+disagree); own vote excluded from the others' consensus; others' ties/all-abstain unresolved"
+    },
+    "jlens": {
+      "counts": {
+        "agree": 3,
+        "own_abstain": 5
+      },
+      "consistency": {
+        "k": 3,
+        "n": 3,
+        "p": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pairs": 2,
+        "ci": "pair-bootstrap"
+      },
+      "note": "agree/(agree+disagree); own vote excluded from the others' consensus; others' ties/all-abstain unresolved"
+    }
+  },
+  "module": "g1",
+  "split": "dev",
+  "frozen": true,
+  "n_states": 8,
+  "n_pairs": 4,
+  "n_boot": 2000,
+  "seed": 0,
+  "absent_rows": [],
+  "rules": "vote = asserted candidate; unclear/self_contradictory abstain; ties and all-abstain unresolved; accuracy vs answer key; LOO consistency excludes own vote and is not an accuracy"
+}

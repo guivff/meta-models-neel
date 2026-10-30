@@ -1,0 +1,65 @@
+{
+  "experiment": "E110",
+  "registration": [
+    "section223 item4",
+    "eee08074a",
+    "b90b74353"
+  ],
+  "status": "READY_FILTER_INPUTS_WAIT_I2_ADMISSION_AND_ANALYSIS_ADAPTER",
+  "integrator": "I-2",
+  "source_repo": "soheeyang/TwoHopFact",
+  "source_revision": "59a84cd883f71641a03fb6fa50da92a9603e7845",
+  "license": "CC-BY-4.0",
+  "candidates": 3000,
+  "composition_types": 52,
+  "paraphrase_template_count": 104,
+  "logical_filter_slots": 12000,
+  "unique_filter_jobs": 10917,
+  "bank_seal_sha256": "15c11067878cc72eb1894eb2acb2c5065ee542e0dc3497c47e5b3b370ae066f1",
+  "public_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e110/cache/bank_twohopfact_2026-10-29_v1/PUBLIC_FILTER_INPUTS.tar.gz",
+  "public_archive_sha256": "f2f7cb9540487288b599093cdba7c99523b66c1d80d3839b5d09b1a69b6cad7a",
+  "pod_allowlist": [
+    "PUBLIC_FILTER_INPUTS.json"
+  ],
+  "public_record_fields": [
+    "id",
+    "prompt",
+    "input_ids",
+    "read_position"
+  ],
+  "cpu_private_csv": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e110/cache/twohopfact/TwoHopFact.csv",
+  "cpu_private_items": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e110/cache/bank_twohopfact_2026-10-29_v1/ITEMS.PRIVATE.json",
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 16,
+    "no_CoT": true
+  },
+  "seed": 20261029,
+  "model_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+  "filter_gpu_cap_seconds": 1800,
+  "reader_gpu_cap_seconds": 5400,
+  "outside_and_judge_cap_usd": 10,
+  "stability": "Only belief: native one-hop and2frozen paraphrases must name same entity; native two-hop answer wrong",
+  "fallback": "If stable wrong<60 use native wrong labelled no paraphrase gate; if native wrong<60 NOT RUN",
+  "target_wrong": 150,
+  "capture_after_cpu_selection_only": true,
+  "reader_sites": {
+    "oracle": 44,
+    "nla": 42
+  },
+  "reader_prefix": "Original native two-hop prompt, final token, one greedy native readout each",
+  "selector_command": [
+    "/Users/guivff/Documents/Neel_Exploration/activation-readers/.venv/bin/python",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e110/filter110.py",
+    "--receipt",
+    "ABS_VERIFIED_FILTER_RECEIPT",
+    "--out",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e110/cache/selection_once"
+  ],
+  "canonical_selection_guard": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e110/cache/FILTER_SELECTION_ONCE.json",
+  "analysis_owner": "W-mech2 adapter required committed+synthetic-tested before any affected output; I-2 watcher sole executor",
+  "judge_owner": "W-internals-C",
+  "auto_launch": false,
+  "labels_on_pod": false,
+  "CPU_TOOLS_SOURCE_archive_on_pod": false
+}

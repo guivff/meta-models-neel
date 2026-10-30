@@ -1,0 +1,50 @@
+{
+  "authority_commit": "01c5775ecdb57525e42ab7a831b8928ddbb25944",
+  "authority_item": 7,
+  "authority_section": 133,
+  "date": "2026-10-25",
+  "frozen_science_files_unchanged": {
+    "GATE_PLAN.20261025.json": "b277252b18e0efdf59928a3bd3be658feec7eb62b27993529b0d63fb335d64c8",
+    "GATE_SAMPLE.json": "dff73a3a83b76a6de4a5a2cbf2fe909a14a6888eaa9b91eeca6df849323fc593",
+    "REGISTRATION.5731e92e.md": "c4a66e2a1c74b237c3e2222a3deaa53255da9a8eb638e36ee77811fdc68edd32",
+    "gate_inputs.py": "a482c6601b1f69fcb64a16a3d58790f411a44e763df16ac317a12ab992a8bfb2",
+    "gate_math.py": "fee2ae7f85bed7ca2ae69780bd59fc50b80089eaffa2afa5a683f52ea7779964",
+    "sae.py": "ed3622dd21510e37c01f59d2ab01125275b9c50661463d7808a871f0b2af9a6d"
+  },
+  "git_base_after_required_pull_rebase": "17472735c3f7ea17d723aba38884b7e780710738",
+  "independent_review": "no remaining findings; rerun/worker subset132 passed",
+  "prior_E35_GPU_hours_minimum": 0.05,
+  "prior_E35_total_requires_Integrator_accounting": true,
+  "repair_GPU_hours": 0,
+  "repair_model_inference_calls": 0,
+  "rerun_guard_checks": [
+    "only integer attempt2 with exact authority",
+    "prior E35 usage >=180 seconds",
+    "resolved named-pod accounting and real HANDOFF checksum",
+    "original guard/result bytes unchanged",
+    "new guard exclusive; changed basename cannot bypass",
+    "main/report select fixed new request",
+    "unauthorized output or accounting rejected before guard/model work"
+  ],
+  "status": "PASS_CPU_ONLY",
+  "suite_seconds": 4.18,
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider results/g_agreement/understand/e35",
+  "tests_passed": 204,
+  "two_file_cache_regression": {
+    "cases": [
+      "two-file cache loads",
+      "missing config fails before allocation",
+      "missing weights fails before allocation",
+      "tampered config fails before allocation"
+    ],
+    "config_checksum_real": true,
+    "model_and_SAE_allocations_mocked": true,
+    "real_offline_huggingface_file_resolver": true,
+    "revision": "13d4221569f7ca5d3c1e605e3e3dc95117e4807c",
+    "snapshot_files": [
+      "config.json",
+      "layer44.sae.pt"
+    ],
+    "whole_SAE_snapshot_lookup_rejected": true
+  }
+}

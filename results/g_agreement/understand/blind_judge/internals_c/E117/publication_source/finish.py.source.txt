@@ -1,0 +1,37 @@
+import sys,tarfile,importlib.util,shutil
+from datetime import datetime,timezone
+from projects.g_agreement.understand.blind_judge.internals_c.transport import ROOT,HERE,SHARED
+from projects.g_agreement.understand.blind_judge.internals_c.runner import CACHE
+from projects.g_agreement.understand.blind_judge.internals_c.publish_phase import publish
+from projects.g_agreement.understand.blind_judge.internals_c.e117_binding import build
+from projects.g_agreement.understand.blind_judge.internals_c.e117_close import close
+from projects.g_agreement.understand.blind_judge.internals_c.accounting import bank_actual
+from projects.g_agreement.readerbench.io import read,write,sha,verify
+from projects.g_agreement.readerbench.scoring import require
+part=sys.argv[1];require(part in ('c','main'),'registered part');phase='targeted_sham_judging' if part=='c' else 'native_judging';n=672 if part=='c' else 3024;label='E117C_JUDGING' if part=='c' else 'E117_MAIN_JUDGING'
+src=CACHE/'E117'/phase/'outputs';ps=verify(src/'JUDGMENT_SEAL.json',sha(src/'JUDGMENT_SEAL.json'));require(ps['status']=='COMPLETE' and ps['route_verified'] is True,'full completed phase only')
+out=ROOT/'results/g_agreement/sealed_raw/trackQ'/label
+if(out/'RECEIPT.json').exists():
+ r=read(out/'RECEIPT.json');require(r['original_phase_seal_sha256']==sha(src/'JUDGMENT_SEAL.json') and r['archive_sha256']==sha(out/'JUDGMENTS.tar.gz'),'same immutable raw publication')
+else:r=publish('E117',phase,label)
+spec=importlib.util.spec_from_file_location('scan','/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r/git_hooks/scan_push.py');scan=importlib.util.module_from_spec(spec);spec.loader.exec_module(scan)
+with tarfile.open(out/'JUDGMENTS.tar.gz','r:gz') as tar:
+ for m in tar:
+  require(m.isfile(),'original files only');require(not scan.scan_diff('\n'.join('+'+x for x in tar.extractfile(m).read().decode().splitlines())),'raw plaintext secret scan')
+handoff=build(part);rows=read(src/'JUDGMENTS.json');kept=sum(x['status']=='KEPT' for x in rows);require(len(rows)==n,'full original census');actual,unknown=bank_actual(SHARED/'E117/ledger')
+require(unknown==0,'no unresolved physical charge before settled handoff')
+receipt=dict(experiment='E117',part=part,status='COMPLETE',judgments=n,kept=kept,terminal_missing=n-kept,phase_sha256=sha(src/'JUDGMENT_SEAL.json'),raw_archive_sha256=r['archive_sha256'],raw_plaintext_secret_scan_passed=True,analysis_handoff_seal=str(handoff/'HANDOFF_SEAL.json'),analysis_handoff_sha256=sha(handoff/'HANDOFF_SEAL.json'),cumulative_bank_booked_usd=str(actual),unresolved_physical_usd=str(unknown),operational_combined_lifetime_cap_usd='4',registered_combined_maximum_usd='6',extra_two_dollars_allocated=False,part_c_ceiling_usd='2',analysis_run=False,labels_cpu_only=True)
+paths=[str(out.relative_to(ROOT)), 'results/g_agreement/understand/e117/C_PART_'+part.upper()+'_JUDGING_FINAL_RECEIPT.json']
+if part=='main':
+ final=close();portable=ROOT/'results/g_agreement/sealed_raw/trackQ/E117_COMPLETE';portable.mkdir(exist_ok=True)
+ shutil.copyfile(final.parent/'BANK_COST.json',portable/'BANK_COST.json');shutil.copyfile(final.parent/'PHASES.json',portable/'PHASES.json')
+ write(portable/'BANK_SEAL.json',dict(experiment='E117',status='COMPLETE_JUDGING_BANK',n=3696,canonical_bank_sha256=sha(final),route_verified=True,labels_cpu_only=True,analysis_run=False,files={n:sha(portable/n) for n in ['BANK_COST.json','PHASES.json']}))
+ receipt.update(canonical_bank_sha256=sha(final),cost=read(final.parent/'BANK_COST.json'),portable_bank_sha256=sha(portable/'BANK_SEAL.json'));paths.append(str(portable.relative_to(ROOT)))
+pub=ROOT/paths[1];write(pub,receipt)
+entry='\n\n## '+datetime.now(timezone.utc).isoformat()+' — C E117 '+part+' SETTLED: immediate I2/TrackQ/Wmech2/RQ handoff\nAll'+str(n)+' original readouts terminal: '+str(kept)+'KEPT/'+str(n-kept)+'missing. Phase'+receipt['phase_sha256']+'; blindedraw'+r['archive_sha256']+'; native-ID keyed exact code/null handoff '+str(handoff/'HANDOFF_SEAL.json')+' SHA'+sha(handoff/'HANDOFF_SEAL.json')+'. Publicreceipt '+str(pub.relative_to(ROOT))+' SHA'+sha(pub)+'. Cumulative sharedbank booked'+str(actual)+'/operational4/unknown0; cphase ceiling2; extra2UNALLOCATED. '+('Main stillpending, original bank OPEN/no unused release.' if part=='c' else 'BOTH phasesCOMPLETE/original unusedreleasedONCE.')+'\nOriginal E56/E57 per-item descriptors/rubric03d copied bysealedsourceID. No label/conditiononwire, no oldcode rejudge. Original code/null remains source; separate original-schema UNPARSEABLE sentinels supplied for missing (neverzero). Main privacycopies8affected IDs retained with sourceaudit/originalevidence; c0copies. Owner assembles original inventory/targets/native token/EOS/norm/prompt/source custody and finalSPEC, Wmech2soleonceanalysis/RQreview; no Cstatistics/guard.\n'
+apps={}
+for p in [HERE/'HANDOFF.md',ROOT/'results/g_agreement/r/HANDOFF.md',ROOT/'results/g_agreement/r/WMECH2_HANDOFF.md',ROOT/'results/g_agreement/reviews/R-Q/HANDOFF.md',ROOT/'results/g_agreement/understand/e117/HANDOFF.md',ROOT/'results/g_agreement/understand/blind_judge/HANDOFF.md']:
+ with p.open('a') as f:f.write(entry)
+ apps[str(p.relative_to(ROOT))]=entry
+write(CACHE/'e117_publish_watch'/('PUBLICATION_'+part+'.json'),dict(paths=paths,appends=apps))
+print('E117 '+part+' sealed and ready for immediate owner publication')

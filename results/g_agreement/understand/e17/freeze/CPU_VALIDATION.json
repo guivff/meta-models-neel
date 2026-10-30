@@ -1,0 +1,200 @@
+{
+  "checks": [
+    "all full texts retokenized",
+    "all prefix/read indices recomputed",
+    "all labels independently parsed",
+    "span length and both distances",
+    "neutral marker-only twin differences",
+    "relative list-stack depth and equal indices",
+    "exact real next16 and AR retokenization",
+    "96 pairs/cell, 32 dev/64 test, disjoint template families",
+    "frozen donors within split/cell"
+  ],
+  "items": 1920,
+  "n_by_cell_split": {
+    "list_depth/line_end/dev": 64,
+    "list_depth/line_end/test": 128,
+    "list_depth/mid_item/dev": 64,
+    "list_depth/mid_item/test": 128,
+    "prose_paren/long_early/dev": 64,
+    "prose_paren/long_early/test": 128,
+    "prose_paren/long_late/dev": 64,
+    "prose_paren/long_late/test": 128,
+    "prose_paren/short_early/dev": 64,
+    "prose_paren/short_early/test": 128,
+    "prose_paren/short_late/dev": 64,
+    "prose_paren/short_late/test": 128,
+    "python_string/long_early/dev": 64,
+    "python_string/long_early/test": 128,
+    "python_string/long_late/dev": 64,
+    "python_string/long_late/test": 128,
+    "python_string/short_early/dev": 64,
+    "python_string/short_early/test": 128,
+    "python_string/short_late/dev": 64,
+    "python_string/short_late/test": 128
+  },
+  "next16_twin_audit": {
+    "list_depth/line_end": {
+      "different_twin_next16": 96
+    },
+    "list_depth/mid_item": {
+      "identical_twin_next16": 96
+    },
+    "prose_paren/long_early": {
+      "identical_twin_next16": 96
+    },
+    "prose_paren/long_late": {
+      "different_twin_next16": 96
+    },
+    "prose_paren/short_early": {
+      "different_twin_next16": 26,
+      "identical_twin_next16": 70
+    },
+    "prose_paren/short_late": {
+      "different_twin_next16": 96
+    },
+    "python_string/long_early": {
+      "identical_twin_next16": 96
+    },
+    "python_string/long_late": {
+      "different_twin_next16": 96
+    },
+    "python_string/short_early": {
+      "different_twin_next16": 26,
+      "identical_twin_next16": 70
+    },
+    "python_string/short_late": {
+      "different_twin_next16": 96
+    }
+  },
+  "no_W1_bank_read": true,
+  "pairs": 960,
+  "ranges": {
+    "list_depth/line_end": {
+      "to_line_end": [
+        0,
+        0
+      ]
+    },
+    "list_depth/mid_item": {
+      "to_line_end": [
+        25,
+        31
+      ]
+    },
+    "prose_paren/long_early": {
+      "since_opener": [
+        5,
+        8
+      ],
+      "span_tokens": [
+        60,
+        78
+      ],
+      "to_closer": [
+        53,
+        74
+      ]
+    },
+    "prose_paren/long_late": {
+      "since_opener": [
+        55,
+        76
+      ],
+      "span_tokens": [
+        60,
+        78
+      ],
+      "to_closer": [
+        3,
+        8
+      ]
+    },
+    "prose_paren/short_early": {
+      "since_opener": [
+        5,
+        8
+      ],
+      "span_tokens": [
+        20,
+        29
+      ],
+      "to_closer": [
+        14,
+        24
+      ]
+    },
+    "prose_paren/short_late": {
+      "since_opener": [
+        14,
+        26
+      ],
+      "span_tokens": [
+        20,
+        29
+      ],
+      "to_closer": [
+        3,
+        8
+      ]
+    },
+    "python_string/long_early": {
+      "since_opener": [
+        5,
+        8
+      ],
+      "span_tokens": [
+        60,
+        78
+      ],
+      "to_closer": [
+        53,
+        74
+      ]
+    },
+    "python_string/long_late": {
+      "since_opener": [
+        55,
+        76
+      ],
+      "span_tokens": [
+        60,
+        78
+      ],
+      "to_closer": [
+        3,
+        8
+      ]
+    },
+    "python_string/short_early": {
+      "since_opener": [
+        5,
+        8
+      ],
+      "span_tokens": [
+        20,
+        29
+      ],
+      "to_closer": [
+        14,
+        25
+      ]
+    },
+    "python_string/short_late": {
+      "since_opener": [
+        14,
+        26
+      ],
+      "span_tokens": [
+        20,
+        29
+      ],
+      "to_closer": [
+        3,
+        8
+      ]
+    }
+  },
+  "seed": 20261025,
+  "status": "PASS"
+}

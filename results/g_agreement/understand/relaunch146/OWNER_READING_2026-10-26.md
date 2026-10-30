@@ -1,0 +1,3 @@
+§146 expressly directs E32 to relaunch, superseding the previous zero-remaining launch hold. Operational reading before any new score: authorize exactly one additional E32 run under the original1800s all-inclusive run cap. The prior1800s remains charged; cumulative authorized ceiling3600s. This is an interpretation of the relaunch authorization, not an assertion that §146 printed a new numeric allocation. No extra retry. E24 remaining32738s unchanged.
+
+G is the only release mode. §146 supersedes §144 C/W1 hold for E24/E32; all-item per-shard rawh44 parity against W1 still precedes scoring. E34 released on W1 stored vectors once its request is committed by its owner; no E34 request is authored here. C disagreement remains an audit/sensitivity item.

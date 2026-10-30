@@ -1,0 +1,136 @@
+{
+  "R2": "PENDING_SEPARATE_ONCE_ONLY_INPUT_BINDING; not evaluated here",
+  "R3": {
+    "accuracy": 0.75,
+    "correct": 6,
+    "excluded_rows": [
+      "arith_carry",
+      "arith_compare",
+      "chased_role",
+      "holder_after_handovers",
+      "instruction_provenance",
+      "negation_scope",
+      "next_paragraph_language",
+      "pronoun_referent"
+    ],
+    "falsifier_low_accuracy": false,
+    "gated_no_forecast_rows": [],
+    "human_accuracy": 0.25,
+    "human_correct": 2,
+    "met": true,
+    "minimum_forecasted_gated_rows": 8,
+    "n_forecasted_gated": 8,
+    "n_gated": 8,
+    "not_evaluable_reason": null,
+    "rows": [
+      {
+        "correct": true,
+        "human_correct": false,
+        "human_prediction": "REPORTED",
+        "prediction": "MISSED",
+        "row": "asserted_vs_hypothetical",
+        "truth": "MISSED"
+      },
+      {
+        "correct": true,
+        "human_correct": false,
+        "human_prediction": "REPORTED",
+        "prediction": "MISSED",
+        "row": "branch_taken",
+        "truth": "MISSED"
+      },
+      {
+        "correct": true,
+        "human_correct": false,
+        "human_prediction": "REPORTED",
+        "prediction": "MISSED",
+        "row": "container_after_move",
+        "truth": "MISSED"
+      },
+      {
+        "correct": false,
+        "human_correct": false,
+        "human_prediction": "MISSED",
+        "prediction": "MISSED",
+        "row": "decimal_separator",
+        "truth": "REPORTED"
+      },
+      {
+        "correct": true,
+        "human_correct": true,
+        "human_prediction": "REPORTED",
+        "prediction": "REPORTED",
+        "row": "topic_twin",
+        "truth": "REPORTED"
+      },
+      {
+        "correct": false,
+        "human_correct": false,
+        "human_prediction": "REPORTED",
+        "prediction": "REPORTED",
+        "row": "unit_system",
+        "truth": "MISSED"
+      },
+      {
+        "correct": true,
+        "human_correct": false,
+        "human_prediction": "REPORTED",
+        "prediction": "MISSED",
+        "row": "user_expertise",
+        "truth": "MISSED"
+      },
+      {
+        "correct": true,
+        "human_correct": true,
+        "human_prediction": "MISSED",
+        "prediction": "MISSED",
+        "row": "var_type_at_use",
+        "truth": "MISSED"
+      }
+    ],
+    "sensitivity_no_forecast_wrong": {
+      "accuracy": 0.75,
+      "correct": 6,
+      "denominator": 8,
+      "no_forecast_counted_wrong": 0
+    },
+    "status": "EVALUABLE",
+    "truth": "native Oracle correct-value rate >=0.10 and >wrong-only rate; forced choice not used"
+  },
+  "analysis_seal_sha256": "d5475983c6ee5796c74436f9c86cfdebcdd4f65557ab4f1804627a2c3dd7d044",
+  "chronology": {
+    "evidence": "Final sealed E49 analysis validates GO before all E49 reader calls; no first-score timestamp invented.",
+    "forecast_commit": "fc50b8488604cdd4671e06be991c258fb056280f",
+    "forecast_commit_epoch": 1793069897,
+    "go_issued_epoch": 1793069918.617148
+  },
+  "experiment": "E52",
+  "falsifier": {
+    "R3_part": false,
+    "whole": false
+  },
+  "forecast_sha256": "caf6d97d5adfc3d22af519e582693664506b00a4b719d3b519ba7282f62612ad",
+  "post_hoc": {
+    "all_reported_correct": false,
+    "balanced_accuracy": 0.6666666666666667,
+    "beats_constant_MISSED": false,
+    "class_hit_rates": {
+      "MISSED": 0.8333333333333334,
+      "REPORTED": 0.5
+    },
+    "constant_MISSED": {
+      "accuracy": 0.75,
+      "correct": 6,
+      "n": 8
+    },
+    "label": "POST HOC; section169 dated note b5313eb1; no rule change",
+    "reported_correct": 1,
+    "reported_n": 2,
+    "reported_rows": {
+      "decimal_separator": "MISSED",
+      "topic_twin": "REPORTED"
+    }
+  },
+  "request_sha256": "260b13e07db6a791303e4a6920ce91388dacad6136bad6f788be052dd2953427",
+  "status": "COMPLETE_ONCE_ONLY_R3"
+}

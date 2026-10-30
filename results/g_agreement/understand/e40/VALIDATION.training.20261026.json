@@ -1,0 +1,33 @@
+{
+  "E35_regression_tests": 648,
+  "E40_calibration_population_captured": false,
+  "E40_gate_runs": 0,
+  "E40_gpu_hours": 0,
+  "E40_synthetic_tests": 56,
+  "E40_training_steps": 0,
+  "calibration_artifact": "created and sealed on pod after first1M trainingcaptures, before anyoptimizerupdate",
+  "command": "PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider results/g_agreement/understand/e35 results/g_agreement/understand/e40",
+  "coverage": [
+    "median then threshold then retained mean then fixedscale",
+    "position0 excluded before first1M calibration count",
+    "bufferedcalibration trains first with no recapture/gaps/replay",
+    "strict outlier threshold equality retained",
+    "100M target/full4096/final256 accounting",
+    "scaled checkpoint roundtrip and raw decoder norms for unchanged \u00a7131",
+    "samefiltered threshold and descriptivealltokens",
+    "CALIBRATION_SEAL before first scratch/retainedoptimizerupdate",
+    "scratchstate discarded/productionoverride forbidden",
+    "onepod full14h budget and memory/runtime admission",
+    "outputclaim createsparents/preservesguard",
+    "validity/operational/NOFIT classification",
+    "postPASS checkpoint/calibration/training custody"
+  ],
+  "date": "2026-10-26",
+  "diagnostic": "complete and sealed separately",
+  "experiment": "E40",
+  "failed": 0,
+  "passed": 704,
+  "pytest_seconds": 7.51,
+  "source_data_staging": "Integrator runs before GPU allocation; no claim that28.52GB staging is already complete",
+  "stage": "training_preparation"
+}

@@ -1,0 +1,94 @@
+{
+  "experiment": "E104",
+  "status": "FROZEN_PENDING_GIT_COMMIT",
+  "stage": "DEV_ONLY",
+  "authority": "5e075c6af",
+  "dev_count": 84,
+  "seed": 20261029,
+  "selected_doses": {
+    "N:fact_recall": {
+      "alpha": null,
+      "dev_n": 84,
+      "status": "NOT_EVALUABLE_NO_BEHAVIOURAL_FLIP",
+      "target_side_counts": {
+        "0.5": 0,
+        "1.0": 0,
+        "2.0": 0,
+        "4.0": 35
+      }
+    },
+    "N:language_plan": {
+      "alpha": null,
+      "dev_n": 84,
+      "status": "NOT_EVALUABLE_NO_BEHAVIOURAL_FLIP",
+      "target_side_counts": {
+        "0.5": 42,
+        "1.0": 42,
+        "2.0": 42,
+        "4.0": 42
+      }
+    },
+    "U:fact_recall": {
+      "alpha": 8.0,
+      "dev_n": 84,
+      "status": "SELECTED",
+      "target_side_counts": {
+        "0.5": 0,
+        "1.0": 0,
+        "2.0": 0,
+        "4.0": 42,
+        "8.0": 84
+      }
+    },
+    "U:language_plan": {
+      "alpha": 2.0,
+      "dev_n": 84,
+      "status": "SELECTED",
+      "target_side_counts": {
+        "0.5": 42,
+        "1.0": 48,
+        "2.0": 69,
+        "4.0": 84,
+        "8.0": 62
+      }
+    }
+  },
+  "behaviour_scorer_sha256": "ed24c667325bc25960d41394aaff0b2a6159cfba76292c5fc4a0ac1a7caf10eb",
+  "dose_score_field": "pair_logits",
+  "shards": [
+    {
+      "arm": "N",
+      "row": "fact_recall",
+      "input_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e104-N-dev-v3/fact_recall",
+      "input_sha256": "2dfc8bbb939df58ba821d575af282bafa1134e5d7caf2576935c156730a6eaed",
+      "output_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E104/N_dev/fact_recall/out",
+      "output_sha256": "da2a9d19a99cf3428fa5a89e4c2ed1febc469c8c14e0a5c96b62245b29705fa6"
+    },
+    {
+      "arm": "N",
+      "row": "language_plan",
+      "input_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e104-N-dev-v3/language_plan",
+      "input_sha256": "11eee22ddede2cfeb4cc95161c0759ba362d95471c87991cdee0580ea3a4f35d",
+      "output_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E104/N_dev/language_plan/out",
+      "output_sha256": "1b83b3bd1e85c718826f49954289b58fac3dde431f3acd314e298f3ff3549119"
+    },
+    {
+      "arm": "U",
+      "row": "fact_recall",
+      "input_root": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_ops/e104U_dev_bind/fact_recall",
+      "input_sha256": "685270eec4ad3ea52bba06c626266a33a43514b4da8a6d99dd6bd3093bd4ac33",
+      "output_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E104/U_dev/fact_recall/out",
+      "output_sha256": "d0c1a82323cd21c00ce84593ca719dae34ff65b20c08bb4a340560f5f83e6f63"
+    },
+    {
+      "arm": "U",
+      "row": "language_plan",
+      "input_root": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_ops/e104U_dev_bind/language_plan",
+      "input_sha256": "e07a6dff76d0b2582c4f1da92f3830cd5bd377216a4ea7f2a7556b022d9529c5",
+      "output_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/analysis402_verified/E104/U_dev/language_plan/out",
+      "output_sha256": "5c888c259af2e9812c9abd5743b9b764246d636c3a0d52dfab1a49ea8f0c0d40"
+    }
+  ],
+  "cpu_key_sha256": "db347b829b8ab531c4f8b987f738e47231fc9765780d144666504b0c3b1942eb",
+  "test_outputs_opened": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "095891ff1f45f0a426f3543a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given sentence.\n\nThe example structure (\"Example sentence: ... Reply: [answer]\") sets up a direct Q&A pattern requiring the model to output the classification label for the specific sentence \"I am going to the park.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the Arabic-style instruction format, immediately requiring the classification answer (e.g., \"Positive\" or \"Negative\") to follow.\n\"Given the following sentence, provide the response according to the established pattern.\nSentence: 'I am going to the park.'\nReply:\" \u2014 this closing \"Reply:\" is the final field marker, demanding the actual answer text (the model's classification response) as the very next token.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given sentence.\n\nThe example structure (\"Example sentence: ... Reply: [answer]\") sets up a direct Q&A pattern requiring the model to output the classification label for the specific sentence \"I am going to the park.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the Arabic-style instruction format, immediately requiring the classification answer (e.g., \"Positive\" or \"Negative\") to follow.\n\"Given the following sentence, provide the response according to the established pattern.\nSentence: 'I am going to the park.'\nReply:\" \u2014 this closing \"Reply:\" is the final field marker, demanding the actual answer text (the model's classification response) as the very next token.",
+  "truncated": false
+}

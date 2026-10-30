@@ -1,0 +1,322 @@
+{
+  "bootstrap": {
+    "draws": 5000,
+    "seed": 0,
+    "unit": "paired original item"
+  },
+  "caveat": "not naming counts as abstention, not a missing judgment; missing never imputed; shared-family confound remains unknown",
+  "coverage_difference": {
+    "complete_pair": {
+      "CI95": [
+        -0.45652173913043476,
+        -0.2717391304347826
+      ],
+      "estimate": -0.3641304347826087,
+      "kept": 184
+    },
+    "full199_bootstrap_bound_envelope": [
+      -0.4824120603015075,
+      -0.22613065326633167
+    ],
+    "full199_identification_bounds": [
+      -0.39195979899497485,
+      -0.3165829145728643
+    ],
+    "observed": {
+      "CI95": [
+        -0.4517833520414941,
+        -0.26810903306021017
+      ],
+      "denominator": "each output observed, never conditional on naming",
+      "estimate": -0.36006220670086214,
+      "valid_bootstraps": 5000
+    }
+  },
+  "given_value_differences": {
+    "belief": {
+      "CI95": [
+        0.2538588687344226,
+        0.48551749078047324
+      ],
+      "denominator": "each output independently given a stated value",
+      "estimate": 0.3707367872949753,
+      "valid_bootstraps": 5000
+    },
+    "truth": {
+      "CI95": [
+        -0.48674953805666504,
+        -0.2586686008824153
+      ],
+      "denominator": "each output independently given a stated value",
+      "estimate": -0.3707367872949753,
+      "valid_bootstraps": 5000
+    }
+  },
+  "oracle_minus_same_model_ceiling": {
+    "belief": {
+      "complete_pair": {
+        "CI95": [
+          -0.7486631016042781,
+          -0.6096256684491979
+        ],
+        "estimate": -0.679144385026738,
+        "kept": 187
+      },
+      "full199_bootstrap_bound_envelope": [
+        -0.7589195979899497,
+        -0.5728643216080402
+      ],
+      "full199_identification_bounds": [
+        -0.6984924623115578,
+        -0.6381909547738693
+      ],
+      "observed": {
+        "CI95": [
+          -0.7446808510638299,
+          -0.6132507574407415
+        ],
+        "denominator": "each output observed, never conditional on naming",
+        "estimate": -0.679144385026738,
+        "valid_bootstraps": 5000
+      }
+    },
+    "truth": {
+      "complete_pair": {
+        "CI95": [
+          0.11764705882352941,
+          0.22473262032085367
+        ],
+        "estimate": 0.1711229946524064,
+        "kept": 187
+      },
+      "full199_bootstrap_bound_envelope": [
+        0.11055276381909548,
+        0.2814070351758794
+      ],
+      "full199_identification_bounds": [
+        0.16080402010050251,
+        0.22110552763819097
+      ],
+      "observed": {
+        "CI95": [
+          0.11863495534900675,
+          0.22631578947368422
+        ],
+        "denominator": "each output observed, never conditional on naming",
+        "estimate": 0.1711229946524064,
+        "valid_bootstraps": 5000
+      }
+    }
+  },
+  "oracle_minus_same_model_ceiling_given_value": {
+    "belief": {
+      "CI95": [
+        -0.4457831325301205,
+        -0.25
+      ],
+      "denominator": "Oracle given a value versus construction ceiling given a value",
+      "estimate": -0.34782608695652173,
+      "valid_bootstraps": 5000
+    },
+    "truth": {
+      "CI95": [
+        0.25,
+        0.4444444444444444
+      ],
+      "denominator": "Oracle given a value versus construction ceiling given a value",
+      "estimate": 0.34782608695652173,
+      "valid_bootstraps": 5000
+    }
+  },
+  "outside_defaults_to_truth_clause_eligible": true,
+  "reading": "report unconditional and coverage estimates with missingness; never label the sealed precision gap overall",
+  "same_model_ceiling_interpretation": "E82 black-box answer defines its belief: construction ceiling, not evidence beyond text",
+  "section": "248 A",
+  "status": "EXPLORATORY_POST_HOC",
+  "systems": {
+    "oracle": {
+      "abstention": 95,
+      "coverage_full199_bounds": [
+        0.4623115577889447,
+        0.5226130653266332
+      ],
+      "coverage_observed": 0.4919786096256685,
+      "missing": 12,
+      "observed": 187,
+      "planned": 199,
+      "precision": 0.6521739130434783,
+      "states_belief": 60,
+      "states_value": 92,
+      "truth": {
+        "abstention": 95,
+        "coverage_full199_bounds": [
+          0.4623115577889447,
+          0.5226130653266332
+        ],
+        "coverage_observed": 0.4919786096256685,
+        "missing": 12,
+        "observed": 187,
+        "planned": 199,
+        "precision": 0.34782608695652173,
+        "states_truth": 32,
+        "states_value": 92,
+        "unconditional_full199_bounds": [
+          0.16080402010050251,
+          0.22110552763819097
+        ],
+        "unconditional_observed": 0.1711229946524064
+      },
+      "unconditional_full199_bounds": [
+        0.3015075376884422,
+        0.36180904522613067
+      ],
+      "unconditional_observed": 0.32085561497326204
+    },
+    "outside": {
+      "abstention": 29,
+      "coverage_full199_bounds": [
+        0.8391959798994975,
+        0.8542713567839196
+      ],
+      "coverage_observed": 0.8520408163265306,
+      "missing": 3,
+      "observed": 196,
+      "planned": 199,
+      "precision": 0.281437125748503,
+      "states_belief": 47,
+      "states_value": 167,
+      "truth": {
+        "abstention": 29,
+        "coverage_full199_bounds": [
+          0.8391959798994975,
+          0.8542713567839196
+        ],
+        "coverage_observed": 0.8520408163265306,
+        "missing": 3,
+        "observed": 196,
+        "planned": 199,
+        "precision": 0.718562874251497,
+        "states_truth": 120,
+        "states_value": 167,
+        "unconditional_full199_bounds": [
+          0.6030150753768844,
+          0.6180904522613065
+        ],
+        "unconditional_observed": 0.6122448979591837
+      },
+      "unconditional_full199_bounds": [
+        0.23618090452261306,
+        0.25125628140703515
+      ],
+      "unconditional_observed": 0.23979591836734693
+    },
+    "same_model_ceiling": {
+      "abstention": 0,
+      "coverage_full199_bounds": [
+        1.0,
+        1.0
+      ],
+      "coverage_observed": 1.0,
+      "missing": 0,
+      "observed": 199,
+      "planned": 199,
+      "precision": 1.0,
+      "states_belief": 199,
+      "states_value": 199,
+      "truth": {
+        "abstention": 0,
+        "coverage_full199_bounds": [
+          1.0,
+          1.0
+        ],
+        "coverage_observed": 1.0,
+        "missing": 0,
+        "observed": 199,
+        "planned": 199,
+        "precision": 0.0,
+        "states_truth": 0,
+        "states_value": 199,
+        "unconditional_full199_bounds": [
+          0.0,
+          0.0
+        ],
+        "unconditional_observed": 0.0
+      },
+      "unconditional_full199_bounds": [
+        1.0,
+        1.0
+      ],
+      "unconditional_observed": 1.0
+    }
+  },
+  "table_axes": [
+    "oracle no/yes",
+    "forecast no/yes"
+  ],
+  "table_missing_pairs": 15,
+  "truth_unconditional_difference": {
+    "complete_pair": {
+      "CI95": [
+        -0.5434782608695652,
+        -0.358695652173913
+      ],
+      "estimate": -0.45108695652173914,
+      "kept": 184
+    },
+    "full199_bootstrap_bound_envelope": [
+      -0.542713567839196,
+      -0.2864321608040201
+    ],
+    "full199_identification_bounds": [
+      -0.457286432160804,
+      -0.38190954773869346
+    ],
+    "observed": {
+      "CI95": [
+        -0.5322598835799175,
+        -0.3479198952308196
+      ],
+      "denominator": "each output observed, never conditional on naming",
+      "estimate": -0.44112190330677725,
+      "valid_bootstraps": 5000
+    }
+  },
+  "truth_wording": "outside model has a higher observed unconditional truth-stating rate",
+  "unconditional_difference": {
+    "complete_pair": {
+      "CI95": [
+        0.01616847826086961,
+        0.16304347826086957
+      ],
+      "estimate": 0.08695652173913043,
+      "kept": 184
+    },
+    "full199_bootstrap_bound_envelope": [
+      -0.02512562814070352,
+      0.20100502512562815
+    ],
+    "full199_identification_bounds": [
+      0.05025125628140704,
+      0.12562814070351758
+    ],
+    "observed": {
+      "CI95": [
+        0.0031228738445232937,
+        0.16117506172484064
+      ],
+      "denominator": "each output observed, never conditional on naming",
+      "estimate": 0.08105969660591511,
+      "valid_bootstraps": 5000
+    }
+  },
+  "who_states_belief_2x2": [
+    [
+      105,
+      19
+    ],
+    [
+      35,
+      25
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "b4336752d697afa67fdb2d43",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: example given, then a test case requires a matching one-word classification answer (\"positive\" or \"negative\").\n\nThe structured template \"Example: [sentence] \u2192 Reply: [label]\" sets up a parallel response format, with the model expected to output the correct label for the new sentence about \"a person who is not a doctor.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the Q&A format, immediately requiring the model's direct answer (e.g., \"negative\" or \"positive\").\n\"Given the following sentence: 'A person who is not a doctor.'\nExample sentence: 'A person who is not a doctor.'\nClassification: negative sentiment.\nGiven sentence: 'A person who is not a doctor.'\nReply:\" \u2014 the final field awaiting the answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: example given, then a test case requires a matching one-word classification answer (\"positive\" or \"negative\").\n\nThe structured template \"Example: [sentence] \u2192 Reply: [label]\" sets up a parallel response format, with the model expected to output the correct label for the new sentence about \"a person who is not a doctor.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the Q&A format, immediately requiring the model's direct answer (e.g., \"negative\" or \"positive\").\n\"Given the following sentence: 'A person who is not a doctor.'\nExample sentence: 'A person who is not a doctor.'\nClassification: negative sentiment.\nGiven sentence: 'A person who is not a doctor.'\nReply:\" \u2014 the final field awaiting the answer.",
+  "truncated": false
+}

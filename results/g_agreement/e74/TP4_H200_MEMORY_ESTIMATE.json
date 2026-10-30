@@ -1,0 +1,90 @@
+{
+  "activation_overhead": {
+    "assumed_workspaces_graphs_context_bytes_range": [
+      2000000000.0,
+      6000000000.0
+    ],
+    "bf16_hidden_buffer_bytes": 402653184,
+    "local_query_buffer_bytes": 268435456.0,
+    "max_batched_tokens": 32768,
+    "note": "Multiple hidden/residual/attention/MoE scratch buffers plus CUDA graphs/NCCL/context; buffer lifetimes overlap variably. Not all illustrative buffers must be simultaneously resident.",
+    "range_is_measurement": false
+  },
+  "cache_caveat": "576 bytes/token/layer latent+rope baseline; per-rank, not divided byTP. Add sparse indexer/scales/layout/block padding. Concurrent capture batch is conservative workload demand, not guaranteed peak residency; scheduler can serialize/preempt. Configured concurrency ceiling is not actual E74 demand.",
+  "capacity_bytes_per_gpu": 141000000000.0,
+  "caveats": [
+    "Checkpoint bytes are disk representation, not an exact HBM map; Marlin repacking, replicated tensors and derived MLA weights affect it.",
+    "MTP layer78 may be skipped in ordinary inference, reducing checkpoint/4 estimate; no exact credit claimed without tensor-header accounting. This does not remove post-boot9.74GB clone at fixed.88 allocation.",
+    "Author~160GB/GPU on4B200 is reported allocation under memory utilisation, not a proven minimum footprint.",
+    "No new offload, lower-concurrency, reduced-cache or keep_base change is included; these would need a separately audited variant and cannot justify READY for the present package."
+  ],
+  "checkpoint_divided_by4_bytes": 116028947474.0,
+  "checkpoint_total_bytes": 464115789896,
+  "conclusion": "No >=10% margin supported. Unchanged gpu_mem.88 profiles engine weights/activations/graphs and fills remainder with KV; subsequent keep_base=gpu clones about9.74GB per rank. Planning peak about133.8GB/rank under user141GB convention, leaving7.18GB/5.09% before other merge overhead. Real fit/OOM not measured; no READY or TP4H200 variant.",
+  "cpu_seconds": 0.13512458300000002,
+  "created_utc": "2026-10-28T06:15:41.878795+00:00",
+  "fixed_runtime_scenarios": [
+    {
+      "capacity_bytes": 141000000000.0,
+      "capacity_convention": "141 decimal GB",
+      "engine_profile_budget_bytes": 124080000000.0,
+      "headroom_bytes": 7182398976.0,
+      "headroom_fraction": 0.05093899982978723,
+      "passes_ten_percent": false,
+      "planned_peak_bytes_before_other_merge_overhead": 133817601024.0,
+      "post_boot_base_backup_bytes": 9737601024.0
+    },
+    {
+      "capacity_bytes": 151397597184,
+      "capacity_convention": "141 GiB sensitivity only",
+      "engine_profile_budget_bytes": 133229885521.92,
+      "headroom_bytes": 8430110638.080017,
+      "headroom_fraction": 0.05568193151595756,
+      "passes_ten_percent": false,
+      "planned_peak_bytes_before_other_merge_overhead": 142967486545.91998,
+      "post_boot_base_backup_bytes": 9737601024.0
+    }
+  ],
+  "gpu_base_backup_bytes": {
+    "attention": 8322023424.0,
+    "shared_experts": 1415577600.0,
+    "total": 9737601024.0
+  },
+  "gpu_used": false,
+  "hardware": "single-node4H200 TP4",
+  "input_lengths": {
+    "max": 550,
+    "max_batch512_with_generated_one": 134307,
+    "min": 10,
+    "n": 14184,
+    "readout_max_generated": 18,
+    "readout_prompt": 70,
+    "smoke_max": 1151,
+    "smoke_sum": 33459,
+    "sum": 1144765
+  },
+  "maximum_usage_for_10percent_margin": 126900000000.0,
+  "model_payload_downloaded": false,
+  "nominal_fp8_mla_cache_bytes_per_gpu": {
+    "configured_concurrency_ceiling": 26499612672,
+    "largest_capture_batch": 6034144896,
+    "readout_batch": 2024275968,
+    "smoke": 1505492352
+  },
+  "replicated_weight_increment_bytes": {
+    "indexer": 295206912.0,
+    "qkv": 1886257152.0,
+    "router": 353894400.0,
+    "total": 2535358464.0
+  },
+  "sources": {
+    "author_runtime": "results/g_agreement/e74/evidence/olens_glm53_usage.py:308",
+    "base_clone": "results/g_agreement/e74/evidence/fork_source/vllm-metamodels-glm53/vllm_lens/_lora_merge.py:666",
+    "marlin_repack": "https://raw.githubusercontent.com/vllm-project/vllm/v0.31.0/vllm/model_executor/layers/quantization/utils/marlin_utils_fp4.py",
+    "merge_temp": "results/g_agreement/e74/evidence/fork_source/vllm-metamodels-glm53/vllm_lens/_lora_merge.py:758",
+    "model_config_sha256": "b0b6b9ab922a82e3688bc39a4117bc443e106fcf88969ef48b3627778f4bdf7b",
+    "profiled_kv_budget": "https://raw.githubusercontent.com/vllm-project/vllm/v0.31.0/vllm/v1/worker/gpu_worker.py",
+    "replicated_attention": "https://raw.githubusercontent.com/vllm-project/vllm/v0.31.0/vllm/model_executor/models/deepseek_v2.py"
+  },
+  "status": "NOT_READY_FAILS_10_PERCENT_MEMORY_MARGIN"
+}

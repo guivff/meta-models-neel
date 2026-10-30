@@ -1,0 +1,28 @@
+{
+  "experiment": "E105",
+  "stage": "test",
+  "gpu_count": 1,
+  "gpu_type": "H200",
+  "cap_seconds": null,
+  "input_sha256": "FILL_ROW_INPUT_SHA_FROM_B_BINDING",
+  "source_sha256": "d2b0c774a2b038e4e3800b60343542501d439dcdf874902113af0826c778c685",
+  "assets_sha256": "FILL_SHA256_OF_STAGED_ASSET_MANIFEST",
+  "pod_id": "FILL_ACTUAL_POD_ID",
+  "pod_created_epoch": null,
+  "custody_start_epoch": null,
+  "absolute_deadline_epoch": null,
+  "daily_budget_verified": false,
+  "daily_budget_USD": 900,
+  "projected_daily_USD": null,
+  "hardware_authority": "cb76843cc777c90e3fab8056f2f0abab68731e3d",
+  "analysis_unit_gpu_types": {
+    "FILL_ROW": "H200"
+  },
+  "template_only": true,
+  "note": "Amendment2 first restart only: indent_level or fact_recall. Fill actual one-row GPU binding, fresh ledger/assets/pod/creation fields. Cap=ceil(max measured experiment setup+staging +1.25target work)+300s. Existing six timing profiles transfer on CPU to this source with rebind_timing217; original measurements stay immutable. Total E105 <=10800s, both rows share the single authorized restart. No further automatic retry.",
+  "timing_cap_policy": "e105_amendment2",
+  "setup_profile_sha256": [],
+  "profile_sha256": "FILL_TARGET_MEASURED_PROFILE_SHA_FOR_PRODUCTION",
+  "cap_authority": "157fb545",
+  "restart_round": 1
+}

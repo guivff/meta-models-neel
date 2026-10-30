@@ -1,0 +1,66 @@
+[
+  {
+    "id": "e5105940f545a78945aee24d",
+    "output": {
+      "malformed": false,
+      "raw": "- , 2, [1,\n- 2, 3]` (flattened, ignoring the outer brackets) | `[1\n- 2, [1, 2, 3]]` (parsed so far) | `[1,\n- 1, [1, 2, 3]]` (if we track depth) or `[1,",
+      "text": "- , 2, [1,\n- 2, 3]` (flattened, ignoring the outer brackets) | `[1\n- 2, [1, 2, 3]]` (parsed so far) | `[1,\n- 1, [1, 2, 3]]` (if we track depth) or `[1,"
+    }
+  },
+  {
+    "id": "65725ef9d5350d018e08c002",
+    "output": {
+      "malformed": false,
+      "raw": "- , 2, [1,\n- 2, 3]` (parsed depth) or `[1,\n- 2, [1, 2, 3]]` (current stack depth) | `[1,\n- 2, 3, [1, 2, 3]]` (parsing the nested structure) | `[1, 2",
+      "text": "- , 2, [1,\n- 2, 3]` (parsed depth) or `[1,\n- 2, [1, 2, 3]]` (current stack depth) | `[1,\n- 2, 3, [1, 2, 3]]` (parsing the nested structure) | `[1, 2"
+    }
+  },
+  {
+    "id": "53e5e6bab14804bc93a75a68",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (2, 3)), (1,\n- 0), (2, 1)), (3, 4))  # \u6700\u5916\u5c42\u62ec\u53f7\uff0c\u5f00\u59cb\u4e8e (1,\n- 0), (2, 1)), ...  # \u6bcf\u4e2a\u62ec\u53f7\u5bf9\u662f\u4e00\u4e2a\u201c\u4e8b\u4ef6\u201d\uff08\u8fdb\u5165/\u9000\u51fa\uff09\n- 1), (2, 2), ...), (3, 4)]  # \u6700\u5185\u5c42\u62ec\u53f7\u5bf9\uff0c",
+      "text": "- 2), (2, 3)), (1,\n- 0), (2, 1)), (3, 4))  # \u6700\u5916\u5c42\u62ec\u53f7\uff0c\u5f00\u59cb\u4e8e (1,\n- 0), (2, 1)), ...  # \u6bcf\u4e2a\u62ec\u53f7\u5bf9\u662f\u4e00\u4e2a\u201c\u4e8b\u4ef6\u201d\uff08\u8fdb\u5165/\u9000\u51fa\uff09\n- 1), (2, 2), ...), (3, 4)]  # \u6700\u5185\u5c42\u62ec\u53f7\u5bf9\uff0c"
+    }
+  },
+  {
+    "id": "89707cd2f7688f3878a142f1",
+    "output": {
+      "malformed": false,
+      "raw": "- 0), (2, 1), (3, 0)),  # \u5916\u5c42\u62ec\u53f7\u5f00\u59cb/\u7ed3\u675f\n- 1), (2, 1)), (3, 1))  # \u6bcf\u4e2a\u62ec\u53f7\u5bf9 (start,\n- 0), (2, 1))  # \u7b2c\u4e00\u5c42\u62ec\u53f7\u5f00\u59cb/\u7ed3\u675f), (1,\n- start, 1), (2, end)]` (where each tuple represents a nested structure), and then `(1,",
+      "text": "- 0), (2, 1), (3, 0)),  # \u5916\u5c42\u62ec\u53f7\u5f00\u59cb/\u7ed3\u675f\n- 1), (2, 1)), (3, 1))  # \u6bcf\u4e2a\u62ec\u53f7\u5bf9 (start,\n- 0), (2, 1))  # \u7b2c\u4e00\u5c42\u62ec\u53f7\u5f00\u59cb/\u7ed3\u675f), (1,\n- start, 1), (2, end)]` (where each tuple represents a nested structure), and then `(1,"
+    }
+  },
+  {
+    "id": "e9a9c22de56ed8ae87390e9e",
+    "output": {
+      "malformed": false,
+      "raw": "- , 2]  # depth stack after parsing \"foo\" \u2192 [2\n- 2, [\"bar\", 2]]  # depth stack: [2\n- 2, 3]  # \u2190 current depth stack (after parsing \"foo\")  [2,\n- [2, 1]]  # depth of each token: outer array is depth 1, inner is depth 2",
+      "text": "- , 2]  # depth stack after parsing \"foo\" \u2192 [2\n- 2, [\"bar\", 2]]  # depth stack: [2\n- 2, 3]  # \u2190 current depth stack (after parsing \"foo\")  [2,\n- [2, 1]]  # depth of each token: outer array is depth 1, inner is depth 2"
+    }
+  },
+  {
+    "id": "2c65803700c37acaf38dc048",
+    "output": {
+      "malformed": false,
+      "raw": "- , 2]  # depth of each item in the stack, [2\n- 2, 3]  # \u2190 nested array showing depth of each item in the parse tree, [2\n- 2, 3]  # \u2190 depth of each item in the stack, [2,\n- [2, 3], [\"root\"]]  # \u2190 The stack of depths: [2, 3",
+      "text": "- , 2]  # depth of each item in the stack, [2\n- 2, 3]  # \u2190 nested array showing depth of each item in the parse tree, [2\n- 2, 3]  # \u2190 depth of each item in the stack, [2,\n- [2, 3], [\"root\"]]  # \u2190 The stack of depths: [2, 3"
+    }
+  },
+  {
+    "id": "3586123cb9bd949d361c24c3",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (3, 4)), (2,\n- 2), (3, 4)]), (2, 3)]  # \u6700\u5185\u5c42\u62ec\u53f7\uff0c\u8868\u793a\u4e00\u4e2a\u5b8c\u6574\u7684\u201c\n- 0), (2, 1)]  # \u6700\u5185\u5c42\uff1a\u5f00\u59cb-\u7ed3\u675f\uff0c\u503c), (2,\n- \"open\"), (2, \"close\")], [((3, 4), \"open\"), (5, \"close\")]]`",
+      "text": "- 2), (3, 4)), (2,\n- 2), (3, 4)]), (2, 3)]  # \u6700\u5185\u5c42\u62ec\u53f7\uff0c\u8868\u793a\u4e00\u4e2a\u5b8c\u6574\u7684\u201c\n- 0), (2, 1)]  # \u6700\u5185\u5c42\uff1a\u5f00\u59cb-\u7ed3\u675f\uff0c\u503c), (2,\n- \"open\"), (2, \"close\")], [((3, 4), \"open\"), (5, \"close\")]]`"
+    }
+  },
+  {
+    "id": "016b67dea2b51ca9c52d03c1",
+    "output": {
+      "malformed": false,
+      "raw": "- , 2), (3, 4)), (\"Close\", (2,\n- 2), (3, 4))],  # \u5185\u90e8\u5d4c\u5957\u7684\u5143\u7ec4\uff0c\u8868\u793a\u5b50\u8282\u70b9\u53ca\u5176\u6301\u7eed\u65f6\u95f4\n- 1), (2, 3)]),  # \u7b2c\u4e00\u5c42\u62ec\u53f7\uff1a(2,\n- 2), (3, 4)]),  # \u6700\u5185\u5c42\uff1a\u64cd\u4f5c\u7b26 + \u6301\u7eed\u65f6\u95f4 + \u7ed3\u675f\u65f6\u95f4) ... ]`",
+      "text": "- , 2), (3, 4)), (\"Close\", (2,\n- 2), (3, 4))],  # \u5185\u90e8\u5d4c\u5957\u7684\u5143\u7ec4\uff0c\u8868\u793a\u5b50\u8282\u70b9\u53ca\u5176\u6301\u7eed\u65f6\u95f4\n- 1), (2, 3)]),  # \u7b2c\u4e00\u5c42\u62ec\u53f7\uff1a(2,\n- 2), (3, 4)]),  # \u6700\u5185\u5c42\uff1a\u64cd\u4f5c\u7b26 + \u6301\u7eed\u65f6\u95f4 + \u7ed3\u675f\u65f6\u95f4) ... ]`"
+    }
+  }
+]

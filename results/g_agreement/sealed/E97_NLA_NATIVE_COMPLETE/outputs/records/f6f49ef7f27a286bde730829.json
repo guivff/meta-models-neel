@@ -1,0 +1,12 @@
+{
+  "id": "f6f49ef7f27a286bde730829",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict instruction to output only the emotion label, establishing a pattern of \"sentence \u2192 emotion classification\" task. The model must produce a single emotion word like \"Anger\" or \"Joy.\"\n\nThe example sentence \"I am delighted to meet you\" clearly signals a positive emotion (delight/joy), constraining the answer to a matching label.\n\n\"Reply:\" is the final prompt token, part of the structured template \"Example sentence: ... / Question: What is the emotion? / Reply:\" \u2014 immediately requiring the model's direct answer or the formatted response to follow.\n\"Given the following example sentence, please provide the corresponding emotion label according to the specified format.\nExample sentence: 'I am delighted to meet you.'\nReply:\" \u2014 the final token \"Reply:\" expects the actual answer or response label next.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict instruction to output only the emotion label, establishing a pattern of \"sentence \u2192 emotion classification\" task. The model must produce a single emotion word like \"Anger\" or \"Joy.\"\n\nThe example sentence \"I am delighted to meet you\" clearly signals a positive emotion (delight/joy), constraining the answer to a matching label.\n\n\"Reply:\" is the final prompt token, part of the structured template \"Example sentence: ... / Question: What is the emotion? / Reply:\" \u2014 immediately requiring the model's direct answer or the formatted response to follow.\n\"Given the following example sentence, please provide the corresponding emotion label according to the specified format.\nExample sentence: 'I am delighted to meet you.'\nReply:\" \u2014 the final token \"Reply:\" expects the actual answer or response label next.",
+  "truncated": false
+}

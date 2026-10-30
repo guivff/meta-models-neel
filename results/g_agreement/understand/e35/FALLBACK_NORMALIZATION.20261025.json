@@ -1,0 +1,11 @@
+{
+  "decoder": "z @ W_dec.T + b_dec",
+  "decoder_bias_in_latent_norm_share": false,
+  "encoder": "TopK(ReLU(x @ W_enc.T + b_enc),64)",
+  "experiment": "E35",
+  "external_centering": false,
+  "external_whitening": false,
+  "input_scale_fit": false,
+  "input_transform": "identity_raw_residual_float32",
+  "schema": "e35-fallback-identity-v1"
+}

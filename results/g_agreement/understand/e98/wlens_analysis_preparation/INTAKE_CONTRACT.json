@@ -1,0 +1,75 @@
+{
+  "experiment": "E98",
+  "request_id": "I5-E98-ANALYSIS-READINESS-20261029",
+  "authority": [
+    "BRIEF_UNDERSTAND \u00a7204 E98",
+    "\u00a7217(6,8)"
+  ],
+  "status": "PREPARED_NOT_EXECUTED",
+  "created_utc": "2026-10-29T04:43:57.945505+00:00",
+  "owner": "W-lens",
+  "watcher_owner": "W-lens existing r3b-capture-forecasts heartbeat",
+  "watcher_trigger": "I5 complete native and terminal judgment seals plus committed exact final binding; metadata only until gate passes",
+  "claim": "cache/g_agreement/understand/e98/analysis_once/ONCE.json",
+  "outputs": "results/g_agreement/understand/e98/analysis_once",
+  "original_forecast_commit": "97d676a82ecb831d390d21922268f464e9a24e4f",
+  "original_forecast_sha256": "2cd5727a33255c4295c3130948631c373733b9bdc246c31d6063e3b9b2947c1d",
+  "code_and_dependencies": {
+    "results/g_agreement/understand/e98/analysis/adapter.py": "02202920e1ee82ddda7e5ec4c40155463f5ca6857a74de255a8501fe30b4ace3",
+    "results/g_agreement/understand/e98/analysis/test_adapter.py": "91c21dad5f6aa312fae47f14930d0b2370fb3e128327c443d037849a3c2af41d",
+    "results/g_agreement/understand/e56/job/stats_native.py": "d533cf23c2fa5eb3c8a09cdcd98694268f0f3182dc794c7c9e08338c664b3e6d",
+    "results/g_agreement/understand/analysis402/missingness.py": "fe6ba3feae3686f9bbb1a4e5623469e3fc37b9263dd22e126b31a7472218c8a7",
+    "results/g_agreement/understand/e56/job/contract56.py": "11d3e055800502881ba9d6ed170e45f93f5733b77e4e36069b1a80194162848d",
+    "results/g_agreement/understand/e98/E98_JFORECAST.json": "2cd5727a33255c4295c3130948631c373733b9bdc246c31d6063e3b9b2947c1d",
+    "results/g_agreement/understand/e98/ASSET_CARD.json": "0586f016b42c2dfb1a2c6db52fc826e54e0d163788b5215a4744a47c80d2683c"
+  },
+  "tests": "6 synthetic tests PASS; no actual outcomes or claims consumed",
+  "intake_schema": {
+    "binding": [
+      "experiment=E98",
+      "status=FINAL_BOUND",
+      "forecast_sha256",
+      "capture_seal_sha256",
+      "input_seal_sha256",
+      "native_seal_sha256",
+      "judgment_seal_sha256",
+      "rubric_sha256",
+      "final_binding_committed=true",
+      "adapter_committed_before_judging_seal=true",
+      "original_qwen_metrics_sealed=true",
+      "normalized_files_verified=true"
+    ],
+    "each_seal": [
+      "experiment=E98",
+      "status=COMPLETE",
+      "items=2184",
+      "unique_items=2184",
+      "capture_seal_sha256",
+      "input_seal_sha256",
+      "sha256"
+    ],
+    "judgment_seal_extra": [
+      "native_seal_sha256",
+      "rubric_sha256",
+      "terminal=true"
+    ],
+    "normalized_inputs": [
+      "frozen CPU private token-plan units (26 x84,23 binary)",
+      "exact opaque native ID to text mapping",
+      "exact opaque ID to original category/values/evidence mapping",
+      "original forecast bytes",
+      "26 original Qwen per-row metrics and original analysis-seal/source hashes"
+    ]
+  },
+  "binding_requirements": [
+    "Verify original seal bytes, every file member hash, native record IDs/site/model/source/card/capture and original GO chronology before normalized_files_verified=true; booleans in gate are operator attestations, not substitute evidence.",
+    "Freeze original judgment routes/rubrics, \u00a7202 clauses and old-rubric sensitivity bindings; preserve terminal UNPARSEABLE as missing.",
+    "Bind exact original E57/E59 Oracle metrics and any original NOT EVALUABLE status without rerunning source analyses.",
+    "Commit final normalized schema translation, original and normalized hashes, command and bindings before claim. If producer layout differs, test and commit operational translation before any outcome statistics.",
+    "For 3 inherited nonbinary rows retain all84native items and sealed judgments; binary S and J agreement remain not evaluable. Registered count/mention summaries require their frozen original E57 definitions and separate explicit binding, never coerce into binary S.",
+    "No outcome execution now. No changes to original forecast, claim, thresholds, rows, seeds, labels or rubric. No E97/E75 namespace reuse.",
+    "On fully verified input: one atomic exclusive claim, describe once, publish result+ANALYSIS_SEAL and notify I5/R5 via owner HANDOFF; failure retains claim, never replay."
+  ],
+  "registered_metrics": "Unchanged stats_native.rate and missingness: whole-item2000bootstrap seed20261027; inherited REPORTED S>=.2 and CI lower>0; descriptive per-row comparison and original J agreement only, no new confirmatory rule.",
+  "gpu_hours": 0
+}

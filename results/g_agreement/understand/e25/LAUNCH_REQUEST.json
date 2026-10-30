@@ -1,0 +1,80 @@
+{
+  "analysis_command": "python results/g_agreement/understand/e25/analyze.py --scores OUTPUT/scores.jsonl --score-seal OUTPUT/SCORE_SEAL.json --plan results/g_agreement/understand/e25/RUN_PLAN.json --labels results/g_agreement/understand/e25/cache/private/labels.json --references results/g_agreement/understand/e25/REFERENCES.json --out NEW_ANALYSIS",
+  "branch": "r/blindspot",
+  "budget": {
+    "forecast": "elapsed science including warm-up and retained timing batches + remaining batches times median3 warmed units per row/phrasing/candidate",
+    "forecast_measured": false,
+    "retrieval_reserve_seconds": 180,
+    "retry_authorized": false,
+    "science_cap": "min(1.5F + 360, 1800) seconds",
+    "setup_seconds": 1500
+  },
+  "clarification_commit": "e4225a1e",
+  "clarification_note": "results/g_agreement/understand/e25/CLARIFICATION_1_2026-10-25.md",
+  "date": "2026-10-25",
+  "definition_D": "AUROC(s_A-s_B,value_is_A); s_A and s_B each mean the two frozen W1 per-token candidate scores",
+  "evidence": {
+    "actual_Qwen_forwards": 0,
+    "api_calls": 0,
+    "boundary_crossings": 0,
+    "cpu_tests_passed": 22,
+    "gpu_calls": 0,
+    "real_tokenizer_frames_audited": 8400,
+    "synthetic_transformer_vs_full_logits_check": true
+  },
+  "experiment": "E25",
+  "input_archive": "results/g_agreement/understand/e25/cache/inputs.tar.gz",
+  "input_archive_sha256": "a4f390a6b8fff7f66cec15490aa66baa8e3f3296b26548787959ffafaa544f38",
+  "input_seal_sha256": "82c1e5c0473865518ca37dca6ca552a62710746ef2b7afefb86890e4cc7bafa1",
+  "launch_blockers": [],
+  "model": {
+    "adapter": null,
+    "id": "Qwen/Qwen3.6-27B",
+    "injection": null,
+    "revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9"
+  },
+  "operations": "Integrator watches this worktree, publishes after its secret scan, and operates the committed request. Require published source/input/registration and exact assignment/asset hashes. Run warmed forecast, stop NO_FIT without scope cuts/retry, retrieve/verify seals and terminate. No owner push.",
+  "owner": "W-text",
+  "plan": "results/g_agreement/understand/e25/RUN_PLAN.json",
+  "plan_sha256": "085421256b9a5d0fdd7937f38338aa349c38db96f2d4d84bcc323b434d45855e",
+  "registration_commit": "97cfc5dd",
+  "required_assignment": [
+    "issuer=integrator",
+    "experiment=E25",
+    "pod_id=RUNPOD_POD_ID",
+    "plan_sha256",
+    "source_files",
+    "assets_manifest_sha256",
+    "source_published=true",
+    "inputs_published=true",
+    "registration_published=true",
+    "external_hardstop_verified=true",
+    "clarification_commit=e4225a1e",
+    "previous_science_seconds=0",
+    "setup_allowance_seconds=1500",
+    "science_ceiling_seconds=1800",
+    "provider_created_epoch",
+    "deadline_epoch"
+  ],
+  "scope": {
+    "candidate_scores": 8400,
+    "phrasings_per_row": 2,
+    "rows": 25,
+    "semantic_rows": 9,
+    "structure_rows": 16,
+    "test_items": 2100
+  },
+  "source_archive": "results/g_agreement/understand/e25/cache/source-D1.tar.gz",
+  "source_archive_sha256": "278d6205f85243e702c21002ac70b9b4b69fc72e7f071c72c4fca7460bd4ec07",
+  "source_base_commit": "e4225a1e2a972c62653ff197c6668472e9b8dab9",
+  "source_files": {
+    "results/g_agreement/understand/e25/analyze.py": "de9947c9021b34a906631ba62dfa879167594d267ff17fe7ac80c942355cc567",
+    "results/g_agreement/understand/e25/prepare.py": "dcad0acca57e8dc78064e4760e5e42d3314be3c5cc4edf95ca103312ba125a40",
+    "results/g_agreement/understand/e25/test_analysis.py": "4ab1d61904923ef22a77d3d6d0a5539a7a4c5fb47a05fc0a18a6fdbe88a0aa7a",
+    "results/g_agreement/understand/e25/test_worker.py": "2158ce97bc921bc320e5e1fd66e81b91fecd36d477c5a5cb807be1b39010234d",
+    "results/g_agreement/understand/e25/worker.py": "246936d7131b8af4f87aae8bff9415228c544d2b25f5d2e8292ef8004f17b039"
+  },
+  "stage": "results/g_agreement/understand/e25/cache/stage",
+  "status": "REQUESTED_NOT_ASSIGNED",
+  "worker_command": "python results/g_agreement/understand/e25/worker.py --plan results/g_agreement/understand/e25/RUN_PLAN.json --stage STAGED_TEXT_ONLY --assignment ASSIGNMENT.json --assets VERIFIED_BASE_ASSETS.json --out NEW_OUTPUT"
+}

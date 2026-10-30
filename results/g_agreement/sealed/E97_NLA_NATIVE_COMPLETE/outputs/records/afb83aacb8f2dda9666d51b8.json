@@ -1,0 +1,12 @@
+{
+  "id": "afb83aacb8f2dda9666d51b8",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nTemplate/few-shot format pattern: structured prompt with \"Task:\", \"Example input:\", \"Question:\" fields signals a response template requiring a model-generated answer.\n\nThe \"Task\" describes explaining division, so the answer must address division conceptually, matching the example input's framing about \"a specific action.\"\n\n\"Answer:\" is the final field label in the structured template, immediately requiring the model's explanatory response text \u2014 likely a short, direct sentence beginning the explanation.\n\"Example input: [description of a specific action]\nQuestion: Write an explanation about the concept of [topic] in the context of the given example.\nAnswer:\" \u2014 this final label demands the actual generated explanation text follows, likely starting with \"It\" or a direct declarative sentence.\n\n\"Answer:\" is the final prompt token, expecting the model's sample response to the template example.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Template/few-shot format pattern: structured prompt with \"Task:\", \"Example input:\", \"Question:\" fields signals a response template requiring a model-generated answer.\n\nThe \"Task\" describes explaining division, so the answer must address division conceptually, matching the example input's framing about \"a specific action.\"\n\n\"Answer:\" is the final field label in the structured template, immediately requiring the model's explanatory response text \u2014 likely a short, direct sentence beginning the explanation.\n\"Example input: [description of a specific action]\nQuestion: Write an explanation about the concept of [topic] in the context of the given example.\nAnswer:\" \u2014 this final label demands the actual generated explanation text follows, likely starting with \"It\" or a direct declarative sentence.\n\n\"Answer:\" is the final prompt token, expecting the model's sample response to the template example.",
+  "truncated": false
+}

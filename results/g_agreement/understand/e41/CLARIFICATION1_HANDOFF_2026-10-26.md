@@ -1,0 +1,7 @@
+# E41 clarification 1 — analysis rule update only
+
+Authority: §147 clarification 1, b0cdff60 (2026-10-26 01:50 CET), registered before any E36 test score per coordinator. This dated handoff supersedes only the decision-rule portions of HANDOFF_2026-10-26.md and the earlier analysis code seal. The full earlier code/protocol/seal is retained under pre_clarification1_2026-10-26/.
+
+Rows with both strata ≥10 retain the original point rules. With informative n<10 and uninformative n≥10, remote-state requires uninformative AUROC≥0.70 and its 95% CI lower bound>0.50; local-cue requires AUROC≤0.60. R requires remote-state in a strict majority of judged rows and no local-cue rows. Fewer than three judged rows means NOT_EVALUABLE. Undefined required statistics remain unjudgeable; an undefined informative AUROC does not trigger the fallback if informative n≥10.
+
+The original classifier seal cf063f3523f4d9672e68fa721cf50122711614d132d14bff0c30d377af1f50e3 verifies unchanged, including fitted arrays and cutoffs. No refitting, test stratification, test-score access or scientific analysis occurred. Nine CPU tests pass, including strict confidence boundary, count boundaries, original two-stratum rules, bootstrap fallback integration, majority and minimum-three checks. Analysis invocation and once-only lock remain unchanged. The active ANALYSIS_CODE_SEAL.json now binds the clarified code and protocol.

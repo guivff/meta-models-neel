@@ -1,0 +1,63 @@
+{
+  "admission": "METADATA_ONLY_NO_LAUNCH_AUTHORIZATION",
+  "allocation_attempts": 0,
+  "author_support_source": "Prior E74_B300_SXM6_STOCK_20261027T171654Z.json: pinned wild-rollout README lines 383-387, author 8-B300 route",
+  "author_supported_gpu_count": 8,
+  "compatibility_with_current_tp4_runtime_verified": false,
+  "gpu_types": [
+    {
+      "community8": {
+        "availableGpuCounts": null,
+        "stockStatus": null,
+        "uninterruptablePrice": null
+      },
+      "communityPrice": 6.94,
+      "id": "NVIDIA B300 SXM6 AC",
+      "memoryInGb": 288,
+      "secure8": {
+        "availableGpuCounts": null,
+        "stockStatus": null,
+        "uninterruptablePrice": null
+      },
+      "securePrice": 8.99
+    }
+  ],
+  "helper_sha256": "f1a02e7898898d33d32c1dcc083d7de98c9cd70341ed9f1b83bb2913bb89d157",
+  "location_identifiers_omitted": true,
+  "provider_mutations": 0,
+  "query_schema": "query { gpuTypes(input: {id: \"NVIDIA B300 SXM6 AC\"}) { id memoryInGb securePrice communityPrice secure8: lowestPrice(input: {gpuCount: 8, secureCloud: true}) { uninterruptablePrice stockStatus availableGpuCounts } community8: lowestPrice(input: {gpuCount: 8, secureCloud: false}) { uninterruptablePrice stockStatus availableGpuCounts } } dataCenters { id secure8: gpuAvailability(input: {gpuCount: 8, secureCloud: true}) { gpuTypeId stockStatus available } community8: gpuAvailability(input: {gpuCount: 8, secureCloud: false}) { gpuTypeId stockStatus available } } }",
+  "query_sha256": "37438c8a191758dfac831ec4dc6f0a1c6c5ba6227cf004a3c8d7cda40f0fbe0f",
+  "query_started_utc": "2026-10-27T21:17:39.905464+00:00",
+  "raw_response_persisted": false,
+  "raw_response_sha256": "89236528d5fe7cc46964b83ec5c76f3bcbfb5f6cdccb1e89acc7faff187200ef",
+  "routes": {
+    "community8": {
+      "available_location_count": 0,
+      "available_rows": 0,
+      "gpu_count": 8,
+      "location_identifiers_omitted": true,
+      "matching_availability_rows": 0,
+      "secure_cloud": false,
+      "stock_status_values": []
+    },
+    "secure8": {
+      "available_location_count": 0,
+      "available_rows": 0,
+      "gpu_count": 8,
+      "location_identifiers_omitted": true,
+      "matching_availability_rows": 3,
+      "secure_cloud": true,
+      "stock_status_values": [
+        null
+      ]
+    }
+  },
+  "schema": "i2-e74-live-b300_sxm6-stock-refresh-v1",
+  "secret_values_printed": false,
+  "separate_runtime_and_full_forecast_required": true,
+  "source": "RunPod GraphQL via installed read-only API helper",
+  "track": "G",
+  "verified_at_utc": "2026-10-27T21:17:40.550740+00:00",
+  "wall_seconds": 0.6453770409999999,
+  "weight_download_bytes": 0
+}

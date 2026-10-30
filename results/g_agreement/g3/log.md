@@ -1,0 +1,4 @@
+- 2026-10-07T11:54:32.570436+00:00 prompt-only: 8 items (dev), template sha 9c150799a246
+- 2026-10-07T11:54:36.365063+00:00 prompt_only: {'step': 'prompt_only', 'module': 'g3', 'n_calls': 8, 'prompt_tokens': 599, 'new_tokens': 11, 'wall_s': 3.678, 'peak_mem_gb': 54.012, 'gpu': 'NVIDIA H100 80GB HBM3', 'started': '2026-10-07T11:54:32.581067+00:00', 'ended': '2026-10-07T11:54:36.358081+00:00'}
+- 2026-10-07T12:23:29.183539+00:00 prompt-only: 8 items (dev), template sha 9c150799a246
+- 2026-10-07T12:23:34.222364+00:00 prompt_only: {'step': 'prompt_only', 'module': 'g3', 'n_calls': 8, 'prompt_tokens': 599, 'new_tokens': 11, 'wall_s': 4.904, 'peak_mem_gb': 54.012, 'gpu': 'NVIDIA H100 80GB HBM3', 'started': '2026-10-07T12:23:29.193068+00:00', 'ended': '2026-10-07T12:23:34.215140+00:00'}

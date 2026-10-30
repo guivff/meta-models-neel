@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-24T04:54:21.112992+00:00",
+  "status": "DESCRIPTIVE_RULE_FIXED_BEFORE_EVIDENCE_CLASSIFICATION",
+  "seed": 20261024,
+  "selection": "For each eligible group, sort opaque IDs by rank(seed, e13-evidence-audit-v1, group, id); first5; no replacement or curation.",
+  "groups": {
+    "a": "section84 NLA codes with mentions=true",
+    "b": "section84 Oracle codes with enacts=true",
+    "c": "W1 NLA table_column codes with mentions=true"
+  },
+  "evidence_input": "Coder evidence string only; no truth or label-key fields used to select/classify. Row property regex is assigned by exact blind question, before key join.",
+  "property_patterns": {
+    "wordlist_preposition": "\\bprepositions?\\b|介词",
+    "word_allcaps": "\\b(?:uppercase|upper[ -]case|all[ -]caps|all[ -]capitals|capital\\s+letters)\\b|大写",
+    "current_colon": "\\bcolons?\\b|冒号",
+    "number_magnitude_ge_1000": "\\bmagnitudes?\\b|\\babsolute\\s+values?\\b|\\b(?:numeric|numerical)\\s+values?\\b|绝对值|数值|量级",
+    "number_digits_ge_3": "\\bdigits?\\b|位数",
+    "current_number": "\\b(?:numbers?|numeric|numerical|numerals?|integers?)\\b|数字|数值",
+    "number_digits_ge_4": "\\bdigits?\\b|位数",
+    "number_magnitude_ge_10": "\\bmagnitudes?\\b|\\babsolute\\s+values?\\b|\\b(?:numeric|numerical)\\s+values?\\b|绝对值|数值|量级",
+    "number_magnitude_ge_100": "\\bmagnitudes?\\b|\\babsolute\\s+values?\\b|\\b(?:numeric|numerical)\\s+values?\\b|绝对值|数值|量级",
+    "wordlist_auxiliary": "\\bauxiliar(?:y|ies)\\b|助动词"
+  },
+  "w1_property_patterns": {
+    "prose_paren": "\\bparenthe\\w*\\b|\\bround\\s+brackets?\\b|括号",
+    "table_column": "\\bcolumns?\\b|\\bcols?\\b|列"
+  },
+  "token_reference": "\\btokens?\\b|\\b(?:final|last|current|target|input|source|original)\\s+(?:words?|characters?|numbers?)\\b",
+  "bare_lexeme": "(?:[+-]?(?:\\d[\\d,]*(?:\\.\\d*)?|\\.\\d+)(?:[eE][+-]?\\d+)?|[^\\W\\d_]\\w*|[^\\w\\s])",
+  "strip_chars": " \t\r\n\"'`“”‘’",
+  "classification": "property-name flag: unchanged frozen row regex on evidence. Echo-compatible flag: explicit token/word/character reference OR whole evidence is one lexeme (numeric, word, punctuation), excluding a bare property-name match. Four exclusive buckets retain overlap: token_like_only, property_name_only, both, neither.",
+  "interpretation": "Keyword proxies only. Property-name presence does not prove an assertion or correct value. Token-like is compatible with quoting/echoing, not proof of equality to the original source token. No attempt to infer actual source-token equality. Both/neither are not forced into a binary category.",
+  "count_scope": "Each section84 row and native reader: all15records, and separately originally coded mentions and enacts. No recoding of the sealed Claude annotations. W1 table row also summarized for context.",
+  "code_sha256": "feab0f0610a3960ef56465cec599c6eb12a932debc30b8ee0b6524bb0a64fa34"
+}

@@ -1,0 +1,56 @@
+{
+  "authority": "\u00a7240",
+  "baseline": "forecast Qwen answer; outside denotes forecast throughout this result",
+  "bootstrap": {
+    "denominators": "each output independently conditional on naming a value",
+    "draws": 5000,
+    "paired": true,
+    "seed": 0,
+    "unit": "source item"
+  },
+  "caveat": "Baseline and judge share a model family; confounding direction unknown. Original E107 result and verdict remain sealed.",
+  "experiment": "E107b",
+  "forecast_survival": "MET",
+  "interpretation": "MET: claim survives forecast; NOT MET: narrows to beyond a describer; NOT EVALUABLE: unknown",
+  "pooled": {
+    "counts": {
+      "oracle": {
+        "kept": 92,
+        "missing": 12,
+        "not_stating_value": 95,
+        "planned": 199,
+        "unavailable": 0
+      },
+      "outside": {
+        "kept": 167,
+        "missing": 3,
+        "not_stating_value": 29,
+        "planned": 199,
+        "unavailable": 0
+      }
+    },
+    "difference": {
+      "CI95": [
+        0.2538588687344226,
+        0.48551749078047324
+      ],
+      "estimate": 0.3707367872949753
+    },
+    "oracle": {
+      "CI95": [
+        0.5542168674698795,
+        0.75
+      ],
+      "estimate": 0.6521739130434783
+    },
+    "outside": {
+      "CI95": [
+        0.21382764468942125,
+        0.3532934131736527
+      ],
+      "estimate": 0.281437125748503
+    },
+    "unmatched_source_items": 0
+  },
+  "status": "DESCRIPTIVE"
+}

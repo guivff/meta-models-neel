@@ -1,0 +1,54 @@
+{
+  "acquisition_cap_seconds": 1800,
+  "aggregate_cap_seconds": 10800,
+  "assignment_required": [
+    "issuer=integrator",
+    "experiment=E46",
+    "pod_id=RUNPOD_POD_ID",
+    "plan_sha256",
+    "assets_manifest_sha256",
+    "previous_gpu_seconds=0",
+    "external_hardstop_verified=true",
+    "state_functions_committed=true",
+    "source_published=true",
+    "provider_created_epoch",
+    "deadline_epoch <= provider_created_epoch + 1800"
+  ],
+  "bank_seal_sha256": "1cd611a3a9b6cbddc48dba2ab235438e91d56120ce90b36862999e8ab9e28598",
+  "experiment": "E46",
+  "items": 336,
+  "no_push_or_GPU_by_worker_chat": true,
+  "plan_sha256": "3d20c79e7f3cfa347c84e5098f11a191e570c8a2a391f666d3aefc44b533df74",
+  "previous_E46_gpu_seconds_required": 0,
+  "priority_after": [
+    "E42",
+    "E43"
+  ],
+  "reader_channels": [
+    "probe",
+    "Oracle asked",
+    "NLA asked"
+  ],
+  "readers_held_until": [
+    "PERSISTENCE_SEAL.json verified and row eligibility published",
+    "full 252-item E36 W1 parity gate passed at |delta AUROC|<=0.02",
+    "reader plan binds exact bank, candidates, persistence and cumulative GPU budget"
+  ],
+  "state_seal_sha256": "e3a002597cd7d69b558c41e5bf45304f01a1ed9a14e3e437e6548237bbede25e",
+  "status": "READY_CONTINUATION_ACQUISITION_ONLY_READERS_HELD",
+  "tokens_per_item": 32,
+  "worker_argv": [
+    "python",
+    "results/g_agreement/understand/e46/worker46.py",
+    "--plan",
+    "results/g_agreement/understand/e46/RUN_PLAN.json",
+    "--stage",
+    "e46_stage",
+    "--assignment",
+    "INTEGRATOR_ASSIGNMENT.json",
+    "--assets",
+    "VERIFIED_BASE_ASSETS.json",
+    "--out",
+    "NEW_OUTPUT_DIRECTORY"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "CPU_analysis_command_once_after_join": [
+    "python",
+    "-m",
+    "projects.g_agreement.understand.followup_analyse",
+    "e12",
+    "--reader-scope",
+    "nla",
+    "--inputs",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e1b_e12/e12",
+    "--collection",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e12-joined-nla",
+    "--out",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e12/nla_analysis"
+  ],
+  "CPU_join_command": [
+    "python",
+    "-m",
+    "projects.g_agreement.understand.e12_completion",
+    "join",
+    "--inputs",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e1b_e12/e12",
+    "--prior",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/blindspot/understand-units/nzt9h77aqb9o4w/out/E12_NLA_ONLY_NEW_RUN",
+    "--completion",
+    "PULLED_E12_CONTEXT_COMPLETION_157",
+    "--out",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e12-joined-nla"
+  ],
+  "conditions": "On COMPLETE: verify original and new seals, exact 157-unit suffix and 368 records, disjoint union/full 8400-record grid in original order; CPU join then run registered NLA analysis once. Oracle primary already analysed; never rerun it. On INCOMPLETE: verify/seal every retained new unit; report INCOMPLETE in RESULTS.md with exact new units out of 157 and new records out of 368, totals out of 1671 context units and 8400 four-arm records; list unscored unit indices. Do not run complete-grid analysis or impute/retry. No W2/S2 calls.",
+  "hard_stop_seconds": 1200,
+  "incomplete_report_denominators": {
+    "full_context_units": 1671,
+    "full_records": 8400,
+    "new_context_units": 157,
+    "new_records": 368,
+    "old_context_units": 1514,
+    "old_native_units": 150,
+    "old_records": 8032
+  },
+  "incomplete_report_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e12/nla_analysis/RESULTS.md",
+  "status": "AWAITING_INTEGRATOR_RUN_PULL_AND_SEAL"
+}

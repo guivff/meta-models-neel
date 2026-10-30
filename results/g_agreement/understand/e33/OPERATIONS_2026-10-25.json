@@ -1,0 +1,105 @@
+{
+  "E28": "Environment rebuild follows E33; scientific arms and cap unchanged",
+  "allowed_partition_modes": {
+    "one_pod": [
+      [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ]
+    ],
+    "two_pods": [
+      [
+        0,
+        0.25,
+        0.5
+      ],
+      [
+        0.75,
+        1
+      ]
+    ]
+  },
+  "analysis": "Join only complete matching sealed shard grids; reject overlapping/missing doses, mixed input/source/budget identities; no labels until all21000scores validate",
+  "authority_commit": "53bf46adeadb8401fbc5c073d7e005d723fdc2a2",
+  "authority_section": "\u00a7133 item5 unchanged cap; \u00a7136 operational rebuild; Guiv priority and600s per-slot allowance",
+  "date": "2026-10-25",
+  "default_allocations": [
+    {
+      "allocated_gpu_seconds": 9043,
+      "budget_envelope_gpu_seconds": 9043,
+      "doses": [
+        0,
+        0.25,
+        0.5
+      ],
+      "infrastructure_loss_gpu_seconds": 0,
+      "infrastructure_losses": [],
+      "slot": 0
+    },
+    {
+      "allocated_gpu_seconds": 6229,
+      "budget_envelope_gpu_seconds": 6229,
+      "doses": [
+        0.75,
+        1
+      ],
+      "infrastructure_loss_gpu_seconds": 0,
+      "infrastructure_losses": [],
+      "slot": 1
+    }
+  ],
+  "default_pods": 2,
+  "external_hardstop_required": true,
+  "forecast": "One warmup plus median3 on every assigned prompt-dose path; each pod must fit its full owned dose grid; independent admission after common allocation ledger validates all five doses exactly once",
+  "global_cap_gpu_hours": 4.5,
+  "global_cap_gpu_seconds": 16200,
+  "global_pod_ceiling": 12,
+  "infrastructure_loss_allowance_seconds_per_slot": 600,
+  "infrastructure_loss_policy": "Each fixed slot envelope includes up to600s of future failed SSH/setup custody; deduct actual conservatively rounded loss from the replacement live-pod allocation. A live pod setup is already in its own provider clock, not booked twice.",
+  "input_seal_sha256": "f4a5c48506eb4266c245fb68ef09ab4afd6781095a166521141b55d69bd409f2",
+  "max_pods": 2,
+  "minimum_global_launch_spacing_seconds": 180,
+  "operational_rebuild": "One pre-authorized rebuild after setup-only failures; scientific parity/validity failures cannot retry",
+  "operator": "Integrator",
+  "original_plan_sha256": "ea1b91457c2141943134de9da450cca8d335c490c3fc476b0de6561fe4400fad",
+  "previous_actual_booked_seconds": 927.1,
+  "previous_charge_policy": "Ceil927.1s actual prior custody to928s; original406.6 plus520.5 setup-only failures",
+  "previous_gpu_seconds": 928,
+  "prior_accounting_file": "results/g_agreement/understand/e33/PRIOR_ATTEMPT_ACCOUNTING.json",
+  "programme_cutoff_utc": "2026-10-28T22:59:00Z",
+  "publication_required": true,
+  "remaining_new_provider_seconds": 15272,
+  "retrieval_reserve_seconds_per_pod": 120,
+  "retry_authorized": true,
+  "run_order": [
+    "E33",
+    "E28"
+  ],
+  "schema": "E33_OPERATIONS_v2",
+  "science_cap_formula": "min(1.5F+360, assigned_provider_seconds) per pod from first model forward; same clock through calibration and collection",
+  "scientific_scope_unchanged": true,
+  "scope": {
+    "W1_frozen_phrasings": true,
+    "activation_injection": false,
+    "doses": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "prompts": [
+      "P1",
+      "P2"
+    ],
+    "rows": 25,
+    "score_records": 21000,
+    "test_items_per_row": 84
+  },
+  "scope_cut_authorized": false,
+  "supersedes": "\u00a7128 original0.4GPUh cap and one-pod operations only; original scientific PLAN.json and sealed inputs unchanged",
+  "total_accounting": "reserved prior928 + sum(each live allocation + its booked infrastructure loss)<=16200; no clock reset"
+}

@@ -1,0 +1,54 @@
+{
+  "status": "GATE_DID_NOT_PASS",
+  "first_output_utc": "2026-10-28T18:00:19.673014+00:00",
+  "first_output_source": "out/PARAMETERS.json PAX mtime",
+  "gpu_type": "H200",
+  "training_admitted": false,
+  "production_checkpoint": "original pinned adapter only; disposable gate adapter never used",
+  "sealed_greedy_comparison": [
+    {
+      "id": "asserted_vs_hypothetical:6:0:0",
+      "byte_equal": false,
+      "first_divergence_utf8_byte": 307
+    },
+    {
+      "id": "asserted_vs_hypothetical:6:0:1",
+      "byte_equal": true,
+      "first_divergence_utf8_byte": null
+    },
+    {
+      "id": "asserted_vs_hypothetical:6:1:0",
+      "byte_equal": false,
+      "first_divergence_utf8_byte": 93
+    }
+  ],
+  "failure": {
+    "reason": "sealed greedy parity failed; no training performed",
+    "status": "GATE_DID_NOT_PASS",
+    "type": "RuntimeError",
+    "utc": "2026-10-28T18:01:16.697289+00:00"
+  },
+  "archive_path": "/private/tmp/e102-i4-gate-a1/backups/1793210484854545000.full.tar.gz",
+  "archive_sha256": "a8c5ac99b7a1ef582836f3518a2660bc63401d454ab05505476141c31f16281e",
+  "pod_id": "rc53kiabq720qx",
+  "experiment": "E102_GATE",
+  "sealed_utc": "2026-10-28T18:16:03.269979+00:00",
+  "gpu_hours_upper": 0.10753116501702202,
+  "gpu_usd_rate_based_upper": 0.5688398629400465,
+  "cost_is_invoice": false,
+  "non_gpu_extra_upper_usd": 2,
+  "all_in_upper_usd": 2.5688398629400466,
+  "active_gpu_reservation_usd": 0,
+  "judging_usd": 0,
+  "optimizer_steps_run": 0,
+  "greedy_byte_exact_matches": 1,
+  "greedy_comparisons": 3,
+  "production_training": "NOT RUN (feasibility gate did not pass)",
+  "NLA_gate": "NOT RUN; no own parity/training proof",
+  "no_retry_or_rule_change": true,
+  "provider_postclose_pod": null,
+  "guard_services_retired": true,
+  "worker_first_readout_utc": "2026-10-28T18:01:00.442473+00:00",
+  "permanent_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/results/g_agreement/e102/gate_h200_a1/RAW_GATE_PAX.tar.gz",
+  "review": "PENDING R-4, sealed outputs/code/BRIEF only"
+}

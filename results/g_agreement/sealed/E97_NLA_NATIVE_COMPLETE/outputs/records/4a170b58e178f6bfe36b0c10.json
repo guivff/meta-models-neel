@@ -1,0 +1,12 @@
+{
+  "id": "4a170b58e178f6bfe36b0c10",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured data format with labeled fields (\"Event:\", \"Outcome:\") establishing a pattern of paired entries for two scenarios. The model must follow this template consistently.\n\nThe prompt simulates a few-shot example format, implying the model should generate or acknowledge the two completed scenario entries as a training/evaluation record.\n\n\"Recorded. Record complete.\" signals a closing delimiter phrase; \"Recorded.\" is the final token, likely part of a terminal instruction or summary marker, constraining next tokens toward a closing statement, summary, or new instruction prompt.\n\"Scenario 1: [description]. Scenario 2: [description].\nRecord complete.\" \u2014 the final phrase \"Record complete.\" functions as a task-end marker, suggesting the next token may be a newline, summary label, or AI response prompt.\n\"Recorded.\" closes the simulated log.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured data format with labeled fields (\"Event:\", \"Outcome:\") establishing a pattern of paired entries for two scenarios. The model must follow this template consistently.\n\nThe prompt simulates a few-shot example format, implying the model should generate or acknowledge the two completed scenario entries as a training/evaluation record.\n\n\"Recorded. Record complete.\" signals a closing delimiter phrase; \"Recorded.\" is the final token, likely part of a terminal instruction or summary marker, constraining next tokens toward a closing statement, summary, or new instruction prompt.\n\"Scenario 1: [description]. Scenario 2: [description].\nRecord complete.\" \u2014 the final phrase \"Record complete.\" functions as a task-end marker, suggesting the next token may be a newline, summary label, or AI response prompt.\n\"Recorded.\" closes the simulated log.",
+  "truncated": false
+}

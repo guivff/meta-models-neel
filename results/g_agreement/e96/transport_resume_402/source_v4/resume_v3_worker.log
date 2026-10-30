@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/private/tmp/e96_retained_judge_resume_v3_worker.py", line 15, in <module>
+    result=run(r/'cache/g_agreement/e96/judge_packet_retained',r/'results/g_agreement/e96/RETAINED_JUDGING_ALLOCATION.json',r/'results/g_agreement/e96/transport_resume_402/runtime_v3')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/projects/g_agreement/e96/resume_credit402.py", line 69, in run
+    reconcile(ledger,paths[0].parent,rid)
+  File "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/projects/g_agreement/e96/resume_credit402.py", line 30, in reconcile
+    if rid not in done:ledger.settle(rid,0)
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/projects/g_agreement/understand/e10/api.py", line 37, in settle
+    if cost>book[rid] or sum(book.values())-book[rid]+cost>CAP:raise RuntimeError('actual charge exceeded frozen reservation; stop')
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: actual charge exceeded frozen reservation; stop

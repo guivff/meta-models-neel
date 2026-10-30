@@ -1,0 +1,53 @@
+{
+ "experiment": "E107b",
+ "forecast_source": {
+  "instruction": "What will this model answer? Give the value.",
+  "members_ok": true,
+  "n_items": 199,
+  "n_target_plans": 398,
+  "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-c/cache/g_agreement/understand/internals_c/E107b/forecast_source/SOURCE_SEAL.json",
+  "sha256": "95bb773c2e0c0af00a2daa0d45ce03371923809fa1b82398a22ba3a700ca16ee"
+ },
+ "inventory": {
+  "cohort": "E82 belief_wrong",
+  "n": 199,
+  "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech2/results/g_agreement/i2/e107_inventory_v1/INVENTORY_SEAL.json",
+  "sha256": "52d6bdeaf9de2d78e6910be692321d558d9a7c8de798be0176e43d0dd95ce7fe"
+ },
+ "issuer": "Integrator Q (fork session; E107b assigned by main)",
+ "joins": {
+  "custody_ids_in_cohort": 199,
+  "join_key": "CUSTODY.original_inventory_id == INVENTORY.id",
+  "judge_plans_belief": 199,
+  "judge_plans_truth": 199,
+  "row_item_match": 199
+ },
+ "kind": "TRACKQ_PREBANK_BINDING_RECEIPT",
+ "original_output": {
+  "outside_generation": {
+   "ZDR": true,
+   "data_collection": "deny",
+   "fallbacks": false,
+   "max_tokens": 256,
+   "model": "google/gemini-3.1-flash-lite",
+   "provider": "google-vertex/global",
+   "temperature": 0
+  },
+  "seal": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_e107/binding_v5/E107_BINDING_SEAL.json",
+  "sha256": "bfd0809d3a5444ed8471f8dadc6e4ad6e1e595990f60293ee7556cdd392a1e71"
+ },
+ "outputs_opened": false,
+ "pending_at_bank_seal": [
+  "terminal forecast JUDGMENT_SEAL (COMPLETE, same route/judge as outside_generation)",
+  "generation outputs seal (forecast text per GENERATION_CALLS id)",
+  "judgment_id joins from JUDGE_PLAN to JUDGMENTS (null code only with terminal UNPARSEABLE)",
+  "route, privacy and redaction audits (redacted_records must be 0)",
+  "booked_usd <= 2, unknown_cost_requests 0"
+ ],
+ "primary": {
+  "members_ok": true,
+  "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e107/analysis_once/ANALYSIS_SEAL.json",
+  "sha256": "f2da69a4f0e7acb560552cb9bee8c56ea8012a926a9508303113a2d3ccdd93b8"
+ },
+ "status": "PREPARED_PENDING_C_BANK"
+}

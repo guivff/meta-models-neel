@@ -1,0 +1,9 @@
+{
+  "id": "0d4ada411b18e506eb7e6950",
+  "malformed": false,
+  "raw": "- =true; // The `?flag=true` is in the middle, surrounded by other params.\n- =true; // The flag is buried in the middle. We need to detect `flag\n- =true; more_stuff`  *(Note: `flag` appears in the middle, not at the end)*\n2.  **\n- =true&other=stuff` (where `flag` is the target, and `other` is noise). We need to extract `flag",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =true; // The `?flag=true` is in the middle, surrounded by other params.\n- =true; // The flag is buried in the middle. We need to detect `flag\n- =true; more_stuff`  *(Note: `flag` appears in the middle, not at the end)*\n2.  **\n- =true&other=stuff` (where `flag` is the target, and `other` is noise). We need to extract `flag"
+}

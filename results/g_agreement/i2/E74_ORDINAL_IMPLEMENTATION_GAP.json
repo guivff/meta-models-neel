@@ -1,0 +1,44 @@
+{
+  "schema": "i2-e74-ordinal-implementation-gap-v1",
+  "track": "G",
+  "experiment": "E74",
+  "reviewed_at": "2026-10-27T20:05:13.771318+00:00",
+  "scope_ruling": "Capture AND probe both ordinal rows, exploratory descriptive only; excluded R-G1/R-G2/R-G3; preserve original labels and splits. No new ordinal rule.",
+  "rows": [
+    "python_depth_ordinal",
+    "table_column_ordinal"
+  ],
+  "required_per_row": {
+    "dev": 144,
+    "test": 144
+  },
+  "frozen_cpu_intake": {
+    "path": "projects/g_agreement/e74/cpu_intake.py",
+    "sha256": "61f1627c32b5f0f48e65e8c0f935aa0c13cf16162aaa6cd4b917c0697acc47c9",
+    "binary_fit_lines": [
+      46,
+      55
+    ],
+    "ordinal_skip_lines": [
+      68,
+      72
+    ],
+    "actual_behavior": "CAPTURE_RETAINED_ESTIMATOR_PENDING_GUIV; no ordinal fit, parameters or predictions"
+  },
+  "frozen_binary_probe_sha256": "955a7b516d97bee88b149bee1b8a3d9cdffaa7ef1b407cdef5cc4159f4677ae7",
+  "author_count_recipe": {
+    "path": "external/mats-nla-workspace/experiments/02_nonj_features/s3_probe.py",
+    "sha256": "fdd508348de09ea3a70683131ed6a5e9b6b3d63ad2f7d0764a8b2fb7d9b477a3",
+    "ridge_function_lines": [
+      82,
+      88
+    ],
+    "full_recipe": "Three new grouped80/20 splits and inner regularization selection; not an exact frozen E74 dev/test recipe."
+  },
+  "question_to_guiv": "Which registered activation-probe recipe/reference should the two ordinal rows use?",
+  "question_status": "ASKED_PENDING",
+  "implementation_change": false,
+  "real_labels_or_captures_read": false,
+  "pod_or_api_judging_calls": 0,
+  "allocation_allowed": false
+}

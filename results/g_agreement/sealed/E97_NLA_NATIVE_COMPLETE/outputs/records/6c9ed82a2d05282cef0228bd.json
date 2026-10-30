@@ -1,0 +1,12 @@
+{
+  "id": "6c9ed82a2d05282cef0228bd",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict classification task: model must output \"positive\" or \"negative\" based on the established pattern.\n\nThe example pattern shows a sentence followed by its classification label, establishing a template the model must follow for the new input \"The weather is very good today.\"\n\n\"Reply:\" is the final prompt label, part of the structured format, immediately requiring the classification answer (e.g., \"positive\" or \"negative\") as the next token.\n\"Given the following sentence, determine its sentiment category (positive or negative).\nExample: ...\nSentence: The weather is very good today.\nReply:\" \u2014 this closing \"Reply:\" is a prompt field expecting the direct answer, likely a single word or short phrase on the next line.\n\"Reply:\" is the final token, demanding the model's direct response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict classification task: model must output \"positive\" or \"negative\" based on the established pattern.\n\nThe example pattern shows a sentence followed by its classification label, establishing a template the model must follow for the new input \"The weather is very good today.\"\n\n\"Reply:\" is the final prompt label, part of the structured format, immediately requiring the classification answer (e.g., \"positive\" or \"negative\") as the next token.\n\"Given the following sentence, determine its sentiment category (positive or negative).\nExample: ...\nSentence: The weather is very good today.\nReply:\" \u2014 this closing \"Reply:\" is a prompt field expecting the direct answer, likely a single word or short phrase on the next line.\n\"Reply:\" is the final token, demanding the model's direct response.",
+  "truncated": false
+}

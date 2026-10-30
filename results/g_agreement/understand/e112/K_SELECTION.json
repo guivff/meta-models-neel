@@ -1,0 +1,46 @@
+{
+ "experiment": "E112",
+ "registration": "\u00a7225 (ed2bc87b)",
+ "issuer": "Integrator Q",
+ "created_utc": "2026-10-29T06:55:56+00:00",
+ "rule": "k = smallest k whose removed variance share of the 518 centred block-44 activations (pooled: sum ||P_k(h-mu)||^2 / sum ||h-mu||^2) is >= the J-space share (14.31%, E80c all-518)",
+ "k": 1,
+ "pca_k_share": 0.19560713999623555,
+ "j_share_pooled": 0.14306092540200754,
+ "j_share_registered": 0.1431,
+ "shares_first_10": [
+  0.19560713999623555,
+  0.34264637228425626,
+  0.4482353117744941,
+  0.4869731084366676,
+  0.5155975787862823,
+  0.5344165598638254,
+  0.5490379289412635,
+  0.5615185810404653,
+  0.5728269563981132,
+  0.5831587188432251
+ ],
+ "pca384_share": 0.9980151575325414,
+ "note": "The J-space share reproduces as 0.1431 under the pooled definition (per-item mean is 0.1389). The first principal direction alone removes 19.56% >= 14.31%, so k = 1. P_1 = column 0 of E80c PCA384 (eigenvalue-ordered, canonical sign); mu = E80c block-44 mean over the 518 items.",
+ "inputs": {
+  "acts44": {
+   "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wlens/cache/g_agreement/understand/e80/capture_delivery/acts44.npy",
+   "sha256": "dcfefaf0e1bd930de943b68f6330d04fe87c4c38175a9ce5bfbb02827043d7ec"
+  },
+  "capture_seal": {
+   "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wlens/cache/g_agreement/understand/e80/capture_delivery/CAPTURE_SEAL.json",
+   "sha256": "25d02e881f2c5ceb99959a6d6c8a0a640bf1daed4e1ba71491dd0f4b34e09a32"
+  },
+  "PCA384": {
+   "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/e80c/inputs_v1/pod_inputs/PCA384.npy",
+   "sha256": "683c0c1c996bef216ea013702587733d0f96abfd351d874729fdc55efd4b04ec"
+  },
+  "J384": {
+   "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/e80c/inputs_v1/pod_inputs/J384.npy",
+   "sha256": "a8f4b64c010aa2f3a72aac70e087ce5204d463c2bb93d1ebf3b22b21a0bdb4fb"
+  },
+  "e80c_result_seal": "9b61555de2493c4bb900a48cfce96b99b22637e4ce395c29d3c086195a9b805f"
+ },
+ "gpu_calls": 0,
+ "reader_calls": 0
+}

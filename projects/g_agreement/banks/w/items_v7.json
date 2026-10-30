@@ -1,0 +1,2578 @@
+{
+ "meta": {
+  "created": "2026-10-12T03:04:13+00:00",
+  "phase": "W",
+  "track": "A",
+  "seed": 20261011,
+  "n_items": 32,
+  "sha256_items": "253070eb1b5074ff9820d4fd87bd9b396a78082a1a761ed2951e43cc676ba878",
+  "frozen": false,
+  "family": "ownership",
+  "module": "v7",
+  "n_pairs": 16,
+  "split": "test",
+  "id_prefix": "wv7",
+  "design": {
+   "preambles": [
+    {
+     "id": "v7-p0",
+     "level": "p0",
+     "text": "Background: {N1} has the {o1} and {N2} has the {o2}."
+    },
+    {
+     "id": "v7-p1",
+     "level": "p1",
+     "text": "Context for this conversation: {N1} has the {o1}. {N2} has the {o2}."
+    }
+   ],
+   "visible_template": "Who has the {o}? Answer with the name only.",
+   "preamble_role": "system",
+   "object_pairs": [
+    [
+     "black bag",
+     "green hat"
+    ],
+    [
+     "grey ball",
+     "red key"
+    ],
+    [
+     "green bottle",
+     "purple book"
+    ],
+    [
+     "blue cup",
+     "orange lamp"
+    ],
+    [
+     "brown coat",
+     "red flag"
+    ],
+    [
+     "gold coin",
+     "yellow box"
+    ],
+    [
+     "pink scarf",
+     "white pen"
+    ],
+    [
+     "blue rope",
+     "silver ring"
+    ]
+   ],
+   "name_pool": [
+    "Mira",
+    "Leo",
+    "Tom",
+    "Ana",
+    "Omar",
+    "Lena",
+    "Nina",
+    "Sara",
+    "Ivan",
+    "Zara",
+    "Hugo",
+    "Emma",
+    "Noah",
+    "Lily",
+    "Adam",
+    "Rosa",
+    "Finn",
+    "Eva",
+    "Luca",
+    "Nora",
+    "Paul",
+    "Iris",
+    "Maya",
+    "Erik",
+    "Tara",
+    "Ben",
+    "Alma",
+    "Kai",
+    "Vera",
+    "Theo"
+   ]
+  },
+  "balance_checks": {
+   "n_pairs": 16,
+   "n_items": 32,
+   "templates": {
+    "v7-p0": 8,
+    "v7-p1": 8
+   },
+   "answer_first_mentioned_A": {
+    "True": 8,
+    "False": 8
+   }
+  },
+  "notes": "target-private pilot: preamble shown to the target only (role = preamble_role) at capture; prompt_text is the visible prompt, identical within a pair; prompt_only_text is PROMPT_ONLY_TEMPLATE over the visible prompt only (prompt-only baseline = 50% by construction)",
+  "prompt_only_template_sha256": "9c150799a24614f3e6820f7258d3ddd661c58db5d7965a5b5870303f350aaf73"
+ },
+ "items": [
+  {
+   "item_id": "wv7-01A",
+   "pair_id": "wv7-01",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the yellow box? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "yellow_box_owner",
+    "question": "Who has the yellow box?",
+    "candidates": [
+     "Ivan",
+     "Paul"
+    ],
+    "answer": "Ivan",
+    "answer_aliases": [
+     "ivan"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Ivan",
+     "Paul"
+    ],
+    "objects": [
+     "yellow box",
+     "gold coin"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Ivan",
+     "object": "yellow box"
+    }
+   },
+   "target_answer_regex": "(?i)\\bIvan\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Ivan",
+    "binding": {
+     "Ivan": "yellow box",
+     "Paul": "gold coin"
+    },
+    "asked_object": "yellow box",
+    "other_object": "gold coin",
+    "names": [
+     "Ivan",
+     "Paul"
+    ],
+    "object_pair": [
+     "yellow box",
+     "gold coin"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Ivan",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Paul",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Ivan has the yellow box and Paul has the gold coin.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Ivan has the yellow box and Paul has the gold coin."
+    },
+    {
+     "role": "user",
+     "content": "Who has the yellow box? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the yellow box? Answer with the name only.\n\nQuestion: Who has the yellow box?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-01B",
+   "pair_id": "wv7-01",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the yellow box? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "yellow_box_owner",
+    "question": "Who has the yellow box?",
+    "candidates": [
+     "Ivan",
+     "Paul"
+    ],
+    "answer": "Paul",
+    "answer_aliases": [
+     "paul"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Ivan",
+     "Paul"
+    ],
+    "objects": [
+     "yellow box",
+     "gold coin"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Paul",
+     "object": "yellow box"
+    }
+   },
+   "target_answer_regex": "(?i)\\bPaul\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Ivan",
+    "binding": {
+     "Paul": "yellow box",
+     "Ivan": "gold coin"
+    },
+    "asked_object": "yellow box",
+    "other_object": "gold coin",
+    "names": [
+     "Ivan",
+     "Paul"
+    ],
+    "object_pair": [
+     "yellow box",
+     "gold coin"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Ivan",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Ivan",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Ivan has the gold coin and Paul has the yellow box.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Ivan has the gold coin and Paul has the yellow box."
+    },
+    {
+     "role": "user",
+     "content": "Who has the yellow box? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the yellow box? Answer with the name only.\n\nQuestion: Who has the yellow box?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-02A",
+   "pair_id": "wv7-02",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the purple book? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "purple_book_owner",
+    "question": "Who has the purple book?",
+    "candidates": [
+     "Omar",
+     "Nora"
+    ],
+    "answer": "Omar",
+    "answer_aliases": [
+     "omar"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Omar",
+     "Nora"
+    ],
+    "objects": [
+     "purple book",
+     "green bottle"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Omar",
+     "object": "purple book"
+    }
+   },
+   "target_answer_regex": "(?i)\\bOmar\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Nora",
+    "binding": {
+     "Omar": "purple book",
+     "Nora": "green bottle"
+    },
+    "asked_object": "purple book",
+    "other_object": "green bottle",
+    "names": [
+     "Omar",
+     "Nora"
+    ],
+    "object_pair": [
+     "purple book",
+     "green bottle"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Nora",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Nora",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Nora has the green bottle and Omar has the purple book.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Nora has the green bottle and Omar has the purple book."
+    },
+    {
+     "role": "user",
+     "content": "Who has the purple book? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the purple book? Answer with the name only.\n\nQuestion: Who has the purple book?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-02B",
+   "pair_id": "wv7-02",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the purple book? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "purple_book_owner",
+    "question": "Who has the purple book?",
+    "candidates": [
+     "Omar",
+     "Nora"
+    ],
+    "answer": "Nora",
+    "answer_aliases": [
+     "nora"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Omar",
+     "Nora"
+    ],
+    "objects": [
+     "purple book",
+     "green bottle"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Nora",
+     "object": "purple book"
+    }
+   },
+   "target_answer_regex": "(?i)\\bNora\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Nora",
+    "binding": {
+     "Nora": "purple book",
+     "Omar": "green bottle"
+    },
+    "asked_object": "purple book",
+    "other_object": "green bottle",
+    "names": [
+     "Omar",
+     "Nora"
+    ],
+    "object_pair": [
+     "purple book",
+     "green bottle"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Nora",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Omar",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Nora has the purple book and Omar has the green bottle.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Nora has the purple book and Omar has the green bottle."
+    },
+    {
+     "role": "user",
+     "content": "Who has the purple book? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the purple book? Answer with the name only.\n\nQuestion: Who has the purple book?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-03A",
+   "pair_id": "wv7-03",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the green bottle? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "green_bottle_owner",
+    "question": "Who has the green bottle?",
+    "candidates": [
+     "Ana",
+     "Adam"
+    ],
+    "answer": "Ana",
+    "answer_aliases": [
+     "ana"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Ana",
+     "Adam"
+    ],
+    "objects": [
+     "green bottle",
+     "purple book"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Ana",
+     "object": "green bottle"
+    }
+   },
+   "target_answer_regex": "(?i)\\bAna\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Ana",
+    "binding": {
+     "Ana": "green bottle",
+     "Adam": "purple book"
+    },
+    "asked_object": "green bottle",
+    "other_object": "purple book",
+    "names": [
+     "Ana",
+     "Adam"
+    ],
+    "object_pair": [
+     "green bottle",
+     "purple book"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Ana",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Adam",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Ana has the green bottle and Adam has the purple book.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Ana has the green bottle and Adam has the purple book."
+    },
+    {
+     "role": "user",
+     "content": "Who has the green bottle? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the green bottle? Answer with the name only.\n\nQuestion: Who has the green bottle?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-03B",
+   "pair_id": "wv7-03",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the green bottle? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "green_bottle_owner",
+    "question": "Who has the green bottle?",
+    "candidates": [
+     "Ana",
+     "Adam"
+    ],
+    "answer": "Adam",
+    "answer_aliases": [
+     "adam"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Ana",
+     "Adam"
+    ],
+    "objects": [
+     "green bottle",
+     "purple book"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Adam",
+     "object": "green bottle"
+    }
+   },
+   "target_answer_regex": "(?i)\\bAdam\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Ana",
+    "binding": {
+     "Adam": "green bottle",
+     "Ana": "purple book"
+    },
+    "asked_object": "green bottle",
+    "other_object": "purple book",
+    "names": [
+     "Ana",
+     "Adam"
+    ],
+    "object_pair": [
+     "green bottle",
+     "purple book"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Ana",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Ana",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Ana has the purple book and Adam has the green bottle.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Ana has the purple book and Adam has the green bottle."
+    },
+    {
+     "role": "user",
+     "content": "Who has the green bottle? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the green bottle? Answer with the name only.\n\nQuestion: Who has the green bottle?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-04A",
+   "pair_id": "wv7-04",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the blue rope? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "blue_rope_owner",
+    "question": "Who has the blue rope?",
+    "candidates": [
+     "Nina",
+     "Eva"
+    ],
+    "answer": "Nina",
+    "answer_aliases": [
+     "nina"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Nina",
+     "Eva"
+    ],
+    "objects": [
+     "blue rope",
+     "silver ring"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Nina",
+     "object": "blue rope"
+    }
+   },
+   "target_answer_regex": "(?i)\\bNina\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Eva",
+    "binding": {
+     "Nina": "blue rope",
+     "Eva": "silver ring"
+    },
+    "asked_object": "blue rope",
+    "other_object": "silver ring",
+    "names": [
+     "Nina",
+     "Eva"
+    ],
+    "object_pair": [
+     "blue rope",
+     "silver ring"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Eva",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Eva",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Eva has the silver ring. Nina has the blue rope.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Eva has the silver ring. Nina has the blue rope."
+    },
+    {
+     "role": "user",
+     "content": "Who has the blue rope? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the blue rope? Answer with the name only.\n\nQuestion: Who has the blue rope?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-04B",
+   "pair_id": "wv7-04",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the blue rope? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "blue_rope_owner",
+    "question": "Who has the blue rope?",
+    "candidates": [
+     "Nina",
+     "Eva"
+    ],
+    "answer": "Eva",
+    "answer_aliases": [
+     "eva"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Nina",
+     "Eva"
+    ],
+    "objects": [
+     "blue rope",
+     "silver ring"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Eva",
+     "object": "blue rope"
+    }
+   },
+   "target_answer_regex": "(?i)\\bEva\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Eva",
+    "binding": {
+     "Eva": "blue rope",
+     "Nina": "silver ring"
+    },
+    "asked_object": "blue rope",
+    "other_object": "silver ring",
+    "names": [
+     "Nina",
+     "Eva"
+    ],
+    "object_pair": [
+     "blue rope",
+     "silver ring"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Eva",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Nina",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Eva has the blue rope. Nina has the silver ring.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Eva has the blue rope. Nina has the silver ring."
+    },
+    {
+     "role": "user",
+     "content": "Who has the blue rope? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the blue rope? Answer with the name only.\n\nQuestion: Who has the blue rope?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-05A",
+   "pair_id": "wv7-05",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the red flag? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "red_flag_owner",
+    "question": "Who has the red flag?",
+    "candidates": [
+     "Theo",
+     "Lena"
+    ],
+    "answer": "Theo",
+    "answer_aliases": [
+     "theo"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Theo",
+     "Lena"
+    ],
+    "objects": [
+     "red flag",
+     "brown coat"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Theo",
+     "object": "red flag"
+    }
+   },
+   "target_answer_regex": "(?i)\\bTheo\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Theo",
+    "binding": {
+     "Theo": "red flag",
+     "Lena": "brown coat"
+    },
+    "asked_object": "red flag",
+    "other_object": "brown coat",
+    "names": [
+     "Theo",
+     "Lena"
+    ],
+    "object_pair": [
+     "red flag",
+     "brown coat"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Theo",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Lena",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Theo has the red flag. Lena has the brown coat.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Theo has the red flag. Lena has the brown coat."
+    },
+    {
+     "role": "user",
+     "content": "Who has the red flag? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the red flag? Answer with the name only.\n\nQuestion: Who has the red flag?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-05B",
+   "pair_id": "wv7-05",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the red flag? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "red_flag_owner",
+    "question": "Who has the red flag?",
+    "candidates": [
+     "Theo",
+     "Lena"
+    ],
+    "answer": "Lena",
+    "answer_aliases": [
+     "lena"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Theo",
+     "Lena"
+    ],
+    "objects": [
+     "red flag",
+     "brown coat"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Lena",
+     "object": "red flag"
+    }
+   },
+   "target_answer_regex": "(?i)\\bLena\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Theo",
+    "binding": {
+     "Lena": "red flag",
+     "Theo": "brown coat"
+    },
+    "asked_object": "red flag",
+    "other_object": "brown coat",
+    "names": [
+     "Theo",
+     "Lena"
+    ],
+    "object_pair": [
+     "red flag",
+     "brown coat"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Theo",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Theo",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Theo has the brown coat. Lena has the red flag.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Theo has the brown coat. Lena has the red flag."
+    },
+    {
+     "role": "user",
+     "content": "Who has the red flag? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the red flag? Answer with the name only.\n\nQuestion: Who has the red flag?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-06A",
+   "pair_id": "wv7-06",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the orange lamp? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "orange_lamp_owner",
+    "question": "Who has the orange lamp?",
+    "candidates": [
+     "Tom",
+     "Leo"
+    ],
+    "answer": "Tom",
+    "answer_aliases": [
+     "tom"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Tom",
+     "Leo"
+    ],
+    "objects": [
+     "orange lamp",
+     "blue cup"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Tom",
+     "object": "orange lamp"
+    }
+   },
+   "target_answer_regex": "(?i)\\bTom\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Tom",
+    "binding": {
+     "Tom": "orange lamp",
+     "Leo": "blue cup"
+    },
+    "asked_object": "orange lamp",
+    "other_object": "blue cup",
+    "names": [
+     "Tom",
+     "Leo"
+    ],
+    "object_pair": [
+     "orange lamp",
+     "blue cup"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Tom",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Leo",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Tom has the orange lamp. Leo has the blue cup.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Tom has the orange lamp. Leo has the blue cup."
+    },
+    {
+     "role": "user",
+     "content": "Who has the orange lamp? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the orange lamp? Answer with the name only.\n\nQuestion: Who has the orange lamp?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-06B",
+   "pair_id": "wv7-06",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the orange lamp? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "orange_lamp_owner",
+    "question": "Who has the orange lamp?",
+    "candidates": [
+     "Tom",
+     "Leo"
+    ],
+    "answer": "Leo",
+    "answer_aliases": [
+     "leo"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Tom",
+     "Leo"
+    ],
+    "objects": [
+     "orange lamp",
+     "blue cup"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Leo",
+     "object": "orange lamp"
+    }
+   },
+   "target_answer_regex": "(?i)\\bLeo\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Tom",
+    "binding": {
+     "Leo": "orange lamp",
+     "Tom": "blue cup"
+    },
+    "asked_object": "orange lamp",
+    "other_object": "blue cup",
+    "names": [
+     "Tom",
+     "Leo"
+    ],
+    "object_pair": [
+     "orange lamp",
+     "blue cup"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Tom",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Tom",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Tom has the blue cup. Leo has the orange lamp.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Tom has the blue cup. Leo has the orange lamp."
+    },
+    {
+     "role": "user",
+     "content": "Who has the orange lamp? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the orange lamp? Answer with the name only.\n\nQuestion: Who has the orange lamp?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-07A",
+   "pair_id": "wv7-07",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the green hat? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "green_hat_owner",
+    "question": "Who has the green hat?",
+    "candidates": [
+     "Luca",
+     "Mira"
+    ],
+    "answer": "Luca",
+    "answer_aliases": [
+     "luca"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Luca",
+     "Mira"
+    ],
+    "objects": [
+     "green hat",
+     "black bag"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Luca",
+     "object": "green hat"
+    }
+   },
+   "target_answer_regex": "(?i)\\bLuca\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Mira",
+    "binding": {
+     "Luca": "green hat",
+     "Mira": "black bag"
+    },
+    "asked_object": "green hat",
+    "other_object": "black bag",
+    "names": [
+     "Luca",
+     "Mira"
+    ],
+    "object_pair": [
+     "green hat",
+     "black bag"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Mira",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Mira",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Mira has the black bag. Luca has the green hat.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Mira has the black bag. Luca has the green hat."
+    },
+    {
+     "role": "user",
+     "content": "Who has the green hat? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the green hat? Answer with the name only.\n\nQuestion: Who has the green hat?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-07B",
+   "pair_id": "wv7-07",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the green hat? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "green_hat_owner",
+    "question": "Who has the green hat?",
+    "candidates": [
+     "Luca",
+     "Mira"
+    ],
+    "answer": "Mira",
+    "answer_aliases": [
+     "mira"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Luca",
+     "Mira"
+    ],
+    "objects": [
+     "green hat",
+     "black bag"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Mira",
+     "object": "green hat"
+    }
+   },
+   "target_answer_regex": "(?i)\\bMira\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Mira",
+    "binding": {
+     "Mira": "green hat",
+     "Luca": "black bag"
+    },
+    "asked_object": "green hat",
+    "other_object": "black bag",
+    "names": [
+     "Luca",
+     "Mira"
+    ],
+    "object_pair": [
+     "green hat",
+     "black bag"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Mira",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Luca",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Mira has the green hat. Luca has the black bag.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Mira has the green hat. Luca has the black bag."
+    },
+    {
+     "role": "user",
+     "content": "Who has the green hat? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the green hat? Answer with the name only.\n\nQuestion: Who has the green hat?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-08A",
+   "pair_id": "wv7-08",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the black bag? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "black_bag_owner",
+    "question": "Who has the black bag?",
+    "candidates": [
+     "Iris",
+     "Alma"
+    ],
+    "answer": "Iris",
+    "answer_aliases": [
+     "iris"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Iris",
+     "Alma"
+    ],
+    "objects": [
+     "black bag",
+     "green hat"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Iris",
+     "object": "black bag"
+    }
+   },
+   "target_answer_regex": "(?i)\\bIris\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Alma",
+    "binding": {
+     "Iris": "black bag",
+     "Alma": "green hat"
+    },
+    "asked_object": "black bag",
+    "other_object": "green hat",
+    "names": [
+     "Iris",
+     "Alma"
+    ],
+    "object_pair": [
+     "black bag",
+     "green hat"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Alma",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Alma",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Alma has the green hat and Iris has the black bag.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Alma has the green hat and Iris has the black bag."
+    },
+    {
+     "role": "user",
+     "content": "Who has the black bag? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the black bag? Answer with the name only.\n\nQuestion: Who has the black bag?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-08B",
+   "pair_id": "wv7-08",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the black bag? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "black_bag_owner",
+    "question": "Who has the black bag?",
+    "candidates": [
+     "Iris",
+     "Alma"
+    ],
+    "answer": "Alma",
+    "answer_aliases": [
+     "alma"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Iris",
+     "Alma"
+    ],
+    "objects": [
+     "black bag",
+     "green hat"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Alma",
+     "object": "black bag"
+    }
+   },
+   "target_answer_regex": "(?i)\\bAlma\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Alma",
+    "binding": {
+     "Alma": "black bag",
+     "Iris": "green hat"
+    },
+    "asked_object": "black bag",
+    "other_object": "green hat",
+    "names": [
+     "Iris",
+     "Alma"
+    ],
+    "object_pair": [
+     "black bag",
+     "green hat"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Alma",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Iris",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Alma has the black bag and Iris has the green hat.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Alma has the black bag and Iris has the green hat."
+    },
+    {
+     "role": "user",
+     "content": "Who has the black bag? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the black bag? Answer with the name only.\n\nQuestion: Who has the black bag?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-09A",
+   "pair_id": "wv7-09",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the blue cup? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "blue_cup_owner",
+    "question": "Who has the blue cup?",
+    "candidates": [
+     "Noah",
+     "Lily"
+    ],
+    "answer": "Noah",
+    "answer_aliases": [
+     "noah"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Noah",
+     "Lily"
+    ],
+    "objects": [
+     "blue cup",
+     "orange lamp"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Noah",
+     "object": "blue cup"
+    }
+   },
+   "target_answer_regex": "(?i)\\bNoah\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Noah",
+    "binding": {
+     "Noah": "blue cup",
+     "Lily": "orange lamp"
+    },
+    "asked_object": "blue cup",
+    "other_object": "orange lamp",
+    "names": [
+     "Noah",
+     "Lily"
+    ],
+    "object_pair": [
+     "blue cup",
+     "orange lamp"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Noah",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Lily",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Noah has the blue cup. Lily has the orange lamp.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Noah has the blue cup. Lily has the orange lamp."
+    },
+    {
+     "role": "user",
+     "content": "Who has the blue cup? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the blue cup? Answer with the name only.\n\nQuestion: Who has the blue cup?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-09B",
+   "pair_id": "wv7-09",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the blue cup? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "blue_cup_owner",
+    "question": "Who has the blue cup?",
+    "candidates": [
+     "Noah",
+     "Lily"
+    ],
+    "answer": "Lily",
+    "answer_aliases": [
+     "lily"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Noah",
+     "Lily"
+    ],
+    "objects": [
+     "blue cup",
+     "orange lamp"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Lily",
+     "object": "blue cup"
+    }
+   },
+   "target_answer_regex": "(?i)\\bLily\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Noah",
+    "binding": {
+     "Lily": "blue cup",
+     "Noah": "orange lamp"
+    },
+    "asked_object": "blue cup",
+    "other_object": "orange lamp",
+    "names": [
+     "Noah",
+     "Lily"
+    ],
+    "object_pair": [
+     "blue cup",
+     "orange lamp"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Noah",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Noah",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Noah has the orange lamp. Lily has the blue cup.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Noah has the orange lamp. Lily has the blue cup."
+    },
+    {
+     "role": "user",
+     "content": "Who has the blue cup? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the blue cup? Answer with the name only.\n\nQuestion: Who has the blue cup?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-10A",
+   "pair_id": "wv7-10",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the gold coin? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "gold_coin_owner",
+    "question": "Who has the gold coin?",
+    "candidates": [
+     "Vera",
+     "Emma"
+    ],
+    "answer": "Vera",
+    "answer_aliases": [
+     "vera"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Vera",
+     "Emma"
+    ],
+    "objects": [
+     "gold coin",
+     "yellow box"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Vera",
+     "object": "gold coin"
+    }
+   },
+   "target_answer_regex": "(?i)\\bVera\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Vera",
+    "binding": {
+     "Vera": "gold coin",
+     "Emma": "yellow box"
+    },
+    "asked_object": "gold coin",
+    "other_object": "yellow box",
+    "names": [
+     "Vera",
+     "Emma"
+    ],
+    "object_pair": [
+     "gold coin",
+     "yellow box"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Vera",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Emma",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Vera has the gold coin. Emma has the yellow box.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Vera has the gold coin. Emma has the yellow box."
+    },
+    {
+     "role": "user",
+     "content": "Who has the gold coin? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the gold coin? Answer with the name only.\n\nQuestion: Who has the gold coin?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-10B",
+   "pair_id": "wv7-10",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the gold coin? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "gold_coin_owner",
+    "question": "Who has the gold coin?",
+    "candidates": [
+     "Vera",
+     "Emma"
+    ],
+    "answer": "Emma",
+    "answer_aliases": [
+     "emma"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Vera",
+     "Emma"
+    ],
+    "objects": [
+     "gold coin",
+     "yellow box"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Emma",
+     "object": "gold coin"
+    }
+   },
+   "target_answer_regex": "(?i)\\bEmma\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Vera",
+    "binding": {
+     "Emma": "gold coin",
+     "Vera": "yellow box"
+    },
+    "asked_object": "gold coin",
+    "other_object": "yellow box",
+    "names": [
+     "Vera",
+     "Emma"
+    ],
+    "object_pair": [
+     "gold coin",
+     "yellow box"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Vera",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Vera",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Vera has the yellow box. Emma has the gold coin.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Vera has the yellow box. Emma has the gold coin."
+    },
+    {
+     "role": "user",
+     "content": "Who has the gold coin? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the gold coin? Answer with the name only.\n\nQuestion: Who has the gold coin?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-11A",
+   "pair_id": "wv7-11",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the white pen? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "white_pen_owner",
+    "question": "Who has the white pen?",
+    "candidates": [
+     "Maya",
+     "Sara"
+    ],
+    "answer": "Maya",
+    "answer_aliases": [
+     "maya"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Maya",
+     "Sara"
+    ],
+    "objects": [
+     "white pen",
+     "pink scarf"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Maya",
+     "object": "white pen"
+    }
+   },
+   "target_answer_regex": "(?i)\\bMaya\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Sara",
+    "binding": {
+     "Maya": "white pen",
+     "Sara": "pink scarf"
+    },
+    "asked_object": "white pen",
+    "other_object": "pink scarf",
+    "names": [
+     "Maya",
+     "Sara"
+    ],
+    "object_pair": [
+     "white pen",
+     "pink scarf"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Sara",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Sara",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Sara has the pink scarf and Maya has the white pen.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Sara has the pink scarf and Maya has the white pen."
+    },
+    {
+     "role": "user",
+     "content": "Who has the white pen? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the white pen? Answer with the name only.\n\nQuestion: Who has the white pen?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-11B",
+   "pair_id": "wv7-11",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the white pen? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "white_pen_owner",
+    "question": "Who has the white pen?",
+    "candidates": [
+     "Maya",
+     "Sara"
+    ],
+    "answer": "Sara",
+    "answer_aliases": [
+     "sara"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Maya",
+     "Sara"
+    ],
+    "objects": [
+     "white pen",
+     "pink scarf"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Sara",
+     "object": "white pen"
+    }
+   },
+   "target_answer_regex": "(?i)\\bSara\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Sara",
+    "binding": {
+     "Sara": "white pen",
+     "Maya": "pink scarf"
+    },
+    "asked_object": "white pen",
+    "other_object": "pink scarf",
+    "names": [
+     "Maya",
+     "Sara"
+    ],
+    "object_pair": [
+     "white pen",
+     "pink scarf"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Sara",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Maya",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Sara has the white pen and Maya has the pink scarf.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Sara has the white pen and Maya has the pink scarf."
+    },
+    {
+     "role": "user",
+     "content": "Who has the white pen? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the white pen? Answer with the name only.\n\nQuestion: Who has the white pen?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-12A",
+   "pair_id": "wv7-12",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the silver ring? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "silver_ring_owner",
+    "question": "Who has the silver ring?",
+    "candidates": [
+     "Finn",
+     "Kai"
+    ],
+    "answer": "Finn",
+    "answer_aliases": [
+     "finn"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Finn",
+     "Kai"
+    ],
+    "objects": [
+     "silver ring",
+     "blue rope"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Finn",
+     "object": "silver ring"
+    }
+   },
+   "target_answer_regex": "(?i)\\bFinn\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Kai",
+    "binding": {
+     "Finn": "silver ring",
+     "Kai": "blue rope"
+    },
+    "asked_object": "silver ring",
+    "other_object": "blue rope",
+    "names": [
+     "Finn",
+     "Kai"
+    ],
+    "object_pair": [
+     "silver ring",
+     "blue rope"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Kai",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Kai",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Kai has the blue rope and Finn has the silver ring.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Kai has the blue rope and Finn has the silver ring."
+    },
+    {
+     "role": "user",
+     "content": "Who has the silver ring? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the silver ring? Answer with the name only.\n\nQuestion: Who has the silver ring?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-12B",
+   "pair_id": "wv7-12",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the silver ring? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "silver_ring_owner",
+    "question": "Who has the silver ring?",
+    "candidates": [
+     "Finn",
+     "Kai"
+    ],
+    "answer": "Kai",
+    "answer_aliases": [
+     "kai"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Finn",
+     "Kai"
+    ],
+    "objects": [
+     "silver ring",
+     "blue rope"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Kai",
+     "object": "silver ring"
+    }
+   },
+   "target_answer_regex": "(?i)\\bKai\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Kai",
+    "binding": {
+     "Kai": "silver ring",
+     "Finn": "blue rope"
+    },
+    "asked_object": "silver ring",
+    "other_object": "blue rope",
+    "names": [
+     "Finn",
+     "Kai"
+    ],
+    "object_pair": [
+     "silver ring",
+     "blue rope"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Kai",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Finn",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Kai has the silver ring and Finn has the blue rope.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Kai has the silver ring and Finn has the blue rope."
+    },
+    {
+     "role": "user",
+     "content": "Who has the silver ring? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the silver ring? Answer with the name only.\n\nQuestion: Who has the silver ring?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-13A",
+   "pair_id": "wv7-13",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the grey ball? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "grey_ball_owner",
+    "question": "Who has the grey ball?",
+    "candidates": [
+     "Hugo",
+     "Zara"
+    ],
+    "answer": "Hugo",
+    "answer_aliases": [
+     "hugo"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Hugo",
+     "Zara"
+    ],
+    "objects": [
+     "grey ball",
+     "red key"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Hugo",
+     "object": "grey ball"
+    }
+   },
+   "target_answer_regex": "(?i)\\bHugo\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Zara",
+    "binding": {
+     "Hugo": "grey ball",
+     "Zara": "red key"
+    },
+    "asked_object": "grey ball",
+    "other_object": "red key",
+    "names": [
+     "Hugo",
+     "Zara"
+    ],
+    "object_pair": [
+     "grey ball",
+     "red key"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Zara",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Zara",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Zara has the red key. Hugo has the grey ball.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Zara has the red key. Hugo has the grey ball."
+    },
+    {
+     "role": "user",
+     "content": "Who has the grey ball? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the grey ball? Answer with the name only.\n\nQuestion: Who has the grey ball?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-13B",
+   "pair_id": "wv7-13",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the grey ball? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "grey_ball_owner",
+    "question": "Who has the grey ball?",
+    "candidates": [
+     "Hugo",
+     "Zara"
+    ],
+    "answer": "Zara",
+    "answer_aliases": [
+     "zara"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Hugo",
+     "Zara"
+    ],
+    "objects": [
+     "grey ball",
+     "red key"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Zara",
+     "object": "grey ball"
+    }
+   },
+   "target_answer_regex": "(?i)\\bZara\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Zara",
+    "binding": {
+     "Zara": "grey ball",
+     "Hugo": "red key"
+    },
+    "asked_object": "grey ball",
+    "other_object": "red key",
+    "names": [
+     "Hugo",
+     "Zara"
+    ],
+    "object_pair": [
+     "grey ball",
+     "red key"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Zara",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Hugo",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Zara has the grey ball. Hugo has the red key.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Zara has the grey ball. Hugo has the red key."
+    },
+    {
+     "role": "user",
+     "content": "Who has the grey ball? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the grey ball? Answer with the name only.\n\nQuestion: Who has the grey ball?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-14A",
+   "pair_id": "wv7-14",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the brown coat? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "brown_coat_owner",
+    "question": "Who has the brown coat?",
+    "candidates": [
+     "Tara",
+     "Ben"
+    ],
+    "answer": "Tara",
+    "answer_aliases": [
+     "tara"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Tara",
+     "Ben"
+    ],
+    "objects": [
+     "brown coat",
+     "red flag"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Tara",
+     "object": "brown coat"
+    }
+   },
+   "target_answer_regex": "(?i)\\bTara\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Ben",
+    "binding": {
+     "Tara": "brown coat",
+     "Ben": "red flag"
+    },
+    "asked_object": "brown coat",
+    "other_object": "red flag",
+    "names": [
+     "Tara",
+     "Ben"
+    ],
+    "object_pair": [
+     "brown coat",
+     "red flag"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Ben",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Ben",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Ben has the red flag and Tara has the brown coat.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Ben has the red flag and Tara has the brown coat."
+    },
+    {
+     "role": "user",
+     "content": "Who has the brown coat? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the brown coat? Answer with the name only.\n\nQuestion: Who has the brown coat?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-14B",
+   "pair_id": "wv7-14",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the brown coat? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "brown_coat_owner",
+    "question": "Who has the brown coat?",
+    "candidates": [
+     "Tara",
+     "Ben"
+    ],
+    "answer": "Ben",
+    "answer_aliases": [
+     "ben"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Tara",
+     "Ben"
+    ],
+    "objects": [
+     "brown coat",
+     "red flag"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Ben",
+     "object": "brown coat"
+    }
+   },
+   "target_answer_regex": "(?i)\\bBen\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Ben",
+    "binding": {
+     "Ben": "brown coat",
+     "Tara": "red flag"
+    },
+    "asked_object": "brown coat",
+    "other_object": "red flag",
+    "names": [
+     "Tara",
+     "Ben"
+    ],
+    "object_pair": [
+     "brown coat",
+     "red flag"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Ben",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Tara",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Ben has the brown coat and Tara has the red flag.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Ben has the brown coat and Tara has the red flag."
+    },
+    {
+     "role": "user",
+     "content": "Who has the brown coat? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the brown coat? Answer with the name only.\n\nQuestion: Who has the brown coat?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-15A",
+   "pair_id": "wv7-15",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the pink scarf? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "pink_scarf_owner",
+    "question": "Who has the pink scarf?",
+    "candidates": [
+     "Rosa",
+     "Erik"
+    ],
+    "answer": "Rosa",
+    "answer_aliases": [
+     "rosa"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Rosa",
+     "Erik"
+    ],
+    "objects": [
+     "pink scarf",
+     "white pen"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Rosa",
+     "object": "pink scarf"
+    }
+   },
+   "target_answer_regex": "(?i)\\bRosa\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Rosa",
+    "binding": {
+     "Rosa": "pink scarf",
+     "Erik": "white pen"
+    },
+    "asked_object": "pink scarf",
+    "other_object": "white pen",
+    "names": [
+     "Rosa",
+     "Erik"
+    ],
+    "object_pair": [
+     "pink scarf",
+     "white pen"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Rosa",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Erik",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Rosa has the pink scarf and Erik has the white pen.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Rosa has the pink scarf and Erik has the white pen."
+    },
+    {
+     "role": "user",
+     "content": "Who has the pink scarf? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the pink scarf? Answer with the name only.\n\nQuestion: Who has the pink scarf?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-15B",
+   "pair_id": "wv7-15",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p0",
+   "prompt_text": "Who has the pink scarf? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "pink_scarf_owner",
+    "question": "Who has the pink scarf?",
+    "candidates": [
+     "Rosa",
+     "Erik"
+    ],
+    "answer": "Erik",
+    "answer_aliases": [
+     "erik"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Rosa",
+     "Erik"
+    ],
+    "objects": [
+     "pink scarf",
+     "white pen"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Erik",
+     "object": "pink scarf"
+    }
+   },
+   "target_answer_regex": "(?i)\\bErik\\b",
+   "construction": {
+    "preamble_template": "p0",
+    "first_mentioned_in_preamble": "Rosa",
+    "binding": {
+     "Erik": "pink scarf",
+     "Rosa": "white pen"
+    },
+    "asked_object": "pink scarf",
+    "other_object": "white pen",
+    "names": [
+     "Rosa",
+     "Erik"
+    ],
+    "object_pair": [
+     "pink scarf",
+     "white pen"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Rosa",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Rosa",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Background: Rosa has the white pen and Erik has the pink scarf.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Background: Rosa has the white pen and Erik has the pink scarf."
+    },
+    {
+     "role": "user",
+     "content": "Who has the pink scarf? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the pink scarf? Answer with the name only.\n\nQuestion: Who has the pink scarf?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-16A",
+   "pair_id": "wv7-16",
+   "version": "A",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the red key? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "red_key_owner",
+    "question": "Who has the red key?",
+    "candidates": [
+     "Ivan",
+     "Omar"
+    ],
+    "answer": "Ivan",
+    "answer_aliases": [
+     "ivan"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Ivan",
+     "Omar"
+    ],
+    "objects": [
+     "red key",
+     "grey ball"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Ivan",
+     "object": "red key"
+    }
+   },
+   "target_answer_regex": "(?i)\\bIvan\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Ivan",
+    "binding": {
+     "Ivan": "red key",
+     "Omar": "grey ball"
+    },
+    "asked_object": "red key",
+    "other_object": "grey ball",
+    "names": [
+     "Ivan",
+     "Omar"
+    ],
+    "object_pair": [
+     "red key",
+     "grey ball"
+    ],
+    "answer_is_first_mentioned": true,
+    "first_mentioned_candidate": "Ivan",
+    "answer_position": 0,
+    "cue_position": "n/a",
+    "other_candidate": "Omar",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Ivan has the red key. Omar has the grey ball.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Ivan has the red key. Omar has the grey ball."
+    },
+    {
+     "role": "user",
+     "content": "Who has the red key? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the red key? Answer with the name only.\n\nQuestion: Who has the red key?\nAnswer in a few words, then stop."
+  },
+  {
+   "item_id": "wv7-16B",
+   "pair_id": "wv7-16",
+   "version": "B",
+   "family": "ownership",
+   "split": "test",
+   "template_id": "v7-p1",
+   "prompt_text": "Who has the red key? Answer with the name only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "red_key_owner",
+    "question": "Who has the red key?",
+    "candidates": [
+     "Ivan",
+     "Omar"
+    ],
+    "answer": "Omar",
+    "answer_aliases": [
+     "omar"
+    ]
+   },
+   "secondary": {
+    "entities": [
+     "Ivan",
+     "Omar"
+    ],
+    "objects": [
+     "red key",
+     "grey ball"
+    ],
+    "relation": {
+     "type": "has",
+     "subject": "Omar",
+     "object": "red key"
+    }
+   },
+   "target_answer_regex": "(?i)\\bOmar\\b",
+   "construction": {
+    "preamble_template": "p1",
+    "first_mentioned_in_preamble": "Ivan",
+    "binding": {
+     "Omar": "red key",
+     "Ivan": "grey ball"
+    },
+    "asked_object": "red key",
+    "other_object": "grey ball",
+    "names": [
+     "Ivan",
+     "Omar"
+    ],
+    "object_pair": [
+     "red key",
+     "grey ball"
+    ],
+    "answer_is_first_mentioned": false,
+    "first_mentioned_candidate": "Ivan",
+    "answer_position": 1,
+    "cue_position": "n/a",
+    "other_candidate": "Ivan",
+    "visible_mentions_candidates": false
+   },
+   "notes": "V7 target-private: the binding is only in the preamble; the visible prompt is identical within the pair",
+   "preamble": "Context for this conversation: Ivan has the grey ball. Omar has the red key.",
+   "preamble_role": "system",
+   "capture_messages": [
+    {
+     "role": "system",
+     "content": "Context for this conversation: Ivan has the grey ball. Omar has the red key."
+    },
+    {
+     "role": "user",
+     "content": "Who has the red key? Answer with the name only."
+    }
+   ],
+   "prompt_only_text": "You will read a short passage and answer one question about it.\n\nPassage:\nWho has the red key? Answer with the name only.\n\nQuestion: Who has the red key?\nAnswer in a few words, then stop."
+  }
+ ]
+}

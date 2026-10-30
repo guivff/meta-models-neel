@@ -1,0 +1,12 @@
+{
+  "id": "8e45e1fa0f9bc289b5f455a6",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task (\"positive\" or \"negative\") with a worked example provided. The model must apply the rule to the given sentence.\n\nThe example pattern (\"Example sentence: ... / Reply:\") signals a structured Q&A format where the answer is a single label word.\n\n\"Reply:\" is the final token, acting as a prompt label/field marker, immediately requiring the classification answer (\"Positive\" or \"Negative\") for the sentence \"The man is wearing a blue shirt.\"\n\"Given the following sentence, determine the sentiment label (positive or negative) according to the rule.\nSentence: The man is wearing a blue shirt.\nReply:\" \u2014 the final \"Reply:\" is a field prompt demanding the direct answer token next.\n\n\"Reply:\" closes the prompt, expecting the model's final output label.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task (\"positive\" or \"negative\") with a worked example provided. The model must apply the rule to the given sentence.\n\nThe example pattern (\"Example sentence: ... / Reply:\") signals a structured Q&A format where the answer is a single label word.\n\n\"Reply:\" is the final token, acting as a prompt label/field marker, immediately requiring the classification answer (\"Positive\" or \"Negative\") for the sentence \"The man is wearing a blue shirt.\"\n\"Given the following sentence, determine the sentiment label (positive or negative) according to the rule.\nSentence: The man is wearing a blue shirt.\nReply:\" \u2014 the final \"Reply:\" is a field prompt demanding the direct answer token next.\n\n\"Reply:\" closes the prompt, expecting the model's final output label.",
+  "truncated": false
+}

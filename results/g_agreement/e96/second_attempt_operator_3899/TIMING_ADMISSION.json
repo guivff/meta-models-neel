@@ -1,0 +1,56 @@
+{
+  "authority": "3899e1ea073f8609f33fb35b5ce1863c6223961f",
+  "kind": "OPERATIONAL_TIMING_ONLY_NO_READOUT_SELECTION",
+  "sources": [
+    {
+      "slot": 0,
+      "timing_sha256": "064303a78a89ec3cb5268520c04225f5201688e7d161dfc48c861943357e2072",
+      "output_seal_sha256": "e11b8bc1180fb6325738dd723fc365b18ebdc666df7b3395e755dc730c1bec03",
+      "setup_seconds": 741.5747833569767
+    },
+    {
+      "slot": 2,
+      "timing_sha256": "414c0c6df682430c3daa6b0683d2c1cb97d02462205adc2a6258eeb9cf4e5d1a",
+      "output_seal_sha256": "8d04f3610d7b5d790e2f637d793536a0950bde2b9b5e0f8d3e535fecfa225be3",
+      "setup_seconds": 493.4787215429824
+    }
+  ],
+  "max_measured_setup_seconds": 741.5747833569767,
+  "setup_cap_seconds": 927,
+  "margin": 1.25,
+  "verification_max_seconds": 559.2378019490279,
+  "phases": {
+    "generate_oracle": {
+      "jobs": 360,
+      "first_batch_seconds": 46.03373812697828,
+      "steady_batch_seconds": 11.656502679952492
+    },
+    "generate_nla": {
+      "jobs": 200,
+      "first_batch_seconds": 26.027532604988664,
+      "steady_batch_seconds": 18.43667362194948
+    },
+    "reconstruct_oracle": {
+      "jobs": 360,
+      "first_batch_seconds": 9.453319448046386,
+      "steady_batch_seconds": 0.6068952236208458
+    },
+    "reconstruct_nla": {
+      "jobs": 200,
+      "first_batch_seconds": 1.4102308700094,
+      "steady_batch_seconds": 0.5125029637067261
+    }
+  },
+  "measured_work_seconds": 8256.370808978436,
+  "measured_staging_seconds": [
+    234.133487,
+    343.332122
+  ],
+  "staging_allowance_seconds": 430,
+  "custody_retrieval_reserve_seconds": 660,
+  "padded_complete_forecast_seconds": 13036.47924285555,
+  "registered_custody_cap_seconds": 14400,
+  "original_sample_sha256": "e5c63f3065d3356a6077915e95fc38b33ae11a50bd93d3840d5c04ee33efbf85",
+  "first_batch_policy": "Retain every first batch unchanged; its cold-start latency is measured separately, never multiplied as steady work; no additional warmup samples or discarded outputs.",
+  "recorded_utc": "2026-10-28T23:39:34.009182+00:00"
+}

@@ -1,0 +1,79 @@
+{
+  "archives": {
+    "arm_p_and_gate_inputs.tar.gz": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtrain/cache/g_agreement/e106/package_v7/arm_p_and_gate_inputs.tar.gz",
+      "sha256": "beb664ec9c6deefa4fda75c62d53e505a5b7eadb815154bd249aa6320cb9d35f"
+    },
+    "source.tar.gz": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtrain/cache/g_agreement/e106/package_v7/source.tar.gz",
+      "sha256": "af5642105732b0ca9f4cecd2138291ca69956cd2c376eb9d305adae1d3513b85"
+    },
+    "t_dev_selection.tar.gz": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtrain/cache/g_agreement/e106/package_v7/t_dev_selection.tar.gz",
+      "sha256": "b9a84065cef6edce7fdb8159eccafdf381ab704c77f3886a8c4a297522b98253"
+    }
+  },
+  "first_output_utc": null,
+  "gpu_models_loaded": false,
+  "rehearsal": [
+    {
+      "command": [
+        "-c",
+        "import pathlib,torch,peft,transformers;import mats.readers.nla,mats.readers.olens;import projects.g_agreement.e106.worker as w;import projects.g_agreement.e106.prepare;import projects.g_agreement.e106.prepare_t;import projects.g_agreement.e106.bind_baseline;import projects.g_agreement.e106.prepare_eval;import projects.g_agreement.e106.production;import projects.g_agreement.e106.finalize_t;assert pathlib.Path(w.__file__).resolve().is_relative_to(pathlib.Path.cwd());print('Exact imports PASS; torch='+torch.__version__+'; peft='+peft.__version__+'; transformers='+transformers.__version__)"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Exact imports PASS; torch=2.14.1; peft=0.21.2; transformers=5.18.0\n"
+    },
+    {
+      "command": [
+        "-m",
+        "projects.g_agreement.e106.worker",
+        "--help"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "usage: worker.py [-h] --phase {arm_p,gate} --inputs INPUTS --assets ASSETS\n                 --admission ADMISSION --out OUT\n\noptions:\n  -h, --help            show this help message and exit\n  --phase {arm_p,gate}\n  --inputs INPUTS\n  --assets ASSETS\n  --admission ADMISSION\n  --out OUT\n"
+    },
+    {
+      "command": [
+        "-m",
+        "unittest",
+        "projects.g_agreement.e106.test_worker",
+        "projects.g_agreement.e106.test_production",
+        "projects.g_agreement.e106.test_eval"
+      ],
+      "returncode": 0,
+      "stderr": "...........s.\n----------------------------------------------------------------------\nRan 13 tests in 2.719s\n\nOK (skipped=1)\n",
+      "stdout": ""
+    }
+  ],
+  "source_files": {
+    "external/mats-nla-workspace/src/mats/__init__.py": "ff25a6253eabef5942d23dffff23fd5f4b86980617a791a138e053aa28e32c70",
+    "external/mats-nla-workspace/src/mats/capture.py": "bc69d7deee038326d28bd345d4bd76da43a615abd5fbe970a2ec245e72b8b179",
+    "external/mats-nla-workspace/src/mats/jspace.py": "0f1801ffba59bcc61c04e3c333b9b9ef66f939e5dd0159aba364a69226a0717d",
+    "external/mats-nla-workspace/src/mats/metrics.py": "17ff3b1467186a8c4e24e76ed52d2263b0201e651e2010d4b99bd47c25cda473",
+    "external/mats-nla-workspace/src/mats/probes.py": "955a7b516d97bee88b149bee1b8a3d9cdffaa7ef1b407cdef5cc4159f4677ae7",
+    "external/mats-nla-workspace/src/mats/readers/__init__.py": "addd3f183c8eada1b42628e89b8e024f50d3b30e92c459432f48eb12976f5572",
+    "external/mats-nla-workspace/src/mats/readers/jlens.py": "01b4717d31be411067a764396f8fe2b5acb1f13200661c3143a288bd31552e9d",
+    "external/mats-nla-workspace/src/mats/readers/nla.py": "e8ed65f4b97affbdb5a57cec87e4cf38472f20102974a105a3affb1ac27ab1d0",
+    "external/mats-nla-workspace/src/mats/readers/olens.py": "7866ac3aa66d96bee612e216a0cd45e0a76e1dd4e799f6aaa538c28addd0e86e",
+    "external/mats-nla-workspace/src/mats/textnla.py": "a2d3b5ae6ec2de49fb38bf92d1bf290f6a457eddecddf81482dc6b73ca432008",
+    "projects/g_agreement/e106/bind_baseline.py": "d41b4d5ce2e4de88666006205189f2bb5eb66cb4351649b3a331f2788973b844",
+    "projects/g_agreement/e106/finalize_t.py": "d77df9d34dc953a7a4b1a7d373677d3ee33e00b620e20c0830413ea71e7dd298",
+    "projects/g_agreement/e106/package.py": "0ecb7740fb34fecf3bd7288f66d6300e21b81c28a5ac2ac67b43a2f6ac0e7186",
+    "projects/g_agreement/e106/prepare.py": "a3c46d4fefd3e2f27078b253f93f8e43923cadb57c16b67fec29a63f784425e5",
+    "projects/g_agreement/e106/prepare_eval.py": "6e27ecb675668b381bed17ce7e592d6d3f5cbbdfc00be1339484295c4df7e23a",
+    "projects/g_agreement/e106/prepare_t.py": "747ca11c5722925ae087a8193aa36d0bdd177e476c5c8c7477c4e2b78a10eac3",
+    "projects/g_agreement/e106/production.py": "f00bf3c09cc2a0e62a296b73dbad210bd1e0e768ea46d1aba2d3314f909c125b",
+    "projects/g_agreement/e106/runtime.py": "b9ea0019106101c5fa9a75c8a6961b09d68648496b9a0e032ff5e94494d46e38",
+    "projects/g_agreement/e106/test_eval.py": "e3a057570a86f344f5d1e8b9f3bdf361fbc7219ab4b607115d507ee785cb3a7f",
+    "projects/g_agreement/e106/test_production.py": "05c0324bf8572b7c2ba22a351642a2eb9c195c56d9034e8054d9484ce7387bd7",
+    "projects/g_agreement/e106/test_worker.py": "b8276384ef3d4f845f210d8e3ed2f65195e8f4aa79d88ac85d953b0760883d94",
+    "projects/g_agreement/e106/worker.py": "7bd2f19b489cd9a0c2fcc665558b51d617787ac25b3be35c1c8e2e3c9e36e064",
+    "projects/g_agreement/e96/prepare_smoke_inputs.py": "36b8cb61245c2704296a46c7c24b1f511d29f50cb98b1b4ab8492281e1f09d52",
+    "projects/g_agreement/e96/reconstructor_check.py": "3184343484eed2ef53358e602d6ac5c659c0ccc33a0c868627ee4c274ecf4cd1",
+    "results/g_agreement/understand/e76/common76.py": "44b46e5faf1b586fc2c00ddfeaf8cabec0cd81d596f947b8d8b7b195447f2874"
+  },
+  "status": "EXACT_SOURCE_ARCHIVE_CPU_IMPORTS_AND_TESTS_PASS_NO_GPU"
+}

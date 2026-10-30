@@ -1,0 +1,55 @@
+{
+  "NLA": "NOT RUN",
+  "authority": "402be5f0",
+  "cap_multiplier": 1.25,
+  "cohort_id": "joint-a7fea77c-7279007d",
+  "derivation": "2 * sum(max(two measured Oracle pilot batch durations in phase) * remaining original jobs), then total cap ceil(forecast *1.25); original two pilots retained, never repeated; 900s staging per pod separate",
+  "experiments": {
+    "E62": {
+      "compute_cap_seconds": 20613,
+      "measured_forecast_seconds": 16490.373321470688,
+      "phase_samples": {
+        "E62_oracle_behaviour": [
+          9.455145299027208,
+          0.14763990900246426
+        ],
+        "E62_oracle_native": [
+          13.715450241987128,
+          10.24176115199225
+        ]
+      },
+      "remaining_jobs": 731,
+      "retained_pilots": 4,
+      "shard_caps": [
+        6863,
+        6875,
+        6875
+      ],
+      "shards": 3
+    },
+    "E62P": {
+      "compute_cap_seconds": 4627,
+      "measured_forecast_seconds": 3701.492632053094,
+      "phase_samples": {
+        "E62P_oracle_behaviour": [
+          0.1696416600025259,
+          0.1576248409692198
+        ],
+        "E62P_oracle_native": [
+          10.514214371039998,
+          11.409205782983918
+        ]
+      },
+      "remaining_jobs": 574,
+      "retained_pilots": 4,
+      "shard_caps": [
+        2314,
+        2313
+      ],
+      "shards": 2
+    }
+  },
+  "original_margin": 2,
+  "timing_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_verified_v1/pods/vclnlr8h9ggu5c/out/PHASE_TIMINGS.json",
+  "timing_sha256": "442dde31fbf585ee79cc0307141350c65d2ee5bc388bdc7278b3e662e497a396"
+}

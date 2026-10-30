@@ -1,0 +1,12 @@
+{
+  "id": "316cf5d408f5d3260fd1e37e",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format pattern established: \"Question:\" and \"Answer:\" fields signal a structured template where a model response or explanation is expected next.\n\nThe instruction explicitly asks for an explanation of \"how to write an article about [topic],\" but the example question is about \"the definition of the word 'apple'\" \u2014 creating a mismatch the model must resolve.\n\n\"Answer:\" is the final token, functioning as a field label in the template, immediately requiring the actual answer content (likely a sample response or explanation of the answer format).\n\"Example:\nQuestion: [example question]\nAnswer:\" \u2014 this closing label demands the model's generated response text, likely beginning with a direct explanation or sample answer about the task.\n\"Task: [description]\nQuestion: [example]\nAnswer:\" \u2014 the final field label in a structured prompt template, expecting a response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format pattern established: \"Question:\" and \"Answer:\" fields signal a structured template where a model response or explanation is expected next.\n\nThe instruction explicitly asks for an explanation of \"how to write an article about [topic],\" but the example question is about \"the definition of the word 'apple'\" \u2014 creating a mismatch the model must resolve.\n\n\"Answer:\" is the final token, functioning as a field label in the template, immediately requiring the actual answer content (likely a sample response or explanation of the answer format).\n\"Example:\nQuestion: [example question]\nAnswer:\" \u2014 this closing label demands the model's generated response text, likely beginning with a direct explanation or sample answer about the task.\n\"Task: [description]\nQuestion: [example]\nAnswer:\" \u2014 the final field label in a structured prompt template, expecting a response.",
+  "truncated": false
+}

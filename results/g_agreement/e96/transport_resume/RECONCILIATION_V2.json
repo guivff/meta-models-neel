@@ -1,0 +1,24 @@
+{
+  "experiment": "E96",
+  "status": "UNCHARGED_PROVIDER429_RECONCILED_UNDER_EXISTING_E80c_POLICY",
+  "recorded_utc": "2026-10-28T16:58:18.193882+00:00",
+  "supersedes": "RECONCILIATION.json no-content assertion; first strict resume sent0newrequests",
+  "finding": "HTTP200 finish_reasonerror/upstream429 includes structured incomplete message payload; do not use/classify it. Provider reports alltokenusage0 andcost0; ledger settled0.",
+  "policy_source": "shared1d5f8abb e80_resume.py uncharged_provider_error; existing E56 bounded429transportbackoff",
+  "retry_maximum": 4,
+  "retry_delays_seconds": [
+    5,
+    10,
+    20,
+    40
+  ],
+  "actual_before_resume_usd": "2.05935500",
+  "requests_before_resume": 1320,
+  "unsettled_before_resume": 0,
+  "frozen_judge_file_changed": false,
+  "frozen_packet_changed": false,
+  "rule_or_selection_changed": false,
+  "tests": "6PASS inclactualpayloadshape/nooutcomeuse,cachepreservation/distinctreservations/max4/uncertainnoresend/chargedrejection/onelineauditpatch",
+  "raw_failed_response_sha256": "fcc8e937fe24c29c6086f9ed64bc10e5009fbd163e2151a25a8e216e0f2410fc",
+  "first_output_utc": "unknown"
+}

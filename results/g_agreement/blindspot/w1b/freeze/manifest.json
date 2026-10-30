@@ -1,0 +1,695 @@
+{
+  "bootstrap_replicates": 2000,
+  "brief": "projects/g_agreement/BRIEF_BLINDSPOT.md",
+  "brief_sha256": "fc9d36ac06c972fc5fd8bf6275965016402f7df5333ee0e6289113522b0f9567",
+  "caps_gpu_seconds": {
+    "W1": 7200,
+    "W1b": 3600,
+    "W5": 1800
+  },
+  "capture_sites": [
+    42,
+    44
+  ],
+  "experiment": "W1b",
+  "files": {
+    "causal.input.json": "2db6ae6c249a58a175edb9a0544d4916a0dedae51cee921c8cdcd355efa07def",
+    "decoding.json": "9a561d79b58d3c0340139c0c94de947f2b941ac50625d08c5bc6421554fbd205",
+    "items.DO_NOT_STAGE.jsonl": "cdf0dfd19e1621995176be6653f89bf2aa27464e596cf659d8248c69841dcd93",
+    "items.input.jsonl": "315351e48bcbea408601257e47960c3effffa3ea0c70b518fa2f1509e14ed40f",
+    "labels.DO_NOT_STAGE.jsonl": "005c53337e15a151ee3cfd1d7e8599b85c7ca6a56847e0960acd4cb04dba3373",
+    "lengths.json": "437ac95478d78f8570df802daa885fbbc234400be06e9a9f1ea73dd9e95b3560",
+    "provenance.json": "f6580c10976eb3ce3d97624d8151111289c4368a8c3f3c91198f9522e53de77c",
+    "runtime.json": "e674d96cd2b9db094ddfcdfd6bee39f128002b0cda02ca8e5ef05d44d62f7c59",
+    "sweep.input.json": "b34f4acfdfa995a3387d1eaad8d6c42a9c44d18405b27c0d085ebcc47c2cd535",
+    "templates.json": "f6fa6496283317ae6bb875d9343f91db77409a355a62b83ad9120dbcbc4bc482"
+  },
+  "ground_truth": "frozen \u00a779 extractor verified on entire final tokenized prefix after padding",
+  "read_position": "last token of raw prefix, no chat template",
+  "rows": {
+    "current_colon": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current text prefix satisfies this statement: the last observed non-space character is a colon.",
+          "The current text prefix satisfies this statement: it is not the case that the last observed non-space character is a colon."
+        ],
+        [
+          "At the read position, the following statement is true: the last observed non-space character is a colon.",
+          "At the read position, the following statement is true: it is not the case that the last observed non-space character is a colon."
+        ]
+      ],
+      "olens": [
+        [
+          "- the last observed non-space character is a colon",
+          "- it is not the case that the last observed non-space character is a colon"
+        ],
+        [
+          "- At the read position: the last observed non-space character is a colon.",
+          "- At the read position: it is not the case that the last observed non-space character is a colon."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "absent": 84,
+        "present": 84
+      },
+      "values": [
+        "present",
+        "absent"
+      ]
+    },
+    "current_number": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current text prefix satisfies this statement: a complete numeric lexeme ends at the current character.",
+          "The current text prefix satisfies this statement: it is not the case that a complete numeric lexeme ends at the current character."
+        ],
+        [
+          "At the read position, the following statement is true: a complete numeric lexeme ends at the current character.",
+          "At the read position, the following statement is true: it is not the case that a complete numeric lexeme ends at the current character."
+        ]
+      ],
+      "olens": [
+        [
+          "- a complete numeric lexeme ends at the current character",
+          "- it is not the case that a complete numeric lexeme ends at the current character"
+        ],
+        [
+          "- At the read position: a complete numeric lexeme ends at the current character.",
+          "- At the read position: it is not the case that a complete numeric lexeme ends at the current character."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "absent": 84,
+        "present": 84
+      },
+      "values": [
+        "present",
+        "absent"
+      ]
+    },
+    "number_digits_ge_3": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current text prefix satisfies this statement: digit characters in that numeric lexeme (including exponent digits) is at least 3.",
+          "The current text prefix satisfies this statement: digit characters in that numeric lexeme (including exponent digits) is less than 3."
+        ],
+        [
+          "At the read position, the following statement is true: digit characters in that numeric lexeme (including exponent digits) is at least 3.",
+          "At the read position, the following statement is true: digit characters in that numeric lexeme (including exponent digits) is less than 3."
+        ]
+      ],
+      "olens": [
+        [
+          "- digit characters in that numeric lexeme (including exponent digits) is at least 3",
+          "- digit characters in that numeric lexeme (including exponent digits) is less than 3"
+        ],
+        [
+          "- At the read position: digit characters in that numeric lexeme (including exponent digits) is at least 3.",
+          "- At the read position: digit characters in that numeric lexeme (including exponent digits) is less than 3."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "absent": 84,
+        "present": 84
+      },
+      "values": [
+        "present",
+        "absent"
+      ]
+    },
+    "number_digits_ge_4": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current text prefix satisfies this statement: digit characters in that numeric lexeme (including exponent digits) is at least 4.",
+          "The current text prefix satisfies this statement: digit characters in that numeric lexeme (including exponent digits) is less than 4."
+        ],
+        [
+          "At the read position, the following statement is true: digit characters in that numeric lexeme (including exponent digits) is at least 4.",
+          "At the read position, the following statement is true: digit characters in that numeric lexeme (including exponent digits) is less than 4."
+        ]
+      ],
+      "olens": [
+        [
+          "- digit characters in that numeric lexeme (including exponent digits) is at least 4",
+          "- digit characters in that numeric lexeme (including exponent digits) is less than 4"
+        ],
+        [
+          "- At the read position: digit characters in that numeric lexeme (including exponent digits) is at least 4.",
+          "- At the read position: digit characters in that numeric lexeme (including exponent digits) is less than 4."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "absent": 84,
+        "present": 84
+      },
+      "values": [
+        "present",
+        "absent"
+      ]
+    },
+    "number_magnitude_ge_10": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is at least 10.",
+          "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is less than 10."
+        ],
+        [
+          "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is at least 10.",
+          "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is less than 10."
+        ]
+      ],
+      "olens": [
+        [
+          "- absolute value of a numeric lexeme ending at the current character is at least 10",
+          "- absolute value of a numeric lexeme ending at the current character is less than 10"
+        ],
+        [
+          "- At the read position: absolute value of a numeric lexeme ending at the current character is at least 10.",
+          "- At the read position: absolute value of a numeric lexeme ending at the current character is less than 10."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "absent": 84,
+        "present": 84
+      },
+      "values": [
+        "present",
+        "absent"
+      ]
+    },
+    "number_magnitude_ge_100": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is at least 100.",
+          "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is less than 100."
+        ],
+        [
+          "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is at least 100.",
+          "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is less than 100."
+        ]
+      ],
+      "olens": [
+        [
+          "- absolute value of a numeric lexeme ending at the current character is at least 100",
+          "- absolute value of a numeric lexeme ending at the current character is less than 100"
+        ],
+        [
+          "- At the read position: absolute value of a numeric lexeme ending at the current character is at least 100.",
+          "- At the read position: absolute value of a numeric lexeme ending at the current character is less than 100."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "absent": 84,
+        "present": 84
+      },
+      "values": [
+        "present",
+        "absent"
+      ]
+    },
+    "number_magnitude_ge_1000": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is at least 1000.",
+          "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is less than 1000."
+        ],
+        [
+          "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is at least 1000.",
+          "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is less than 1000."
+        ]
+      ],
+      "olens": [
+        [
+          "- absolute value of a numeric lexeme ending at the current character is at least 1000",
+          "- absolute value of a numeric lexeme ending at the current character is less than 1000"
+        ],
+        [
+          "- At the read position: absolute value of a numeric lexeme ending at the current character is at least 1000.",
+          "- At the read position: absolute value of a numeric lexeme ending at the current character is less than 1000."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "absent": 84,
+        "present": 84
+      },
+      "values": [
+        "present",
+        "absent"
+      ]
+    },
+    "word_allcaps": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current text prefix satisfies this statement: the current word has at least two letters and is uppercase.",
+          "The current text prefix satisfies this statement: it is not the case that the current word has at least two letters and is uppercase."
+        ],
+        [
+          "At the read position, the following statement is true: the current word has at least two letters and is uppercase.",
+          "At the read position, the following statement is true: it is not the case that the current word has at least two letters and is uppercase."
+        ]
+      ],
+      "olens": [
+        [
+          "- the current word has at least two letters and is uppercase",
+          "- it is not the case that the current word has at least two letters and is uppercase"
+        ],
+        [
+          "- At the read position: the current word has at least two letters and is uppercase.",
+          "- At the read position: it is not the case that the current word has at least two letters and is uppercase."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "absent": 84,
+        "present": 84
+      },
+      "values": [
+        "present",
+        "absent"
+      ]
+    },
+    "wordlist_auxiliary": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current text prefix satisfies this statement: the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would.",
+          "The current text prefix satisfies this statement: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would."
+        ],
+        [
+          "At the read position, the following statement is true: the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would.",
+          "At the read position, the following statement is true: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would."
+        ]
+      ],
+      "olens": [
+        [
+          "- the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would",
+          "- it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would"
+        ],
+        [
+          "- At the read position: the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would.",
+          "- At the read position: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "absent": 84,
+        "present": 84
+      },
+      "values": [
+        "present",
+        "absent"
+      ]
+    },
+    "wordlist_preposition": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "true",
+          "false"
+        ],
+        [
+          "yes",
+          "no"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current text prefix satisfies this statement: the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without.",
+          "The current text prefix satisfies this statement: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without."
+        ],
+        [
+          "At the read position, the following statement is true: the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without.",
+          "At the read position, the following statement is true: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without."
+        ]
+      ],
+      "olens": [
+        [
+          "- the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without",
+          "- it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without"
+        ],
+        [
+          "- At the read position: the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without.",
+          "- At the read position: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "absent": 84,
+        "present": 84
+      },
+      "values": [
+        "present",
+        "absent"
+      ]
+    }
+  },
+  "schema": "blindspot-w1-v2",
+  "seed": 20261023,
+  "selection_receipt": {
+    "section79_features": [
+      "wordlist_preposition",
+      "word_allcaps",
+      "current_colon",
+      "number_magnitude_ge_1000",
+      "number_digits_ge_3",
+      "current_number",
+      "number_digits_ge_4",
+      "number_magnitude_ge_10",
+      "number_magnitude_ge_100",
+      "wordlist_auxiliary"
+    ],
+    "section81_features": [],
+    "selection_file": "results/g_agreement/blindspot/s79/final_n5w4505k68u2hm/TOP10.json",
+    "selection_sha256": "2843e1f4499b627b248a111bbd03662b4172bc4e5a30c3d3c8bd83b7f5137e8d",
+    "source_commit": "d07ba60c91b8e2b732288047661e1513bba5ff32"
+  },
+  "source_files": {
+    "common/__init__.py": "506e53bcb947c88a0e369f01760badc113ea1c7b4b378b6040ac1c2be0c70847",
+    "common/stats.py": "5b8bd4d3a0e23bf7a5487c2dbb2edbafa96d434f9cabd27d25940a42ab37ef2d",
+    "external/mats-nla-workspace/src/mats/__init__.py": "ff25a6253eabef5942d23dffff23fd5f4b86980617a791a138e053aa28e32c70",
+    "external/mats-nla-workspace/src/mats/capture.py": "bc69d7deee038326d28bd345d4bd76da43a615abd5fbe970a2ec245e72b8b179",
+    "external/mats-nla-workspace/src/mats/jspace.py": "0f1801ffba59bcc61c04e3c333b9b9ef66f939e5dd0159aba364a69226a0717d",
+    "external/mats-nla-workspace/src/mats/metrics.py": "17ff3b1467186a8c4e24e76ed52d2263b0201e651e2010d4b99bd47c25cda473",
+    "external/mats-nla-workspace/src/mats/probes.py": "955a7b516d97bee88b149bee1b8a3d9cdffaa7ef1b407cdef5cc4159f4677ae7",
+    "external/mats-nla-workspace/src/mats/readers/__init__.py": "addd3f183c8eada1b42628e89b8e024f50d3b30e92c459432f48eb12976f5572",
+    "external/mats-nla-workspace/src/mats/readers/jlens.py": "01b4717d31be411067a764396f8fe2b5acb1f13200661c3143a288bd31552e9d",
+    "external/mats-nla-workspace/src/mats/readers/nla.py": "e8ed65f4b97affbdb5a57cec87e4cf38472f20102974a105a3affb1ac27ab1d0",
+    "external/mats-nla-workspace/src/mats/readers/olens.py": "7866ac3aa66d96bee612e216a0cd45e0a76e1dd4e799f6aaa538c28addd0e86e",
+    "external/mats-nla-workspace/src/mats/textnla.py": "a2d3b5ae6ec2de49fb38bf92d1bf290f6a457eddecddf81482dc6b73ca432008",
+    "projects/g_agreement/BRIEF_BLINDSPOT.md": "fc9d36ac06c972fc5fd8bf6275965016402f7df5333ee0e6289113522b0f9567",
+    "projects/g_agreement/blindspot/__init__.py": "c05787f4d7bd7af75682ccf57545f58627dbebc8ef0366baeb394ecf4c3c2855",
+    "projects/g_agreement/blindspot/analysis.py": "45a06d29445cc678fb4e71edce4944b7e481357662a1d59f8c8203a3c4e4d75c",
+    "projects/g_agreement/blindspot/assemble.py": "e0a51c48c46810f8ac0197082498f295f266d0bc52fa7c47c79e4e4c81801d05",
+    "projects/g_agreement/blindspot/early_export.py": "17d8d3857ea9efe85c76b2ef3bd6beff58ddf0a338b305dc44ab1dca30415b4f",
+    "projects/g_agreement/blindspot/execution.py": "935325507699a0b380d0789cc6a0128728f28c9630ecbdac1e8319befe925cfd",
+    "projects/g_agreement/blindspot/items.py": "f99efd860106cabca8f5962b0a18b37cef12e2c21114a6eb30f6b6af6855c9b9",
+    "projects/g_agreement/blindspot/pod_run.sh": "e1d01a0202d2b602354b93f8308aec389fab0ee3a07489f709e42d562ae67268",
+    "projects/g_agreement/blindspot/protocol.py": "b2e7fa0bdeb9c7695a80663874f88cb71132ff4336b2d3d0a3e14b90bc66308d",
+    "projects/g_agreement/blindspot/recall.py": "c97c663a5d2a920fe4033cbef1987b781256075256538d79d6a7efa1c9b2896d",
+    "projects/g_agreement/blindspot/run.py": "41b2217b747631be1f36e631e13b18c08e8ca1c9d8a5e999bbe03893bbee86ba",
+    "projects/g_agreement/blindspot/stage.py": "cb3bf69229f8dfe42e176ff99c89f55df26ff3d09c5bd88c22326e4462cff184",
+    "projects/g_agreement/blindspot/w1_templates.py": "c0ec4dc076ba316354280ae873194455823dd91008e50c1dc0ca69682438f144",
+    "projects/g_agreement/blindspot/w1b/REGISTRY_ORIGIN.json": "5e93659f635fca8438b25eedb454049a59f3df16edc137463f6434ec2e9426c9",
+    "projects/g_agreement/blindspot/w1b/__init__.py": "2dd1ef3ebd1587a6c8c4c4541729f9d448e7271e6a156c1da72ecfea3e28d3a1",
+    "projects/g_agreement/blindspot/w1b/registry_features.py": "23bccfb9cb3999d3719ce61f3dc45f9c768a065e862f7a68866cac13c1c8a4cb",
+    "projects/g_agreement/blindspot/w1b_items.py": "3a31c8c62b7d8fa69346d8c14571e599aa59445acd9ca534a81faca2d3270401",
+    "projects/g_agreement/blindspot/w5_complete.py": "0293f439b5dc75160134beab090cde0f1806552f1470468375e8764c0cf04cc0",
+    "projects/g_agreement/manifest/assets.json": "17338edea7c12181f45b0dc1dc5fcd4673d6cf8e7c4323e8d657736236f96f91"
+  },
+  "split_unit": "template family; six dev and six test families",
+  "sweep_sites": [
+    20,
+    28,
+    36,
+    44,
+    52,
+    60
+  ],
+  "tokenizer": "<mats-minis>/cache/g_assets/Qwen__Qwen3.6-27B",
+  "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+}

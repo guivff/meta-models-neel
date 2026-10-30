@@ -1,0 +1,19 @@
+{
+  "schema": "i2-e74-harmless-macos-caffeinate-topology-check-v1",
+  "track": "G",
+  "experiment": "E74",
+  "observed_at": "2026-10-27T20:13:57.878786+00:00",
+  "purpose": "Verify current G installer assumption using a harmless local sleeping Python utility, no G worker or provider",
+  "launch_argv_sha256": "1678ce359802446d58a834de5cf2ec10d8351e9cbde92983c4ba08e6427c24f4",
+  "observed_argv_sha256": "f5b43ce4a4a0d90895351e34d3af4353170b005e089a5b8e0f94405d0ff95649",
+  "popen_pid_retains_caffeinate_argv": false,
+  "observed_command_executable_basename": "Python",
+  "observed_tail_matches_python_utility": false,
+  "provider_calls": 0,
+  "gpu_used": false,
+  "frozen_driver_modified": false,
+  "owned_child_reaped": true,
+  "frozen_guard_source_sha256": "98b48903a445ed9be847b1cb0e0de9a844ade9ca45eed9832d4087a9c7d1a77e",
+  "conclusion": "Frozen _install stores caffeinate launch argv at Popen PID; observe requires exact equality. This harmless local test observes Python at that PID instead. It is evidence of a fail-closed deployment incompatibility, not a G production-run failure.",
+  "required_before_live_enablement": "Separately implement and review actual utility/caffeinate identity and parent topology; preserve frozen baseline and source binds."
+}

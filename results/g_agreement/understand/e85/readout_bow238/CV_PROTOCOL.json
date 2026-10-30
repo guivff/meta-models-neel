@@ -1,0 +1,22 @@
+{
+  "authority": "\u00a7238 clarification4 item2 /e97f837b0",
+  "bootstrap": "2000 resamples of100 original item quartets with replacement, all4variants together, seed20261030;95%percentile interval from fixed OOF predictions; no refitting",
+  "command": "python results/g_agreement/understand/e85/readout_bow238/cv238.py --spec results/g_agreement/understand/e85/readout_bow238/cache/CV_INPUTS.json --out results/g_agreement/understand/e85/readout_bow238/cache/cv_analysis_once",
+  "evaluation": "pooled400 out-of-fold positive-class probabilities; each item predicted once by model never trained on any of its quartet",
+  "experiment": "E85_READOUT_BOW238_CV",
+  "fit": "CountVectorizer word unigrams, lowercase, min_df1, no stop words, token_pattern (?u)\\b\\w\\w+\\b; shared train-fold-only vocabulary; separate logistic L2 C1 liblinear max_iter2000 tol1e-4 random_state20261030 classifiers for addressed1 and genre1",
+  "fold_assignment": "sorted100quartet IDs, numpy default_rng(20261030).permutation, five consecutive chunks of20 groups; every fold exactly20 of each genre\u00d7addressed cell (80 readouts)",
+  "groups": "original matched_set quartet: four genre\u00d7addressed cells held in same fold; prevents passage-twin leakage",
+  "label": "EXPLORATORY",
+  "missing": "reject incomplete/duplicate/wrong-source cohort before once lock; keep existing empty strings",
+  "preserved": "olddev-fit code/protocol/guard unchanged as historical blocked design, never executed; this is separately registered CV command and distinct once lock",
+  "source": "original400 TEST Oracle native readouts, no DEV readouts or new generation",
+  "source_labels_cpu_only": true,
+  "thresholds": {
+    "addressed_auroc_gte_0.80": "CARRIED_IN_WORDS",
+    "addressed_auroc_lte_0.60": "HIDDEN_STATE_TO_OUTPUT_BOTTLENECK",
+    "otherwise": "INTERMEDIATE"
+  },
+  "unit_convention_recorded_before_fit_utc": "2026-10-29T23:54:25.580325+00:00",
+  "words": "top20positive and top20negative mean coefficients across five folds; word absent in a fold contributes0; no extra full-corpus fit"
+}

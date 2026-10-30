@@ -1,0 +1,567 @@
+{
+ "written": "2026-10-12T09:45:54.760583+00:00",
+ "inputs": {
+  "michael": "nla-consistency/data/arithmetic.jsonl",
+  "items": "projects/g_agreement/banks/w/items_w.json",
+  "states_dir": "cache/g_agreement/w/states_L42",
+  "s1": "cache/g_agreement/w/s1_target.jsonl",
+  "s3": "cache/g_agreement/w/s3_lo.jsonl"
+ },
+ "michael": {
+  "n_prompts": 600,
+  "n_readouts": 1200,
+  "probe_exact_a": {
+   "exact": 0.8266666666666667,
+   "exact_lo": 0.795,
+   "exact_hi": 0.8566666666666667,
+   "exact_wilson": [
+    0.7943243738490342,
+    0.8548524963765349
+   ],
+   "n_items": 600
+  },
+  "nla_exact_a": {
+   "exact": 0.04583333333333333,
+   "exact_lo": 0.03164583333333334,
+   "exact_hi": 0.06166666666666667,
+   "n_quoting": 1200,
+   "n_readouts": 1200,
+   "exact_all_readouts": 0.04583333333333333
+  },
+  "nla_pearson_a": {
+   "r": 0.5737180350667203,
+   "lo": 0.5235863092353594,
+   "hi": 0.6219377143205861
+  },
+  "nla_spearman_a": {
+   "rho": 0.5891088013796826,
+   "lo": 0.5308957930174006,
+   "hi": 0.6454410914109114
+  },
+  "probe_exact_b": {
+   "exact": 0.9316666666666666,
+   "exact_lo": 0.91,
+   "exact_hi": 0.95,
+   "exact_wilson": [
+    0.908608681308734,
+    0.9492321829179109
+   ],
+   "n_items": 600
+  },
+  "nla_exact_b": {
+   "exact": 0.37666666666666665,
+   "exact_lo": 0.34,
+   "exact_hi": 0.4150208333333333,
+   "n_quoting": 1200,
+   "n_readouts": 1200,
+   "exact_all_readouts": 0.37666666666666665
+  },
+  "nla_pearson_b": {
+   "r": 0.8849472275482797,
+   "lo": 0.8643167327181573,
+   "hi": 0.9030465471819024
+  },
+  "nla_spearman_b": {
+   "rho": 0.9247252102827486,
+   "lo": 0.9063479631908481,
+   "hi": 0.9396927752335313
+  },
+  "probe_digit_a_tens": {
+   "acc": 0.94,
+   "majority": 0.115
+  },
+  "probe_digit_a_units": {
+   "acc": 0.88,
+   "majority": 0.13833333333333334
+  },
+  "probe_digit_b_tens": {
+   "acc": 0.945,
+   "majority": 0.21666666666666667
+  },
+  "probe_digit_b_units": {
+   "acc": 0.9783333333333334,
+   "majority": 0.12333333333333334
+  },
+  "nla_quote_rate": 1.0,
+  "model_next_starts_answer": 0.0,
+  "source": "nla-consistency/data/arithmetic.jsonl (Michael Kenney); CIs: item bootstrap computed here (he states none)"
+ },
+ "ours_probe": {
+  "n_prompts": 100,
+  "folds": 5,
+  "fold_shuffle_seed": 1,
+  "probe_exact_a": {
+   "exact": 0.24,
+   "exact_lo": 0.16,
+   "exact_hi": 0.32,
+   "exact_wilson": [
+    0.16691211265459965,
+    0.3323251872329213
+   ],
+   "n_items": 100
+  },
+  "probe_spearman_a": {
+   "rho": 0.9275719861193273,
+   "lo": 0.8762534558745014,
+   "hi": 0.9571486647453132
+  },
+  "probe_pearson_a": {
+   "r": 0.9398060913058188,
+   "lo": 0.9039903326288602,
+   "hi": 0.9655471353240789
+  },
+  "probe_predictions_a": [
+   38,
+   11,
+   70,
+   63,
+   81,
+   14,
+   19,
+   8,
+   38,
+   62,
+   49,
+   23,
+   40,
+   42,
+   97,
+   62,
+   70,
+   98,
+   83,
+   30,
+   38,
+   68,
+   88,
+   93,
+   46,
+   43,
+   77,
+   9,
+   64,
+   9,
+   37,
+   43,
+   93,
+   57,
+   93,
+   81,
+   97,
+   50,
+   93,
+   98,
+   70,
+   9,
+   4,
+   68,
+   70,
+   62,
+   35,
+   9,
+   9,
+   5,
+   61,
+   13,
+   19,
+   63,
+   79,
+   62,
+   66,
+   34,
+   70,
+   6,
+   70,
+   14,
+   38,
+   38,
+   30,
+   82,
+   81,
+   42,
+   66,
+   62,
+   43,
+   63,
+   97,
+   16,
+   14,
+   15,
+   71,
+   18,
+   14,
+   68,
+   40,
+   88,
+   12,
+   69,
+   70,
+   18,
+   93,
+   98,
+   96,
+   68,
+   66,
+   82,
+   89,
+   93,
+   73,
+   59,
+   64,
+   99,
+   23,
+   80
+  ],
+  "probe_exact_b": {
+   "exact": 0.48,
+   "exact_lo": 0.38,
+   "exact_hi": 0.57,
+   "exact_wilson": [
+    0.38464384320080547,
+    0.5768359490982345
+   ],
+   "n_items": 100
+  },
+  "probe_spearman_b": {
+   "rho": 0.9134947912928904,
+   "lo": 0.8614837093788735,
+   "hi": 0.9492440531434476
+  },
+  "probe_pearson_b": {
+   "r": 0.8909146395748773,
+   "lo": 0.8338163042005753,
+   "hi": 0.9373783123214032
+  },
+  "probe_predictions_b": [
+   33,
+   40,
+   26,
+   67,
+   6,
+   53,
+   15,
+   53,
+   36,
+   97,
+   6,
+   40,
+   3,
+   95,
+   46,
+   43,
+   47,
+   67,
+   27,
+   35,
+   33,
+   75,
+   57,
+   57,
+   6,
+   47,
+   43,
+   14,
+   23,
+   10,
+   33,
+   53,
+   76,
+   71,
+   47,
+   5,
+   73,
+   86,
+   76,
+   16,
+   40,
+   53,
+   3,
+   35,
+   13,
+   76,
+   20,
+   89,
+   8,
+   19,
+   14,
+   65,
+   3,
+   71,
+   21,
+   14,
+   14,
+   73,
+   23,
+   66,
+   57,
+   33,
+   13,
+   77,
+   23,
+   16,
+   1,
+   87,
+   5,
+   46,
+   26,
+   47,
+   73,
+   70,
+   3,
+   66,
+   11,
+   90,
+   10,
+   47,
+   23,
+   16,
+   13,
+   95,
+   14,
+   73,
+   27,
+   14,
+   31,
+   95,
+   13,
+   77,
+   46,
+   87,
+   41,
+   41,
+   11,
+   67,
+   8,
+   4
+  ],
+  "probe_digit_a_tens": {
+   "acc": 0.65,
+   "majority": 0.17
+  },
+  "probe_digit_a_units": {
+   "acc": 0.33,
+   "majority": 0.15
+  },
+  "probe_digit_b_tens": {
+   "acc": 0.63,
+   "majority": 0.17
+  },
+  "probe_digit_b_units": {
+   "acc": 0.68,
+   "majority": 0.18
+  },
+  "standardisation": "mean / std over all 100 states before the folds (as in thread12_pod.py probe())",
+  "learning_curve": [
+   {
+    "n_train_per_fold": 20,
+    "exact_a": 0.08,
+    "exact_a_lo": 0.04109296948581091,
+    "exact_a_hi": 0.14998266879403072,
+    "exact_b": 0.12,
+    "exact_b_lo": 0.06999337365267776,
+    "exact_b_hi": 0.19812268002908368
+   },
+   {
+    "n_train_per_fold": 40,
+    "exact_a": 0.15,
+    "exact_a_lo": 0.09305903191162297,
+    "exact_a_hi": 0.23283733332157835,
+    "exact_b": 0.25,
+    "exact_b_lo": 0.1754509400372426,
+    "exact_b_hi": 0.3430464637007583
+   },
+   {
+    "n_train_per_fold": 60,
+    "exact_a": 0.18,
+    "exact_a_lo": 0.11700131654251038,
+    "exact_a_hi": 0.26667536024213084,
+    "exact_b": 0.38,
+    "exact_b_lo": 0.2909744920013438,
+    "exact_b_hi": 0.47790426179289663
+   },
+   {
+    "n_train_per_fold": 80,
+    "exact_a": 0.24,
+    "exact_a_lo": 0.16691211265459965,
+    "exact_a_hi": 0.3323251872329213,
+    "exact_b": 0.48,
+    "exact_b_lo": 0.38464384320080547,
+    "exact_b_hi": 0.5768359490982345
+   }
+  ]
+ },
+ "ours_native_arith": {
+  "jlens": {
+   "n_items": 100,
+   "result_exact": 0.02,
+   "result_exact_lo": 0.0,
+   "result_exact_hi": 0.05,
+   "result_spearman": 0.49812372576447755,
+   "result_spearman_lo": 0.3461480649139919,
+   "result_spearman_hi": 0.6245217524650452,
+   "argmax_equals_a": 0.0,
+   "argmax_equals_b": 0.06,
+   "candidates": "result 0\u2013198 (candidates_all), not the operands"
+  },
+  "olens": {
+   "n_items": 100,
+   "result_exact": 0.02,
+   "result_exact_lo": 0.0,
+   "result_exact_hi": 0.05,
+   "result_spearman": 0.4416396818337985,
+   "result_spearman_lo": 0.24679718188812388,
+   "result_spearman_hi": 0.6206669667575295,
+   "argmax_equals_a": 0.0,
+   "argmax_equals_b": 0.02,
+   "candidates": "result 0\u2013198 (candidates_all), not the operands"
+  },
+  "skip_a": {
+   "n_items": 100,
+   "result_exact": 0.01,
+   "result_exact_lo": 0.0,
+   "result_exact_hi": 0.03024999999999977,
+   "result_spearman": -0.21529648111104185,
+   "result_spearman_lo": -0.397360258726569,
+   "result_spearman_hi": -0.025897374561803837,
+   "argmax_equals_a": 0.0,
+   "argmax_equals_b": 0.0,
+   "candidates": "result 0\u2013198 (candidates_all), not the operands"
+  }
+ },
+ "ours_recipe_ranks": {
+  "ranks": {
+   "a|mean": 18,
+   "a|lr": 19,
+   "a|rand": 18,
+   "b|mean": 18,
+   "b|lr": 19,
+   "b|rand": 18
+  },
+  "classes_present": {
+   "a_tens": 10,
+   "a_units": 10,
+   "b_tens": 10,
+   "b_units": 10
+  },
+  "n_states": 100,
+  "recipe": "nla-consistency/scripts/steer_pod.py capture(): class-mean and LBFGS softmax-probe subspaces per digit, orth() SVD rel tol 1e-4"
+ },
+ "comparison": [
+  {
+   "metric": "probe exact-match a",
+   "michael": 0.8266666666666667,
+   "michael_lo": 0.795,
+   "michael_hi": 0.8566666666666667,
+   "ours": 0.24,
+   "ours_lo": 0.16,
+   "ours_hi": 0.32,
+   "ours_within_michael_ci": false,
+   "cis_overlap": false,
+   "note": "5-fold softmax digit probes, both digits right; his n = 600, ours n = 100"
+  },
+  {
+   "metric": "probe exact-match b",
+   "michael": 0.9316666666666666,
+   "michael_lo": 0.91,
+   "michael_hi": 0.95,
+   "ours": 0.48,
+   "ours_lo": 0.38,
+   "ours_hi": 0.57,
+   "ours_within_michael_ci": false,
+   "cis_overlap": false,
+   "note": "5-fold softmax digit probes, both digits right; his n = 600, ours n = 100"
+  },
+  {
+   "metric": "NLA exact-match a (free text)",
+   "michael": 0.04583333333333333,
+   "michael_lo": 0.03164583333333334,
+   "michael_hi": 0.06166666666666667,
+   "ours": null,
+   "ours_lo": null,
+   "ours_hi": null,
+   "ours_within_michael_ci": null,
+   "cis_overlap": null,
+   "note": "no counterpart: S4 did not sample free text on arith states; S3 NLA native vector ranges over the result (see nla_native)"
+  },
+  {
+   "metric": "NLA r (Pearson) a",
+   "michael": 0.5737180350667203,
+   "michael_lo": 0.5235863092353594,
+   "michael_hi": 0.6219377143205861,
+   "ours": null,
+   "ours_lo": null,
+   "ours_hi": null,
+   "ours_within_michael_ci": null,
+   "cis_overlap": null,
+   "note": "his 'r' is Pearson over quoting readouts"
+  },
+  {
+   "metric": "NLA Spearman a",
+   "michael": 0.5891088013796826,
+   "michael_lo": 0.5308957930174006,
+   "michael_hi": 0.6454410914109114,
+   "ours": null,
+   "ours_lo": null,
+   "ours_hi": null,
+   "ours_within_michael_ci": null,
+   "cis_overlap": null,
+   "note": ""
+  },
+  {
+   "metric": "NLA exact-match b (free text)",
+   "michael": 0.37666666666666665,
+   "michael_lo": 0.34,
+   "michael_hi": 0.4150208333333333,
+   "ours": null,
+   "ours_lo": null,
+   "ours_hi": null,
+   "ours_within_michael_ci": null,
+   "cis_overlap": null,
+   "note": "no counterpart: S4 did not sample free text on arith states; S3 NLA native vector ranges over the result (see nla_native)"
+  },
+  {
+   "metric": "NLA r (Pearson) b",
+   "michael": 0.8849472275482797,
+   "michael_lo": 0.8643167327181573,
+   "michael_hi": 0.9030465471819024,
+   "ours": null,
+   "ours_lo": null,
+   "ours_hi": null,
+   "ours_within_michael_ci": null,
+   "cis_overlap": null,
+   "note": "his 'r' is Pearson over quoting readouts"
+  },
+  {
+   "metric": "NLA Spearman b",
+   "michael": 0.9247252102827486,
+   "michael_lo": 0.9063479631908481,
+   "michael_hi": 0.9396927752335313,
+   "ours": null,
+   "ours_lo": null,
+   "ours_hi": null,
+   "ours_within_michael_ci": null,
+   "cis_overlap": null,
+   "note": ""
+  }
+ ],
+ "notes": [
+  "model greedy next token answers the arith prompt in 17/100 (plain format; Michael: 0.00 of 600).",
+  "NLA native scores on the S1 arith states absent from S3 (phase B scored counts only unless extended): no NLA row for arith.",
+  "Free-text NLA readouts of arith states were not sampled in S4 (counts and error states only), so Michael's NLA operand exact-match and r have no counterpart; the native vector reads the result, not a or b.",
+  "Same base model (Qwen/Qwen3.6-27B), same NLA (ceselder/qwen3.6-27b-nla-rl, av_rl_adapters/iter_000400), same layer 42, plain prompt format and read position '=' as Michael; differences: our 100 triples (disjoint from his 600), our capture pipeline, n = 100 vs 600 (wider CIs), probe standardisation on 100 states."
+ ],
+ "michael_stated": {
+  "probe_exact_a": [
+   0.83,
+   0.93
+  ],
+  "probe_exact_b": [
+   0.83,
+   0.93
+  ],
+  "nla_exact_a": 0.05,
+  "nla_exact_b": 0.38,
+  "nla_pearson_a": 0.57,
+  "nla_pearson_b": 0.88
+ }
+}

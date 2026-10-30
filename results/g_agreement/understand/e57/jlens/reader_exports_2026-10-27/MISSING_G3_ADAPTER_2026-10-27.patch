@@ -1,0 +1,292 @@
+From c010a6e2b0378a25258bcfd90b50f04a46436388 Mon Sep 17 00:00:00 2001
+From: Guiv Farmanfarmaian <guivff@gmail.com>
+Date: Tue, 27 Oct 2026 14:14:43 +0100
+Subject: [PATCH] analysis402: honor missing-G3 clarification without changing
+ sealed workers
+
+---
+ .../understand/analysis402/COMMANDS.json      |  2 +-
+ .../understand/analysis402/HANDOFF.md         |  2 +
+ .../analysis402/MISSING_G3_2026-10-27.md      |  7 ++
+ .../MISSING_G3_TEST_REPORT_2026-10-27.json    | 11 +++
+ .../understand/analysis402/SOURCE_SEAL.json   |  9 ++-
+ .../understand/analysis402/analyze.py         |  5 +-
+ .../analysis402/rules56_missing_g3.py         | 31 +++++++++
+ .../analysis402/rules57_missing_g3.py         | 46 +++++++++++++
+ .../understand/analysis402/test_missing_g3.py | 67 +++++++++++++++++++
+ 9 files changed, 174 insertions(+), 6 deletions(-)
+ create mode 100644 results/g_agreement/understand/analysis402/MISSING_G3_2026-10-27.md
+ create mode 100644 results/g_agreement/understand/analysis402/MISSING_G3_TEST_REPORT_2026-10-27.json
+ create mode 100644 results/g_agreement/understand/analysis402/rules56_missing_g3.py
+ create mode 100644 results/g_agreement/understand/analysis402/rules57_missing_g3.py
+ create mode 100644 results/g_agreement/understand/analysis402/test_missing_g3.py
+
+diff --git a/results/g_agreement/understand/analysis402/COMMANDS.json b/results/g_agreement/understand/analysis402/COMMANDS.json
+index d5328d21..41fc189f 100644
+--- a/results/g_agreement/understand/analysis402/COMMANDS.json
++++ b/results/g_agreement/understand/analysis402/COMMANDS.json
+@@ -129,7 +129,7 @@
+       "prerequisites": "verified full shard set + retained pilots; original CPU probes, J inputs and sealed blind judgments for analysis"
+     }
+   },
+-  "source_seal_sha256": "f50577bfaa06f82b9ba0c401ea82efa4e73c8431d5fc91c31f1a5d4463d912fa",
++  "source_seal_sha256": "bde00c9f6af5d257a316923f5f8fc6c7b556334671c4744a54304c441fbdb4d0",
+   "specs": {
+     "E56_SPEC.json": "831a93e0535f9a7317e10ed36059ce26b57296c4b91ffb1a8c40652ea0762f0c",
+     "E57_SPEC.json": "bafe630b5555ca027f3f0a4b0ff9f0a4d3fd2bc67cce5ff490a065f8b1f1994a",
+diff --git a/results/g_agreement/understand/analysis402/HANDOFF.md b/results/g_agreement/understand/analysis402/HANDOFF.md
+index e32724d2..e298a223 100644
+--- a/results/g_agreement/understand/analysis402/HANDOFF.md
++++ b/results/g_agreement/understand/analysis402/HANDOFF.md
+@@ -8,3 +8,5 @@ Oracle-only E62/E62P uses the unchanged numerical functions with only the reader
+ 11 CPU tests PASS: full E62/E57 shard unions, E56 mixed-layout union, missing/duplicate shard, missing pilot, cross-cohort/tamper rejection, Oracle numerical equivalence and once-only rejection. All4 sealed configs/dependencies validate. Tests use synthetic readouts only; no real outputs opened, no scientific analysis invoked, zeroGPU/API.
+ 
+ Integrator: populate `<cache>/g_agreement/understand/analysis402_verified/<experiment>/MANIFEST.json` from verified pulls using committed templates; run verify then blind, obtain sealed judgments under the frozen rubrics, then analyze once. E62 analysis needs both E62 and E62P judgments plus J inputs; E56/E57 need original separate J inputs. Existing output seals alone do not replace those registered prerequisites. Do not invoke legacy combined-layout commands.
++
++2026-10-27 W-lens — 09494e79 missing-G3 guard implemented in analysis402 only;14 synthetic tests PASS. E56 anomaly_state R1 NOT EVALUABLE/pass=false; E57 multi_token_entity R-A1 NOT EVALUABLE; both S retained. Original worker pins/once paths unchanged. Refreshed adapter seal/COMMANDS. Apply before analysis; details in MISSING_G3_2026-10-27.md.
+diff --git a/results/g_agreement/understand/analysis402/MISSING_G3_2026-10-27.md b/results/g_agreement/understand/analysis402/MISSING_G3_2026-10-27.md
+new file mode 100644
+index 00000000..9a91e9f6
+--- /dev/null
++++ b/results/g_agreement/understand/analysis402/MISSING_G3_2026-10-27.md
+@@ -0,0 +1,7 @@
++# Missing G3 clarification — 2026-10-27
++
++Authority: 09494e79, confirmed directly by Guiv. E56 anomaly_state R1 is NOT EVALUABLE with pass=false and is excluded from R1-passing rows for R2. E57 multi_token_entity R-A1 is NOT EVALUABLE. Both reader S values remain in the full rate tables; the E57 result explicitly states the no-single-token-readout limitation by construction. No zero substitution, altered values, gates or other measures.
++
++The adapter uses local copies of the original E56 gate/rules and E57 compute functions with only these missing-value branches. Original worker/analysis files, dependencies and running-pod source seals remain byte-identical. analysis402 source seal and COMMANDS source hash refreshed. Existing once-only output paths and claim guards unchanged.
++
++Synthetic validation:14 tests passed (11 existing adapter tests plus3 regressions); normal E56/E57 outputs exactly match the original functions, missing G3 never becomes zero, affected S values remain present, and unrelated rules remain unchanged. No real reader outcomes or scientific analysis claims accessed. Integrator should apply this commit before E56/E57 once-only analysis.
+diff --git a/results/g_agreement/understand/analysis402/MISSING_G3_TEST_REPORT_2026-10-27.json b/results/g_agreement/understand/analysis402/MISSING_G3_TEST_REPORT_2026-10-27.json
+new file mode 100644
+index 00000000..26278931
+--- /dev/null
++++ b/results/g_agreement/understand/analysis402/MISSING_G3_TEST_REPORT_2026-10-27.json
+@@ -0,0 +1,11 @@
++{
++  "authority": "09494e79",
++  "tests_passed": 14,
++  "command": "python -m pytest -q results/g_agreement/understand/analysis402/test_adapter.py results/g_agreement/understand/analysis402/test_missing_g3.py",
++  "synthetic_only": true,
++  "reader_outcomes_accessed": false,
++  "source_seal_sha256": "bde00c9f6af5d257a316923f5f8fc6c7b556334671c4744a54304c441fbdb4d0",
++  "commands_sha256": "c8cf8a8c6ebeaa3c46f2bd537f427c29d302dfc0263d0554f7fac938dfd0e7f0",
++  "pins_verified": true,
++  "original_worker_sources_unchanged": true
++}
+diff --git a/results/g_agreement/understand/analysis402/SOURCE_SEAL.json b/results/g_agreement/understand/analysis402/SOURCE_SEAL.json
+index 092db264..ba2da31f 100644
+--- a/results/g_agreement/understand/analysis402/SOURCE_SEAL.json
++++ b/results/g_agreement/understand/analysis402/SOURCE_SEAL.json
+@@ -1,5 +1,5 @@
+ {
+-  "authority": "402be5f0; CPU custody adapter only",
++  "authority": "402be5f0 CPU custody adapter; 09494e79 missing G3 handling",
+   "files": {
+     "DEPENDENCIES.json": "cc2b4cfbc0b1757663760161a9b023f768ab759c0d8e17b93e0881ed3278e7c5",
+     "E56_MANIFEST_TEMPLATE.json": "3ba5e54437510653b10f97e4a332bbc5fb76eaf964a00bae50c7c84ce15672e5",
+@@ -10,11 +10,14 @@
+     "E62P_SPEC.json": "3b54a32f14ecd7ffaf795f90707c8ec4e57908ac6c8575638fa8bc15ced1255e",
+     "E62_MANIFEST_TEMPLATE.json": "8074dc971b9ef74a2aa8e2bb96bede9e9ec908a564259411dd601f2df920775e",
+     "E62_SPEC.json": "04483e8eb4699c39b1dbb76b92281e89c10db030f3a9730268f77f78755e7524",
+-    "analyze.py": "96506e80b82a8845c1cfaa9dcf8584c4f76e51f69ce1a836329cf9b4aa4bcef2",
++    "analyze.py": "80f0e033fcc1a36883ec8cda2f100411b578923f5c3d34fb6893a59191c9806c",
+     "blind.py": "38ca21d83b659e9b403cad2e3132e9bef04f80e6344e6fce5d7b0e226ebcf9c4",
+     "custody.py": "d10253d1dfba787f9e465021fa5b4ed5a0238b5fed3a43d4be451302a5155758",
+     "data.py": "0aeb7b9c82e537592df88902b31657019873e776e599cd34f925bf45f834e393",
+     "oracle_rules.py": "7f519e986bae581576a07e725d6b1eda347a72e47b4c02675d7f1d6128a8ee8d",
+-    "test_adapter.py": "ee4ab750f66c7041d173e7e1fca0907d7f4d57a83328bdd6730c2e0d08c3be5e"
++    "rules56_missing_g3.py": "59a78bdb2bd2690a6437852f4296245e3c31d8de6c54b451261a5dc11743f961",
++    "rules57_missing_g3.py": "f1903b992e425a951dcf4b92f0d1a30e97c7f4b05cba89c99308c62c8385c67a",
++    "test_adapter.py": "ee4ab750f66c7041d173e7e1fca0907d7f4d57a83328bdd6730c2e0d08c3be5e",
++    "test_missing_g3.py": "931b16aa304987b6a51807f29ac214d0fb60418147a4521f5ae39490b0db3174"
+   }
+ }
+diff --git a/results/g_agreement/understand/analysis402/analyze.py b/results/g_agreement/understand/analysis402/analyze.py
+index 9a80c82e..14489e9f 100644
+--- a/results/g_agreement/understand/analysis402/analyze.py
++++ b/results/g_agreement/understand/analysis402/analyze.py
+@@ -15,7 +15,8 @@ def ladder_j(spec,data):
+  root=Path(spec['j_input']);s=verify(root,'J_SEAL.json');require(s['capture_seal_sha256']==data['capture_seals'][spec['experiment']] and s['input_seal_sha256']==spec['input_seal_sha256'],'J capture/input');rows=read(root/'J_ROWS.json');require(set(rows)==set(probe_aucs(data)),'J/probe grid');return rows
+ 
+ def compute56(spec,data,jj,jrows):
+- from analysis56 import rules,native_rates
++ from analysis56 import native_rates
++ from rules56_missing_g3 import rules
+  sys.path.insert(0,str(U/'e56/r4_clarification'));from diagnostics import compute
+  amendment=read(U/'e56/r4_clarification/ANALYSIS_SPEC.json');diag=compute(amendment['diagnostics']);probe=probe_aucs(data);rates=native_rates(data,jj);result=rules(probe,jrows,rates)
+  for reader,v in result['readers'].items():
+@@ -45,7 +46,7 @@ def main():
+   extra={}
+   if e=='E56':result,extra=compute56(spec,data,jj,jrows)
+   elif e=='E57':
+-   from analysis57 import compute
++   from rules57_missing_g3 import compute
+    require(set(data['plan']['rows'])==set(jrows),'complete E57 J rows');result,counts=compute(data,jj,jrows);extra['COUNTS.json']=counts
+   elif e=='E62':result,extra=compute62(spec,data,jj,jrows,pdata,pjj)
+   else:result={'probe':probe_aucs(data),'rates':{'|'.join(k):v for k,v in metrics(data['private'],data['native'],jj).items()},'NLA':'NOT RUN','purpose':'placebo cells; R-L5 evaluated in E62'}
+diff --git a/results/g_agreement/understand/analysis402/rules56_missing_g3.py b/results/g_agreement/understand/analysis402/rules56_missing_g3.py
+new file mode 100644
+index 00000000..8fd13845c
+--- /dev/null
++++ b/results/g_agreement/understand/analysis402/rules56_missing_g3.py
+@@ -0,0 +1,31 @@
++"""09494e79: adapter copy of sealed E56 rules; only null G3 gate handling changes."""
++from analysis56 import IMPLICIT,TWINS,CONTROLS,require,reported
++
++def r1_gate(probes,j_rows):
++    out={}
++    for row in IMPLICIT:
++        require(row in probes and row in j_rows,'missing separate J input or probe')
++        p=probes[row];j=j_rows[row]['G3_AUROC'];require(0<=p<=1,'invalid probe metric')
++        if j is None:
++            out[row]={'probe':p,'J_G3':None,'pass':False,'status':'NOT EVALUABLE','reason':'missing frozen G3 (09494e79)'}
++            continue
++        require(0<=j<=1,'invalid gate metric')
++        out[row]={'probe':p,'J_G3':j,'pass':p>=.90 and j<=.60}
++    return out
++
++def rules(probes,jrows,rates):
++    r1=r1_gate(probes,jrows);eligible=[r for r in IMPLICIT if r1[r]['pass']]
++    controls={r:sum(rates[r,c,'text']['S']>=.30 for c in CONTROLS)>=2 for r in ('oracle','nla')}
++    fact=any(reported(rates[r,'fact_recall','text']) for r in ('oracle','nla'))
++    out={'gates':{'positive_controls':controls,'fact_recall_shared':fact},'R1':r1,'readers':{}}
++    for r in ('oracle','nla'):
++        n=sum(reported(rates[r,row,'text']) for row in eligible)
++        r2='NOT EVALUABLE' if not controls[r] or not fact or not eligible else ('MET' if n>=2 else 'NOT MET')
++        diffs={b:rates[r,b,'text']['S']-rates[r,a,'text']['S'] for a,b in TWINS}
++        r3='NOT EVALUABLE' if not controls[r] else ('MET' if sum(round(v,12)>=.30 for v in diffs.values())>=3 else 'NOT MET')
++        inj={row:{'J':rates[r,row,'J']['S'],'nonJ':rates[r,row,'nonJ']['S']} for rr,row,arm in rates if rr==r and arm=='J'}
++        for row,v in inj.items():v.update(evaluable=v['J']>=.10,pass_rule=v['J']>=.10 and v['nonJ']<=.25*v['J'])
++        r4='NOT EVALUABLE' if not controls[r] or sum(v['evaluable'] for v in inj.values())<4 else ('MET' if sum(v['pass_rule'] for v in inj.values())>=4 else 'NOT MET')
++        out['readers'][r]={'R2':r2,'R2_reporting_rows':n,'R3':r3,'asked_minus_implicit':diffs,'R4':r4,'injection_rows':inj}
++    out['R2_falsifier']='NOT EVALUABLE' if not fact or not all(controls.values()) or not eligible else all(rates[r,row,'text']['S']<=.10 for r in controls for row in eligible)
++    return out
+diff --git a/results/g_agreement/understand/analysis402/rules57_missing_g3.py b/results/g_agreement/understand/analysis402/rules57_missing_g3.py
+new file mode 100644
+index 00000000..fbd8be91
+--- /dev/null
++++ b/results/g_agreement/understand/analysis402/rules57_missing_g3.py
+@@ -0,0 +1,46 @@
++"""09494e79: adapter copy of sealed E57 compute; preserve S when G3 is missing."""
++from analysis57 import *
++
++def compute(data,jj,jrows):
++    private=data['private'];plan=data['plan'];probe=probe_aucs(data);rates={};native=data['native'];groups={}
++    for x in native:groups.setdefault((x['reader'],x['unit_id']),[]).append(x)
++    for reader in ('oracle','nla'):
++        for row in plan['rows']:
++            if not plan['rows'][row]['probe_applicable']:continue
++            matrix=[[signed_value(jj[x['id']],private[k]['label']) for x in sorted(groups[reader,k],key=lambda x:x['repeat'])] for k in plan['native_ids'][row]]
++            rates[reader,row]=rate(matrix)
++    eligible=[r for r in GROUP_B if probe[r]>=.90]
++    out={'probe_gate':{r:probe[r]>=.90 for r in GROUP_B},'rates':{'|'.join(k):v for k,v in rates.items()},'J_rows':jrows,'readers':{},'R_B':{}}
++    j_non=sum(jrows[r]['J_label'] in ('OUT-J','DIFFUSE') for r in eligible);j_in=sum(jrows[r]['J_label']=='IN-J' for r in eligible)
++    reports={reader:sum(reported(rates[reader,r]) for r in eligible) for reader in ('oracle','nla')}
++    out['R_B']={'eligible':eligible,'out_or_diffuse':j_non,'IN_J':j_in,'reporting_rows':reports,'verdict':'MET' if j_non>=5 and all(v<=2 for v in reports.values()) else 'NOT MET','falsifier':j_in>=5 or any(v>=5 for v in reports.values())}
++    # Recompute counts from raw readouts; worker counts must agree exactly.
++    counted=[]
++    for (reader,k),xs in sorted(groups.items()):
++        if private[k]['feature'] in ('category_switch','capacity_list'):counted.append(count_item(xs,plan['count_metadata'][k]))
++    require(sorted(data['counts'],key=lambda x:(x['reader'],x['unit_id']))==counted,'count file differs from frozen raw-text calculation')
++    for reader in ('oracle','nla'):
++        r=rates[reader,'multi_token_entity'];g3=jrows['multi_token_entity']['G3_AUROC'];a1=None if g3 is None else reported(r) and g3<=.65
++        mention={};bykey={}
++        for arm in ('think','mention','ignore','none'):
++            row='focus_'+arm;values={}
++            for k in plan['native_ids'][row]:
++                x=private[k];key=(x['template_index'],x['filler_index'],x['variant']);texts=groups[reader,k]
++                hits=[named_terms(z['text'],{'birds':['bird','birds'],'citrus':['citrus']},'word_exact_casefold') for z in texts]
++                if arm=='none':values[key]=sum((int('birds' in h)+int('citrus' in h))/2 for h in hits)/1
++                else:
++                    concept='birds' if x['label']==1 else 'citrus';values[key]=sum(concept in h for h in hits)/1
++            bykey[arm]=values;mention[arm]=float(np.mean(list(values.values())))
++        keys=sorted(bykey['think']);require(all(set(v)==set(keys) for v in bykey.values()),'matched focus items')
++        ci=paired_ci([bykey['think'][k] for k in keys],[bykey['none'][k] for k in keys])
++        ordered=mention['think']>=mention['mention']>mention['ignore']>mention['none']
++        c=[x for x in counted if x['reader']==reader and x['feature']=='category_switch']
++        switch=float(np.mean([x['any_mention_rate'] for x in c if private[x['unit_id']]['label']==1]));stay=float(np.mean([x['any_mention_rate'] for x in c if private[x['unit_id']]['label']==0]));drop=None if stay==0 else 1-switch/stay
++        capacity=[x for x in counted if x['reader']==reader and x['feature']=='capacity_list'];mean_union=float(np.mean([x['distinct_over_readouts'] for x in capacity]));mean_one=float(np.mean([x['mean_distinct_per_readout'] for x in capacity]))
++        cap_j=jrows['capacity_list']['top50_list_nouns'];j_counts=[]
++        for x in capacity:
++            k=x['unit_id'];nouns=cap_j[k];require(len(nouns)==len(set(nouns)) and set(nouns)<=set(plan['count_metadata'][k]['list_nouns']),'J top50 listed-noun identity');j_counts.append(len(nouns))
++        out['readers'][reader]={'R_A1': 'NOT EVALUABLE' if a1 is None else 'MET' if a1 else 'NOT MET','R_A2': 'MET' if ordered and ci[0]>0 else 'NOT MET','focus_mention_rates':mention,'think_minus_none_CI95':ci,'category_switch':{'switch':switch,'stay':stay,'fraction_drop':drop,'tracks_workspace':None if drop is None else drop>=.5,'reads_beyond':None if drop is None else drop<=.2},'capacity':{'mean_union_over_readouts':mean_union,'mean_distinct_per_readout':mean_one,'union_beyond_six':mean_union>6,'per_readout_beyond_six':mean_one>6,'J_top50_mean':float(np.mean(j_counts))},'count_gradient':{row:rates[reader,row] for row in ('linewrap_implicit','linewrap_asked','count_gradient_first_letter')}}
++    if jrows['multi_token_entity']['G3_AUROC'] is None:
++        out['R_A1_limitation']='09494e79: J-lens has no single-token readout of these values by construction; G3 is missing, not zero. Reader S remains in rates.'
++    return out,counted
+diff --git a/results/g_agreement/understand/analysis402/test_missing_g3.py b/results/g_agreement/understand/analysis402/test_missing_g3.py
+new file mode 100644
+index 00000000..5b7eedea
+--- /dev/null
++++ b/results/g_agreement/understand/analysis402/test_missing_g3.py
+@@ -0,0 +1,67 @@
++"""Synthetic-only regression tests for 09494e79; no outcome files or claims."""
++import sys,copy
++from pathlib import Path
++import pytest
++sys.path.insert(0,str(Path(__file__).resolve().parent))
++import custody
++import analysis56 as old56
++import analysis57 as old57
++import rules56_missing_g3 as new56
++import rules57_missing_g3 as new57
++
++
++def fixture56():
++    probe={r:.95 for r in old56.IMPLICIT};j={r:{'G3_AUROC':.55} for r in probe}
++    names=set(old56.IMPLICIT+old56.CONTROLS+['fact_recall']+[x for pair in old56.TWINS for x in pair])
++    rates={(reader,r,'text'):{'S':.4,'CI95':[.3,.5]} for reader in ('oracle','nla') for r in names}
++    return probe,j,rates
++
++
++def test_56_null_is_ineligible_and_normal_rules_identical(monkeypatch):
++    for m in (old56,new56):monkeypatch.setattr(m,'reported',lambda r:r['S']>=.2)
++    p,j,r=fixture56();assert new56.rules(p,j,r)==old56.rules(p,j,r)
++    before=copy.deepcopy(r);j['anomaly_state']['G3_AUROC']=None;result=new56.rules(p,j,r)
++    assert result['R1']['anomaly_state']=={'probe':.95,'J_G3':None,'pass':False,'status':'NOT EVALUABLE','reason':'missing frozen G3 (09494e79)'}
++    assert result['readers']['oracle']['R2_reporting_rows']==4
++    assert r==before and r['oracle','anomaly_state','text']['S']==.4
++    j['anomaly_state']['G3_AUROC']=0
++    assert new56.rules(p,j,r)['R1']['anomaly_state']['pass'] is True
++
++
++def synthetic57(monkeypatch):
++    rows=old57.GROUP_B+['multi_token_entity','focus_think','focus_mention','focus_ignore','focus_none','category_switch','capacity_list','linewrap_implicit','linewrap_asked','count_gradient_first_letter']
++    private={r:dict(id=r,feature=r,label=1,template_index=0,filler_index=0,variant=0) for r in rows}
++    native=[dict(reader=reader,unit_id=r,id=reader+':'+r,repeat=0,text='birds') for reader in ('oracle','nla') for r in rows]
++    private['category_stay']=dict(private['category_switch'],id='category_stay',label=0)
++    native.extend(dict(reader=reader,unit_id='category_stay',id=reader+':category_stay',repeat=0,text='birds') for reader in ('oracle','nla'))
++    def count(xs,meta):
++        x=xs[0];return dict(reader=x['reader'],unit_id=x['unit_id'],feature=private[x['unit_id']]['feature'],any_mention_rate=.5,distinct_over_readouts=1,mean_distinct_per_readout=1)
++    for m in (old57,new57):
++        monkeypatch.setattr(m,'probe_aucs',lambda d:{r:.95 for r in rows})
++        monkeypatch.setattr(m,'rate',lambda x:{'S':.4,'CI95':[.3,.5]})
++        monkeypatch.setattr(m,'reported',lambda r:True)
++        monkeypatch.setattr(m,'signed_value',lambda j,l:1)
++        monkeypatch.setattr(m,'named_terms',lambda *a:{'birds'})
++        monkeypatch.setattr(m,'paired_ci',lambda *a:[.1,.2])
++        monkeypatch.setattr(m,'count_item',count)
++    counts=[count([x],{}) for x in native if private[x['unit_id']]['feature'] in ('capacity_list','category_switch')]
++    data={'private':private,'native':native,'plan':{'rows':{r:{'probe_applicable':r not in ('capacity_list','category_switch','focus_none')} for r in rows},'native_ids':{r:[r] for r in rows},'count_metadata':{r:{} for r in rows}},'counts':counts}
++    data['plan']['native_ids']['category_switch'].append('category_stay');data['plan']['count_metadata']['category_stay']={}
++    jj={x['id']:{} for x in native};j={r:{'J_label':'DIFFUSE','G3_AUROC':.5} for r in rows};j['capacity_list']['top50_list_nouns']={'capacity_list':['bird']};data['plan']['count_metadata']['capacity_list']={'list_nouns':['bird']}
++    return data,jj,j
++
++
++def test_57_normal_results_identical(monkeypatch):
++    d,jj,j=synthetic57(monkeypatch)
++    assert new57.compute(d,jj,j)==old57.compute(d,jj,j)
++
++
++def test_57_null_ra1_keeps_native_s_and_other_rules(monkeypatch):
++    d,jj,j=synthetic57(monkeypatch);normal,_=new57.compute(d,jj,j);j['multi_token_entity']['G3_AUROC']=None
++    result,counts=new57.compute(d,jj,j)
++    for reader in ('oracle','nla'):
++        assert result['readers'][reader]['R_A1']=='NOT EVALUABLE'
++        assert result['rates'][reader+'|multi_token_entity']['S']==.4
++        assert {k:v for k,v in result['readers'][reader].items() if k!='R_A1'}=={k:v for k,v in normal['readers'][reader].items() if k!='R_A1'}
++    assert result['R_B']==normal['R_B'] and counts==sorted(d['counts'],key=lambda x:(x['reader'],x['unit_id']))
++    assert 'no single-token readout' in result['R_A1_limitation']
+-- 
+2.54.0
+

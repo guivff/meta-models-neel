@@ -1,0 +1,12 @@
+{
+  "id": "d403eb43b046bdc5484c86dd",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a few-shot classification task is being demonstrated, requiring the model to output the correct label (\"Sadness\") for a given sentence.\n\nThe format establishes a strict template: \"Given sentence: [sentence]\\nClassification: [label]\" repeated, now applied to a new example \"I am feeling happy today.\"\n\n\"Reply:\" is the final token, acting as a prompt label in the structured Q&A format, immediately requiring the model's direct answer (the classification label, e.g., \"Sadness\" or similar short response).\n\"Example input format:\nGiven sentence: I am feeling happy today.\nClassification: [correct label]\nGiven sentence: I am feeling happy today.\nReply:\" \u2014 the final \"Reply:\" token demands the model's response to the example, completing the structured output.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a few-shot classification task is being demonstrated, requiring the model to output the correct label (\"Sadness\") for a given sentence.\n\nThe format establishes a strict template: \"Given sentence: [sentence]\\nClassification: [label]\" repeated, now applied to a new example \"I am feeling happy today.\"\n\n\"Reply:\" is the final token, acting as a prompt label in the structured Q&A format, immediately requiring the model's direct answer (the classification label, e.g., \"Sadness\" or similar short response).\n\"Example input format:\nGiven sentence: I am feeling happy today.\nClassification: [correct label]\nGiven sentence: I am feeling happy today.\nReply:\" \u2014 the final \"Reply:\" token demands the model's response to the example, completing the structured output.",
+  "truncated": false
+}

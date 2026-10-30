@@ -1,0 +1,12 @@
+{
+  "id": "3109b10dce1212c99ef5a785",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt-response format establishes a pattern: a rule is given, then a specific question is posed, requiring a model answer that follows the rule.\n\nThe \"Question\" field specifies \"Should I use a formal tone?\" but the rule concerns \"casual tone,\" creating a deliberate mismatch the model must navigate \u2014 the answer should reflect the rule's content about casual tone.\n\n\"Answer:\" is the final token, a label introducing the model's response to the structured example, requiring a direct, concise answer sentence demonstrating the rule applied to the question.\n\"Instruction: [rule about X].\nQuestion: [question about Y].\nAnswer:\" \u2014 this template demands the next tokens be the model's generated answer, likely beginning with \"The model should...\" or a direct statement about the topic.\n\n\"Answer:\" expects the model's output demonstrating the pattern.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt-response format establishes a pattern: a rule is given, then a specific question is posed, requiring a model answer that follows the rule.\n\nThe \"Question\" field specifies \"Should I use a formal tone?\" but the rule concerns \"casual tone,\" creating a deliberate mismatch the model must navigate \u2014 the answer should reflect the rule's content about casual tone.\n\n\"Answer:\" is the final token, a label introducing the model's response to the structured example, requiring a direct, concise answer sentence demonstrating the rule applied to the question.\n\"Instruction: [rule about X].\nQuestion: [question about Y].\nAnswer:\" \u2014 this template demands the next tokens be the model's generated answer, likely beginning with \"The model should...\" or a direct statement about the topic.\n\n\"Answer:\" expects the model's output demonstrating the pattern.",
+  "truncated": false
+}

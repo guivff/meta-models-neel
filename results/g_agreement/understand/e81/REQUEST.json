@@ -1,0 +1,65 @@
+{
+  "admission": "bounded first-real-batch self-admission; no advance full-run FIT",
+  "alongside": "E80c",
+  "argv": [
+    "python",
+    "/workspace/results/g_agreement/understand/e81/worker81.py",
+    "--inputs",
+    "/workspace/e81/inputs",
+    "--assets",
+    "/workspace/e56/assets.json",
+    "--assignment",
+    "/workspace/e81/assignment.json",
+    "--out",
+    "/workspace/e81/out",
+    "--source-sha",
+    "13c4116f5f59a799ac512c623443b1b589ecd661c0fa26a5c633b3a0b8ac785c",
+    "--input-sha",
+    "014c37657cc94d43e45c6ce0bf557db8039d82bd8c863b89ee9c5998c73bebe8"
+  ],
+  "cap_seconds": 7200,
+  "cumulative_cap_seconds": 7200,
+  "e90_rule_seal_sha256": "20fe347912119668e61e727d99370de4c775341089909cfb05524258791d71bc",
+  "exact_preflight_sha256": "73b344ccdb53c8c47c39e0068825001051f9b3bae277893eaeef0e1f62df3041",
+  "experiment": "E81",
+  "forecast": {
+    "authority": "standing \u00a7149 pre-authorised2x; E90 explicit added arm",
+    "batch_size": 64,
+    "description_prompts": 7376,
+    "equal_length_batches": {
+      "128": 160,
+      "32": 87
+    },
+    "experiment": "E81+E90",
+    "new_GPU_measurement": false,
+    "nominal_original_cap_seconds": 3600,
+    "note": "No warmed batch64 base-text timing exists. Retain the first real batch, forecast all remaining work from its running phase mean; continue only if fixed7200s cap fits. No full-run FIT claimed in advance. Warmup discarded and charged, excluded from estimator.",
+    "plain_continuation_prompts": 3688,
+    "prompts": 11064,
+    "request_cap_seconds": 7200,
+    "scenarios_are_not_measured_bounds": true,
+    "scenarios_seconds_with_1_25": {
+      "linear_per_vector_cost_from_batch8": 20712,
+      "same_latency_as_saved_batch8": 3035
+    },
+    "seed_file_sha256": "fa07a421ea1beec28b2cb87fb76fc00a6d12265d66d4df26cb2946454e337f50",
+    "status": "ON_POD_SELF_ADMISSION_REQUIRED"
+  },
+  "includes": "E90",
+  "input_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e81_e90_v3_runner/inputs.tar.gz",
+  "input_archive_sha256": "f7611da57269a7fe590f5623bfdc90997afeff8bac0022840385ac74aa15d7b4",
+  "input_seal_sha256": "014c37657cc94d43e45c6ce0bf557db8039d82bd8c863b89ee9c5998c73bebe8",
+  "labels_on_pod": false,
+  "launch_allowed": true,
+  "owner_bank_seal_sha256": "ac2b0d8c8e16230207cd26dedf0ae046cd94c655a5efc4551e80620e14b9c464",
+  "owner_request_sha256": "4ff93b9255e45ee9879d4562c88bfeaa31290a8ccaba17fc7649dbfc8f4d5acc",
+  "priority_after": [
+    "E79",
+    "E80",
+    "E87"
+  ],
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e81_e90_v3_runner/source.tar.gz",
+  "source_archive_sha256": "2c082556e8cba6304c69ede1aa5bbce1e73121ed44f6c12c3681d24247fee83a",
+  "source_seal_sha256": "13c4116f5f59a799ac512c623443b1b589ecd661c0fa26a5c633b3a0b8ac785c",
+  "status": "READY"
+}

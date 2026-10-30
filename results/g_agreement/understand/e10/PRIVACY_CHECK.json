@@ -1,0 +1,41 @@
+{
+  "section": 97,
+  "experiment": "E10",
+  "status": "BLOCKED_NO_ZDR_ROUTE",
+  "at": "2026-10-24T03:57:25.717675+02:00",
+  "approval": "Guiv approved Gemini 2.5 Flash Lite via OpenRouter, W1/S61 readouts only, no prompts/labels/keys/paths, <=$10 hard cap, ZDR only and deny logging/training",
+  "model": "google/gemini-2.5-flash-lite",
+  "requested_provider": "Google AI Studio",
+  "actual_inference_provider": null,
+  "all_model_endpoints": [
+    "google-ai-studio/flex",
+    "google-ai-studio",
+    "google-ai-studio/priority"
+  ],
+  "all_approved_model_zdr_endpoints": 0,
+  "inference_request_count": 0,
+  "read_only_metadata_request_count": 2,
+  "api_usd": 0,
+  "gpu_hours": 0,
+  "provider_policy": {
+    "data_collection": "deny",
+    "zdr": true,
+    "allow_fallbacks": false
+  },
+  "openrouter_own_logging_settings": "NOT VERIFIED: native browser controls timed out twice. No logging/account toggle changed. An observed-off settings proof is required by the launch gate.",
+  "tests_passed": 15,
+  "offline_extraction_batches_checked": 1309,
+  "offline_forbidden_payload_batches": 0,
+  "sources": {
+    "endpoint_inventory": "https://openrouter.ai/api/v1/models/google/gemini-2.5-flash-lite/endpoints",
+    "zdr_inventory": "https://openrouter.ai/api/v1/endpoints/zdr",
+    "policy": "https://openrouter.ai/docs/guides/features/zdr",
+    "logging": "https://openrouter.ai/docs/guides/features/input-output-logging"
+  },
+  "metadata_sha256": {
+    "public_model_endpoints_zdr_check.json": "c28f9b351dea992da9fd73baaf21ec901d7739dda1a149d0bbe6a9c5728944ca",
+    "public_zdr_endpoints.json": "74662be94a58931bc4fd4187c1d7e8d35fb0034ae9682642724c7c64df67c24a"
+  },
+  "no_new_destination": true,
+  "scientific_pool_and_rules_changed": false
+}

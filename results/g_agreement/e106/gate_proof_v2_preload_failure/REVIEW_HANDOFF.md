@@ -1,0 +1,1 @@
+Operational pre-load strict backward-call proof refusal. No model/readout/optimizer. Exact target module/source resolved and savedPENDING, but exact call unobserved, noPASS. Whole verified archive/executedsource/guards/providerclosure/cost enclosed. §217 no model-restart consumption, all custody counted. Please review onarrival; no scientificanalysis/bootstrap.

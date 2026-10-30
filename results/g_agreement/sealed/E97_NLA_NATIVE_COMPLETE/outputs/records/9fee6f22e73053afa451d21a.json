@@ -1,0 +1,12 @@
+{
+  "id": "9fee6f22e73053afa451d21a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict pattern: example given (\"Example: The color is red. Label: Angry\"), now requiring the model to apply the same classification logic to the new sentence.\n\nThe task is to classify \"The color is blue\" as a single emotion label, following the established format of short, direct responses.\n\n\"Reply:\" is the final prompt token, part of the structured input template (\"Input: The color is blue.\\nReply:\"), immediately requiring the model's direct answer \u2014 the emotion label itself (e.g., \"Happy\" or similar).\n\"Given the following pattern... please provide the correct response.\nInput: The color is blue.\nReply:\" \u2014 this closing label signals the model must now output the final answer directly, completing the structured prompt format. \"Reply:\" expects the response text immediately.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict pattern: example given (\"Example: The color is red. Label: Angry\"), now requiring the model to apply the same classification logic to the new sentence.\n\nThe task is to classify \"The color is blue\" as a single emotion label, following the established format of short, direct responses.\n\n\"Reply:\" is the final prompt token, part of the structured input template (\"Input: The color is blue.\\nReply:\"), immediately requiring the model's direct answer \u2014 the emotion label itself (e.g., \"Happy\" or similar).\n\"Given the following pattern... please provide the correct response.\nInput: The color is blue.\nReply:\" \u2014 this closing label signals the model must now output the final answer directly, completing the structured prompt format. \"Reply:\" expects the response text immediately.",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "b615c143ec8279319a4a781a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot classification format established: examples show sentiment labels (\"Positive\", \"Negative\") applied to short sentences, requiring a matching label output.\n\nThe task explicitly frames a question-answer pattern: \"What is the sentiment of the following sentence?\" with a specific sentence about a Chinese restaurant, demanding a direct sentiment label response.\n\n\"Reply:\" is the final prompt token, part of the structured template, immediately requiring the model's answer (e.g., \"Positive\" or \"Negative\") on the next line.\n\"Example pattern:\nSentence: '...'\nSentiment: [label]\n...\nGiven sentence: '...'\nQuestion: What is the sentiment?\nSentence: 'The Chinese restaurant...'\nReply:\" \u2014 the final token \"Reply:\" is a prompt label demanding the direct answer/classification output immediately following.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot classification format established: examples show sentiment labels (\"Positive\", \"Negative\") applied to short sentences, requiring a matching label output.\n\nThe task explicitly frames a question-answer pattern: \"What is the sentiment of the following sentence?\" with a specific sentence about a Chinese restaurant, demanding a direct sentiment label response.\n\n\"Reply:\" is the final prompt token, part of the structured template, immediately requiring the model's answer (e.g., \"Positive\" or \"Negative\") on the next line.\n\"Example pattern:\nSentence: '...'\nSentiment: [label]\n...\nGiven sentence: '...'\nQuestion: What is the sentiment?\nSentence: 'The Chinese restaurant...'\nReply:\" \u2014 the final token \"Reply:\" is a prompt label demanding the direct answer/classification output immediately following.",
+  "truncated": false
+}

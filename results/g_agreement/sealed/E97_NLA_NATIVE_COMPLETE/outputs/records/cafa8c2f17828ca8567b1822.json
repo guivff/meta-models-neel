@@ -1,0 +1,12 @@
+{
+  "id": "cafa8c2f17828ca8567b1822",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"if X, reply 'Happy'\"), followed by a concrete example requiring application of that rule to a new input.\n\nThe format establishes a Q&A template: \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the classification label (e.g., \"Happy\" or similar short answer) for the given sentence \"The weather in Taiwan is very good.\"\n\n\"Reply:\" is the final token, acting as a prompt label in a structured template, immediately requiring the actual response/classification answer.\n\"Example sentence: \u53f0\u6e7e\u7684\u5929\u6c14\u975e\u5e38\u597d\\nInput sentence: \u53f0\u6e7e\u7684\u5929\u6c14\u975e\u5e38\u597d\\nReply:\" \u2014 the final \"Reply:\" is a field label in the structured format, demanding the direct answer (the classification word) to follow immediately.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"if X, reply 'Happy'\"), followed by a concrete example requiring application of that rule to a new input.\n\nThe format establishes a Q&A template: \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the classification label (e.g., \"Happy\" or similar short answer) for the given sentence \"The weather in Taiwan is very good.\"\n\n\"Reply:\" is the final token, acting as a prompt label in a structured template, immediately requiring the actual response/classification answer.\n\"Example sentence: \u53f0\u6e7e\u7684\u5929\u6c14\u975e\u5e38\u597d\\nInput sentence: \u53f0\u6e7e\u7684\u5929\u6c14\u975e\u5e38\u597d\\nReply:\" \u2014 the final \"Reply:\" is a field label in the structured format, demanding the direct answer (the classification word) to follow immediately.\n\"Reply:\"",
+  "truncated": false
+}

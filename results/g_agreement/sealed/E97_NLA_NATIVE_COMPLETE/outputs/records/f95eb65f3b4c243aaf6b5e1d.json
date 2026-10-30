@@ -1,0 +1,12 @@
+{
+  "id": "f95eb65f3b4c243aaf6b5e1d",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a classification task requiring a single label (\"Positive\" or \"Negative\") as the answer.\n\nThe example structure mirrors the pattern: a sentence is given, then a labeled example is shown, implying the model must now produce the correct label for the example sentence \"I am a student.\"\n\n\"Example sentence: 'I am a student.'\\nReply:\" is the final prompt line, where \"Reply:\" is a label/field marker demanding the actual classification answer (e.g., \"Positive\" or \"Negative\") immediately follows.\n\"Given the following example:\\nSentence: 'I am a student.'\\nClassification: [Positive/Negative]\\nExample sentence: 'I am a student.'\\nReply:\" \u2014 the final token \"Reply:\" is a prompt field expecting the model's direct answer to the structured task.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a classification task requiring a single label (\"Positive\" or \"Negative\") as the answer.\n\nThe example structure mirrors the pattern: a sentence is given, then a labeled example is shown, implying the model must now produce the correct label for the example sentence \"I am a student.\"\n\n\"Example sentence: 'I am a student.'\\nReply:\" is the final prompt line, where \"Reply:\" is a label/field marker demanding the actual classification answer (e.g., \"Positive\" or \"Negative\") immediately follows.\n\"Given the following example:\\nSentence: 'I am a student.'\\nClassification: [Positive/Negative]\\nExample sentence: 'I am a student.'\\nReply:\" \u2014 the final token \"Reply:\" is a prompt field expecting the model's direct answer to the structured task.",
+  "truncated": false
+}

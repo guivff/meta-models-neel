@@ -1,0 +1,115 @@
+{
+  "events": [
+    {
+      "at": 1792745137.1317918,
+      "event": "ARMED",
+      "pids": {
+        "addr": "[REDACTED: connection details in untracked cache]",
+        "armed_at": "1792745133",
+        "caffeinate": "caffeinate -i",
+        "ceil": "45",
+        "deadline": "1792749697",
+        "hardstop_caffeinate_pid": "15129",
+        "hardstop_pid": "15124",
+        "keys_staged": "0",
+        "pidfile": "/workspace/s79/job.pid",
+        "pod": "57dxskrup4gbep",
+        "watchdog_caffeinate_pid": "15170",
+        "watchdog_pid": "15163"
+      },
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792745721.7623549,
+      "event": "PULL_VERIFIED",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792745847.3385549,
+      "error": "custody command failed pull",
+      "event": "PULL_RETRY",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792745984.0417888,
+      "event": "PULL_VERIFIED",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792746112.592823,
+      "error": "custody command failed pull",
+      "event": "PULL_RETRY",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792746240.2738612,
+      "error": "custody command failed pull",
+      "event": "PULL_RETRY",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792746369.8446798,
+      "event": "PULL_VERIFIED",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792746384.905377,
+      "event": "REQUEST_VERIFIED",
+      "pod_id": "57dxskrup4gbep",
+      "request": "request.0001.json"
+    },
+    {
+      "at": 1792746499.0082262,
+      "event": "PULL_VERIFIED",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792746563.696498,
+      "event": "GUARD_GONE",
+      "key": "watchdog_pid",
+      "pid": "15163",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792746563.699497,
+      "event": "GUARD_GONE",
+      "key": "watchdog_caffeinate_pid",
+      "pid": "15170",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792746563.704938,
+      "event": "GUARD_GONE",
+      "key": "hardstop_pid",
+      "pid": "15124",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "at": 1792746563.7084749,
+      "event": "GUARD_GONE",
+      "key": "hardstop_caffeinate_pid",
+      "pid": "15129",
+      "pod_id": "57dxskrup4gbep"
+    },
+    {
+      "api": {
+        "at": 1792746563.683981,
+        "http_status": 200,
+        "pod_id": "57dxskrup4gbep",
+        "status": "EXITED"
+      },
+      "at": 1792746563.708571,
+      "event": "CLOSED_EXITED_ALL_OWN_GUARDS_GONE",
+      "pod_id": "57dxskrup4gbep"
+    }
+  ],
+  "all_own_pids_independently_verified_gone": [
+    15086,
+    15163,
+    15170,
+    15124,
+    15129
+  ],
+  "retirement_order": "watchdog and caffeinate first; hard stop and caffeinate last; supervisor exited0",
+  "normal_stop_from_this_chat": false
+}

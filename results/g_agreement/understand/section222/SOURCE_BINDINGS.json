@@ -1,0 +1,39 @@
+{
+  "scope": "\u00a7222 sealed-number figure only; no new statistics or experiment execution",
+  "sources": {
+    "e100": {
+      "results": "results/g_agreement/understand/e100/analysis_once/RESULTS.json",
+      "results_sha256": "43720ab80a6a7227266eaebe44dbfcf1502a653affc309b15717e4787b50d75f",
+      "seal": "results/g_agreement/understand/e100/analysis_once/ANALYSIS_SEAL.json",
+      "seal_sha256": "76b156f055567cb168b2cfd40ec6bcc65aa21d2aa18fd1d97d533ad5fa86d2d1"
+    },
+    "e101": {
+      "results": "results/g_agreement/understand/e101/analysis_once/RESULTS.json",
+      "results_sha256": "55846f8e95c9551a3d9e8ff0f427f1ff63ff1d1d94c9c50c8a9921277576da41",
+      "seal": "results/g_agreement/understand/e101/analysis_once/ANALYSIS_SEAL.json",
+      "seal_sha256": "ad820c3f25acab98b70dd05881b341b4c658182ca2daa3e57b230a421742f4c1"
+    },
+    "e104": {
+      "results": "results/g_agreement/understand/e104/analysis_once/RESULTS.json",
+      "results_sha256": "cf08cabf2d0a16a1c2794f0d56ffce0329730f456b8721be97f61017065a91ed",
+      "seal": "results/g_agreement/understand/e104/analysis_once/ANALYSIS_SEAL.json",
+      "seal_sha256": "01d8d5a17b7bbea1d2df27982ef10c897156093430967d8da442e0a5137cbe1e"
+    },
+    "e105": {
+      "results": "results/g_agreement/understand/e105/analysis_once/RESULTS.json",
+      "results_sha256": "94356476cb823ba0d1b01e75edb6229e750e171deccb8dd24ab3c65a6fcda042",
+      "seal": "results/g_agreement/understand/e105/analysis_once/ANALYSIS_SEAL.json",
+      "seal_sha256": "5795e14d46acff0ae5830c3ac8f882f4444cdb40b9f3e7ec2a54b124d5173047"
+    }
+  },
+  "section222_excerpt_sha256": "7896547d1783102fa00e6435273b679ba143b98a7b2cc5a297504555d438ee6d",
+  "section222_excerpt": "## \u00a7222 The site-local decoder account, and E109 (2026-10-29 06:10 CET, before any E109 capture)\n\n**What the causal results say together.** Four sealed results form a double dissociation between what the reader\nreports and what the model uses:\n- Present at the read site, **not used** by the model: a transplanted activation moves the reader (E100 R-PC 5/5)\n  while the model's next-token behaviour barely changes (E105: no strict flips on any row).\n- **Used** by the model, written elsewhere: steering eight earlier positions flips behaviour (E104 arm U: 84/84 and\n  50/84) while the reader mostly keeps reporting the text's value (+0.18, +0.14 vs +0.52, +1.12 when the same\n  direction is written at the read site in E101).\n- Natural state: on E82 belief-wrong items the Oracle states the model's belief over the truth.\n- Bookkeeping that is present (probe \u2265 0.90) and transplanted in whole is still not reported (E100 missed rows).\n\n**Account (stated now, to be tested):** an activation reader is a **site-local decoder of the dominant directions**\nat its read token and block. It reports whatever is linearly present there in the high-variance subspace, whether\nor not the model uses it, and it misses state that is either outside that subspace (bookkeeping, E80c) or not at that\nsite (E104). On this account the trust signal is \"how much of the state is at the site, in the decodable subspace\"\n(E80c J-fraction AUROC 0.81), not \"is the model acting on it\".\n\n**E109. Where does the carried state arrive? (CONFIRMATORY for R-AR1; the rest DESCRIPTIVE.)** E104's miss has two\nreadings: the carried state reaches the read token only after block 44 (arrival), or it reaches block 44 but the\nreader cannot decode it (decoder). E109 separates them.\n- **Owners.** Runner: W-mechanism-C (E104 arm U hook plus E87's multi-layer Oracle read). Integrator: Track Q.\n  Vectors: E104's sealed d40 (f95dcff93). Adapter: W-mech2, synthetic tests before output. Reviewer: R-Q.\n- **Rows and doses.** fact_recall (\u03b1 8) and language_plan (\u03b1 2), E104's sealed \u03b1\\*; the same 84 dev and 84 test items.\n- **Capture.** With the arm U hook in place (block 40, positions read\u22128\u2026read\u22121, steered and matched random), capture\n  the read token's residual at blocks {44, 48, 52, 56, 60}, and also with no hook. Dev and test items.\n- **Probe.** Per layer, a dev-fit linear probe for the row's value trained on **unhooked** dev activations (true value\n  vs other), applied to hooked test activations. Probe flip = the probe reads the steered value.\n- **Reader.** One greedy Oracle readout per (test item, layer, condition) at blocks {44, 52, 60}, which are within\n  the lens's trained range (E87). Judged blind on the E56 route, bank E109, \u2264 USD 6.\n- **Cohort.** Items whose behaviour flipped in E104 (sealed cohort; 84 and 50).\n\n**R-AR1 (arrival):** on at least one row, at some layer L > 44 the probe flips on \u2265 70% of the cohort **and** the\nOracle at that layer gives S_target(steered) \u2212 S_target(random) \u2265 0.30 with item-bootstrap lower bound > 0.\n**R-AR2 (decoder; descriptive):** the probe flips on \u2265 70% of the cohort at block 44 while the Oracle difference at\n44 stays < 0.30 (E104's sealed value). This is the site-local-decoder-but-wrong-subspace reading.\n**R-AR3 (never at the site; descriptive):** the probe never flips on \u2265 50% of the cohort at any captured layer. The\nmodel acts on the steered state from other positions; the read token never carries it.\n**Falsifier for the account:** the probe flips at block 44 on \u2265 70% **and** the Oracle at 44 follows with \u2265 0.30 on a\nrerun of E104's cells. That would contradict E104 and would mean E104's result was a run defect, not a mechanism.\n\n**Reading.** R-AR1 met: readers can see computed state, but only once it has arrived; read later, or read several\nlayers (E87's depth profile becomes the practical recommendation). R-AR2: the reader's subspace, not timing, is the\nlimit; E106 is the fix to test. R-AR3: the read token is the wrong place to look for this state; single-site readers\ncannot see it at all.\n\n**Cost.** Capture \u2248 0.5 GPU-h; reads 2 rows \u00d7 84 \u00d7 3 layers \u00d7 2 conditions \u2248 1,000 readouts \u2248 0.5 GPU-h; judging\n\u2264 USD 6. CORE priority, ahead of E108 and E85; launch by Thu 24:00 CET; \u00a7217 rules.\n\n**Also brought forward (no new compute):**\n- **E79 Arm B R-C2:** judge the reader half on the existing bank and run its analysis once (\u00a7214 item 2). It asks the\n  converse question: when the reported J-direction is ablated and the model's plan survives, does the reader stop\n  reporting? On the account, yes.\n- **The 2 \u00d7 2 figure** (present at site \u00d7 used by model \u2192 reported): E100 and E105 fill the \"present, not used\" cell;\n  E104 fills \"used, not at site\"; E101 fills \"present and, via the write, used\"; E100 missed rows fill \"present,\n  wrong subspace\". Drawn from sealed numbers only; W-lens.\n",
+  "interpretation_limits": [
+    "Evidence schematic, not a completed factorial intervention.",
+    "E104 read-site arrival is unresolved; do not equate written elsewhere with absent.",
+    "E100 bookkeeping rows are probe-present; no claim they occupy a proven absent/unused cell.",
+    "E101/E104 signed S targets steered value on behaviour-flipped cohort; E100 transplant S targets donor value.",
+    "Existing 95% intervals and missingness copied without bootstrap or refit; asterisk marks >5% missing.",
+    "E105 strict sign flips remain distinct from continuous behavioural change; indent_level NOT RUN operational."
+  ]
+}

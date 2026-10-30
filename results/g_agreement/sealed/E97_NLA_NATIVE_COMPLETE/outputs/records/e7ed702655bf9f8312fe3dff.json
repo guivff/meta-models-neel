@@ -1,0 +1,12 @@
+{
+  "id": "e7ed702655bf9f8312fe3dff",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a system prompt establishes a rule, then a \"Question\" overrides it, requiring the model to follow the override.\n\nThe template structure (\"Context: [rule]. Question: [override]. Answer:\") sets up a demonstration of whether the model correctly applies the overridden instruction about \"data collection\" rather than \"data analysis.\"\n\n\"Answer:\" is the final token, a label in a few-shot or instruction-following example, immediately requiring the model's generated response text \u2014 likely a short declarative sentence about data collection, mirroring the format of the Context's example answer.\n\"Context: When writing an article, you should focus on data analysis.\nQuestion: When writing an article, you should focus on data collection.\nAnswer:\" \u2014 the final token demands the model's output demonstrating the (possibly incorrect) response to the question, following the pattern.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a system prompt establishes a rule, then a \"Question\" overrides it, requiring the model to follow the override.\n\nThe template structure (\"Context: [rule]. Question: [override]. Answer:\") sets up a demonstration of whether the model correctly applies the overridden instruction about \"data collection\" rather than \"data analysis.\"\n\n\"Answer:\" is the final token, a label in a few-shot or instruction-following example, immediately requiring the model's generated response text \u2014 likely a short declarative sentence about data collection, mirroring the format of the Context's example answer.\n\"Context: When writing an article, you should focus on data analysis.\nQuestion: When writing an article, you should focus on data collection.\nAnswer:\" \u2014 the final token demands the model's output demonstrating the (possibly incorrect) response to the question, following the pattern.",
+  "truncated": false
+}

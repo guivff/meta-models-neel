@@ -1,0 +1,161 @@
+{
+  "all_position_capture": {
+    "D4A": "block44 and42 read point, all1008 dev/test records; old252 reader outputs/probabilities reused",
+    "E62": "all frozen first-content..read positions, block44 fp16, offsets/order/seal",
+    "E62P": "same for all 15 placebo cells"
+  },
+  "analyses": {
+    "E62": "results/g_agreement/understand/e62/job/ANALYSIS_COMMAND.json",
+    "E62P": "results/g_agreement/understand/e62/job/COMMAND_E62P.json"
+  },
+  "authority": [
+    "user second wave instruction",
+    "1872f28",
+    "f081d228",
+    "00beb6d",
+    "6aacc13d",
+    "f21ed03e",
+    "section149 pre-approved 2x",
+    "user fresh dedicated pods; integrator HANDOFF e1b2d643",
+    "Latest user split: ladder fresh now, auxiliary first freed joint slot"
+  ],
+  "custody": "Fresh dedicated pod: all custody from provider creation, including staging, setup, parity, captures, GO waiting and readers; cumulative per-bank 2x ceiling includes any prior custody.",
+  "existing_pods": 0,
+  "experiments": [
+    "E62",
+    "E62P"
+  ],
+  "fresh_dedicated_pods": false,
+  "generation": {
+    "NLA_max_new_tokens": 512,
+    "NLA_stop": "</explanation>",
+    "Oracle_max_new_tokens": 128,
+    "greedy": true,
+    "one_readout_per_item": true
+  },
+  "go_schema": {
+    "capture_seals": "EXACT_CAPTURE_READY_MAP",
+    "cohort_id": "MATCH_ASSIGNMENT",
+    "forecast_commits": "FULL_COMMIT_PER_BANK",
+    "forecast_seals": "SHA256_PER_BANK",
+    "input_seals": "EXACT_CAPTURE_READY_MAP",
+    "issued_epoch": "AFTER_CAPTURE_AND_FORECAST",
+    "pod_id": "MATCH_CAPTURE_READY",
+    "reader_launch_authorized": true
+  },
+  "independent_of_first_wave": true,
+  "input_archives": {
+    "E62": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_v1/e62.tar.gz",
+      "sha256": "a8f091fcbe6cb1174137266a066e084f6ef5fed097d161f2355ad1ba53239b8b"
+    },
+    "E62P": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_amendments_v1/e62p.tar.gz",
+      "sha256": "53281f30403cd1213be51a6d06653ca1a8fbf5805e5b4c750014c7491b6db422"
+    }
+  },
+  "launch_allowed": true,
+  "launch_order": [
+    "ladder"
+  ],
+  "launch_preconditions": [
+    "Fresh dedicated H200; do not wait for a first-wave joint slot.",
+    "Capture both ladder banks and seal before CPU probes/forecast-bound GO; no reader output before GO."
+  ],
+  "max_pods": 1,
+  "maximum_cumulative_GPU_seconds": {
+    "E62": 14400,
+    "E62P": 4320
+  },
+  "new_pods": 1,
+  "order": [
+    "252-item parity",
+    "E62 and E62P all-position captures",
+    "seal both capture stages",
+    "CPU probes/class means and committed ladder forecasts",
+    "capture-bound GO",
+    "retained pilots and self-admission",
+    "remaining ladder reader jobs once"
+  ],
+  "parent_request": "results/g_agreement/understand/e57/job/JOINT_LAUNCH_REQUEST.json",
+  "parent_request_sha256": "7279007d13eb8909b9cf69ba5e803fcad6dbc4abf3818be9adcd9d2088612978",
+  "pods": [
+    {
+      "archive_staging": "same exact source and label-free input archives; only assigned experiment stages execute",
+      "assignment_schema": {
+        "absolute_deadline_epoch": "pod_created_epoch+sum(caps)",
+        "caps": {
+          "E62": "2*registered - actual prior charged custody",
+          "E62P": "2*registered - actual prior charged custody"
+        },
+        "cohort_id": "SAME_FIRST_AND_SECOND_WAVE_COHORT",
+        "custody_start_epoch": "EXACTLY_PROVIDER_CREATION_UNIX",
+        "fresh_dedicated_pod": true,
+        "gpu_count": 1,
+        "input_seals": {
+          "E62": "a6939c899c67f3dbd6251fe625a506dad10021238e93cc3d3be2cb867dca94c3",
+          "E62P": "24b12650267665248cdbdf58a516b771ec5315d0bee6eec8ad982d67ae66561f"
+        },
+        "parent_request_sha256": "7279007d13eb8909b9cf69ba5e803fcad6dbc4abf3818be9adcd9d2088612978",
+        "pod_created_epoch": "PROVIDER_CREATED_UNIX",
+        "pod_id": "FRESH_PROVIDER_ID",
+        "prior_custody_seconds": {
+          "E62": "ACTUAL_PRIOR_CUSTODY",
+          "E62P": "ACTUAL_PRIOR_CUSTODY"
+        },
+        "provider_deadline_epoch": "INTEGRATOR_CONFIRMED_HARD_STOP",
+        "source_seals": {
+          "E62": "b92c933a8312fe7488a66b8edb01130738ee20489111faca4f0fd482920b91ee",
+          "E62P": "b92c933a8312fe7488a66b8edb01130738ee20489111faca4f0fd482920b91ee"
+        }
+      },
+      "experiments": [
+        "E62",
+        "E62P"
+      ],
+      "gpu_count": 1,
+      "gpu_type": "H200",
+      "name": "ladder",
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/e62/job/second_worker.py",
+        "--assignment",
+        "/workspace/second/assignment.json",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--out",
+        "/workspace/second/out",
+        "--go",
+        "/workspace/second/GO.json",
+        "--e62-inputs",
+        "/workspace/second/e62/inputs",
+        "--e62p-inputs",
+        "/workspace/second/e62p/inputs"
+      ]
+    }
+  ],
+  "priority": [
+    "E62",
+    "E62P"
+  ],
+  "registered_GPU_seconds": {
+    "E62": 7200,
+    "E62P": 2160
+  },
+  "seed_timings": "results/g_agreement/understand/e56/job/SAVED_ORACLE_TIMINGS.json",
+  "separate_profile": false,
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_source_a0730ca3.tar.gz",
+  "source_archive_sha256": "63956694791e831e8938aacd562def1c20bb5f5ed2da7edc67dc339e9663fb4f",
+  "source_commit": "a0730ca39f1aaa182fb87c0d0a5087ea6e7ab938",
+  "status": "READY",
+  "validation": {
+    "GPU_hours": 0,
+    "exact_archive_preflight": "PASS_LADDER_ONLY",
+    "missing_parity_seal": "REJECTED",
+    "registered_analysis_runs": 0,
+    "report": "results/g_agreement/understand/e62/LADDER_ARCHIVE_DRY_RUN.json",
+    "report_sha256": "315bd84b59966b87334b97d4c5b550138bf2df5f047b3e74a0924572407346eb",
+    "targeted_CPU_tests_passed": 8
+  },
+  "verified_pull": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_verified_v1"
+}

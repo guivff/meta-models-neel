@@ -1,0 +1,58 @@
+{
+ "arithmetic": {
+  "E112_fill_used": false,
+  "all_phases_measured_in_attempt1": true,
+  "cap": "ceil(1.25 x need + 60)",
+  "cap_seconds": 2235,
+  "cumulative": 3628.9,
+  "measured_need": 1739.504,
+  "setup_warmup": 958.488,
+  "staging": 130.887,
+  "usd_ceiling": 25,
+  "usd_upper_at_5_29": 3.28,
+  "work": {
+   "nla": 403.306,
+   "oracle": 246.823
+  }
+ },
+ "attempt1": {
+  "booked_commit": "7b72a12cb",
+  "booked_custody_seconds": 1393.9,
+  "created": "2026-10-29T08:28:31.113Z",
+  "output_seal_sha256": "536ed9357a6ffd86a2892a328d416d3d2c88b91dcbe4915de1df23982a58eef3",
+  "partial_outputs": "custody record only; never bound as science; staged to the attempt-2 pod solely for retry_limit verify and deleted at close-out",
+  "pod": "4sqsae0e04zzok",
+  "status": "NO_FIT after load (nla:8/nla:4 pilots measured; FORECAST_nla NO_FIT remaining 458.6 s)"
+ },
+ "authority": "Guiv operational note 1 f599f121a; override acb8a0ac5 (source 99ff0fe2 / seal 286a907f); coordinator: create without returning",
+ "experiment": "E100e",
+ "issuer": "integrator (Track Q)",
+ "kind": "ATTEMPT2_CAP_RECEIPT",
+ "new_root": "E100e/attempt2 (analysis402_verified/E100e/a2)",
+ "profile": {
+  "attempt": 1,
+  "attempt1_created": "2026-10-29T08:28:31.113Z",
+  "attempt1_pod": "4sqsae0e04zzok",
+  "custody_seconds": 1393.9,
+  "experiment": "E100e",
+  "measured": true,
+  "measurement_recipe": "Track Q CPU summary of attempt1 sealed PHASE_TIMINGS/JOB_GRID (+FORECAST_*); staging = worker ASSIGNMENT.json mtime - provider creation; unmeasured NLA from E112 sealed profile per coordinator ruling",
+  "output_root": "/workspace/e100e_attempt1/out",
+  "output_seal_sha256": "536ed9357a6ffd86a2892a328d416d3d2c88b91dcbe4915de1df23982a58eef3",
+  "setup_warmup_seconds": 958.488,
+  "sources": {
+   "nla_setup": "attempt1 measured 476.7",
+   "nla_warmup_discarded": "attempt1 measured 19.1",
+   "nla_work": "attempt1 measured per-shape means",
+   "oracle_setup": "attempt1 measured 418.8",
+   "oracle_warmup_discarded": "attempt1 measured 43.9",
+   "oracle_work": "attempt1 measured per-shape means"
+  },
+  "staging_seconds": 130.887,
+  "work_seconds": {
+   "nla": 403.306,
+   "oracle": 246.823
+  }
+ },
+ "profile_sha256": "af400a32fd4c09dc7e1b71b4888a275632ed855f934fe1f06a049419b1dd12be"
+}

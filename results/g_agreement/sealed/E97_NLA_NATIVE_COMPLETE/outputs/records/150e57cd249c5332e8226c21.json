@@ -1,0 +1,12 @@
+{
+  "id": "150e57cd249c5332e8226c21",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a pattern of providing examples then asking for a classification label, establishing a strict template for the response.\n\nThe instruction explicitly states the answer must be \"Happy\" or \"Sad\" based on the sentence's emotional tone, constraining the output to one of those two words.\n\n\"Reply:\" is the final prompt label in a structured few-shot example, immediately requiring the model's direct answer (e.g., \"Happy\" or \"Sad\") to follow.\n\"Example format:\nSentence: [sentence]\nClassification: [label]\n...\nSentence: 'The University of Washington is a public research university in Seattle, Washington.'\nReply:\" \u2014 this final \"Reply:\" token is a prompt field label, expecting the model's classification answer as the very next token.\n\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a pattern of providing examples then asking for a classification label, establishing a strict template for the response.\n\nThe instruction explicitly states the answer must be \"Happy\" or \"Sad\" based on the sentence's emotional tone, constraining the output to one of those two words.\n\n\"Reply:\" is the final prompt label in a structured few-shot example, immediately requiring the model's direct answer (e.g., \"Happy\" or \"Sad\") to follow.\n\"Example format:\nSentence: [sentence]\nClassification: [label]\n...\nSentence: 'The University of Washington is a public research university in Seattle, Washington.'\nReply:\" \u2014 this final \"Reply:\" token is a prompt field label, expecting the model's classification answer as the very next token.\n\n\"Reply:\"",
+  "truncated": false
+}

@@ -1,0 +1,104 @@
+{
+ "certified": {
+  "field": "target (with source_item_id and true_label), per original E87 placebo group; values stay CPU-local",
+  "layers": 7,
+  "packet_authority": "47cf57c2",
+  "packet_seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E87/PACKET_SEAL.json",
+  "packet_seal_sha256": "a97ec15a746e2d8a0d410b273d9e6857325ccb53897d2ed673eb6f6057590134",
+  "placebo_groups": 2100,
+  "pseudo_items_per_row": 30,
+  "rows": [
+   {
+    "bank": "e49",
+    "row": "branch_taken",
+    "row_index": 3
+   },
+   {
+    "bank": "e49",
+    "row": "container_after_move",
+    "row_index": 5
+   },
+   {
+    "bank": "e49",
+    "row": "holder_after_handovers",
+    "row_index": 7
+   },
+   {
+    "bank": "e49",
+    "row": "topic_twin",
+    "row_index": 12
+   },
+   {
+    "bank": "e49",
+    "row": "unit_system",
+    "row_index": 13
+   },
+   {
+    "bank": "e49",
+    "row": "user_expertise",
+    "row_index": 14
+   },
+   {
+    "bank": "e49",
+    "row": "var_type_at_use",
+    "row_index": 15
+   },
+   {
+    "bank": "e57",
+    "row": "indent_level",
+    "row_index": 38
+   },
+   {
+    "bank": "e57",
+    "row": "loop_direction",
+    "row_index": 41
+   },
+   {
+    "bank": "e57",
+    "row": "nesting_depth",
+    "row_index": 43
+   }
+  ],
+  "scope": "the 10 E95 rows that reuse E87 (Oracle placebo arm only; E87 has no NLA placebo)",
+  "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E87/PRIVATE_JOIN.json",
+  "source_sha256": "50f135c4dd12c40de84e7d6f441358ca14caf158afde863fd4ddeb79284bb4d1"
+ },
+ "experiment": "E95",
+ "kind": "TRACKQ_PLACEBO_TARGET_CERTIFICATION",
+ "not_found": {
+  "judged_groups": [
+   {
+    "by_reader": {
+     "oracle": 267
+    },
+    "join_sha256": "772fc95f63e357bb158487f08ad0767b8de5c8b99ae149cc70840fedbca71000",
+    "placebo_groups": 267,
+    "stage": 1,
+    "with_source_item": 0,
+    "with_target": 0
+   },
+   {
+    "by_reader": {
+     "oracle": 554
+    },
+    "join_sha256": "bf7574045d48d35d73981376911089528d458d5f1ce130fdae7471eb78f177ca",
+    "placebo_groups": 554,
+    "stage": 2,
+    "with_source_item": 0,
+    "with_target": 0
+   },
+   {
+    "by_reader": {
+     "nla": 205
+    },
+    "join_sha256": "67d900553cd709ef81cfc753551fec6fde68f72dcb469777d0f817849963fc73",
+    "placebo_groups": 205,
+    "stage": 3,
+    "with_source_item": 0,
+    "with_target": 0
+   }
+  ],
+  "reason": "E95 packaging (results/g_agreement/understand/e87/package95.py) builds placebo IDs as sha256(E95:placebo:<row>:<i>) with no paired real item, and every E95 judging join has target, source_item_id and true_label null for all placebo groups. No sealed record assigns them a target; none is reconstructed.",
+  "scope": "every placebo pseudo-item built for E95 itself (new rows, both readers)"
+ }
+}

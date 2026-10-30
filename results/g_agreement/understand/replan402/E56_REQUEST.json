@@ -1,0 +1,68 @@
+{
+  "authority": "402be5f0",
+  "cohort_id": "joint-a7fea77c-7279007d",
+  "compute_from": "GO issued_epoch",
+  "daily_budget_USD": 300,
+  "experiment": "E56",
+  "forecast_commit": "46cd1f4a",
+  "integrator_handoff": "33c6feb5",
+  "launch_allowed": true,
+  "max_pods": 1,
+  "preflight": "results/g_agreement/understand/replan402/E56_REQUEST_PREFLIGHT.json",
+  "preserve_existing_complete_outputs": [
+    "E56_0",
+    "E56_1"
+  ],
+  "retained_pilots": "excluded from acquisition; required at CPU union; no replay",
+  "shards": [
+    {
+      "assignment_schema": {
+        "absolute_deadline_epoch": "staging_start_epoch + 900 + compute_cap_seconds",
+        "cohort_id": "joint-a7fea77c-7279007d",
+        "compute_cap_seconds": 5948,
+        "experiment": "E56",
+        "gpu_count": 1,
+        "plan_sha256": "2c6cb262e19c3600e508be04550e549669d3ca9d9084a5dc95204eacfdfede95",
+        "shard": 2,
+        "staging_cap_seconds": 900,
+        "staging_start_epoch": "PROVIDER_CREATION"
+      },
+      "compute_cap_seconds": 5948,
+      "experiment": "E56",
+      "input_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/replan402_v1/E56_2.tar.gz",
+      "input_archive_MB": 15.530225,
+      "input_archive_sha256": "08725f13b931daaf87773050d96c59e03546fffe18eebcea810fa72f802b2656",
+      "input_seal_sha256": "465674b481cffd010efbe0eede5a339ea8eb3554884479a8be8fe2d9c24f6188",
+      "shard": 2,
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/replan402/worker.py",
+        "--inputs",
+        "/workspace/replan402/E56_2/inputs",
+        "--assignment",
+        "/workspace/replan402/E56_2/assignment.json",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--out",
+        "/workspace/replan402/E56_2/out",
+        "--go",
+        "/workspace/replan402/E56_2/GO.json",
+        "--source-sha",
+        "452f7e2d85b894e049c98e78457adc1f5b409136865bd46d51319c741d97ee0f",
+        "--input-sha",
+        "465674b481cffd010efbe0eede5a339ea8eb3554884479a8be8fe2d9c24f6188"
+      ]
+    }
+  ],
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/replan402_source_v1.tar.gz",
+  "source_archive_MB": 0.174282,
+  "source_archive_sha256": "a3942a107d139abba06187aba4c8927b1eb2d836668f2b894f2d6b85264132cd",
+  "source_seal_sha256": "452f7e2d85b894e049c98e78457adc1f5b409136865bd46d51319c741d97ee0f",
+  "stage_order": [
+    "E56"
+  ],
+  "staging_cap_seconds_per_pod": 900,
+  "status": "READY",
+  "total_compute_cap_seconds": 5948,
+  "upload_parallel": true
+}

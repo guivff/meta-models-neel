@@ -1,0 +1,9 @@
+§223 item 2 — POST HOC / DESCRIPTIVE. CPU only. No model calls, projection fitting, new ablations, or original analysis rerun. Saved bases/ablated vectors remain fixed in every bootstrap.
+
+For each site, activation variance is trace covariance across items: mean squared distance from the cohort mean. Removed share = Var(X − A_condition) / Var(X), using the sealed original and ablated vectors. The sealed builder subtracts the centered orthogonal projection with no norm restoration. This measures variance in the removed component, not squared uncentered norms or a mean of itemwise fractions. Original PCA was fit at block 44; the NLA block-42 application remains exploratory.
+
+Primary normalization uses the original E80c complete-case, passes-under-none cohort separately per reader: fall = 1 − pass rate after ablation; normalized fall = fall / removed share, with both quantities on identical items. Report full sealed-bank (518) variance shares separately. Preserve original missingness, headline scorer and exact cohort; assert falls equal sealed results. This is reader pass rate, not model behaviour flips.
+
+Paired item bootstrap: 2,000 draws, seed 20261028, resample n items with replacement, same draw across all conditions and numerator/denominator. Recenter within each draw; fixed projection/basis, no PCA refit. Percentile endpoints use original E80c order statistics 50 and 1949 (zero based). Report fall, share, ratio and paired ratio contrasts J−random/J−PCA with CIs. The ratio is percentage-point fall per percentage point of variance removed; it is not a variance-matched intervention or a causal slope. No confirmatory threshold; R-X3 unchanged.
+
+Code and exact input pins committed before execution. Separate exclusive section223/e80c_variance claim; never reset any original claim. Export a companion PNG/SVG and machine-readable results beside the sealed-number §222 talk figure. User authority: direct §223 item 2 request.

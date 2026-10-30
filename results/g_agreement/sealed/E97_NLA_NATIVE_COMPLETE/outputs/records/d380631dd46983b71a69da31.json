@@ -1,0 +1,12 @@
+{
+  "id": "d380631dd46983b71a69da31",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format pattern established: a rule is given, then a test case follows, requiring a direct answer (\"Yes\" or \"No\") matching the rule's logic.\n\nThe instruction explicitly states the response should be \"Yes\" or \"No\" based on whether the sentence is positive or negative, constraining the answer to one of those two words.\n\n\"Reply:\" is the final prompt label in the structured format, immediately requiring the model's answer to the test case \"I am a software engineer\" \u2014 the next token should be the actual response (e.g., \"No\" or a short answer).\n\"Example format:\nSentence: [sentence]\nReply:\" mirrors the pattern, so \"Reply:\" is the final field label awaiting the model's direct output.\n\"Given sentence: I am a software engineer\\nReply:\" \u2014 the final prompt.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format pattern established: a rule is given, then a test case follows, requiring a direct answer (\"Yes\" or \"No\") matching the rule's logic.\n\nThe instruction explicitly states the response should be \"Yes\" or \"No\" based on whether the sentence is positive or negative, constraining the answer to one of those two words.\n\n\"Reply:\" is the final prompt label in the structured format, immediately requiring the model's answer to the test case \"I am a software engineer\" \u2014 the next token should be the actual response (e.g., \"No\" or a short answer).\n\"Example format:\nSentence: [sentence]\nReply:\" mirrors the pattern, so \"Reply:\" is the final field label awaiting the model's direct output.\n\"Given sentence: I am a software engineer\\nReply:\" \u2014 the final prompt.",
+  "truncated": false
+}

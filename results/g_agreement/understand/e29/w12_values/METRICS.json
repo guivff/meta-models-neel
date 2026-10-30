@@ -1,0 +1,97 @@
+{
+  "D_definition": "AUROC(mean_phrasings_A - mean_phrasings_B, value_is_A)",
+  "P_definition": "median true-candidate mean-phrasing score",
+  "assignment_sha256": "6ff2c6b4627bc61078aee3107e1b7ee8384526f56bd069c754e37c3ae5939fc9",
+  "blind": true,
+  "cohort": "w12",
+  "created_at": "2026-10-26T01:09:00+01:00",
+  "experiment": "E29",
+  "freeze": {
+    "actual_freeze_utc": "2026-10-25T23:34:33.816400+00:00",
+    "candidate_family": "olens",
+    "files": {
+      "AUDIT.json": "02010428fa80635984c0770489fb534e2968c334619f481715bbcf7c02e50403",
+      "items.jsonl": "719adebdb2a12316cb10a469fcc8c336151bdbea27d3793607e8371aad876b8f",
+      "templates.json": "793c5dcc71d86525351c1e11dccfe5f3846612d09b65b01284aaaeafe2d17794"
+    },
+    "published_commit": "13a53614fdba704e00c24e5a8323a9c1b5b59b5e",
+    "sha256": "2833a20091db5e1e3b5548bf8d0e581b1fe23718989dc9e6e698da6eb767109f",
+    "source_sha256": "7682a4173252621f95d83f318880652f3ae22c417d29e95e2061bdc89c178094",
+    "split": "test",
+    "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+  },
+  "input_seal_sha256": "8ac0feab07bd4b25c54a2e1a1833d7a50f5955778f5b5ff68750ec695dfec769",
+  "item_ledger": "cache/ITEM_SCORES.jsonl",
+  "labels_sha256": "25ef2c29724f6063a5a4e7846d9660c242a3baf1f9ded0836a1125a3c898964d",
+  "n_items": 504,
+  "phrasing_count": 2,
+  "plan_sha256": "9136802c0196769bd2b91535d11498cecae059c8ba635de2169208af8ee81d5c",
+  "primary_posting": null,
+  "reader_comparison": "PENDING; no reader outcomes loaded",
+  "rows": [
+    {
+      "D": 0.608843537414966,
+      "P": -4.526408791542053,
+      "feature": "syntax_role",
+      "n": 84,
+      "n_A": 42,
+      "n_B": 42
+    },
+    {
+      "D": 0.9812925170068028,
+      "P": -5.369820237159729,
+      "feature": "sentence_type",
+      "n": 84,
+      "n_A": 42,
+      "n_B": 42
+    },
+    {
+      "D": 0.00963718820861678,
+      "P": -4.750970125198364,
+      "feature": "sentence_position",
+      "n": 84,
+      "n_A": 42,
+      "n_B": 42
+    },
+    {
+      "D": 0.7063492063492064,
+      "P": -4.9210206270217896,
+      "feature": "paragraph_index",
+      "n": 84,
+      "n_A": 42,
+      "n_B": 42
+    },
+    {
+      "D": 0.6077097505668935,
+      "P": -4.420607507228851,
+      "feature": "paragraph_start",
+      "n": 84,
+      "n_A": 42,
+      "n_B": 42
+    },
+    {
+      "D": 0.7001133786848073,
+      "P": -5.2358468770980835,
+      "feature": "clause_embedding",
+      "n": 84,
+      "n_A": 42,
+      "n_B": 42
+    }
+  ],
+  "score_seal_sha256": "3b5294524acb99787c3d8c1765777b0d27154f95ce357f601bd37f9bc647c9fb",
+  "source_files": {
+    "results/g_agreement/understand/e25/worker.py": "246936d7131b8af4f87aae8bff9415228c544d2b25f5d2e8292ef8004f17b039",
+    "results/g_agreement/understand/e29/PREDICTION_AUTHORITY_136.md": "ff67bbbcd756fcb5c752d08e487ab9871bc3069d3a9b76b0c3a501b6dd8233f3",
+    "results/g_agreement/understand/e29/PREDICTION_CODE_SEAL.json": "12f98848a1be996a6318c39e277700355a3d2b31a4df048db4016b602f833926",
+    "results/g_agreement/understand/e29/analyze.py": "cd79f07c77b985176d5e83bd05b4c5bc6b5207fe3a266d3a9abc7847ba544276",
+    "results/g_agreement/understand/e29/predict.py": "f87fbb247455c8400aed258c72a5184fd422ff0a4e08ebc2fc14321312e06c5a",
+    "results/g_agreement/understand/e29/prepare_suraj.py": "2ab29662047ecf619b039194241738fbb09a9cc81d2969f6cce574cdaa911fdc",
+    "results/g_agreement/understand/e29/prepare_w12.py": "af5ab779a4d2e09e335af41af788fa821e558a9194e393f34d5312ad58cdcc5a",
+    "results/g_agreement/understand/e29/test_analysis.py": "b17eb69e1e514182505fe89b40392da69393416e8d68d9f26ba63649316069cf",
+    "results/g_agreement/understand/e29/test_predictions.py": "1049ef89760052008090d7dda22502b575f728be6ed6c0246dd224db2f343443",
+    "results/g_agreement/understand/e29/test_prepare_w12.py": "ba7bf2bb41e1666fbbbfbf8dbc551bcdec2581a834d54adaef5808277820dc2b",
+    "results/g_agreement/understand/e29/test_worker.py": "6751256bd3a15dead444ac4e0bf646d05f06879ec9f0dbb27bf161b8d6047e14",
+    "results/g_agreement/understand/e29/worker.py": "d483719465f7ff9039304c116fac65547e5c3cd15b88bae538c1dc7a9abd4320"
+  },
+  "status": "PROSPECTIVE_VALUES_READER_COMPARISON_PENDING"
+}

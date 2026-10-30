@@ -1,0 +1,12 @@
+{
+  "id": "652c869e9eca71be704c1928",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a few-shot classification task defining \"happy\" vs \"sad\" labels for sentences, establishing a strict format.\n\nThe example structure requires the model to output the correct label (\"Happy\" or \"Sad\") for the given sentence \"The weather is sunny today.\"\n\n\"Example sentence: The weather is sunny today.\\nReply:\" is the final prompt line, where \"Reply:\" is a label/field marker demanding the model's direct answer (the classification label) immediately next.\n\"Follow the pattern strictly. Provide only the label word.\"\n\"Example sentence: [sentence]\\nExample sentence: The weather is sunny today.\\nReply:\" \u2014 the final token \"Reply:\" is a field prompt expecting the model's classification response, likely \"Happy\" or a formatted answer.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a few-shot classification task defining \"happy\" vs \"sad\" labels for sentences, establishing a strict format.\n\nThe example structure requires the model to output the correct label (\"Happy\" or \"Sad\") for the given sentence \"The weather is sunny today.\"\n\n\"Example sentence: The weather is sunny today.\\nReply:\" is the final prompt line, where \"Reply:\" is a label/field marker demanding the model's direct answer (the classification label) immediately next.\n\"Follow the pattern strictly. Provide only the label word.\"\n\"Example sentence: [sentence]\\nExample sentence: The weather is sunny today.\\nReply:\" \u2014 the final token \"Reply:\" is a field prompt expecting the model's classification response, likely \"Happy\" or a formatted answer.\n\"Reply:\"",
+  "truncated": false
+}

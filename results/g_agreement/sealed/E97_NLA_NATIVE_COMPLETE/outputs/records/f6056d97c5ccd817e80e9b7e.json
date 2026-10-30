@@ -1,0 +1,12 @@
+{
+  "id": "f6056d97c5ccd817e80e9b7e",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict pattern: example given (\"Example: The color is red. Label: Angry\"), now requiring the model to apply the same classification logic to the new sentence.\n\nThe instruction explicitly states the task is to output only the emotion label (e.g., \"Happy,\" \"Sad,\" \"Angry\") for the given sentence about a \"successful business.\"\n\n\"Reply:\" is the final prompt token, part of the structured input format (\"Sentence: ... / Sentence: The color is red. / Reply:\"), immediately requiring the model's direct answer \u2014 the emotion label or short response.\n\"Given the following sentence, provide the corresponding label according to the pattern.\nSentence: The color is red.\nSentence: The color is red.\nReply:\" \u2014 the final token demands the model's direct output answer immediately following.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict pattern: example given (\"Example: The color is red. Label: Angry\"), now requiring the model to apply the same classification logic to the new sentence.\n\nThe instruction explicitly states the task is to output only the emotion label (e.g., \"Happy,\" \"Sad,\" \"Angry\") for the given sentence about a \"successful business.\"\n\n\"Reply:\" is the final prompt token, part of the structured input format (\"Sentence: ... / Sentence: The color is red. / Reply:\"), immediately requiring the model's direct answer \u2014 the emotion label or short response.\n\"Given the following sentence, provide the corresponding label according to the pattern.\nSentence: The color is red.\nSentence: The color is red.\nReply:\" \u2014 the final token demands the model's direct output answer immediately following.",
+  "truncated": false
+}

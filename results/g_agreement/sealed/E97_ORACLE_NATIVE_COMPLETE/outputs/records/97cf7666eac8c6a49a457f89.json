@@ -1,0 +1,9 @@
+{
+  "id": "97cf7666eac8c6a49a457f89",
+  "malformed": false,
+  "raw": "- =true&foo=bar\"  // `flag\n- =true&foo=bar`  // Note: `flag\n- =true&foo=bar`  // Order changed: `flag` comes first. We need to parse `flag\n- =true\"  // Note: `flag` appears first, but no other params. We must handle the order. If `flag\n- =true&foo=bar` (Note: the order of parameters is different, but `flag` is present)",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =true&foo=bar\"  // `flag\n- =true&foo=bar`  // Note: `flag\n- =true&foo=bar`  // Order changed: `flag` comes first. We need to parse `flag\n- =true\"  // Note: `flag` appears first, but no other params. We must handle the order. If `flag\n- =true&foo=bar` (Note: the order of parameters is different, but `flag` is present)"
+}

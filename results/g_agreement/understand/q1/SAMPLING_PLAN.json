@@ -1,0 +1,451 @@
+{
+  "at": "2026-10-24T05:15:32.794279+00:00",
+  "registration_commit": "1095e4e9",
+  "section": 107,
+  "seed": 20261024,
+  "tiers": {
+    "content": [
+      "json_status",
+      "latex_role",
+      "latex_subject",
+      "list_priority",
+      "list_topic",
+      "prose_sentiment",
+      "prose_topic",
+      "python_error",
+      "table_status"
+    ],
+    "local_form": [
+      "wordlist_preposition",
+      "word_allcaps",
+      "current_colon",
+      "number_magnitude_ge_1000",
+      "number_digits_ge_3",
+      "current_number",
+      "number_digits_ge_4",
+      "number_magnitude_ge_10",
+      "number_magnitude_ge_100",
+      "wordlist_auxiliary",
+      "table_role",
+      "python_string"
+    ],
+    "earlier_state": [
+      "prose_paren",
+      "python_depth",
+      "list_index",
+      "table_column"
+    ]
+  },
+  "quotas": {
+    "content": {
+      "latex_role": {
+        "A": 1,
+        "B": 2
+      },
+      "list_priority": {
+        "A": 2,
+        "B": 1
+      },
+      "latex_subject": {
+        "A": 1,
+        "B": 1
+      },
+      "json_status": {
+        "A": 1,
+        "B": 1
+      },
+      "python_error": {
+        "A": 1,
+        "B": 1
+      },
+      "table_status": {
+        "A": 1,
+        "B": 1
+      },
+      "list_topic": {
+        "A": 1,
+        "B": 1
+      },
+      "prose_sentiment": {
+        "A": 1,
+        "B": 1
+      },
+      "prose_topic": {
+        "A": 1,
+        "B": 1
+      }
+    },
+    "local_form": {
+      "number_magnitude_ge_1000": {
+        "A": 1,
+        "B": 1
+      },
+      "number_magnitude_ge_10": {
+        "A": 1,
+        "B": 1
+      },
+      "table_role": {
+        "A": 1,
+        "B": 1
+      },
+      "python_string": {
+        "A": 1,
+        "B": 1
+      },
+      "wordlist_auxiliary": {
+        "A": 1,
+        "B": 1
+      },
+      "current_colon": {
+        "A": 1,
+        "B": 1
+      },
+      "wordlist_preposition": {
+        "A": 1,
+        "B": 1
+      },
+      "number_digits_ge_3": {
+        "A": 1,
+        "B": 1
+      },
+      "number_magnitude_ge_100": {
+        "A": 0,
+        "B": 1
+      },
+      "number_digits_ge_4": {
+        "A": 0,
+        "B": 1
+      },
+      "current_number": {
+        "A": 1,
+        "B": 0
+      },
+      "word_allcaps": {
+        "A": 1,
+        "B": 0
+      }
+    },
+    "earlier_state": {
+      "prose_paren": {
+        "A": 3,
+        "B": 2
+      },
+      "list_index": {
+        "A": 2,
+        "B": 3
+      },
+      "python_depth": {
+        "A": 2,
+        "B": 3
+      },
+      "table_column": {
+        "A": 3,
+        "B": 2
+      }
+    }
+  },
+  "specs": {
+    "json_status": {
+      "bank": "w1",
+      "values": [
+        "approved",
+        "rejected"
+      ],
+      "descriptions": [
+        "an approved request",
+        "a rejected request"
+      ]
+    },
+    "latex_role": {
+      "bank": "w1",
+      "values": [
+        "theorem",
+        "example"
+      ],
+      "descriptions": [
+        "a theorem statement",
+        "a worked example"
+      ]
+    },
+    "latex_subject": {
+      "bank": "w1",
+      "values": [
+        "algebra",
+        "geometry"
+      ],
+      "descriptions": [
+        "algebra content",
+        "geometry content"
+      ]
+    },
+    "list_priority": {
+      "bank": "w1",
+      "values": [
+        "urgent",
+        "routine"
+      ],
+      "descriptions": [
+        "an urgent task",
+        "a routine task"
+      ]
+    },
+    "list_topic": {
+      "bank": "w1",
+      "values": [
+        "travel",
+        "study"
+      ],
+      "descriptions": [
+        "travel planning",
+        "study planning"
+      ]
+    },
+    "prose_sentiment": {
+      "bank": "w1",
+      "values": [
+        "positive",
+        "negative"
+      ],
+      "descriptions": [
+        "positive sentiment",
+        "negative sentiment"
+      ]
+    },
+    "prose_topic": {
+      "bank": "w1",
+      "values": [
+        "garden",
+        "ocean"
+      ],
+      "descriptions": [
+        "gardening content",
+        "ocean content"
+      ]
+    },
+    "python_error": {
+      "bank": "w1",
+      "values": [
+        "raise",
+        "return"
+      ],
+      "descriptions": [
+        "exception raising",
+        "normal function return"
+      ]
+    },
+    "table_status": {
+      "bank": "w1",
+      "values": [
+        "approved",
+        "rejected"
+      ],
+      "descriptions": [
+        "an approved table entry",
+        "a rejected table entry"
+      ]
+    },
+    "wordlist_preposition": {
+      "bank": "s84",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "descriptions": [
+        "the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without",
+        "it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without"
+      ]
+    },
+    "word_allcaps": {
+      "bank": "s84",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "descriptions": [
+        "the current word has at least two letters and is uppercase",
+        "it is not the case that the current word has at least two letters and is uppercase"
+      ]
+    },
+    "current_colon": {
+      "bank": "s84",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "descriptions": [
+        "the last observed non-space character is a colon",
+        "it is not the case that the last observed non-space character is a colon"
+      ]
+    },
+    "number_magnitude_ge_1000": {
+      "bank": "s84",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "descriptions": [
+        "absolute value of a numeric lexeme ending at the current character is at least 1000",
+        "absolute value of a numeric lexeme ending at the current character is less than 1000"
+      ]
+    },
+    "number_digits_ge_3": {
+      "bank": "s84",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "descriptions": [
+        "digit characters in that numeric lexeme (including exponent digits) is at least 3",
+        "digit characters in that numeric lexeme (including exponent digits) is less than 3"
+      ]
+    },
+    "current_number": {
+      "bank": "s84",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "descriptions": [
+        "a complete numeric lexeme ends at the current character",
+        "it is not the case that a complete numeric lexeme ends at the current character"
+      ]
+    },
+    "number_digits_ge_4": {
+      "bank": "s84",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "descriptions": [
+        "digit characters in that numeric lexeme (including exponent digits) is at least 4",
+        "digit characters in that numeric lexeme (including exponent digits) is less than 4"
+      ]
+    },
+    "number_magnitude_ge_10": {
+      "bank": "s84",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "descriptions": [
+        "absolute value of a numeric lexeme ending at the current character is at least 10",
+        "absolute value of a numeric lexeme ending at the current character is less than 10"
+      ]
+    },
+    "number_magnitude_ge_100": {
+      "bank": "s84",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "descriptions": [
+        "absolute value of a numeric lexeme ending at the current character is at least 100",
+        "absolute value of a numeric lexeme ending at the current character is less than 100"
+      ]
+    },
+    "wordlist_auxiliary": {
+      "bank": "s84",
+      "values": [
+        "present",
+        "absent"
+      ],
+      "descriptions": [
+        "the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would",
+        "it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would"
+      ]
+    },
+    "table_role": {
+      "bank": "w1",
+      "values": [
+        "header",
+        "data"
+      ],
+      "descriptions": [
+        "a table header cell",
+        "a table data cell"
+      ]
+    },
+    "python_string": {
+      "bank": "w1",
+      "values": [
+        "inside",
+        "outside"
+      ],
+      "descriptions": [
+        "an open string literal",
+        "a closed string literal"
+      ]
+    },
+    "prose_paren": {
+      "bank": "w1",
+      "values": [
+        "inside",
+        "outside"
+      ],
+      "descriptions": [
+        "the read position inside a parenthesis",
+        "the read position outside any parenthesis"
+      ]
+    },
+    "python_depth": {
+      "bank": "w1",
+      "values": [
+        "shallow",
+        "deep"
+      ],
+      "descriptions": [
+        "shallow bracket nesting",
+        "deep bracket nesting"
+      ]
+    },
+    "list_index": {
+      "bank": "w1",
+      "values": [
+        "first",
+        "later"
+      ],
+      "descriptions": [
+        "the first list item",
+        "a later list item"
+      ]
+    },
+    "table_column": {
+      "bank": "w1",
+      "values": [
+        "first",
+        "later"
+      ],
+      "descriptions": [
+        "the first table column",
+        "a later table column"
+      ]
+    }
+  },
+  "bank_refs": {
+    "w1": {
+      "bank": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2",
+      "files": {
+        "INPUT_SEAL.json": "f79302298eb1a8e9d0c46a996adc4c3071ba952fd77e0ea5215a00f1bad64a2c",
+        "manifest.json": "6e38ba7e5a5998082489ece5ab63a8a720bc039df6f32874b37481523f9f8f17",
+        "items.input.jsonl": "a8a43021c7958ec8b1a7682c1a2f46a5238dac9008c383f2205237cf06ad4d02",
+        "items.DO_NOT_STAGE.jsonl": "48497c10082f18a5e80034c34e97e7139ee9783de8a8b28440e2e30535dfa07b",
+        "labels.DO_NOT_STAGE.jsonl": "cbbde6fa9ec27367abd35af296a3115bb2c17ac290a2ef110f914148dad5a173"
+      }
+    },
+    "s84": {
+      "bank": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/cache/g_agreement/blindspot/w1b-bank-v1",
+      "files": {
+        "INPUT_SEAL.json": "ede1dcc5635742e26724971f0a56e0678cc0abe1edbaab60d2675837eff0d30f",
+        "manifest.json": "b2543d7ba9d1568199d3afba24ce96b43bb2c9fd44f3ead5f9fecbc66a6f871f",
+        "items.input.jsonl": "315351e48bcbea408601257e47960c3effffa3ea0c70b518fa2f1509e14ed40f",
+        "items.DO_NOT_STAGE.jsonl": "cdf0dfd19e1621995176be6653f89bf2aa27464e596cf659d8248c69841dcd93",
+        "labels.DO_NOT_STAGE.jsonl": "005c53337e15a151ee3cfd1d7e8599b85c7ca6a56847e0960acd4cb04dba3373"
+      }
+    }
+  },
+  "selection": "Within fixed row/A-B quotas choose lowest sha256 rank(seed,q1-item,tier,feature,arm,item_id); test only, distinct IDs. No reader/probe scores or prior free readouts used.",
+  "human_subset": "All60items, one common generation index per item for both readers: minimum hash rank(seed,q1-human-generation,item_id,sample) over0..3.120readouts,40/tier,20/reader/tier,20/truevalue/tier. Freeze IDs now, before readouts.",
+  "future_blind_format": "Exactly{id,question,readout}, opaque IDs and independent seeded order. Question includes exact text up to read token plus property A/B definitions, as Q1 requires text for hallucination/extra coding. No reader names, tier, truth, source ID/path, generation index, scores or key in coder files.",
+  "required_free_grid": "60items x2readers(Oracle44/NLA42) x4generations(greedy0+three temperature0.7 samples1..3)=480; fresh E16 FREE_SEAL required, fullgrid and sourceinput binding verified before export. No replacement/resampling if incomplete.",
+  "sample_code_sha256": "4ab1d0c7badf23ecd9005f02214f1d975e9364705d2764affbdd610a26ddefce"
+}

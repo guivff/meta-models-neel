@@ -1,0 +1,70 @@
+{
+  "dataset": "ceselder/glm-5.3-olens-wild-rollouts",
+  "revision": "226c6dce62ed88d5981ca864d0c99d3f082ccee6",
+  "anonymous": true,
+  "schemas": {
+    "olens_wild_rollouts.parquet": {
+      "rows": 156127,
+      "fields": {
+        "source": "string",
+        "family": "string",
+        "tid": "string",
+        "task_id": "string",
+        "trial_name": "string",
+        "passed": "bool",
+        "reward": "float",
+        "thinking": "string",
+        "reasoning_effort": "string",
+        "turn": "int32",
+        "role": "string",
+        "pos": "int32",
+        "token": "string",
+        "left_ctx": "string",
+        "next16": "string",
+        "rl_greedy": "string",
+        "rl_s1": "string",
+        "rl_s2": "string",
+        "rl_s3": "string",
+        "rl_s4": "string",
+        "sft_greedy": "string",
+        "sft_s1": "string",
+        "sft_s2": "string",
+        "sft_s3": "string",
+        "sft_s4": "string",
+        "h51_norm": "float",
+        "n_tokens_full": "int32",
+        "truncated": "bool",
+        "lens_rl_ckpt": "string",
+        "lens_sft_ckpt": "string",
+        "model": "string",
+        "extra": "string",
+        "next16_ids": "list<element: int32>"
+      }
+    },
+    "transcripts.parquet": {
+      "rows": 2009,
+      "fields": {
+        "tid": "string",
+        "source": "string",
+        "family": "string",
+        "task_id": "string",
+        "trial_name": "string",
+        "passed": "bool",
+        "reward": "float",
+        "thinking": "string",
+        "reasoning_effort": "string",
+        "n_tokens_full": "int32",
+        "truncated": "bool",
+        "text": "string",
+        "ids": "list<element: int32>",
+        "positions": "list<element: int32>",
+        "pos_roles": "list<element: string>",
+        "extra": "string"
+      }
+    }
+  },
+  "readout_text_inspected": false,
+  "eval_rl_flag": "ABSENT; rlvr1 explicitly training, all other source classifications unknown",
+  "position_recovery": "Exact token/text and single-token decode checks; ambiguous transcript joins excluded",
+  "card_sha256": "0579cd73e9c2a482b700c31f94a4c75f4e8ff7756bbbb3883e8d68b9fe587a63"
+}

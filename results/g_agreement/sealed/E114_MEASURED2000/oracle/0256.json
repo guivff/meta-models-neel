@@ -1,0 +1,66 @@
+[
+  {
+    "id": "40a12483edc8fd35d0e0e2d3",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (3, 4)]  # (depth,\n- 2) = [1, 2\n- 2, 3)]  # (leaf, count) or (2, 3\n- (2, 3), (4, 5)]`  # Nested tuples: (depth, value) or (index, value)\n- 2, 3), (4, 5)]` \u2192 `(1, 2",
+      "text": "- 2), (3, 4)]  # (depth,\n- 2) = [1, 2\n- 2, 3)]  # (leaf, count) or (2, 3\n- (2, 3), (4, 5)]`  # Nested tuples: (depth, value) or (index, value)\n- 2, 3), (4, 5)]` \u2192 `(1, 2"
+    }
+  },
+  {
+    "id": "b190e1b93d67e31842c3652d",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (3, 4)]),  # Nested tuple: (2,\n- 2), (3, 4)]` \u2192 `[(1, 2\n- 2, 3, 4)]` (nested list) \u2192 `(1, 2\n- 2), (3, 4)]` \u2192 `(10, 2), (20, 3), (30, 4)`",
+      "text": "- 2), (3, 4)]),  # Nested tuple: (2,\n- 2), (3, 4)]` \u2192 `[(1, 2\n- 2, 3, 4)]` (nested list) \u2192 `(1, 2\n- 2), (3, 4)]` \u2192 `(10, 2), (20, 3), (30, 4)`"
+    }
+  },
+  {
+    "id": "0cbcf842aa61bc320be528d7",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (3, 4)]), (2,\n- 2), (3, 4)]), (5, 6)]))  # \u6700\u5185\u5c42\u5143\u7ec4\n- 1), (2, 2)]), (3, 4))  # \u6700\u5185\u5c42\u5143\u7ec4\n- 2), (3, 4)]` \u88ab\u5c55\u5f00\u4e3a\u4e00\u7cfb\u5217 `Leaf` \u8282\u70b9\uff0c\u6bcf\u4e2a\u8282\u70b9\u5305\u542b `(start, end)` \u5143\u7ec4",
+      "text": "- 2), (3, 4)]), (2,\n- 2), (3, 4)]), (5, 6)]))  # \u6700\u5185\u5c42\u5143\u7ec4\n- 1), (2, 2)]), (3, 4))  # \u6700\u5185\u5c42\u5143\u7ec4\n- 2), (3, 4)]` \u88ab\u5c55\u5f00\u4e3a\u4e00\u7cfb\u5217 `Leaf` \u8282\u70b9\uff0c\u6bcf\u4e2a\u8282\u70b9\u5305\u542b `(start, end)` \u5143\u7ec4"
+    }
+  },
+  {
+    "id": "032d2a6caf5a95b6733958f9",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (3, 4))],  # \u7b2c\u4e00\u5c42\u5143\u7ec4\n- 2), (3, 4)]),  # \u7b2c\u4e00\u5c42\u5143\u7ec4\n- 2), (3, 4)]),  # \u7b2c\u4e00\u5c42\uff1a\u4e24\u4e2a\u53f6\u5b50\u8282\u70b9 (2,\n- 2), (3, 4)]` \u88ab\u5c55\u5f00\uff0c\u7136\u540e `(5, 6)` \u88ab\u5305\u88f9\u5728 `End` \u4e2d\uff0c\u518d\u88ab `(2,",
+      "text": "- 2), (3, 4))],  # \u7b2c\u4e00\u5c42\u5143\u7ec4\n- 2), (3, 4)]),  # \u7b2c\u4e00\u5c42\u5143\u7ec4\n- 2), (3, 4)]),  # \u7b2c\u4e00\u5c42\uff1a\u4e24\u4e2a\u53f6\u5b50\u8282\u70b9 (2,\n- 2), (3, 4)]` \u88ab\u5c55\u5f00\uff0c\u7136\u540e `(5, 6)` \u88ab\u5305\u88f9\u5728 `End` \u4e2d\uff0c\u518d\u88ab `(2,"
+    }
+  },
+  {
+    "id": "1cef83388f0c1ff3f92eec48",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3), (4, 5)]  # (depth,\n- 2, 3)  # \u2190 nested tuple (depth, value) or (3,\n- 2, 3)  # \u2190 nested tuple (depth, value) or (3, 2, 3\n- (2, 3), (5, 10)]` \u2192 `(1, 2, 3), (4, 5, 6)`",
+      "text": "- 2, 3), (4, 5)]  # (depth,\n- 2, 3)  # \u2190 nested tuple (depth, value) or (3,\n- 2, 3)  # \u2190 nested tuple (depth, value) or (3, 2, 3\n- (2, 3), (5, 10)]` \u2192 `(1, 2, 3), (4, 5, 6)`"
+    }
+  },
+  {
+    "id": "83a4e5bcb0ccd5ab0cc4f1d0",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3)  # (depth, line_number) -> (3,\n- 2) \u2192 (3, 2)  # (depth, line number) \u2192 (3\n- 2, 1)  # (depth, count)  \u2190 This is the innermost bracket, depth 3, count 2\n- 3, \"end\")`  \u2190 The innermost bracket, depth 3, count 2",
+      "text": "- 2, 3)  # (depth, line_number) -> (3,\n- 2) \u2192 (3, 2)  # (depth, line number) \u2192 (3\n- 2, 1)  # (depth, count)  \u2190 This is the innermost bracket, depth 3, count 2\n- 3, \"end\")`  \u2190 The innermost bracket, depth 3, count 2"
+    }
+  },
+  {
+    "id": "4087ada35ab43252d6fde094",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (3, 4)]), (2,\n- 1), (3, 2)]), (2, 1)]))  # \u6700\u5185\u5c42\u5143\u7ec4\n- 2), (3, 4)]), (1, 2)]  # \u6700\u5185\u5c42\u5143\u7ec4\n- 3), (4, 5)]` \u88ab\u5c55\u5f00\uff0c\u7136\u540e\u6bcf\u4e00\u5c42\u90fd\u751f\u6210\u4e00\u4e2a `Scope` \u5bf9\u8c61\uff0c",
+      "text": "- 2), (3, 4)]), (2,\n- 1), (3, 2)]), (2, 1)]))  # \u6700\u5185\u5c42\u5143\u7ec4\n- 2), (3, 4)]), (1, 2)]  # \u6700\u5185\u5c42\u5143\u7ec4\n- 3), (4, 5)]` \u88ab\u5c55\u5f00\uff0c\u7136\u540e\u6bcf\u4e00\u5c42\u90fd\u751f\u6210\u4e00\u4e2a `Scope` \u5bf9\u8c61\uff0c"
+    }
+  },
+  {
+    "id": "e4c9bdd22528bfebb7281393",
+    "output": {
+      "malformed": false,
+      "raw": "- 2), (3, 4))], [ (1,\n- 2), (3, 4)]), (1, 2)]), (1, 2)]), (0,\n- 1, 2), (3, 4)]), (1, 2)]` \u88ab\u5c55\u5f00\u4e3a\u4e00\u7cfb\u5217 `start` \u548c `end`\n- 2), (3, 4)]` \u88ab\u5c55\u5f00\u4e3a\u4e00\u7cfb\u5217 `start` \u548c `end` \u4e8b\u4ef6\u3002\n\n---\n\n###",
+      "text": "- 2), (3, 4))], [ (1,\n- 2), (3, 4)]), (1, 2)]), (1, 2)]), (0,\n- 1, 2), (3, 4)]), (1, 2)]` \u88ab\u5c55\u5f00\u4e3a\u4e00\u7cfb\u5217 `start` \u548c `end`\n- 2), (3, 4)]` \u88ab\u5c55\u5f00\u4e3a\u4e00\u7cfb\u5217 `start` \u548c `end` \u4e8b\u4ef6\u3002\n\n---\n\n###"
+    }
+  }
+]

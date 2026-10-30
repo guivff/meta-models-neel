@@ -1,0 +1,12 @@
+{
+  "id": "c0387bf9368fa3489fae0c39",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a \"Reference Answer\" establishing a rule, followed by a \"Question\" that deliberately contradicts it, setting up a test of instruction-following. The model must respond to the question using the reference answer's logic.\n\nThe pattern \"Reference Answer: [rule about X]. Question: [topic Y]. Answer:\" signals a few-shot or instruction-following template where the answer should demonstrate applying the reference answer's style to the new question.\n\n\"Answer:\" is the final token, a prompt label requiring the model's direct response \u2014 likely a short declarative sentence about AI's impact on healthcare, mirroring the reference answer's structure.\n\"Instruction: Assume the topic is about X.\nQuestion: How does AI impact healthcare?\nAnswer:\" \u2014 the final token demands the model's generated response, likely showing the model's flawed or compliant output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a \"Reference Answer\" establishing a rule, followed by a \"Question\" that deliberately contradicts it, setting up a test of instruction-following. The model must respond to the question using the reference answer's logic.\n\nThe pattern \"Reference Answer: [rule about X]. Question: [topic Y]. Answer:\" signals a few-shot or instruction-following template where the answer should demonstrate applying the reference answer's style to the new question.\n\n\"Answer:\" is the final token, a prompt label requiring the model's direct response \u2014 likely a short declarative sentence about AI's impact on healthcare, mirroring the reference answer's structure.\n\"Instruction: Assume the topic is about X.\nQuestion: How does AI impact healthcare?\nAnswer:\" \u2014 the final token demands the model's generated response, likely showing the model's flawed or compliant output.",
+  "truncated": false
+}

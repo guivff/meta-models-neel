@@ -1,0 +1,46 @@
+{
+  "schema": "i2-e74-resident-v5-review-v1",
+  "reviewed_at": "2026-10-27T17:17:42.805910+00:00",
+  "track": "G",
+  "source_commit": "0750d0761337859d845d1b05debe51c58ebc4dec",
+  "previous_audited_commit": "c2c0292a34b547f39627ac92371c00fd643c3a4b",
+  "status": "PASS_CPU_SOURCE_OPERATIONAL_STATUS_ONLY",
+  "archive_bytes": 1402488,
+  "archive_sha256": "bd22a707907fe51ff7596a955bb54cb9c3c51720d70a1e1ac8fa9d95e4f14d9e",
+  "source_seal_sha256": "bcbda2e71d6db1dd234cde670882447a5753fc93f147bffe2456497f99f49c42",
+  "exact_changed_archive_members": [
+    "SOURCE_SEAL.json",
+    "projects/g_agreement/e74/ops.py",
+    "projects/g_agreement/e74/stage.py",
+    "projects/g_agreement/e74/resident.py",
+    "projects/g_agreement/e74/test_operator.py"
+  ],
+  "all_other_14_members_byte_identical": true,
+  "findings": [
+    "Typed NoFit retains exact rejected whole-run forecast and cap in atomic first-rejection record",
+    "Pre-worker, worker and cost-watchdog paths seal explicit NO_FIT with exit4",
+    "Non-cost errors retain existing stop statuses; rules/assets/scopes/deadlines unchanged"
+  ],
+  "independent_validation": {
+    "tests": 18,
+    "wall_seconds": 1.02,
+    "command": "PYTHONDONTWRITEBYTECODE=1 /Users/guivff/Documents/Neel_Exploration/activation-readers/.venv/bin/python -m unittest projects.g_agreement.e74.test_operator -q",
+    "initial_attempt": "System python3 failed torch import due x86_64 versus ARM incompatibility before tests; no worker/GPU execution"
+  },
+  "worker_validation": {
+    "tests": 44,
+    "wall_seconds": 4.946596084046178,
+    "receipt_path": "results/g_agreement/e74/operator/resident-v5/CPU_TESTS.json",
+    "receipt_sha256": "bd14f364df944a9aff449ec1b190da086794d6dc0f9d2cdd151cbe6dbf0d53ef"
+  },
+  "gpu_calls": 0,
+  "weights_downloaded": 0,
+  "admitted": false,
+  "remaining": [
+    "Actual allocatable4B200 quote",
+    "Verified author runtime image/digest/dependency lock",
+    "Full shared budget admission",
+    "I-2 bounded cleanup/readout-pull/provider-stop controller",
+    "Guiv ordinal probe estimator ruling"
+  ]
+}

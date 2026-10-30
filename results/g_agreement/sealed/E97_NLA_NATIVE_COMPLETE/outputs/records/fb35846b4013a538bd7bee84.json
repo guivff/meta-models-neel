@@ -1,0 +1,12 @@
+{
+  "id": "fb35846b4013a538bd7bee84",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a system prompt establishes a rule, then a \"Question\" field is given, requiring a matching \"Answer\" that follows the rule.\n\nThe example demonstrates a deliberate mismatch between the instruction (focus on \"environmental impact\") and the question (focus on \"financial performance\"), testing whether the model follows the instruction or the question.\n\n\"Answer:\" is the final token, a label introducing the model's response to the structured example, expecting a short declarative sentence explaining the answer based on the instruction's stated focus on \"environmental impact.\"\n\"Instruction: [rule about X].\nQuestion: [question about Y].\nAnswer:\" \u2014 this is a few-shot prompt template, so the next tokens should be the model's generated answer demonstrating the pattern, likely \"The answer is...\" or a direct explanation.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a system prompt establishes a rule, then a \"Question\" field is given, requiring a matching \"Answer\" that follows the rule.\n\nThe example demonstrates a deliberate mismatch between the instruction (focus on \"environmental impact\") and the question (focus on \"financial performance\"), testing whether the model follows the instruction or the question.\n\n\"Answer:\" is the final token, a label introducing the model's response to the structured example, expecting a short declarative sentence explaining the answer based on the instruction's stated focus on \"environmental impact.\"\n\"Instruction: [rule about X].\nQuestion: [question about Y].\nAnswer:\" \u2014 this is a few-shot prompt template, so the next tokens should be the model's generated answer demonstrating the pattern, likely \"The answer is...\" or a direct explanation.",
+  "truncated": false
+}

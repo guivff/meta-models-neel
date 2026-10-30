@@ -1,0 +1,12 @@
+{
+  "id": "2ec7ee7e84d4310decc386f0",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional pattern establishes a strict format: given a sentence, output only the sentiment label (\"Positive\" or \"Negative\").\n\nThe few-shot example structure (\"Example sentence: ... Reply: Positive\") sets up a direct parallel response format for the new test case.\n\n\"Reply:\" is the final prompt token, part of the Q&A template, immediately requiring the model's answer \u2014 the sentiment label for \"The weather is sunny and warm today.\"\n\"Given the following sentence, provide the appropriate sentiment label based on the established pattern.\nExample sentence: The weather is sunny and warm today.\nSentence: The weather is sunny and warm today.\nReply:\" \u2014 this closing \"Reply:\" token demands the actual label output (e.g., \"Positive\" or a short explanatory phrase) as the immediate next token.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional pattern establishes a strict format: given a sentence, output only the sentiment label (\"Positive\" or \"Negative\").\n\nThe few-shot example structure (\"Example sentence: ... Reply: Positive\") sets up a direct parallel response format for the new test case.\n\n\"Reply:\" is the final prompt token, part of the Q&A template, immediately requiring the model's answer \u2014 the sentiment label for \"The weather is sunny and warm today.\"\n\"Given the following sentence, provide the appropriate sentiment label based on the established pattern.\nExample sentence: The weather is sunny and warm today.\nSentence: The weather is sunny and warm today.\nReply:\" \u2014 this closing \"Reply:\" token demands the actual label output (e.g., \"Positive\" or a short explanatory phrase) as the immediate next token.",
+  "truncated": false
+}

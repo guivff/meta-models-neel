@@ -1,0 +1,7 @@
+# §107 Q1 sampling implementation
+
+Dated 2026-10-24T05:15:32.794279+00:00, before drawing any Q1 item. Implements1095e4e9 with seed20261024:60distinct test items,20per tier,10A/10B per tier. Content uses §106 nine evaluable W1 semantic rows (python_effect is NOT DECODABLE and excluded there). Local form uses all10§84rows plus W1 table_role/python_string. Earlier state uses the four listed W1 rows.
+
+Row quotas differ by at most1within each tier, every eligible row is covered. A/B quotas are as balanced within each row as its odd/even quota permits; seeded allocation balances odd extras across the tier. IDs are seeded-hash selected within row/value, with no selection on reader/probe scores, prior free outputs or coding. Original sealed bank/manifest hashes bind prefixes, IDs and truths. Keys and exact text stay in cache; public E16 request contains only bank/feature/item IDs and generation requirements, no labels.
+
+Freeze the later120human-readout subset now: one common generation index0..3peritem, bothreaders, all60items. This is an exact subset of the later480blind records, seed-shuffled independently; preserve opaque IDs for agreement. Both coding files use exactly{id,question,readout}. The question field includes the visible text prefix and both A/B alternatives, as Q1 requires, never the true alternative or reader identity. No coder file can be built until E16 seals the complete480readout grid. No old E13 outputs substituted. API$0/GPU0h for sampling; no model or pod operations.

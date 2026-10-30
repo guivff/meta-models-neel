@@ -1,0 +1,12 @@
+{
+  "id": "29f8660c753d7c6b4754a474",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional template pattern: a structured prompt format with \"Task:\", \"Input:\", \"Output:\" fields signals a few-shot or zero-shot example setup.\n\nThe \"Task\" describes explaining a specific sentence's meaning, so the \"Answer\" field must provide a model response demonstrating that explanation style, likely referencing the \"number of days\" example.\n\n\"Answer:\" is the final token, functioning as a field label in the template, immediately requiring the model's generated response text \u2014 a direct, explanatory answer about the sentence's meaning.\n\"Given the following task and input, please generate the output.\nTask: [description of a task about a specific topic]\nInput: [example sentence]\nAnswer:\" \u2014 this pattern demands the next tokens be the actual explanatory output, likely starting with a sentence explaining the answer format or reasoning.\n\"Answer:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional template pattern: a structured prompt format with \"Task:\", \"Input:\", \"Output:\" fields signals a few-shot or zero-shot example setup.\n\nThe \"Task\" describes explaining a specific sentence's meaning, so the \"Answer\" field must provide a model response demonstrating that explanation style, likely referencing the \"number of days\" example.\n\n\"Answer:\" is the final token, functioning as a field label in the template, immediately requiring the model's generated response text \u2014 a direct, explanatory answer about the sentence's meaning.\n\"Given the following task and input, please generate the output.\nTask: [description of a task about a specific topic]\nInput: [example sentence]\nAnswer:\" \u2014 this pattern demands the next tokens be the actual explanatory output, likely starting with a sentence explaining the answer format or reasoning.\n\"Answer:\"",
+  "truncated": false
+}

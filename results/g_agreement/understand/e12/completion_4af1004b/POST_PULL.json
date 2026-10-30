@@ -1,0 +1,32 @@
+{
+  "CPU_analysis_command_once_after_join": [
+    "python",
+    "-m",
+    "projects.g_agreement.understand.followup_analyse",
+    "e12",
+    "--reader-scope",
+    "nla",
+    "--inputs",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e1b_e12/e12",
+    "--collection",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e12-joined-nla",
+    "--out",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e12/nla_analysis"
+  ],
+  "CPU_join_command": [
+    "python",
+    "-m",
+    "projects.g_agreement.understand.e12_completion",
+    "join",
+    "--inputs",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e1b_e12/e12",
+    "--prior",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/blindspot/understand-units/nzt9h77aqb9o4w/out/E12_NLA_ONLY_NEW_RUN",
+    "--completion",
+    "PULLED_E12_CONTEXT_COMPLETION_157",
+    "--out",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e12-joined-nla"
+  ],
+  "conditions": "completionmustbeCOMPLETEandexact157unit suffix;joinverifiesold+newseals/disjoint/full8400gridinoriginalorder;no model/labelcallsinjoin. ScientificNLAanalysisonceonlyafterjoinedCOMPLETE,originalmetrics/seedsunchanged. Oracleprimaryalreadyanalysed,norerun;W2/S2notcalled.",
+  "status": "BLOCKED_NO_FIT_NO_NLA_ANALYSIS_UNTIL_JOINED_COMPLETE"
+}

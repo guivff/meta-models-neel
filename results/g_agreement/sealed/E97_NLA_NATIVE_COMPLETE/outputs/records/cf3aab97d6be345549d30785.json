@@ -1,0 +1,12 @@
+{
+  "id": "cf3aab97d6be345549d30785",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Question:\" and \"Answer:\" fields, requiring a model-generated response following the established format.\n\nThe \"If the question is about X, then Y\" conditional rule establishes a constraint: the answer must address \"how to explain the software's features,\" not \"how to explain the software's purpose.\"\n\n\"Question: [topic about software's purpose]\nRule: [topic about software's features]\nAnswer:\" \u2014 the final token \"Answer:\" is a field label in a few-shot or instruction-following template, immediately requiring the actual explanatory response text (e.g., \"The answer explains...\" or a sample explanation).\n\"\nQuestion: [topic]\nRule: [topic]\nAnswer:\" \u2014 the final \"Answer:\" expects a concrete example response demonstrating the rule's application, likely beginning with a sentence.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Question:\" and \"Answer:\" fields, requiring a model-generated response following the established format.\n\nThe \"If the question is about X, then Y\" conditional rule establishes a constraint: the answer must address \"how to explain the software's features,\" not \"how to explain the software's purpose.\"\n\n\"Question: [topic about software's purpose]\nRule: [topic about software's features]\nAnswer:\" \u2014 the final token \"Answer:\" is a field label in a few-shot or instruction-following template, immediately requiring the actual explanatory response text (e.g., \"The answer explains...\" or a sample explanation).\n\"\nQuestion: [topic]\nRule: [topic]\nAnswer:\" \u2014 the final \"Answer:\" expects a concrete example response demonstrating the rule's application, likely beginning with a sentence.",
+  "truncated": false
+}

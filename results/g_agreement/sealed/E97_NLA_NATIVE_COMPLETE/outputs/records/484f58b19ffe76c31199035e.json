@@ -1,0 +1,12 @@
+{
+  "id": "484f58b19ffe76c31199035e",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format: a system prompt establishes a rule (\"only discuss X\"), followed by a task question, requiring a model answer that follows the rule.\n\nThe pattern \"Question: [topic] / Answer:\" signals a few-shot or instruction-following template where the model must generate a response demonstrating the specified constraint about discussing \"the impact of technology on society.\"\n\n\"Answer:\" is the final token, acting as a prompt label requiring the model's generated response text to follow immediately \u2014 likely a sample answer about the topic, possibly beginning with \"To explain...\" or similar instructional phrasing.\n\"Instruction: [rule about discussing X]\nQuestion: Write an answer about [different topic Y]\nAnswer:\" \u2014 the final \"Answer:\" expects a demonstration response, likely a short paragraph showing the model's output, constrained by the preceding instruction's framing.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format: a system prompt establishes a rule (\"only discuss X\"), followed by a task question, requiring a model answer that follows the rule.\n\nThe pattern \"Question: [topic] / Answer:\" signals a few-shot or instruction-following template where the model must generate a response demonstrating the specified constraint about discussing \"the impact of technology on society.\"\n\n\"Answer:\" is the final token, acting as a prompt label requiring the model's generated response text to follow immediately \u2014 likely a sample answer about the topic, possibly beginning with \"To explain...\" or similar instructional phrasing.\n\"Instruction: [rule about discussing X]\nQuestion: Write an answer about [different topic Y]\nAnswer:\" \u2014 the final \"Answer:\" expects a demonstration response, likely a short paragraph showing the model's output, constrained by the preceding instruction's framing.",
+  "truncated": false
+}

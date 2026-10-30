@@ -1,0 +1,72 @@
+{
+  "aggregate_cap_seconds": 10800,
+  "assignment_required": [
+    "issuer=integrator",
+    "experiment=E46",
+    "pod_id=RUNPOD_POD_ID",
+    "plan_sha256",
+    "assets_manifest_sha256",
+    "gpu_type=H200",
+    "gpu_count=1",
+    "prior_gpu_seconds=actual total prior E46 custody",
+    "allocation_started_at=provider creation epoch",
+    "hard_deadline <= allocation_started_at + 10800 - prior_gpu_seconds",
+    "external_stop.confirmed=true",
+    "external_stop.deadline=hard_deadline",
+    "external_stop.receipt",
+    "phase_estimates_seconds with all eight E36 phase keys; oracle_value_word=0 and continuation=0"
+  ],
+  "channels": [
+    "probe",
+    "Oracle asked",
+    "NLA asked"
+  ],
+  "cpu_analysis_argv": [
+    "/Users/guivff/Documents/Neel_Exploration/activation-readers/.venv/bin/python",
+    "results/g_agreement/understand/e46/analyze_readers_once.py",
+    "--receipt",
+    "results/g_agreement/understand/e46/cache/VERIFIED_READER_PULL.json"
+  ],
+  "eligible_rows": [
+    "fenced_code",
+    "latex_list",
+    "number_completion",
+    "word_first_piece"
+  ],
+  "experiment": "E46",
+  "minimum_prior_gpu_seconds": 221.03553318977356,
+  "operator": "integrator",
+  "parity": {
+    "input_seal_sha256": "c41970528477a88e15144b7822e9d07e592ad21e340d65ba312d4513532c8aae",
+    "items": 252,
+    "required_before_production": true,
+    "rows": [
+      "prose_sentiment",
+      "prose_paren",
+      "python_string"
+    ],
+    "tolerance": 0.02
+  },
+  "persistence_seal_sha256": "96f8c9c28c40fc87586e3a7b81e9e7eebdd26f6f5129de11838548c9bb828e38",
+  "plan_path": "results/g_agreement/understand/e46/READER_PLAN.json",
+  "plan_sha256": "655114bc3e150c5cc1aae4e0fcfd1bce81a9df32d1b5c6c4ae348a045feee218",
+  "priority_after": [
+    "E42"
+  ],
+  "stage": "READERS",
+  "status": "READY_FOR_INTEGRATOR_READER_ASSIGNMENT",
+  "worker_argv": [
+    "python",
+    "results/g_agreement/understand/e46/reader_worker.py",
+    "--root",
+    "CHECKOUT_ROOT",
+    "--plan",
+    "results/g_agreement/understand/e46/READER_PLAN.json",
+    "--assignment",
+    "READER_ASSIGNMENT.json",
+    "--assets",
+    "VERIFIED_NATIVE_ASSETS.json",
+    "--out",
+    "NEW_OUTPUT_DIRECTORY"
+  ]
+}

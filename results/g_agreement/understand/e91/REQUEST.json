@@ -1,0 +1,81 @@
+{
+  "argv": [
+    "python",
+    "/workspace/results/g_agreement/understand/late198/worker.py",
+    "--inputs",
+    "/workspace/e91/inputs",
+    "--assets",
+    "/workspace/e56/assets.json",
+    "--assignment",
+    "/workspace/e91/assignment.json",
+    "--out",
+    "/workspace/e91/out",
+    "--releases",
+    "/workspace/e91/releases",
+    "--source-sha",
+    "53d77dfba57e2146449cc7a642784c1d20d31dd9883c65ffeac93bc481553db6",
+    "--input-sha",
+    "2eda8f9b019da8c82b3b30a0f99302a087ab1b2562ff3b57f423667acf4d8236"
+  ],
+  "cap_seconds": 4280,
+  "cumulative_cap_seconds": 4280,
+  "exact_preflight": {
+    "GPU_calls": 0,
+    "all_stages_executed": true,
+    "experiment": "E91",
+    "input_archive_sha256": "577f9ea29eb69bdcca0ba958331cfa4797fcba3bc320896bbc0cfb94f2478f12",
+    "items": 900,
+    "negative_cases": [
+      "overcap",
+      "extra_private_file",
+      "missing_input"
+    ],
+    "source_archive_sha256": "8aaf1aeea16fdf8c5f6d95b2bbbfa2f1551bcb47c2a8a1b5ec13bc3d0456470a",
+    "status": "PASS"
+  },
+  "experiment": "E91",
+  "forecast": {
+    "cpu_wait_allowance_seconds": 600,
+    "fits_request": true,
+    "forecast_seconds": 3423.822153037996,
+    "jobs": {
+      "base_setup": 1,
+      "capture": 113,
+      "nla_native": 57,
+      "nla_setup": 1,
+      "oracle_native": 57,
+      "oracle_setup": 1
+    },
+    "margin": 1.25,
+    "new_GPU_measurement": false,
+    "recommended_cap_seconds": 4280,
+    "retrieval_reserve_seconds": 60,
+    "seed_seconds_per_batch": {
+      "base_setup": 347.7268692100188,
+      "base_text": 11.115151894329067,
+      "capture": 0.423359481675708,
+      "downstream": 11.115151894329067,
+      "next_token": 0.433327909,
+      "nla_native": 19.17773307699612,
+      "nla_setup": 293.8343498230679,
+      "oracle_native": 11.115151894329067,
+      "oracle_setup": 347.7268692100188
+    },
+    "status": "PLANNING_FORECAST_FROM_SAVED_TIMINGS",
+    "synthetic_warmups": "discarded and excluded from batch estimator; charged to absolute stage clock"
+  },
+  "input_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e91_runner_v1/package/inputs.tar.gz",
+  "input_archive_sha256": "577f9ea29eb69bdcca0ba958331cfa4797fcba3bc320896bbc0cfb94f2478f12",
+  "input_seal_sha256": "2eda8f9b019da8c82b3b30a0f99302a087ab1b2562ff3b57f423667acf4d8236",
+  "integrator_owns_launch": true,
+  "labels_on_pod": false,
+  "launch_allowed": true,
+  "priority_after": [
+    "E79",
+    "E80"
+  ],
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e91_runner_v1/package/source.tar.gz",
+  "source_archive_sha256": "8aaf1aeea16fdf8c5f6d95b2bbbfa2f1551bcb47c2a8a1b5ec13bc3d0456470a",
+  "source_seal_sha256": "53d77dfba57e2146449cc7a642784c1d20d31dd9883c65ffeac93bc481553db6",
+  "status": "READY"
+}

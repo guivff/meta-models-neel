@@ -1,0 +1,52 @@
+{
+  "base_source_commit": "8941babacf61922cf9a4fb2e202a048247c909ce",
+  "files": {
+    "projects/g_agreement/r_bench/section49.py": {
+      "base_sha256": "a078c074baac2e68e0812ab7a7120420726f890b4a5f1fa6344d5c9f33fe3adb",
+      "overlay_sha256": "1db3796cf84d359cc8ddcfed913dd10a8b0275d0752966dff5736b658553d663",
+      "exact_substitutions": [
+        [
+          "b['cap_seconds']!=CAP_SECONDS",
+          "b['cap_seconds']!=(14400 if b['shard_id']==0 else CAP_SECONDS)"
+        ],
+        [
+          "b['created_epoch']+CAP_SECONDS",
+          "b['created_epoch']+(14400 if b['shard_id']==0 else CAP_SECONDS)"
+        ]
+      ]
+    },
+    "projects/g_agreement/r_bench/section49_deploy.py": {
+      "base_sha256": "bcff792894dce99e1d995e40d3d8d63bda022e865d111ce8875d12ffa570dd74",
+      "overlay_sha256": "25c20e3df92737f3c5aab660a6fa685670bf7bde8cc95c74f51bb54b7545f929",
+      "exact_substitutions": [
+        [
+          "b['cap_seconds']!=9000",
+          "b['cap_seconds']!=(14400 if b['shard_id']==0 else 9000)"
+        ],
+        [
+          "b['created_epoch']+9000",
+          "b['created_epoch']+(14400 if b['shard_id']==0 else 9000)"
+        ],
+        [
+          "cfg=dict(cap_seconds=9000,",
+          "cfg=dict(cap_seconds=b['cap_seconds'],"
+        ]
+      ]
+    },
+    "projects/g_agreement/r_bench/section49_supervisor.py": {
+      "base_sha256": "f23807d423da58e00bfec06ac1e9f630ec0f6490d7de660ec36e012cee433bd0",
+      "overlay_sha256": "8e4af8b0b3abbe58cd1518186af25018f4602b4a26527fe6c4e9020a5d4ddc8f",
+      "exact_substitutions": [
+        [
+          "cfg.get('cap_seconds')!=9000",
+          "cfg.get('cap_seconds')!=(14400 if cfg['shard_id']==0 else 9000)"
+        ],
+        [
+          "cfg['created_epoch']+9000",
+          "cfg['created_epoch']+(14400 if cfg['shard_id']==0 else 9000)"
+        ]
+      ]
+    }
+  },
+  "manifest_sha256": "f6379d62236eba08968aee9864cbec10a0ccf8fb85605202f097525d13366f3f"
+}

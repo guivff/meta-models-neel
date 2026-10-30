@@ -1,0 +1,77 @@
+{
+  "AR": {
+    "batch": 8,
+    "native_layer": 44,
+    "primary": "fixeddevunitprobe projection AUROC,Apositive,nosignflip,testonly",
+    "primary_uncertainty": "frozenW1 templateclusterbootstrap2000,seed20261023,fixeddevdirection",
+    "secondary": "E1 signed classmeanprojectiondifference /sealedrealtestclassmeangap",
+    "secondary_uncertainty": "exactE1bootstrap2000withinvalueitems,seed20261024;denominatorfixed",
+    "text": "continuation alone,officialAR no truncation"
+  },
+  "GPU_or_API_calls": 0,
+  "authority_commit_including_primary_AUROC_amendment": "0442e10a5ac106ee23d8a36d3bc71c9c58151413",
+  "authority_git_blob": "5e57ebe14675ae7c8e3af44734942a4318a0a4ce",
+  "authority_sha256": "837cc43cd0b3da7635cbda5c1b3cadb84f800702d38618b16c285fdbdc8fd5c7",
+  "cap_formula": "min(1.5F+360,1440) fromownimmutablefirstscience;includesallgeneration+AR+phasechanges",
+  "cap_gpu_seconds": 1440,
+  "comparison": [
+    "window AUROC",
+    "AR continuation projection AUROC PRIMARY",
+    "AR continuation fidelity SECONDARY",
+    "sealed E1 AR on prefix fidelity and POST-RESULT AUROC",
+    "sealed E1 AR description fidelity and POST-RESULT AUROC",
+    "sealed W1 Oracle AUROC"
+  ],
+  "dev_clarification": "\u00a7102 specifies fit-on-dev/test-on-test window ceiling. Generate dev continuations solely for that fit, never fit on test. All4200generations and2100test ARcalls share E1b cap;no new targetactivation capture.",
+  "experiment": "E1b",
+  "generation": {
+    "EOS": "argmax may emit EOS;retainrawtokens anddecodedmarkers,continueexactly16steps withoutmasking EOS orforced token",
+    "beams": 1,
+    "before_AR": "all4200retainedcontinuations frozen+hashed before anyretained ARcall;ARsetupwarmupuses onlyneutral synthetictext,notitemcontinuations",
+    "decoding": "skip_special_tokens=False,clean_up_tokenization_spaces=False;no strip,repair,drop",
+    "new_tokens": 16,
+    "ordering": "length ascending,originalW1order withinlength;outputreordered tooriginalW1ids",
+    "raw_prefix": "exact W1 item token IDs through readtoken; no chat",
+    "sampling": false,
+    "units": "335frozen equal-prefix-length batches,atmost32;no padding"
+  },
+  "interpretation": "characterngram logistic isamodel-specific predictability baseline,not information-theoretic ceiling;AUROCdoesnotcalibrate reconstructionmagnitude",
+  "live_timing": "No external model-loading forecast. Before first measuredpathF,provisionalcap=min(reserved,360);eachpath next3retainedunits suppliesmedian*unitcount. Currentcap=min(reserved,1.5*sum(measuredpathF)+360,registeredceiling),fromsamefirstscience. Unknownpaths contribute0 untilmeasured,so provisionalcap neverexceeds eventualfullFcap. Atomic CLOCK.json publishescap/status forwatchdog;completedexperimentclock retired beforeE12.",
+  "metric_amendment": "\u00a7102 dated04:50CEST;registered afterseeingE1/E2 butbeforeE1b isbuilt/run;test AR projection AUROC isprimary,real-gap ratiosecondary",
+  "original_brief_commit": "ae6ffef7",
+  "population": {
+    "AR_continuations": 2100,
+    "dev_items": 2100,
+    "new_greedy_continuations": 4200,
+    "per_row_per_split": 84,
+    "rows": 25,
+    "test_items": 2100
+  },
+  "prediction": "Revealingstructure:highwindow andAR;nonrevealing counts:lowboth;meaning:highboth. Allrows reported,no newthresholds.",
+  "section": 102,
+  "setup": "shared2400s withE12;ARloads once andiswarmed in sameprocess beforescience;targetbackbonereused forOracle inE12",
+  "status": "FROZEN_BEFORE_ANY_MODEL_FORWARD",
+  "window_model": {
+    "C": 1.0,
+    "analyzer": "char",
+    "convergence": "errorifnotconverged;no adaptive rerun",
+    "fit": "dev text vocabulary,IDF andcoefficients only;W1disjointtemplatefamilies;no tuning orCVselection",
+    "lowercase": false,
+    "max_features": null,
+    "max_iter": 2000,
+    "min_df": 1,
+    "ngram_range": [
+      1,
+      4
+    ],
+    "norm": "l2",
+    "penalty": "l2",
+    "random_state": 20261023,
+    "smooth_idf": true,
+    "solver": "lbfgs",
+    "sublinear_tf": false,
+    "tol": 0.0001,
+    "type": "TfidfVectorizer + LogisticRegression",
+    "use_idf": true
+  }
+}

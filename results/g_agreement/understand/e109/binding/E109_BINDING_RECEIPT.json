@@ -1,0 +1,36 @@
+{
+  "experiment": "E109",
+  "issuer": "Integrator Q",
+  "created_utc": "2026-10-29T09:26:00+00:00",
+  "status": "BINDINGS_READY_FOR_ONCE_ADAPTER",
+  "spec": {
+    "path": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_e109/binding_v1/SPEC.json",
+    "sha256": "6f66fa2b52cbdc3ca237f6991c812801ef0f899cd197dea11066f0202f448042"
+  },
+  "output_seal": {
+    "path": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_e109/binding_v1/E109_BINDING_SEAL.json",
+    "sha256": "01275a58b0bf65075e470b06594c12c08138fc7e0d0d77275c974c689a0915e7"
+  },
+  "measurements": {
+    "path": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_e109/binding_v1/MEASUREMENTS.json",
+    "sha256": "4dfb778a8b1be3f60cbe72482c8c43ebb132311106530311ce821416a0bbdcde"
+  },
+  "inventory": {
+    "seal": "results/g_agreement/understand/e109/cpu_only/INVENTORY_SEAL.json",
+    "sha256": "debe51a79fa9677701f9291dc57f07337be7e5eeb6e99d6dd548746dc1e996f9",
+    "commit": "b8dae0db486cc844b9daacdfa13636d9043d4952"
+  },
+  "e104_analysis_sha256": "01d8d5a17b7bbea1d2df27982ef10c897156093430967d8da442e0a5137cbe1e",
+  "e104_private_sha256": "495bbb19179f507869779d611c737ac82181f8c404054fcffd6963b7615fd0e4",
+  "e109_production_output_seal": "ecaf7813b2baa57d7c210423cd1ca09a1d388af566ab6eacbeeb5384e8838bde",
+  "internals_c_binding_seal": "4e891abd (oracle_code_binding/BINDING_SEAL.json)",
+  "local_only": "SPEC, binding seal and MEASUREMENTS stay CPU-local (MEASUREMENTS derives from W-internals-C private pointers); hashes published here",
+  "checks": [
+    "array order == inventory dev/test IDs per row",
+    "every ref member present in its source seal",
+    "all 60 capture arrays 84x5120 finite",
+    "1008 Oracle refs, 84 per row/layer/condition in inventory test order",
+    "both once-guards unused"
+  ],
+  "judgments_opened": false
+}

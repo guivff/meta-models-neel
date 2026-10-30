@@ -1,0 +1,12 @@
+{
+  "id": "20143fac46f7bddbd1ab987d",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a \"Question\" is posed about how to explain something, requiring a direct answer following \"Answer:\".\n\nThe prompt establishes a template structure where a specific instruction (\"Do not use the word 'data'\") is given, and the model must generate a response matching that constraint.\n\n\"Question: How to explain the use of [topic]?\\nInstruction: [topic description]\\nAnswer:\" \u2014 this final \"Answer:\" is a label/field marker requiring the actual explanatory response text to follow immediately, likely a short declarative sentence about the topic.\nThe pattern mirrors a few-shot or template format, so the next tokens should be a sample answer demonstrating the instruction's style.\n\"Question: [topic]\nInstruction: [topic]\nAnswer:\" \u2014 the final token demands the model's generated response text, beginning the answer field.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a \"Question\" is posed about how to explain something, requiring a direct answer following \"Answer:\".\n\nThe prompt establishes a template structure where a specific instruction (\"Do not use the word 'data'\") is given, and the model must generate a response matching that constraint.\n\n\"Question: How to explain the use of [topic]?\\nInstruction: [topic description]\\nAnswer:\" \u2014 this final \"Answer:\" is a label/field marker requiring the actual explanatory response text to follow immediately, likely a short declarative sentence about the topic.\nThe pattern mirrors a few-shot or template format, so the next tokens should be a sample answer demonstrating the instruction's style.\n\"Question: [topic]\nInstruction: [topic]\nAnswer:\" \u2014 the final token demands the model's generated response text, beginning the answer field.",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "16c2625cfb1a74c66093a0c1",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task (\"positive\" or \"negative\") with examples, requiring a direct label response.\n\nThe pattern shows a structured Q&A format: definition given, then a specific test case (\"Example sentence: 'The weather is good today.'\") followed by \"Reply:\" \u2014 the model must now output the classification label for that example.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured format, immediately requiring the model's answer (e.g., \"negative\" or \"positive\") for the preceding example sentence about \"The weather is good today.\"\n\"Given the following example sentence: 'The weather is good today.'\nTask: Determine the response type (positive or negative).\nExample sentence: 'The weather is good today.'\nReply:\" \u2014 the final field marker awaiting the answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task (\"positive\" or \"negative\") with examples, requiring a direct label response.\n\nThe pattern shows a structured Q&A format: definition given, then a specific test case (\"Example sentence: 'The weather is good today.'\") followed by \"Reply:\" \u2014 the model must now output the classification label for that example.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured format, immediately requiring the model's answer (e.g., \"negative\" or \"positive\") for the preceding example sentence about \"The weather is good today.\"\n\"Given the following example sentence: 'The weather is good today.'\nTask: Determine the response type (positive or negative).\nExample sentence: 'The weather is good today.'\nReply:\" \u2014 the final field marker awaiting the answer.",
+  "truncated": false
+}

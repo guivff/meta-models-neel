@@ -1,0 +1,22 @@
+# V7 — target-private facts pilot, 16 ownership pairs (PREREG_WV.md Part V; brief_wv.md §V7)
+Run 2026-10-12T10:00:56+00:00; rows cache/g_agreement/w/s3_lo.jsonl (sha256 f05ec0bfc2aa), items projects/g_agreement/banks/w/items_v7.json; pair bootstrap 1000 (seed 0), 95 % percentile CI; Wilson in brackets. Win = lo_own(A) + lo_own(B) > 0, lo_own = lp(own) − lp(other).
+
+| reader @ layer | within-pair win | mean margin (nats) | unscorable / missing rows | ≥ 0.70 & CI > 0.5 |
+|---|---|---|---|---|
+| J-lens @ L42 | 13/16 = 81.2% boot[62.5, 93.8] wilson[57.0, 93.4] | +0.13 | 0 / 0 | YES |
+| J-lens @ L38 | 8/16 = 50.0% boot[25.0, 75.0] wilson[28.0, 72.0] | +0.02 | 0 / 0 | no |
+| Oracle lens @ L42 | 16/16 = 100.0% boot[100.0, 100.0] wilson[80.6, 100.0] | +2.60 | 0 / 0 | YES |
+| Oracle lens @ L38 | 13/16 = 81.2% boot[62.5, 100.0] wilson[57.0, 93.4] | +1.57 | 0 / 0 | YES |
+| skip-lens A @ L42 | 15/16 = 93.8% boot[81.2, 100.0] wilson[71.7, 98.9] | +1.54 | 0 / 0 | YES |
+| probe (held-out fold) @ L42 | 0/16 = 0.0% boot[0.0, 0.0] wilson[0.0, 19.4] | -3.57 | 0 / 0 | no |
+| probe (held-out fold) @ L38 | 0/16 = 0.0% boot[0.0, 0.0] wilson[0.0, 19.4] | -6.60 | 0 / 0 | no |
+| NLA @ L42 | not scored — phase B scores the counts S1 states and the S2 read-backs only (PREREG deviation 2026-10-12 05:15 UTC) | – | – | – |
+| prompt-only baseline (visible text) | 50.0% by construction (16/16 pairs have an identical visible prompt; prompt_only_text identical in 16) | – | – | – |
+| target WITH preamble (ceiling) | greedy accuracy 32/32 = 100.0% boot[100.0, 100.0] wilson[89.3, 100.0] (items); pair win by first-token log-odds 16/16 = 100.0% boot[100.0, 100.0] wilson[80.6, 100.0] | – | – | – |
+
+**Prompt-only baseline.** prompt-only baseline = 50 % by construction (identical visible prompt → identical prompt-only answer for both versions); the pilot therefore cannot be won by reading the visible text, only from the state.
+**Pre-registered rule.** any reader >= 0.70 within-pair win with the pair-bootstrap CI excluding 0.5 → positive pilot → design a 48-pair confirmatory set. Positive cells: jlens@L42, olens@L42, olens@L38, skip_a@L42; best cell olens@L42 = 100.0%.
+**Verdict: POSITIVE pilot — 48-pair confirmatory set designed.** Design written to projects/g_agreement/banks/w/items_v7_confirmatory_design.md.
+
+Caveats: 16 pairs is a pilot (a 0.70 point estimate has a Wilson lower bound ≈ 0.47 at n = 16, so only a near-ceiling reader can pass); NLA has no V7 rows (phase B budget);
+the preamble is a system turn, so the 'target-private' fact is in the target's context but absent from the read vector's visible prompt, as the brief defines it.

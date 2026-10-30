@@ -1,0 +1,194 @@
+--- e24_worker.py
++++ e24_relaunch.py
+@@ -1,4 +1,4 @@
+-"""E24 §118 acquisition: one shared capture, complete per-layer tiers, bounded pods."""
++"""E24 §118 acquisition: §144 shard-local certified capture, unchanged scientific channels."""
+ import argparse
+ import json
+ import math
+@@ -14,7 +14,7 @@
+ PRIORITY = (44,20,60,32,52,28,36,40,48,56,24)
+ C6_LAYERS = (20,36,44,60)
+ C7_LAYERS = (20,44,60)
+-CAP, SETUP, TOTAL, RESERVE = 10800, 2400, 43200, 180
++CAP, SETUP, TOTAL, RESERVE = 10800, 2400, 32738, 180
+ BATCH = 32
+ 
+ 
+@@ -23,7 +23,7 @@
+ 
+ 
+ def shards(n):
+-    if n not in range(1,5): raise ValueError('one to four pods')
++    if n not in range(1,9): raise ValueError('one to eight pods')
+     return [[44]+list(PRIORITY[1+i::n]) for i in range(n)]
+ 
+ 
+@@ -55,7 +55,7 @@
+     n=len(forecasts); layout=shards(n)
+     if sorted(f['slot'] for f in forecasts)!=list(range(n)): raise ValueError('one forecast per slot')
+     forecasts=sorted(forecasts,key=lambda f:f['slot'])
+-    if len({f['plan_sha256'] for f in forecasts})!=1 or len({f['capture_seal_sha256'] for f in forecasts})!=1:
++    if len({f['plan_sha256'] for f in forecasts})!=1:
+         raise ValueError('inconsistent forecast source/capture binding')
+     for i,f in enumerate(forecasts):
+         if f['layers']!=layout[i] or not f['provider_created_epoch']<=f['first_science_epoch']<=f['forecast_epoch']<=now:
+@@ -74,7 +74,7 @@
+             remain=sum(sum(f['tier1'][str(l)].values()) for l in layers)
+             if c6:
+                 remain+=sum(f['C6'][str(l)] for l in layers if l in C6_LAYERS)
+-                # All pods reserve the shared-capture transfer/wait, not only its owner.
++                # Each pod reserves its own C6 capture and operational allowance.
+                 remain+=f['c6_capture_and_transfer_s']
+             if c7: remain+=sum(f['C7'][str(l)] for l in layers if l in C7_LAYERS)
+             F=now-f['first_science_epoch']+remain
+@@ -97,7 +97,7 @@
+     selected=allocate(prefix,c6,c7)
+     return {'status':'FIT','layers_priority':prefix,'dropped_suffix':list(PRIORITY[len(prefix):]),
+             'pods':selected,'reserved_gpu_s':sum(x['reserved_gpu_s'] for x in selected),
+-            'plan_sha256':forecasts[0]['plan_sha256'],'capture_seal_sha256':forecasts[0]['capture_seal_sha256'],
++            'plan_sha256':forecasts[0]['plan_sha256'],'capture_seals':{str(f['slot']):f['capture_seal_sha256'] for f in forecasts},
+             'created_epoch':now,'C6':bool(c6),'C7':bool(c7)}
+ 
+ 
+@@ -113,8 +113,9 @@
+         if not set(PRIORITY)<=set(self.ar.layers): raise ValueError('missing trained AR layer tag')
+ 
+     def capture(self, items, layers):
+-        from .w1_capture import capture_at_layers
+-        return capture_at_layers(self.ol,items,layers)
++        from .certified_capture import capture
++        result,self.last_capture_metadata=capture(self.ol,items,layers,self.capture_mode,self.capture_context)
++        return result
+ 
+     def asked(self,h,layer,pairs,prefix=''):
+         import torch
+@@ -143,30 +144,30 @@
+ def validate_assignment(q,plan,plan_hash,slot,pod_id):
+     if (q.get('issuer')!='integrator' or q.get('experiment')!='E24' or not pod_id or q.get('pod_id')!=pod_id
+         or q.get('slot')!=slot or q.get('plan_sha256')!=plan_hash or q.get('source_files')!=plan['source_files']
+-        or q.get('previous_gpu_seconds')!=0 or q.get('pod_count') not in range(1,5)
++        or q.get('previous_gpu_seconds')!=0 or q.get('pod_count') not in range(1,9)
+         or any(q.get(k) is not True for k in ('pregen_freeze_published','source_published','external_hardstop_verified'))):
+         raise ValueError('exact published E24 assignment required')
+     if q.get('modal14_hash_correction_commit') is None or q.get('modal14_corrected_sha256')!=plan['modal14_sha256']:
+         raise ValueError('clarification hash correction must be published before launch')
+     duration=float(q['deadline_epoch'])-float(q['provider_created_epoch'])
+     if not finite_positive(duration) or duration>float(q['allocated_gpu_seconds']): raise ValueError('invalid custody deadline')
+-    if q['allocated_gpu_seconds']>TOTAL/q['pod_count']: raise ValueError('equal custody shares exceed total12GPUh')
++    if q['allocated_gpu_seconds']>TOTAL/q['pod_count']: raise ValueError('equal custody shares exceed remaining32738s')
+     if slot not in range(q['pod_count']): raise ValueError('invalid slot')
+ 
+ 
+ def run(a):
+     import numpy as np
+     import torch
+-    if sys.prefix!='/weights/venv-kernels':raise ValueError('use /weights/venv-kernels; no fallback')
+     plan=read(a.plan);q=read(a.assignment)
+     validate_assignment(q,plan,P.sha(a.plan),a.slot,os.environ.get('RUNPOD_POD_ID'))
++    from .certified_capture import release,parity_gate
++    mode=release(plan,q,a.certificate,a.capture_context)
+     P.verify(a.bank,'INPUT_SEAL.json');W._labels_absent(a.bank)
+     if list(a.bank.rglob('*.DO_NOT_STAGE.*')):raise ValueError('private labels in staged bank')
+     if P.sha(a.bank/'INPUT_SEAL.json')!=plan['input_seal_sha256']:raise ValueError('bank binding')
+     for name,digest in plan['source_files'].items():
+         if P.sha(P.ROOT/name)!=digest:raise ValueError('unbound source: '+name)
+-    if a.slot==0 and a.capture is not None: raise ValueError('slot0 owns the single capture')
+-    if a.slot!=0 and a.capture is None: raise ValueError('other slots require shared slot0 capture')
++    if a.capture is not None or a.c6_capture is not None:raise ValueError('section144 requires fresh local capture on every shard')
+     layout=shards(q['pod_count']);layers=layout[a.slot]
+     created=float(q['provider_created_epoch']);absolute=float(q['deadline_epoch'])-RESERVE
+     end=min(created+SETUP,absolute);first=None
+@@ -189,32 +190,33 @@
+         assets=W._assets(a.assets,names=('model','olens'))
+         from projects.g_agreement.blindspot.ar_tests import _assets
+         _assets(a.assets,('ar',))
+-        engine=Engine(assets,a.ar_source,a.whitener);check()
++        engine=Engine(assets,a.ar_source,a.whitener);engine.capture_mode=mode;engine.capture_context=a.capture_context;check()
+         items=P.rows(a.bank/'items.input.jsonl');cont=P.rows(a.bank/'continuations.jsonl')
+         specs=read(a.bank/'templates.json');c2=read(a.bank/'c2.json');c7=read(a.bank/'c7.json');c6=read(a.bank/'c6.pairs.json')
+         lookup={x['id']:i for i,x in enumerate(items)}
+         if len(items)!=4704 or len(lookup)!=4704 or len(cont)!=2100:raise ValueError('incomplete fixed bank')
+         first=time.time();end=min(first+CAP,absolute)
+         P.dump(a.out/'CLOCK.json',{'first_science_epoch':first,'provider_created_epoch':created})
+-        capture=a.out/'capture' if a.slot==0 else a.capture
+-        if a.slot==0:
++        capture=a.out/'capture'
++        if True:
+             capture.mkdir();start=time.time()
+-            hs=call(engine.capture,items,list(PRIORITY))
+-            p=parity(hs[44].numpy(),np.load(a.bank/'reference44.npy',allow_pickle=False))
++            hs=call(engine.capture,items,layers)
++            P.jsonl(capture/'ITEM_ENVIRONMENT.jsonl',engine.last_capture_metadata)
++            p=parity_gate(hs[44].numpy(),np.load(a.bank/'reference44.npy',allow_pickle=False),capture,items)
+             P.dump(capture/'ORDER.json',[x['id'] for x in items]);P.dump(capture/'PARITY.json',p)
+             P.dump(capture/'BINDING.json',{'input_seal_sha256':plan['input_seal_sha256'],'plan_sha256':P.sha(a.plan),
+-                'assignment_sha256':P.sha(a.assignment),'slot':0})
++                'assignment_sha256':P.sha(a.assignment),'slot':a.slot,'capture_mode':mode})
+             for l,h in hs.items():
+                 np.save(capture/f'acts{l}.npy',h.numpy(),allow_pickle=False)
+                 seal(capture,[f'acts{l}.npy','ORDER.json','PARITY.json','BINDING.json'],f'L{l}_SEAL.json','SEALED_BEFORE_SCORING')
+             P.dump(capture/'TIMING.json',{'capture_s':time.time()-start})
+-            seal(capture,[f'L{l}_SEAL.json' for l in PRIORITY]+['ORDER.json','PARITY.json','BINDING.json','TIMING.json'],
+-                 'CAPTURE_SEAL.json','SINGLE_ALL_GRID_CAPTURE_COMPLETE')
++            seal(capture,[f'L{l}_SEAL.json' for l in layers]+['ITEM_ENVIRONMENT.jsonl','ORDER.json','PARITY.json','BINDING.json','TIMING.json'],
++                 'CAPTURE_SEAL.json','SHARD_LOCAL_CAPTURE_PARITY_PASS')
+             del hs
+         wait_for(capture/'CAPTURE_SEAL.json');P.verify(capture,'CAPTURE_SEAL.json')
+         if read(capture/'ORDER.json')!=[x['id'] for x in items] or read(capture/'BINDING.json')['input_seal_sha256']!=plan['input_seal_sha256'] or read(capture/'BINDING.json')['plan_sha256']!=P.sha(a.plan):
+             raise ValueError('shared capture input binding')
+-        for l in PRIORITY:P.verify(capture,f'L{l}_SEAL.json')
++        for l in layers:P.verify(capture,f'L{l}_SEAL.json')
+         acts={l:torch.from_numpy(np.load(capture/f'acts{l}.npy',allow_pickle=False)) for l in layers}
+         parity(acts[44].numpy(),np.load(a.bank/'reference44.npy',allow_pickle=False))
+         test={f:[i for i,x in enumerate(items) if x['feature']==f and x['split']=='test'] for f in specs}
+@@ -252,7 +254,7 @@
+             'timings':timing,'timing_outputs_retained':False}
+         P.dump(a.out/'FORECAST.tmp',forecast);(a.out/'FORECAST.tmp').replace(a.out/'FORECAST.json')
+         wait_for(a.admission);admission=read(a.admission)
+-        if admission.get('status')!='FIT' or admission['plan_sha256']!=P.sha(a.plan) or admission['capture_seal_sha256']!=P.sha(capture/'CAPTURE_SEAL.json'):
++        if admission.get('status')!='FIT' or admission['plan_sha256']!=P.sha(a.plan) or admission['capture_seals'][str(a.slot)]!=P.sha(capture/'CAPTURE_SEAL.json'):
+             raise ValueError('NO_FIT or unbound global admission')
+         if admission['forecast_sha256'][str(a.slot)]!=P.sha(a.out/'FORECAST.json'):raise ValueError('admission forecast changed')
+         # Admission carries all forecasts: recompute allocator at its frozen timestamp, never trust a handwritten subset.
+@@ -261,16 +263,17 @@
+         own=admission['pods'][a.slot];end=min(end,own['deadline_epoch']);check()
+         if time.time()+own['remaining_s']>end:raise TimeoutError('admission delivery consumed available science')
+         P.dump(a.out/'ADMISSION.json',admission)
+-        # Optional bank is captured once, by slot0, only after the global tier2 fit.
++        # Each shard captures and parity-checks the optional bank after global tier2 fit.
+         if own['C6']:
+-            c6dir=a.out/'c6_capture' if a.slot==0 else a.c6_capture
++            c6dir=a.out/'c6_capture'
+             if c6dir is None:raise ValueError('C6 requires shared capture destination on other slots')
+-            if a.slot==0:
++            if True:
+                 c6dir.mkdir();ci=P.rows(a.bank/'c6.input.jsonl');hs=call(engine.capture,ci,list(C6_LAYERS))
+-                P.dump(c6dir/'ORDER.json',[x['id'] for x in ci]);P.dump(c6dir/'PARITY.json',parity(hs[44].numpy(),np.load(a.bank/'c6.reference44.npy',allow_pickle=False)))
++                P.jsonl(c6dir/'ITEM_ENVIRONMENT.jsonl',engine.last_capture_metadata)
++                P.dump(c6dir/'ORDER.json',[x['id'] for x in ci]);parity_gate(hs[44].numpy(),np.load(a.bank/'c6.reference44.npy',allow_pickle=False),c6dir,ci)
+                 P.dump(c6dir/'BINDING.json',{'input_seal_sha256':plan['input_seal_sha256'],'admission_sha256':P.sha(a.admission)})
+                 for l,h in hs.items():np.save(c6dir/f'acts{l}.npy',h.numpy(),allow_pickle=False)
+-                seal(c6dir,[f'acts{l}.npy' for l in C6_LAYERS]+['ORDER.json','PARITY.json','BINDING.json'],'CAPTURE_SEAL.json','C6_FRESH_CAPTURE')
++                seal(c6dir,[f'acts{l}.npy' for l in C6_LAYERS]+['ITEM_ENVIRONMENT.jsonl','ORDER.json','PARITY.json','BINDING.json'],'CAPTURE_SEAL.json','C6_FRESH_CAPTURE')
+             wait_for(c6dir/'CAPTURE_SEAL.json');P.verify(c6dir,'CAPTURE_SEAL.json')
+             if read(c6dir/'BINDING.json')!={'input_seal_sha256':plan['input_seal_sha256'],'admission_sha256':P.sha(a.admission)}:raise ValueError('C6 capture binding')
+         for l in own['layers']:
+@@ -311,7 +314,7 @@
+         seal(a.out,[f'L{l}/SCORE_SEAL.json' for l in own['layers']]+['ADMISSION.json','CLOCK.json','FORECAST.json'],
+              'SCORE_SEAL.json','E24_POD_COMPLETE_BEFORE_LABEL_JOIN');check()
+     except Exception as exc:
+-        P.dump(a.out/'FAILURE.json',{'status':'INCOMPLETE','reason':str(exc),'retry_authorized':False});raise
++        P.dump(a.out/'FAILURE.json',{'status':'INCOMPLETE','reason':str(exc),'retry_authorized':False,'slot':a.slot,'layers':layers,'capture_mode':mode,'cells_status':'INCOMPLETE'});raise
+     finally:
+         signal.setitimer(signal.ITIMER_REAL,0);signal.signal(signal.SIGALRM,old)
+         P.dump(a.out/'RECEIPT.json',{'slot':a.slot,'setup_seconds':(first or time.time())-created,
+@@ -321,7 +324,7 @@
+ def main():
+     p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='command',required=True)
+     r=sub.add_parser('run')
+-    for n in ('bank','plan','assignment','assets','ar-source','whitener','out','admission'):
++    for n in ('bank','plan','assignment','assets','ar-source','whitener','out','admission','certificate','capture-context'):
+         r.add_argument('--'+n,type=Path,required=True)
+     for n in ('capture','c6-capture'):r.add_argument('--'+n,type=Path)
+     r.add_argument('--slot',type=int,required=True)

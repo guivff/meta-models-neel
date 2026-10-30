@@ -1,0 +1,82 @@
+{
+  "experiment": "E97",
+  "stage": "CAPTURE_COMPLETE_READER_CLOSED",
+  "bank_commit": "a28621d5",
+  "source_commit": "68809b96",
+  "capture_seal_sha256": "5dffccebc3cde76dda77ef089375f0b8489a362cd3819420e21bbbd2c8c32829",
+  "capture_directory": "/private/tmp/claude-501/-Users-guivff-Documents-Neel-Exploration-activation-readers--claude-worktrees-phase-r-integration-8abda6/872b9566-23d6-4855-a587-d4c155c2cb26/scratchpad/j9r/pulls/ujbrdlswqdhd2s/final/out",
+  "capture_items": 6720,
+  "reader_items": 3360,
+  "sites": [
+    42,
+    44
+  ],
+  "dtype": "float32",
+  "array_shape": [
+    6720,
+    5120
+  ],
+  "hashes_verified": 1690,
+  "all_1680_batches_equal_aggregates": true,
+  "order_exact_public_v2": true,
+  "parity_status": "PASS",
+  "reader_outputs": 0,
+  "reader_outputs_opened": false,
+  "go_issued": false,
+  "capture_started": {
+    "epoch": 1793187729.2648225,
+    "utc": "2026-10-28T11:42:09.264809+00:00"
+  },
+  "first_output_utc": "2026-10-28T11:42:09.263579+00:00",
+  "first_output_evidence": {
+    "mtime_ns": 1793187729263578575,
+    "path": "parity/PARITY_RESULT.json",
+    "scope": "preproduction validation analysis",
+    "source": "archived_file_mtime"
+  },
+  "completed_utc": "2026-10-28T11:55:45.256656+00:00",
+  "verification_utc": "2026-10-28T11:58:09.931719+00:00",
+  "pod_id": "ujbrdlswqdhd2s",
+  "provider_proof": {
+    "data": {
+      "pod": null
+    }
+  },
+  "owned_guards_retired": true,
+  "input_deletion_verified": true,
+  "charged_seconds_upper": 1320.232719,
+  "gpu_usd_upper": 1.9400086343083336,
+  "extras_upper_usd": 2,
+  "closed_all_in_upper_usd": 3.94,
+  "accounting_basis": "Conservative creation-to-independent-query-null upper, not provider invoice. Release reservation6.761USD. Prior setup cost4.65USD already booked separately.",
+  "operator_log": [
+    "11:36:07Z J9R-E97_CAPTURE_V2_2 CHAIN_START cap=2700 staging_cap=540 deadline=createdAt+3240 probe=False",
+    "11:36:08Z J9R-E97_CAPTURE_V2_2 GATE_OK under lock running=2",
+    "11:36:08Z J9R-E97_CAPTURE_V2_2 DEPLOY_START guard=3210 (deadline-30)",
+    "11:36:13Z J9R-E97_CAPTURE_V2_2 LOCK_RELEASED createdAt visible",
+    "11:36:53Z J9R-E97_CAPTURE_V2_2 DEPLOY OK mats-minis-j9r-e97-capture-v2-2 ujbrdlswqdhd2s NVIDIA H200 vol:5on6935gne created=11:36:08Z $5.29/h; hard stop at 2026-10-28T12:29:41Z; guards(pid/ppid incl. caffeinate)=[44702/1 44708/44702 ]; idle watchdog retired (left=0); no hold/auto_hold",
+    "11:36:54Z J9R-E97_CAPTURE_V2_2 DEPLOY_ATTEMPTS [('ujbrdlswqdhd2s', 'RUNNING')]",
+    "11:36:54Z J9R-E97_CAPTURE_V2_2 CREATED ujbrdlswqdhd2s createdAt=2026-10-28T11:36:09.699Z hardstop=2026-10-28T12:29:41Z deadline=createdAt+3240",
+    "11:36:55Z J9R-E97_CAPTURE_V2_2 HARDSTOP_VERIFIED procs=2 at 2026-10-28T12:29:41Z (+3211.3 s of 3240); DETACHED BACKSTOP pid 45361 at +3237.3 s",
+    "11:36:59Z J9R-E97_CAPTURE_V2_2 GUARDS (ps -ww): watchdog/auto_hold left=0; 44702 bash <offvolume>/ujbrdlswqdhd2s/mac_guard/ws2_hardstop.sh ujbrdlswqdhd2s 3176;44708 caffeinate -i bash <offvolume>/ujbrdlswqdhd2s/mac_guard/ws2_hardstop.sh ujbrdlswqdhd2s 3176;45361 bash <e32y>/backstop.sh ujbrdlswqdhd2s 1793190607 /private/tmp/claude-501/-Users-guivff-Documents-Neel-Explorati",
+    "11:37:03Z J9R-E97_CAPTURE_V2_2 ssh up (+53.3 s)",
+    "11:37:05Z J9R-E97_CAPTURE_V2_2 UPLOAD_START 2.7 MB parallel (5 files)",
+    "11:37:15Z J9R-E97_CAPTURE_V2_2 UPLOAD_VERIFIED 2.7 MB in 10.7 s = 0.25 MB/s (+66 s)",
+    "11:37:17Z J9R-E97_CAPTURE_V2_2 SETUP started",
+    "11:37:30Z J9R-E97_CAPTURE_V2_2 STAGING_VERIFIED at 2026-10-28T11:37:17Z = +67 s from createdAt (upload 2.7 MB, 0.25 MB/s); SEALS_VERIFIED label tree = allowlist (1 files)",
+    "11:37:30Z J9R-E97_CAPTURE_V2_2 ASSIGNMENT_OK E97_CAPTURE_V2_2 cap 2700 deadline-created 3240.0 projected USD 197.31",
+    "11:37:33Z J9R-E97_CAPTURE_V2_2 ASSIGNMENT pushed sha 75cc895ed578440b (verified on pod)",
+    "11:37:35Z J9R-E97_CAPTURE_V2_2 setup: WORKER_LAUNCHED pid 650",
+    "11:37:35Z J9R-E97_CAPTURE_V2_2 mon: alive=1 J::DU::4 GPU::0 %, 0 MiB ",
+    "11:42:45Z J9R-E97_CAPTURE_V2_2 mon: alive=1 J::PHASES::69 {'phase': 'capture', 'seconds': 0.9969198040198535} J::FORECAST:: J::DU::11544 GPU::0 %, 56651 MiB ",
+    "11:47:45Z J9R-E97_CAPTURE_V2_2 mon: alive=1 J::PHASES::378 {'phase': 'capture', 'seconds': 0.9973119249334559} J::FORECAST:: J::DU::112620 GPU::0 %, 56653 MiB ",
+    "11:53:01Z J9R-E97_CAPTURE_V2_2 mon: alive=1 J::PHASES::705 {'phase': 'capture', 'seconds': 0.9905292519833893} J::FORECAST:: J::DU::219920 GPU::0 %, 56653 MiB ",
+    "11:56:01Z J9R-E97_CAPTURE_V2_2 WORKER_EXITED ",
+    "11:57:33Z J9R-E97_CAPTURE_V2_2 FINAL_PULL_VERIFIED (custody, reader outputs unopened) 1695 files PULL_SUMS=1c8963fa0dc0c15c OUTPUT_SEAL=none",
+    "11:57:36Z J9R-E97_CAPTURE_V2_2 LABELS/INPUTS before delete: [j9r_in j9r_in/pod_setup_r.sh j9r_in/pod_spec.sh j9r_in/assets.json j9r_in/EXPECTED.sha e97/inputs/parity/labels.json ]",
+    "11:57:40Z J9R-E97_CAPTURE_V2_2 AFTER delete (ls-confirmed): 0 left",
+    "11:57:41Z J9R-E97_CAPTURE_V2_2 EXACT_ID_STOP ujbrdlswqdhd2s \"desiredStatus\":\"EXITED\" at 11:57:41Z (+1291.5 s)",
+    "11:57:59Z J9R-E97_CAPTURE_V2_2 TERMINATE ujbrdlswqdhd2s -> GONE",
+    "11:58:03Z J9R-E97_CAPTURE_V2_2 GUARDS retired: 0 left; CHAIN_DONE"
+  ]
+}

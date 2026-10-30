@@ -1,0 +1,12 @@
+{
+  "id": "8962740598f7e4931c47966f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is stated (\"happy\"\u2192\"Happy\", \"sad\"\u2192\"Sad\"), then a test case is given, requiring the model to apply the rule.\n\nThe format establishes a Q&A template: \"Input sentence: [example]\" followed by \"Reply:\" signals the model must now output the correct classification label (\"Happy\" or \"Sad\").\n\n\"Reply:\" is the final token, acting as a prompt label in the structured example, immediately requiring the predicted answer (e.g., \"Happy\") to follow.\n\"Please follow the pattern and provide the correct response based on the sentence's emotional state.\nInput sentence: The weather is sunny and warm.\nInput: The weather is sunny and warm.\nReply:\" \u2014 the final token demands the direct answer/classification label completing this structured example.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is stated (\"happy\"\u2192\"Happy\", \"sad\"\u2192\"Sad\"), then a test case is given, requiring the model to apply the rule.\n\nThe format establishes a Q&A template: \"Input sentence: [example]\" followed by \"Reply:\" signals the model must now output the correct classification label (\"Happy\" or \"Sad\").\n\n\"Reply:\" is the final token, acting as a prompt label in the structured example, immediately requiring the predicted answer (e.g., \"Happy\") to follow.\n\"Please follow the pattern and provide the correct response based on the sentence's emotional state.\nInput sentence: The weather is sunny and warm.\nInput: The weather is sunny and warm.\nReply:\" \u2014 the final token demands the direct answer/classification label completing this structured example.",
+  "truncated": false
+}

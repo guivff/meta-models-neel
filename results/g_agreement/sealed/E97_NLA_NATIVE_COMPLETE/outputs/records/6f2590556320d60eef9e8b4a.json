@@ -1,0 +1,12 @@
+{
+  "id": "6f2590556320d60eef9e8b4a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Instruction,\" \"Question,\" and \"Answer\" fields, requiring a model-generated response.\n\nThe \"Instruction\" establishes a rule about explaining \"how to use the tool,\" while the \"Question\" asks about \"the importance of the tool,\" creating a deliberate mismatch the answer must address.\n\n\"Answer:\" is the final field label in the template, immediately requiring the model's generated response text \u2014 likely a short explanatory sentence demonstrating the pattern described above.\n\"Instruction: [rule about X]\nQuestion: [question about Y]\nAnswer:\" \u2014 this is a few-shot or template completion task, so the next token should be a sample answer demonstrating the instruction's logic applied to the question.\n\"Answer:\" expects a direct explanatory sentence beginning, likely \"The answer explains...\" or similar.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Instruction,\" \"Question,\" and \"Answer\" fields, requiring a model-generated response.\n\nThe \"Instruction\" establishes a rule about explaining \"how to use the tool,\" while the \"Question\" asks about \"the importance of the tool,\" creating a deliberate mismatch the answer must address.\n\n\"Answer:\" is the final field label in the template, immediately requiring the model's generated response text \u2014 likely a short explanatory sentence demonstrating the pattern described above.\n\"Instruction: [rule about X]\nQuestion: [question about Y]\nAnswer:\" \u2014 this is a few-shot or template completion task, so the next token should be a sample answer demonstrating the instruction's logic applied to the question.\n\"Answer:\" expects a direct explanatory sentence beginning, likely \"The answer explains...\" or similar.",
+  "truncated": false
+}

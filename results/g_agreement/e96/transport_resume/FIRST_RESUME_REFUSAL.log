@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/private/tmp/e96_retained_judge_resume_worker.py", line 15, in <module>
+    result=run(r/'cache/g_agreement/e96/judge_packet_retained',r/'results/g_agreement/e96/RETAINED_JUDGING_ALLOCATION.json',r/'results/g_agreement/e96/transport_resume/runtime')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/projects/g_agreement/e96/resume_transport.py", line 92, in run
+    return run_f(packet,allocation)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/projects/g_agreement/e96/judge.py[audited transport-id correction]", line 118, in run
+  File "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/projects/g_agreement/understand/blind_judge/later_runner.py", line 174, in judge
+    for record in send(batch, 0):
+                  ^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/projects/g_agreement/e96/judge.py[audited transport-id correction]", line 109, in send
+  File "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/projects/g_agreement/understand/blind_judge/wmech2_channel.py", line 73, in response_audit
+    require(body['choices'][0].get('finish_reason')=='stop','completed response required')
+  File "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/projects/g_agreement/readerbench/scoring.py", line 17, in require
+    raise ValueError(message)
+ValueError: completed response required

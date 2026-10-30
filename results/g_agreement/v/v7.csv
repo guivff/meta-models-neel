@@ -1,0 +1,12 @@
+reader,layer,cell,scored,n_pairs,n_pairs_total,k_win,win,boot_lo,boot_hi,wilson_lo,wilson_hi,mean_margin_nats,n_unscorable_rows,n_missing_rows,positive,reason
+jlens,42,jlens@L42,True,16,16,13,0.8125,0.625,0.9375,0.5699064013154177,0.9340852122641324,0.12881797552108765,0,0,True,
+jlens,38,jlens@L38,True,16,16,8,0.5,0.25,0.75,0.2799923761135083,0.7200076238864916,0.01620277762413025,0,0,False,
+olens,42,olens@L42,True,16,16,16,1.0,1.0,1.0,0.8063865817272802,1.0,2.603515639901161,0,0,True,
+olens,38,olens@L38,True,16,16,13,0.8125,0.625,1.0,0.5699064013154177,0.9340852122641324,1.5664062798023224,0,0,True,
+skip_a,42,skip_a@L42,True,16,16,15,0.9375,0.8125,1.0,0.7167073163197013,0.9888809426916687,1.5367999002337456,0,0,True,
+probe,42,probe@L42,True,16,16,0,0.0,0.0,0.0,0.0,0.19361341827271994,-3.5713534876704216,0,0,False,
+probe,38,probe@L38,True,16,16,0,0.0,0.0,0.0,0.0,0.19361341827271994,-6.59939397033304,0,0,False,
+nla,42,nla@L42,True,16,16,15,0.9375,0.8125,1.0,0.7167073163197013,0.9888809426916687,2.0337589979171753,0,0,True,
+target,,target_accuracy_with_preamble,True,32,,32,1.0,1.0,1.0,0.8928172849426366,1.0,,,,,ceiling: greedy accuracy over the 32 preamble-conditioned items
+target,,target_pair_win_lo_model,True,16,,16,1.0,1.0,1.0,0.8063865817272802,1.0,,,,,ceiling: within-pair win of the target's first-token log-odds
+prompt_only,,prompt_only_baseline,True,16,,,0.5,,,,,,,,,prompt-only baseline = 50 % by construction (identical visible prompt → identical prompt-only answer for both versions)

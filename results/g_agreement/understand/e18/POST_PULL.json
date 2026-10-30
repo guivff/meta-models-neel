@@ -1,0 +1,52 @@
+{
+  "analysis_run": "results/g_agreement/understand/e18/analysis/ANALYSIS_RUN.json",
+  "analysis_seal_sha256": "fc08b35217cae932948485b197c8e7d6d83e58c53cf5cec6c6518c9668a95749",
+  "checks_before_labels": [
+    "frozen input seal",
+    "complete collection and continuation seals",
+    "exact840item canonical order,10rows,4arms,2phrasing scores",
+    "native44,greedy16token cap, donor mapping",
+    "plan/input hash and exact99518d4e donor rule/authority"
+  ],
+  "collection_seal_sha256": "cccfc3501f75cdf318f680ef869af3738b06661f5ae5c10d36929a8a6c4fce11",
+  "collection_status_required": "E18_COMPLETE",
+  "command": [
+    "/Users/guivff/Documents/Neel_Exploration/activation-readers/.venv/bin/python",
+    "-m",
+    "projects.g_agreement.understand.e18_analyse",
+    "--inputs",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e18",
+    "--collection",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e18/ftoaeyhltzmc32/out/E18_NEW_RUN",
+    "--labels",
+    "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/items.DO_NOT_STAGE.jsonl",
+    "--plan",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e18/PLAN.json",
+    "--out",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e18/analysis"
+  ],
+  "continuation_seal_sha256": "47ccba96c791735201cc194314869d845b83d2c6297e7a5351e0d94ab02e7256",
+  "donor_bootstrap": {
+    "samples": 2000,
+    "seed": 20261025,
+    "unit": "recipient item"
+  },
+  "donor_item_rule": "own-truth-signed s_c < s_b; ties false",
+  "donor_row_rule": "fraction >= 0.60 AND CI lower bound > 0.50",
+  "environment": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2"
+  },
+  "existing_output": "reject before data access; do not rerun",
+  "incomplete": "preserve sealed partial grid and exact missing counts; no full-grid analysis or imputation",
+  "primary_bootstrap": {
+    "samples": 2000,
+    "seed": 20261023,
+    "unit": "W1 template cluster"
+  },
+  "real_analysis_run_here": true,
+  "registered_analysis_attempts": 1,
+  "run_once": true,
+  "status": "REGISTERED_ANALYSIS_COMPLETE_ONCE_DO_NOT_RERUN",
+  "working_directory": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech"
+}

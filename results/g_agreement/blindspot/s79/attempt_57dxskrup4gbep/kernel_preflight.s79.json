@@ -1,0 +1,36 @@
+{
+  "run_id": "20698b7f-5da4-44d5-b503-624072c2769d",
+  "run_kind": "real",
+  "code_sha256": "1062a00433844b2222364e55518d6028a9b2d663598bc59d925af3b9e7d422f6",
+  "pod_id": "57dxskrup4gbep",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "5.18.0",
+    "flash-linear-attention": "0.5.2",
+    "fla-core": "0.5.2",
+    "einops": "0.8.2",
+    "triton": "3.4.0",
+    "ninja": "1.13.2",
+    "causal-conv1d": "1.7.0"
+  },
+  "system": "Linux",
+  "machine": "x86_64",
+  "python_minor": "3.12",
+  "cxx11_abi": true,
+  "cuda_version": "12.8",
+  "cuda_available": true,
+  "device": "NVIDIA H200",
+  "dispatch": {
+    "causal_conv1d_fn": {
+      "implementation_module": "causal_conv1d.causal_conv1d_interface",
+      "implementation_name": "causal_conv1d_fn",
+      "transformers_original_package_dispatch": true
+    },
+    "torch_chunk_gated_delta_rule": {
+      "implementation_module": "fla.ops.gated_delta_rule.chunk",
+      "implementation_name": "chunk_gated_delta_rule",
+      "transformers_original_package_dispatch": true
+    }
+  },
+  "status": "IMPORT_AND_DISPATCH_ONLY_NO_SPEED_OR_NUMERICAL_CLAIM"
+}

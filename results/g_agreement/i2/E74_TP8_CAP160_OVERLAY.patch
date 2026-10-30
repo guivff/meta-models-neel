@@ -1,0 +1,58 @@
+--- 275d1023/projects/g_agreement/e74/hardware.py
++++ I2-cap160/projects/g_agreement/e74/hardware.py
+@@ -6,7 +6,7 @@
+ 
+ HOPPER_AUTHORITY = 'bd43a46af5eb2ea84e8524fdc1ab6f5262acd729'
+ HOPPER_NOT_BEFORE = dt.datetime(2026, 10, 28, 5, tzinfo=dt.timezone.utc).timestamp()
+-TP8_LIMIT_AUTHORITY = 'f5720c36529f52bf506924fa73825df8b4c95d9e'
++TP8_LIMIT_AUTHORITY = 'b81c6c9d7b7ec319d611ca3caea31ace8457e0d7'
+ DEFAULT_PHASES = {'boot':660, 'smoke':120, 'capture':1633, 'readouts':840}
+ 
+ 
+@@ -21,8 +21,8 @@
+             'unsupported hardware for limit selection')
+     if count == 8:
+         require(admission.get('limit_authority') == TP8_LIMIT_AUTHORITY,
+-                'TP8 clarification7 limit binding required')
+-        return {'boot_smoke_seconds':3000, 'cap_usd':120}
++                'TP8 clarification8 limit binding required')
++        return {'boot_smoke_seconds':3000, 'cap_usd':160}
+     return {'boot_smoke_seconds':1200, 'cap_usd':100}
+ 
+ 
+--- 275d1023/projects/g_agreement/e74/test_hardware.py
++++ I2-cap160/projects/g_agreement/e74/test_hardware.py
+@@ -20,7 +20,7 @@
+ 
+ 
+ def hopper():
+-    return dict(admission(NOW), gpu_type='H200',gpu_count=8,replica_hourly_usd=1,cap_usd=120,limit_authority=h.TP8_LIMIT_AUTHORITY,
++    return dict(admission(NOW), gpu_type='H200',gpu_count=8,replica_hourly_usd=1,cap_usd=160,limit_authority=h.TP8_LIMIT_AUTHORITY,
+                 hopper_fallback={'authority':h.HOPPER_AUTHORITY,'not_before_epoch':h.HOPPER_NOT_BEFORE,
+                                  'checked_epoch':NOW,'no_b200_claim_by_deadline':True,'single_node':True},
+                 phase_forecast_seconds={'boot':2040,'smoke':120,'capture':1633,'readouts':840},
+@@ -54,7 +54,7 @@
+         self.assertEqual(h.phase_forecast(hopper())['boot'],2040)
+     def test_tp8_limits_do_not_raise_tp4_limits(self):
+         a=hopper(); b=admission(NOW)
+-        self.assertEqual(h.limits(a),{'boot_smoke_seconds':3000,'cap_usd':120})
++        self.assertEqual(h.limits(a),{'boot_smoke_seconds':3000,'cap_usd':160})
+         self.assertEqual(h.limits(b),{'boot_smoke_seconds':1200,'cap_usd':100})
+         for authority in [None,'wrong']:
+             with self.assertRaises(ValueError):h.profile(dict(a,limit_authority=authority),NOW)
+@@ -65,11 +65,11 @@
+         with self.assertRaises(ValueError):smoke50.validate_clocks(q,5501,b)
+         smoke50.validate_clocks(q|{'deadline_epoch':6700},5501,b)
+         a=dict(a,replica_hourly_usd=3600,other_cost_upper_bound_usd=0,allocation_start_epoch=NOW)
+-        self.assertEqual(ops.budget(a,96,NOW)['forecast_times_1_25_usd'],120)
+-        with self.assertRaises(ops.NoFit) as cm:ops.budget(a,96.01,NOW)
+-        self.assertEqual(cm.exception.evidence['cap_usd'],120)
++        self.assertEqual(ops.budget(a,128,NOW)['forecast_times_1_25_usd'],160)
++        with self.assertRaises(ops.NoFit) as cm:ops.budget(a,128.01,NOW)
++        self.assertEqual(cm.exception.evidence['cap_usd'],160)
+         with self.assertRaises(ValueError):ops.budget(dict(a,cap_usd=100),0,NOW)
+-        with self.assertRaises(ValueError):ops.budget(dict(b,cap_usd=120),0,NOW)
++        with self.assertRaises(ValueError):ops.budget(dict(b,cap_usd=160),0,NOW)
+ 
+     def test_only_tp_changes_in_author_engine_settings(self):
+         a=h.engine_kwargs(h.profile(admission()));b=h.engine_kwargs(h.profile(hopper(),NOW))

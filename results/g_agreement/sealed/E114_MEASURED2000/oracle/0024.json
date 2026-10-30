@@ -1,0 +1,66 @@
+[
+  {
+    "id": "f2f5f31fbeba727f578df503",
+    "output": {
+      "malformed": false,
+      "raw": "- # End of try block. This is valid Python.\n- ; pass  # Indentation level 2 inside try. pass\n- # This is the deepest nested pass. We need to find the deepest indentation level. pass\n-  # <- 2 levels of indentation after the first try. pass\n\"\"\"  # 4 levels of indentation. pass\npass\n```",
+      "text": "- # End of try block. This is valid Python.\n- ; pass  # Indentation level 2 inside try. pass\n- # This is the deepest nested pass. We need to find the deepest indentation level. pass\n-  # <- 2 levels of indentation after the first try. pass\n\"\"\"  # 4 levels of indentation. pass\npass\n```"
+    }
+  },
+  {
+    "id": "6b497be89a92d3d7b47db178",
+    "output": {
+      "malformed": false,
+      "raw": "- # End of try block (indent 4)\n- ;  # Indentation level 2 pass; pass\n- ;  # This is the deepest 'pass' statement. We need to indent it correctly.\n- # Another pass  # Indentation level 2 inside try. The deepest is 4. pass\n- ```  # <- This `pass` is at depth 2 relative to the `with`.\npass\n```",
+      "text": "- # End of try block (indent 4)\n- ;  # Indentation level 2 pass; pass\n- ;  # This is the deepest 'pass' statement. We need to indent it correctly.\n- # Another pass  # Indentation level 2 inside try. The deepest is 4. pass\n- ```  # <- This `pass` is at depth 2 relative to the `with`.\npass\n```"
+    }
+  },
+  {
+    "id": "c11365d0f92c0086e8bf3d33",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # 4 levels of indentation inside the innermost pass\n- pass  # This is the deepest nesting we need to test. pass\n- # deeper indent here pass\n        else: pass\n    pass\n- ; pass  # 4 levels of nesting inside the for loop. We need 8. pass; pass\n- # 4 levels of indentation inside the if. We need more nesting to hit 8. pass",
+      "text": "- ; pass  # 4 levels of indentation inside the innermost pass\n- pass  # This is the deepest nesting we need to test. pass\n- # deeper indent here pass\n        else: pass\n    pass\n- ; pass  # 4 levels of nesting inside the for loop. We need 8. pass; pass\n- # 4 levels of indentation inside the if. We need more nesting to hit 8. pass"
+    }
+  },
+  {
+    "id": "9ea26bd086525a6d3d027cfa",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # 4 levels of indentation inside the if. pass\n- ; pass  # 4 levels deep. This is the deepest standard Python nesting. pass\n- # more nested stuff here to test indentation depth. pass\n    if True: pass\n- ; break  # 4 levels of indentation inside the for loop. pass\n        else: pass\n    pass\n```\n\n```python",
+      "text": "- ; pass  # 4 levels of indentation inside the if. pass\n- ; pass  # 4 levels deep. This is the deepest standard Python nesting. pass\n- # more nested stuff here to test indentation depth. pass\n    if True: pass\n- ; break  # 4 levels of indentation inside the for loop. pass\n        else: pass\n    pass\n```\n\n```python"
+    }
+  },
+  {
+    "id": "d51c5bca930b59de1d41bec9",
+    "output": {
+      "malformed": false,
+      "raw": "- # Indentation level 2 (to test the nesting)\n- ; pass  # This is the deepest indentation level in the file.\n- ;  # <- This `pass` is at indent 4. We need to test deeper nesting.\n- # Another statement at indent 2 \"\"\"  # This ensures the parser sees the nested pass\npass\n```\n#",
+      "text": "- # Indentation level 2 (to test the nesting)\n- ; pass  # This is the deepest indentation level in the file.\n- ;  # <- This `pass` is at indent 4. We need to test deeper nesting.\n- # Another statement at indent 2 \"\"\"  # This ensures the parser sees the nested pass\npass\n```\n#"
+    }
+  },
+  {
+    "id": "9f8be057e2fc4025394a2696",
+    "output": {
+      "malformed": false,
+      "raw": "- # Indentation level 2 (to reach 4 spaces total)\n- ; pass  # This line is at indent 4. We need to push it deeper.\n- # This line ensures the deepest indentation is tested. pass\n-  # 4 spaces indent (level 2) \"\"\"  # This file has nested pass statements.\npass\npass\n```\n\n###",
+      "text": "- # Indentation level 2 (to reach 4 spaces total)\n- ; pass  # This line is at indent 4. We need to push it deeper.\n- # This line ensures the deepest indentation is tested. pass\n-  # 4 spaces indent (level 2) \"\"\"  # This file has nested pass statements.\npass\npass\n```\n\n###"
+    }
+  },
+  {
+    "id": "6cfb08f659a495824c18edfa",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # 4 levels deep. This is the deepest we can test with nested pass\n- ; break  # 4 levels of indentation with pass\n- # 4 spaces indent for pass\n        elif True: pass\n- ;  # deepest nested pass statement, then we indent further. pass; pass; pass; pass\n    pass\n```\n\n###",
+      "text": "- ; pass  # 4 levels deep. This is the deepest we can test with nested pass\n- ; break  # 4 levels of indentation with pass\n- # 4 spaces indent for pass\n        elif True: pass\n- ;  # deepest nested pass statement, then we indent further. pass; pass; pass; pass\n    pass\n```\n\n###"
+    }
+  },
+  {
+    "id": "0b6bf5537aa399c1cf303601",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # 4 levels of indentation with pass\n- ; pass  # 4 levels deep. This tests the deepest nesting. pass\n- # 4 spaces indent, then another pass. This tests nested pass\n- ; break  # 4 levels of nested pass\n        elif True: pass; pass\n- ; print(\"nested\")  # 4 levels of pass",
+      "text": "- ; pass  # 4 levels of indentation with pass\n- ; pass  # 4 levels deep. This tests the deepest nesting. pass\n- # 4 spaces indent, then another pass. This tests nested pass\n- ; break  # 4 levels of nested pass\n        elif True: pass; pass\n- ; print(\"nested\")  # 4 levels of pass"
+    }
+  }
+]

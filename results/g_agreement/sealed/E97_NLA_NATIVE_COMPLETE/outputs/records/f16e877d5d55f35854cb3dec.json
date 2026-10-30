@@ -1,0 +1,12 @@
+{
+  "id": "f16e877d5d55f35854cb3dec",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a Q&A template where \"Answer:\" signals the model must generate a response following the given example pattern.\n\nThe \"Example\" section defines a specific topic (AI's impact on healthcare) and a specific constraint (explain how AI improves patient outcomes), so the answer must address this directly.\n\n\"Question: [topic]\nInstruction: [constraint]\nAnswer:\" is a structured prompt template, and \"Answer:\" is the final label requiring the actual response text to follow immediately \u2014 likely a sentence or paragraph beginning the explanation.\n\nThe meta-instruction pattern (\"Please follow the example\") and the contradictory instruction (\"Do not mention...\") create a test scenario where the answer should demonstrate the requested format.\n\"Question: [topic]\nInstruction: [constraint]\nAnswer:\" \u2014 the final token demands the model's generated response text, starting the answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a Q&A template where \"Answer:\" signals the model must generate a response following the given example pattern.\n\nThe \"Example\" section defines a specific topic (AI's impact on healthcare) and a specific constraint (explain how AI improves patient outcomes), so the answer must address this directly.\n\n\"Question: [topic]\nInstruction: [constraint]\nAnswer:\" is a structured prompt template, and \"Answer:\" is the final label requiring the actual response text to follow immediately \u2014 likely a sentence or paragraph beginning the explanation.\n\nThe meta-instruction pattern (\"Please follow the example\") and the contradictory instruction (\"Do not mention...\") create a test scenario where the answer should demonstrate the requested format.\n\"Question: [topic]\nInstruction: [constraint]\nAnswer:\" \u2014 the final token demands the model's generated response text, starting the answer.",
+  "truncated": false
+}

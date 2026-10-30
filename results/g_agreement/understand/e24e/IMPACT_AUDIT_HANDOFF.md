@@ -1,0 +1,3 @@
+§137 item3: PENDING E24-E sealed result and CPU certification.
+
+Owner collaboration required: W-internals (E19/E22/E30/E31ii), W-mechanism (E27c), W-lens (E28/E33), W-text (E36). Confirm owners against current HANDOFF before requesting their inventories. Each owner supplies the sealed input/capture inventory and environment provenance, including actual token lengths/padding and complete denominators. Report fraction satisfying the condition identified by E24-E; >10% means environment-qualified. No re-running or changing sealed outputs. If the diagnostic identifies no condition, explicitly report that and E28 score-level parity (delta <=0.006). Do not infer missing padding metadata. Certification and audit are not completed by this launch request.

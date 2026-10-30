@@ -1,0 +1,12 @@
+{
+  "id": "56355d3296f424c7c6c7b3b9",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Happy,\" \"Sad,\" \"Angry\").\n\nThe example pattern \"Example sentence: [sentence] / Reply:\" signals the model must now produce the direct answer for the specific sentence \"The company's financial performance is declining.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker, immediately requiring the emotion label answer (likely \"Sad\" or similar short word) to follow.\n\"Given the following format:\nExample sentence: The company's financial performance is declining.\nPlease provide the corresponding emotion label.\nSentence: The company's financial performance is declining.\nReply:\" \u2014 the final \"Reply:\" is a response field prompt, expecting the direct answer on the same line or next token.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Happy,\" \"Sad,\" \"Angry\").\n\nThe example pattern \"Example sentence: [sentence] / Reply:\" signals the model must now produce the direct answer for the specific sentence \"The company's financial performance is declining.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker, immediately requiring the emotion label answer (likely \"Sad\" or similar short word) to follow.\n\"Given the following format:\nExample sentence: The company's financial performance is declining.\nPlease provide the corresponding emotion label.\nSentence: The company's financial performance is declining.\nReply:\" \u2014 the final \"Reply:\" is a response field prompt, expecting the direct answer on the same line or next token.",
+  "truncated": false
+}

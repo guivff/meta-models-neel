@@ -1,0 +1,12 @@
+{
+  "id": "7a2565abf70c544123083d00",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given example.\n\nThe example sentence \"The movie was a disaster, and the audience was disappointed\" clearly signals a negative sentiment, constraining the answer to \"Negative.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the model's direct answer (e.g., \"Negative\" or the full response).\n\"Please follow the exact format... Example: [sentence]\nQuestion: What is the sentiment of the following sentence?\n[The sentence]\nReply:\" \u2014 this closing \"Reply:\" is a prompt field expecting the model's final answer to follow directly.\n\"Given the above, please provide the response.\nReply:\" \u2014 the final token demands the answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given example.\n\nThe example sentence \"The movie was a disaster, and the audience was disappointed\" clearly signals a negative sentiment, constraining the answer to \"Negative.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the model's direct answer (e.g., \"Negative\" or the full response).\n\"Please follow the exact format... Example: [sentence]\nQuestion: What is the sentiment of the following sentence?\n[The sentence]\nReply:\" \u2014 this closing \"Reply:\" is a prompt field expecting the model's final answer to follow directly.\n\"Given the above, please provide the response.\nReply:\" \u2014 the final token demands the answer.",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "3afdd9746d7c693f710ca057",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is asking to extract a specific XML/structured data entry from a list, establishing a task-response format.\n\nThe phrase \"entry\" signals XML or structured data context, with \"entry\" appearing as a tag name in a list of examples, implying a concrete example follows.\n\nFinal token `<entry` opens an XML tag, requiring immediate continuation with attributes or closing `>` followed by entry content (e.g., `<entry id=\"...\"` or `<entry>` with nested fields like definition, date, or term).\n\"Here is an example of a corrupted entry:\n<entry\" mirrors the prior `<entry>` reference, so the next tokens must complete a new, specific entry example from a dataset, likely showing structured fields like `<term>`, `<definition>`, or similar XML elements.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is asking to extract a specific XML/structured data entry from a list, establishing a task-response format.\n\nThe phrase \"entry\" signals XML or structured data context, with \"entry\" appearing as a tag name in a list of examples, implying a concrete example follows.\n\nFinal token `<entry` opens an XML tag, requiring immediate continuation with attributes or closing `>` followed by entry content (e.g., `<entry id=\"...\"` or `<entry>` with nested fields like definition, date, or term).\n\"Here is an example of a corrupted entry:\n<entry\" mirrors the prior `<entry>` reference, so the next tokens must complete a new, specific entry example from a dataset, likely showing structured fields like `<term>`, `<definition>`, or similar XML elements.",
+  "truncated": false
+}

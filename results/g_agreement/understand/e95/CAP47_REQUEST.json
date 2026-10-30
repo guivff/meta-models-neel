@@ -1,0 +1,33 @@
+{
+  "experiment": "E95",
+  "issuer": "Integrator (Track Q)",
+  "created_utc": "2026-10-29T01:33:44+00:00",
+  "ruling": "Guiv to Integrator in chat 2026-10-29: E95 cap raised from 40 to 47 GPU-h (169200 s) within the shared parked pool; admit production at the 72-row step-iii scope",
+  "decision_sha256": "1e94653f56d932b77b310140cf073197c82509a52dcafe18577e40947e834e0c",
+  "decision_published": "2f797a580",
+  "projected_custody_seconds": 167614.4,
+  "new_ceiling_seconds": 169200,
+  "headroom_seconds": 1585.6,
+  "expected_usd_at_5_29": 246.3,
+  "hard_coded_144000": [
+    "results/g_agreement/understand/e87/representative95.py:20 CEILING",
+    "results/g_agreement/understand/e87/package95.py:48,68,99,158,161,163"
+  ],
+  "request": [
+    "I-3/W-mechanism-B: set the E95 ceiling to 169200 s (or a sealed parameter), re-seal runtime source with tests",
+    "add a dated Deviations note under the E95 registration citing this ruling",
+    "Integrator then reruns representative95 on the same inputs for HOLD packets; I-3 promotes HOLD to READY"
+  ],
+  "integrator_edits_sealed_code": false,
+  "production_admitted": false,
+  "core_preempts": [
+    "E104",
+    "E105"
+  ],
+  "status": "SUPERSEDED_WITHDRAWN_BY_DIRECT_GUIV_40H_RULING",
+  "withdrawn_utc": "2026-10-29T01:57:13+00:00",
+  "withdrawal": "Guiv (chat, 29 Oct): E95 stays at its registered 40 GPU-h cap; 47 h was never approved (a cap increase is a coordinator decision under \u00a7217 rule 9). The Integrator recorded a button click as approval in error. No reseal is requested; ignore the request below.",
+  "e95_outcome": "NOT RUN (operational): the step-iii forecast (72 rows, 167,614.4 s = 46.56 GPU-h incl. 3,329.4 s prior) exceeds the 144,000 s registered ceiling; decision 1e94653f (2f797a58)",
+  "superseding_instruction": "Direct Guiv toI-3: E95 stays40GPUh,noincrease, no reseal47; step3over40=>NOT RUN(operational)",
+  "superseded_utc": "2026-10-29T02:01:52.472143+00:00"
+}

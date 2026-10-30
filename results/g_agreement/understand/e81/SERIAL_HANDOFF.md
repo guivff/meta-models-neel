@@ -1,0 +1,19 @@
+# E81/E90 serial-only handoff — §198 deviation1
+
+Authority5ad0c3ced8430faa24b76676112e8ba9c9766639 supersedes all batching launch candidates. Do not run307c79d2, candidate81.py or the old a734 probe. Historical artifacts remain unchanged. The active request is SERIAL_PROFILE_REQUEST.json, entry point serial81.py. Every warmup and real generation call has exactly one sequence; no batching, padding strategy or parity gate is used. Runtime's registered greedy decoding and128/32 limits remain unchanged.
+
+The exact11064-record PUBLIC_INPUTS bytes retain SHA2560c5d4f07767cade10da1a654f3f46564519bbcec7552aa2e033d7a4304f14b18. Original ordered record index modulo shard count partitions items into1–8disjoint shards. At8shards, every shard has1383records, including922description and461plain continuation records. The complete roster is frozen in SERIAL_PLAN.json, checked by the worker, and reused unchanged in production. No previous A1/A3/candidate output is retained scientifically.
+
+The READY timing package proposes1800s single-pod custody, subject to I-2's actual operational/daily-budget admission. Profile assignment adds mode=profile and shard=null to the standard experimentE81,oneGPU,pod,cap,prior,custodystart,absolute deadline and budget fields. The profile loads once, warms serially for both limits, then measures three serial real items per phase per future shard: shortest, median-length and longest (ID breaks ties),48total for8shards. No parity work. These generations are discarded scientifically. MEASURED_PROFILE reports each phase's measured mean and each shard's count, original provider-creation-to-worker staging time, model/tokenizer-verification/warmup time,60s retrieval reserve and cap=ceil(1.25×forecast). No unknown-phase proxy seed is used.
+
+After a verified actual PROFILE_ONLY pull, run:
+
+    python results/g_agreement/understand/e81/package_serial81.py production --profile-request /ABS/REQUEST.json --report /ABS/VERIFIED/MEASURED_PROFILE.json --destination /ABS/NEW_COORDINATED_RUN --prior-seconds ACTUAL_PRIOR_CUSTODY
+
+This requires the terminal output seal, rejects synthetic/batched profiles, and verifies exact source/input/public hashes. It emits one coordinated run manifest and one fresh sealed input archive/REQUEST per shard; all share the same source and roster. Assignment mode=production and shard=0..7, cap_seconds exactly the reported shard cap, plus ordinary custody/budget fields. Stage the verified MEASURED_PROFILE.json and pass --profile-report. Every original record, including every probe record, is regenerated across the coordinated full run. Prior cost/custody stays in I-2's ledger; this package does not reset it or substitute for aggregate admission.
+
+Output seals include first_output_utc from the earliest original job-file mtime, with member/hash/mtime_ns evidence. Failure seals retain partial work but never claim COMPLETE. Existing external retrieval/shutdown guards remain the operator's responsibility. No allocation, provider call or GPU action was performed here.
+
+CPU validation: exact archived profile finishes PROFILE_ONLY with48serial calls and no parity artifact; disjoint complete coverage at1/4/8shards; one full1383-item synthetic shard; a backend that rejects batch>1; synthetic-profile rejection by production packager. These tests are wiring checks, not measured GPU throughput. I-2 owns the real timing and launch, E99 follows.
+
+Staging correction: serial_v2 supersedes unlaunched serial_v1. STAGING_RECEIPT.json measures worker verification completion minus original ASSIGNMENT.pod_created_epoch, binds the assignment SHA and both endpoint epochs, and enters every shard forecast before the1.25 margin. Custody starts at that same original creation epoch; a later restarted custody clock is rejected. The production binder verifies the staging and assignment hashes against the terminal profile seal and recomputes each full-endpoint cap.

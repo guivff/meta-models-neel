@@ -1,0 +1,3 @@
+# E113 completion handoff precision correction
+
+Original scientific RESULTS/REPORT/ANALYSIS_SEAL unchanged. The completion handoff summarized all bookkeeping cells as exactly1.0; that wording was too broad: nesting_depth first-generated-token AUROC ranges0.9994331065759637–1.0 across64layers, while its injected-position cells and all indent_level/page_range_digit cells are exactly1.0. All three row maxima are1.0, so registered R-IN1 MET and falsifier NOT MET are unchanged. Verification caught this wording error before downstream delivery; no fit, test evaluation, guard or scientific result was rerun/reset. Full768-cell grid and original first-write evidence retained. Source-result commit6624b06ef.

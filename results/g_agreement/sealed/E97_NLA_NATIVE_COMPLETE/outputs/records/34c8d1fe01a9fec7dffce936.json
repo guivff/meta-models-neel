@@ -1,0 +1,12 @@
+{
+  "id": "34c8d1fe01a9fec7dffce936",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is asking to extract/rewrite content from a structured data format, implying a template or example follows.\n\nThe phrase \"Here is the input:\" signals an example XML/structured data entry is being presented, with \"entry\" as a repeated structural unit.\n\nFinal token `<entry` opens an XML-style tag, directly mirroring the preceding `<entry>` reference, requiring immediate continuation with tag attributes or content (e.g., `>` or attribute syntax like `id=\"...\"`).\nThe Korean instructional context (\"Please extract...\") suggests a dictionary or glossary entry format, so the next tokens likely define a specific entry's content fields.\n\"Here is one of the entries:\n<entry\" \u2014 the second `<entry` begins a concrete example, expecting closing `>` and structured content like a definition, question, or data record from a corpus.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is asking to extract/rewrite content from a structured data format, implying a template or example follows.\n\nThe phrase \"Here is the input:\" signals an example XML/structured data entry is being presented, with \"entry\" as a repeated structural unit.\n\nFinal token `<entry` opens an XML-style tag, directly mirroring the preceding `<entry>` reference, requiring immediate continuation with tag attributes or content (e.g., `>` or attribute syntax like `id=\"...\"`).\nThe Korean instructional context (\"Please extract...\") suggests a dictionary or glossary entry format, so the next tokens likely define a specific entry's content fields.\n\"Here is one of the entries:\n<entry\" \u2014 the second `<entry` begins a concrete example, expecting closing `>` and structured content like a definition, question, or data record from a corpus.",
+  "truncated": false
+}

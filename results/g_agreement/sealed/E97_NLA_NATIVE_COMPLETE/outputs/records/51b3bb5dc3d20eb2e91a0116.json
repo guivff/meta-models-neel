@@ -1,0 +1,12 @@
+{
+  "id": "51b3bb5dc3d20eb2e91a0116",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given example.\n\nThe example sentence \"The movie was a disaster\" is clearly negative, so the model must output \"Negative\" as the answer.\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the classification answer (e.g., \"Negative\") to follow.\n\"Given the following sentence, determine the sentiment label...\nExample sentence: 'The movie was a disaster, and the audience was disappointed.'\nQuestion: What is the sentiment label for this sentence?\nReply:\" \u2014 the structured Q&A format demands the direct answer token next.\n\n\"Reply:\" is the final prompt field, expecting the concise classification response to follow immediately.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given example.\n\nThe example sentence \"The movie was a disaster\" is clearly negative, so the model must output \"Negative\" as the answer.\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the classification answer (e.g., \"Negative\") to follow.\n\"Given the following sentence, determine the sentiment label...\nExample sentence: 'The movie was a disaster, and the audience was disappointed.'\nQuestion: What is the sentiment label for this sentence?\nReply:\" \u2014 the structured Q&A format demands the direct answer token next.\n\n\"Reply:\" is the final prompt field, expecting the concise classification response to follow immediately.",
+  "truncated": false
+}

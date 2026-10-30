@@ -1,0 +1,12 @@
+{
+  "id": "f8035e5093652dac94e0f54a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict Q&A pattern: a definition is given, then a test case requires a single-label classification answer.\n\nThe example sentence \"The government is trying to reduce the budget deficit\" must be classified as \"positive\" or \"negative\" based on the provided definition, constraining the answer to one of those two labels.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured few-shot format, immediately requiring the model's direct answer (e.g., \"positive\" or \"negative\") on the next line.\n\"Given the following sentence, determine the label according to the definition above.\nSentence: 'The government is trying to reduce the budget deficit.'\nReply:\" \u2014 the final token \"Reply:\" is a response prompt marker, expecting the concise classification answer immediately following.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict Q&A pattern: a definition is given, then a test case requires a single-label classification answer.\n\nThe example sentence \"The government is trying to reduce the budget deficit\" must be classified as \"positive\" or \"negative\" based on the provided definition, constraining the answer to one of those two labels.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured few-shot format, immediately requiring the model's direct answer (e.g., \"positive\" or \"negative\") on the next line.\n\"Given the following sentence, determine the label according to the definition above.\nSentence: 'The government is trying to reduce the budget deficit.'\nReply:\" \u2014 the final token \"Reply:\" is a response prompt marker, expecting the concise classification answer immediately following.",
+  "truncated": false
+}

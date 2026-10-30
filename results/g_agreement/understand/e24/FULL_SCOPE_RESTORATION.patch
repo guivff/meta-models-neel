@@ -1,0 +1,202 @@
+diff --git a/projects/g_agreement/understand/e24_analysis.py b/projects/g_agreement/understand/e24_analysis.py
+index 9b8745bf..ba736528 100644
+--- a/projects/g_agreement/understand/e24_analysis.py
++++ b/projects/g_agreement/understand/e24_analysis.py
+@@ -9,26 +9,14 @@ from .e24_worker import PRIORITY, C6_LAYERS, read, seal, parity
+ from .e24_statements import statement
+ 
+ SEED=20261025
+-ATTEMPT2_LAYERS=(44,20,32,52,60)
+-ATTEMPT2_CHANNELS=('C1','C2','C3','C5')
+ 
+ 
+-def analysis_scope(plan, scope):
+-    """Keep the sealed acquisition bank intact; narrow the registered rule family."""
+-    reduced=plan.get('attempt')==2
+-    if not reduced:return False,scope,list(PRIORITY)
+-    if plan.get('scope_amendment')!='d3d91630':raise ValueError('attempt 2 amendment binding required')
+-    if plan.get('channels')!=list(ATTEMPT2_CHANNELS):raise ValueError('attempt 2 channels')
+-    structure=[f for f in scope['structure_rows'] if f in scope['rows_c5']]
+-    if len(structure)!=16:raise ValueError('attempt 2 requires original 16 structure rows')
+-    return True,{**scope,'structure_rows':structure,'holm_family_size':64},list(ATTEMPT2_LAYERS)
+-
+-
+-def validate_attempt2_admission(admission):
+-    if (admission['layers_priority']!=list(ATTEMPT2_LAYERS) or admission['C6'] or admission['C7']
+-        or any(set(p['layers'])-set(ATTEMPT2_LAYERS) or 44 not in p['layers'] for p in admission['pods'])):
+-        raise ValueError('attempt 2 requires exactly five layers, anchor on each pod, no C6/C7')
+-
++def validate_scope_authority(plan):
++    """§130 restores §118; never silently analyse a superseded reduced plan."""
++    if plan.get('scope_amendment')=='d3d91630':
++        raise ValueError('five-layer amendment superseded by §130 (4769ca0e)')
++    if 'channels' in plan and plan['channels']!=['C1','C2','C3','C4','C5','C6','C7']:
++        raise ValueError('§130 requires full registered C1–C7 scope')
+ 
+ 
+ def auc(y, scores):
+@@ -118,7 +106,7 @@ def analyse(a):
+     from mats.probes import fit_logreg
+     from common.stats import wilson
+     plan=read(a.plan);scope=read(a.bank/'SCOPE.json')
+-    reduced,scope,rule_layers=analysis_scope(plan,scope)
++    validate_scope_authority(plan)
+     for n,digest in plan['source_files'].items():
+         if P.sha(P.ROOT/n)!=digest:raise ValueError('analysis source changed: '+n)
+     P.verify(a.bank,'INPUT_SEAL.json');P.verify(a.capture,'CAPTURE_SEAL.json')
+@@ -131,9 +119,7 @@ def analyse(a):
+     for out in a.outputs:
+         P.verify(out,'SCORE_SEAL.json');adm=read(out/'ADMISSION.json')
+         if admission is not None and admission!=adm:raise ValueError('different global admissions')
+-        admission=adm
+-        if reduced:validate_attempt2_admission(adm)
+-        slot=read(out/'FORECAST.json')['slot']
++        admission=adm;slot=read(out/'FORECAST.json')['slot']
+         if slot in pods:raise ValueError('duplicate pod slot')
+         pods[slot]=out
+         for l in adm['pods'][slot]['layers']:
+@@ -193,7 +179,7 @@ def analyse(a):
+                 cell.update(C2=m2,C2_swap=ms,C2_minus_C1={'difference':m2['auroc']-m1['auroc'],'ci95':np.quantile(b2-b1,[.025,.975]).tolist()})
+             if f in scope['rows_c5']:
+                 mc,_=metric(y,c5[[c5map[i] for i in te]]@direction,boot);cell['C5']=mc
+-            if not reduced and f in scope['structure_rows']:
++            if f in scope['structure_rows']:
+                 codes=[statement(f,rr[i]['C4']) for i in te]
+                 k=sum(code==('A' if yy else 'B') for code,yy in zip(codes,y));cell['C4']={'k':int(k),'n':len(te),'codes':codes}
+             layer[f]=cell
+@@ -215,7 +201,7 @@ def analyse(a):
+     for layer in report.values():
+         for f,cell in layer.items():cell['interpretable']=r0[f]['interpretable']
+     family={f'{f}:{l}':(report[str(l)][f]['C1']['p_above_chance'] if l in canonical and r0[f]['interpretable'] else 1.)
+-            for f in scope['structure_rows'] for l in rule_layers if l!=44}
++            for f in scope['structure_rows'] for l in PRIORITY if l!=44}
+     if len(family)!=scope['holm_family_size']:raise ValueError('Holm family changed')
+     adjusted=holm(family);rules={};r2=[]
+     for l in admission['layers_priority']:
+@@ -225,13 +211,12 @@ def analyse(a):
+         unresolved=[f for f in valid if not r0[f]['interpretable']]
+         carried=[f for f in valid if r0[f]['interpretable'] and carried_reversal(layer[f])]
+         dissociated=[f for f in valid if r0[f]['interpretable'] and layer[f]['C2_minus_C1']['ci95'][0]>0]
+-        pooled=[] if reduced else [layer[f]['C4'] for f in scope['structure_rows'] if r0[f]['interpretable']]
++        pooled=[layer[f]['C4'] for f in scope['structure_rows'] if r0[f]['interpretable']]
+         k=sum(c['k'] for c in pooled);n=sum(c['n'] for c in pooled);interval=list(wilson(k,n)) if n else None
+         rules[str(l)]={'R1':{'held':None if any(not r0[f]['interpretable'] and layer[f]['C3']['auroc']>=.8 for f in scope['structure_rows']) else bool(eligible) and len(blind)/len(eligible)>=.75,'denominator':eligible,'blind':blind},
+             'R3_prime':{'held':majority(len(carried),len(unresolved),len(valid)),'denominator':valid,'unresolved':unresolved,'carried':carried},
+             'R4':{'held':None if any(not r0[f]['interpretable'] for f in scope['structure_rows']) else interval is not None and interval[2]<.05,'k':k,'n':n,'rate_lo_hi':interval},
+             'R5':{'held':majority(len(dissociated),len(unresolved),len(valid)),'denominator':valid,'unresolved':unresolved,'dissociated':dissociated}}
+-        if reduced:rules[str(l)].pop('R4')
+         if l!=44:
+             for f in scope['structure_rows']:
+                 if r0[f]['interpretable'] and layer[f]['C1']['auroc']>=.7 and adjusted[f'{f}:{l}']<.05 and report['44'][f]['C1']['auroc']<=.6:
+@@ -263,21 +248,18 @@ def analyse(a):
+                 tr,te,yt,y,boot=rowspec[f];j,dev=best_dev(yt,[byid[i]['scores'] for i in tr]);scores=np.array([byid[i]['scores'] for i in te])
+                 rows[f]={'best_dev_index':j,'dev_aurocs':dev,'test_all8':[auc(y,scores[:,k]) for k in range(8)],'test_selected':metric(y,scores[:,j],boot)[0]}
+             c7report[str(l)]=rows
+-    packet,key=([],[]) if reduced else blind_packet({l:rr for l,(rr,_) in canonical.items()},items,specs,scope['structure_rows'])
+-    if not reduced:
+-        P.jsonl(a.out/'JUDGE_PACKET.jsonl',packet);P.jsonl(a.out/'JUDGE_KEY.DO_NOT_SEND.jsonl',key)
++    packet,key=blind_packet({l:rr for l,(rr,_) in canonical.items()},items,specs,scope['structure_rows'])
++    P.jsonl(a.out/'JUDGE_PACKET.jsonl',packet);P.jsonl(a.out/'JUDGE_KEY.DO_NOT_SEND.jsonl',key)
+     P.dump(a.out/'metrics.json',{'R0':r0,'layers':report,'rules':rules,'R2_cells':r2,'holm':adjusted,
+-        'R1_across_layers':None if reduced else (True if sum(r['R1']['held'] is True for r in rules.values())>=9 else None if sum(r['R1']['held'] is not False for r in rules.values())>=9 else False),
++        'R1_across_layers':(True if sum(r['R1']['held'] is True for r in rules.values())>=9 else None if sum(r['R1']['held'] is not False for r in rules.values())>=9 else False),
+         'R5_at_all_R3_prime_layers':all_resolved([r['R5']['held'] for r in rules.values() if r['R3_prime']['held'] is True]),
+         'C5_status':'DESCRIPTIVE_PER_ROW_LAYER_NO_ACROSS_LAYER_RULE','C6':c6report,'C7':c7report,
+         'C6_44_status':('REPRODUCED' if all(x['reproduced'] for x in c6report['44'].values()) else 'NOT REPRODUCED') if c6report else 'NOT RUN',
+-        'scope_amendment':plan.get('scope_amendment'),
+-        'R1_across_layers_status':'NOT_EVALUABLE_ORIGINAL_THRESHOLD_9_EXCEEDS_5' if reduced else 'ORIGINAL_RULE',
+-        'C4_judge_status':'DROPPED_BY_AMENDMENT' if reduced else 'PENDING_BLINDED_AUDIT','bootstrap':'2000 W1 template-cluster draws; paired across channels; seed20261025',
++        'C4_judge_status':'PENDING_BLINDED_AUDIT','bootstrap':'2000 W1 template-cluster draws; paired across channels; seed20261025',
+         'invalid_R0_rows_uninterpretable_everywhere':[f for f,v in r0.items() if not v['interpretable']]})
+     np.savez(a.out/'directions.npz',**directions);P.dump(a.out/'probe_predictions.json',saved)
+-    seal(a.out,['metrics.json','directions.npz','probe_predictions.json']+([] if reduced else ['JUDGE_PACKET.jsonl','JUDGE_KEY.DO_NOT_SEND.jsonl']),
+-         'ANALYSIS_SEAL.json','E24_CPU_ANALYSIS_COMPLETE' if reduced else 'E24_CPU_ANALYSIS_COMPLETE_JUDGE_AUDIT_PENDING')
++    seal(a.out,['metrics.json','directions.npz','probe_predictions.json','JUDGE_PACKET.jsonl','JUDGE_KEY.DO_NOT_SEND.jsonl'],
++         'ANALYSIS_SEAL.json','E24_CPU_ANALYSIS_COMPLETE_JUDGE_AUDIT_PENDING')
+ 
+ 
+ if __name__=='__main__':
+diff --git a/projects/g_agreement/understand/tests/test_e24.py b/projects/g_agreement/understand/tests/test_e24.py
+index 4ea490a8..74134451 100644
+--- a/projects/g_agreement/understand/tests/test_e24.py
++++ b/projects/g_agreement/understand/tests/test_e24.py
+@@ -172,8 +172,7 @@ def test_unresolved_rows_do_not_shrink_majority():
+     assert A.all_resolved([]) is None
+ 
+ 
+-@pytest.mark.parametrize('attempt2',[False,True])
+-def test_cpu_analysis_end_to_end_synthetic(tmp_path,monkeypatch,attempt2):
++def test_cpu_analysis_end_to_end_synthetic(tmp_path,monkeypatch):
+     """Complete fake 28-row population, real dev probe fits, shortened test bootstrap."""
+     bank=tmp_path/'bank';bank.mkdir();out=tmp_path/'pod';out.mkdir();capture=tmp_path/'capture';capture.mkdir();dest=out/'L44';dest.mkdir()
+     scope=json.loads((P.ROOT/'results/g_agreement/understand/e24/SCOPE.json').read_text())
+@@ -193,9 +192,6 @@ def test_cpu_analysis_end_to_end_synthetic(tmp_path,monkeypatch,attempt2):
+         'e15_metrics':[{'feature':f,'valid_pairs':[0,1],'readers':{'olens':{'arms':{'true':{'auroc':.5}}}}} for f in c2rows]})
+     ref=tmp_path/'e1b.json';P.dump(ref,{'rows':{f:.5 for f in scope['rows_c5']}})
+     plan=tmp_path/'plan.json';P.dump(plan,{'source_files':{},'input_seal_sha256':P.sha(bank/'INPUT_SEAL.json'),'labels_sha256':P.sha(lab),'e1b_reference':str(ref)})
+-    if attempt2:
+-        pp=json.loads(plan.read_text());pp.update(attempt=2,scope_amendment='d3d91630',channels=list(A.ATTEMPT2_CHANNELS));P.dump(plan,pp)
+-        for r in readouts:r.pop('C4')
+     np.save(capture/'acts44.npy',np.array(h,dtype=np.float32));P.dump(capture/'ORDER.json',[x['id'] for x in items]);P.dump(capture/'BINDING.json',{'plan_sha256':P.sha(plan)})
+     E.seal(capture,['acts44.npy','ORDER.json','BINDING.json'],'L44_SEAL.json','TEST');E.seal(capture,['L44_SEAL.json'],'CAPTURE_SEAL.json','TEST')
+     P.dump(out/'FORECAST.json',{'slot':0});P.dump(out/'ADMISSION.json',{'pods':[{'layers':[44]}],'layers_priority':[44],'C6':False,'C7':False})
+@@ -203,38 +199,17 @@ def test_cpu_analysis_end_to_end_synthetic(tmp_path,monkeypatch,attempt2):
+     P.dump(dest/'BINDING.json',{'layer':44,'plan_sha256':P.sha(plan),'input_seal_sha256':P.sha(bank/'INPUT_SEAL.json'),
+         'capture_layer_seal_sha256':P.sha(capture/'L44_SEAL.json'),'admission_sha256':P.sha(out/'ADMISSION.json')})
+     E.seal(dest,[p.name for p in dest.iterdir()],'SCORE_SEAL.json','TEST');E.seal(out,['L44/SCORE_SEAL.json','ADMISSION.json','FORECAST.json'],'SCORE_SEAL.json','TEST')
+-    if attempt2:
+-        import shutil
+-        adm={'pods':[{'layers':list(A.ATTEMPT2_LAYERS)}],'layers_priority':list(A.ATTEMPT2_LAYERS),'C6':False,'C7':False}
+-        P.dump(out/'ADMISSION.json',adm)
+-        for l in A.ATTEMPT2_LAYERS:
+-            np.save(capture/f'acts{l}.npy',np.array(h,dtype=np.float32))
+-            E.seal(capture,[f'acts{l}.npy','ORDER.json','BINDING.json'],f'L{l}_SEAL.json','TEST')
+-            dd=out/f'L{l}'
+-            if l!=44:shutil.copytree(dest,dd)
+-            bb=json.loads((dd/'BINDING.json').read_text());bb.update(layer=l,capture_layer_seal_sha256=P.sha(capture/f'L{l}_SEAL.json'),admission_sha256=P.sha(out/'ADMISSION.json'));P.dump(dd/'BINDING.json',bb)
+-            E.seal(dd,[p.name for p in dd.iterdir() if p.name!='SCORE_SEAL.json'],'SCORE_SEAL.json','TEST')
+-        E.seal(capture,[f'L{l}_SEAL.json' for l in A.ATTEMPT2_LAYERS],'CAPTURE_SEAL.json','TEST')
+-        E.seal(out,[f'L{l}/SCORE_SEAL.json' for l in A.ATTEMPT2_LAYERS]+['ADMISSION.json','FORECAST.json'],'SCORE_SEAL.json','TEST')
+-    monkeypatch.setattr(A,'draws' ,lambda clusters:[np.arange(len(clusters))]*10)
++    monkeypatch.setattr(A,'draws',lambda clusters:[np.arange(len(clusters))]*10)
+     a=SimpleNamespace(bank=bank,plan=plan,capture=capture,labels=lab,out=tmp_path/'analysis',outputs=[out],c6_capture=None)
+     A.analyse(a);P.verify(a.out,'ANALYSIS_SEAL.json');m=json.loads((a.out/'metrics.json').read_text())
+     assert m['invalid_R0_rows_uninterpretable_everywhere']==['prose_paren']
+     assert 'R6_all_layers' not in m and 'R6' not in m['rules']['44']
+     assert sum('C5' in cell for cell in m['layers']['44'].values())==25
+     assert all(c['C5_pass'] for f in scope['rows_c5'] for c in m['R0'][f]['anchors'])
+-    assert len(m['holm'])==(64 if attempt2 else 190) and len(m['layers']['44'])==28
++    assert len(m['holm'])==190 and len(m['layers']['44'])==28
+     assert len(m['rules']['44']['R3_prime']['denominator'])==7
+-    if attempt2:
+-        assert all('R4' not in r for r in m['rules'].values())
+-        assert all('C4' not in c for layer in m['layers'].values() for c in layer.values())
+-        assert not (a.out/'JUDGE_PACKET.jsonl').exists()
+-        assert len(m['layers'])==5 and m['R1_across_layers'] is None
+-        assert all('latex_math:' not in k for k in m['holm'])
+-        assert m['C5_status']=='DESCRIPTIVE_PER_ROW_LAYER_NO_ACROSS_LAYER_RULE'
+-    else:
+-        assert m['rules']['44']['R4']['held'] is None
+-        assert len(P.rows(a.out/'JUDGE_PACKET.jsonl'))==20
++    assert m['rules']['44']['R4']['held'] is None
++    assert len(P.rows(a.out/'JUDGE_PACKET.jsonl'))==20
+     assert m['layers']['44']['prose_paren']['C3']['auroc']==1
+     with pytest.raises(FileExistsError):A.analyse(a)
+ 
+@@ -249,11 +224,8 @@ def test_c5_anchor_tolerance():
+     assert not A.c5_anchor(.73001,.70)['C5_pass']
+ 
+ 
+-def test_attempt2_scope_rejects_unregistered_channels_and_partial_layers():
+-    scope=json.loads((P.ROOT/'results/g_agreement/understand/e24/SCOPE.json').read_text())
+-    plan=dict(attempt=2,scope_amendment='d3d91630',channels=list(A.ATTEMPT2_CHANNELS))
+-    reduced,new,layers=A.analysis_scope(plan,scope)
+-    assert reduced and len(new['structure_rows'])==16 and new['holm_family_size']==64
+-    assert len(scope['structure_rows'])==19
+-    with pytest.raises(ValueError):A.analysis_scope({**plan,'channels':['C1']},scope)
+-    with pytest.raises(ValueError):A.validate_attempt2_admission(dict(layers_priority=[44],pods=[{'layers':[44]}],C6=False,C7=False))
++def test_section130_rejects_superseded_reduced_plan():
++    A.validate_scope_authority({})
++    A.validate_scope_authority(dict(attempt=2,scope_amendment='4769ca0e',channels=['C1','C2','C3','C4','C5','C6','C7']))
++    with pytest.raises(ValueError):A.validate_scope_authority(dict(scope_amendment='d3d91630'))
++    with pytest.raises(ValueError):A.validate_scope_authority(dict(channels=['C1','C2','C3','C5']))

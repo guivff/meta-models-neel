@@ -1,0 +1,434 @@
+{
+  "block52_alone": {
+    "full_registered_cohorts": {
+      "fact_recall": {
+        "conditions": {
+          "random": {
+            "Wilson95": [
+              0.3954393376854136,
+              0.6045606623145864
+            ],
+            "k": 42,
+            "missing_n": 0,
+            "n": 84,
+            "planned_n": 84,
+            "rate": 0.5,
+            "target": "old"
+          },
+          "steered": {
+            "Wilson95": [
+              0.95626827158534,
+              0.9999999999999999
+            ],
+            "k": 84,
+            "missing_n": 0,
+            "n": 84,
+            "planned_n": 84,
+            "rate": 1.0,
+            "target": "new"
+          },
+          "unhooked": {
+            "Wilson95": [
+              0.95626827158534,
+              0.9999999999999999
+            ],
+            "k": 84,
+            "missing_n": 0,
+            "n": 84,
+            "planned_n": 84,
+            "rate": 1.0,
+            "target": "old"
+          }
+        },
+        "label": "POST HOC EXPLORATORY \u2014 E123 note1 (2e3ac01db)",
+        "layer": 52,
+        "missing_policy": "affected rate only; missing is not incorrect/zero"
+      },
+      "language_plan": {
+        "conditions": {
+          "random": {
+            "Wilson95": [
+              0.6055943364104086,
+              0.8542578617103511
+            ],
+            "k": 33,
+            "missing_n": 6,
+            "n": 44,
+            "planned_n": 50,
+            "rate": 0.75,
+            "target": "old"
+          },
+          "steered": {
+            "Wilson95": [
+              0.28509392559950375,
+              0.5780493145800892
+            ],
+            "k": 17,
+            "missing_n": 10,
+            "n": 40,
+            "planned_n": 50,
+            "rate": 0.425,
+            "target": "new"
+          },
+          "unhooked": {
+            "Wilson95": [
+              0.47283959557009003,
+              0.7661578075284404
+            ],
+            "k": 24,
+            "missing_n": 12,
+            "n": 38,
+            "planned_n": 50,
+            "rate": 0.631578947368421,
+            "target": "old"
+          }
+        },
+        "label": "POST HOC EXPLORATORY \u2014 E123 note1 (2e3ac01db)",
+        "layer": 52,
+        "missing_policy": "affected rate only; missing is not incorrect/zero"
+      }
+    },
+    "label": "POST HOC EXPLORATORY \u2014 E123 note1 (2e3ac01db)",
+    "same_false_consensus35": {
+      "conditions": {
+        "random": {
+          "Wilson95": [
+            0.7762072603410349,
+            0.9704176317330301
+          ],
+          "k": 32,
+          "missing_n": 0,
+          "n": 35,
+          "planned_n": 35,
+          "rate": 0.9142857142857143,
+          "target": "old"
+        },
+        "steered": {
+          "Wilson95": [
+            0.9010990076755959,
+            0.9999999999999999
+          ],
+          "k": 35,
+          "missing_n": 0,
+          "n": 35,
+          "planned_n": 35,
+          "rate": 1.0,
+          "target": "new"
+        },
+        "unhooked": {
+          "Wilson95": [
+            0.9010990076755959,
+            0.9999999999999999
+          ],
+          "k": 35,
+          "missing_n": 0,
+          "n": 35,
+          "planned_n": 35,
+          "rate": 1.0,
+          "target": "old"
+        }
+      },
+      "label": "POST HOC EXPLORATORY \u2014 E123 note1 (2e3ac01db)",
+      "layer": 52,
+      "missing_policy": "affected rate only; missing is not incorrect/zero"
+    }
+  },
+  "false_consensus35": {
+    "condition": "steered",
+    "disagreement": {
+      "Wilson95": [
+        0.9010990076755959,
+        0.9999999999999999
+      ],
+      "k": 35,
+      "n": 35,
+      "rate": 1.0
+    },
+    "label": "POST HOC EXPLORATORY \u2014 E123 note1 (2e3ac01db)",
+    "missing_n": 0,
+    "planned_n": 35,
+    "row": "fact_recall",
+    "source": "original sealed E121 ff2b4dd8e Oracle44/NLA42 old-value agreement; E109 Oracle44/52 judgments"
+  },
+  "label": "POST HOC EXPLORATORY \u2014 E123 note1 (2e3ac01db)",
+  "operating_point": {
+    "label": "POST HOC EXPLORATORY \u2014 E123 note1 (2e3ac01db)",
+    "rows": {
+      "fact_recall": {
+        "FN": 0,
+        "FP": 19,
+        "TN": 65,
+        "TP": 47,
+        "abstention_policy": "missing pairs abstain, never zero; one-value and no-value pairs retain registered disagreement signal; coverage does not filter detector scoring",
+        "coverage": {
+          "random": {
+            "abstention_counts": {
+              "missing_pair": 0,
+              "no_value_either": 0,
+              "only_one_value": 26
+            },
+            "both_state": 58,
+            "coverage_given_parseable": {
+              "Wilson95": [
+                0.5851119111696723,
+                0.779180763719981
+              ],
+              "k": 58,
+              "n": 84,
+              "rate": 0.6904761904761905
+            },
+            "missing_pairs": 0,
+            "neither_states": 0,
+            "observed_coverage": {
+              "Wilson95": [
+                0.5851119111696723,
+                0.779180763719981
+              ],
+              "k": 58,
+              "n": 84,
+              "rate": 0.6904761904761905
+            },
+            "one_states": 26,
+            "parseable_pairs": 84,
+            "planned_n": 84
+          },
+          "steered": {
+            "abstention_counts": {
+              "missing_pair": 1,
+              "no_value_either": 0,
+              "only_one_value": 32
+            },
+            "both_state": 51,
+            "coverage_given_parseable": {
+              "Wilson95": [
+                0.5069010793628409,
+                0.7118884280685144
+              ],
+              "k": 51,
+              "n": 83,
+              "rate": 0.6144578313253012
+            },
+            "missing_pairs": 1,
+            "neither_states": 0,
+            "observed_coverage": {
+              "Wilson95": [
+                0.5002180659007766,
+                0.7046965637246533
+              ],
+              "k": 51,
+              "n": 84,
+              "rate": 0.6071428571428571
+            },
+            "one_states": 32,
+            "parseable_pairs": 83,
+            "planned_n": 84
+          },
+          "unhooked": {
+            "abstention_counts": {
+              "missing_pair": 0,
+              "no_value_either": 0,
+              "only_one_value": 19
+            },
+            "both_state": 65,
+            "coverage_given_parseable": {
+              "Wilson95": [
+                0.6735309285283279,
+                0.850139791625549
+              ],
+              "k": 65,
+              "n": 84,
+              "rate": 0.7738095238095238
+            },
+            "missing_pairs": 0,
+            "neither_states": 0,
+            "observed_coverage": {
+              "Wilson95": [
+                0.6735309285283279,
+                0.850139791625549
+              ],
+              "k": 65,
+              "n": 84,
+              "rate": 0.7738095238095238
+            },
+            "one_states": 19,
+            "parseable_pairs": 84,
+            "planned_n": 84
+          }
+        },
+        "known_stale_planned_n": 47,
+        "label": "POST HOC EXPLORATORY \u2014 E123 note1 (2e3ac01db)",
+        "population": "registered stale-steered positives plus all unhooked negatives; precision describes this sample mixture, not deployment prevalence",
+        "precision": {
+          "Wilson95": [
+            0.5936275059135345,
+            0.8072805002019328
+          ],
+          "k": 47,
+          "n": 66,
+          "rate": 0.7121212121212122
+        },
+        "sensitivity": {
+          "Wilson95": [
+            0.9244423958360037,
+            1.0
+          ],
+          "k": 47,
+          "n": 47,
+          "rate": 1.0
+        },
+        "stale_pair_missing_n": 0,
+        "threshold": "registered unequal stated-value sets, unchanged",
+        "unhooked_false_positive_rate": {
+          "Wilson95": [
+            0.14986020837445108,
+            0.32646907147167215
+          ],
+          "k": 19,
+          "n": 84,
+          "rate": 0.2261904761904762
+        },
+        "unhooked_missing_n": 0,
+        "unhooked_planned_n": 84,
+        "unknown_stale44_n": 1
+      },
+      "language_plan": {
+        "FN": 14,
+        "FP": 8,
+        "TN": 24,
+        "TP": 8,
+        "abstention_policy": "missing pairs abstain, never zero; one-value and no-value pairs retain registered disagreement signal; coverage does not filter detector scoring",
+        "coverage": {
+          "random": {
+            "abstention_counts": {
+              "missing_pair": 14,
+              "no_value_either": 0,
+              "only_one_value": 4
+            },
+            "both_state": 32,
+            "coverage_given_parseable": {
+              "Wilson95": [
+                0.7468519140963513,
+                0.9559335969968435
+              ],
+              "k": 32,
+              "n": 36,
+              "rate": 0.8888888888888888
+            },
+            "missing_pairs": 14,
+            "neither_states": 0,
+            "observed_coverage": {
+              "Wilson95": [
+                0.501410168761127,
+                0.7586125034815325
+              ],
+              "k": 32,
+              "n": 50,
+              "rate": 0.64
+            },
+            "one_states": 4,
+            "parseable_pairs": 36,
+            "planned_n": 50
+          },
+          "steered": {
+            "abstention_counts": {
+              "missing_pair": 15,
+              "no_value_either": 0,
+              "only_one_value": 0
+            },
+            "both_state": 35,
+            "coverage_given_parseable": {
+              "Wilson95": [
+                0.9010990076755959,
+                0.9999999999999999
+              ],
+              "k": 35,
+              "n": 35,
+              "rate": 1.0
+            },
+            "missing_pairs": 15,
+            "neither_states": 0,
+            "observed_coverage": {
+              "Wilson95": [
+                0.562496495355466,
+                0.8089644649911906
+              ],
+              "k": 35,
+              "n": 50,
+              "rate": 0.7
+            },
+            "one_states": 0,
+            "parseable_pairs": 35,
+            "planned_n": 50
+          },
+          "unhooked": {
+            "abstention_counts": {
+              "missing_pair": 18,
+              "no_value_either": 0,
+              "only_one_value": 2
+            },
+            "both_state": 30,
+            "coverage_given_parseable": {
+              "Wilson95": [
+                0.7985287685584542,
+                0.982689432968359
+              ],
+              "k": 30,
+              "n": 32,
+              "rate": 0.9375
+            },
+            "missing_pairs": 18,
+            "neither_states": 0,
+            "observed_coverage": {
+              "Wilson95": [
+                0.4618143774758936,
+                0.7239161026974346
+              ],
+              "k": 30,
+              "n": 50,
+              "rate": 0.6
+            },
+            "one_states": 2,
+            "parseable_pairs": 32,
+            "planned_n": 50
+          }
+        },
+        "known_stale_planned_n": 29,
+        "label": "POST HOC EXPLORATORY \u2014 E123 note1 (2e3ac01db)",
+        "population": "registered stale-steered positives plus all unhooked negatives; precision describes this sample mixture, not deployment prevalence",
+        "precision": {
+          "Wilson95": [
+            0.27999563610326017,
+            0.7200043638967398
+          ],
+          "k": 8,
+          "n": 16,
+          "rate": 0.5
+        },
+        "sensitivity": {
+          "Wilson95": [
+            0.19733204670366125,
+            0.5704829190986899
+          ],
+          "k": 8,
+          "n": 22,
+          "rate": 0.36363636363636365
+        },
+        "stale_pair_missing_n": 7,
+        "threshold": "registered unequal stated-value sets, unchanged",
+        "unhooked_false_positive_rate": {
+          "Wilson95": [
+            0.1325240091850904,
+            0.4210655899424448
+          ],
+          "k": 8,
+          "n": 32,
+          "rate": 0.25
+        },
+        "unhooked_missing_n": 18,
+        "unhooked_planned_n": 50,
+        "unknown_stale44_n": 7
+      }
+    }
+  },
+  "registered_R_DIS1": "UNCHANGED"
+}

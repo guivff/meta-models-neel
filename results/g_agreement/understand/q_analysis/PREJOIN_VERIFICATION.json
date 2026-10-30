@@ -1,0 +1,126 @@
+{
+  "at": "2026-10-24T19:02:49.930093+02:00",
+  "status": "HASHES_AND_SCHEMA_VERIFIED_BEFORE_PRIVATE_KEY_JOIN",
+  "seal_sha256": "0f26755094597462dc8743380dbc2e223a4952122bb6502825e490b474f454d8",
+  "seal": {
+    "status": "CODES_SEALED_BEFORE_KEY_JOIN",
+    "rater": "rater 1: blind Claude sub-agents (18 chunks), no key access",
+    "instructions": "scratchpad INSTRUCTIONS.md (fields per BRIEF_UNDERSTAND §107 Q1/Q2, extension efe4a827, reviewer note 39f7bd78)",
+    "notes": [
+      "Q1 split into pass A (property line only) and pass B (with text) before coding, to stop coders reading truth from the text",
+      "Some coders used scripted rules for structural cues (closing bracket, \" | \") rather than per-line judgement",
+      "q2c structure_tokens: wrapper tokens (\"<\", \">\", \"<explanation>\", leading \"- \"/\"*\") removed by a truth-blind rule at merge because coders treated them inconsistently",
+      "q1 pass B \"extra\" rates vary across chunks (coder strictness differs); treat as descriptive"
+    ],
+    "samples": {
+      "q1_passA": {
+        "n": 480,
+        "validation_failures": 0,
+        "sha256": "8fc4a2053adbf21b035a8d7784dc6f2c31edf1904499bd62dce14614c0c99dff",
+        "input_sha256": "58d8f51189c21c1bf3382643c5f4a3439d3d2d40af202861a279cf2590521750",
+        "mentions": 254,
+        "enacts": 164,
+        "mode": {
+          "continues": 237,
+          "describes": 240,
+          "mixed": 3
+        }
+      },
+      "q1_passB": {
+        "n": 480,
+        "validation_failures": 0,
+        "sha256": "d8c1dbc0c41db1ad5f79d8474f1e46ef7e2a882ec9279965deac508799a5e95d",
+        "input_sha256": "0159ead9e83614ff2080d6f0359bc9b3901ec01b3a2288afecfcc6224df06433",
+        "hallucination": 246,
+        "extra_nonempty": 268
+      },
+      "q2a": {
+        "n": 300,
+        "validation_failures": 0,
+        "sha256": "837a7b7f351acd0386b17e7561657129ca20eb740dd568ae52993b97f4cdaeb5",
+        "input_sha256": "38dfa2ddcd90f0f2cd6908a02f3b26361f9f29d88afbc14b7758073a8d555010",
+        "mentions": 156,
+        "enacts": 113,
+        "mode": {
+          "continues": 150,
+          "describes": 150
+        }
+      },
+      "q2b": {
+        "n": 320,
+        "validation_failures": 0,
+        "sha256": "2ebe137fb6de7c131ea3ede9e2ff70d371e2fbf84a50a4482f35ea58dae96c3e",
+        "input_sha256": "c639b18b173c330b7f5eabb543ed903344bf48536af03bde1bf0790970a799df",
+        "mentions": 0,
+        "enacts": 185,
+        "structure_named": 0,
+        "mode": {
+          "continues": 320
+        }
+      },
+      "q2c": {
+        "n": 840,
+        "validation_failures": 0,
+        "sha256": "a4c74149270911d34b4c45dbfc3edc322290dd9bed9f2d05e0adee9185c2e32c",
+        "input_sha256": "c725eb03031a76ad3419eb5de8cc038e7bf91853ea938b1ceb5155f9e753f026",
+        "mentions": 7,
+        "enacts": 133,
+        "mode": {
+          "continues": 407,
+          "describes": 420,
+          "mixed": 13
+        },
+        "structure_tokens_normalized_rows": 762
+      }
+    }
+  },
+  "samples": {
+    "q1_passA": {
+      "n": 480,
+      "codes_sha256": "8fc4a2053adbf21b035a8d7784dc6f2c31edf1904499bd62dce14614c0c99dff",
+      "input_sha256": "58d8f51189c21c1bf3382643c5f4a3439d3d2d40af202861a279cf2590521750",
+      "quote_checks": {
+        "required_quotes": 407,
+        "evidence_failures": 0
+      }
+    },
+    "q1_passB": {
+      "n": 480,
+      "codes_sha256": "d8c1dbc0c41db1ad5f79d8474f1e46ef7e2a882ec9279965deac508799a5e95d",
+      "input_sha256": "0159ead9e83614ff2080d6f0359bc9b3901ec01b3a2288afecfcc6224df06433",
+      "quote_checks": {
+        "required_quotes": 514,
+        "evidence_failures": 0
+      }
+    },
+    "q2a": {
+      "n": 300,
+      "codes_sha256": "837a7b7f351acd0386b17e7561657129ca20eb740dd568ae52993b97f4cdaeb5",
+      "input_sha256": "38dfa2ddcd90f0f2cd6908a02f3b26361f9f29d88afbc14b7758073a8d555010",
+      "quote_checks": {
+        "required_quotes": 263,
+        "evidence_failures": 0
+      }
+    },
+    "q2b": {
+      "n": 320,
+      "codes_sha256": "2ebe137fb6de7c131ea3ede9e2ff70d371e2fbf84a50a4482f35ea58dae96c3e",
+      "input_sha256": "c639b18b173c330b7f5eabb543ed903344bf48536af03bde1bf0790970a799df",
+      "quote_checks": {
+        "required_quotes": 185,
+        "evidence_failures": 0
+      }
+    },
+    "q2c": {
+      "n": 840,
+      "codes_sha256": "a4c74149270911d34b4c45dbfc3edc322290dd9bed9f2d05e0adee9185c2e32c",
+      "input_sha256": "c725eb03031a76ad3419eb5de8cc038e7bf91853ea938b1ceb5155f9e753f026",
+      "quote_checks": {
+        "nonverbatim_structure_tokens": 0,
+        "required_quotes": 140,
+        "evidence_failures": 0
+      }
+    }
+  },
+  "rater2_files_present": []
+}

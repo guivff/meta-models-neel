@@ -1,0 +1,12 @@
+{
+  "id": "7ab990f73578132f3909b82c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format pattern: \"Question: [instruction] / Answer:\" structure signals a response must follow, likely explaining how to address the topic.\n\nThe prompt establishes a conditional logic task: \"If the topic is X, then [action]\" \u2014 the model must generate an answer consistent with the stated rule about \"not using technical terms.\"\n\n\"Topic: Describe the process of using a software tool.\nInstruction: Describe the process of using a software tool.\nAnswer:\" \u2014 this final label \"Answer:\" is a prompt field requiring the actual explanatory response text, likely a sample answer or meta-explanation about the instruction.\n\n\"Answer:\" is the final token, part of a structured template, immediately constraining the next tokens to be the actual answer content \u2014 a sentence explaining the response to the instruction, likely beginning with \"The answer is...\" or similar explanatory phrasing.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format pattern: \"Question: [instruction] / Answer:\" structure signals a response must follow, likely explaining how to address the topic.\n\nThe prompt establishes a conditional logic task: \"If the topic is X, then [action]\" \u2014 the model must generate an answer consistent with the stated rule about \"not using technical terms.\"\n\n\"Topic: Describe the process of using a software tool.\nInstruction: Describe the process of using a software tool.\nAnswer:\" \u2014 this final label \"Answer:\" is a prompt field requiring the actual explanatory response text, likely a sample answer or meta-explanation about the instruction.\n\n\"Answer:\" is the final token, part of a structured template, immediately constraining the next tokens to be the actual answer content \u2014 a sentence explaining the response to the instruction, likely beginning with \"The answer is...\" or similar explanatory phrasing.",
+  "truncated": false
+}

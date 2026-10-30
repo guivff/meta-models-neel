@@ -1,0 +1,12 @@
+{
+  "id": "c0346a6704c4b3ab43f2c9b2",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"if X, reply 'Sadness'\"), followed by a concrete example requiring application of that rule.\n\nThe example sentence \"The weather is very hot today\" is a test case, and the model must determine the correct mood label based on the established rule.\n\n\"Example sentence: The weather is very hot today\\nReply:\" is a structured Q&A format ending with \"Reply:\", immediately requiring the mood label answer (e.g., \"Sadness\" or similar) as the next token.\n\"Provide the mood label for each given sentence according to the rule.\nExample sentence: The weather is very hot today\nInput sentence: The weather is very hot today\nReply:\" \u2014 the final \"Reply:\" is a prompt field label demanding the model's direct answer/response to the example.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"if X, reply 'Sadness'\"), followed by a concrete example requiring application of that rule.\n\nThe example sentence \"The weather is very hot today\" is a test case, and the model must determine the correct mood label based on the established rule.\n\n\"Example sentence: The weather is very hot today\\nReply:\" is a structured Q&A format ending with \"Reply:\", immediately requiring the mood label answer (e.g., \"Sadness\" or similar) as the next token.\n\"Provide the mood label for each given sentence according to the rule.\nExample sentence: The weather is very hot today\nInput sentence: The weather is very hot today\nReply:\" \u2014 the final \"Reply:\" is a prompt field label demanding the model's direct answer/response to the example.",
+  "truncated": false
+}

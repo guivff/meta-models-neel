@@ -1,0 +1,12 @@
+{
+  "id": "513d94c97c00783ba8db3630",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a system prompt establishes a rule, then a \"Question\" field sets a specific scenario, requiring a matching \"Answer\" that follows the rule.\n\nThe example demonstrates a few-shot template where the model must generate an answer consistent with the stated instruction (e.g., \"use machine learning\" or \"do not use machine learning\").\n\n\"Answer:\" is the final token, a label introducing the model's generated response, immediately requiring the actual answer text explaining how the model should approach writing, mirroring the instruction's content.\n\"Instruction: [rule about X].\nQuestion: The model should use [opposite rule].\nAnswer:\" \u2014 the answer must now demonstrate the model's response to the question, likely a short declarative sentence explaining the approach.\n\n\"Answer:\" expects a direct, illustrative response continuing the pattern.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a system prompt establishes a rule, then a \"Question\" field sets a specific scenario, requiring a matching \"Answer\" that follows the rule.\n\nThe example demonstrates a few-shot template where the model must generate an answer consistent with the stated instruction (e.g., \"use machine learning\" or \"do not use machine learning\").\n\n\"Answer:\" is the final token, a label introducing the model's generated response, immediately requiring the actual answer text explaining how the model should approach writing, mirroring the instruction's content.\n\"Instruction: [rule about X].\nQuestion: The model should use [opposite rule].\nAnswer:\" \u2014 the answer must now demonstrate the model's response to the question, likely a short declarative sentence explaining the approach.\n\n\"Answer:\" expects a direct, illustrative response continuing the pattern.",
+  "truncated": false
+}

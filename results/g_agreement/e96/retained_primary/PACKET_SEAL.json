@@ -1,0 +1,292 @@
+{
+  "code_files": {
+    "projects/g_agreement/e96/aggregate.py": "bef9f4c704b67b0586892ff36d6c38ccc1c069716ba7be3c482b07b8d8df6482",
+    "projects/g_agreement/e96/judge.py": "7c1924caf35df8fe24deebefaa15290897a7b1b2c95da67c6f8c3f66fc1feb78",
+    "projects/g_agreement/e96/prepare_judging.py": "16c6e36baa59fe3522e764b038373bfb2ecce12ec17fa656b77f3b0680edaf57",
+    "projects/g_agreement/e96/regex.py": "620a763fbc270dc30c73ef353e7b68cb85fc765932573f32ed2e96bf356e5f6d",
+    "projects/g_agreement/e96/retained.py": "1ceb71a9089ee3684b066ee03bc6b10463c6cfb6bdcad67e48d21e80ed473188",
+    "projects/g_agreement/readerbench/io.py": "1058bc2e64f556cbcf22d007c3dd456c99401d531b1411bcaf1680651d31c4c6",
+    "projects/g_agreement/readerbench/scoring.py": "201a7542ebda45db5bfb7031ebc84f7ffa6a8e10129db55710b1d8c144b9a790",
+    "projects/g_agreement/understand/blind_judge/dispatch_lock.py": "4c5a979bc1393fb27d7581f5d52a3cdeac09e605b04696fd5a543253980cf09c",
+    "projects/g_agreement/understand/blind_judge/e76_recovery.py": "12083cf5cb41b1dae5b6842a8cb393084a1bcc21e5a18ab3e2234d095af593d8",
+    "projects/g_agreement/understand/blind_judge/judgment_adapter402.py": "e9f55e3c09097596118e91156bb5b1b57d2edb333321102f0a8ef16e0c66a407",
+    "projects/g_agreement/understand/blind_judge/later_runner.py": "6632fe4d0fd925b6b8f20a1971efbdaf120a6fc32aa330336f4563ac00808b87",
+    "projects/g_agreement/understand/blind_judge/privacy79.py": "9d4f3338990135ca99efcb4d5222059f1350e6c5874e152bfe8ddde0d0e50b79",
+    "projects/g_agreement/understand/blind_judge/rubric202.py": "716d430c28e73b8b285e5f570f4336cfc4433f1626f67b152e02e5e75f06422c",
+    "projects/g_agreement/understand/blind_judge/run.py": "9eba603c1eb911029b82f9acca94299cef9f73899a08229b9247a9de5ce1c025",
+    "projects/g_agreement/understand/blind_judge/wmech2_channel.py": "a151ef78b4a0640c292828cb5d92c6f4807bdddabeb7385f169187f84648902f"
+  },
+  "cpu_truth_seal_sha256": "034368b91807d38a8cb6b78a8a9c567af4b9d89a57633e4d4d4ebc8a7c8538c5",
+  "experiment": "E96",
+  "files": {
+    "HARDWARE_RECEIPT.json": "fbd39c2ea4e8f84b8b6b3b2401ca78baf352ee0716a2b80c3d26ea2c3e64d0b4",
+    "JUDGE_MAP.PRIVATE.json": "62d49dc02b4ef0dee2d92db873ee89c530e6acbec41505304bd7610ffda1cd45",
+    "JUDGE_PACKET.json": "245ab8092df06b4a3f6f1266a81b7f2ce479e8be00e31673265257acecd5223d",
+    "OLD_RUBRIC_IDS.json": "74430d78b6ad0356db94d68bcc51430082e75428eaa1c4b5a92e83f8308caafe",
+    "RECORDS.DO_NOT_STAGE.json": "86d02265542f1568da07bf9c07489b0d88c4d7c869b6e565a13bae3f6b9a6406",
+    "REGEX_CODES.json": "fc16a3b4846be68f73db47744f36fad0c21e126b2bf3dea69cf0a883536bba55"
+  },
+  "first_output_source": "CPU REGEX_CODES.json mtime",
+  "first_output_utc": "2026-10-28T15:55:43.458595+00:00",
+  "judge_calls": 0,
+  "judge_unresolved": 18454,
+  "judging_index_sha256": "4319cdfbbe6015504c832938d6850628dcce03ceae03828fdf9953fe272f1338",
+  "old_rubric_unresolved": 4606,
+  "placebo_index_sha256": "1bc0a2d6713b4c604b6933bf9c64ded85c2ad6f7e8db7c622dab3873e402b026",
+  "records": 39600,
+  "regex_catalog_sha256": "b0b82b3c0ec33fa1f7e03cfdf0f9cc67157d2401114eb724d3b54e55560b3e35",
+  "regex_resolved": 6152,
+  "sampling_first_output_utc": "2026-10-28T12:02:52.810977+00:00",
+  "sampling_input_seal_sha256": "4c1d6533d32ec0b0cdc53e115b32341cc1c754df3e2046a25758ce39a16560db",
+  "sampling_output_seals": [
+    {
+      "gpu_type": "H200",
+      "output_seal_sha256": "e11b8bc1180fb6325738dd723fc365b18ebdc666df7b3395e755dc730c1bec03",
+      "slot": 0
+    },
+    {
+      "gpu_type": "H200",
+      "output_seal_sha256": "8d04f3610d7b5d790e2f637d793536a0950bde2b9b5e0f8d3e535fecfa225be3",
+      "slot": 2
+    }
+  ],
+  "scope": {
+    "authority": "\u00a72116eca49bc; E96deviation2,2bdde763; direct Guiv analyze35200now",
+    "missing_reader_cells": [
+      {
+        "bank": "E49",
+        "key": "001",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "branch_taken",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E49",
+        "key": "001",
+        "reader": "nla",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "branch_taken",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E49",
+        "key": "004",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "user_expertise",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E49",
+        "key": "004",
+        "reader": "nla",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "user_expertise",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "007",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "focus_think",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "007",
+        "reader": "nla",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "focus_think",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "010",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "antonym_crosslingual",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "010",
+        "reader": "nla",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "antonym_crosslingual",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "013",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "count_gradient_first_letter",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "013",
+        "reader": "nla",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "count_gradient_first_letter",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "016",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "clause_pending",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "016",
+        "reader": "nla",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "clause_pending",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "019",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "loop_direction",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "019",
+        "reader": "nla",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "loop_direction",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "022",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "sentiment_judgement",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "022",
+        "reader": "nla",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "sentiment_judgement",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "025",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "stance_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "025",
+        "reader": "nla",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "stance_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "028",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "decline_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "028",
+        "reader": "nla",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "decline_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "032",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "S1_L3",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "035",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "S2_L1",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "038",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "S2_L4",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "041",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "S3_L2",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "044",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "S4_L0",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "047",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "S4_L3",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "050",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "S5_L1",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "053",
+        "reader": "oracle",
+        "reason": "slot1 outputs lost; rerun parked under\u00a7211",
+        "row": "S5_L4",
+        "status": "NOT EVALUABLE"
+      }
+    ],
+    "mode": "retained35200",
+    "reader_cells_retained": 55,
+    "records": 39600,
+    "rows_retained": 36,
+    "samples": 35200,
+    "slots": [
+      0,
+      2
+    ]
+  },
+  "status": "REGEX_SCORED_UNRESOLVED_PACKET_FROZEN_NO_API_CALLS"
+}

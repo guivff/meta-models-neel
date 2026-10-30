@@ -1,0 +1,56 @@
+--- e32.py
++++ e32_relaunch.py
+@@ -89,9 +89,10 @@
+         from contextlib import nullcontext
+         from types import SimpleNamespace
+         from mats.capture import decoder_blocks
+-        from .w1_capture import capture_at_layers
++        from .certified_capture import capture
+         base=SimpleNamespace(model=self.model,tok=self.tok,base=nullcontext)
+-        return capture_at_layers(base,items,list(range(len(decoder_blocks(self.model)))))
++        result,self.last_capture_metadata=capture(base,items,list(range(len(decoder_blocks(self.model)))),self.capture_mode,self.capture_context)
++        return result
+ 
+     def score(self,group,pairs,arm,acts,index,maps):
+         import torch
+@@ -117,24 +118,29 @@
+     import torch
+     plan=E.read(a.plan);assign=E.read(a.assignment);now=time.time()
+     if (assign.get('issuer')!='integrator' or assign.get('experiment')!='E32' or not assign.get('pod_id') or assign['pod_id']!=os.getenv('RUNPOD_POD_ID') or assign.get('plan_sha256')!=P.sha(a.plan) or assign.get('assets_manifest_sha256')!=P.sha(a.assets) or assign.get('previous_gpu_seconds')!=0 or assign.get('external_hardstop_verified') is not True or assign.get('source_published') is not True):raise ValueError('integrator assignment')
++    from .certified_capture import release,parity_gate
++    mode=release(plan,assign,a.certificate,a.capture_context)
++    if plan['remaining_gpu_seconds']<=0:raise ValueError('E32 zero remaining budget; coordinator allocation required')
+     created=assign['provider_created_epoch'];end=assign['deadline_epoch']
+-    if not all(isinstance(v,(float,int)) and math.isfinite(v) for v in (created,end)) or not created<=now<end<=created+1800:raise ValueError('0.5 GPU-hour total custody cap')
++    if not all(isinstance(v,(float,int)) and math.isfinite(v) for v in (created,end)) or not created<=now<end<=created+plan['remaining_gpu_seconds']:raise ValueError('0.5 GPU-hour total custody cap')
+     for n,h in plan['source_files'].items():
+         if P.sha(P.ROOT/n)!=h:raise ValueError('source binding: '+n)
+     P.verify(a.bank,'INPUT_SEAL.json')
+     if P.sha(a.bank/'INPUT_SEAL.json')!=plan['input_seal_sha256']:raise ValueError('input binding')
++    with a.assignment.with_suffix('.e32-relaunch.lock').open('x') as f:f.write(P.sha(a.plan))
+     a.out.mkdir(parents=True,exist_ok=False)
+     def timeout(*_):raise TimeoutError('E32 deadline')
+     signal.signal(signal.SIGALRM,timeout);signal.setitimer(signal.ITIMER_REAL,max(.001,end-time.time()-120))
+     try:
+         if not torch.cuda.is_available():raise ValueError('CUDA required')
+-        engine=Engine(a.assets);items=P.rows(a.bank/'items.jsonl');pairs=E.read(a.bank/'pairs.json');maps=E.read(a.bank/'DONORS.json');refs=E.read(a.bank/'references.json');index={x['id']:i for i,x in enumerate(items)}
++        engine=Engine(a.assets);engine.capture_mode=mode;engine.capture_context=a.capture_context;items=P.rows(a.bank/'items.jsonl');pairs=E.read(a.bank/'pairs.json');maps=E.read(a.bank/'DONORS.json');refs=E.read(a.bank/'references.json');index={x['id']:i for i,x in enumerate(items)}
+         if engine.tok.encode('_',add_special_tokens=False)!=[62]:raise ValueError('frozen placeholder token changed')
+         first=time.time();E.dump(a.out/'SCIENCE_CLOCK.json',{'epoch':first})
+         acts=engine.capture(items)
++        P.jsonl(a.out/'ITEM_ENVIRONMENT.jsonl',engine.last_capture_metadata)
+         for l,h in acts.items():np.save(a.out/f'acts{l}.npy',h.numpy())
+-        E.dump(a.out/'ORDER.json',[x['id'] for x in items]);E.dump(a.out/'PARITY.json',parity(acts[44].numpy(),np.load(a.bank/'reference44.npy')))
+-        seal(a.out,[f'acts{l}.npy' for l in acts]+['ORDER.json','PARITY.json'],'CAPTURE_SEAL.json','PARITY_PASS')
++        E.dump(a.out/'ORDER.json',[x['id'] for x in items]);parity_gate(acts[44].numpy(),np.load(a.bank/'reference44.npy'),a.out,items)
++        seal(a.out,[f'acts{l}.npy' for l in acts]+['ITEM_ENVIRONMENT.jsonl']+['ORDER.json','PARITY.json'],'CAPTURE_SEAL.json','PARITY_PASS')
+         records=[];jobs=[]
+         for f in sorted(refs):
+             group=[x for x in items if x['feature']==f]
+@@ -182,5 +188,5 @@
+ 
+ if __name__=='__main__':
+     p=argparse.ArgumentParser(description=__doc__)
+-    for n in ('bank','plan','assignment','assets','out'):p.add_argument('--'+n,type=Path,required=True)
++    for n in ('bank','plan','assignment','assets','out','certificate','capture-context'):p.add_argument('--'+n,type=Path,required=True)
+     run(p.parse_args())

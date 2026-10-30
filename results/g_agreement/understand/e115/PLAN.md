@@ -1,0 +1,9 @@
+# E115 — started under direct Guiv instruction, 2026-10-29
+
+Authority: BRIEF_UNDERSTAND §228 and addition1; reviewer R-5. CPU only, sealed inputs. No existing experiment, forecast, fit or guard is replayed.
+
+Part a: exactly the original 84 flipped E104_U fact_recall items, matched steered/random read44 vectors, and E109 unhooked where present. Reuse E80c rank384 J basis, its exact frozen mean and squared projection-energy fraction recipe; no basis, centering or probe refit. Pin actual saved basis/mean, item order, source seals and stale Oracle judgment joins before the new once-only claim. Report per-condition mean fraction and paired item-bootstrap percentile CIs, 2000 resamples seed20261029. AUROC uses steered=1/random=0 and raw J-fraction, with fixed orientation/no sign selection; paired-item bootstrap CI. Reading: AUROC>=.70 with lower bound>.5 flags staleness; <=.60 blind; otherwise inconclusive. If sealed matched NLA42 readouts exist report Oracle/NLA agreement steered/random; else unavailable. E113 probe application NOT RUN: E104 has no reader internals.
+
+Part b: E94 original sealed item cohort, agreement-only baseline plus agree AND J-fraction>tau. Tau frozen from dev J-fraction deciles before test comparisons; no test-derived threshold substitution. Report precision and coverage within row, item bootstrap2000 seed20261029, baseline beside each curve. Reading from §228 addition1: precision above94.2% at>=23%coverage, or higher coverage at equal precision, adds to agreement; otherwise redundant. Preserve missingness/exclusions; no invented missing fractions or labels. Exact dev/test binding and row aggregation must be frozen in final input plan before compute.
+
+Execution status: STARTED / binding original inputs. Scientific compute and exclusive claim not yet invoked. Commit tested adapter plus exact input plan before running once. Results and source hashes go to R-5 owner HANDOFF on seal arrival.

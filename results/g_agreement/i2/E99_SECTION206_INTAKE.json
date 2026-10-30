@@ -1,0 +1,68 @@
+{
+  "recorded_at_utc": "2026-10-28T11:06:58.764708+00:00",
+  "experiment": "E99",
+  "owner": "I-2",
+  "registration_commit": "741a2fc7",
+  "BRIEF_blob_sha256": "ba9d83f0dca2adbce105b4cf98d4e7f30f4f8d7612b5339e9f832be909090c27",
+  "WorkspaceBench_pin": "86612fa4",
+  "export_owner": "W-text",
+  "runner_owner": "W-mechanism",
+  "judge_channel_owner": "W-internals-B",
+  "reviewer": "R-2",
+  "new_GPU_and_judge_calls": 0,
+  "activation_condition": "Both actual export and runner READY; timingprobe onepod first",
+  "full_shards_min": 4,
+  "full_shards_max": 8,
+  "shard_axes": [
+    "family",
+    "item"
+  ],
+  "forecast_cap_GPU_hours": 24,
+  "reduction_order": [
+    "Drop Oracle layer20",
+    "Reduce agentic_misalignment tolast64positions",
+    "Drop jailbreak_recognition"
+  ],
+  "judging_cap_usd": 40,
+  "economy_rule_2_exempt": true,
+  "judge_route": "E56: OpenRouter/google/gemini-3.1-flash-lite/google-vertex/global/ZDR/data collection denied/provider pinned/no fallbacks",
+  "priority": "After E81/E90 and before E85; preserve existing E86/E82 order",
+  "target_queue": [
+    "E81/E90",
+    "E86",
+    "E82",
+    "E99",
+    "E85",
+    "E91",
+    "E92"
+  ],
+  "R3b_forecast_required": false,
+  "publication": "r/blindspot within1hour ofsealing",
+  "families": [
+    "hallucination",
+    "user_modeling",
+    "directed_modulation",
+    "agentic_misalignment",
+    "jailbreak_recognition",
+    "buggy_code"
+  ],
+  "clarification1": {
+    "single_site_extra_cells": [
+      "directed_modulation assistantonset Oracle44+NLA42",
+      "jailbreak_recognition assistantonset Oracle44+NLA42"
+    ],
+    "grid_unchanged": true,
+    "placebo_same_extra_cells": true,
+    "buggy_code_single_site": "EOF Oracle44"
+  },
+  "clarification2": {
+    "agentic_judging_stages": [
+      "POSITION_PROMPT percell originalcallunit",
+      "CONSOLIDATE_PROMPT peritem/reader",
+      "DESIGN_SCORE_PROMPT peritem/reader targets.json"
+    ],
+    "no_merge_or_skip": true,
+    "judge_over40_first_reduction": "agentic last64positions first",
+    "GPU_reduction_order_unchanged": true
+  }
+}

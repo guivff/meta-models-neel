@@ -1,0 +1,10 @@
+{
+  "cluster": "Original frozen W1 template-family cluster and dev/test assignments retained.",
+  "donors": "Hash draw from same domain/row and original cluster in the full frozen pool, regardless of surprisal; middle-tercile donors remain eligible.",
+  "length": "Report actual selected-row KS p and mean difference after label derivation; if mismatch, mark LENGTH_CONFOUNDED, descriptive only, no retrospective rematching.",
+  "mode_active_gate": "Not applicable to raw W1 surprisal text (no operating instruction); probe and random-donor gates apply. Report separately from 14 mode rows and H1/H2.",
+  "pool": "All prose/Python binary W1 items, byte-identical raw prefixes; W1 ordinal sub-rows excluded.",
+  "quantity": "-log_softmax(base-model logits at position read_position - 1)[input_ids[read_position]]; natural-log nats, NOT next-token entropy",
+  "scoring": "Score all pool items true and random-donor before deriving labels. No recapture or score-dependent selection.",
+  "terciles": "Within domain and original dev/test split, ascending (surprisal, opaque id); bottom floor(n/3) = low, top floor(n/3) = high; middle unused. Stable ID breaks ties. No sign flip."
+}

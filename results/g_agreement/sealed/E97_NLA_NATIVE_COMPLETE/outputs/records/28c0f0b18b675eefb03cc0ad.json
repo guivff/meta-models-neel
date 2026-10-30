@@ -1,0 +1,12 @@
+{
+  "id": "28c0f0b18b675eefb03cc0ad",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt with \"Instruction,\" \"Context,\" \"Question,\" and \"Answer\" fields signals a template-based Q&A format.\n\nThe \"Context\" establishes a rule (AI should prioritize environmental impact), while the \"Question\" asks about AI's role in climate change \u2014 the answer must reflect the Context's rule, not the Question's framing.\n\n\"Answer:\" is the final field label, immediately requiring the model's generated response text, likely a short declarative sentence demonstrating the instruction-following behavior (e.g., \"The AI prioritizes...\").\n\"Instruction: [rule]\nContext: [rule]\nQuestion: [question about X]\nAnswer:\" \u2014 this is a few-shot or evaluation prompt format, so the next token is the model's actual answer, likely showing whether it follows the Context or the Question.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt with \"Instruction,\" \"Context,\" \"Question,\" and \"Answer\" fields signals a template-based Q&A format.\n\nThe \"Context\" establishes a rule (AI should prioritize environmental impact), while the \"Question\" asks about AI's role in climate change \u2014 the answer must reflect the Context's rule, not the Question's framing.\n\n\"Answer:\" is the final field label, immediately requiring the model's generated response text, likely a short declarative sentence demonstrating the instruction-following behavior (e.g., \"The AI prioritizes...\").\n\"Instruction: [rule]\nContext: [rule]\nQuestion: [question about X]\nAnswer:\" \u2014 this is a few-shot or evaluation prompt format, so the next token is the model's actual answer, likely showing whether it follows the Context or the Question.",
+  "truncated": false
+}

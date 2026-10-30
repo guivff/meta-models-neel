@@ -1,0 +1,23 @@
+{
+  "GPU_seconds": 0,
+  "base_model_forwards": 0,
+  "clarification_commit": "e4225a1e",
+  "command": "python -m unittest discover -s results/g_agreement/understand/e25 -p 'test_*.py' -v",
+  "date": "2026-10-25",
+  "runtime": "Python3.12.14 torch2.14.1 numpy2.5.3 scipy1.18.1 transformers5.18.0",
+  "sources": {
+    "results/g_agreement/understand/e25/analyze.py": "de9947c9021b34a906631ba62dfa879167594d267ff17fe7ac80c942355cc567",
+    "results/g_agreement/understand/e25/prepare.py": "dcad0acca57e8dc78064e4760e5e42d3314be3c5cc4edf95ca103312ba125a40",
+    "results/g_agreement/understand/e25/test_analysis.py": "4ab1d61904923ef22a77d3d6d0a5539a7a4c5fb47a05fc0a18a6fdbe88a0aa7a",
+    "results/g_agreement/understand/e25/test_worker.py": "2158ce97bc921bc320e5e1fd66e81b91fecd36d477c5a5cb807be1b39010234d",
+    "results/g_agreement/understand/e25/worker.py": "246936d7131b8af4f87aae8bff9415228c544d2b25f5d2e8292ef8004f17b039"
+  },
+  "tests_include": [
+    "constant A preference gives D=0.5",
+    "perfect item-sensitive A-minus-B discrimination gives D=1",
+    "P unchanged",
+    "causal suffix mean matches full-logit transformer reference"
+  ],
+  "tests_passed": 22,
+  "tokenizer_audit_sha256": "9775d9c300fdb8e088385f967eb89434eeabc72cb7439e2994c2e0253b6663aa"
+}

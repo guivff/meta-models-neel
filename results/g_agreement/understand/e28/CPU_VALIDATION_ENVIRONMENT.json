@@ -1,0 +1,36 @@
+{
+  "CPU_model": "tiny random Qwen3_5ForCausalLM,64hybrid attentionlayers, all approved module targets",
+  "CPU_only_packages": {
+    "peft": "0.21.2",
+    "python": "3.12.14",
+    "torch": "2.14.1",
+    "transformers": "5.18.0"
+  },
+  "checks": [
+    "finite loss/backward and optimizer",
+    "B then A LoRA updates",
+    "frozenbase bitwise unchanged",
+    "native activationinjection and targetmask/padding",
+    "nonreentrantgradientcheckpointing",
+    "detach andreset",
+    "environment immutablepins",
+    "CPU/late readiness rejected",
+    "paritybeforeoptimizer",
+    "fixed AUROC tolerance",
+    "originalall14arms/fullscope and revisedprior-inclusivebudget"
+  ],
+  "date": "2026-10-25",
+  "gpu_hours": 0,
+  "limitations": [
+    "CPUusesreferencePyTorchkernels;TritonCUDAbackwardunverified",
+    "27Bparityandthroughputnotrun"
+  ],
+  "original_input_bank_unchanged": true,
+  "original_plan_unchanged": true,
+  "pretrained_model_calls": 0,
+  "production_train_step_called": true,
+  "runtime_versions": "Actual inherited /weights/venv-kernels versions/hashes frozen by overlay builder; CPU versions do not pin or certify pod packages",
+  "status": "PASS",
+  "tests": 30,
+  "training_steps": 2
+}

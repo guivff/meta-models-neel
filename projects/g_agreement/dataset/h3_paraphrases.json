@@ -1,0 +1,1048 @@
+{
+ "meta": {
+  "purpose": "BRIEF_R §13 / §4.9 (f) paraphrases",
+  "written": "2026-10-19T02:12:44.249534+00:00",
+  "templates": {
+   "p1": {
+    "swap": false,
+    "user": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\n{question}\nReply with only \"{first}\" or \"{second}\"."
+   },
+   "p2": {
+    "swap": true,
+    "user": "Here is a text.\n\n{text}\n\nBased on this text: {question}\nRespond with one option only, either \"{first}\" or \"{second}\"."
+   },
+   "p3": {
+    "swap": true,
+    "user": "Text:\n{text}\n\nI have a question about the text above. {question} Pick one of the two answers, \"{first}\" or \"{second}\", and write nothing else."
+   }
+  },
+  "key_paraphrases": [
+   "p1",
+   "p2"
+  ],
+  "descriptive": [
+   "p3"
+  ],
+  "frozen_template": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: {question}\nAnswer with exactly one of these two options and nothing else: \"{pos}\" or \"{neg}\".",
+  "n_datasets": 113
+ },
+ "datasets": {
+  "100_news_fake": {
+   "question": "Is this news article real or fake?",
+   "pos": "real news",
+   "neg": "fake news",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this news article real or fake?\nAnswer with exactly one of these two options and nothing else: \"real news\" or \"fake news\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this news article real or fake?\nReply with only \"real news\" or \"fake news\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this news article real or fake?\nRespond with one option only, either \"fake news\" or \"real news\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this news article real or fake? Pick one of the two answers, \"fake news\" or \"real news\", and write nothing else."
+  },
+  "105_click_bait": {
+   "question": "Is this headline clickbait?",
+   "pos": "clickbait",
+   "neg": "a factual headline",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this headline clickbait?\nAnswer with exactly one of these two options and nothing else: \"clickbait\" or \"a factual headline\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this headline clickbait?\nReply with only \"clickbait\" or \"a factual headline\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this headline clickbait?\nRespond with one option only, either \"a factual headline\" or \"clickbait\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this headline clickbait? Pick one of the two answers, \"a factual headline\" or \"clickbait\", and write nothing else."
+  },
+  "106_hate_hate": {
+   "question": "Is this tweet hate speech?",
+   "pos": "hate speech",
+   "neg": "not hate speech",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this tweet hate speech?\nAnswer with exactly one of these two options and nothing else: \"hate speech\" or \"not hate speech\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this tweet hate speech?\nReply with only \"hate speech\" or \"not hate speech\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this tweet hate speech?\nRespond with one option only, either \"not hate speech\" or \"hate speech\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this tweet hate speech? Pick one of the two answers, \"not hate speech\" or \"hate speech\", and write nothing else."
+  },
+  "107_hate_offensive": {
+   "question": "Is this tweet offensive?",
+   "pos": "offensive",
+   "neg": "inoffensive",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this tweet offensive?\nAnswer with exactly one of these two options and nothing else: \"offensive\" or \"inoffensive\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this tweet offensive?\nReply with only \"offensive\" or \"inoffensive\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this tweet offensive?\nRespond with one option only, either \"inoffensive\" or \"offensive\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this tweet offensive? Pick one of the two answers, \"inoffensive\" or \"offensive\", and write nothing else."
+  },
+  "110_aimade_humangpt3": {
+   "question": "Was this text written by an AI or by a human?",
+   "pos": "AI-written",
+   "neg": "human-written",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Was this text written by an AI or by a human?\nAnswer with exactly one of these two options and nothing else: \"AI-written\" or \"human-written\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWas this text written by an AI or by a human?\nReply with only \"AI-written\" or \"human-written\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Was this text written by an AI or by a human?\nRespond with one option only, either \"human-written\" or \"AI-written\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Was this text written by an AI or by a human? Pick one of the two answers, \"human-written\" or \"AI-written\", and write nothing else."
+  },
+  "113_movie_sent": {
+   "question": "Is this movie review positive or negative?",
+   "pos": "positive",
+   "neg": "negative",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this movie review positive or negative?\nAnswer with exactly one of these two options and nothing else: \"positive\" or \"negative\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this movie review positive or negative?\nReply with only \"positive\" or \"negative\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this movie review positive or negative?\nRespond with one option only, either \"negative\" or \"positive\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this movie review positive or negative? Pick one of the two answers, \"negative\" or \"positive\", and write nothing else."
+  },
+  "114_nyc_borough_Manhattan": {
+   "question": "Which New York City borough is this place in?",
+   "pos": "Manhattan",
+   "neg": "another borough",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which New York City borough is this place in?\nAnswer with exactly one of these two options and nothing else: \"Manhattan\" or \"another borough\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich New York City borough is this place in?\nReply with only \"Manhattan\" or \"another borough\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which New York City borough is this place in?\nRespond with one option only, either \"another borough\" or \"Manhattan\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which New York City borough is this place in? Pick one of the two answers, \"another borough\" or \"Manhattan\", and write nothing else."
+  },
+  "115_nyc_borough_Brooklyn": {
+   "question": "Which New York City borough is this place in?",
+   "pos": "Brooklyn",
+   "neg": "another borough",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which New York City borough is this place in?\nAnswer with exactly one of these two options and nothing else: \"Brooklyn\" or \"another borough\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich New York City borough is this place in?\nReply with only \"Brooklyn\" or \"another borough\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which New York City borough is this place in?\nRespond with one option only, either \"another borough\" or \"Brooklyn\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which New York City borough is this place in? Pick one of the two answers, \"another borough\" or \"Brooklyn\", and write nothing else."
+  },
+  "116_nyc_borough_Bronx": {
+   "question": "Which New York City borough is this place in?",
+   "pos": "the Bronx",
+   "neg": "another borough",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which New York City borough is this place in?\nAnswer with exactly one of these two options and nothing else: \"the Bronx\" or \"another borough\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich New York City borough is this place in?\nReply with only \"the Bronx\" or \"another borough\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which New York City borough is this place in?\nRespond with one option only, either \"another borough\" or \"the Bronx\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which New York City borough is this place in? Pick one of the two answers, \"another borough\" or \"the Bronx\", and write nothing else."
+  },
+  "117_us_state_FL": {
+   "question": "Which US state is this city in?",
+   "pos": "Florida",
+   "neg": "another state",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which US state is this city in?\nAnswer with exactly one of these two options and nothing else: \"Florida\" or \"another state\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich US state is this city in?\nReply with only \"Florida\" or \"another state\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which US state is this city in?\nRespond with one option only, either \"another state\" or \"Florida\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which US state is this city in? Pick one of the two answers, \"another state\" or \"Florida\", and write nothing else."
+  },
+  "118_us_state_CA": {
+   "question": "Which US state is this city in?",
+   "pos": "California",
+   "neg": "another state",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which US state is this city in?\nAnswer with exactly one of these two options and nothing else: \"California\" or \"another state\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich US state is this city in?\nReply with only \"California\" or \"another state\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which US state is this city in?\nRespond with one option only, either \"another state\" or \"California\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which US state is this city in? Pick one of the two answers, \"another state\" or \"California\", and write nothing else."
+  },
+  "119_us_state_TX": {
+   "question": "Which US state is this city in?",
+   "pos": "Texas",
+   "neg": "another state",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which US state is this city in?\nAnswer with exactly one of these two options and nothing else: \"Texas\" or \"another state\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich US state is this city in?\nReply with only \"Texas\" or \"another state\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which US state is this city in?\nRespond with one option only, either \"another state\" or \"Texas\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which US state is this city in? Pick one of the two answers, \"another state\" or \"Texas\", and write nothing else."
+  },
+  "120_us_timezone_Chicago": {
+   "question": "Which US time zone is this city in?",
+   "pos": "Central Time",
+   "neg": "another time zone",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which US time zone is this city in?\nAnswer with exactly one of these two options and nothing else: \"Central Time\" or \"another time zone\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich US time zone is this city in?\nReply with only \"Central Time\" or \"another time zone\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which US time zone is this city in?\nRespond with one option only, either \"another time zone\" or \"Central Time\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which US time zone is this city in? Pick one of the two answers, \"another time zone\" or \"Central Time\", and write nothing else."
+  },
+  "121_us_timezone_New_York": {
+   "question": "Which US time zone is this city in?",
+   "pos": "Eastern Time",
+   "neg": "another time zone",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which US time zone is this city in?\nAnswer with exactly one of these two options and nothing else: \"Eastern Time\" or \"another time zone\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich US time zone is this city in?\nReply with only \"Eastern Time\" or \"another time zone\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which US time zone is this city in?\nRespond with one option only, either \"another time zone\" or \"Eastern Time\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which US time zone is this city in? Pick one of the two answers, \"another time zone\" or \"Eastern Time\", and write nothing else."
+  },
+  "122_us_timezone_Los_Angeles": {
+   "question": "Which US time zone is this city in?",
+   "pos": "Pacific Time",
+   "neg": "another time zone",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which US time zone is this city in?\nAnswer with exactly one of these two options and nothing else: \"Pacific Time\" or \"another time zone\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich US time zone is this city in?\nReply with only \"Pacific Time\" or \"another time zone\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which US time zone is this city in?\nRespond with one option only, either \"another time zone\" or \"Pacific Time\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which US time zone is this city in? Pick one of the two answers, \"another time zone\" or \"Pacific Time\", and write nothing else."
+  },
+  "123_world_country_United_Kingdom": {
+   "question": "Which country is this place in?",
+   "pos": "the United Kingdom",
+   "neg": "another country",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which country is this place in?\nAnswer with exactly one of these two options and nothing else: \"the United Kingdom\" or \"another country\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich country is this place in?\nReply with only \"the United Kingdom\" or \"another country\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which country is this place in?\nRespond with one option only, either \"another country\" or \"the United Kingdom\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which country is this place in? Pick one of the two answers, \"another country\" or \"the United Kingdom\", and write nothing else."
+  },
+  "124_world_country_United_States": {
+   "question": "Which country is this place in?",
+   "pos": "the United States",
+   "neg": "another country",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which country is this place in?\nAnswer with exactly one of these two options and nothing else: \"the United States\" or \"another country\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich country is this place in?\nReply with only \"the United States\" or \"another country\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which country is this place in?\nRespond with one option only, either \"another country\" or \"the United States\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which country is this place in? Pick one of the two answers, \"another country\" or \"the United States\", and write nothing else."
+  },
+  "125_world_country_Italy": {
+   "question": "Which country is this place in?",
+   "pos": "Italy",
+   "neg": "another country",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which country is this place in?\nAnswer with exactly one of these two options and nothing else: \"Italy\" or \"another country\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich country is this place in?\nReply with only \"Italy\" or \"another country\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which country is this place in?\nRespond with one option only, either \"another country\" or \"Italy\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which country is this place in? Pick one of the two answers, \"another country\" or \"Italy\", and write nothing else."
+  },
+  "126_art_type_book": {
+   "question": "Is this work a book, a song or a movie?",
+   "pos": "a book",
+   "neg": "another kind of work",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this work a book, a song or a movie?\nAnswer with exactly one of these two options and nothing else: \"a book\" or \"another kind of work\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this work a book, a song or a movie?\nReply with only \"a book\" or \"another kind of work\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this work a book, a song or a movie?\nRespond with one option only, either \"another kind of work\" or \"a book\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this work a book, a song or a movie? Pick one of the two answers, \"another kind of work\" or \"a book\", and write nothing else."
+  },
+  "127_art_type_song": {
+   "question": "Is this work a book, a song or a movie?",
+   "pos": "a song",
+   "neg": "another kind of work",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this work a book, a song or a movie?\nAnswer with exactly one of these two options and nothing else: \"a song\" or \"another kind of work\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this work a book, a song or a movie?\nReply with only \"a song\" or \"another kind of work\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this work a book, a song or a movie?\nRespond with one option only, either \"another kind of work\" or \"a song\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this work a book, a song or a movie? Pick one of the two answers, \"another kind of work\" or \"a song\", and write nothing else."
+  },
+  "128_art_type_movie": {
+   "question": "Is this work a book, a song or a movie?",
+   "pos": "a movie",
+   "neg": "another kind of work",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this work a book, a song or a movie?\nAnswer with exactly one of these two options and nothing else: \"a movie\" or \"another kind of work\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this work a book, a song or a movie?\nReply with only \"a movie\" or \"another kind of work\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this work a book, a song or a movie?\nRespond with one option only, either \"another kind of work\" or \"a movie\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this work a book, a song or a movie? Pick one of the two answers, \"another kind of work\" or \"a movie\", and write nothing else."
+  },
+  "129_arith_mc_A": {
+   "question": "Is option A the correct answer to this arithmetic question?",
+   "pos": "option A",
+   "neg": "another option",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is option A the correct answer to this arithmetic question?\nAnswer with exactly one of these two options and nothing else: \"option A\" or \"another option\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs option A the correct answer to this arithmetic question?\nReply with only \"option A\" or \"another option\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is option A the correct answer to this arithmetic question?\nRespond with one option only, either \"another option\" or \"option A\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is option A the correct answer to this arithmetic question? Pick one of the two answers, \"another option\" or \"option A\", and write nothing else."
+  },
+  "130_temp_cat_Frequency": {
+   "question": "What kind of temporal question is this?",
+   "pos": "a frequency question",
+   "neg": "another kind of temporal question",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: What kind of temporal question is this?\nAnswer with exactly one of these two options and nothing else: \"a frequency question\" or \"another kind of temporal question\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhat kind of temporal question is this?\nReply with only \"a frequency question\" or \"another kind of temporal question\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: What kind of temporal question is this?\nRespond with one option only, either \"another kind of temporal question\" or \"a frequency question\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. What kind of temporal question is this? Pick one of the two answers, \"another kind of temporal question\" or \"a frequency question\", and write nothing else."
+  },
+  "131_temp_cat_Typical Time": {
+   "question": "What kind of temporal question is this?",
+   "pos": "a typical-time question",
+   "neg": "another kind of temporal question",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: What kind of temporal question is this?\nAnswer with exactly one of these two options and nothing else: \"a typical-time question\" or \"another kind of temporal question\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhat kind of temporal question is this?\nReply with only \"a typical-time question\" or \"another kind of temporal question\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: What kind of temporal question is this?\nRespond with one option only, either \"another kind of temporal question\" or \"a typical-time question\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. What kind of temporal question is this? Pick one of the two answers, \"another kind of temporal question\" or \"a typical-time question\", and write nothing else."
+  },
+  "132_temp_cat_Event Ordering": {
+   "question": "What kind of temporal question is this?",
+   "pos": "an event-ordering question",
+   "neg": "another kind of temporal question",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: What kind of temporal question is this?\nAnswer with exactly one of these two options and nothing else: \"an event-ordering question\" or \"another kind of temporal question\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhat kind of temporal question is this?\nReply with only \"an event-ordering question\" or \"another kind of temporal question\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: What kind of temporal question is this?\nRespond with one option only, either \"another kind of temporal question\" or \"an event-ordering question\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. What kind of temporal question is this? Pick one of the two answers, \"another kind of temporal question\" or \"an event-ordering question\", and write nothing else."
+  },
+  "133_context_type_Causality": {
+   "question": "What does this question ask about?",
+   "pos": "causality",
+   "neg": "something else",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: What does this question ask about?\nAnswer with exactly one of these two options and nothing else: \"causality\" or \"something else\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhat does this question ask about?\nReply with only \"causality\" or \"something else\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: What does this question ask about?\nRespond with one option only, either \"something else\" or \"causality\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. What does this question ask about? Pick one of the two answers, \"something else\" or \"causality\", and write nothing else."
+  },
+  "134_context_type_Belief_states": {
+   "question": "What does this question ask about?",
+   "pos": "belief states",
+   "neg": "something else",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: What does this question ask about?\nAnswer with exactly one of these two options and nothing else: \"belief states\" or \"something else\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhat does this question ask about?\nReply with only \"belief states\" or \"something else\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: What does this question ask about?\nRespond with one option only, either \"something else\" or \"belief states\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. What does this question ask about? Pick one of the two answers, \"something else\" or \"belief states\", and write nothing else."
+  },
+  "135_context_type_Event_duration": {
+   "question": "What does this question ask about?",
+   "pos": "event duration",
+   "neg": "something else",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: What does this question ask about?\nAnswer with exactly one of these two options and nothing else: \"event duration\" or \"something else\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhat does this question ask about?\nReply with only \"event duration\" or \"something else\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: What does this question ask about?\nRespond with one option only, either \"something else\" or \"event duration\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. What does this question ask about? Pick one of the two answers, \"something else\" or \"event duration\", and write nothing else."
+  },
+  "136_glue_mnli_entailment": {
+   "question": "Does the premise entail, contradict or say nothing about the hypothesis?",
+   "pos": "entailment",
+   "neg": "another relation",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the premise entail, contradict or say nothing about the hypothesis?\nAnswer with exactly one of these two options and nothing else: \"entailment\" or \"another relation\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the premise entail, contradict or say nothing about the hypothesis?\nReply with only \"entailment\" or \"another relation\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the premise entail, contradict or say nothing about the hypothesis?\nRespond with one option only, either \"another relation\" or \"entailment\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the premise entail, contradict or say nothing about the hypothesis? Pick one of the two answers, \"another relation\" or \"entailment\", and write nothing else."
+  },
+  "137_glue_mnli_neutral": {
+   "question": "Does the premise entail, contradict or say nothing about the hypothesis?",
+   "pos": "neutral",
+   "neg": "another relation",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the premise entail, contradict or say nothing about the hypothesis?\nAnswer with exactly one of these two options and nothing else: \"neutral\" or \"another relation\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the premise entail, contradict or say nothing about the hypothesis?\nReply with only \"neutral\" or \"another relation\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the premise entail, contradict or say nothing about the hypothesis?\nRespond with one option only, either \"another relation\" or \"neutral\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the premise entail, contradict or say nothing about the hypothesis? Pick one of the two answers, \"another relation\" or \"neutral\", and write nothing else."
+  },
+  "138_glue_mnli_contradiction": {
+   "question": "Does the premise entail, contradict or say nothing about the hypothesis?",
+   "pos": "contradiction",
+   "neg": "another relation",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the premise entail, contradict or say nothing about the hypothesis?\nAnswer with exactly one of these two options and nothing else: \"contradiction\" or \"another relation\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the premise entail, contradict or say nothing about the hypothesis?\nReply with only \"contradiction\" or \"another relation\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the premise entail, contradict or say nothing about the hypothesis?\nRespond with one option only, either \"another relation\" or \"contradiction\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the premise entail, contradict or say nothing about the hypothesis? Pick one of the two answers, \"another relation\" or \"contradiction\", and write nothing else."
+  },
+  "139_news_class_Politics": {
+   "question": "What is this news headline about?",
+   "pos": "politics",
+   "neg": "another topic",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: What is this news headline about?\nAnswer with exactly one of these two options and nothing else: \"politics\" or \"another topic\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhat is this news headline about?\nReply with only \"politics\" or \"another topic\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: What is this news headline about?\nRespond with one option only, either \"another topic\" or \"politics\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. What is this news headline about? Pick one of the two answers, \"another topic\" or \"politics\", and write nothing else."
+  },
+  "140_news_class_Technology": {
+   "question": "What is this news headline about?",
+   "pos": "technology",
+   "neg": "another topic",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: What is this news headline about?\nAnswer with exactly one of these two options and nothing else: \"technology\" or \"another topic\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhat is this news headline about?\nReply with only \"technology\" or \"another topic\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: What is this news headline about?\nRespond with one option only, either \"another topic\" or \"technology\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. What is this news headline about? Pick one of the two answers, \"another topic\" or \"technology\", and write nothing else."
+  },
+  "141_news_class_Entertainment": {
+   "question": "What is this news headline about?",
+   "pos": "entertainment",
+   "neg": "another topic",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: What is this news headline about?\nAnswer with exactly one of these two options and nothing else: \"entertainment\" or \"another topic\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhat is this news headline about?\nReply with only \"entertainment\" or \"another topic\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: What is this news headline about?\nRespond with one option only, either \"another topic\" or \"entertainment\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. What is this news headline about? Pick one of the two answers, \"another topic\" or \"entertainment\", and write nothing else."
+  },
+  "142_cancer_cat_Thyroid_Cancer": {
+   "question": "Which cancer is this text about?",
+   "pos": "thyroid cancer",
+   "neg": "another cancer",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which cancer is this text about?\nAnswer with exactly one of these two options and nothing else: \"thyroid cancer\" or \"another cancer\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich cancer is this text about?\nReply with only \"thyroid cancer\" or \"another cancer\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which cancer is this text about?\nRespond with one option only, either \"another cancer\" or \"thyroid cancer\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which cancer is this text about? Pick one of the two answers, \"another cancer\" or \"thyroid cancer\", and write nothing else."
+  },
+  "143_cancer_cat_Lung_Cancer": {
+   "question": "Which cancer is this text about?",
+   "pos": "lung cancer",
+   "neg": "another cancer",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which cancer is this text about?\nAnswer with exactly one of these two options and nothing else: \"lung cancer\" or \"another cancer\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich cancer is this text about?\nReply with only \"lung cancer\" or \"another cancer\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which cancer is this text about?\nRespond with one option only, either \"another cancer\" or \"lung cancer\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which cancer is this text about? Pick one of the two answers, \"another cancer\" or \"lung cancer\", and write nothing else."
+  },
+  "144_cancer_cat_Colon_Cancer": {
+   "question": "Which cancer is this text about?",
+   "pos": "colon cancer",
+   "neg": "another cancer",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which cancer is this text about?\nAnswer with exactly one of these two options and nothing else: \"colon cancer\" or \"another cancer\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich cancer is this text about?\nReply with only \"colon cancer\" or \"another cancer\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which cancer is this text about?\nRespond with one option only, either \"another cancer\" or \"colon cancer\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which cancer is this text about? Pick one of the two answers, \"another cancer\" or \"colon cancer\", and write nothing else."
+  },
+  "145_disease_class_digestive system diseases": {
+   "question": "Which kind of disease is this abstract about?",
+   "pos": "digestive system diseases",
+   "neg": "another kind of disease",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which kind of disease is this abstract about?\nAnswer with exactly one of these two options and nothing else: \"digestive system diseases\" or \"another kind of disease\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich kind of disease is this abstract about?\nReply with only \"digestive system diseases\" or \"another kind of disease\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which kind of disease is this abstract about?\nRespond with one option only, either \"another kind of disease\" or \"digestive system diseases\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which kind of disease is this abstract about? Pick one of the two answers, \"another kind of disease\" or \"digestive system diseases\", and write nothing else."
+  },
+  "146_disease_class_cardiovascular diseases": {
+   "question": "Which kind of disease is this abstract about?",
+   "pos": "cardiovascular diseases",
+   "neg": "another kind of disease",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which kind of disease is this abstract about?\nAnswer with exactly one of these two options and nothing else: \"cardiovascular diseases\" or \"another kind of disease\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich kind of disease is this abstract about?\nReply with only \"cardiovascular diseases\" or \"another kind of disease\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which kind of disease is this abstract about?\nRespond with one option only, either \"another kind of disease\" or \"cardiovascular diseases\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which kind of disease is this abstract about? Pick one of the two answers, \"another kind of disease\" or \"cardiovascular diseases\", and write nothing else."
+  },
+  "147_disease_class_nervous system diseases": {
+   "question": "Which kind of disease is this abstract about?",
+   "pos": "nervous system diseases",
+   "neg": "another kind of disease",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which kind of disease is this abstract about?\nAnswer with exactly one of these two options and nothing else: \"nervous system diseases\" or \"another kind of disease\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich kind of disease is this abstract about?\nReply with only \"nervous system diseases\" or \"another kind of disease\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which kind of disease is this abstract about?\nRespond with one option only, either \"another kind of disease\" or \"nervous system diseases\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which kind of disease is this abstract about? Pick one of the two answers, \"another kind of disease\" or \"nervous system diseases\", and write nothing else."
+  },
+  "148_twt_emotion_worry": {
+   "question": "Which emotion does this tweet express?",
+   "pos": "worry",
+   "neg": "another emotion",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which emotion does this tweet express?\nAnswer with exactly one of these two options and nothing else: \"worry\" or \"another emotion\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich emotion does this tweet express?\nReply with only \"worry\" or \"another emotion\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which emotion does this tweet express?\nRespond with one option only, either \"another emotion\" or \"worry\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which emotion does this tweet express? Pick one of the two answers, \"another emotion\" or \"worry\", and write nothing else."
+  },
+  "149_twt_emotion_happiness": {
+   "question": "Which emotion does this tweet express?",
+   "pos": "happiness",
+   "neg": "another emotion",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which emotion does this tweet express?\nAnswer with exactly one of these two options and nothing else: \"happiness\" or \"another emotion\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich emotion does this tweet express?\nReply with only \"happiness\" or \"another emotion\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which emotion does this tweet express?\nRespond with one option only, either \"another emotion\" or \"happiness\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which emotion does this tweet express? Pick one of the two answers, \"another emotion\" or \"happiness\", and write nothing else."
+  },
+  "150_twt_emotion_sadness": {
+   "question": "Which emotion does this tweet express?",
+   "pos": "sadness",
+   "neg": "another emotion",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which emotion does this tweet express?\nAnswer with exactly one of these two options and nothing else: \"sadness\" or \"another emotion\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich emotion does this tweet express?\nReply with only \"sadness\" or \"another emotion\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which emotion does this tweet express?\nRespond with one option only, either \"another emotion\" or \"sadness\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which emotion does this tweet express? Pick one of the two answers, \"another emotion\" or \"sadness\", and write nothing else."
+  },
+  "151_it_tick_HR Support": {
+   "question": "Which category does this IT request belong to?",
+   "pos": "HR support",
+   "neg": "another category",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which category does this IT request belong to?\nAnswer with exactly one of these two options and nothing else: \"HR support\" or \"another category\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich category does this IT request belong to?\nReply with only \"HR support\" or \"another category\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which category does this IT request belong to?\nRespond with one option only, either \"another category\" or \"HR support\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which category does this IT request belong to? Pick one of the two answers, \"another category\" or \"HR support\", and write nothing else."
+  },
+  "152_it_tick_Hardware": {
+   "question": "Which category does this IT request belong to?",
+   "pos": "hardware",
+   "neg": "another category",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which category does this IT request belong to?\nAnswer with exactly one of these two options and nothing else: \"hardware\" or \"another category\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich category does this IT request belong to?\nReply with only \"hardware\" or \"another category\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which category does this IT request belong to?\nRespond with one option only, either \"another category\" or \"hardware\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which category does this IT request belong to? Pick one of the two answers, \"another category\" or \"hardware\", and write nothing else."
+  },
+  "153_it_tick_Administrative rights": {
+   "question": "Which category does this IT request belong to?",
+   "pos": "administrative rights",
+   "neg": "another category",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which category does this IT request belong to?\nAnswer with exactly one of these two options and nothing else: \"administrative rights\" or \"another category\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich category does this IT request belong to?\nReply with only \"administrative rights\" or \"another category\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which category does this IT request belong to?\nRespond with one option only, either \"another category\" or \"administrative rights\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which category does this IT request belong to? Pick one of the two answers, \"another category\" or \"administrative rights\", and write nothing else."
+  },
+  "154_athlete_sport_football": {
+   "question": "Which sport does this athlete play?",
+   "pos": "football",
+   "neg": "another sport",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which sport does this athlete play?\nAnswer with exactly one of these two options and nothing else: \"football\" or \"another sport\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich sport does this athlete play?\nReply with only \"football\" or \"another sport\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which sport does this athlete play?\nRespond with one option only, either \"another sport\" or \"football\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which sport does this athlete play? Pick one of the two answers, \"another sport\" or \"football\", and write nothing else."
+  },
+  "155_athlete_sport_basketball": {
+   "question": "Which sport does this athlete play?",
+   "pos": "basketball",
+   "neg": "another sport",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which sport does this athlete play?\nAnswer with exactly one of these two options and nothing else: \"basketball\" or \"another sport\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich sport does this athlete play?\nReply with only \"basketball\" or \"another sport\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which sport does this athlete play?\nRespond with one option only, either \"another sport\" or \"basketball\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which sport does this athlete play? Pick one of the two answers, \"another sport\" or \"basketball\", and write nothing else."
+  },
+  "156_athlete_sport_baseball": {
+   "question": "Which sport does this athlete play?",
+   "pos": "baseball",
+   "neg": "another sport",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which sport does this athlete play?\nAnswer with exactly one of these two options and nothing else: \"baseball\" or \"another sport\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich sport does this athlete play?\nReply with only \"baseball\" or \"another sport\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which sport does this athlete play?\nRespond with one option only, either \"another sport\" or \"baseball\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which sport does this athlete play? Pick one of the two answers, \"another sport\" or \"baseball\", and write nothing else."
+  },
+  "157_amazon_5star": {
+   "question": "Is this a five-star review?",
+   "pos": "a five-star review",
+   "neg": "a lower-rated review",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this a five-star review?\nAnswer with exactly one of these two options and nothing else: \"a five-star review\" or \"a lower-rated review\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this a five-star review?\nReply with only \"a five-star review\" or \"a lower-rated review\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this a five-star review?\nRespond with one option only, either \"a lower-rated review\" or \"a five-star review\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this a five-star review? Pick one of the two answers, \"a lower-rated review\" or \"a five-star review\", and write nothing else."
+  },
+  "158_code_C": {
+   "question": "Which programming language is this code written in?",
+   "pos": "C code",
+   "neg": "code in another language",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which programming language is this code written in?\nAnswer with exactly one of these two options and nothing else: \"C code\" or \"code in another language\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich programming language is this code written in?\nReply with only \"C code\" or \"code in another language\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which programming language is this code written in?\nRespond with one option only, either \"code in another language\" or \"C code\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which programming language is this code written in? Pick one of the two answers, \"code in another language\" or \"C code\", and write nothing else."
+  },
+  "159_code_Python": {
+   "question": "Which programming language is this code written in?",
+   "pos": "Python code",
+   "neg": "code in another language",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which programming language is this code written in?\nAnswer with exactly one of these two options and nothing else: \"Python code\" or \"code in another language\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich programming language is this code written in?\nReply with only \"Python code\" or \"code in another language\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which programming language is this code written in?\nRespond with one option only, either \"code in another language\" or \"Python code\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which programming language is this code written in? Pick one of the two answers, \"code in another language\" or \"Python code\", and write nothing else."
+  },
+  "160_code_HTML": {
+   "question": "Which programming language is this code written in?",
+   "pos": "HTML code",
+   "neg": "code in another language",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which programming language is this code written in?\nAnswer with exactly one of these two options and nothing else: \"HTML code\" or \"code in another language\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich programming language is this code written in?\nReply with only \"HTML code\" or \"code in another language\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which programming language is this code written in?\nRespond with one option only, either \"code in another language\" or \"HTML code\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which programming language is this code written in? Pick one of the two answers, \"code in another language\" or \"HTML code\", and write nothing else."
+  },
+  "161_agnews_0": {
+   "question": "Is this a news headline or a code sample?",
+   "pos": "a news headline",
+   "neg": "a code sample",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this a news headline or a code sample?\nAnswer with exactly one of these two options and nothing else: \"a news headline\" or \"a code sample\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this a news headline or a code sample?\nReply with only \"a news headline\" or \"a code sample\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this a news headline or a code sample?\nRespond with one option only, either \"a code sample\" or \"a news headline\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this a news headline or a code sample? Pick one of the two answers, \"a code sample\" or \"a news headline\", and write nothing else."
+  },
+  "162_agnews_1": {
+   "question": "Is this a news headline or a code sample?",
+   "pos": "a news headline",
+   "neg": "a code sample",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this a news headline or a code sample?\nAnswer with exactly one of these two options and nothing else: \"a news headline\" or \"a code sample\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this a news headline or a code sample?\nReply with only \"a news headline\" or \"a code sample\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this a news headline or a code sample?\nRespond with one option only, either \"a code sample\" or \"a news headline\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this a news headline or a code sample? Pick one of the two answers, \"a code sample\" or \"a news headline\", and write nothing else."
+  },
+  "163_agnews_2": {
+   "question": "Is this a news headline or a code sample?",
+   "pos": "a news headline",
+   "neg": "a code sample",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this a news headline or a code sample?\nAnswer with exactly one of these two options and nothing else: \"a news headline\" or \"a code sample\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this a news headline or a code sample?\nReply with only \"a news headline\" or \"a code sample\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this a news headline or a code sample?\nRespond with one option only, either \"a code sample\" or \"a news headline\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this a news headline or a code sample? Pick one of the two answers, \"a code sample\" or \"a news headline\", and write nothing else."
+  },
+  "21_headline_istrump": {
+   "question": "Is this headline about Donald Trump?",
+   "pos": "Donald Trump",
+   "neg": "something else",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this headline about Donald Trump?\nAnswer with exactly one of these two options and nothing else: \"Donald Trump\" or \"something else\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this headline about Donald Trump?\nReply with only \"Donald Trump\" or \"something else\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this headline about Donald Trump?\nRespond with one option only, either \"something else\" or \"Donald Trump\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this headline about Donald Trump? Pick one of the two answers, \"something else\" or \"Donald Trump\", and write nothing else."
+  },
+  "22_headline_isobama": {
+   "question": "Is this headline about Barack Obama?",
+   "pos": "Barack Obama",
+   "neg": "something else",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this headline about Barack Obama?\nAnswer with exactly one of these two options and nothing else: \"Barack Obama\" or \"something else\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this headline about Barack Obama?\nReply with only \"Barack Obama\" or \"something else\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this headline about Barack Obama?\nRespond with one option only, either \"something else\" or \"Barack Obama\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this headline about Barack Obama? Pick one of the two answers, \"something else\" or \"Barack Obama\", and write nothing else."
+  },
+  "23_headline_ischina": {
+   "question": "Is this headline about China?",
+   "pos": "China",
+   "neg": "something else",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this headline about China?\nAnswer with exactly one of these two options and nothing else: \"China\" or \"something else\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this headline about China?\nReply with only \"China\" or \"something else\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this headline about China?\nRespond with one option only, either \"something else\" or \"China\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this headline about China? Pick one of the two answers, \"something else\" or \"China\", and write nothing else."
+  },
+  "24_headline_isiran": {
+   "question": "Is this headline about Iran?",
+   "pos": "Iran",
+   "neg": "something else",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this headline about Iran?\nAnswer with exactly one of these two options and nothing else: \"Iran\" or \"something else\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this headline about Iran?\nReply with only \"Iran\" or \"something else\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this headline about Iran?\nRespond with one option only, either \"something else\" or \"Iran\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this headline about Iran? Pick one of the two answers, \"something else\" or \"Iran\", and write nothing else."
+  },
+  "26_headline_isfrontpage": {
+   "question": "Did this headline run on the front page?",
+   "pos": "front-page news",
+   "neg": "inside-page news",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Did this headline run on the front page?\nAnswer with exactly one of these two options and nothing else: \"front-page news\" or \"inside-page news\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDid this headline run on the front page?\nReply with only \"front-page news\" or \"inside-page news\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Did this headline run on the front page?\nRespond with one option only, either \"inside-page news\" or \"front-page news\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Did this headline run on the front page? Pick one of the two answers, \"inside-page news\" or \"front-page news\", and write nothing else."
+  },
+  "36_sciq_tf": {
+   "question": "Is the proposed answer to this science question correct?",
+   "pos": "correct",
+   "neg": "incorrect",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the proposed answer to this science question correct?\nAnswer with exactly one of these two options and nothing else: \"correct\" or \"incorrect\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the proposed answer to this science question correct?\nReply with only \"correct\" or \"incorrect\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the proposed answer to this science question correct?\nRespond with one option only, either \"incorrect\" or \"correct\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the proposed answer to this science question correct? Pick one of the two answers, \"incorrect\" or \"correct\", and write nothing else."
+  },
+  "41_truthqa_tf": {
+   "question": "Is the proposed answer to this question true?",
+   "pos": "true",
+   "neg": "false",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the proposed answer to this question true?\nAnswer with exactly one of these two options and nothing else: \"true\" or \"false\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the proposed answer to this question true?\nReply with only \"true\" or \"false\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the proposed answer to this question true?\nRespond with one option only, either \"false\" or \"true\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the proposed answer to this question true? Pick one of the two answers, \"false\" or \"true\", and write nothing else."
+  },
+  "42_temp_sense": {
+   "question": "Is the proposed answer to the question plausible?",
+   "pos": "plausible",
+   "neg": "implausible",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the proposed answer to the question plausible?\nAnswer with exactly one of these two options and nothing else: \"plausible\" or \"implausible\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the proposed answer to the question plausible?\nReply with only \"plausible\" or \"implausible\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the proposed answer to the question plausible?\nRespond with one option only, either \"implausible\" or \"plausible\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the proposed answer to the question plausible? Pick one of the two answers, \"implausible\" or \"plausible\", and write nothing else."
+  },
+  "44_phys_tf": {
+   "question": "Which of the two solutions, A or B, is correct?",
+   "pos": "solution B",
+   "neg": "solution A",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which of the two solutions, A or B, is correct?\nAnswer with exactly one of these two options and nothing else: \"solution B\" or \"solution A\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich of the two solutions, A or B, is correct?\nReply with only \"solution B\" or \"solution A\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which of the two solutions, A or B, is correct?\nRespond with one option only, either \"solution A\" or \"solution B\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which of the two solutions, A or B, is correct? Pick one of the two answers, \"solution A\" or \"solution B\", and write nothing else."
+  },
+  "47_reasoning_tf": {
+   "question": "Which of the two answers, A or B, is correct?",
+   "pos": "answer A",
+   "neg": "answer B",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Which of the two answers, A or B, is correct?\nAnswer with exactly one of these two options and nothing else: \"answer A\" or \"answer B\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWhich of the two answers, A or B, is correct?\nReply with only \"answer A\" or \"answer B\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Which of the two answers, A or B, is correct?\nRespond with one option only, either \"answer B\" or \"answer A\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Which of the two answers, A or B, is correct? Pick one of the two answers, \"answer B\" or \"answer A\", and write nothing else."
+  },
+  "48_cm_correct": {
+   "question": "Is the behaviour described morally wrong?",
+   "pos": "morally wrong",
+   "neg": "morally acceptable",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the behaviour described morally wrong?\nAnswer with exactly one of these two options and nothing else: \"morally wrong\" or \"morally acceptable\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the behaviour described morally wrong?\nReply with only \"morally wrong\" or \"morally acceptable\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the behaviour described morally wrong?\nRespond with one option only, either \"morally acceptable\" or \"morally wrong\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the behaviour described morally wrong? Pick one of the two answers, \"morally acceptable\" or \"morally wrong\", and write nothing else."
+  },
+  "49_cm_isshort": {
+   "question": "Is this text short or long?",
+   "pos": "short",
+   "neg": "long",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this text short or long?\nAnswer with exactly one of these two options and nothing else: \"short\" or \"long\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this text short or long?\nReply with only \"short\" or \"long\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this text short or long?\nRespond with one option only, either \"long\" or \"short\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this text short or long? Pick one of the two answers, \"long\" or \"short\", and write nothing else."
+  },
+  "50_deon_isvalid": {
+   "question": "Is the excuse a reasonable one?",
+   "pos": "reasonable",
+   "neg": "unreasonable",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the excuse a reasonable one?\nAnswer with exactly one of these two options and nothing else: \"reasonable\" or \"unreasonable\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the excuse a reasonable one?\nReply with only \"reasonable\" or \"unreasonable\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the excuse a reasonable one?\nRespond with one option only, either \"unreasonable\" or \"reasonable\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the excuse a reasonable one? Pick one of the two answers, \"unreasonable\" or \"reasonable\", and write nothing else."
+  },
+  "51_just_is": {
+   "question": "Is the justification reasonable?",
+   "pos": "reasonable",
+   "neg": "unreasonable",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the justification reasonable?\nAnswer with exactly one of these two options and nothing else: \"reasonable\" or \"unreasonable\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the justification reasonable?\nReply with only \"reasonable\" or \"unreasonable\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the justification reasonable?\nRespond with one option only, either \"unreasonable\" or \"reasonable\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the justification reasonable? Pick one of the two answers, \"unreasonable\" or \"reasonable\", and write nothing else."
+  },
+  "52_virtue_is": {
+   "question": "Does the named trait fit the scenario?",
+   "pos": "fitting",
+   "neg": "unfitting",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the named trait fit the scenario?\nAnswer with exactly one of these two options and nothing else: \"fitting\" or \"unfitting\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the named trait fit the scenario?\nReply with only \"fitting\" or \"unfitting\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the named trait fit the scenario?\nRespond with one option only, either \"unfitting\" or \"fitting\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the named trait fit the scenario? Pick one of the two answers, \"unfitting\" or \"fitting\", and write nothing else."
+  },
+  "54_cs_tf": {
+   "question": "Is this commonsense statement true?",
+   "pos": "true",
+   "neg": "false",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this commonsense statement true?\nAnswer with exactly one of these two options and nothing else: \"true\" or \"false\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this commonsense statement true?\nReply with only \"true\" or \"false\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this commonsense statement true?\nRespond with one option only, either \"false\" or \"true\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this commonsense statement true? Pick one of the two answers, \"false\" or \"true\", and write nothing else."
+  },
+  "56_wikidatasex_or_gender": {
+   "question": "Is the person this text is about male or female?",
+   "pos": "male",
+   "neg": "female",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the person this text is about male or female?\nAnswer with exactly one of these two options and nothing else: \"male\" or \"female\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the person this text is about male or female?\nReply with only \"male\" or \"female\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the person this text is about male or female?\nRespond with one option only, either \"female\" or \"male\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the person this text is about male or female? Pick one of the two answers, \"female\" or \"male\", and write nothing else."
+  },
+  "57_wikidatais_alive": {
+   "question": "Is the person this text is about alive or dead?",
+   "pos": "alive",
+   "neg": "dead",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the person this text is about alive or dead?\nAnswer with exactly one of these two options and nothing else: \"alive\" or \"dead\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the person this text is about alive or dead?\nReply with only \"alive\" or \"dead\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the person this text is about alive or dead?\nRespond with one option only, either \"dead\" or \"alive\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the person this text is about alive or dead? Pick one of the two answers, \"dead\" or \"alive\", and write nothing else."
+  },
+  "58_wikidatapolitical_party": {
+   "question": "Is the person this text is about a Democrat or a Republican?",
+   "pos": "a Democrat",
+   "neg": "a Republican",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the person this text is about a Democrat or a Republican?\nAnswer with exactly one of these two options and nothing else: \"a Democrat\" or \"a Republican\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the person this text is about a Democrat or a Republican?\nReply with only \"a Democrat\" or \"a Republican\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the person this text is about a Democrat or a Republican?\nRespond with one option only, either \"a Republican\" or \"a Democrat\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the person this text is about a Democrat or a Republican? Pick one of the two answers, \"a Republican\" or \"a Democrat\", and write nothing else."
+  },
+  "59_wikidata_occupation_isjournalist": {
+   "question": "Is the person this text is about a journalist?",
+   "pos": "a journalist",
+   "neg": "not a journalist",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the person this text is about a journalist?\nAnswer with exactly one of these two options and nothing else: \"a journalist\" or \"not a journalist\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the person this text is about a journalist?\nReply with only \"a journalist\" or \"not a journalist\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the person this text is about a journalist?\nRespond with one option only, either \"not a journalist\" or \"a journalist\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the person this text is about a journalist? Pick one of the two answers, \"not a journalist\" or \"a journalist\", and write nothing else."
+  },
+  "5_hist_fig_ismale": {
+   "question": "Is this historical figure male or female?",
+   "pos": "male",
+   "neg": "female",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this historical figure male or female?\nAnswer with exactly one of these two options and nothing else: \"male\" or \"female\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this historical figure male or female?\nReply with only \"male\" or \"female\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this historical figure male or female?\nRespond with one option only, either \"female\" or \"male\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this historical figure male or female? Pick one of the two answers, \"female\" or \"male\", and write nothing else."
+  },
+  "60_wikidata_occupation_isathlete": {
+   "question": "Is the person this text is about an athlete?",
+   "pos": "an athlete",
+   "neg": "not an athlete",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the person this text is about an athlete?\nAnswer with exactly one of these two options and nothing else: \"an athlete\" or \"not an athlete\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the person this text is about an athlete?\nReply with only \"an athlete\" or \"not an athlete\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the person this text is about an athlete?\nRespond with one option only, either \"not an athlete\" or \"an athlete\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the person this text is about an athlete? Pick one of the two answers, \"not an athlete\" or \"an athlete\", and write nothing else."
+  },
+  "61_wikidata_occupation_isactor": {
+   "question": "Is the person this text is about an actor?",
+   "pos": "an actor",
+   "neg": "not an actor",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the person this text is about an actor?\nAnswer with exactly one of these two options and nothing else: \"an actor\" or \"not an actor\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the person this text is about an actor?\nReply with only \"an actor\" or \"not an actor\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the person this text is about an actor?\nRespond with one option only, either \"not an actor\" or \"an actor\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the person this text is about an actor? Pick one of the two answers, \"not an actor\" or \"an actor\", and write nothing else."
+  },
+  "62_wikidata_occupation_ispolitician": {
+   "question": "Is the person this text is about a politician?",
+   "pos": "a politician",
+   "neg": "not a politician",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the person this text is about a politician?\nAnswer with exactly one of these two options and nothing else: \"a politician\" or \"not a politician\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the person this text is about a politician?\nReply with only \"a politician\" or \"not a politician\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the person this text is about a politician?\nRespond with one option only, either \"not a politician\" or \"a politician\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the person this text is about a politician? Pick one of the two answers, \"not a politician\" or \"a politician\", and write nothing else."
+  },
+  "63_wikidata_occupation_issinger": {
+   "question": "Is the person this text is about a singer?",
+   "pos": "a singer",
+   "neg": "not a singer",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the person this text is about a singer?\nAnswer with exactly one of these two options and nothing else: \"a singer\" or \"not a singer\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the person this text is about a singer?\nReply with only \"a singer\" or \"not a singer\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the person this text is about a singer?\nRespond with one option only, either \"not a singer\" or \"a singer\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the person this text is about a singer? Pick one of the two answers, \"not a singer\" or \"a singer\", and write nothing else."
+  },
+  "64_wikidata_occupation_isresearcher": {
+   "question": "Is the person this text is about a researcher?",
+   "pos": "a researcher",
+   "neg": "not a researcher",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the person this text is about a researcher?\nAnswer with exactly one of these two options and nothing else: \"a researcher\" or \"not a researcher\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the person this text is about a researcher?\nReply with only \"a researcher\" or \"not a researcher\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the person this text is about a researcher?\nRespond with one option only, either \"not a researcher\" or \"a researcher\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the person this text is about a researcher? Pick one of the two answers, \"not a researcher\" or \"a researcher\", and write nothing else."
+  },
+  "65_high-school": {
+   "question": "Does the text contain the phrase \"high school\"?",
+   "pos": "high school",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"high school\"?\nAnswer with exactly one of these two options and nothing else: \"high school\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"high school\"?\nReply with only \"high school\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"high school\"?\nRespond with one option only, either \"no such phrase\" or \"high school\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"high school\"? Pick one of the two answers, \"no such phrase\" or \"high school\", and write nothing else."
+  },
+  "66_living-room": {
+   "question": "Does the text contain the phrase \"living room\"?",
+   "pos": "living room",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"living room\"?\nAnswer with exactly one of these two options and nothing else: \"living room\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"living room\"?\nReply with only \"living room\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"living room\"?\nRespond with one option only, either \"no such phrase\" or \"living room\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"living room\"? Pick one of the two answers, \"no such phrase\" or \"living room\", and write nothing else."
+  },
+  "67_social-security": {
+   "question": "Does the text contain the phrase \"social security\"?",
+   "pos": "social security",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"social security\"?\nAnswer with exactly one of these two options and nothing else: \"social security\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"social security\"?\nReply with only \"social security\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"social security\"?\nRespond with one option only, either \"no such phrase\" or \"social security\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"social security\"? Pick one of the two answers, \"no such phrase\" or \"social security\", and write nothing else."
+  },
+  "68_credit-card": {
+   "question": "Does the text contain the phrase \"credit card\"?",
+   "pos": "credit card",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"credit card\"?\nAnswer with exactly one of these two options and nothing else: \"credit card\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"credit card\"?\nReply with only \"credit card\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"credit card\"?\nRespond with one option only, either \"no such phrase\" or \"credit card\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"credit card\"? Pick one of the two answers, \"no such phrase\" or \"credit card\", and write nothing else."
+  },
+  "69_blood-pressure": {
+   "question": "Does the text contain the phrase \"blood pressure\"?",
+   "pos": "blood pressure",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"blood pressure\"?\nAnswer with exactly one of these two options and nothing else: \"blood pressure\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"blood pressure\"?\nReply with only \"blood pressure\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"blood pressure\"?\nRespond with one option only, either \"no such phrase\" or \"blood pressure\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"blood pressure\"? Pick one of the two answers, \"no such phrase\" or \"blood pressure\", and write nothing else."
+  },
+  "6_hist_fig_isamerican": {
+   "question": "Is this historical figure American?",
+   "pos": "American",
+   "neg": "not American",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this historical figure American?\nAnswer with exactly one of these two options and nothing else: \"American\" or \"not American\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this historical figure American?\nReply with only \"American\" or \"not American\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this historical figure American?\nRespond with one option only, either \"not American\" or \"American\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this historical figure American? Pick one of the two answers, \"not American\" or \"American\", and write nothing else."
+  },
+  "70_prime-factors": {
+   "question": "Does the text contain the phrase \"prime factors\"?",
+   "pos": "prime factors",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"prime factors\"?\nAnswer with exactly one of these two options and nothing else: \"prime factors\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"prime factors\"?\nReply with only \"prime factors\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"prime factors\"?\nRespond with one option only, either \"no such phrase\" or \"prime factors\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"prime factors\"? Pick one of the two answers, \"no such phrase\" or \"prime factors\", and write nothing else."
+  },
+  "71_social-media": {
+   "question": "Does the text contain the phrase \"social media\"?",
+   "pos": "social media",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"social media\"?\nAnswer with exactly one of these two options and nothing else: \"social media\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"social media\"?\nReply with only \"social media\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"social media\"?\nRespond with one option only, either \"no such phrase\" or \"social media\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"social media\"? Pick one of the two answers, \"no such phrase\" or \"social media\", and write nothing else."
+  },
+  "72_gene-expression": {
+   "question": "Does the text contain the phrase \"gene expression\"?",
+   "pos": "gene expression",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"gene expression\"?\nAnswer with exactly one of these two options and nothing else: \"gene expression\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"gene expression\"?\nReply with only \"gene expression\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"gene expression\"?\nRespond with one option only, either \"no such phrase\" or \"gene expression\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"gene expression\"? Pick one of the two answers, \"no such phrase\" or \"gene expression\", and write nothing else."
+  },
+  "73_control-group": {
+   "question": "Does the text contain the phrase \"control group\"?",
+   "pos": "control group",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"control group\"?\nAnswer with exactly one of these two options and nothing else: \"control group\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"control group\"?\nReply with only \"control group\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"control group\"?\nRespond with one option only, either \"no such phrase\" or \"control group\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"control group\"? Pick one of the two answers, \"no such phrase\" or \"control group\", and write nothing else."
+  },
+  "74_magnetic-field": {
+   "question": "Does the text contain the phrase \"magnetic field\"?",
+   "pos": "magnetic field",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"magnetic field\"?\nAnswer with exactly one of these two options and nothing else: \"magnetic field\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"magnetic field\"?\nReply with only \"magnetic field\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"magnetic field\"?\nRespond with one option only, either \"no such phrase\" or \"magnetic field\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"magnetic field\"? Pick one of the two answers, \"no such phrase\" or \"magnetic field\", and write nothing else."
+  },
+  "75_cell-lines": {
+   "question": "Does the text contain the phrase \"cell lines\"?",
+   "pos": "cell lines",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"cell lines\"?\nAnswer with exactly one of these two options and nothing else: \"cell lines\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"cell lines\"?\nReply with only \"cell lines\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"cell lines\"?\nRespond with one option only, either \"no such phrase\" or \"cell lines\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"cell lines\"? Pick one of the two answers, \"no such phrase\" or \"cell lines\", and write nothing else."
+  },
+  "76_trial-court": {
+   "question": "Does the text contain the phrase \"trial court\"?",
+   "pos": "trial court",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"trial court\"?\nAnswer with exactly one of these two options and nothing else: \"trial court\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"trial court\"?\nReply with only \"trial court\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"trial court\"?\nRespond with one option only, either \"no such phrase\" or \"trial court\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"trial court\"? Pick one of the two answers, \"no such phrase\" or \"trial court\", and write nothing else."
+  },
+  "77_second-derivative": {
+   "question": "Does the text contain the phrase \"second derivative\"?",
+   "pos": "second derivative",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"second derivative\"?\nAnswer with exactly one of these two options and nothing else: \"second derivative\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"second derivative\"?\nReply with only \"second derivative\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"second derivative\"?\nRespond with one option only, either \"no such phrase\" or \"second derivative\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"second derivative\"? Pick one of the two answers, \"no such phrase\" or \"second derivative\", and write nothing else."
+  },
+  "78_north-america": {
+   "question": "Does the text contain the phrase \"North America\"?",
+   "pos": "North America",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"North America\"?\nAnswer with exactly one of these two options and nothing else: \"North America\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"North America\"?\nReply with only \"North America\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"North America\"?\nRespond with one option only, either \"no such phrase\" or \"North America\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"North America\"? Pick one of the two answers, \"no such phrase\" or \"North America\", and write nothing else."
+  },
+  "79_human-rights": {
+   "question": "Does the text contain the phrase \"human rights\"?",
+   "pos": "human rights",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"human rights\"?\nAnswer with exactly one of these two options and nothing else: \"human rights\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"human rights\"?\nReply with only \"human rights\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"human rights\"?\nRespond with one option only, either \"no such phrase\" or \"human rights\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"human rights\"? Pick one of the two answers, \"no such phrase\" or \"human rights\", and write nothing else."
+  },
+  "7_hist_fig_ispolitician": {
+   "question": "Is this historical figure a politician?",
+   "pos": "a politician",
+   "neg": "not a politician",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this historical figure a politician?\nAnswer with exactly one of these two options and nothing else: \"a politician\" or \"not a politician\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this historical figure a politician?\nReply with only \"a politician\" or \"not a politician\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this historical figure a politician?\nRespond with one option only, either \"not a politician\" or \"a politician\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this historical figure a politician? Pick one of the two answers, \"not a politician\" or \"a politician\", and write nothing else."
+  },
+  "80_side-effects": {
+   "question": "Does the text contain the phrase \"side effects\"?",
+   "pos": "side effects",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"side effects\"?\nAnswer with exactly one of these two options and nothing else: \"side effects\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"side effects\"?\nReply with only \"side effects\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"side effects\"?\nRespond with one option only, either \"no such phrase\" or \"side effects\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"side effects\"? Pick one of the two answers, \"no such phrase\" or \"side effects\", and write nothing else."
+  },
+  "81_public-health": {
+   "question": "Does the text contain the phrase \"public health\"?",
+   "pos": "public health",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"public health\"?\nAnswer with exactly one of these two options and nothing else: \"public health\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"public health\"?\nReply with only \"public health\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"public health\"?\nRespond with one option only, either \"no such phrase\" or \"public health\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"public health\"? Pick one of the two answers, \"no such phrase\" or \"public health\", and write nothing else."
+  },
+  "82_federal-government": {
+   "question": "Does the text contain the phrase \"federal government\"?",
+   "pos": "federal government",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"federal government\"?\nAnswer with exactly one of these two options and nothing else: \"federal government\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"federal government\"?\nReply with only \"federal government\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"federal government\"?\nRespond with one option only, either \"no such phrase\" or \"federal government\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"federal government\"? Pick one of the two answers, \"no such phrase\" or \"federal government\", and write nothing else."
+  },
+  "83_third-party": {
+   "question": "Does the text contain the phrase \"third party\"?",
+   "pos": "third party",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"third party\"?\nAnswer with exactly one of these two options and nothing else: \"third party\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"third party\"?\nReply with only \"third party\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"third party\"?\nRespond with one option only, either \"no such phrase\" or \"third party\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"third party\"? Pick one of the two answers, \"no such phrase\" or \"third party\", and write nothing else."
+  },
+  "84_clinical-trials": {
+   "question": "Does the text contain the phrase \"clinical trials\"?",
+   "pos": "clinical trials",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"clinical trials\"?\nAnswer with exactly one of these two options and nothing else: \"clinical trials\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"clinical trials\"?\nReply with only \"clinical trials\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"clinical trials\"?\nRespond with one option only, either \"no such phrase\" or \"clinical trials\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"clinical trials\"? Pick one of the two answers, \"no such phrase\" or \"clinical trials\", and write nothing else."
+  },
+  "85_mental-health": {
+   "question": "Does the text contain the phrase \"mental health\"?",
+   "pos": "mental health",
+   "neg": "no such phrase",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the text contain the phrase \"mental health\"?\nAnswer with exactly one of these two options and nothing else: \"mental health\" or \"no such phrase\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the text contain the phrase \"mental health\"?\nReply with only \"mental health\" or \"no such phrase\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the text contain the phrase \"mental health\"?\nRespond with one option only, either \"no such phrase\" or \"mental health\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the text contain the phrase \"mental health\"? Pick one of the two answers, \"no such phrase\" or \"mental health\", and write nothing else."
+  },
+  "87_glue_cola": {
+   "question": "Is this sentence grammatically acceptable?",
+   "pos": "grammatical",
+   "neg": "ungrammatical",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this sentence grammatically acceptable?\nAnswer with exactly one of these two options and nothing else: \"grammatical\" or \"ungrammatical\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this sentence grammatically acceptable?\nReply with only \"grammatical\" or \"ungrammatical\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this sentence grammatically acceptable?\nRespond with one option only, either \"ungrammatical\" or \"grammatical\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this sentence grammatically acceptable? Pick one of the two answers, \"ungrammatical\" or \"grammatical\", and write nothing else."
+  },
+  "89_glue_mrpc": {
+   "question": "Do the two sentences say the same thing?",
+   "pos": "equivalent",
+   "neg": "different",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Do the two sentences say the same thing?\nAnswer with exactly one of these two options and nothing else: \"equivalent\" or \"different\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDo the two sentences say the same thing?\nReply with only \"equivalent\" or \"different\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Do the two sentences say the same thing?\nRespond with one option only, either \"different\" or \"equivalent\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Do the two sentences say the same thing? Pick one of the two answers, \"different\" or \"equivalent\", and write nothing else."
+  },
+  "90_glue_qnli": {
+   "question": "Does the sentence answer the question?",
+   "pos": "an answer to the question",
+   "neg": "unrelated to the question",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Does the sentence answer the question?\nAnswer with exactly one of these two options and nothing else: \"an answer to the question\" or \"unrelated to the question\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nDoes the sentence answer the question?\nReply with only \"an answer to the question\" or \"unrelated to the question\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Does the sentence answer the question?\nRespond with one option only, either \"unrelated to the question\" or \"an answer to the question\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Does the sentence answer the question? Pick one of the two answers, \"unrelated to the question\" or \"an answer to the question\", and write nothing else."
+  },
+  "91_glue_qqp": {
+   "question": "Are the two questions duplicates?",
+   "pos": "duplicate questions",
+   "neg": "different questions",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Are the two questions duplicates?\nAnswer with exactly one of these two options and nothing else: \"duplicate questions\" or \"different questions\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nAre the two questions duplicates?\nReply with only \"duplicate questions\" or \"different questions\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Are the two questions duplicates?\nRespond with one option only, either \"different questions\" or \"duplicate questions\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Are the two questions duplicates? Pick one of the two answers, \"different questions\" or \"duplicate questions\", and write nothing else."
+  },
+  "92_glue_sst2": {
+   "question": "Is the sentiment of this review positive or negative?",
+   "pos": "positive",
+   "neg": "negative",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is the sentiment of this review positive or negative?\nAnswer with exactly one of these two options and nothing else: \"positive\" or \"negative\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs the sentiment of this review positive or negative?\nReply with only \"positive\" or \"negative\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is the sentiment of this review positive or negative?\nRespond with one option only, either \"negative\" or \"positive\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is the sentiment of this review positive or negative? Pick one of the two answers, \"negative\" or \"positive\", and write nothing else."
+  },
+  "94_ai_gen": {
+   "question": "Was this essay written by a language model or by a student?",
+   "pos": "machine-generated",
+   "neg": "human-written",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Was this essay written by a language model or by a student?\nAnswer with exactly one of these two options and nothing else: \"machine-generated\" or \"human-written\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nWas this essay written by a language model or by a student?\nReply with only \"machine-generated\" or \"human-written\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Was this essay written by a language model or by a student?\nRespond with one option only, either \"human-written\" or \"machine-generated\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Was this essay written by a language model or by a student? Pick one of the two answers, \"human-written\" or \"machine-generated\", and write nothing else."
+  },
+  "95_toxic_is": {
+   "question": "Is this user request toxic?",
+   "pos": "toxic",
+   "neg": "harmless",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this user request toxic?\nAnswer with exactly one of these two options and nothing else: \"toxic\" or \"harmless\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this user request toxic?\nReply with only \"toxic\" or \"harmless\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this user request toxic?\nRespond with one option only, either \"harmless\" or \"toxic\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this user request toxic? Pick one of the two answers, \"harmless\" or \"toxic\", and write nothing else."
+  },
+  "96_spam_is": {
+   "question": "Is this message spam?",
+   "pos": "spam",
+   "neg": "a legitimate message",
+   "frozen": "You will read a short text and answer one question about it.\n\nText:\n{text}\n\nQuestion: Is this message spam?\nAnswer with exactly one of these two options and nothing else: \"spam\" or \"a legitimate message\".",
+   "p1": "Read the passage below, then answer the question.\n\nPassage:\n{text}\n\nIs this message spam?\nReply with only \"spam\" or \"a legitimate message\".",
+   "p2": "Here is a text.\n\n{text}\n\nBased on this text: Is this message spam?\nRespond with one option only, either \"a legitimate message\" or \"spam\".",
+   "p3": "Text:\n{text}\n\nI have a question about the text above. Is this message spam? Pick one of the two answers, \"a legitimate message\" or \"spam\", and write nothing else."
+  }
+ }
+}

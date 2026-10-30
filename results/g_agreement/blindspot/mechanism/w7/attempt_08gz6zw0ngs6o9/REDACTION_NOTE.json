@@ -1,0 +1,61 @@
+{
+  "schema": "redaction-note-v1",
+  "files": [
+    {
+      "path": "results/g_agreement/blindspot/mechanism/w7/attempt_08gz6zw0ngs6o9/launch.sh",
+      "pre_redaction_commit": "e4225a1e2a97",
+      "pre_redaction_sha256": "890eb70ebaadadb89e5e019d38bb39d90cb623883bb24be31739c64732c9c445",
+      "published_sha256": "74984734a12b72c9b399022063d9a773395dcc16cce9224772382e6cf929a0d7",
+      "redactions": [
+        {
+          "line": 6,
+          "rule": "repo root",
+          "placeholder": "<repo-root>",
+          "occurrences": 1,
+          "original_sha256": "87777504bfced671b21ecc96d84150fb40cf8a89b0e0f28094226f0d67920ef2",
+          "original_length": 59
+        },
+        {
+          "line": 10,
+          "rule": "ssh command line",
+          "placeholder": "<redacted SSH command line>",
+          "occurrences": 1,
+          "original_sha256": "64b4eaa8f4cbbc2e17e0101cdcc8c39e30fb502045339a594c9d6f6691877e77",
+          "original_length": 137
+        },
+        {
+          "line": 15,
+          "rule": "pod workspace",
+          "placeholder": "<pod-workspace>",
+          "occurrences": 3,
+          "original_sha256": "c52ddf65534b7b46035084358ab7902be4bfef220bdb503ac7039cc861905b05",
+          "original_length": 10
+        },
+        {
+          "line": 16,
+          "rule": "pod workspace",
+          "placeholder": "<pod-workspace>",
+          "occurrences": 5,
+          "original_sha256": "c52ddf65534b7b46035084358ab7902be4bfef220bdb503ac7039cc861905b05",
+          "original_length": 10
+        },
+        {
+          "line": 17,
+          "rule": "pod workspace",
+          "placeholder": "<pod-workspace>",
+          "occurrences": 4,
+          "original_sha256": "c52ddf65534b7b46035084358ab7902be4bfef220bdb503ac7039cc861905b05",
+          "original_length": 10
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "at": "2026-10-25T09:13:13Z",
+      "by": "integrator",
+      "authority": "BRIEF_UNDERSTAND §123 item 5 (c90267ce)",
+      "what": "Token-level redaction of pod addresses and machine paths (and whole SSH command lines) in record files. pre_redaction_sha256 is the hash of the file at pre_redaction_commit, which stays in git history, so any seal over the original can still be checked against that commit. Original strings are not written here: each redaction gives its line, rule, placeholder, occurrence count and the original string's sha256 and length."
+    }
+  ]
+}

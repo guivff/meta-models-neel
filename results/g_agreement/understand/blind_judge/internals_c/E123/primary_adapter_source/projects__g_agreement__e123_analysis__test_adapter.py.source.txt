@@ -1,0 +1,67 @@
+from pathlib import Path
+import pytest
+from . import adapter as a, rules
+from .test_rules import item
+
+
+def fixture(tmp,monkeypatch):
+    monkeypatch.setattr(a,'GUARD',tmp/'ANALYSIS_ONCE.json')
+    inv={};private=[];measurements={};source_records={'E109':[],'E123':[]}
+    for row,n in rules.ROWS.items():
+        inv[row]=[];measurements[row]=[]
+        for i in range(n):
+            unit=f'{row}-{i}';base=item(unit);inv[row].append(dict(item_id=unit,old_value='A'))
+            private.append(dict(item_id=unit,row=row,arm='U',condition='steered',target='B',flipped=True))
+            conditions={}
+            for cond in rules.CONDITIONS:
+                experiment='E123' if cond=='unhooked' else 'E109';ix=1 if experiment=='E123' else 0;layers={}
+                for layer in (44,52):
+                    identity=dict(item_id=unit,row=row,condition=cond,layer=layer,reader='oracle',judgment_id=f'{unit}-{cond}-{layer}')
+                    code=dict(base['conditions'][cond][str(layer)],id=identity['judgment_id'])
+                    record=dict(identity=identity,code=code,text='x')
+                    index=len(source_records[experiment]);source_records[experiment].append(record)
+                    ref=lambda k:dict(seal_index=ix,member='original.json',keys=[index,k])
+                    layers[str(layer)]=dict(identity,identity=ref('identity'),code=ref('code'),text=ref('text'))
+                conditions[cond]=layers
+            measurements[row].append(dict(item_id=unit,conditions=conditions))
+    pp=tmp/'PRIVATE.json';a.core.write(pp,private);monkeypatch.setattr(a,'PRIVATE_SHA',a.core.sha(pp))
+    ip=tmp/'inventory';ip.mkdir();a.core.write(ip/'INVENTORY.json',inv)
+    a.core.seal(ip,'SEAL.json',experiment='E123',status='SOURCE_ONLY_COHORT_BOUND',labels_cpu_only=True,source_e104_private_sha256=a.PRIVATE_SHA)
+    sources=[]
+    for experiment,records in source_records.items():
+        folder=tmp/experiment;folder.mkdir();a.core.write(folder/'original.json',records);a.core.seal(folder,'SEAL.json',experiment=experiment,status='COMPLETE')
+        sources.append(dict(seal=str(folder/'SEAL.json'),sha256=a.core.sha(folder/'SEAL.json')))
+    output=tmp/'output';output.mkdir();a.core.write(output/'MEASUREMENTS.json',measurements)
+    a.core.seal(output,'SEAL.json',experiment='E123',status='COMPLETE',inventory_sha256=a.core.sha(ip/'SEAL.json'),reader='oracle',layers=[44,52],labels_cpu_only=True,route_verified=True,redaction_audit_complete=True,source_seals=sources,source_roles={'E109_steered_random':[0],'E123_unhooked':[1]})
+    return dict(inventory_seal=str(ip/'SEAL.json'),inventory_sha256=a.core.sha(ip/'SEAL.json'),e104_private=str(pp),output_seal=str(output/'SEAL.json'),output_sha256=a.core.sha(output/'SEAL.json'),analysis=str(tmp/'analysis'))
+
+
+def test_complete_synthetic_source_binding_and_no_replay(tmp_path,monkeypatch):
+    spec=fixture(tmp_path,monkeypatch)
+    seal=a.run(spec,'synthetic-committed');result=a.core.read(seal.parent/'RESULTS.json')
+    assert result['rows']['fact_recall']['R_DIS1']=='MET'
+    assert result['rows']['language_plan']['AUROC']['n_stale']==50
+    with pytest.raises(ValueError,match='once guard'):a.run(spec,'synthetic-committed')
+
+
+def test_old_target_mismatch_rejected_before_guard(tmp_path,monkeypatch):
+    spec=fixture(tmp_path,monkeypatch);p=Path(spec['inventory_seal']);data=a.core.read(p.parent/'INVENTORY.json');data['fact_recall'][0]['old_value']='B';a.core.write(p.parent/'INVENTORY.json',data)
+    meta=a.core.read(p);meta.pop('files');a.core.seal(p.parent,p.name,**meta);spec['inventory_sha256']=a.core.sha(p)
+    with pytest.raises(ValueError,match='original old value'):a.run(spec,'synthetic-committed')
+    assert not a.GUARD.exists()
+
+
+def test_failed_attempt_keeps_once_guard(tmp_path,monkeypatch):
+    spec=fixture(tmp_path,monkeypatch);p=Path(spec['output_seal']);meta=a.core.read(p);meta['layers']=[44,60];meta.pop('files');a.core.seal(p.parent,p.name,**meta);spec['output_sha256']=a.core.sha(p)
+    with pytest.raises(ValueError,match='reader/site'):a.run(spec,'synthetic-committed')
+    assert a.GUARD.exists() and not (Path(spec['analysis'])/'ANALYSIS_SEAL.json').exists()
+    with pytest.raises(ValueError,match='once guard'):a.run(spec,'synthetic-committed')
+
+
+def test_main_commit_gate_before_spec_or_outcome_io(monkeypatch):
+    import sys
+    monkeypatch.setattr(sys,'argv',['adapter','--spec','must-not-open'])
+    def fail():raise ValueError('uncommitted source')
+    monkeypatch.setattr(a,'committed',fail)
+    monkeypatch.setattr(a.core,'read',lambda p:pytest.fail('IO before committed gate'))
+    with pytest.raises(ValueError,match='uncommitted source'):a.main()

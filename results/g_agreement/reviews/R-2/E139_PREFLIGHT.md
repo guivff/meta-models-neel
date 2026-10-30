@@ -1,0 +1,48 @@
+# E139 reward and instrument preflight
+
+Authority: §251 amendment1, **f60c40b7b92257ee451e2772accc42f96daa1772**, Git30Oct05:23:02CET. **Reward pinning PENDING; instrument rule independently pre-written/tested, numerical gate PENDING.** No E139 scorer or frozen graft packet is published at this check. No reconstructor/model, author entrypoint, Suraj repository or GPU was executed.
+
+The cached `agu18dec/olens_and_ar` model card and `olens_s3d_rl600/run.json` identify the exact matched ptag AR and describe a **joint bullet-FVE** training reward. They do not supply enough executable aggregation/space/normalisation detail to certify an E139 implementation. Checkpoint metadata says whitened loss space/ridge.1; that is not a proof of the RL reward formula or the coordinate mapping of this loader.
+
+An older locally archived oracle_lens draft `pipeline/rl_reward.py` instead describes a single-text reward −2(1−whitened cosine), and returns cos² as a separate FVE diagnostic. Its `pipeline/scorer.py` has single/sum/NNLS aggregation branches and the unit-whitened-MSE convention. These files were **read only**. Their documented formulas differ from the model card's joint bullet-FVE description; without exact released-checkpoint/training provenance, the historical draft is not evidence that either branch is this lens's training reward. A raw reconstruction, cosine, squared cosine, batch-centred FVE or whitened FVE must not silently be substituted for the joint training reward.
+
+Before an exact-training-reward claim, the owner source must pin the released implementation/revision and exact selected branch: bullet segmentation/aggregation or coefficient fitting; checkpoint/layer-head; target/prediction coordinates and whitening moments; residual/variance denominator and normalisation; token/tag/scaffolding/padding/truncation; empty/invalid handling. A synthetic numerical fixture must distinguish plausible alternative formulas and exercise the actual selected score path. Freeze the original20/state readout/activation/true/false/neutral strings and neutral-length convention before scoring. Verify graft tokens actually reach the reconstructor; an appended statement truncated out of its input cannot test naming reward. This is source verification, not permission for the reviewer to run the instrument.
+
+If the training reward cannot be pinned, amendment1 explicitly permits the E125/E130 whitened-FVE **proxy reward**, labelled as such throughout and with its own coordinate/normalisation provenance. It cannot support an unqualified claim about the actual RL objective. Prior E125/E130 loader lineage and checkpoint selection are useful source locators, not a fresh E139 space or instrument validation.
+
+## Instrument gate first
+
+`reproduce_e139.py` independently implements paired item true-minus-neutral arithmetic via common/stats.py and the registered gate. At least one of language or fact_recall must have a strictly positive item-bootstrap lower bound. A lower bound of exactly zero fails. If both measured controls fail, status is **NOT EVALUABLE (instrument)** and no structural/cue interpretation is allowed. Incomplete control evidence stays pending rather than a fabricated negative result; one verified passing control suffices even if the other is unavailable. Proxy status is retained in the gate output.
+
+Six synthetic tests pass: positive-control disjunction, zero boundary, unknowns, paired20-item identity/census, missing scores and explicit reward labelling. Bootstrap draws/seed remain explicit arguments awaiting the owner's prospectively frozen contract. No real reward or result was computed. A structural interval including zero does not establish equivalence or absence of reward; a successful instrument gate is necessary for the registered interpretation, not proof of that stronger statement.
+
+The later operator ruling lets whichever of Q/I2 is free first operate the single1800s pod, without waiting for E137's measured attempt; create by10Z/hardstopmin(cap,12:50Z). Reviewer code creates no guard or allocation. Review seal18CET remains unchanged.
+
+
+## Published scorer intake — proxy contract verified, numerical gate pending
+
+Owner REWARD_PIN and SCORING_KERNEL_SEAL66bd8eae now identify a primary **proxy reward**: whole-string native AR rebuild compared with once-whitened original gold, score1−||prediction−gold_white||²/max(||gold_white||²,1e−12), one fixed item denominator across four variants; no per-vector unit normalisation, joint NNLS or fitted alignment in that runtime score. Both released joint-FVE formula and uncertainty about its exact ptag training execution are explicitly documented. The raw-to-white mapping convention and earlier failed space proof remain limitations, not a validation claim.
+
+All six evidence-file hashes and scoring-kernel member pins match. Read-only released `score_texts_joint` separately confirms per-bullet parsing/capping, whitened unit directions, nonnegative80-step refit and gold-norm FVE, with optional shaping/launch settings not certified for this checkpoint. That source audit is distinct from the whole-readout proxy being run. The fallback is authorized by amendment1 and must stay labelled proxy in every report. No unqualified “actual training reward” claim is supported.
+
+Twenty combined owner reward/runner synthetic tests independently PASS. Eight reviewer tests PASS. On invented data only, all18 primary reward-gain intervals independently reproduce exactly via common/stats.py (2000/seed20261030), and all3 secondary Delta_u intervals match to floating tolerance; the positive-control gate agrees. The original frozen packet order, rather than a new lexical ID sort, defines seeded draw indices. These are source/synthetic checks, not E139 measurements.
+
+§251 clarification1 binds Delta_u to true DEV span class means, fraction of the class-gap projection, fixed direction across item draws; independent reviewer code now implements that algebra separately. Zero/nonfinite gap is unevaluable. No target-activation direction, fitted alignment, orthogonal displacement or FVE surrogate is used for Delta_u. Actual source-bound class rebuilds and all item joins remain pending.
+
+The reconstructor-only runner preserves entire exact strings (no stripping/cropping), original44tag/variant/batch and no scoring/whitening in the GPU stage. Metadata owner_contract is not an independent reward/source audit. Full120-item frozen readout/graft/gold packet, actual original activation/moment coordinates, executable once-only scoring adapter and first-opening custody are still missing at intake. Kernel-ready is not a production-ready contract. No E139 scientific verdict, actual instrument pass or structural reading is claimed until those sources and sealed control results arrive.
+
+
+## Prospective once-adapter update — no numerical result
+
+The published de951eb4520cce56de78a009ce1df252602ee3f167b1f70caf8b53d095da6fb6 source seal and all ten members match. Seven new adapter/selection tests pass independently (synthetic fixtures only), including deterministic balanced selection, exact readout preservation and token-matched neutral, whole pipeline primary/secondary separation, missing-pair rejection, zero-gap secondary handling and a small whitener fixture. Existing kernel statistics are not repeated.
+
+Static run validation requires complete120 source items, six states,580 acquired IDs,300 DEV directions (200 reused E85 and100 acquired), source-contract binding and original moment identity. The persistent attempt marker includes UTC and precedes array scoring. Full source/array identity and chronology must still be independently checked on the actual final packet and scientific result; a source test does not certify the real contract or first opening. No real input preparation, array scoring, AR invocation or guard occurred in this review.
+
+The on-branch intake status remains an earlier five-state snapshot; TrackQ's later HANDOFF references a full packet frozen05:14Z/c6db4709, not yet audited by R2. Source selection conventions/table-column authority, original joins, production contract and sole operator reconciliation are outstanding at this intake. Actual instrument gate remains PENDING. Proxy disclosure and the language-or-fact strictly-positive lower bound are unchanged.
+
+
+## 2026-10-30T05:30:07.828373+00:00 — R-2 current E139 production source/freeze intake supersedes earlier snapshot
+
+New published source seal4b06a089f8a39e416b6533ca3ccc10cfe07a822464eede1806a0cd25c49b88f8 and ownercontract11eae2ff exact source members/Git blobs verified. Seven NEW freeze/entrypoint synthetics independentlyPASS; previous adapter/kernel checks not repeated. Exact CPU78a68412/publicc6db4709/archive5a563991 hashes+allmembers and76originalsourcepins verified.120six-state items/580opaque publicstrings/300DEVdirection records, exact unchanged original+appended-string mapping, matchedrecordedtrue/neutralcounts and arrayshapes/dtypes verified without scoring. Originalactivation/text/class/token lineage still requires full independent binding on scientificreview; no realAR/reward/guard invoked.
+
+OwnerLAUNCH_DELIVERY records directGuiv sealedW1table source and TrackQsoleoperator/I2standdown, superseding oldtable/operatorholds; no duplicate coordinatorquestion. Production wrapper fixes CPU hash/output/guard and requires actualCOMPLETE acquisitionseal; WtextsoleCPUscorer. Fullcurrentpacket is no longer the oldfive-statepartial snapshot. ActualCOMPLETEacquisition/controlscoreseal remainsPENDING: no instrumentpass/structuralreading or exacttrainingreward claim.

@@ -1,0 +1,1 @@
+Original §248 A result and seal copied byte-for-byte. The original seal includes BINDING.PRIVATE.json retained only on local CPU. Guard A_ONCE consumed; never replay. Both truth and belief, observed/conditional denominators and full199 bounds are in RESULTS. The same-model ceiling is by construction, not independent evidence beyond text.

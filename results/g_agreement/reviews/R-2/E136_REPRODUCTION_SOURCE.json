@@ -1,0 +1,74 @@
+{
+  "experiment": "E136",
+  "authority": "\u00a724774b25641d; direct Guiv pre-write request",
+  "status": "COMPONENTS_VERIFIED_NAMED_CLARIFICATION2_CORE_TESTED_AWAIT_OWNER_SEAL",
+  "E85_verified_analysis_seal": "e3d01a895d23fc14f964c66f96fc094c6ba530d11ec34aa09b35c0a3fdbd0af9",
+  "prior_private_reproduction_sha256": "d8ac5965bc091b89c2e2ce4c935cb9423174e43b5ccd76a7b9046d19be5d1294",
+  "common_stats_sha256": "5b8bd4d3a0e23bf7a5487c2dbb2edbafa96d434f9cabd27d25940a42ab37ef2d",
+  "reviewer_source_hashes": {
+    "reproduce_e136.py": "6e10110e311be7cc52453c3bb960d9b7ba74e3933458ed7b271d7aa9bfbf3d8d",
+    "test_reproduce_e136.py": "cf7c15eb431215c4ab3678cb36893f8e40f3f6ad4d100f04f97607ea2824e0a2",
+    "E136_REPRODUCTION.md": "0deaf270341af13a503f8c1bb1c045fd483dc7cb186a9fde9165571f71fec7c7"
+  },
+  "synthetic_tests": 8,
+  "real_E136_execution": false,
+  "owner_analysis_source": null,
+  "owner_words_commit": "629a8f4ab11fbba578ef65252e6be4579620fa26",
+  "owner_probe_behaviour_commit": "bf01f69e8494529b4da9abc24ed935c557c3881d",
+  "owner_synthetic_tests_independently_passed": 22,
+  "words_protocol": {
+    "population": "160 TEST prompts per cue, 80 pairs, 20 tasks",
+    "folds": 5,
+    "seed": 20261030,
+    "bootstrap_draws": 2000,
+    "primary_unit": "pair_id",
+    "descriptive_unit": "base_task",
+    "capacity": "CountVectorizer unigrams/min_df1; L2C1/liblinear/max_iter2000/tol1e-4",
+    "conventions": "PROVISIONAL, owner awaits coordinator ratification"
+  },
+  "probe_behaviour_protocol": {
+    "probe": "DEV-only40prompts/cue, lbfgs C1 max_iter2000 random_state0; TEST160; test gate>=.90",
+    "behaviour": "TEST only correct-minus-distractor margin cue-present-minus-absent; strict-positive correctness;5000paired draws seed20261030; whole-task sensitivity"
+  },
+  "owner_source_hashes": {
+    "projects/g_agreement/e136_words/CODE_SEAL.json": "e5851aee480240a3aeb3767e8c0e8903f06d65d4fa63e4408f9b4ba4a50443a2",
+    "projects/g_agreement/e136_words/protocol.json": "b6aecd83e86b44a28b0fab488592a06ffd84052534e5c59eb0794b437a00390c",
+    "projects/g_agreement/e136_words/words.py": "fb84b6ad55cabc5243e3386ff5175870b71150275b7d3f2fe7009ae78fba6ab4",
+    "projects/g_agreement/e136_words/run_once.py": "95ba0aabee2140d4b227ccc9bfdd5c0d7fa1dfb52c89ae2cc24e07464a49312a",
+    "projects/g_agreement/e136_analysis/SOURCE_RECEIPT.json": "e657eb9fc2122a4c3e2e17070890e410b44c03fb3bd7c436c3b50c2dbea4baba",
+    "projects/g_agreement/e136_analysis/analysis.py": "441cd622ce0327bfb12e0227f86b5c2d79cfe9b37b5f01dd69c9a23b10921881",
+    "projects/g_agreement/e136_analysis/run.py": "445d3372a00054efa05e4633417c121c7ff71fde0cd2f0e248fb9c1101c229a5"
+  },
+  "clarification1": "b1bffdd59; primary item-local true-answer/distractor/full-fact token exclusion; raw view descriptive",
+  "amended_words_code_seal_sha256": "e5851aee480240a3aeb3767e8c0e8903f06d65d4fa63e4408f9b4ba4a50443a2",
+  "reviewer_synthetic_tests": 15,
+  "amended_owner_words_synthetic_tests": 10,
+  "current_authority": "0b003b5ed \u00a7247 deviation2",
+  "current_scope": {
+    "cues": [
+      "sycophancy_pressure",
+      "misuse_intent"
+    ],
+    "prompts": 400,
+    "pairs": 200,
+    "block": 44,
+    "word_test_rows": 320
+  },
+  "active_roster_validator": "check_roster:400 prompts/200 cue-pairs; sycophancy_pressure+misuse_intent;44 only;80DEV320TEST",
+  "source_bank_validator": "check_bank_roster:historical untouched800 source only",
+  "rule_identity_validator": "deviation2_rules requires exact two named summaries",
+  "owner_deviation2_probe_tests": 19,
+  "owner_deviation2_scope_source": "e136_analysis exact400/200, unchanged numerical kernels; explicit deviation2/cue list SPEC validation",
+  "owner_words_deviation2_commit": "b10eaa7a",
+  "named_clarification2": {
+    "authority": "8c87ab44",
+    "present_TEST_planned_per_cue": 80,
+    "observed_denominator": "YES + NO; terminal UNPARSEABLE missing",
+    "bounds": "YES/80 .. (YES+missing)/80",
+    "absent_TEST": "separate false-positive rate",
+    "DEV": "separate strata",
+    "wilson_z": "explicit source-bound argument",
+    "new_synthetic_tests": 5,
+    "actual_E136R_codes_opened": false
+  }
+}

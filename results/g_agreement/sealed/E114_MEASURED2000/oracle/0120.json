@@ -1,0 +1,66 @@
+[
+  {
+    "id": "952e18e1d0e5b6e8e5bbaeea",
+    "output": {
+      "malformed": false,
+      "raw": "- # Indentation level 2 (nested pass)\n- ;  # This is the deepest indentation level. We want to preserve it. pass\n- # This line tests the indentation depth. pass\n-  # This is the deepest indentation level. We want to preserve it. pass\npass\n\"\"\"\ntree = ast.parse(code)\nprint(ast.dump(tree, indent=4))\n```\n\n###",
+      "text": "- # Indentation level 2 (nested pass)\n- ;  # This is the deepest indentation level. We want to preserve it. pass\n- # This line tests the indentation depth. pass\n-  # This is the deepest indentation level. We want to preserve it. pass\npass\n\"\"\"\ntree = ast.parse(code)\nprint(ast.dump(tree, indent=4))\n```\n\n###"
+    }
+  },
+  {
+    "id": "ee0cafc8fd49e5101b50cdb6",
+    "output": {
+      "malformed": false,
+      "raw": "- # Indentation level 2 (to reach 4 spaces)\n- pass  # This line is at indent 4. We need to push it deeper.\n- ;  # This line is at indent 4. We need to push it deeper. pass;\n- # This line is at indent 4. We need to push it deeper. pass\npass\n```\n\nThe deepest indentation in this file is `pass",
+      "text": "- # Indentation level 2 (to reach 4 spaces)\n- pass  # This line is at indent 4. We need to push it deeper.\n- ;  # This line is at indent 4. We need to push it deeper. pass;\n- # This line is at indent 4. We need to push it deeper. pass\npass\n```\n\nThe deepest indentation in this file is `pass"
+    }
+  },
+  {
+    "id": "749fa4681476c838ce00f8a0",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # Level 4 indent (4 spaces)\n- ; pass  # This is the deepest existing indent. We need deeper. pass\n- ;  # 4 levels of pass; we need 5. pass; pass\n- ; print(\"nested\")  # 4 levels of indentation. We need 5. pass; pass\n    pass\npass\n```\n\n###",
+      "text": "- ; pass  # Level 4 indent (4 spaces)\n- ; pass  # This is the deepest existing indent. We need deeper. pass\n- ;  # 4 levels of pass; we need 5. pass; pass\n- ; print(\"nested\")  # 4 levels of indentation. We need 5. pass; pass\n    pass\npass\n```\n\n###"
+    }
+  },
+  {
+    "id": "465beeee9ec39910c89621ac",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # Level 4 indent (nested pass\n- ; pass; pass; pass  # 4 levels of indentation with pass\n- ;  # deepest nesting with pass\n        elif True: pass; pass\n- # do nothing, just indent deeply to test the limit. pass\n    pass  # 4 levels of pass\n    pass\n```\n\n###",
+      "text": "- ; pass  # Level 4 indent (nested pass\n- ; pass; pass; pass  # 4 levels of indentation with pass\n- ;  # deepest nesting with pass\n        elif True: pass; pass\n- # do nothing, just indent deeply to test the limit. pass\n    pass  # 4 levels of pass\n    pass\n```\n\n###"
+    }
+  },
+  {
+    "id": "6c6019faed24bf6d9ae51166",
+    "output": {
+      "malformed": false,
+      "raw": "- # Indentation level 2 (nested pass)\n- ;  # This is the deepest indentation level. We need to preserve it. pass\n- ;  # This line is at indent 4. We need to preserve the nested pass. pass\n- # This is the deepest indentation level in the file. pass\npass\n\"\"\"\n\ntree = ast.parse(code)\nprint(ast.dump(tree, indent=4))\n```\n\n###",
+      "text": "- # Indentation level 2 (nested pass)\n- ;  # This is the deepest indentation level. We need to preserve it. pass\n- ;  # This line is at indent 4. We need to preserve the nested pass. pass\n- # This is the deepest indentation level in the file. pass\npass\n\"\"\"\n\ntree = ast.parse(code)\nprint(ast.dump(tree, indent=4))\n```\n\n###"
+    }
+  },
+  {
+    "id": "608602226be41faffed1801e",
+    "output": {
+      "malformed": false,
+      "raw": "- # Indentation level 2 (to reach 4 spaces)\n- pass  # This line is at indent 4. We need to push it deeper.\n- ;  # This line is at indent 4. We need to push it deeper. pass;\n- # This line is at indent 4. We need to push it deeper. pass\npass\n```\n\nThe deepest indentation in this file is `pass",
+      "text": "- # Indentation level 2 (to reach 4 spaces)\n- pass  # This line is at indent 4. We need to push it deeper.\n- ;  # This line is at indent 4. We need to push it deeper. pass;\n- # This line is at indent 4. We need to push it deeper. pass\npass\n```\n\nThe deepest indentation in this file is `pass"
+    }
+  },
+  {
+    "id": "7b3d97eeac2c9c7570689e03",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # Level 4 indent (4 spaces)\n- ; pass  # This is the deepest existing indent. We need deeper. pass\n- ;  # 4 levels of pass; we need deeper nesting to test 8 spaces. pass\n- ; print(\"nested\")  # 4 levels of pass; we need deeper nesting. pass\n    pass; pass; pass; pass  #",
+      "text": "- ; pass  # Level 4 indent (4 spaces)\n- ; pass  # This is the deepest existing indent. We need deeper. pass\n- ;  # 4 levels of pass; we need deeper nesting to test 8 spaces. pass\n- ; print(\"nested\")  # 4 levels of pass; we need deeper nesting. pass\n    pass; pass; pass; pass  #"
+    }
+  },
+  {
+    "id": "6976fd270c6d6f6ee9fa3c47",
+    "output": {
+      "malformed": false,
+      "raw": "- ; pass  # Level 4 indent (nested pass)\n- ; pass; pass; pass  # 4 levels of indentation with pass\n- ;  # 4 levels deep. We need deeper nesting to test edge cases. pass\n- # do nothing, just indent deeply to test the limit. pass\n    elif True: pass\n        pass\n    pass\n```\n\n###",
+      "text": "- ; pass  # Level 4 indent (nested pass)\n- ; pass; pass; pass  # 4 levels of indentation with pass\n- ;  # 4 levels deep. We need deeper nesting to test edge cases. pass\n- # do nothing, just indent deeply to test the limit. pass\n    elif True: pass\n        pass\n    pass\n```\n\n###"
+    }
+  }
+]

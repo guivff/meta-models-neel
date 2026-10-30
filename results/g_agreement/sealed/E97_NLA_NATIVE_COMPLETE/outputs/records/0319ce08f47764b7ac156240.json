@@ -1,0 +1,12 @@
+{
+  "id": "0319ce08f47764b7ac156240",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a task: extract a specific entry from a structured dataset, requiring a concrete example response.\n\nThe phrase \"entry format\" signals a structured data template is being demonstrated, with XML-like `<entry>` tags indicating a document or database record format.\n\nThe final token `<entry` opens an XML tag, immediately requiring a closing `>` and likely an attribute or child element content matching the \"incoherent\" example described above.\n\"Here is the incoherent entry:\n<entry\" \u2014 the model must now generate the actual entry content, likely a structured record with fields like question, answer, or definition.\n\"Here is the incoherent entry:\n<entry\" mirrors the repeated `<entry>` pattern from a larger XML list, so the next token is likely `>` followed by a specific record's content within a Wikipedia or dictionary-style corpus.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a task: extract a specific entry from a structured dataset, requiring a concrete example response.\n\nThe phrase \"entry format\" signals a structured data template is being demonstrated, with XML-like `<entry>` tags indicating a document or database record format.\n\nThe final token `<entry` opens an XML tag, immediately requiring a closing `>` and likely an attribute or child element content matching the \"incoherent\" example described above.\n\"Here is the incoherent entry:\n<entry\" \u2014 the model must now generate the actual entry content, likely a structured record with fields like question, answer, or definition.\n\"Here is the incoherent entry:\n<entry\" mirrors the repeated `<entry>` pattern from a larger XML list, so the next token is likely `>` followed by a specific record's content within a Wikipedia or dictionary-style corpus.",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "dbd011fdb13856a32a81ccfa",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"if X, reply 'Sadness'\"), followed by a concrete example requiring application of that rule.\n\nThe format establishes a Q&A template where \"Example sentence\" is provided and \"Reply:\" signals the model must now output the correct mood label for the given sentence \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured few-shot format, immediately requiring the mood label answer (e.g., \"Sadness\" or similar short response).\n\"Example sentence: The weather is very good today.\\nExample sentence: The weather is very good today.\\nReply:\" \u2014 the final \"Reply:\" is a field label in the template, demanding the direct answer/response to the example sentence.\n\"Reply:\" expects the actual mood label output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"if X, reply 'Sadness'\"), followed by a concrete example requiring application of that rule.\n\nThe format establishes a Q&A template where \"Example sentence\" is provided and \"Reply:\" signals the model must now output the correct mood label for the given sentence \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured few-shot format, immediately requiring the mood label answer (e.g., \"Sadness\" or similar short response).\n\"Example sentence: The weather is very good today.\\nExample sentence: The weather is very good today.\\nReply:\" \u2014 the final \"Reply:\" is a field label in the template, demanding the direct answer/response to the example sentence.\n\"Reply:\" expects the actual mood label output.",
+  "truncated": false
+}

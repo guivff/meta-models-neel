@@ -1,0 +1,25 @@
+{
+  "across_cell_figure": "all10 cell point estimates; source/window AUROC versus continuation AUROC; Pearson/Spearman descriptive only, no p-value or selection",
+  "asked": "true-arm mean-pair AUROC<=0.60 in every cell",
+  "bootstrap": "resample64test lexical_id clusters with replacement, preserving A/B and sharing identical draws across cells and channels; fixed dev fits",
+  "bootstrap_samples": 2000,
+  "channels": [
+    "source_probe",
+    "window_probe",
+    "continuation",
+    "asked"
+  ],
+  "continuation": "mean of both already frozen E15 pairs; no E17 validity selection; no sign flip",
+  "controls": "report every frozen candidate pair and mean for true/random_donor/opposite_swap; signed recipient-label orientation, no control exclusion rule",
+  "late_aggregation": "both short_late-long_early and long_late-long_early must hold separately; no pooled late score",
+  "lens_direction_holds": "every registered contrast point>=0.10, paired95%percentile CI lower>0, and row Holm-adjusted p<=0.05",
+  "list_contrast": "line_end-mid_item",
+  "multiplicity": "Holm step-down across exactly3 rows, alpha0.05; report adjusted p",
+  "outcome": "row structural direction = lens_direction_holds and source_flat; spans direction requires both paren and string, list direction requires list; both=SUPPORTED, one=PARTIAL, neither=NOT_SUPPORTED; window/asked predictions assessed separately and full prediction held only if all components hold",
+  "p_value": "(1+number of bootstrap contrasts<=0)/(2000+1); one-sided percentile-bootstrap tail approximation",
+  "probe": "one per feature/channel; pooled dev cells; W1 mats.probes.fit_logreg lambda=1e-3, default200LBFGS iterations, train-only standardization",
+  "row_p_value": "maximum of both late contrast p-values for paren/string; single contrast p for list",
+  "seed": 20261025,
+  "source_flat": "every matching source contrast absolute point<=0.05; show CI, no equivalence claim",
+  "window": "report corresponding signed differences and95%CIs; direction positive is a descriptive component, no effect-size/significance cutoff"
+}

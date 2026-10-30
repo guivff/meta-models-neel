@@ -1,0 +1,12 @@
+{
+  "id": "84f79d81065627f0dab14174",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a template example is given, followed by a specific instruction, now requiring the model's answer to demonstrate following that instruction.\n\nThe \"Context\" establishes a rule about writing style (formal), while the \"Instruction\" overrides it to use informal style \u2014 the answer must reflect this tension or the instruction's directive.\n\n\"Answer:\" is the final token, a label introducing the model's response to the instruction, requiring a direct answer about how to write about the topic (likely a short declarative sentence mirroring the template's structure, e.g., \"The model should use formal writing style\" or a demonstration of the answer).\n\"Context: ...\nInstruction: The model should use informal writing style.\nTopic: [topic]\nInstruction: [topic]\nAnswer:\" \u2014 the final prompt expects the model's generated response to the example.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a template example is given, followed by a specific instruction, now requiring the model's answer to demonstrate following that instruction.\n\nThe \"Context\" establishes a rule about writing style (formal), while the \"Instruction\" overrides it to use informal style \u2014 the answer must reflect this tension or the instruction's directive.\n\n\"Answer:\" is the final token, a label introducing the model's response to the instruction, requiring a direct answer about how to write about the topic (likely a short declarative sentence mirroring the template's structure, e.g., \"The model should use formal writing style\" or a demonstration of the answer).\n\"Context: ...\nInstruction: The model should use informal writing style.\nTopic: [topic]\nInstruction: [topic]\nAnswer:\" \u2014 the final prompt expects the model's generated response to the example.",
+  "truncated": false
+}

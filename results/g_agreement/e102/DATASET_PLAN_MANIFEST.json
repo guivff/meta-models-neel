@@ -1,0 +1,49 @@
+{
+  "block": 44,
+  "capture_convention": "output of decoder block44; original frozen raw token IDs; no appended chat tokens",
+  "complete_templates_seal_sha256": "7b83fbc169879d662d86e06204fbce06ae022d74a67a353574feb44f66024ee8",
+  "excluded": {
+    "judge_outputs": 0,
+    "test_activations": 0,
+    "test_items": 0
+  },
+  "experiment": "E102",
+  "first_output_utc": null,
+  "local_directory": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtrain/cache/g_agreement/e102/production_plan",
+  "pending": [
+    "PASS_GPU_GATE",
+    "4032position_vectors",
+    "504sealed_original_greedy_dev_texts",
+    "CPU_finalize_and_seal"
+  ],
+  "plan_files": {
+    "ACQUISITION_ITEMS.json": "cc63e1b298aabfd1ca6980b0452853c399f4a2b892c11c5b38b4f4abbd52d356",
+    "PAIRS.CPU.json": "072b7ee2fc2d2d12bbba58a8602b928dcf6860290f8884f77f3fbf4df18d7e68"
+  },
+  "plan_seal_sha256": "36853fe38c7dbbf6a35ec40e96ef76dabe07cceb8f61ed8703063384d5db8fbc",
+  "replay_items": 504,
+  "replay_pairs": 2016,
+  "replay_selection": "all84 dev items per six rows; last4 positions per item,336pairs per row",
+  "replay_teacher": "one sealed original-lens greedy readout at item read token, reused for its4 positions",
+  "seed": 20261029,
+  "sources": {
+    "e56": {
+      "bank_seal_sha256": "e733bed854700d0129a7b59ed1e1e6ddf82947add11c2f3e77feb36bfb451112",
+      "items_sha256": "f8eda6eae303ab40988fa254eafef91945be96fe38639dc8cd70266037cae442"
+    },
+    "e57": {
+      "bank_seal_sha256": "cff66637fedd6afd795370e3efbe3e8262d77c98a64e60e8580a9507dd295f7c",
+      "items_sha256": "71d1c654fe61cef2ce50b99d52a8b1640c90f309badf8fc84e96ef82aa3ca2b1"
+    },
+    "e59": {
+      "bank_seal_sha256": "b73463a88b0691d152180e8c7d0b9887bb890cc9c2750a76ce6fb6631bcf0452",
+      "items_sha256": "1aea5b005a25f4c8d4ab7ce7b8b982701bab5750b9c0c5575549db4e84578c95"
+    }
+  },
+  "status": "DEV_PAIR_PLAN_FROZEN_NOT_TRAINING_READY",
+  "target_items": 252,
+  "target_pairs": 2016,
+  "target_positions": "last8 ending at read token",
+  "target_template_selection": "Python Random(20261029).randrange(5) per position, frozen bank item order",
+  "window_label_convention": "target describes item read-token state at each selected window position, per section210"
+}

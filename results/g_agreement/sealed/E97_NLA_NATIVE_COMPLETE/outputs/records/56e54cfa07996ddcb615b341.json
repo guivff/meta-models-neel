@@ -1,0 +1,12 @@
+{
+  "id": "56e54cfa07996ddcb615b341",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a task description (\"Extract the following data from the given XML-like format\") sets up a structured data extraction exercise.\n\nThe phrase \"Here is the entry:\" signals an example or sample entry is being introduced, requiring a concrete XML-like record to follow.\n\nFinal token `<entry` opens an XML tag, immediately requiring a closing `>` and likely an attribute or child element content matching the \"entry\" format described earlier.\n\"Here is the entry:\n<entry\" mirrors the preceding `<entry>` pattern, suggesting a new structured record block begins, likely containing fields like question, answer, or definition.\n\"Please provide a single coherent entry.\n<entry\" \u2014 the opening tag of a new entry in a list, expecting attributes or content like `id=\"...\"` or a dictionary-style record from a corpus.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a task description (\"Extract the following data from the given XML-like format\") sets up a structured data extraction exercise.\n\nThe phrase \"Here is the entry:\" signals an example or sample entry is being introduced, requiring a concrete XML-like record to follow.\n\nFinal token `<entry` opens an XML tag, immediately requiring a closing `>` and likely an attribute or child element content matching the \"entry\" format described earlier.\n\"Here is the entry:\n<entry\" mirrors the preceding `<entry>` pattern, suggesting a new structured record block begins, likely containing fields like question, answer, or definition.\n\"Please provide a single coherent entry.\n<entry\" \u2014 the opening tag of a new entry in a list, expecting attributes or content like `id=\"...\"` or a dictionary-style record from a corpus.",
+  "truncated": false
+}

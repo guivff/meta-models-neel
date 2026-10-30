@@ -1,0 +1,12 @@
+{
+  "id": "f572c8923fae2f29d082b1e6",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict pattern: classify sentences as \"Congratulations\" or \"Sorry,\" with examples given. The model must apply this rule to the test sentence.\n\nThe test sentence \"The weather is nice today\" is a neutral, non-congratulatory statement, so the expected answer is \"Sorry.\"\n\n\"Reply:\" is the final token, functioning as a response prompt label in a structured Q&A format, immediately requiring the model's classification answer (e.g., \"Sorry\" or \"Congratulations\") to follow.\n\"Given the following sentence, provide the response according to the pattern.\nSentence: The weather is nice today\nPattern: [pattern]\nSentence: The weather is nice today\nReply:\" \u2014 the final label demands the direct answer text next, completing the structured output format.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict pattern: classify sentences as \"Congratulations\" or \"Sorry,\" with examples given. The model must apply this rule to the test sentence.\n\nThe test sentence \"The weather is nice today\" is a neutral, non-congratulatory statement, so the expected answer is \"Sorry.\"\n\n\"Reply:\" is the final token, functioning as a response prompt label in a structured Q&A format, immediately requiring the model's classification answer (e.g., \"Sorry\" or \"Congratulations\") to follow.\n\"Given the following sentence, provide the response according to the pattern.\nSentence: The weather is nice today\nPattern: [pattern]\nSentence: The weather is nice today\nReply:\" \u2014 the final label demands the direct answer text next, completing the structured output format.\n\"Reply:\"",
+  "truncated": false
+}

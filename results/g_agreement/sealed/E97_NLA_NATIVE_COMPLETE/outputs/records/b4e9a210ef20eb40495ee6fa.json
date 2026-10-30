@@ -1,0 +1,12 @@
+{
+  "id": "b4e9a210ef20eb40495ee6fa",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Sadness,\" \"Joy,\" \"Anger\").\n\nThe example pattern \"Example sentence: [sentence] / Reply:\" signals the model must now produce the single correct emotion label for the specific sentence \"I am a teacher.\"\n\n\"Reply:\" is the final prompt field, directly requiring the answer/label to follow immediately \u2014 a short emotion word or phrase completing the structured Q&A format.\n\"Given the following sentence, determine the emotion label according to the specified format.\nExample sentence: I am a teacher.\nSentence: I am a teacher.\nReply:\" \u2014 the final token \"Reply:\" is a label introducing the model's direct answer, expecting the emotion word next.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Sadness,\" \"Joy,\" \"Anger\").\n\nThe example pattern \"Example sentence: [sentence] / Reply:\" signals the model must now produce the single correct emotion label for the specific sentence \"I am a teacher.\"\n\n\"Reply:\" is the final prompt field, directly requiring the answer/label to follow immediately \u2014 a short emotion word or phrase completing the structured Q&A format.\n\"Given the following sentence, determine the emotion label according to the specified format.\nExample sentence: I am a teacher.\nSentence: I am a teacher.\nReply:\" \u2014 the final token \"Reply:\" is a label introducing the model's direct answer, expecting the emotion word next.\n\"Reply:\"",
+  "truncated": false
+}

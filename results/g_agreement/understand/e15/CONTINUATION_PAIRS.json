@@ -1,0 +1,263 @@
+{
+  "base_reference": "base Qwen with adapter disabled; actual W1 input tokens then candidate tokens, no question or bullet prefix",
+  "nla_prefix": "",
+  "nla_status": "DESCRIPTIVE, continuation scoring off native explanation mode",
+  "notes": "Frozen surface consequences may fail base validity; failed pairs/rows are reported, never reauthored after scores.",
+  "oracle_prefix": "- ",
+  "oracle_prompt": "unchanged native Oracle prompt, no E6 continuation instruction appended",
+  "orientation": "W1 value A positive, no sign reversal",
+  "rows": {
+    "list_depth": {
+      "consequence": "Next bullet at two versus four leading spaces; bullet text identical. This is a shallow/deep contrast, not an asserted perfect-level match.",
+      "pairs": [
+        {
+          "A": "\n  - ",
+          "A_ids": [
+            198,
+            220,
+            471,
+            220
+          ],
+          "B": "\n    - ",
+          "B_ids": [
+            198,
+            262,
+            471,
+            220
+          ],
+          "tokens_per_candidate": 4
+        },
+        {
+          "A": "\n  - next",
+          "A_ids": [
+            198,
+            220,
+            471,
+            1727
+          ],
+          "B": "\n    - next",
+          "B_ids": [
+            198,
+            262,
+            471,
+            1727
+          ],
+          "tokens_per_candidate": 4
+        }
+      ]
+    },
+    "prose_paren": {
+      "consequence": "Close an open parenthesis versus open a new parenthesis.",
+      "pairs": [
+        {
+          "A": ")",
+          "A_ids": [
+            8
+          ],
+          "B": "(",
+          "B_ids": [
+            7
+          ],
+          "tokens_per_candidate": 1
+        },
+        {
+          "A": ")\n",
+          "A_ids": [
+            8,
+            198
+          ],
+          "B": "(\n",
+          "B_ids": [
+            7,
+            198
+          ],
+          "tokens_per_candidate": 2
+        }
+      ]
+    },
+    "prose_quote": {
+      "consequence": "Close a double-quoted span versus punctuation without a quote.",
+      "pairs": [
+        {
+          "A": "\"",
+          "A_ids": [
+            1
+          ],
+          "B": ".",
+          "B_ids": [
+            13
+          ],
+          "tokens_per_candidate": 1
+        },
+        {
+          "A": "\"\n",
+          "A_ids": [
+            1,
+            198
+          ],
+          "B": ".\n",
+          "B_ids": [
+            13,
+            198
+          ],
+          "tokens_per_candidate": 2
+        }
+      ]
+    },
+    "python_depth": {
+      "consequence": "Close one versus two square brackets; no lexical content change.",
+      "pairs": [
+        {
+          "A": "]",
+          "A_ids": [
+            60
+          ],
+          "B": "]]",
+          "B_ids": [
+            4891
+          ],
+          "tokens_per_candidate": 1
+        },
+        {
+          "A": "]\n",
+          "A_ids": [
+            60,
+            198
+          ],
+          "B": "]]\n",
+          "B_ids": [
+            4891,
+            198
+          ],
+          "tokens_per_candidate": 2
+        }
+      ]
+    },
+    "python_indent": {
+      "consequence": "Next statement at four versus twelve leading spaces; statement text identical.",
+      "pairs": [
+        {
+          "A": "\n    pass",
+          "A_ids": [
+            198,
+            262,
+            1440
+          ],
+          "B": "\n            pass",
+          "B_ids": [
+            198,
+            309,
+            1440
+          ],
+          "tokens_per_candidate": 3
+        },
+        {
+          "A": "\n    return",
+          "A_ids": [
+            198,
+            262,
+            460
+          ],
+          "B": "\n            return",
+          "B_ids": [
+            198,
+            309,
+            460
+          ],
+          "tokens_per_candidate": 3
+        }
+      ]
+    },
+    "python_string": {
+      "consequence": "Close a double-quoted string versus leave it open / continue outside a string.",
+      "pairs": [
+        {
+          "A": "\"",
+          "A_ids": [
+            1
+          ],
+          "B": "0",
+          "B_ids": [
+            15
+          ],
+          "tokens_per_candidate": 1
+        },
+        {
+          "A": "\"\n",
+          "A_ids": [
+            1,
+            198
+          ],
+          "B": ".\n",
+          "B_ids": [
+            13,
+            198
+          ],
+          "tokens_per_candidate": 2
+        }
+      ]
+    },
+    "table_column": {
+      "consequence": "Continue into another cell versus break the line; optional same word next.",
+      "pairs": [
+        {
+          "A": " |",
+          "A_ids": [
+            735
+          ],
+          "B": "\n",
+          "B_ids": [
+            198
+          ],
+          "tokens_per_candidate": 1
+        },
+        {
+          "A": " | next",
+          "A_ids": [
+            735,
+            1727
+          ],
+          "B": "\nnext",
+          "B_ids": [
+            198,
+            3480
+          ],
+          "tokens_per_candidate": 2
+        }
+      ]
+    },
+    "table_role": {
+      "consequence": "Next cell has a header-like label versus an exemplar data value. Lexical header/data proxy; validity must be established on dev.",
+      "pairs": [
+        {
+          "A": " | Batch",
+          "A_ids": [
+            735,
+            32783
+          ],
+          "B": " | amber",
+          "B_ids": [
+            735,
+            65326
+          ],
+          "tokens_per_candidate": 2
+        },
+        {
+          "A": " | Shelf",
+          "A_ids": [
+            735,
+            67966
+          ],
+          "B": " | cedar",
+          "B_ids": [
+            735,
+            72730
+          ],
+          "tokens_per_candidate": 2
+        }
+      ]
+    }
+  },
+  "section": 105,
+  "validity": "Each pair valid iff base-reference dev AUROC>=0.80. Primary test score averages ONLY dev-valid pairs; zero-valid-pair rows NOT EVALUABLE. Report every pair separately; no replacement."
+}

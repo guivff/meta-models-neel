@@ -1,0 +1,12 @@
+{
+  "id": "c71c3f7c7d937062235e4638",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot pattern establishes a strict format: input sentence \u2192 classification label (e.g., \"happy,\" \"sad\"), requiring the model to output the correct label for the given example.\n\nThe instruction explicitly defines the task: classify emotional state of sentences into \"happy\" or \"sad\" only, constraining the response to one of those two words.\n\n\"Example sentence: I am going to the store to buy groceries.\\nReply:\" is the final prompt line, where \"Reply:\" is a label/field marker demanding the model's direct answer (the classification) immediately follows.\n\"Given the pattern:\nExample sentence: [sentence]\nClassification: [label]\nExample sentence: I am going to the store to buy groceries.\nReply:\" \u2014 the final token \"Reply:\" is a prompt field expecting the model's answer next.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot pattern establishes a strict format: input sentence \u2192 classification label (e.g., \"happy,\" \"sad\"), requiring the model to output the correct label for the given example.\n\nThe instruction explicitly defines the task: classify emotional state of sentences into \"happy\" or \"sad\" only, constraining the response to one of those two words.\n\n\"Example sentence: I am going to the store to buy groceries.\\nReply:\" is the final prompt line, where \"Reply:\" is a label/field marker demanding the model's direct answer (the classification) immediately follows.\n\"Given the pattern:\nExample sentence: [sentence]\nClassification: [label]\nExample sentence: I am going to the store to buy groceries.\nReply:\" \u2014 the final token \"Reply:\" is a prompt field expecting the model's answer next.",
+  "truncated": false
+}

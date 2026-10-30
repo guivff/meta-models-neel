@@ -1,0 +1,12 @@
+{
+  "id": "b24078ef09f0e933625100bd",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task: \"friendship\" or \"romantic love\" as the only valid outputs.\n\nThe example pattern shows a Chinese sentence followed by its English translation, then a question asking for the category label, mirroring the earlier \"Example\" structure.\n\n\"Reply:\" is the final token, functioning as a prompt label awaiting the model's direct answer \u2014 the next token must be the classification label (\"Friendship\" or \"Romantic love\") or a brief explanatory response.\n\"Given the following sentence: 'The individual is a Chinese-American entrepreneur.'\nQuestion: What is the emotional category label?\nReply:\" \u2014 this closing \"Reply:\" field demands the answer immediately follows, constrained to the established format.\n\n\"Reply:\" is the final prompt marker, expecting the concise answer on the next line.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task: \"friendship\" or \"romantic love\" as the only valid outputs.\n\nThe example pattern shows a Chinese sentence followed by its English translation, then a question asking for the category label, mirroring the earlier \"Example\" structure.\n\n\"Reply:\" is the final token, functioning as a prompt label awaiting the model's direct answer \u2014 the next token must be the classification label (\"Friendship\" or \"Romantic love\") or a brief explanatory response.\n\"Given the following sentence: 'The individual is a Chinese-American entrepreneur.'\nQuestion: What is the emotional category label?\nReply:\" \u2014 this closing \"Reply:\" field demands the answer immediately follows, constrained to the established format.\n\n\"Reply:\" is the final prompt marker, expecting the concise answer on the next line.",
+  "truncated": false
+}

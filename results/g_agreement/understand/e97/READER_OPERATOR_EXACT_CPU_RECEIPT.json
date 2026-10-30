@@ -1,0 +1,174 @@
+{
+  "GO_sha256": "cc7d78d6bd7453295a8a5e117e5b0fd94eeaef061d4783b3fad41834caf05219",
+  "allocation": false,
+  "experiment": "E97",
+  "first_output_evidence": "Prospective native-reader operational binding only; recapturealreadysealedseparately",
+  "first_output_utc": "unknown",
+  "independent_background_guard_preflight": {
+    "allocation": false,
+    "api_queries_only_historical_owned_closed_ID": true,
+    "proof": {
+      "backstop": {
+        "done": {
+          "pod_id": "hfjn9tvvqexync",
+          "status": "NULL",
+          "verified_epoch": 1793236711.12096
+        },
+        "ready": {
+          "authenticated": true,
+          "createdAt": "2026-10-29T00:44:55.547Z",
+          "deadline_epoch": 1793236706.782762,
+          "pid": 12569,
+          "pod_id": "hfjn9tvvqexync"
+        }
+      },
+      "hardstop": {
+        "done": {
+          "pod_id": "hfjn9tvvqexync",
+          "status": "NULL",
+          "verified_epoch": 1793236711.069535
+        },
+        "ready": {
+          "authenticated": true,
+          "createdAt": "2026-10-29T00:44:55.547Z",
+          "deadline_epoch": 1793236678.782762,
+          "pid": 12567,
+          "pod_id": "hfjn9tvvqexync"
+        }
+      }
+    },
+    "run": "/Users/guivff/repl/activation-readers-i5/e97-reader-guardtest-20261029",
+    "status": "PASS"
+  },
+  "operator_code_hashes": {
+    "projects/g_agreement/ops/i5_reader_controller.py": "cc6d338d59dc26c9fcb2d65a4fc18ee428039f704b88f4d8ae708152cdec755d",
+    "projects/g_agreement/ops/test_reader_controller.py": "d2bd69ddfa1126502e7c7b1d543bcb7a44dfb906a7b50abaa3041cb948981670"
+  },
+  "operator_tests": "6passed0.19s; noallocationwithoutGO/registeredcap; exact3360roster/singlecell/wrongreaderreject; ownedguardretirement",
+  "original_native_runtime_unchanged": true,
+  "readers": {
+    "nla": {
+      "asset_files": 45,
+      "cap_seconds": 11500,
+      "created": false,
+      "input_sha256": "aba404a8fab95ceea1840428c06ccf77db0ba877dfade9c9b1553c531203bec1",
+      "nla_wrapper_files": [
+        {
+          "relative": "av_base/chat_template.jinja",
+          "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_base/chat_template.jinja"
+        },
+        {
+          "relative": "av_base/config.json",
+          "sha256": "10d517a120597b391bb5a9e1f67aad70a162656067c3f25d95eccd44e46564d9",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_base/config.json"
+        },
+        {
+          "relative": "av_base/generation_config.json",
+          "sha256": "252e0efee3ded327704912616f3493a227cdc39eb4bab52fcae1ceb3ed5dc890",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_base/generation_config.json"
+        },
+        {
+          "relative": "av_base/model-00001-of-00002.safetensors",
+          "sha256": "8354ca745ac4a405be0df6918954534cd2be1e415494bc8c11622f8cf30ebd73",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_base/model-00001-of-00002.safetensors"
+        },
+        {
+          "relative": "av_base/model-00002-of-00002.safetensors",
+          "sha256": "66d6c918749ff5c0d53784c2b63e63ac4d32db33bb42d4b26a240029cf8a02f9",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_base/model-00002-of-00002.safetensors"
+        },
+        {
+          "relative": "av_base/model.safetensors.index.json",
+          "sha256": "5c26baef87822882c6362d7ba2e916198299b403f988751faa15ee3654ec64d5",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_base/model.safetensors.index.json"
+        },
+        {
+          "relative": "av_base/nla_meta.yaml",
+          "sha256": "ee3aa5960da9b3180e50d180e66f98274ef44caca216bd0a6ddc5558ad5f2d14",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_base/nla_meta.yaml"
+        },
+        {
+          "relative": "av_base/tokenizer.json",
+          "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_base/tokenizer.json"
+        },
+        {
+          "relative": "av_base/tokenizer_config.json",
+          "sha256": "83febe739ecefd99f984f546dfdc10149cedf293b9ee0291b99894341188b613",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_base/tokenizer_config.json"
+        },
+        {
+          "relative": "av_rl_adapters/iter_000400/adapter_config.json",
+          "sha256": "2faac994662bd69772c2cba30fd4fad05d0f26cfea81909c119e1848badc866b",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400/adapter_config.json"
+        },
+        {
+          "relative": "av_rl_adapters/iter_000400/adapter_model.safetensors",
+          "sha256": "b54e23e4e36dbd04023b307e3abfd4618b5db2b31b8e7c650a957ebb1c90c358",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/av_rl_adapters/iter_000400/adapter_model.safetensors"
+        },
+        {
+          "relative": "nla_meta.yaml",
+          "sha256": "2d05879b4dd1d5eeabf26430e40c150bc9b05267ab9e0332bc7f6fd297631c94",
+          "source": "/weights/hf_cache/hub/models--ceselder--qwen3.6-27b-nla-rl/snapshots/5a13b7ec21a69fcdd0fb24d5edbe96a92aef4b9f/nla_meta.yaml"
+        }
+      ],
+      "operator_hashes": {
+        "controller.py": "cc6d338d59dc26c9fcb2d65a4fc18ee428039f704b88f4d8ae708152cdec755d",
+        "i5_controller.py": "f67fd9c82f7ce8b738c0c9447c7bcf7508ab5bd098e4ae0eed3e4790413c1b7e",
+        "ops/ws2_hardstop.sh": "3e5d9435438b860b0077fbf6ce19240e2dd50dea9b2f13c7fe8285e0c7e48f54",
+        "ops/ws2_macguard.sh": "ce460e0fc583c577137975fac7f1b3a1408a0e2a18932f65897c58c7d530dbda",
+        "ops/ws2_offvolume.sh": "f46482ef22c1a2a864c7877c4eb4b4b9b2e35b71605840075b48792330958c78",
+        "ops/ws2_selfstop.sh": "34318dfe185eaa408b16be3832b95d7edf0a4190d77607b8c93de7b98be99141",
+        "ops/ws2_stock.py": "6d5ea0dd5368bcf75960e8b2945a7bd50541dfe928c1e8361730a1727182f097",
+        "ops/ws2_verify_banks.py": "fcb18c5c4727a1f2072aa45210995316512531b7dc024adbeace1a2d8530204e",
+        "ops/ws2_verify_pull.py": "d74772a2fccc92001a6e9ab0d1bbb524858a93887b73cd0a9c80ed4cb4334315",
+        "ops/ws2_watchdog.sh": "3fd0182a9585545302c8350daa6477510334a0d67153e2d650ae8d9f123582c3"
+      },
+      "payload_hashes": {
+        "GO.json": "cc7d78d6bd7453295a8a5e117e5b0fd94eeaef061d4783b3fad41834caf05219",
+        "assets.json": "8d9b023c01b40fcfb5472f192f2708e5120eb5cc0cfbabd7c0c29e2b41dbabdd",
+        "inputs.tar.gz": "b595a1d5ba16300cb480871e1942a507be11bfdfbc982e2ea46793fadb232bf7",
+        "source.tar.gz": "603653fd6edd18b11c8c45e32938e5af9ec7b8467dcc1360aec5875a3969289b"
+      },
+      "reader": "nla",
+      "run": "/Users/guivff/repl/activation-readers-i5/e97-nla-20261029-a1",
+      "source_seal_sha256": "b8ea3f8f58e0d2d76862b6999dec563b70f41d647fce2d338af162d64c49641f"
+    },
+    "oracle": {
+      "asset_files": 33,
+      "cap_seconds": 6500,
+      "created": false,
+      "input_sha256": "ad2399e5c990ff1db1548060d3d67dead4654b92256ac40f1d944414fc4f6b6f",
+      "nla_wrapper_files": [],
+      "operator_hashes": {
+        "controller.py": "cc6d338d59dc26c9fcb2d65a4fc18ee428039f704b88f4d8ae708152cdec755d",
+        "i5_controller.py": "f67fd9c82f7ce8b738c0c9447c7bcf7508ab5bd098e4ae0eed3e4790413c1b7e",
+        "ops/ws2_hardstop.sh": "3e5d9435438b860b0077fbf6ce19240e2dd50dea9b2f13c7fe8285e0c7e48f54",
+        "ops/ws2_macguard.sh": "ce460e0fc583c577137975fac7f1b3a1408a0e2a18932f65897c58c7d530dbda",
+        "ops/ws2_offvolume.sh": "f46482ef22c1a2a864c7877c4eb4b4b9b2e35b71605840075b48792330958c78",
+        "ops/ws2_selfstop.sh": "34318dfe185eaa408b16be3832b95d7edf0a4190d77607b8c93de7b98be99141",
+        "ops/ws2_stock.py": "6d5ea0dd5368bcf75960e8b2945a7bd50541dfe928c1e8361730a1727182f097",
+        "ops/ws2_verify_banks.py": "fcb18c5c4727a1f2072aa45210995316512531b7dc024adbeace1a2d8530204e",
+        "ops/ws2_verify_pull.py": "d74772a2fccc92001a6e9ab0d1bbb524858a93887b73cd0a9c80ed4cb4334315",
+        "ops/ws2_watchdog.sh": "3fd0182a9585545302c8350daa6477510334a0d67153e2d650ae8d9f123582c3"
+      },
+      "payload_hashes": {
+        "GO.json": "cc7d78d6bd7453295a8a5e117e5b0fd94eeaef061d4783b3fad41834caf05219",
+        "assets.json": "8d072e59bfeacff863ee4336ae9649dab3dac7fc82be7edd7d67b2581ebb1206",
+        "inputs.tar.gz": "1cc8690448430f2aef5bf191642e9c4948bf5718f2a0ec054f7a29fa70d87658",
+        "source.tar.gz": "603653fd6edd18b11c8c45e32938e5af9ec7b8467dcc1360aec5875a3969289b"
+      },
+      "reader": "oracle",
+      "run": "/Users/guivff/repl/activation-readers-i5/e97-oracle-20261029-a1",
+      "source_seal_sha256": "b8ea3f8f58e0d2d76862b6999dec563b70f41d647fce2d338af162d64c49641f"
+    }
+  },
+  "runtime_archive_sha256": "603653fd6edd18b11c8c45e32938e5af9ec7b8467dcc1360aec5875a3969289b",
+  "runtime_unchanged_100file_hashes_verified": true,
+  "scientific_tests_not_rerun": true,
+  "source_seal_sha256": "b8ea3f8f58e0d2d76862b6999dec563b70f41d647fce2d338af162d64c49641f",
+  "stage": "EXACT_NATIVE_RUNTIME_PAYLOAD_OPERATOR_CPU_READY_NO_ALLOCATION",
+  "timestamp_utc": "2026-10-29T01:17:46.812062+00:00"
+}

@@ -1,0 +1,1023 @@
+{
+  "module": "g5",
+  "frozen": true,
+  "n_states": 16,
+  "n_pairs": 8,
+  "n_boot": 2000,
+  "seed": 0,
+  "orientation": "lo = log-odds of the ORIGINAL state's correct candidate; shift_toward_other = lo_natural - lo_edited",
+  "readers": {
+    "olens": {
+      "E1_natural_separation": {
+        "n_pairs_scored": 8,
+        "n_states_scored": 16,
+        "n_pairs_total": 8,
+        "win_rate": {
+          "k": 8,
+          "n": 8,
+          "p": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "ties": 0
+        },
+        "auroc": {
+          "est": 0.71875,
+          "lo": 0.65625,
+          "hi": 0.90625,
+          "n_states": 16
+        },
+        "mean_lo_natural_for_own_candidate": 1.4783524051308632
+      },
+      "E2_follow_by_alpha": {
+        "0.5": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 1.4783524051308632,
+            "lo": 0.9207110987976194,
+            "hi": 2.0843375153839583
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "1.0": {
+          "follow_rate": {
+            "k": 12,
+            "n": 16,
+            "p": 0.75,
+            "lo": 0.5,
+            "hi": 1.0,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 320,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 2.9567048102617264,
+            "lo": 1.8414221975952387,
+            "hi": 4.168675030767917
+          },
+          "null_band_shift": {
+            "mean": 0.011498879455029965,
+            "sd": 0.4572238002361231,
+            "n": 320
+          },
+          "z_values": [
+            5.276293555087411,
+            5.775715727832367,
+            6.251856848913732,
+            6.905456023503285,
+            1.2848054888176492,
+            1.9572059994320579,
+            21.871588651509157,
+            16.462689940871318,
+            6.995200883876698,
+            5.923470761644576,
+            2.804114201322709,
+            2.6581461244071427,
+            12.929102190229324,
+            6.954542931064389,
+            10.045275063584382,
+            8.36600697242121
+          ]
+        },
+        "1.5": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 4.302507720887661,
+            "lo": 2.710215512663126,
+            "hi": 6.071533373370766
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "3.0": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 6.7711722776293755,
+            "lo": 3.9548688547685744,
+            "hi": 9.75652349926531
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "5.0": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 8.193127512931824,
+            "lo": 4.452829229831695,
+            "hi": 11.929622799158096
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      },
+      "n_unscorable_rows": 0,
+      "unscorable_states": [],
+      "decision": {
+        "verdict": "manipulation_failed",
+        "reason": "no dose reached E3 >= 0.75 above the null flip rate (or K4); nothing concluded about the reader"
+      }
+    },
+    "nla": {
+      "E1_natural_separation": {
+        "n_pairs_scored": 8,
+        "n_states_scored": 16,
+        "n_pairs_total": 8,
+        "win_rate": {
+          "k": 7,
+          "n": 8,
+          "p": 0.875,
+          "lo": 0.625,
+          "hi": 1.0,
+          "ties": 0
+        },
+        "auroc": {
+          "est": 0.625,
+          "lo": 0.515625,
+          "hi": 0.796875,
+          "n_states": 16
+        },
+        "mean_lo_natural_for_own_candidate": 0.5691266059875488
+      },
+      "E2_follow_by_alpha": {
+        "0.5": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 0.5647213459014893,
+            "lo": 0.26598556637763976,
+            "hi": 0.8774663299322127
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "1.0": {
+          "follow_rate": {
+            "k": 7,
+            "n": 16,
+            "p": 0.4375,
+            "lo": 0.125,
+            "hi": 0.75,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 1,
+            "n": 320,
+            "p": 0.003125,
+            "lo": 0.0,
+            "hi": 0.009375,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 1.1382532119750977,
+            "lo": 0.5394268095493316,
+            "hi": 1.7732452273368833
+          },
+          "null_band_shift": {
+            "mean": -0.02563120722770691,
+            "sd": 0.42473764113381374,
+            "n": 320
+          },
+          "z_values": [
+            3.5433003797722606,
+            2.7028419357891087,
+            2.9180531837197243,
+            2.2995842721157325,
+            1.128018460158759,
+            1.5099460023044742,
+            8.835052291478542,
+            13.540321787202792,
+            1.0429404898695616,
+            1.1814085762891704,
+            -0.20098579975576883,
+            -0.07295890575731823,
+            7.419546780473563,
+            5.938317278349963,
+            4.1256109258344615,
+            4.105427820564318
+          ]
+        },
+        "1.5": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 1.693441390991211,
+            "lo": 0.8301545441150665,
+            "hi": 2.592784285545349
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "3.0": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 3.159593939781189,
+            "lo": 1.7584831178188325,
+            "hi": 4.803207507729529
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "5.0": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 8,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 4.163271188735962,
+            "lo": 2.478918045759201,
+            "hi": 6.2662559866905205
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      },
+      "n_unscorable_rows": 0,
+      "unscorable_states": [],
+      "decision": {
+        "verdict": "manipulation_failed",
+        "reason": "no dose reached E3 >= 0.75 above the null flip rate (or K4); nothing concluded about the reader"
+      }
+    },
+    "jlens": {
+      "E1_natural_separation": {
+        "n_pairs_scored": 4,
+        "n_states_scored": 8,
+        "n_pairs_total": 8,
+        "win_rate": {
+          "k": 2,
+          "n": 4,
+          "p": 0.5,
+          "lo": 0.0,
+          "hi": 1.0,
+          "ties": 0
+        },
+        "auroc": {
+          "est": 0.5,
+          "lo": 0.1875,
+          "hi": 0.8125,
+          "n_states": 8
+        },
+        "mean_lo_natural_for_own_candidate": 0.11611372791230679
+      },
+      "E2_follow_by_alpha": {
+        "0.5": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 4,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 0.11611382104456425,
+            "lo": -0.015604358166456223,
+            "hi": 0.29621081054210663
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "1.0": {
+          "follow_rate": {
+            "k": 2,
+            "n": 8,
+            "p": 0.25,
+            "lo": 0.0,
+            "hi": 0.75,
+            "n_pairs": 4,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 160,
+            "p": 0.0,
+            "lo": 0.0,
+            "hi": 0.0,
+            "n_pairs": 4,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 0.23222755640745163,
+            "lo": -0.031209126114845276,
+            "hi": 0.5924217030405998
+          },
+          "null_band_shift": {
+            "mean": -0.008025610681215767,
+            "sd": 0.09162673179436924,
+            "n": 160
+          },
+          "z_values": [
+            2.0201986022131093,
+            2.020191575145288,
+            -1.120353231686429,
+            -1.1203557613156339,
+            12.8797345457155,
+            12.879742141953802,
+            0.2198215135152243,
+            0.2198236327485052
+          ]
+        },
+        "1.5": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 4,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 0.3483411995694041,
+            "lo": -0.04681372083723545,
+            "hi": 0.8886321485042572
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "3.0": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 4,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 0.6966822564136237,
+            "lo": -0.0936272800900042,
+            "hi": 1.777264341711998
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "5.0": {
+          "follow_rate": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 4,
+            "ci": "pair-bootstrap"
+          },
+          "null_follow_rate_loo": {
+            "k": 0,
+            "n": 0,
+            "p": NaN,
+            "lo": NaN,
+            "hi": NaN,
+            "n_pairs": 0,
+            "ci": "pair-bootstrap"
+          },
+          "n_states_missing_natural": 0,
+          "mean_shift_toward_other": {
+            "est": 1.1799038322642446,
+            "lo": -0.11851171217858791,
+            "hi": 2.9633457781746984
+          },
+          "null_band_shift": {
+            "mean": NaN,
+            "sd": NaN,
+            "n": 0
+          },
+          "z_values": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      },
+      "n_unscorable_rows": 208,
+      "unscorable_states": [
+        "map-02A",
+        "map-02B",
+        "own-03A",
+        "own-03B",
+        "own-04A",
+        "own-04B",
+        "own-05A",
+        "own-05B"
+      ],
+      "decision": {
+        "verdict": "manipulation_failed",
+        "reason": "no dose reached E3 >= 0.75 above the null flip rate (or K4); nothing concluded about the reader"
+      }
+    }
+  },
+  "natural_behaviour_correct": {
+    "k": 16,
+    "n": 16,
+    "p": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "n_pairs": 8,
+    "ci": "pair-bootstrap"
+  },
+  "E3_flip_rate_by_alpha": {
+    "0.5": {
+      "planted": {
+        "k": 0,
+        "n": 16,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "planted_unparsed": 0,
+      "null": null,
+      "by_sign": {
+        "1": {
+          "k": 0,
+          "n": 16,
+          "p": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_pairs": 8,
+          "ci": "pair-bootstrap"
+        }
+      }
+    },
+    "1.0": {
+      "planted": {
+        "k": 0,
+        "n": 16,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "planted_unparsed": 0,
+      "null": {
+        "k": 0,
+        "n": 320,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "by_sign": {
+        "1": {
+          "k": 0,
+          "n": 16,
+          "p": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_pairs": 8,
+          "ci": "pair-bootstrap"
+        }
+      }
+    },
+    "1.5": {
+      "planted": {
+        "k": 0,
+        "n": 16,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "planted_unparsed": 0,
+      "null": null,
+      "by_sign": {
+        "1": {
+          "k": 0,
+          "n": 16,
+          "p": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_pairs": 8,
+          "ci": "pair-bootstrap"
+        }
+      }
+    },
+    "3.0": {
+      "planted": {
+        "k": 0,
+        "n": 16,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "planted_unparsed": 0,
+      "null": null,
+      "by_sign": {
+        "1": {
+          "k": 0,
+          "n": 16,
+          "p": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_pairs": 8,
+          "ci": "pair-bootstrap"
+        }
+      }
+    },
+    "5.0": {
+      "planted": {
+        "k": 2,
+        "n": 16,
+        "p": 0.125,
+        "lo": 0.0,
+        "hi": 0.25,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "planted_unparsed": 0,
+      "null": null,
+      "by_sign": {
+        "1": {
+          "k": 2,
+          "n": 16,
+          "p": 0.125,
+          "lo": 0.0,
+          "hi": 0.25,
+          "n_pairs": 8,
+          "ci": "pair-bootstrap"
+        }
+      }
+    }
+  },
+  "valid_doses_E3_ge_0.75": [],
+  "kill_K4_flip_at_1.5_below_0.5": true,
+  "manipulation_failed": true,
+  "E4_free_readouts_after_planting": {
+    "olens": {
+      "n_readouts": 16,
+      "asserts_any": {
+        "k": 3,
+        "n": 16,
+        "p": 0.1875,
+        "lo": 0.0,
+        "hi": 0.4375,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "asserts_planted_other": {
+        "k": 3,
+        "n": 16,
+        "p": 0.1875,
+        "lo": 0.0,
+        "hi": 0.4375,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "asserts_original": {
+        "k": 0,
+        "n": 16,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "status_counts": {
+        "unclear": 12,
+        "contradicts": 3,
+        "self_contradictory": 1
+      },
+      "alphas": [
+        1.0
+      ]
+    },
+    "nla": {
+      "n_readouts": 16,
+      "asserts_any": {
+        "k": 0,
+        "n": 16,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "asserts_planted_other": {
+        "k": 0,
+        "n": 16,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "asserts_original": {
+        "k": 0,
+        "n": 16,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      },
+      "status_counts": {
+        "unclear": 16
+      },
+      "alphas": [
+        1.0
+      ]
+    }
+  }
+}

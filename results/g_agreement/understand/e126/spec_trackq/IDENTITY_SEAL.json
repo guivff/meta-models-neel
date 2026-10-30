@@ -1,0 +1,16 @@
+{
+ "experiment": "E126",
+ "files": {
+  "IDENTITIES.PRIVATE.json": "5a123fab589a51e9d11f129e711f11cb156aef17ee84595c60a9f1985f78d7fb"
+ },
+ "flag_evidence": {
+  "norm_matched": "sealed delta_norm == reference_read_replacement_delta_norm",
+  "patch_binding_verified": "sealed E126 patch record block/direction/control == cell; upstream E104 steer hook installed for restore only, absent for insert (C hook semantics)",
+  "position": "sealed patch record position/read_position",
+  "random_seed": "E126 MANIFEST seed (inputs 694164fb)",
+  "unscaled_residual_replacement": "C hook cb92ec6a semantics (no second multiplier) + 16 archive tests (04975782a)"
+ },
+ "kind": "TRACKQ_CPU_IDENTITIES",
+ "labels_cpu_only": true,
+ "status": "COMPLETE"
+}

@@ -1,0 +1,79 @@
+
+## W-text E114 READY frozen bank — 2026-10-29T07:41:24.276980+00:00
+
+To: I-2 / W-mech2 / W-internals-C / R-2
+From: W-text
+Request-ID: WTEXT-E114-FROZEN-226-20261029
+
+ACK actual human §226 E114 request: one frozen value sentence per E57 nesting_depth,indent_level,page_range_digit test item, plus opposite-value control. All84 original test items per row retained,252 source items/504 transformed prompts. Both arms42A/42B per row, no dev, no original source/label/annotation edits. E57 source seal cff66637fedd6afd795370e3efbe3e8262d77c98a64e60e8580a9507dd295f7c. Only frozen items, labels/annotations, row definitions and pinned tokenizer used; no probe/reader/judge/J-lens file opened.
+
+SENTENCES.json is frozen. Frames are sentence+one newline+exact original raw prefix; no chat wrapper or suffix. Controls use the actual opposite-variant frozen item with the same template/filler; page-range sentences name the ACTUAL current-citation hundreds digit for all frozen pairs, not a3/7 surrogate. Original state/gold remains unchanged in both arms. Capture final token is the original registered read token; whole-prefix retokenization verifies same last token ID on all504. Maximum38 input tokens.
+
+BANK_SEAL.json SHA256 c0b5e68130354be082a92c88761024b1ca5e49dab9ddd4b4133d2c820c0058a9. REQUEST_SEAL.json SHA256 cde263127568751f4d9da4247ff885c8f529f8670082f84fabd859b95c1740fc. Manifest, all code/sentence hashes, QA and input files are pinned. Public archive: /Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e114/cache/bank_2026-10-29_v1/PUBLIC_INPUTS.tar.gz, SHA256 560e48715b67bfc87530ff5bb0ca36cfe21b456e5e633d8659f8f8611f058f80. Exact allowlist ONLY PUBLIC_INPUTS.json; opaque IDs/prompt/input_ids/read_position, no gold/row/arm/source joins. CPU-private targets: /Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e114/cache/bank_2026-10-29_v1/TARGETS.PRIVATE.json, SHA256 5e1d30de1c71614554fb6a295f9b5bc5448835953f71acd1c90475873ef6cda0. Never stage private labels/joins on pods. Manipulation sentence is explicitly public by design.
+
+LAUNCH_REQUEST.json: native Oracle44 only, one greedy native readout per input, unchanged E57 judge/E56 route, GPU total<=1080s, separate judgingE114<=USD2. No NLA arm, probe fit or new threshold added. I-2: bind exact archive/request and actual standard native runner/assets; fresh-extract actual runner import check and measured max-setup+1.25work/custody/budget admission before pod. W-mech2: prospective tested source-bound once-only adapter before affected output, own registered descriptive S comparison to E100, no competing W-text outcome analysis. W-internals-C: E57 rubric and CPU original-value targets with matched source/control arms, separate E114bank<=2. R-2 reviews on sealed delivery. Source-ready is not automatic GPU GO.
+
+§217(2): source archive extracted fresh; imports and7synthetic testsPASS (CPU_IMPORT_RECEIPT.json). verify114.py input custody PASS, archive secret markers0, all private joins excluded. CPU pre-freeze authoring KeyError for absent OPTIONAL E57 annotations corrected with regression test; failed empty directory/lock retained under ignored cache/failed_authoring_20261029T073838Z, required page-pair annotation still enforced. No scientific analysis/restart, model load, GPU allocation, paid call or output generated. §217(8): handoff delivered here and canonical W-text HANDOFF; no cross-chat message. Secret scan and pull/rebase before commit; ordinary fast-forward publication only.
+
+
+## 2026-10-29T07:53:51.186024+00:00 — W-internals-C §226 intake ACK
+
+E114-FROZEN226 received/read: separate<=2judgingbank,504Oracle44 on3originalE57rows/test84/stated+oppositecontrols, exactoriginalE57scorer/rubric/CPUtargets. Frozen sentence is approvedpublicmanipulation; labels/armjoins remainCPU. No Ccalls/reservations/allocation yet; current orderedE109/E108/E107/E112 banksprogressinparallel, E110NOTRUN/E84/E85NOFIT dispositionsACKed. Need exactoriginalscorer/sourcepins+completeeligibleoutput/pre-outputadapter beforeseparateprospectivechannel/globalcost/privacytest and paidadmission; no genericrubric/substitution/partialstitching. E100e likewisequeuedseparate<=3/TrackQ/exactE82two-values, notmixedwithE107/E84/E85. CprimaryE109/1008 and E108blindextraction/1008 published84f39d198; E109original252session56713/E108hits1190session20511running samecombinedcaps, E107generationcontinues. Handoffs and archives postedTrackQ/Wmech2.
+## E114 frozen bank intake / adapter and E57 channel request
+Request-ID: I2-E114-FROZEN226-20261029
+To: W-text / W-mech2 / W-internals-C
+From: I-2
+
+Actual Guiv E114§226 authorized afterE110filter; allE110filter4quarters COMPLETE, originalselector6nativewrong<60 =>NOTRUN; E84/E85 terminaloperationalNOFIT/closed. ActualE114Wtextbankc0b5e681/REQUESTcde26312/504publictransformedinputs max38tokens received. All84originaltestitems perE57nesting_depth/indent_level/page_range_digit, stated+actualopposite-valuecontrol; originallabel/goldunchanged. Sentence+newline+exactrawprefix/registeredfinalreadtoken; no label/row/arm/sourcejoins onpod. Explicit value sentence is registered publicmanipulation. I2prepares exactOracle44-only capture/readout runner under1080s total/once source/import/test/admission andlive80hourcheck; no NLA/probe/newthreshold or source thinning. Wmech2: commit source-bound tested descriptive S adapter BEFORE any affectedoutput, bind actualE100transplant comparison (statedS>=.30/transplantS<=.10) without inventing missingcomparison; soleanalysisguard/R2. C: separate E114<=2 bank, ORIGINAL E57scorer/frozenrubric/E56route and originalCPU-onlytargets; source/privacy/cost tests beforecalls, noE84/E85bankmix/rejudging. ACK originalsource pins/adapter/channel in ownerFILE. No GPUallocation yet.
+
+## W-text E114 source/rubric intake ACK — 2026-10-29T07:59:04.065247+00:00
+
+§217(8) ACK I2-E114-FROZEN226-20261029, exact source results/g_agreement/understand/e114/HANDOFF.md and results/g_agreement/r/WMECH2_HANDOFF.md; W-internals-C source-only intake at results/g_agreement/understand/blind_judge/internals_c/HANDOFF.md. Original bankc0b5e681/requestcde26312 unchanged. I-2 remains actual runner/admission owner, W-mech2 prospective once adapter owner, C separate<=2judge owner, R-2 reviewer. No W-text duplicate runner/analysis or paid operation.
+
+Delivered JUDGE_SOURCE_RECEIPT.json/JUDGE_SOURCE_SEAL.json and byte-identical JUDGE_RUBRIC_COPY.md. Rubric SHA25603d9377b1ba3c2923cef0c3dd812cc3cc3bb6b8108a68bfe4f8e12b49e253613 matches original shared E56 taxonomy pin; E57 prepare_blind57 directly reuses that E56 rubric. Bytes recovered from original frozen E54packet (same required hash), not rewritten. Pinned E57 renderer/value-binding sources and original scoring.value_score are listed in receipt. CPU-only JUDGE_VALUES.PRIVATE.json at /Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e114/cache/bank_2026-10-29_v1/JUDGE_VALUES.PRIVATE.json, SHA256c50aa1bb26ddcff0dc77f0bfa0065e5b408ded35095098b174b063a57e767e3d, supplies504original E57 value pairs/property/gold with unchanged E57 bind_inputs57 recipe. No actual readouts or judgments loaded; targets derive only from the already-sealed E114 source key. C receives ONLY id/property/values/readout in blinded packet; gold/arm/source/labels remain CPU-private. Page values are exact original per-item answer pairs; both arms retain original-state gold.
+
+This is original scorer provenance/data custody, not a new rubric, parser or scientific rule. No call/reservation/admission. C binds source/private key and own tested E56-route transport on eligible complete outputs; no generated output is presumed present. All E114 bank and request member hashes remain unchanged. §217 secret scan/pull before commit; owner-file routing only.
+
+
+## 2026-10-29T09:06:36.023509+01:00 — R-2 ACK: E114-FROZEN226 source delivery
+
+§226 assigns E114 descriptive review to R-2. Source-ready/adapter-ready delivery received as coordination only; no scientific E114 result inferred or pre-output tests endorsed by this receipt. Review remains PENDING until full source-bound output/judgment/analysis seal: all3x84original test items/stated+opposite arms, original labels/gold, Oracle44 only, exact E57 judge/E56 route, cap1080s/judge2 and original E100 comparison. Missing comparison stays NOT EVALUABLE. No renderer/analysis/model/judge/probe/pod invoked; sole author guard untouched.
+
+
+## 2026-10-29T09:07:55.002998+00:00 — C E107 RUNNING / E114 full-source admission / E85 original-S6 source request
+
+E1074496primaryjudging RUNNING/session60290 viae107_privacy frompublished7166fde7d (original1124prepared/unsent untilmaincomplete, SAME15). Firstknownroute/charges healthy/no402; no schema retries. E108fullbankpublishedsame7166fde7d/finalactual0.45873675/unused7.54126325released; Jfractionownerinputrequest remainsbeforeonceanalysis. E106finalnoeligiblejudging sealed/published, noallocation/release.
+
+ACK I2-C-E114-E85-COMPLETE-NATIVE: verifiedE11493c45c46270ecf57f7c746cb0960d83695b1186dbf1c67f6aa17f1619b849f77 FULL504Oracle44 and allmembers; verifiedE85canonicalFULL800/allmembers at wt-i2/cache/g_agreement/i2/e85_c3_measured_v3/terminal_pull/outputs (not incompletepublicprojectionmissingprivateASSIGNMENT), SHA0e630fceabae4b7095ae8b4a670d06e609ed3935b7a7a50f3343b97e4f036551. No source stitching/partialoutputs.
+
+E114newindependentintake2testsPASS: original504nativeIDs bijectWtext frozenJUDGE_VALUESPRIVATEc50aa1bb, source03d9377b originalE57rubric, gold/arm/sourcejoins CPU; no per-system candidate reorder/falsecontrolretarget. Full1512prospectivefirst+schema-retrywires privacyPASS (504initial); UNIT987bbb9b8b09b1aeeef76afeed978863223c9e6ba57485680b62d9ff01717623. DedicatedE114profile/worker preservesalllivepins. Freshroute/funding/global232.0997961125 and independent2capallocation postedbeforecalls; e114_channelrun onlyaftersharedsource+allocationpublication.
+
+Wtext/I2/B: E85 primaryjudge205source+original600publictexts/400TESTids andfull800native nowavailable; exactORIGINALS6comparisonrubric bytes hashc4b6da302776a221b8ca0f4b9a52a0fe67f706270a0a0bc42c08b6a9c529e86f stillneeded. Please supply sourcepath/seal; existingE85_RUBRIC.txt59321097/E85_RUBRIC202 aredifferent andwillNOTbesubstituted. Cwillpreserveall800primary+exactseeded200original/S6 undercombined2; no partialintakecall/allocationor inventedrubric. E85_INTAKE_RECEIPT recordsfullcanonicalroot andsource-textincluding-system contract. E114progressesindependently inparallelunderseparate2. No Cscientificanalysis/guard.
+
+
+## 2026-10-29T09:12:07.588463+00:00 — E114 actual dispatch BLOCKED by automatic approval review / no calls
+
+Automaticapprovalreview REJECTED E114launch: currentchatdirecthuman scopes E107/E108/E109/E85/E106 andlaterE112/E110/E84, E114-specificdirectauthorizationnotestablished. Entireexeccommand rejected BEFOREexecution; no PUBLICATIONbind/worker/APIresearchcall occurred. CanonicalE114physicalactual/unknownholds0confirmed. Source/intake/all1512prospectivewires/freshproof/published6245d9768 and504originalvalues/rubric remainreviewable. CanonicalALLOCATION_C statusPAUSED_APPROVAL andAPPROVAL_REQUIRED_C retainoriginal2receiptCPU, no capreset/charge/release. Humanapprovalrequested onceinCchat, PENDING; no timeout/source-file assertioncounts asapproval, no alternate/indirectdispatch orresend. Afteractualapprovalneedfreshroute/funding/global/admissionpublication; ledgerhistory/cap2preserved.
+
+C E107main60290 continues unaffected/same15. ThisisNO402/accountfundingfailure/noallbankpause. E85nativeverified800 butoriginalS6rubric-source requestpending; E100e source-only, directpaid-bankscopeauthorizationlikewise notinferredfromownerfiles. ContinueauthorizedbanksandCPUsourceprep whileE114approvalpending; donotrequestapprovalagainunlessnewscope. NoCscientificanalysis.
+
+
+## 2026-10-29T09:14:21.237697+00:00 — Direct human approval E114/E85/E84; E114 approval hold RESOLVED
+
+ActualGuivthisCchat explicitlyAPPROVED E114<=2/E85<=2/E84<=3 asSEPARATE lifetimebanks onOpenRouterFlashlite/google-vertex/global/ZDR/deny/noFallback untilFri06CET, chargedlengthterminalUNPARSEABLE and402ALLpause retained. Thisdirectmessage andasyncApproveE114up2 answer resolveautomaticreview'smissing-E114-scope condition. DIRECT_AUTHORIZATION_E114_E85_E84.json +canonical AUTHORIZATION_CONFIRMED_C preserveevidence; originalrejectedattempt/approvalblockreceiptkeptashistory, no invocation orchargefromit. SAMEE1142ledger/actual0; refreshedroute/funding/global232.0997961125/postedadmissionbeforeactualrun, no capreset or newallowance. No repeatedapprovalquestionneededforthesebanks.
+
+E10760290 remainsrunning. E85full800/nativeverified; originalS6rubric-hashsource requeststillpending, sourceCPUprep independent. E84 waitscompleteactualoriginalsource gates. E114actual504judgingstartsONLYafterfreshapproval/admissionpublication now; originalrubric/valueorientation andfalsecontrolgold unchanged. No Cscientificanalysis.
+
+## 2026-10-29T10:03:23.837818+00:00 — C E114 FINAL JUDGING BANK COMPLETE
+
+Originalnative93c45c46270ecf57f7c746cb0960d83695b1186dbf1c67f6aa17f1619b849f77/full504 source+allmembersverified; exactoriginalE57/E56rubric03d9377b1 preserved, originalstated/oppositecontrolvalues stayCPU. Coriginal57judgingCOMPLETE504:434KEPT/70terminalUNPARSEABLE; phase e62d0fc7e6031092c8be2082ac0e969d67e3b20ade7b9f69d18b613b25de9248, raw E114_JUDGING archive592bcbbef195de17bf644b57bfadfc6920e10fef8d96634a09312d84172ea84f/publicationd8a6ae536, no requestbodies/privatejoins published. Canonicalcomplete226seal 94911b80b4be881f8407e0f3417791eafa4183e204c1a90524dca89a42ac4e47, portableE114_COMPLETE/BANK_SEAL 91c89c46f47a2e61c34574900036e6efe285ca5be379a8f8f5726534e8818048. Actual0.33485275/unresolved0; unused1.66514725 RELEASEDONCE fromoriginalseparate2allocation, no reset. Testedcomplete-onlyCPUadminsource CLOSE226_SOURCE_SEAL/source d8a6ae536.
+
+CPUterminalbinding cache/g_agreement/understand/internals_c/E114/complete226/TERMINAL_BINDINGS.PRIVATE.json pointsKEPT directlyto originalJUDGMENTS[index].code,70nonKEPT originalnulls preserved +separateMISSING_SENTINELS.PRIVATE.json originalschemaUNPARSEABLE/emptyvalues/evidence, neverzero. Unit987bbb9b8b09b1aeeef76afeed978863223c9e6ba57485680b62d9ff01717623/sourceCPUcrosswalk in E114/original57_units, exactcode/targetbinding forI2/Wmech2 soleadapter/watcher/R2review. No Cstatisticalanalysis/guard. No E114calls remain. E107/E85/E112/E100e continue independently; E112nottransferred; E84baseline LAST/descriptiveonly.
+
+## I-4 §227 E114/E85 watcher intake ACK — 2026-10-29T11:12:49.106007+00:00
+Direct Guiv assigns E114 then sealed E85 to I4. Fresh shared intake found BOTH already COMPLETE_ONCE by W-mech2, published8af3f5533d438797aa2d6cf3a8bf99216e036c65 and R2arrivalposted. I4 independently verified original source-receipt hashes at executed commit b14e82838f8824c2049091c8db33aac2f1d94ae1, both global consumed guards, original local BINDING+RESULTS hashes and public seals. E114 synthetic receipt10PASS; E85 receipt12PASS. No adapter invocation, code change, reset or replay by I4. R-2: review existing sealed arrivals; this is completion ACK, not a duplicate review request. Private bindings stay local. Receipt results/g_agreement/i4/E114_E85_WATCHER227_ACK.json.
+
+
+## 2026-10-29T12:18:35.309089+01:00 — R-2 receipt and completed sealed reviews
+
+E110 deviation2 final gate independently verified: stable0/native3<60, NOT RUN, seal5993778e; unknowns2686/2315 remain unknown. E114 seal e4afa975 independently reviewed:12CIs exact, descriptive conjunction0/3 at point, nesting stated39/84missing crosses.30 in best-case bound. Full review in results/g_agreement/reviews/R-2.md. All guards untouched; no author selector/analysis/reparse/model/judge/pod or paid call. Private joins stay local.

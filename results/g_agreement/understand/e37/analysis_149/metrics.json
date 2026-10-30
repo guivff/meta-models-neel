@@ -1,0 +1,2890 @@
+{
+  "C1_class_medians": {
+    "content": {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": 1.0,
+        "SFT": 1.0
+      },
+      "difference_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "structure": {
+      "SFT_minus_RL": 0.03996598639455784,
+      "arms": {
+        "RL": 0.5153061224489797,
+        "SFT": 0.5552721088435375
+      },
+      "difference_ci95": [
+        -0.02778486394557824,
+        0.07313633786848071
+      ]
+    }
+  },
+  "bootstrap": {
+    "method": "paired percentile95 by W1 template cluster within fixed row; identical draws across arms/channels; no row resampling",
+    "n_boot": 2000,
+    "pairing": "same within-row template-cluster draws across both arms and all channels; no rows resampled",
+    "seed": 20261025
+  },
+  "experiment": "E37",
+  "lineage": {
+    "checkpoint_receipt_sha256": "620af6da7e7e6fcc18ece37cca9f13c347f883a60a0e934a7a1b5f4acefb8afd",
+    "cpu_tensor_check_sha256": "cd401119f4cedfba812a0c4e659799f5d6f55aef1686b67d437b9d50e663e1cd",
+    "input_seal_sha256": "e499952a84f5fc76d3b08419f36af1e7aea3ed981df08aa4c0e0b9d61449e6f6",
+    "parity_gate_sha256": "b89bd301c5f40bccc2e0f10025a555d6b5509ecbfb51724f727f7a617e00e983",
+    "parity_result_sha256": "6650c5cf1e57c91c55a1e7cbcb90330bab8c6cfaa42f345d841e6773567be2e1",
+    "plan_sha256": "cb8456f55b70a8ba5c841000285517dd40922289cd7ee962a1e4ea7924c64795",
+    "predecessors_sha256": "52594e2800571184d609a59908fb75c93524bebe050dc93b946dfdbc2e2f4741",
+    "readme_identity_claim_verified": false,
+    "score_seal_sha256": "bcce1e1399d91fb65ca67f7ca03e01afd599a446dbfdd38ea02bc5210deca723",
+    "selected_branch": "lora_hf_UNVERIFIED",
+    "source_files": {
+      "external/mats-nla-workspace/src/mats/__init__.py": "ff25a6253eabef5942d23dffff23fd5f4b86980617a791a138e053aa28e32c70",
+      "external/mats-nla-workspace/src/mats/metrics.py": "17ff3b1467186a8c4e24e76ed52d2263b0201e651e2010d4b99bd47c25cda473",
+      "external/mats-nla-workspace/src/mats/readers/__init__.py": "addd3f183c8eada1b42628e89b8e024f50d3b30e92c459432f48eb12976f5572",
+      "external/mats-nla-workspace/src/mats/readers/nla.py": "e8ed65f4b97affbdb5a57cec87e4cf38472f20102974a105a3affb1ac27ab1d0",
+      "external/mats-nla-workspace/src/mats/readers/olens.py": "7866ac3aa66d96bee612e216a0cd45e0a76e1dd4e799f6aaa538c28addd0e86e",
+      "projects/g_agreement/manifest/assets.json": "17338edea7c12181f45b0dc1dc5fcd4673d6cf8e7c4323e8d657736236f96f91",
+      "projects/g_agreement/understand/e24_statements.py": "98d77afca3945c07e341c4a2861c702d9093f0027082668e104aad0ebff631dc",
+      "results/g_agreement/understand/e15/CONTINUATION_PAIRS.json": "fefdea108ad4132a3f6d8670d379319df5a6c8bc6eef76c4cd674789c7b9573d",
+      "results/g_agreement/understand/e15/analysis_7whn3a1dvi399p/ANALYSIS_SEAL.json": "dccc3a200a31488331cc5f872f7941c7f49c71dce8d43328deff9cf55db76415",
+      "results/g_agreement/understand/e15/analysis_7whn3a1dvi399p/metrics.json": "2cecda7bf7d6276bf735fa4f4d1e76a9f342ee803475c32897ce9e1fbf0d15af",
+      "results/g_agreement/understand/e28/analysis_2026-10-26/METRICS.json": "dcb8903f9c12aa44c179e47fb1c10d25dc6f40b56497d136ea120302b1f63d7c",
+      "results/g_agreement/understand/e30/CANDIDATES.json": "f0632205097de5b5c7cd695a2c3a235fb4136e2e11cbf5034606a00387960b12",
+      "results/g_agreement/understand/e33/PLAN.json": "ea1b91457c2141943134de9da450cca8d335c490c3fc476b0de6561fe4400fad",
+      "results/g_agreement/understand/e33/analysis_2026-10-26/ANALYSIS_SEAL.json": "91a1dde29060ed44832eff6f49cc20f3648ca4d395fdd751b5ca8d744266bec5",
+      "results/g_agreement/understand/e33/analysis_2026-10-26/RESULTS.md": "da35247031ae101580d035368a025b9720b6c3d405a16d365b42ad7888447b8b",
+      "results/g_agreement/understand/e33/analysis_2026-10-26/metrics.json": "bd0405011bc2533c4c2ceb15b52144a659fd609a31e1d876375407a45edb8233",
+      "results/g_agreement/understand/e37/ANALYSIS_REQUEST_2026-10-26.json": "e698906923f5bd8c608ae76ab06350a9b7d57be0fabaa6ccb8e2ade147cb87be",
+      "results/g_agreement/understand/e37/CHECKPOINT_MANIFEST_2026-10-26.json": "527be55be2fe1bc66550516a58ea664dd0faed36d3cd202f1ec04b3efd66c0ee",
+      "results/g_agreement/understand/e37/CPU_IDENTITY_EVIDENCE_2026-10-26.json": "c76e0a825789a8fe619fde973f8b07a60e3fec692baae0cf7296f2ffeb33071e",
+      "results/g_agreement/understand/e37/CPU_VALIDATION_2026-10-26.json": "6264573ec80c026d8aec93165fcc996971d90d8776947fb24c506ee6db8b866e",
+      "results/g_agreement/understand/e37/HANDOFF_2026-10-25.md": "93d83dac470eeb58a9741a5b3c8d4924cf7641633174eb780428ecf3505d85fa",
+      "results/g_agreement/understand/e37/HANDOFF_2026-10-26.md": "9dce1defc8eb73e8751111fcd8d545a15a1413f372e47fb06a2c1e4b55191303",
+      "results/g_agreement/understand/e37/OWNER_READING_2026-10-25.md": "99897b565120d68f6b570e24974d005d3f60a6af33dbe9a36f66fc3a1042ef18",
+      "results/g_agreement/understand/e37/OWNER_READING_2026-10-26.md": "5ea5202a4365e4a2440c656bd63ad41568e86a2b7940d23b283ea658bd0a3985",
+      "results/g_agreement/understand/e37/PARITY_GATE.json": "b89bd301c5f40bccc2e0f10025a555d6b5509ecbfb51724f727f7a617e00e983",
+      "results/g_agreement/understand/e37/PLAN.json": "cb8456f55b70a8ba5c841000285517dd40922289cd7ee962a1e4ea7924c64795",
+      "results/g_agreement/understand/e37/SMOKE_SET.json": "009616c0f2aa8cc7da0c8600b78334021f9b2d5b217dc64ed7fb9a89c950e410",
+      "results/g_agreement/understand/e37/SOURCE_REFERENCES.json": "43647b8d0eb9c4992f867849b67adbec4f22302655d5e1a037a4e16656119877",
+      "results/g_agreement/understand/e37/analyse.py": "efaeff32c60bc9dd1aad245b05e552174283547df6ccc24eafbecdedce87b2cf",
+      "results/g_agreement/understand/e37/analysis_once_2026_10_26.py": "73848a77bc4e6e8a163fa8fbbb6eb7ed589455a280dc800c523cf4abfa58e517",
+      "results/g_agreement/understand/e37/checkpoint_cpu.py": "0d533217e77abc52d29fa0a9203de145edd7648a97835822bf24e623bb89d40a",
+      "results/g_agreement/understand/e37/e33_runtime_frozen.py": "2fa88c71882e1603576e7c0b2568617fcf0a541109b6a61eb21e3f867a6f0acb",
+      "results/g_agreement/understand/e37/package.py": "4c8b9d554927efda05833ede00a2d287b76f6c11e6ad3b6a1429ebf9ad5ab337",
+      "results/g_agreement/understand/e37/package_ready_2026_10_26.py": "102db6c3882b06ae5a62d5d7e4e2160fd4de5fc187283eb16ebed6c2a54a25f8",
+      "results/g_agreement/understand/e37/prepare.py": "8cb0901672e88c28e772021207b06bb1694adfa754ef7e1733e16d4c75ab22c0",
+      "results/g_agreement/understand/e37/runtime.py": "acc548651e910701d6ce5b3fbfd2e7b3ff84412b1492b9b7eed99bdbf6f45fc0",
+      "results/g_agreement/understand/e37/test_analyse.py": "5e4e742395f03a0811f57569251eff84af5894703ef004651e4b7a7f7103fda7",
+      "results/g_agreement/understand/e37/test_checkpoint_cpu.py": "33b9492273a391344f07dc8f7634269eea154e1c82ef843388044d99cca03e74",
+      "results/g_agreement/understand/e37/test_prepare.py": "7306338b4353c323e8c518779a89f9cce4180014e50d033373811c1f7cb61ac3",
+      "results/g_agreement/understand/e37/test_release_149.py": "a3a8ee6ba134706d54949d92d97f68766c68c6dcb95ec202814c9e40dc7ad6bd",
+      "results/g_agreement/understand/e37/test_runtime.py": "1a0cfc551bfda733aaafd62ea98673909e2a962496c7d3a4a5bafed27f702164"
+    }
+  },
+  "naming_rows": [
+    {
+      "SFT_minus_RL": null,
+      "arms": {
+        "RL": null,
+        "SFT": null
+      },
+      "channel": "C4",
+      "class": "semantic",
+      "difference_ci95": null,
+      "feature": "json_status",
+      "statement_statuses": {
+        "RL": {
+          "not_structure": 84
+        },
+        "SFT": {
+          "not_structure": 84
+        }
+      },
+      "status": "NOT_EVALUABLE_NO_FROZEN_REGEX"
+    },
+    {
+      "SFT_minus_RL": -0.011904761904761904,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.002104528901587875,
+            0.06439699201788535
+          ],
+          "correct": 1,
+          "n": 84,
+          "rate": 0.011904761904761904
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "state-like",
+      "difference_ci95": [
+        -0.03571428571428571,
+        0.0
+      ],
+      "feature": "json_type",
+      "statement_statuses": {
+        "RL": {
+          "B": 2,
+          "neither": 82
+        },
+        "SFT": {
+          "B": 1,
+          "neither": 83
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "state-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "latex_environment",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": null,
+      "arms": {
+        "RL": null,
+        "SFT": null
+      },
+      "channel": "C4",
+      "class": "semantic",
+      "difference_ci95": null,
+      "feature": "latex_role",
+      "statement_statuses": {
+        "RL": {
+          "not_structure": 84
+        },
+        "SFT": {
+          "not_structure": 84
+        }
+      },
+      "status": "NOT_EVALUABLE_NO_FROZEN_REGEX"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "count-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "latex_section",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": null,
+      "arms": {
+        "RL": null,
+        "SFT": null
+      },
+      "channel": "C4",
+      "class": "semantic",
+      "difference_ci95": null,
+      "feature": "latex_subject",
+      "statement_statuses": {
+        "RL": {
+          "not_structure": 84
+        },
+        "SFT": {
+          "not_structure": 84
+        }
+      },
+      "status": "NOT_EVALUABLE_NO_FROZEN_REGEX"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "count-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "list_depth",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "count-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "list_index",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": null,
+      "arms": {
+        "RL": null,
+        "SFT": null
+      },
+      "channel": "C4",
+      "class": "semantic",
+      "difference_ci95": null,
+      "feature": "list_priority",
+      "statement_statuses": {
+        "RL": {
+          "not_structure": 84
+        },
+        "SFT": {
+          "not_structure": 84
+        }
+      },
+      "status": "NOT_EVALUABLE_NO_FROZEN_REGEX"
+    },
+    {
+      "SFT_minus_RL": null,
+      "arms": {
+        "RL": null,
+        "SFT": null
+      },
+      "channel": "C4",
+      "class": "semantic",
+      "difference_ci95": null,
+      "feature": "list_topic",
+      "statement_statuses": {
+        "RL": {
+          "not_structure": 84
+        },
+        "SFT": {
+          "not_structure": 84
+        }
+      },
+      "status": "NOT_EVALUABLE_NO_FROZEN_REGEX"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "state-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "prose_paren",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "state-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "prose_quote",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "count-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "prose_sentence",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": null,
+      "arms": {
+        "RL": null,
+        "SFT": null
+      },
+      "channel": "C4",
+      "class": "semantic",
+      "difference_ci95": null,
+      "feature": "prose_sentiment",
+      "statement_statuses": {
+        "RL": {
+          "not_structure": 84
+        },
+        "SFT": {
+          "not_structure": 84
+        }
+      },
+      "status": "NOT_EVALUABLE_NO_FROZEN_REGEX"
+    },
+    {
+      "SFT_minus_RL": null,
+      "arms": {
+        "RL": null,
+        "SFT": null
+      },
+      "channel": "C4",
+      "class": "semantic",
+      "difference_ci95": null,
+      "feature": "prose_topic",
+      "statement_statuses": {
+        "RL": {
+          "not_structure": 84
+        },
+        "SFT": {
+          "not_structure": 84
+        }
+      },
+      "status": "NOT_EVALUABLE_NO_FROZEN_REGEX"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "count-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "python_argument",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": -0.023809523809523808,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.01221944777306612,
+            0.09981858432106694
+          ],
+          "correct": 3,
+          "n": 84,
+          "rate": 0.03571428571428571
+        },
+        "SFT": {
+          "ci95": [
+            0.002104528901587875,
+            0.06439699201788535
+          ],
+          "correct": 1,
+          "n": 84,
+          "rate": 0.011904761904761904
+        }
+      },
+      "channel": "C4",
+      "class": "state-like",
+      "difference_ci95": [
+        -0.05952380952380952,
+        0.023809523809523808
+      ],
+      "feature": "python_comment",
+      "statement_statuses": {
+        "RL": {
+          "A": 3,
+          "neither": 81
+        },
+        "SFT": {
+          "A": 1,
+          "neither": 83
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "count-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "python_depth",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": null,
+      "arms": {
+        "RL": null,
+        "SFT": null
+      },
+      "channel": "C4",
+      "class": "semantic",
+      "difference_ci95": null,
+      "feature": "python_error",
+      "statement_statuses": {
+        "RL": {
+          "not_structure": 84
+        },
+        "SFT": {
+          "not_structure": 84
+        }
+      },
+      "status": "NOT_EVALUABLE_NO_FROZEN_REGEX"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "count-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "python_indent",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "state-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "python_string",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "count-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "table_column",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "state-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "table_role",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        },
+        "SFT": {
+          "ci95": [
+            0.0,
+            0.043733265332143306
+          ],
+          "correct": 0,
+          "n": 84,
+          "rate": 0.0
+        }
+      },
+      "channel": "C4",
+      "class": "count-like",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "table_row",
+      "statement_statuses": {
+        "RL": {
+          "neither": 84
+        },
+        "SFT": {
+          "neither": 84
+        }
+      },
+      "status": "EVALUABLE"
+    },
+    {
+      "SFT_minus_RL": null,
+      "arms": {
+        "RL": null,
+        "SFT": null
+      },
+      "channel": "C4",
+      "class": "semantic",
+      "difference_ci95": null,
+      "feature": "table_status",
+      "statement_statuses": {
+        "RL": {
+          "not_structure": 84
+        },
+        "SFT": {
+          "not_structure": 84
+        }
+      },
+      "status": "NOT_EVALUABLE_NO_FROZEN_REGEX"
+    }
+  ],
+  "paired_rows": [
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "json_status",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.08390022675736963,
+      "arms": {
+        "RL": {
+          "auroc": 0.659297052154195,
+          "ci95": [
+            0.6094104308390023,
+            0.6978458049886621
+          ]
+        },
+        "SFT": {
+          "auroc": 0.7431972789115646,
+          "ci95": [
+            0.6740362811791383,
+            0.7930839002267573
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.05895691609977327,
+        0.10657596371882083
+      ],
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.2273242630385487,
+      "arms": {
+        "RL": {
+          "auroc": 0.49603174603174605,
+          "ci95": [
+            0.3843537414965986,
+            0.5816326530612245
+          ]
+        },
+        "SFT": {
+          "auroc": 0.7233560090702947,
+          "ci95": [
+            0.673469387755102,
+            0.7766439909297053
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.1541950113378685,
+        0.31065759637188206
+      ],
+      "feature": "json_type",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.02607709750566889,
+      "arms": {
+        "RL": {
+          "auroc": 0.5782312925170068,
+          "ci95": [
+            0.5289115646258503,
+            0.7245606575963716
+          ]
+        },
+        "SFT": {
+          "auroc": 0.5521541950113379,
+          "ci95": [
+            0.48299319727891155,
+            0.6530612244897959
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.1428571428571429,
+        0.017006802721088454
+      ],
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.1428571428571429,
+      "arms": {
+        "RL": {
+          "auroc": 0.5572562358276644,
+          "ci95": [
+            0.427437641723356,
+            0.719954648526077
+          ]
+        },
+        "SFT": {
+          "auroc": 0.7001133786848073,
+          "ci95": [
+            0.6428571428571429,
+            0.8690476190476191
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.048185941043083824,
+        0.32546768707482954
+      ],
+      "feature": "latex_environment",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.02154195011337867,
+      "arms": {
+        "RL": {
+          "auroc": 0.8452380952380952,
+          "ci95": [
+            0.6434240362811792,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 0.8236961451247166,
+          "ci95": [
+            0.5792800453514739,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        -0.09868197278911564,
+        0.0
+      ],
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.033446712018140534,
+      "arms": {
+        "RL": {
+          "auroc": 0.953514739229025,
+          "ci95": [
+            0.8741496598639455,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 0.9869614512471655,
+          "ci95": [
+            0.9625850340136054,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        -0.015306122448979553,
+        0.10659013605442166
+      ],
+      "feature": "latex_role",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.15532879818594103,
+      "arms": {
+        "RL": {
+          "auroc": 0.4478458049886621,
+          "ci95": [
+            0.3622448979591837,
+            0.5510912698412694
+          ]
+        },
+        "SFT": {
+          "auroc": 0.6031746031746031,
+          "ci95": [
+            0.49829931972789115,
+            0.7125850340136054
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.014172335600907027,
+        0.2811791383219955
+      ],
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.04506802721088432,
+      "arms": {
+        "RL": {
+          "auroc": 0.9336734693877551,
+          "ci95": [
+            0.7828798185941043,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 0.9787414965986394,
+          "ci95": [
+            0.9362244897959183,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.1524943310657596
+      ],
+      "feature": "latex_section",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.15306122448979587,
+      "arms": {
+        "RL": {
+          "auroc": 0.8469387755102041,
+          "ci95": [
+            0.6564625850340136,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.34353741496598644
+      ],
+      "feature": "latex_subject",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.06065759637188206,
+      "arms": {
+        "RL": {
+          "auroc": 0.6332199546485261,
+          "ci95": [
+            0.576530612244898,
+            0.8032879818594104
+          ]
+        },
+        "SFT": {
+          "auroc": 0.572562358276644,
+          "ci95": [
+            0.3854308390022676,
+            0.7902494331065759
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.34183673469387754,
+        0.10773809523809502
+      ],
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.053287981859410416,
+      "arms": {
+        "RL": {
+          "auroc": 0.6244331065759637,
+          "ci95": [
+            0.5294784580498866,
+            0.7925170068027211
+          ]
+        },
+        "SFT": {
+          "auroc": 0.6777210884353742,
+          "ci95": [
+            0.5354308390022676,
+            0.8761337868480725
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.05102040816326536,
+        0.157312925170068
+      ],
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.21428571428571425,
+      "arms": {
+        "RL": {
+          "auroc": 0.31859410430839,
+          "ci95": [
+            0.0963718820861678,
+            0.5754109977324262
+          ]
+        },
+        "SFT": {
+          "auroc": 0.5328798185941043,
+          "ci95": [
+            0.4178004535147392,
+            0.6991496598639447
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.1394557823129252,
+        0.5986394557823129
+      ],
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.21428571428571436,
+      "arms": {
+        "RL": {
+          "auroc": 0.68140589569161,
+          "ci95": [
+            0.4245890022675737,
+            0.9036281179138322
+          ]
+        },
+        "SFT": {
+          "auroc": 0.4671201814058957,
+          "ci95": [
+            0.30085034013605444,
+            0.5821995464852607
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "count-like",
+      "control": "opposite",
+      "difference_ci95": [
+        -0.5986394557823129,
+        0.1394557823129252
+      ],
+      "feature": "list_depth",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.06462585034013607,
+      "arms": {
+        "RL": {
+          "auroc": 0.42517006802721086,
+          "ci95": [
+            0.2692318594104308,
+            0.5992063492063492
+          ]
+        },
+        "SFT": {
+          "auroc": 0.4897959183673469,
+          "ci95": [
+            0.3100907029478458,
+            0.6870748299319728
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.07086167800453513,
+        0.253968253968254
+      ],
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.1867913832199546,
+      "arms": {
+        "RL": {
+          "auroc": 0.5116213151927438,
+          "ci95": [
+            0.27293792517006804,
+            0.7505668934240363
+          ]
+        },
+        "SFT": {
+          "auroc": 0.6984126984126984,
+          "ci95": [
+            0.49263038548752835,
+            0.909297052154195
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.06689342403628118,
+        0.39257369614512466
+      ],
+      "feature": "list_index",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.1071428571428571,
+      "arms": {
+        "RL": {
+          "auroc": 0.8928571428571429,
+          "ci95": [
+            0.608843537414966,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.391156462585034
+      ],
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "list_priority",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0243764172335601,
+      "arms": {
+        "RL": {
+          "auroc": 0.9682539682539683,
+          "ci95": [
+            0.8877551020408163,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 0.9926303854875284,
+          "ci95": [
+            0.9795918367346939,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        -0.013605442176870763,
+        0.11224489795918369
+      ],
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.06575963718820865,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 0.9342403628117913,
+          "ci95": [
+            0.7857142857142857,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        -0.2142857142857143,
+        0.0
+      ],
+      "feature": "list_topic",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.010770975056689391,
+      "arms": {
+        "RL": {
+          "auroc": 0.4744897959183674,
+          "ci95": [
+            0.2556689342403628,
+            0.6377551020408163
+          ]
+        },
+        "SFT": {
+          "auroc": 0.463718820861678,
+          "ci95": [
+            0.2471655328798186,
+            0.63609693877551
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.07199546485260772,
+        0.06804138321995454
+      ],
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.059523809523809534,
+      "arms": {
+        "RL": {
+          "auroc": 0.467687074829932,
+          "ci95": [
+            0.26303854875283444,
+            0.6445578231292517
+          ]
+        },
+        "SFT": {
+          "auroc": 0.5272108843537415,
+          "ci95": [
+            0.386437074829932,
+            0.7325680272108835
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.005102040816326481,
+        0.28458049886621317
+      ],
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.03401360544217691,
+      "arms": {
+        "RL": {
+          "auroc": 0.7108843537414966,
+          "ci95": [
+            0.5011337868480725,
+            0.9218820861677999
+          ]
+        },
+        "SFT": {
+          "auroc": 0.7448979591836735,
+          "ci95": [
+            0.6462585034013606,
+            1.0
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.18253968253968256,
+        0.25396825396825395
+      ],
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.03401360544217685,
+      "arms": {
+        "RL": {
+          "auroc": 0.2891156462585034,
+          "ci95": [
+            0.07811791383219956,
+            0.4988662131519274
+          ]
+        },
+        "SFT": {
+          "auroc": 0.25510204081632654,
+          "ci95": [
+            0.0,
+            0.35374149659863946
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "state-like",
+      "control": "opposite",
+      "difference_ci95": [
+        -0.25396825396825395,
+        0.18253968253968253
+      ],
+      "feature": "prose_paren",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.09126984126984133,
+      "arms": {
+        "RL": {
+          "auroc": 0.5617913832199547,
+          "ci95": [
+            0.2562358276643991,
+            0.8356009070294784
+          ]
+        },
+        "SFT": {
+          "auroc": 0.47052154195011336,
+          "ci95": [
+            0.29923469387755103,
+            0.6292942176870746
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.26814058956916104,
+        0.15816326530612246
+      ],
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.033446712018140534,
+      "arms": {
+        "RL": {
+          "auroc": 0.5532879818594104,
+          "ci95": [
+            0.5447845804988662,
+            0.6570294784580499
+          ]
+        },
+        "SFT": {
+          "auroc": 0.5198412698412699,
+          "ci95": [
+            0.38492063492063494,
+            0.7120181405895691
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.21882086167800457,
+        0.08506235827664382
+      ],
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.015306122448979664,
+      "arms": {
+        "RL": {
+          "auroc": 0.7970521541950113,
+          "ci95": [
+            0.6910430839002267,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 0.812358276643991,
+          "ci95": [
+            0.6938208616780045,
+            1.0
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.15873015873015872,
+        0.19614512471655332
+      ],
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.015306122448979609,
+      "arms": {
+        "RL": {
+          "auroc": 0.20294784580498867,
+          "ci95": [
+            0.0,
+            0.3089569160997732
+          ]
+        },
+        "SFT": {
+          "auroc": 0.18764172335600907,
+          "ci95": [
+            0.0,
+            0.30617913832199517
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "state-like",
+      "control": "opposite",
+      "difference_ci95": [
+        -0.1961451247165533,
+        0.15873015873015872
+      ],
+      "feature": "prose_quote",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.053287981859410416,
+      "arms": {
+        "RL": {
+          "auroc": 0.5238095238095238,
+          "ci95": [
+            0.2566326530612245,
+            0.7874149659863946
+          ]
+        },
+        "SFT": {
+          "auroc": 0.5770975056689343,
+          "ci95": [
+            0.25564058956916097,
+            0.8758503401360545
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.10827664399092968,
+        0.18197278911564624
+      ],
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.09665532879818595,
+      "arms": {
+        "RL": {
+          "auroc": 0.7587868480725624,
+          "ci95": [
+            0.5748086734693877,
+            0.9081916099773241
+          ]
+        },
+        "SFT": {
+          "auroc": 0.8554421768707483,
+          "ci95": [
+            0.7437641723356009,
+            0.9444444444444444
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.006802721088435382,
+        0.22534013605442182
+      ],
+      "feature": "prose_sentence",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.09013605442176875,
+      "arms": {
+        "RL": {
+          "auroc": 0.9098639455782312,
+          "ci95": [
+            0.6456916099773242,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.3543083900226758
+      ],
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.008219954648526095,
+      "arms": {
+        "RL": {
+          "auroc": 0.9917800453514739,
+          "ci95": [
+            0.9671201814058957,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.03287981859410427
+      ],
+      "feature": "prose_sentiment",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "prose_topic",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.13435374149659862,
+      "arms": {
+        "RL": {
+          "auroc": 0.5068027210884354,
+          "ci95": [
+            0.4064625850340136,
+            0.6133786848072562
+          ]
+        },
+        "SFT": {
+          "auroc": 0.641156462585034,
+          "ci95": [
+            0.5714143990929705,
+            0.7233560090702947
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.08219954648526073,
+        0.19897959183673464
+      ],
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "python_argument",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.015873015873015928,
+      "arms": {
+        "RL": {
+          "auroc": 0.5425170068027211,
+          "ci95": [
+            0.4733560090702948,
+            0.6122448979591837
+          ]
+        },
+        "SFT": {
+          "auroc": 0.558390022675737,
+          "ci95": [
+            0.4965986394557823,
+            0.6162131519274376
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.028344671201814053,
+        0.05102040816326536
+      ],
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.3820861678004535,
+      "arms": {
+        "RL": {
+          "auroc": 0.6933106575963719,
+          "ci95": [
+            0.63718820861678,
+            0.7471655328798186
+          ]
+        },
+        "SFT": {
+          "auroc": 0.3112244897959184,
+          "ci95": [
+            0.261890589569161,
+            0.36394557823129253
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.459764739229025,
+        -0.3112244897959184
+      ],
+      "feature": "python_comment",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.010770975056689336,
+      "arms": {
+        "RL": {
+          "auroc": 0.4931972789115646,
+          "ci95": [
+            0.4501133786848073,
+            0.5430839002267573
+          ]
+        },
+        "SFT": {
+          "auroc": 0.503968253968254,
+          "ci95": [
+            0.45351473922902497,
+            0.5691609977324263
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.00907029478458049,
+        0.036848072562358336
+      ],
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.0666099773242631,
+      "arms": {
+        "RL": {
+          "auroc": 0.6825396825396826,
+          "ci95": [
+            0.5966340702947845,
+            0.7726757369614512
+          ]
+        },
+        "SFT": {
+          "auroc": 0.6159297052154195,
+          "ci95": [
+            0.5198412698412699,
+            0.7278911564625851
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.10375566893424032,
+        -0.027494331065759603
+      ],
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.05725623582766448,
+      "arms": {
+        "RL": {
+          "auroc": 0.8191609977324263,
+          "ci95": [
+            0.7806122448979592,
+            0.8537556689342403
+          ]
+        },
+        "SFT": {
+          "auroc": 0.7619047619047619,
+          "ci95": [
+            0.7250566893424036,
+            0.8004818594104306
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.09693877551020402,
+        -0.010204081632653073
+      ],
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0572562358276644,
+      "arms": {
+        "RL": {
+          "auroc": 0.18083900226757368,
+          "ci95": [
+            0.14624433106575963,
+            0.2193877551020408
+          ]
+        },
+        "SFT": {
+          "auroc": 0.23809523809523808,
+          "ci95": [
+            0.19951814058956918,
+            0.27494331065759636
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "count-like",
+      "control": "opposite",
+      "difference_ci95": [
+        0.010204081632653045,
+        0.09693877551020408
+      ],
+      "feature": "python_depth",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "python_error",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.15136054421768708,
+      "arms": {
+        "RL": {
+          "auroc": 0.5884353741496599,
+          "ci95": [
+            0.3695294784580499,
+            0.8395833333333332
+          ]
+        },
+        "SFT": {
+          "auroc": 0.4370748299319728,
+          "ci95": [
+            0.19705215419501135,
+            0.6570294784580499
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.3798185941043084,
+        0.0
+      ],
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.07369614512471656,
+      "arms": {
+        "RL": {
+          "auroc": 0.5493197278911565,
+          "ci95": [
+            0.3117063492063492,
+            0.7981859410430839
+          ]
+        },
+        "SFT": {
+          "auroc": 0.4756235827664399,
+          "ci95": [
+            0.3109693877551021,
+            0.6361181972789113
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.2715419501133786,
+        0.11706349206349204
+      ],
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.21882086167800452,
+      "arms": {
+        "RL": {
+          "auroc": 0.780045351473923,
+          "ci95": [
+            0.5532879818594104,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 0.9988662131519275,
+          "ci95": [
+            0.9954648526077098,
+            1.0
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.44217687074829937
+      ],
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.21882086167800455,
+      "arms": {
+        "RL": {
+          "auroc": 0.2199546485260771,
+          "ci95": [
+            0.0,
+            0.4467120181405896
+          ]
+        },
+        "SFT": {
+          "auroc": 0.0011337868480725624,
+          "ci95": [
+            0.0,
+            0.0045351473922902496
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "count-like",
+      "control": "opposite",
+      "difference_ci95": [
+        -0.4421768707482993,
+        0.0
+      ],
+      "feature": "python_indent",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.08049886621315194,
+      "arms": {
+        "RL": {
+          "auroc": 0.6417233560090703,
+          "ci95": [
+            0.5062358276643991,
+            0.7845804988662132
+          ]
+        },
+        "SFT": {
+          "auroc": 0.7222222222222222,
+          "ci95": [
+            0.5521541950113379,
+            0.8662131519274376
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.06349206349206349,
+        0.2489229024943307
+      ],
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.03231292517006801,
+      "arms": {
+        "RL": {
+          "auroc": 0.590702947845805,
+          "ci95": [
+            0.5589569160997733,
+            0.6281320861678004
+          ]
+        },
+        "SFT": {
+          "auroc": 0.558390022675737,
+          "ci95": [
+            0.39851190476190473,
+            0.7227891156462585
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.17970521541950113,
+        0.11451247165532885
+      ],
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.06065759637188206,
+      "arms": {
+        "RL": {
+          "auroc": 0.9155328798185941,
+          "ci95": [
+            0.8781037414965986,
+            0.9513038548752831
+          ]
+        },
+        "SFT": {
+          "auroc": 0.854875283446712,
+          "ci95": [
+            0.7471655328798186,
+            0.9370748299319728
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.12414965986394555,
+        -0.005102040816326481
+      ],
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.06065759637188209,
+      "arms": {
+        "RL": {
+          "auroc": 0.0844671201814059,
+          "ci95": [
+            0.04869614512471656,
+            0.12189625850340129
+          ]
+        },
+        "SFT": {
+          "auroc": 0.14512471655328799,
+          "ci95": [
+            0.06292517006802721,
+            0.2528344671201814
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "state-like",
+      "control": "opposite",
+      "difference_ci95": [
+        0.005102040816326529,
+        0.12414965986394558
+      ],
+      "feature": "python_string",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.08786848072562359,
+      "arms": {
+        "RL": {
+          "auroc": 0.47619047619047616,
+          "ci95": [
+            0.33956916099773243,
+            0.6116780045351474
+          ]
+        },
+        "SFT": {
+          "auroc": 0.5640589569160998,
+          "ci95": [
+            0.4427437641723356,
+            0.699546485260771
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.038548752834467126,
+        0.16836734693877548
+      ],
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.006235827664399007,
+      "arms": {
+        "RL": {
+          "auroc": 0.8234126984126984,
+          "ci95": [
+            0.7265022675736961,
+            0.9354733560090698
+          ]
+        },
+        "SFT": {
+          "auroc": 0.8171768707482994,
+          "ci95": [
+            0.7650226757369615,
+            0.9197845804988662
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.06519274376417239,
+        0.08871882086167804
+      ],
+      "feature": "table_column",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.04195011337868482,
+      "arms": {
+        "RL": {
+          "auroc": 0.4387755102040816,
+          "ci95": [
+            0.21768707482993196,
+            0.6899518140589567
+          ]
+        },
+        "SFT": {
+          "auroc": 0.3968253968253968,
+          "ci95": [
+            0.23180272108843536,
+            0.594671201814059
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.1264172335600907,
+        0.09353741496598639
+      ],
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.0022675736961451087,
+      "arms": {
+        "RL": {
+          "auroc": 0.376984126984127,
+          "ci95": [
+            0.23638038548752835,
+            0.516454081632653
+          ]
+        },
+        "SFT": {
+          "auroc": 0.37471655328798187,
+          "ci95": [
+            0.18874716553287982,
+            0.5804988662131519
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.06916099773242634,
+        0.10317460317460314
+      ],
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": -0.13605442176870752,
+      "arms": {
+        "RL": {
+          "auroc": 0.8188775510204082,
+          "ci95": [
+            0.7290249433106576,
+            0.8849206349206349
+          ]
+        },
+        "SFT": {
+          "auroc": 0.6828231292517006,
+          "ci95": [
+            0.5629251700680272,
+            0.8078231292517006
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "state-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.17800453514739223,
+        -0.07709750566893425
+      ],
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.13605442176870747,
+      "arms": {
+        "RL": {
+          "auroc": 0.18112244897959184,
+          "ci95": [
+            0.11507936507936507,
+            0.2709750566893424
+          ]
+        },
+        "SFT": {
+          "auroc": 0.3171768707482993,
+          "ci95": [
+            0.1921768707482993,
+            0.4370748299319728
+          ]
+        }
+      },
+      "channel": "C2",
+      "class": "state-like",
+      "control": "opposite",
+      "difference_ci95": [
+        0.07709750566893425,
+        0.17800453514739228
+      ],
+      "feature": "table_role",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.035147392290249435,
+      "arms": {
+        "RL": {
+          "auroc": 0.5,
+          "ci95": [
+            0.3979591836734694,
+            0.5941043083900227
+          ]
+        },
+        "SFT": {
+          "auroc": 0.5351473922902494,
+          "ci95": [
+            0.3520408163265306,
+            0.691609977324263
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        -0.0578373015873016,
+        0.11564625850340127
+      ],
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.017006802721088454,
+      "arms": {
+        "RL": {
+          "auroc": 0.9722222222222222,
+          "ci95": [
+            0.9455782312925171,
+            0.9977324263038548
+          ]
+        },
+        "SFT": {
+          "auroc": 0.9892290249433107,
+          "ci95": [
+            0.9778911564625851,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "count-like",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.04195011337868482
+      ],
+      "feature": "table_row",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84
+    },
+    {
+      "SFT_minus_RL": 0.0,
+      "arms": {
+        "RL": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "SFT": {
+          "auroc": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "channel": "C1prime",
+      "class": "semantic",
+      "control": "matched",
+      "difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "feature": "table_status",
+      "n_clusters": 6,
+      "n_items": 84
+    }
+  ],
+  "rules": {
+    "R1": {
+      "met": false,
+      "n_valid_rows": 7,
+      "qualifying_rows": [
+        "prose_paren",
+        "prose_quote"
+      ]
+    },
+    "R2": {
+      "large_significant_structure_rows": [
+        "latex_section"
+      ],
+      "met": false,
+      "structure_median_SFT_minus_RL": 0.03996598639455784
+    },
+    "R3": {
+      "content_RL_minus_SFT": [
+        {
+          "RL_minus_SFT": -0.0,
+          "difference_ci95": [
+            -0.0,
+            -0.0
+          ],
+          "feature": "json_status"
+        },
+        {
+          "RL_minus_SFT": 0.02154195011337867,
+          "difference_ci95": [
+            -0.0,
+            0.09868197278911564
+          ],
+          "feature": "latex_role"
+        },
+        {
+          "RL_minus_SFT": -0.0,
+          "difference_ci95": [
+            -0.0,
+            -0.0
+          ],
+          "feature": "latex_subject"
+        },
+        {
+          "RL_minus_SFT": -0.1071428571428571,
+          "difference_ci95": [
+            -0.391156462585034,
+            -0.0
+          ],
+          "feature": "list_priority"
+        },
+        {
+          "RL_minus_SFT": -0.0243764172335601,
+          "difference_ci95": [
+            -0.11224489795918369,
+            0.013605442176870763
+          ],
+          "feature": "list_topic"
+        },
+        {
+          "RL_minus_SFT": -0.09013605442176875,
+          "difference_ci95": [
+            -0.3543083900226758,
+            -0.0
+          ],
+          "feature": "prose_sentiment"
+        },
+        {
+          "RL_minus_SFT": -0.0,
+          "difference_ci95": [
+            -0.0,
+            -0.0
+          ],
+          "feature": "prose_topic"
+        },
+        {
+          "RL_minus_SFT": -0.0,
+          "difference_ci95": [
+            -0.0,
+            -0.0
+          ],
+          "feature": "python_error"
+        },
+        {
+          "RL_minus_SFT": -0.0,
+          "difference_ci95": [
+            -0.0,
+            -0.0
+          ],
+          "feature": "table_status"
+        }
+      ],
+      "status": "DESCRIPTIVE"
+    },
+    "R4": {
+      "all_rows": {
+        "met": false,
+        "row_count": 16
+      },
+      "met": true,
+      "pooled": {
+        "SFT_minus_RL": -0.002232142857142857,
+        "arms": {
+          "RL": {
+            "ci95": [
+              0.0011579536893236162,
+              0.007627648417036655
+            ],
+            "correct": 4,
+            "n": 1344,
+            "rate": 0.002976190476190476
+          },
+          "SFT": {
+            "ci95": [
+              0.00013135137237409774,
+              0.0042026890667991685
+            ],
+            "correct": 1,
+            "n": 1344,
+            "rate": 0.000744047619047619
+          }
+        },
+        "difference_ci95": [
+          -0.005208333333333333,
+          0.000744047619047619
+        ],
+        "met": true
+      },
+      "scope": "pooled",
+      "status": "EVALUABLE",
+      "strict_threshold": "Wilson upper < .05 for both arms"
+    }
+  },
+  "statement_policy": "unchanged E24 detector; exact A/B correct; both/neither incorrect; absent regex not evaluable",
+  "status": "EXPLORATORY_E37"
+}

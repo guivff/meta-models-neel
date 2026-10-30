@@ -1,0 +1,12 @@
+{
+  "id": "90c30ab847ab15c374894623",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a template: \"Given the following instructions, analyze the image description according to the rules\" sets up a structured Q&A pattern.\n\nThe instruction explicitly forbids mentioning \"AI-generated\" and requires explaining the image's purpose and content, so the model must generate a compliant response example.\n\n\"Question: [question about AI-generated content]\nAnswer:\" is a labeled field pair, where \"Answer:\" is the final token, immediately requiring the model's response text \u2014 likely a sample explanation of an image description following the stated rules.\n\"Given the following instructions: [instructions]\nExample: [example]\nAnswer:\" \u2014 the final \"Answer:\" token signals the start of a demonstration response, expecting a sentence beginning the explanation of a specific image's purpose/content.\n\"Answer:\" is the final prompt label, requiring the model's output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a template: \"Given the following instructions, analyze the image description according to the rules\" sets up a structured Q&A pattern.\n\nThe instruction explicitly forbids mentioning \"AI-generated\" and requires explaining the image's purpose and content, so the model must generate a compliant response example.\n\n\"Question: [question about AI-generated content]\nAnswer:\" is a labeled field pair, where \"Answer:\" is the final token, immediately requiring the model's response text \u2014 likely a sample explanation of an image description following the stated rules.\n\"Given the following instructions: [instructions]\nExample: [example]\nAnswer:\" \u2014 the final \"Answer:\" token signals the start of a demonstration response, expecting a sentence beginning the explanation of a specific image's purpose/content.\n\"Answer:\" is the final prompt label, requiring the model's output.",
+  "truncated": false
+}

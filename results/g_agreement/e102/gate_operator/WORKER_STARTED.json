@@ -1,0 +1,12 @@
+{
+  "pod_id": "rc53kiabq720qx",
+  "started_epoch": 1793210318.7825851,
+  "original_created_epoch": 1793210103.944,
+  "source_archive_sha256": "979bd4a8231cd94f20760ebdf220dccd9c4d5fe00fe2ded9bcec165aaa466214",
+  "gate_only": true,
+  "handoff_mode": "manual verified existing detached worker; never resubmitted",
+  "remote_pid": 364,
+  "evidence": "exact owned remote ps shows one python gate command, RUN_GATE.sh and job.log; stage.log torch2.8.0+cu128 transformers5.18.0 NVIDIA H200; first incremental archive verified",
+  "reason": "submission SSH shell retained its channel after nohup worker start; retire one-shot staging service before its transport timeout could misclassify a running worker",
+  "stage_service_retired_utc": "2026-10-28T17:58:38.782587+00:00"
+}

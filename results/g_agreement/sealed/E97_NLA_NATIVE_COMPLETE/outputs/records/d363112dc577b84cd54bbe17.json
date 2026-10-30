@@ -1,0 +1,12 @@
+{
+  "id": "d363112dc577b84cd54bbe17",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot classification format established: examples show \"sentence \u2192 label\" pattern, requiring a single label answer (\"Positive\" or \"Negative\") for the given sentence.\n\nThe prompt explicitly frames a test case (\"Given the sentence: 'The weather is good today.'\") and asks for the classification label, so the model must output the correct label matching the established pattern.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured format, immediately requiring the model's direct answer (e.g., \"Positive\" or \"Negative\") on the next line.\n\"Please follow the pattern...\nGiven the sentence: 'The weather is good today.'\nClassification: Positive or Negative?\nReply:\" \u2014 the final \"Reply:\" is a prompt field marker demanding the concise answer immediately follows.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot classification format established: examples show \"sentence \u2192 label\" pattern, requiring a single label answer (\"Positive\" or \"Negative\") for the given sentence.\n\nThe prompt explicitly frames a test case (\"Given the sentence: 'The weather is good today.'\") and asks for the classification label, so the model must output the correct label matching the established pattern.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured format, immediately requiring the model's direct answer (e.g., \"Positive\" or \"Negative\") on the next line.\n\"Please follow the pattern...\nGiven the sentence: 'The weather is good today.'\nClassification: Positive or Negative?\nReply:\" \u2014 the final \"Reply:\" is a prompt field marker demanding the concise answer immediately follows.",
+  "truncated": false
+}

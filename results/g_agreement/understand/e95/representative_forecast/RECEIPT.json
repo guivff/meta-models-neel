@@ -1,0 +1,91 @@
+{
+  "experiment": "E95",
+  "status": "BLOCKED_DEV_AUROC_EVIDENCE",
+  "created_utc": "2026-10-29T00:56:07.632274+00:00",
+  "CPU_only": true,
+  "GPU_calls": 0,
+  "production_admitted": false,
+  "full_launch_allowed": false,
+  "decision_sha256": "f7d4a80888b3b61b57f78cdbf01c6f0d126126e9610f345fe6d5f57180a7f8f9",
+  "code_commit": "2b18237b122f6758df56f1c41809337ddbdcc2ed",
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmechb/cache/g_agreement/understand/e95/representative_archive_fix_v1/source.tar.gz",
+  "source_archive_sha256": "df19342529458dec1ae1b55a638a2e5f0d1f022a732b0efb0ed2fef449b44db5",
+  "source_seal_sha256": "d162fc545fd261392a8b5c09b6a53e7c2027450f0999dabd8f235c2da455a233",
+  "original_profile_output_sha256": "35260c59b9b67394b50df838111f781021ed3cf61fd1d0a974b1e7a1ed84e1c7",
+  "prior_seconds": 1629,
+  "prior_note": "Conservative ceil(0.4524h*3600) from I-3 reported Stage1 custody; not a new charge or an invoice. I-3 must reconcile exact actual custody before GO.",
+  "covered_component_projected_hours": {
+    "0": 73.50194444444445,
+    "1": 62.441944444444445,
+    "2": 50.11527777777778
+  },
+  "unpriced_width": 5,
+  "width_probe": {
+    "row_index": 19,
+    "bank": "e56",
+    "row": "adjective_implicit",
+    "dev_probe_auroc": 1.0,
+    "source_inputs": "/private/tmp/e95-timing-scope-v1/row19/inputs",
+    "note": "One original-source timing profile covering width5 supplies surviving phase keys; do not infer width5 rates from width8."
+  },
+  "missing_dev_evidence": [
+    {
+      "row_index": 0,
+      "bank": "e49",
+      "row": "arith_carry"
+    },
+    {
+      "row_index": 1,
+      "bank": "e49",
+      "row": "arith_compare"
+    },
+    {
+      "row_index": 2,
+      "bank": "e49",
+      "row": "asserted_vs_hypothetical"
+    },
+    {
+      "row_index": 4,
+      "bank": "e49",
+      "row": "chased_role"
+    },
+    {
+      "row_index": 6,
+      "bank": "e49",
+      "row": "decimal_separator"
+    },
+    {
+      "row_index": 8,
+      "bank": "e49",
+      "row": "instruction_provenance"
+    },
+    {
+      "row_index": 9,
+      "bank": "e49",
+      "row": "negation_scope"
+    },
+    {
+      "row_index": 10,
+      "bank": "e49",
+      "row": "next_paragraph_language"
+    },
+    {
+      "row_index": 11,
+      "bank": "e49",
+      "row": "pronoun_referent"
+    }
+  ],
+  "next": [
+    "Obtain sealed quantitative dev AUROC evidence for the nine E49 rows; preserve missing values until then",
+    "Integrator may measure row19 width5 on original timing source/scope, same hardware/image/stack/assets",
+    "Rerun the CPU binder with both profiles and exact reconciled prior custody; no per-row re-profile after reductions",
+    "Only a complete within40h result creates multi-row HOLD packets; I-3 alone may issue fresh global GO"
+  ],
+  "tests": {
+    "passed": 38,
+    "suite": "Exact fresh archive extraction, no manually added files",
+    "representative_tests_passed": 8
+  },
+  "forecast_complete": false,
+  "archive_dependency_fix": "STATEMENT_SCORE_ELIGIBILITY.json included and pinned; all pre-existing dependency pins unchanged"
+}

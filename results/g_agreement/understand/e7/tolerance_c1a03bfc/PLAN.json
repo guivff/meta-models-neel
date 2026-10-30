@@ -1,0 +1,158 @@
+{
+  "GPU_hours_by_owner": 0,
+  "authority_commit": "c1a03bfc",
+  "authority_git_blob": "271d77c2ce47b3b01ee4aa97170ace24c6b02fa9",
+  "authority_sha256": "89f340961d794a4b357ef6fcf28276225fa0f11a3515bd72c64cffcf2239214b",
+  "brief_sha256": "ad464652ec971260ef9d6c834a6be81c61cd9d4e94007399798272f29998287d",
+  "counts": {
+    "decoder": 693,
+    "prepare": 693,
+    "readouts": 87,
+    "scores": 750
+  },
+  "dated_authority": "projects/g_agreement/BRIEF_UNDERSTAND.md \u00a794 dated operational note",
+  "decoder": {
+    "batch": 8,
+    "canonical_batch_boundaries_unchanged": true,
+    "native_layer": 42,
+    "texts": 5544
+  },
+  "experiment": "E7",
+  "forecast": {
+    "F": "sumfourphaseforecasts +2*measuredNLA_to_decodertransfer +2*measureddecoder_to_NLAtransfer",
+    "ceiling": "2880unlessfullF>2880,then7200;actualmin(1.5F+360,ceiling)",
+    "count_prior": "subtractprior40.436461sfromselectedcumulativecap;preservehistoricalreceipts",
+    "fit": "elapsedcurrent+forecastremaining+180s retrieval <= newattemptbudget;otherwiseINCOMPLETE",
+    "full_receipt": "e7/FULL_WARMED_FORECAST.json sealedbeforebulkremainingadmission",
+    "global_IO": "finalcanonicalreorder/sealsremainonimmutableclock;coveredby360sfixedallowance",
+    "method": "perpath median(next3retainedrealwarmedunits)*fullunitcount",
+    "numeric_status": "NOT_MEASURED_LOCALLY;requiresintegrator-assignedGPU;CPUtinytestsarenotthroughputestimates",
+    "prior_science_seconds": 40.436461039993446,
+    "unmeasured_phase": "conservative0contributionuntilfirst3units;provisionalcapfromknownpaths only"
+  },
+  "generation": {
+    "batch": 32,
+    "k": 1,
+    "max_new_tokens": 128,
+    "native": "unchangedmats.NLA.verbalize_raw",
+    "padding_check": "tokpadding_side=left;nativefixedidenticalprompttensors havezeropromptpadding/allonesmask;observeactualnativeforwardandrotarypositionIDs (2D orQwen3/4streams),includingcacheddecode;neveroverridepositions",
+    "parity_conventions": "same52itemfirst32+last20parityset;rawgeneratedtokenIDsthroughfirstEOS;onlypostEOSpaddingignored;firstdivergencezero-based matchingprecedingtoken count;allreadoutmedian,no divergencecensored128;identicalearlyEOS countsidentical",
+    "parity_items": "first32 plusactualfinal20,deterministic52itemwarm-up;shape32+20vs6*8+4",
+    "parse": "exactexistingworker split/removeprefix/strip,raw retained",
+    "production": "batch32settingforall2772items,final20partialunit;batch8onlyunscoredparityreference;no peritemselection/fallback",
+    "prompt": "unchangedW1native42",
+    "reference_batch": 8,
+    "setup_parity": "c1a03bfc: >=90%first32tokenidentity ANDmedianfirstdivergence>=32;NO_FITotherwise;rawfulltoken/textidentitydescriptiveonly",
+    "temperature": 0
+  },
+  "input_seal_sha256": "4ff8df9b6122decea25a5f4d5393fe76cfdb7bd00810bf96be71d17adc67ce1a",
+  "models_forbidden": [
+    "target",
+    "officialAR44"
+  ],
+  "models_loaded_once": [
+    "NLA_native42_decoder",
+    "NLA_native42_verbalizer"
+  ],
+  "parity_reporting": {
+    "fields": [
+      "first32identity_count/rate",
+      "medianfirstdivergence",
+      "fulltokenidentityrate",
+      "fullrawtextidentityrate",
+      "perreadoutpositions",
+      "bothbatchsizespadding/mask/positionaudit"
+    ],
+    "post_pull": "appendfrozenoperationalparityrates toRESULTS viae7_parity CLI afterunchangedE7scientificanalysis;metricsbytesremainunchanged",
+    "setup_receipts": [
+      "GENERATION_PARITY.json",
+      "GENERATION_PARITY_SEAL.json",
+      "PARITY_RESULTS.md"
+    ]
+  },
+  "pilot": {
+    "decoder_units": [
+      0,
+      1,
+      2,
+      204,
+      205,
+      206,
+      208,
+      209,
+      211,
+      213,
+      215,
+      217,
+      219,
+      220,
+      221,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      551,
+      552,
+      553,
+      555,
+      557,
+      560,
+      561,
+      564,
+      566,
+      567,
+      568,
+      569,
+      570,
+      571,
+      572,
+      573,
+      574,
+      575,
+      576,
+      577,
+      578
+    ],
+    "dependency_selection": "exactclosure offirst3originalscoreunits,plusfirst3canonicaltimingunits;input-only,no labels/results",
+    "generation_units": [
+      0,
+      1,
+      2,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58
+    ],
+    "retained_generation_items": 352,
+    "retention": "allpilotworkretainedexactlyonce;scienceclock startsbeforefirstpilotunit;noreset;finaloutputs incanonicalorder",
+    "score_units": [
+      0,
+      1,
+      2
+    ]
+  },
+  "program_stop": "2026-10-28T22:59Z (Wednesday28October23:59Europe/Zurich)",
+  "schedule_sha256": "a67c9eda8aa394417889ee2b043ca292d8fb6afaea5db22e96af469912ea12f9",
+  "scientific_analysis": "unchangedprojects.g_agreement.understand.analyse e7;all25rows/all6arms/originalfixedrandomsupport",
+  "scorer": {
+    "candidate_batch": 16,
+    "native_layer": 42,
+    "score_orientation": "AminusB,nosignflip",
+    "scores": 6000,
+    "two_frozen_phrasing_pairs": true,
+    "unit_boundaries_unchanged": true,
+    "vectors_per_unit": 8
+  },
+  "section": 94,
+  "setup_allowance_seconds": 2400,
+  "status": "FROZEN_C1A03BFC_BEFORE_NEW_GPU_SETUP"
+}

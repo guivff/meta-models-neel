@@ -1,0 +1,37 @@
+{
+  "status": "PASS_CPU_ONLY_NO_GPU_GATE_OR_PRODUCTION_ADMISSION",
+  "utc": "2026-10-29T05:51:43.082055+00:00",
+  "source_archive_sha256": "af5642105732b0ca9f4cecd2138291ca69956cd2c376eb9d305adae1d3513b85",
+  "source_members_verified": 25,
+  "owner_seal_sha256": "0101eb75e8670fa265660594c4e5530e8c761324af460201f18c503f0e04c7ae",
+  "rehearsal": [
+    {
+      "args": [
+        "-c",
+        "import pathlib,torch,peft,transformers;import mats.readers.nla,mats.readers.olens;import projects.g_agreement.e106.worker as w;import projects.g_agreement.e106.production,projects.g_agreement.e106.finalize_t;assert pathlib.Path(w.__file__).resolve().is_relative_to(pathlib.Path.cwd());print(\"fresh exact-archive imports PASS\")"
+      ],
+      "returncode": 0,
+      "stdout": "fresh exact-archive imports PASS\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "unittest",
+        "projects.g_agreement.e106.test_worker",
+        "projects.g_agreement.e106.test_production",
+        "projects.g_agreement.e106.test_eval"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "...........s.\n----------------------------------------------------------------------\nRan 13 tests in 3.229s\n\nOK (skipped=1)\n"
+    }
+  ],
+  "extracted_root": "/private/tmp/e106-i4-postgate-ylo8zev_",
+  "conditions": [
+    "Actual NLA gate PASS first",
+    "Final teacher dataset committed before training",
+    "Fresh cumulative remaining-cap custody admission",
+    "Never initialize from disposable gate checkpoint"
+  ]
+}

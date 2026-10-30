@@ -1,0 +1,12 @@
+{
+  "id": "ddceeaf8572cd22d83104ce1",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is asking to identify and correct a specific XML/structured data format error, expecting a corrected example.\n\nThe phrase \"entry\" signals a structured document format (likely a glossary, dictionary, or index), with `<entry>` tags as the repeating unit being discussed.\n\nFinal token `<entry` opens a new XML tag, directly mirroring the prior `<entry` reference, requiring an immediate closing `>` or attribute syntax, followed by content demonstrating the \"incoherent\" example.\n\"Here is the incoherent text:\n<entry\" \u2014 the model must continue with a new `<entry` tag, likely containing attributes or content matching a glossary/dictionary format (e.g., `<entry id=\"...\"` or similar structured data from a technical manual).\nThe pattern suggests a list of entries in a corpus.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is asking to identify and correct a specific XML/structured data format error, expecting a corrected example.\n\nThe phrase \"entry\" signals a structured document format (likely a glossary, dictionary, or index), with `<entry>` tags as the repeating unit being discussed.\n\nFinal token `<entry` opens a new XML tag, directly mirroring the prior `<entry` reference, requiring an immediate closing `>` or attribute syntax, followed by content demonstrating the \"incoherent\" example.\n\"Here is the incoherent text:\n<entry\" \u2014 the model must continue with a new `<entry` tag, likely containing attributes or content matching a glossary/dictionary format (e.g., `<entry id=\"...\"` or similar structured data from a technical manual).\nThe pattern suggests a list of entries in a corpus.",
+  "truncated": false
+}

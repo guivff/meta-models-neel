@@ -1,0 +1,12 @@
+{
+  "id": "3ab6d9e55ab613d12f59015c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict template: \"Given the sentence '[sentence]', what is the sentiment? Options: positive/negative\" establishes a pattern requiring a direct answer.\n\nThe instruction explicitly states the model must output \"positive\" or \"negative\" as the only valid response, constraining the answer to one of those two words.\n\n\"Reply:\" is the final prompt label in the example, immediately requiring the model's answer to the specific test sentence \"The weather is very good today.\"\n\"Given the sentence 'The weather is very good today.'\nExample format:\nSentence: 'The weather is very good today.'\nOptions: positive or negative\nReply:\" \u2014 this closing \"Reply:\" label demands the direct answer token (e.g., \"positive\" or \"negative\") follows immediately as the response field.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict template: \"Given the sentence '[sentence]', what is the sentiment? Options: positive/negative\" establishes a pattern requiring a direct answer.\n\nThe instruction explicitly states the model must output \"positive\" or \"negative\" as the only valid response, constraining the answer to one of those two words.\n\n\"Reply:\" is the final prompt label in the example, immediately requiring the model's answer to the specific test sentence \"The weather is very good today.\"\n\"Given the sentence 'The weather is very good today.'\nExample format:\nSentence: 'The weather is very good today.'\nOptions: positive or negative\nReply:\" \u2014 this closing \"Reply:\" label demands the direct answer token (e.g., \"positive\" or \"negative\") follows immediately as the response field.",
+  "truncated": false
+}

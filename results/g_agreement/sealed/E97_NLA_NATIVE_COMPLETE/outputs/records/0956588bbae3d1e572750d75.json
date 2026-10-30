@@ -1,0 +1,12 @@
+{
+  "id": "0956588bbae3d1e572750d75",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict instruction to classify sentiment as \"Positive\" or \"Negative\" only, establishing a binary answer constraint.\n\nThe example pattern shows a Chinese sentence followed by its English translation, then a classification question \u2014 the model must now provide the answer for the specific sentence \"The individual is a victim of a crime.\"\n\n\"Reply:\" is the final prompt label, part of the structured format, immediately requiring the classification answer (e.g., \"Positive\" or \"Negative\") as the next token.\n\"Given the following sentence...\nSentence: 'The individual is a victim of a crime.'\nClassification: [Positive/Negative]\nQuestion: What is the sentiment label?\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer, likely a short label or single word, completing the structured response format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict instruction to classify sentiment as \"Positive\" or \"Negative\" only, establishing a binary answer constraint.\n\nThe example pattern shows a Chinese sentence followed by its English translation, then a classification question \u2014 the model must now provide the answer for the specific sentence \"The individual is a victim of a crime.\"\n\n\"Reply:\" is the final prompt label, part of the structured format, immediately requiring the classification answer (e.g., \"Positive\" or \"Negative\") as the next token.\n\"Given the following sentence...\nSentence: 'The individual is a victim of a crime.'\nClassification: [Positive/Negative]\nQuestion: What is the sentiment label?\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer, likely a short label or single word, completing the structured response format.",
+  "truncated": false
+}

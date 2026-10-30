@@ -1,0 +1,55 @@
+{
+  "experiment": "E79",
+  "status": "HOLD_SCORER_CONTRACT_MISMATCH",
+  "registration": "a12526c5",
+  "sources": [
+    {
+      "repo": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech",
+      "path": "results/g_agreement/understand/e62/job/prepare_second.py",
+      "sha256": "430d3d75888bb548002e610df93810e947f932e2da863139c050042ce3ec54f8",
+      "last_commit": "a7f5b891914d8f22375c23621ac4c54021d9ce9e"
+    },
+    {
+      "repo": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech",
+      "path": "results/g_agreement/understand/e56/job/analysis_io.py",
+      "sha256": "6185ae98294587214abf9c5f8fbbb166047b24a709221c6f6fd51323886fb8a0",
+      "last_commit": "d2f7f04e043f5fb5b5e488b077c289ee5d9264d9"
+    },
+    {
+      "repo": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech",
+      "path": "results/g_agreement/understand/e62/job/second_worker.py",
+      "sha256": "4ca87471f66a79f99929ccefa1d7f6b9988046d5e8373a374a760955d6cc1d30",
+      "last_commit": "a0730ca39f1aaa182fb87c0d0a5087ea6e7ab938"
+    },
+    {
+      "repo": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech",
+      "path": "results/g_agreement/understand/e62/job/HANDOFF.md",
+      "sha256": "a47b21b4cc9b347092144db3277fcc43e722d1ef9ab45d6447e2696076439593",
+      "last_commit": "baabe89c398c112967f7ae6b204b39be2dfd0c7a"
+    }
+  ],
+  "E59_frozen_pairs": {
+    "format_plan": [
+      [
+        "-",
+        "The"
+      ]
+    ],
+    "language_plan": [
+      [
+        "Je",
+        "The"
+      ],
+      [
+        "Le",
+        "The"
+      ]
+    ]
+  },
+  "E59_estimator": "Mean candidate contrast scores per item, then AUROC against original labels; own/swap arms, oracle/nla reconstructor channels.",
+  "E79_requested_estimator": "Binary plan-execution rate from 64-token greedy base-model patched continuation text.",
+  "missing": "No frozen mapping from generated text to correct/incorrect execution found in E59 bank or frozen runner/scorer. A text parser would be a new scorer, not unchanged packaging.",
+  "action_needed": "Provide existing frozen generated-text scorer path/seal, or register a text-scoring rule before E79 continuations exist.",
+  "outcomes_opened": false,
+  "READY": false
+}

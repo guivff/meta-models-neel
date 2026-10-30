@@ -1,0 +1,12 @@
+{
+  "id": "aaa278625e9bd966ac6581d3",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict conditional rule: if text contains \"image,\" answer must explain image-related content; otherwise, explain the text's content.\n\nThe \"Task\" and \"Example\" fields set up a structured Q&A template, with \"Answer:\" signaling the model must now produce a response demonstrating the rule in action.\n\n\"Answer:\" is the final token, a label introducing the model's output response, requiring an explanatory sentence about the provided text's content or a demonstration of the conditional instruction.\n\"Instruction: Do not mention the image in the explanation.\nTask: Explain the provided text about the image.\nQuestion: [question about the text]\nAnswer:\" \u2014 the final token demands the actual explanatory answer text, likely beginning with \"The...\" or a sample explanation of a code/text analysis response.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict conditional rule: if text contains \"image,\" answer must explain image-related content; otherwise, explain the text's content.\n\nThe \"Task\" and \"Example\" fields set up a structured Q&A template, with \"Answer:\" signaling the model must now produce a response demonstrating the rule in action.\n\n\"Answer:\" is the final token, a label introducing the model's output response, requiring an explanatory sentence about the provided text's content or a demonstration of the conditional instruction.\n\"Instruction: Do not mention the image in the explanation.\nTask: Explain the provided text about the image.\nQuestion: [question about the text]\nAnswer:\" \u2014 the final token demands the actual explanatory answer text, likely beginning with \"The...\" or a sample explanation of a code/text analysis response.",
+  "truncated": false
+}

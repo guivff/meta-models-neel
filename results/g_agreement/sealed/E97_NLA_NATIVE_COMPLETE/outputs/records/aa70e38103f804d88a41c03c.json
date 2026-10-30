@@ -1,0 +1,12 @@
+{
+  "id": "aa70e38103f804d88a41c03c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals the model must now produce the actual classification answer for the specific sentence \"I am feeling very happy today.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker requiring the direct answer (\"Positive\") to follow immediately, completing the structured Q&A format.\n\"Given the following instructions, you must respond with the exact word 'Positive' or 'Negative' only.\nExample sentence: 'I am feeling very happy today.'\nContext: [sentiment classification task]\nReply:\" \u2014 the final \"Reply:\" is a field label demanding the concise classification output as the very next token, likely \"Positive\" or similar short answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals the model must now produce the actual classification answer for the specific sentence \"I am feeling very happy today.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker requiring the direct answer (\"Positive\") to follow immediately, completing the structured Q&A format.\n\"Given the following instructions, you must respond with the exact word 'Positive' or 'Negative' only.\nExample sentence: 'I am feeling very happy today.'\nContext: [sentiment classification task]\nReply:\" \u2014 the final \"Reply:\" is a field label demanding the concise classification output as the very next token, likely \"Positive\" or similar short answer.",
+  "truncated": false
+}

@@ -1,0 +1,10 @@
+# E24 clarification 2 amendment and source-gate release
+
+The original analysis freeze at e5d28d98 predates clarification 2 (88841629). This amendment implements that clarification before any E24 data analysis. The exact production-code diff is ANALYSIS_CLARIFICATION_2.patch. Acquisition, item bank, activations protocol, frozen regex/judge prompt, layers, scheduling and budgets are unchanged.
+
+- R3 is replaced by R3′: true C2 AUROC >=0.70 and opposite-state swap AUROC <=0.40, with swap 95% CI upper bound strictly <0.50, on a majority of the fixed valid rows. R5 is conditional on R3′. Output keys explicitly say R3_prime.
+- R6 and R6_all_layers are removed. C5 AUROC and interval remain reported for every applicable row/layer, with no across-layer C5 verdict.
+- Clarification 2 also requires C5 at layer 44 to reproduce sealed E1b continuation-projection AUROC within ±0.03. The 25 reference values are copied directly from metrics bytes verified against E1b's original seal, not recalculated. Every pod's anchor is checked using the unchanged dev-only block-44 direction. A C5 anchor failure joins R0 and propagates row uninterpretablity to all layers.
+- The published hash correction db564376 resolves the historical modal14 suffix discrepancy. SOURCE_GATE.json records a fresh full-hash check of the pinned S14 files and the unchanged sealed input bank: PASS, exit 0. The original DERIVATION and pre-generation snapshot remain historical evidence; their hold text is superseded by this release.
+
+Validation: 26 CPU tests pass, including the synthetic full analysis, per-row C5 output, absence of R6, ±0.03 anchor tolerance, swap <=0.40 boundary, and strict CI upper <0.50. No E20/E24 scientific analysis or GPU inference was rerun. Only the analysis production module and its CPU tests changed; request/plan/source archive metadata are re-pinned to the amendment. The integrator can launch after publishing these commits, using db564376 and the corrected full hash in the existing assignment fields. No additional approval is requested.

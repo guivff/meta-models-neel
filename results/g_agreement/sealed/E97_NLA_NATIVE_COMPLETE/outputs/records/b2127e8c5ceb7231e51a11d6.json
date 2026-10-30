@@ -1,0 +1,12 @@
+{
+  "id": "b2127e8c5ceb7231e51a11d6",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict pattern: example given (\"Example: The color is red. Reply: Angry\"), now applying same classification task to a new sentence.\n\nThe instruction explicitly defines the output as a single emotion word, constraining the response to a short label like \"Happy\" or \"Sad.\"\n\n\"Input: I am a software engineer working in a tech company in California.\\nReply:\" is the final prompt line, requiring the model's direct answer/classification label immediately next.\n\"Reply:\" is a label/field marker in a structured prompt, demanding the actual response token (the emotion word) to follow immediately.\n\"Please follow the pattern strictly. Provide the correct single-word emotion label.\\nInput: I am a software engineer working in a tech company in California.\\nReply:\" \u2014 the final token expects the answer.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict pattern: example given (\"Example: The color is red. Reply: Angry\"), now applying same classification task to a new sentence.\n\nThe instruction explicitly defines the output as a single emotion word, constraining the response to a short label like \"Happy\" or \"Sad.\"\n\n\"Input: I am a software engineer working in a tech company in California.\\nReply:\" is the final prompt line, requiring the model's direct answer/classification label immediately next.\n\"Reply:\" is a label/field marker in a structured prompt, demanding the actual response token (the emotion word) to follow immediately.\n\"Please follow the pattern strictly. Provide the correct single-word emotion label.\\nInput: I am a software engineer working in a tech company in California.\\nReply:\" \u2014 the final token expects the answer.",
+  "truncated": false
+}

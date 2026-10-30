@@ -1,0 +1,29 @@
+{
+  "CPU_command": [
+    "env",
+    "CUDA_VISIBLE_DEVICES=",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "python",
+    "results/g_agreement/understand/e76/score_parity76.py"
+  ],
+  "CPU_guard": "cache/g_agreement/understand/e76/parity-cpu-20261027/SCORE.RUN_ONCE.json",
+  "experiment": "E76_PARITY",
+  "generation_guard": "cache/g_agreement/understand/e76/PARITY_GENERATE.RUN_ONCE.json",
+  "generation_out": "cache/g_agreement/understand/e76/parity-generated-20261027",
+  "pod_command": [
+    "env",
+    "CUBLAS_WORKSPACE_CONFIG=:4096:8",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "python",
+    "results/g_agreement/understand/e76/worker76.py",
+    "--parity-generate-only",
+    "--assignment",
+    "cache/g_agreement/understand/e76/assignment.json",
+    "--assets",
+    "/workspace/e76/assets.json"
+  ],
+  "release_to_pod": "cache/g_agreement/understand/e76/PARITY_RELEASE.json",
+  "same_assignment_start_and_deadline_required": true,
+  "stage_cap_seconds": 7000,
+  "verified_pull": "cache/g_agreement/understand/e76/parity-verified-pull"
+}

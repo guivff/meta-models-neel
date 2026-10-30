@@ -1,0 +1,29 @@
+{
+  "analysis_runs": 1,
+  "axes": {
+    "domain": "original sealed \u00a779 document domain",
+    "norm_decile": "10 equal-frequency bins of raw h L2 norm, stable token-order tie breaking, computed once shared by both SAEs",
+    "position": [
+      "0",
+      "1-7",
+      "8+"
+    ]
+  },
+  "date": "2026-10-26",
+  "dead_fraction": "fraction of complete dictionary never strictly positive within that stratum; empty => undefined",
+  "experiment": "E40",
+  "fallback_reconstruction": "CPU replay of sealed checkpoint on same sealed h; validate global FVU within1e-5; report dead-count difference beside sealed original",
+  "fvu": "sum squared raw reconstruction error / within-stratum pooled centered sum of squares; zero variance or empty => undefined",
+  "guard": "cache/g_agreement/understand/e40/diagnostic.RUN_ONCE.json",
+  "kind": "descriptive CPU diagnostic",
+  "new_gpu_hours": 0,
+  "outputs": "every marginal stratum; no cross-bin search or changed E40 design",
+  "part": "a",
+  "registered_authority": "a38044ddb8b02410703040fb09aab1bc84bc5be8",
+  "saes": [
+    "pinned Qwen-Scope transfer81920/k50",
+    "E35 final trained16384/k64 checkpoint"
+  ],
+  "sample": "unchanged E35 heldout50000 in GATE_SAMPLE document/position order",
+  "transfer_reconstruction": "use sealed reconstruction.npy; recode exact pinned checkpoint on CPU for stratum firing"
+}

@@ -1,0 +1,854 @@
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_allocate_candidate/allocate.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_allocate_candidate/allocate.py
+@@ -22 +22 @@
+-BUDGET=BASE/'g_h2008_a4_closed_admission/BUDGET_PLANNING.json'
++BUDGET=BASE/'g_h2008_fuse_admission/BUDGET_PLANNING.json'
+@@ -52 +52 @@
+-SOURCE_PINS={'/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/protocol.py': '68cb3d75ce53c3d6606c9c0417f97fd4ac753dbe6a94f70b277efcd364f927b6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/pins.py': 'd7740e61c3ea0dd3930f3dce7fd8bf5a4ed063b6da38cfb0c35b12e659c6a36b', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/transport.py': '1e006f62d6de68307adf1c50f4861566562f28f6abc8148b2185986e758543ac', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/PACKAGE.json': '08647e87f749ee5ab8148258c45f114a63749ebb917e70a94544ad738d4c4d56', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/CPU_TEST_RECEIPT.json': '3ca86f35950a6dc71721539aa7f66e9ddda74e189020e07dec5c3537c9272e96', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/START_COMMAND.txt': 'd68622d92301872ab4983616b735eeedfad829785acbe3c067b2984a3141aa7a', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/e74-public-runtime-recipe.tar.gz': '4ab27169cc752d7cfb48136ddf26c92b4c7cb7e2e1abf8bad26c80181ebe6853', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_h2008_a4_closed_allocate_candidate/launch_plan.py': '9e79a365ba02df4356ebf6fc2272cd9da3e0f77150f612ba3ba7ae569d429cf6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/E74_BOOTSTRAP_FAILURE_A2_CLOSEOUT.json': 'fdda5387f9ade766ff9e17da0229e1bb5fba07106138f1c66f7754f367f31ac5'}
++SOURCE_PINS={'/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/protocol.py': '68cb3d75ce53c3d6606c9c0417f97fd4ac753dbe6a94f70b277efcd364f927b6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/pins.py': 'd7740e61c3ea0dd3930f3dce7fd8bf5a4ed063b6da38cfb0c35b12e659c6a36b', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/transport.py': '1e006f62d6de68307adf1c50f4861566562f28f6abc8148b2185986e758543ac', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/PACKAGE.json': '08647e87f749ee5ab8148258c45f114a63749ebb917e70a94544ad738d4c4d56', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/CPU_TEST_RECEIPT.json': '3ca86f35950a6dc71721539aa7f66e9ddda74e189020e07dec5c3537c9272e96', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/START_COMMAND.txt': 'd68622d92301872ab4983616b735eeedfad829785acbe3c067b2984a3141aa7a', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/e74-public-runtime-recipe.tar.gz': '4ab27169cc752d7cfb48136ddf26c92b4c7cb7e2e1abf8bad26c80181ebe6853', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_h2008_fuse_allocate_candidate/launch_plan.py': '9e79a365ba02df4356ebf6fc2272cd9da3e0f77150f612ba3ba7ae569d429cf6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/E74_BOOTSTRAP_FAILURE_A2_CLOSEOUT.json': 'fdda5387f9ade766ff9e17da0229e1bb5fba07106138f1c66f7754f367f31ac5'}
+@@ -97,0 +98,2 @@
++    need(sha(read(Path('/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e74_fuse_storage_exception_cpu/H8/e74-fuse-storage-exception-v2.tar.gz')))=='4c8d6938164781d67ebb9bfe36038d24f59822105b0a1e6d4ab0c9fb6a8b2e27','EXACT_FUSE_STORAGE_ARCHIVE')
++    need(sha(read(ROOT/'results/g_agreement/i2/E74_FUSE_STORAGE_EXCEPTION_AUTHORITY.json'))=='a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43','FUSE_AUTHORITY_SOURCE')
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_allocate_candidate/prepare.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_allocate_candidate/prepare.py
+@@ -10 +10 @@
+-BASE=L.BASE;DRIVER=BASE/'operator_g_h2008_a4_closed_driver_candidate'
++BASE=L.BASE;DRIVER=BASE/'operator_g_h2008_fuse_driver_candidate'
+@@ -12,3 +12,3 @@
+-ARCHIVE=OVERLAY/'e74-resident-running-mean-v1.tar.gz'
+-ARCHIVE_SHA='daba518ee21fc051c2a1710d19174db83d2103f1190e411d8f436de0d13fc0fb'
+-SOURCE_SEAL='d470edd57e6e37be65abdf2148ad66596d1c2f3c111d75ca17a2a67ab2cb6bf4'
++ARCHIVE=Path('/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e74_fuse_storage_exception_cpu/H8/e74-fuse-storage-exception-v2.tar.gz')
++ARCHIVE_SHA='4c8d6938164781d67ebb9bfe36038d24f59822105b0a1e6d4ab0c9fb6a8b2e27'
++SOURCE_SEAL='36e388d263251fc32b6170f63bbe957ff450c98a29ff70decd0bc828a61e55fe'
+@@ -67 +67 @@
+-def prepare(allocation_path,exitproof,out,*,budget_path=L.BUDGET,now=None,sshraw=None,identity_file=None,known_hosts_file=None,guards_receipt=None):
++def prepare(allocation_path,exitproof,out,*,budget_path=L.BUDGET,now=None,sshraw=None,identity_file=None,known_hosts_file=None,guards_receipt=None,storage_observation_path=None,storage_sequence=None):
+@@ -107 +107 @@
+-    paths=[p for p in DRIVER.glob('*.py')if not p.name.startswith('test_')]+[Path(__file__).resolve(),Path(L.__file__).resolve(),Path(L.__file__).with_name('launch_plan.py'),ARCHIVE,inputs,Path(L.pins.API),GUARD_PY.resolve(),GUARD_WORKER.resolve(),Path('/usr/bin/caffeinate'),DRIVER/'SOURCE_PINS.json',DRIVER/'CONFIG_TEMPLATE.json',Path(budget_path),allocation_path,allocation_path.parent/'STOCK.response.private.json',Path(ruling['source_path']),Path(b['C_queue_assessment']['source_path']),L.A4.CLOSEOUT,Path(L.A4.__file__),L.G_AUTHORITY,L.RETIRED_SUPPLY,L.PRIORITY_AUTHORITY,L.HUMAN_STORAGE_CLOSEOUT,L.HUMAN_STAGE_CLOSEOUT,L.RETRY_AUTHORITY,L.OPERATIONAL_CLOSEOUT,L.FAILED_REGION_SOURCE,Path(__file__).with_name('local_process.py'),Path(L.pins.LOCK)]+[Path(p)for p in L.SOURCE_PINS]
++    paths=[p for p in DRIVER.glob('*.py')if not p.name.startswith('test_')]+[Path(__file__).resolve(),Path(L.__file__).resolve(),Path(L.__file__).with_name('launch_plan.py'),ARCHIVE,inputs,Path(L.pins.API),GUARD_PY.resolve(),GUARD_WORKER.resolve(),Path('/usr/bin/caffeinate'),DRIVER/'SOURCE_PINS.json',DRIVER/'CONFIG_TEMPLATE.json',L.ROOT/'results/g_agreement/i2/E74_FUSE_STORAGE_EXCEPTION_AUTHORITY.json',Path(budget_path),allocation_path,allocation_path.parent/'STOCK.response.private.json',Path(ruling['source_path']),Path(b['C_queue_assessment']['source_path']),L.A4.CLOSEOUT,Path(L.A4.__file__),L.G_AUTHORITY,L.RETIRED_SUPPLY,L.PRIORITY_AUTHORITY,L.HUMAN_STORAGE_CLOSEOUT,L.HUMAN_STAGE_CLOSEOUT,L.RETRY_AUTHORITY,L.OPERATIONAL_CLOSEOUT,L.FAILED_REGION_SOURCE,Path(__file__).with_name('local_process.py'),Path(L.pins.LOCK)]+[Path(p)for p in L.SOURCE_PINS]
+@@ -125,0 +126,9 @@
++    L.need(storage_observation_path is not None and type(storage_sequence)is int and storage_sequence>0,'ACTUAL_NUMBERED_STORAGE_OBSERVATION_REQUIRED')
++    sp=Path(storage_observation_path);storage_raw=L.read(sp)
++    _spec=importlib.util.spec_from_file_location('bound_fuse_contract',DRIVER/'storage_contract.py');factory=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(factory)
++    storage=factory.build(raw,sshraw,storage_raw,storage_sequence,now)
++    config['runtime']['storage_exception']=storage['contract']
++    config['runtime']['storage_admission_receipt_sha256']=L.sha(encoded(storage))
++    config['_source_bindings'][str(sp)]=L.sha(storage_raw)
++    config['_source_bindings'][str(DRIVER/'storage_contract.py')]=L.sha(L.read(DRIVER/'storage_contract.py'))
++    config['_source_bindings'][str(DRIVER/'storage_policy.py')]=L.sha(L.read(DRIVER/'storage_policy.py'))
+@@ -133 +142 @@
+-    p.add_argument('--ssh-observation',type=Path);p.add_argument('--ssh-identity-file',type=Path);p.add_argument('--known-hosts-file',type=Path);p.add_argument('--guards-receipt',type=Path)
++    p.add_argument('--storage-observation',type=Path);p.add_argument('--storage-sequence',type=int);p.add_argument('--ssh-observation',type=Path);p.add_argument('--ssh-identity-file',type=Path);p.add_argument('--known-hosts-file',type=Path);p.add_argument('--guards-receipt',type=Path)
+@@ -135 +144 @@
+-    result=prepare(args.allocation,proof,args.out,budget_path=args.budget,sshraw=None if args.ssh_observation is None else L.read(args.ssh_observation),identity_file=args.ssh_identity_file,known_hosts_file=args.known_hosts_file,guards_receipt=args.guards_receipt)
++    result=prepare(args.allocation,proof,args.out,budget_path=args.budget,sshraw=None if args.ssh_observation is None else L.read(args.ssh_observation),identity_file=args.ssh_identity_file,known_hosts_file=args.known_hosts_file,guards_receipt=args.guards_receipt,storage_observation_path=args.storage_observation,storage_sequence=args.storage_sequence)
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_allocate_candidate/test_prepare.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_allocate_candidate/test_prepare.py
+@@ -32 +32,4 @@
+-  return {'sshraw':T.enc({'data':{'pod':self.pod}}),'identity_file':self.identity,'known_hosts_file':self.hosts,'guards_receipt':self.gp}
++  self.storage_path=self.out/'STORAGE_OBSERVATION.private.json'
++  self.storage={'schema':'E74_STORAGE_READONLY_V1','run_identity_sha256':self.a['identity_sha256'],'sequence':1,'checked_epoch':T.NOW+1,'original_setup_deadline_epoch':self.a['original_setup_deadline_epoch'],'findmnt':{'filesystems':[{'source':'mfs','target':'/workspace','fstype':'fuse'}]},'existing_volume_bytes':1024,'free_bytes':10**12}
++  self.storage_path.write_bytes(T.enc(self.storage))
++  return {'sshraw':T.enc({'data':{'pod':self.pod}}),'identity_file':self.identity,'known_hosts_file':self.hosts,'guards_receipt':self.gp,'storage_observation_path':self.storage_path,'storage_sequence':1}
+@@ -112,0 +116,27 @@
++
++class FusePreparationTests(unittest.TestCase):
++ setUp=PreparationTests.setUp
++ first=PreparationTests.first
++ runprep=PreparationTests.runprep
++ second_args=PreparationTests.second_args
++ write_a=PreparationTests.write_a
++ def test_fuse_contract_binds_exact_allocation_and_actual_usage(self):
++  args=self.second_args(self.first());self.runprep(**args)
++  cfg=json.loads((self.out/'CONFIG.private.json').read_bytes());c=cfg['runtime']['storage_exception']
++  self.assertEqual(c['allocation_receipt_sha256'],A.sha(self.ap.read_bytes()))
++  self.assertEqual(c['run_identity_sha256'],self.a['identity_sha256'])
++  self.assertEqual(c['existing_volume_bytes'],1024)
++  self.assertEqual(c['allocated_volume_bytes'],1000000000000)
++  self.assertEqual(cfg['_source_bindings'][str(self.storage_path)],A.sha(self.storage_path.read_bytes()))
++ def test_no_storage_observation_no_final_config(self):
++  args=self.second_args(self.first());args['storage_observation_path']=None
++  with self.assertRaisesRegex(ValueError,'NUMBERED_STORAGE'):self.runprep(**args)
++  self.assertFalse((self.out/'CONFIG.private.json').exists())
++ def test_wrong_storage_identity_no_final_config(self):
++  args=self.second_args(self.first());self.storage['run_identity_sha256']='c'*64;self.storage_path.write_bytes(T.enc(self.storage))
++  with self.assertRaises(ValueError):self.runprep(**args)
++  self.assertFalse((self.out/'CONFIG.private.json').exists())
++ def test_used_volume_capacity_cannot_be_assumed_empty(self):
++  args=self.second_args(self.first());self.storage['existing_volume_bytes']=600000000000;self.storage_path.write_bytes(T.enc(self.storage))
++  with self.assertRaises(ValueError):self.runprep(**args)
++  self.assertFalse((self.out/'CONFIG.private.json').exists())
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/CONFIG_TEMPLATE.json
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/CONFIG_TEMPLATE.json
+@@ -59 +59 @@
+-    "archive_sha256": "daba518ee21fc051c2a1710d19174db83d2103f1190e411d8f436de0d13fc0fb",
++    "archive_sha256": "4c8d6938164781d67ebb9bfe36038d24f59822105b0a1e6d4ab0c9fb6a8b2e27",
+@@ -90 +90 @@
+-    "source_seal_sha256": "d470edd57e6e37be65abdf2148ad66596d1c2f3c111d75ca17a2a67ab2cb6bf4",
++    "source_seal_sha256": "36e388d263251fc32b6170f63bbe957ff450c98a29ff70decd0bc828a61e55fe",
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/ROOT_FUSE_COMMANDS.md
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/ROOT_FUSE_COMMANDS.md
+@@ -0,0 +1,11 @@
++# H8 FUSE route — CPU verified, live effects disabled
++
++Use operator_g_h2008_fuse_allocate_candidate/prepare.py and operator_g_h2008_fuse_driver_candidate together. Next unused run e74-h200-20261028-a2. Planning budget g_h2008_fuse_admission/BUDGET_PLANNING.json must be refreshed and the actual combined projection posted before any claim. All claims and closed charges remain consumed/booked once.
++
++Fresh actual quote/full padded forecast including all staging/idle/extras, Q/I2 ledgers/liabilities/C-first queue and dated budget are required. Bind enabled hashes by the existing ordinary opt-in; no further human approval. Never mutate a bound source midrun.
++
++Allocate once, observe real allocator exit, provider-only prepare.py before arming the original guards once. Independently observe installer exit and same pair. Poll numbered read-only provider SSH metadata under the original900 setup endpoint. Use storage_contract.probe_source(actual ALLOCATION object, positive fresh sequence) through the owned SSH transport to capture bounded read-only findmnt/du/free metadata in a new exclusive private file. No content is opened, transferred or executed by the probe.
++
++Final prepare.py requires --storage-observation /absolute/private/observation.json --storage-sequence N, original allocator exit, actual SSH metadata/identity/known-hosts and SAME guards receipt. It binds provider-allocated volume minus measured existing usage, actual free space, original ALLOCATION SHA/identity and clocks into runtime/admission. It rejects missing or changed proof. Reobserve/attach the SAME guards, pin exact sources and step the driver.
++
++Original environment900/weights3600/whole9853/boot-smoke3000 clocks and registered science remain unchanged. Only FUSE storage admission differs; it is never labelled NVMe. Weight streaming hashes/fsync/destination reread and full endpoint x1.25 remain mandatory. Stop rules, capture/forecast/GO custody, exactEXITED/querynull/ownedguard retirement and once-only billing remain unchanged.
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/SOURCE_PINS.json
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/SOURCE_PINS.json
+@@ -18,2 +18,3 @@
+-  "overlay_archive_sha256": "daba518ee21fc051c2a1710d19174db83d2103f1190e411d8f436de0d13fc0fb",
+-  "overlay_source_sha256": "d470edd57e6e37be65abdf2148ad66596d1c2f3c111d75ca17a2a67ab2cb6bf4"
++  "overlay_archive_sha256": "4c8d6938164781d67ebb9bfe36038d24f59822105b0a1e6d4ab0c9fb6a8b2e27",
++  "overlay_source_sha256": "36e388d263251fc32b6170f63bbe957ff450c98a29ff70decd0bc828a61e55fe",
++  "storage_exception_authority_sha256": "a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43"
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/bindings.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/bindings.py
+@@ -12 +12 @@
+-    'g_candidate': ('operator_g_h2008_a4_closed_driver_candidate/g_candidate.py','c3f36a734103e8f39c5de2431ec1022e6329b83cc439ea77e1ba43d2e350da49'),
++    'g_candidate': ('operator_g_h2008_fuse_driver_candidate/g_candidate.py','a1c350776f7d90807953a022247ff91f8c4522f61924a797b9cc7431bff616d1'),
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/driver.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/driver.py
+@@ -111,0 +112,4 @@
++        if self.config['runtime'].get('storage_exception') is not None:
++            c=self.config['runtime']['storage_exception']
++            A.need(c['run_identity_sha256']==allocation['identity_sha256'] and c['allocation_start_epoch']==created and c['provider_stop_epoch']==stop,'FUSE_ACTUAL_ALLOCATION_BINDING')
++            a.update(storage_exception=c,run_identity_sha256=allocation['identity_sha256'],allocation_receipt_sha256=c['allocation_receipt_sha256'])
+@@ -128,0 +133 @@
++        self.ports.admission=self.s['admission']
+@@ -164 +169 @@
+-               result['objects']==65 and result['full_sha_verified'] is True and result['local_nvme_verified'] is True and
++               result['objects']==65 and result['full_sha_verified'] is True and (result['local_nvme_verified'] is True or (result.get('storage')=='runpod_fuse' and result.get('storage_exception_verified') is True)) and
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/g_candidate.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/g_candidate.py
+@@ -24 +24 @@
+-PIN_SHA = '937efb00b23831977e55d3a3e5d1d95a8af59cdbc219d81bdd1b1db39b64c565'
++PIN_SHA = '402d8874ec8f98cb1959eb8cc7039e2cba72a5f742e39d7d369f0a9b31049f7b'
+@@ -31,3 +31,3 @@
+-SOURCE_SEAL = 'd470edd57e6e37be65abdf2148ad66596d1c2f3c111d75ca17a2a67ab2cb6bf4'
+-ARCHIVE = 'daba518ee21fc051c2a1710d19174db83d2103f1190e411d8f436de0d13fc0fb'
+-ARCHIVE_BYTES = 1408712
++SOURCE_SEAL = '36e388d263251fc32b6170f63bbe957ff450c98a29ff70decd0bc828a61e55fe'
++ARCHIVE = '4c8d6938164781d67ebb9bfe36038d24f59822105b0a1e6d4ab0c9fb6a8b2e27'
++ARCHIVE_BYTES = 1410971
+@@ -211 +211 @@
+-    path=HERE.parent/'operator_g_running_mean_reviewed/e74-resident-running-mean-v1.tar.gz'
++    path=Path('/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e74_fuse_storage_exception_cpu/H8/e74-fuse-storage-exception-v2.tar.gz')
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/ports.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/ports.py
+@@ -8,0 +9 @@
++import storage_policy
+@@ -125 +126,5 @@
+-        A.need(st['storage']=='local_nvme' and st['full_weight_sha256_verified'] is True and st['canonical_cache_unchanged'] is True and
++        fuse=st.get('storage')=='runpod_fuse'
++        if fuse:
++            storage_policy.verify_receipt(st['storage_exception_proof'],self.admission,self.clock())
++            A.need(all(disk.get(k)==v for k,v in st['storage_exception_proof'].items()),'FUSE_DISK_PROOF_BINDING')
++        A.need((st['storage']=='local_nvme' or fuse) and st['full_weight_sha256_verified'] is True and st['canonical_cache_unchanged'] is True and
+@@ -129 +134 @@
+-        return dict(value,status='STAGED',runtime_files=59,objects=65,full_sha_verified=True,local_nvme_verified=True,
++        return dict(value,status='STAGED',runtime_files=59,objects=65,full_sha_verified=True,local_nvme_verified=not fuse,storage=st['storage'],storage_exception_verified=fuse,
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/public_setup.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/public_setup.py
+@@ -14,0 +15,2 @@
++import storage_policy
++STORAGE_POLICY_SOURCE = '"""E74\'s authorised RunPod FUSE exception; CPU validation only, no allocation.\n\nThe operator must obtain the volume contract from the actual authenticated pod\nresponse and bind it into the existing SHA-bound I-2 admission. A FUSE pool\'s df\ntotal is never evidence of the pod\'s allocated capacity. No filesystem is\nreclassified as NVMe. Existing transfer/fsync/reread and engine gates still apply.\n"""\nimport hashlib\nimport json\nimport math\nfrom pathlib import Path\n\nAUTHORITY_SHA256 = \'a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43\'\nWEIGHT_BYTES = 466355755887\nMIN_REQUIRED_BYTES = 468704353377\nFUSE_TYPES = frozenset({\'fuse\', \'fuse.mfs\', \'fuse3\', \'fuse3.mfs\'})\n\n\ndef require(condition, message):\n    if not condition:\n        raise ValueError(message)\n\n\ndef digest(value):\n    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(\',\', \':\'),\n                                     allow_nan=False).encode()).hexdigest()\n\n\ndef number(value):\n    require(type(value) in (int, float) and math.isfinite(value), \'finite number required\')\n    return value\n\n\ndef contract(admission, mount, free_bytes, required_bytes, now):\n    """Validate actual FUSE observation against the allocation-bound contract.\n\n    The contract is root/operator evidence, not a remotely self-issued waiver.\n    The caller first verifies the enclosing admission SHA and provider identity.\n    remaining_seconds includes all staging, idle, boot, smoke, capture, readouts\n    and closeout; it uses the existing whole-endpoint clock and cost padding.\n    """\n    c = admission.get(\'storage_exception\')\n    require(isinstance(c, dict), \'FUSE requires allocation-bound storage exception\')\n    keys = {\'authority_sha256\', \'allocation_receipt_sha256\', \'run_identity_sha256\',\n            \'allocation_start_epoch\', \'provider_stop_epoch\', \'provider\',\n            \'volume_mount_path\', \'allocated_volume_bytes\', \'existing_volume_bytes\',\n            \'capacity_observed_epoch\', \'remaining_seconds\'}\n    require(set(c) == keys, \'storage contract fields differ\')\n    require(c[\'authority_sha256\'] == AUTHORITY_SHA256 and c[\'provider\'] == \'RunPod\',\n            \'storage exception authority/provider differs\')\n    for key in (\'allocation_receipt_sha256\', \'run_identity_sha256\'):\n        require(isinstance(c[key], str) and len(c[key]) == 64 and\n                all(ch in \'0123456789abcdef\' for ch in c[key]), \'actual allocation identity required\')\n        require(c[key] == admission.get(key), \'storage contract belongs to another allocation\')\n    require(c[\'allocation_start_epoch\'] == admission[\'allocation_start_epoch\'] and\n            c[\'provider_stop_epoch\'] == admission[\'provider_stop_epoch\'], \'original allocation clocks differ\')\n    now = number(now)\n    require(0 < c[\'allocation_start_epoch\'] <= number(c[\'capacity_observed_epoch\']) <= now <\n            c[\'provider_stop_epoch\'], \'capacity observation outside original allocation\')\n    require(isinstance(mount, dict) and len(mount.get(\'filesystems\', [])) == 1,\n            \'single actual filesystem observation required\')\n    fs = mount[\'filesystems\'][0]\n    require(fs[\'fstype\'] in FUSE_TYPES, \'exception only admits RunPod FUSE\')\n    require(fs[\'target\'] == c[\'volume_mount_path\'] == \'/workspace\', \'actual RunPod workspace mount required\')\n    for value in (c[\'allocated_volume_bytes\'], c[\'existing_volume_bytes\'], free_bytes, required_bytes):\n        require(type(value) is int and value >= 0, \'nonnegative capacity bytes required\')\n    require(required_bytes >= MIN_REQUIRED_BYTES and\n            c[\'allocated_volume_bytes\'] - c[\'existing_volume_bytes\'] >= required_bytes and\n            free_bytes >= required_bytes, \'insufficient allocated capacity or actual filesystem free space\')\n    remaining = number(c[\'remaining_seconds\'])\n    require(remaining > 0 and now + remaining <= c[\'provider_stop_epoch\'], \'original full endpoint cannot fit\')\n    rate = number(admission[\'replica_hourly_usd\'])\n    extras = number(admission[\'other_cost_upper_bound_usd\'])\n    cap = number(admission[\'cap_usd\'])\n    require(rate > 0 and extras >= 0 and cap > 0, \'invalid forecast inputs\')\n    padded = ((now - c[\'allocation_start_epoch\'] + remaining) * rate / 3600 + extras) * 1.25\n    require(padded <= cap, \'full endpoint padded forecast exceeds cap\')\n    return {\'storage\': \'runpod_fuse\', \'local_nvme_verified\': False,\n            \'authority_sha256\': AUTHORITY_SHA256, \'contract_sha256\': digest(c),\n            \'allocation_receipt_sha256\': c[\'allocation_receipt_sha256\'],\n            \'run_identity_sha256\': c[\'run_identity_sha256\'],\n            \'findmnt\': mount, \'free_bytes\': free_bytes, \'required_bytes\': required_bytes,\n            \'allocated_volume_bytes\': c[\'allocated_volume_bytes\'],\n            \'existing_volume_bytes\': c[\'existing_volume_bytes\'],\n            \'checked_epoch\': now, \'forecast_times_1_25_usd\': padded,\n            \'no_second_full_cache\': True}\n\n\ndef verify_receipt(proof, admission, now):\n    require(isinstance(proof, dict), \'storage proof required\')\n    expected = contract(admission, proof[\'findmnt\'], proof[\'free_bytes\'], proof[\'required_bytes\'],\n                        proof[\'checked_epoch\'])\n    require(proof == expected and proof[\'checked_epoch\'] <= number(now), \'storage proof changed or is future dated\')\n    require(now < admission[\'provider_stop_epoch\'], \'original provider endpoint expired\')\n    return proof\n\n\ndef observe(path, admission, required_bytes, now, metadata, disk_usage):\n    """Read-only mount/capacity observation; no writes, transfers or GPU calls."""\n    path = Path(path).resolve()\n    require(path == Path(\'/workspace\') or Path(\'/workspace\') in path.parents,\n            \'FUSE exception only covers workspace descendants\')\n    mount = metadata([\'findmnt\', \'-J\', \'-T\', str(path), \'-o\', \'SOURCE,TARGET,FSTYPE\'])\n    return contract(admission, mount, disk_usage(path).free, required_bytes, now)\n'
+@@ -74,11 +76,21 @@
+-        source=mount['filesystems'][0]['source'].split('[')[0]
+-        require(source.startswith('/dev/'),'STAGING_NOT_BLOCK_MOUNT')
+-        devices=metadata(['lsblk','-s','-J','-o','NAME,TYPE,TRAN,PATH',source])
+-        def leaves(node):
+-            return [x for c in node['children'] for x in leaves(c)] if node.get('children') else [node]
+-        disks=[leaf for node in devices['blockdevices'] for leaf in leaves(node)]
+-        require(disks and all(d['tran']=='nvme' for d in disks),'STAGING_NOT_LOCAL_NVME')
+-        free=shutil.disk_usage(C['root']).free
+-        require(free>=C['needed_bytes'],'INSUFFICIENT_STAGING_SPACE')
+-        disk=dict(findmnt=mount,lsblk=devices,free_bytes=free,required_bytes=C['needed_bytes'])
+-        write_once(root,'control/PUBLIC_NVME_PROOF.json',json.dumps(disk,sort_keys=True).encode())
++        if C.get('storage_admission') is not None:
++            namespace={}
++            exec(STORAGE_POLICY_SOURCE,namespace)
++            disk=namespace['contract'](C['storage_admission'],mount,
++                shutil.disk_usage(C['root']).free,C['needed_bytes'],time.time())
++            local_nvme=False
++            write_once(root,'control/PUBLIC_STORAGE_PROOF.json',json.dumps(disk,sort_keys=True).encode())
++        else:
++            source=mount['filesystems'][0]['source'].split('[')[0]
++            require(source.startswith('/dev/'),'STAGING_NOT_BLOCK_MOUNT')
++            devices=metadata(['lsblk','-s','-J','-o','NAME,TYPE,TRAN,PATH',source])
++            def leaves(node):
++                return [x for c in node['children'] for x in leaves(c)] if node.get('children') else [node]
++            disks=[leaf for node in devices['blockdevices'] for leaf in leaves(node)]
++            require(disks and all(d['tran']=='nvme' for d in disks),'STAGING_NOT_LOCAL_NVME')
++            free=shutil.disk_usage(C['root']).free
++            require(free>=C['needed_bytes'],'INSUFFICIENT_STAGING_SPACE')
++            disk=dict(findmnt=mount,lsblk=devices,free_bytes=free,required_bytes=C['needed_bytes'])
++            local_nvme=True
++            write_once(root,'control/PUBLIC_NVME_PROOF.json',json.dumps(disk,sort_keys=True).encode())
++        free=disk['free_bytes']
+@@ -89 +101,2 @@
+-            local_nvme_verified=True,free_bytes=free,required_bytes=C['needed_bytes'])
++            local_nvme_verified=local_nvme,free_bytes=free,required_bytes=C['needed_bytes'])
++        if not local_nvme:result.update(storage='runpod_fuse',storage_exception_proof=disk)
+@@ -96 +109 @@
+-def program(control, end, members, python):
++def program(control, end, members, python, storage_admission=None):
+@@ -99 +112 @@
+-                           members=members,python=python,needed_bytes=NEEDED_BYTES)
++                           members=members,python=python,needed_bytes=NEEDED_BYTES,storage_admission=storage_admission)
+@@ -101 +114 @@
+-    return before+REMOTE+'\nC='+after
++    return before+'\nSTORAGE_POLICY_SOURCE='+repr(STORAGE_POLICY_SOURCE)+'\n'+REMOTE+'\nC='+after
+@@ -142 +155,6 @@
+-    result=A.decode(ports.remote._call(program(ports.control,end,members,runtime['python_executable']),end,A.METADATA_LIMIT))
++    storage_admission=getattr(ports,'admission',None)
++    if storage_admission is not None and 'storage_exception' not in storage_admission:storage_admission=None
++    result=A.decode(ports.remote._call(program(ports.control,end,members,runtime['python_executable'],storage_admission),end,A.METADATA_LIMIT))
++    if storage_admission is not None:
++        storage_policy.verify_receipt(result['storage_exception_proof'],storage_admission,ports.clock())
++        A.need(result.get('storage')=='runpod_fuse' and result['local_nvme_verified'] is False,'TRUTHFUL_FUSE_RUNTIME_PROOF')
+@@ -146 +164 @@
+-           result['local_nvme_verified'] is True and result['free_bytes']>=NEEDED_BYTES and
++           (result['local_nvme_verified'] is True or storage_admission is not None) and result['free_bytes']>=NEEDED_BYTES and
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/remote_ops.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/remote_ops.py
+@@ -12 +12 @@
+- 'bootstrap/projects/g_agreement/e74/smoke.py':'13b448387df33c937ad2b7611b280c4c95dccc6cbacd81d396479e9ca813bae7',
++ 'bootstrap/projects/g_agreement/e74/smoke.py':'f429880331a09d76c4aca20bf25dd38cf7674bf3e36c3f01f7605de8f9cf9c01',
+@@ -15 +15 @@
+-ADMISSION_FIELDS={'issuer','experiment','admitted','authorized_phases','allocation_start_epoch','replica_hourly_usd',
++ADMISSION_FIELDS={'storage_exception','run_identity_sha256','allocation_receipt_sha256','issuer','experiment','admitted','authorized_phases','allocation_start_epoch','replica_hourly_usd',
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/source_verify.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/source_verify.py
+@@ -4 +4 @@
+-PRODUCTION={'bindings.py','g_candidate.py','SOURCE_PINS.json','source_verify.py','cpu_entry.py','driver.py','execution.py',
++PRODUCTION={'storage_policy.py','storage_contract.py','bindings.py','g_candidate.py','SOURCE_PINS.json','source_verify.py','cpu_entry.py','driver.py','execution.py',
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/storage_contract.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/storage_contract.py
+@@ -0,0 +1,85 @@
++"""Build FUSE admission from actual pod metadata and numbered read-only SSH.
++
++No provider calls, SSH calls, filesystem mutation or allocation occur here.
++The enclosing preparer validates transport ownership, the allocator's true exit,
++the original guard pair, dated budgets and the bound source hashes separately.
++"""
++import hashlib
++import json
++import importlib.util
++from pathlib import Path
++_spec=importlib.util.spec_from_file_location('bound_fuse_policy',Path(__file__).with_name('storage_policy.py'))
++policy=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(policy)
++
++
++def probe_source(allocation, sequence):
++    """Read only mount metadata, byte usage and free space, under setup900."""
++    policy.require(type(sequence) is int and sequence > 0, 'numbered observation required')
++    identity = allocation['identity_sha256']
++    end = allocation['original_setup_deadline_epoch']
++    return (
++        'import json,subprocess,shutil,time\n'
++        f'identity={identity!r}; end={end!r}; sequence={sequence!r}\n'
++        'assert time.time()<end\n'
++        'def read(argv):\n'
++        ' r=subprocess.run(argv,check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=max(.01,end-time.time()))\n'
++        ' assert len(r.stdout)<=262144 and time.time()<end\n'
++        ' return r.stdout\n'
++        "mount=json.loads(read(['findmnt','-J','-T','/workspace','-o','SOURCE,TARGET,FSTYPE']))\n"
++        "used=int(read(['du','-sx','-B1','/workspace']).split()[0])\n"
++        "free=shutil.disk_usage('/workspace').free\n"
++        "print(json.dumps(dict(schema='E74_STORAGE_READONLY_V1',run_identity_sha256=identity,sequence=sequence,checked_epoch=time.time(),original_setup_deadline_epoch=end,findmnt=mount,existing_volume_bytes=used,free_bytes=free)))\n"
++    )
++
++
++def build(allocation_raw, provider_raw, observation_raw, sequence, now):
++    a = json.loads(allocation_raw)
++    response = json.loads(provider_raw)
++    policy.require(not response.get('errors'), 'provider query failed')
++    pod = response['data']['pod']
++    obs = json.loads(observation_raw)
++    required = {'schema', 'run_identity_sha256', 'sequence', 'checked_epoch',
++                'original_setup_deadline_epoch', 'findmnt', 'existing_volume_bytes', 'free_bytes'}
++    policy.require(set(obs) == required and obs['schema'] == 'E74_STORAGE_READONLY_V1',
++                   'actual read-only storage observation required')
++    policy.require(type(sequence) is int and sequence > 0 and type(obs['sequence']) is int and obs['sequence'] == sequence,
++                   'fresh numbered storage observation required')
++    policy.require(obs['run_identity_sha256'] == a['identity_sha256'] and
++                   obs['original_setup_deadline_epoch'] == a['original_setup_deadline_epoch'],
++                   'observation belongs to another allocation')
++    policy.require(pod['id'] == a['pod_id'] and pod['name'] == a['run_id'] and
++                   pod['desiredStatus'] == 'RUNNING', 'actual running allocation required')
++    policy.require(pod['containerDiskInGb'] == a['container_disk_gb'] and
++                   pod['volumeInGb'] == a['local_volume_gb'] and
++                   pod.get('networkVolumeId') is None and a['network_volume_id'] is None,
++                   'actual provider volume differs from allocation')
++    policy.require(type(pod['volumeInGb']) is int and pod['volumeInGb'] > 0,
++                   'actual allocated volume capacity required')
++    policy.require(a['created_epoch'] <= obs['checked_epoch'] <= now <
++                   a['original_setup_deadline_epoch'] <= a['created_epoch'] + 900,
++                   'original setup clock expired or observation invalid')
++    policy.require(a['provider_stop_epoch'] - a['created_epoch'] ==
++                   a['original_full_forecast_seconds'], 'whole clock changed')
++    # Whole-run minus the original setup allowance covers weights, all science,
++    # forecast wait and closeout. Worker ops.budget also checks its actual phases.
++    remaining = a['original_full_forecast_seconds'] - 900
++    contract = dict(authority_sha256=policy.AUTHORITY_SHA256,
++        allocation_receipt_sha256=hashlib.sha256(allocation_raw).hexdigest(),
++        run_identity_sha256=a['identity_sha256'], allocation_start_epoch=a['created_epoch'],
++        provider_stop_epoch=a['provider_stop_epoch'], provider='RunPod',
++        volume_mount_path='/workspace', allocated_volume_bytes=pod['volumeInGb'] * 1_000_000_000,
++        existing_volume_bytes=obs['existing_volume_bytes'],
++        capacity_observed_epoch=obs['checked_epoch'], remaining_seconds=remaining)
++    admission = dict(storage_exception=contract,
++        allocation_receipt_sha256=contract['allocation_receipt_sha256'],
++        run_identity_sha256=a['identity_sha256'], allocation_start_epoch=a['created_epoch'],
++        provider_stop_epoch=a['provider_stop_epoch'], replica_hourly_usd=a['replica_hourly_usd'],
++        other_cost_upper_bound_usd=float(a['extras_upper_usd']), cap_usd=a['cap_usd'])
++    proof = policy.contract(admission, obs['findmnt'], obs['free_bytes'],
++                            policy.MIN_REQUIRED_BYTES, now)
++    return {'contract': contract, 'preflight_proof': proof,
++            'provider_observation_sha256': hashlib.sha256(provider_raw).hexdigest(),
++            'storage_observation_sha256': hashlib.sha256(observation_raw).hexdigest(),
++            'probe_source_sha256': hashlib.sha256(probe_source(a, sequence).encode()).hexdigest(),
++            'sequence': sequence, 'original_clocks_unchanged': True,
++            'local_nvme_verified': False}
+--- cache/g_agreement/i2/operator_g_h2008_a4_closed_driver_candidate/storage_policy.py
++++ cache/g_agreement/i2/operator_g_h2008_fuse_driver_candidate/storage_policy.py
+@@ -0,0 +1,104 @@
++"""E74's authorised RunPod FUSE exception; CPU validation only, no allocation.
++
++The operator must obtain the volume contract from the actual authenticated pod
++response and bind it into the existing SHA-bound I-2 admission. A FUSE pool's df
++total is never evidence of the pod's allocated capacity. No filesystem is
++reclassified as NVMe. Existing transfer/fsync/reread and engine gates still apply.
++"""
++import hashlib
++import json
++import math
++from pathlib import Path
++
++AUTHORITY_SHA256 = 'a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43'
++WEIGHT_BYTES = 466355755887
++MIN_REQUIRED_BYTES = 468704353377
++FUSE_TYPES = frozenset({'fuse', 'fuse.mfs', 'fuse3', 'fuse3.mfs'})
++
++
++def require(condition, message):
++    if not condition:
++        raise ValueError(message)
++
++
++def digest(value):
++    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':'),
++                                     allow_nan=False).encode()).hexdigest()
++
++
++def number(value):
++    require(type(value) in (int, float) and math.isfinite(value), 'finite number required')
++    return value
++
++
++def contract(admission, mount, free_bytes, required_bytes, now):
++    """Validate actual FUSE observation against the allocation-bound contract.
++
++    The contract is root/operator evidence, not a remotely self-issued waiver.
++    The caller first verifies the enclosing admission SHA and provider identity.
++    remaining_seconds includes all staging, idle, boot, smoke, capture, readouts
++    and closeout; it uses the existing whole-endpoint clock and cost padding.
++    """
++    c = admission.get('storage_exception')
++    require(isinstance(c, dict), 'FUSE requires allocation-bound storage exception')
++    keys = {'authority_sha256', 'allocation_receipt_sha256', 'run_identity_sha256',
++            'allocation_start_epoch', 'provider_stop_epoch', 'provider',
++            'volume_mount_path', 'allocated_volume_bytes', 'existing_volume_bytes',
++            'capacity_observed_epoch', 'remaining_seconds'}
++    require(set(c) == keys, 'storage contract fields differ')
++    require(c['authority_sha256'] == AUTHORITY_SHA256 and c['provider'] == 'RunPod',
++            'storage exception authority/provider differs')
++    for key in ('allocation_receipt_sha256', 'run_identity_sha256'):
++        require(isinstance(c[key], str) and len(c[key]) == 64 and
++                all(ch in '0123456789abcdef' for ch in c[key]), 'actual allocation identity required')
++        require(c[key] == admission.get(key), 'storage contract belongs to another allocation')
++    require(c['allocation_start_epoch'] == admission['allocation_start_epoch'] and
++            c['provider_stop_epoch'] == admission['provider_stop_epoch'], 'original allocation clocks differ')
++    now = number(now)
++    require(0 < c['allocation_start_epoch'] <= number(c['capacity_observed_epoch']) <= now <
++            c['provider_stop_epoch'], 'capacity observation outside original allocation')
++    require(isinstance(mount, dict) and len(mount.get('filesystems', [])) == 1,
++            'single actual filesystem observation required')
++    fs = mount['filesystems'][0]
++    require(fs['fstype'] in FUSE_TYPES, 'exception only admits RunPod FUSE')
++    require(fs['target'] == c['volume_mount_path'] == '/workspace', 'actual RunPod workspace mount required')
++    for value in (c['allocated_volume_bytes'], c['existing_volume_bytes'], free_bytes, required_bytes):
++        require(type(value) is int and value >= 0, 'nonnegative capacity bytes required')
++    require(required_bytes >= MIN_REQUIRED_BYTES and
++            c['allocated_volume_bytes'] - c['existing_volume_bytes'] >= required_bytes and
++            free_bytes >= required_bytes, 'insufficient allocated capacity or actual filesystem free space')
++    remaining = number(c['remaining_seconds'])
++    require(remaining > 0 and now + remaining <= c['provider_stop_epoch'], 'original full endpoint cannot fit')
++    rate = number(admission['replica_hourly_usd'])
++    extras = number(admission['other_cost_upper_bound_usd'])
++    cap = number(admission['cap_usd'])
++    require(rate > 0 and extras >= 0 and cap > 0, 'invalid forecast inputs')
++    padded = ((now - c['allocation_start_epoch'] + remaining) * rate / 3600 + extras) * 1.25
++    require(padded <= cap, 'full endpoint padded forecast exceeds cap')
++    return {'storage': 'runpod_fuse', 'local_nvme_verified': False,
++            'authority_sha256': AUTHORITY_SHA256, 'contract_sha256': digest(c),
++            'allocation_receipt_sha256': c['allocation_receipt_sha256'],
++            'run_identity_sha256': c['run_identity_sha256'],
++            'findmnt': mount, 'free_bytes': free_bytes, 'required_bytes': required_bytes,
++            'allocated_volume_bytes': c['allocated_volume_bytes'],
++            'existing_volume_bytes': c['existing_volume_bytes'],
++            'checked_epoch': now, 'forecast_times_1_25_usd': padded,
++            'no_second_full_cache': True}
++
++
++def verify_receipt(proof, admission, now):
++    require(isinstance(proof, dict), 'storage proof required')
++    expected = contract(admission, proof['findmnt'], proof['free_bytes'], proof['required_bytes'],
++                        proof['checked_epoch'])
++    require(proof == expected and proof['checked_epoch'] <= number(now), 'storage proof changed or is future dated')
++    require(now < admission['provider_stop_epoch'], 'original provider endpoint expired')
++    return proof
++
++
++def observe(path, admission, required_bytes, now, metadata, disk_usage):
++    """Read-only mount/capacity observation; no writes, transfers or GPU calls."""
++    path = Path(path).resolve()
++    require(path == Path('/workspace') or Path('/workspace') in path.parents,
++            'FUSE exception only covers workspace descendants')
++    mount = metadata(['findmnt', '-J', '-T', str(path), '-o', 'SOURCE,TARGET,FSTYPE'])
++    return contract(admission, mount, disk_usage(path).free, required_bytes, now)
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_allocate_candidate/allocate.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_allocate_candidate/allocate.py
+@@ -22 +22 @@
+-BUDGET=BASE/'g_b200_a4_closed_admission/BUDGET_PLANNING.json'
++BUDGET=BASE/'g_b200_fuse_admission/BUDGET_PLANNING.json'
+@@ -49 +49 @@
+-SOURCE_PINS={'/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/protocol.py': '68cb3d75ce53c3d6606c9c0417f97fd4ac753dbe6a94f70b277efcd364f927b6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/pins.py': 'd7740e61c3ea0dd3930f3dce7fd8bf5a4ed063b6da38cfb0c35b12e659c6a36b', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/transport.py': '1e006f62d6de68307adf1c50f4861566562f28f6abc8148b2185986e758543ac', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/PACKAGE.json': '08647e87f749ee5ab8148258c45f114a63749ebb917e70a94544ad738d4c4d56', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/CPU_TEST_RECEIPT.json': '3ca86f35950a6dc71721539aa7f66e9ddda74e189020e07dec5c3537c9272e96', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/START_COMMAND.txt': 'd68622d92301872ab4983616b735eeedfad829785acbe3c067b2984a3141aa7a', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/e74-public-runtime-recipe.tar.gz': '4ab27169cc752d7cfb48136ddf26c92b4c7cb7e2e1abf8bad26c80181ebe6853', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_b200_a4_closed_allocate_candidate/launch_plan.py': '6f47c4fa84c74ea08e7e24ee2132eb14a155bc552fe765eae79bf46eb2353575', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/E74_BOOTSTRAP_FAILURE_A2_CLOSEOUT.json': 'fdda5387f9ade766ff9e17da0229e1bb5fba07106138f1c66f7754f367f31ac5'}
++SOURCE_PINS={'/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/protocol.py': '68cb3d75ce53c3d6606c9c0417f97fd4ac753dbe6a94f70b277efcd364f927b6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/pins.py': 'd7740e61c3ea0dd3930f3dce7fd8bf5a4ed063b6da38cfb0c35b12e659c6a36b', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/transport.py': '1e006f62d6de68307adf1c50f4861566562f28f6abc8148b2185986e758543ac', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/PACKAGE.json': '08647e87f749ee5ab8148258c45f114a63749ebb917e70a94544ad738d4c4d56', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/CPU_TEST_RECEIPT.json': '3ca86f35950a6dc71721539aa7f66e9ddda74e189020e07dec5c3537c9272e96', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/START_COMMAND.txt': 'd68622d92301872ab4983616b735eeedfad829785acbe3c067b2984a3141aa7a', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/e74-public-runtime-recipe.tar.gz': '4ab27169cc752d7cfb48136ddf26c92b4c7cb7e2e1abf8bad26c80181ebe6853', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_b200_fuse_allocate_candidate/launch_plan.py': '6f47c4fa84c74ea08e7e24ee2132eb14a155bc552fe765eae79bf46eb2353575', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/E74_BOOTSTRAP_FAILURE_A2_CLOSEOUT.json': 'fdda5387f9ade766ff9e17da0229e1bb5fba07106138f1c66f7754f367f31ac5'}
+@@ -94,0 +95,2 @@
++    need(sha(read(Path('/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e74_fuse_storage_exception_cpu/B4/e74-fuse-storage-exception-v2.tar.gz')))=='b8f00b826f4d46cc1b61de8d1ecd4f4c093ca49dd25d2e5f9b3b2b24796a02bb','EXACT_FUSE_STORAGE_ARCHIVE')
++    need(sha(read(ROOT/'results/g_agreement/i2/E74_FUSE_STORAGE_EXCEPTION_AUTHORITY.json'))=='a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43','FUSE_AUTHORITY_SOURCE')
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_allocate_candidate/prepare.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_allocate_candidate/prepare.py
+@@ -10 +10 @@
+-BASE=L.BASE;DRIVER=BASE/'operator_g_b200_a4_closed_driver_candidate'
++BASE=L.BASE;DRIVER=BASE/'operator_g_b200_fuse_driver_candidate'
+@@ -12,3 +12,3 @@
+-ARCHIVE=OVERLAY/'e74-resident-running-mean-tp4-cap300-v1.tar.gz'
+-ARCHIVE_SHA='8414d981521b46be87af281f34fb04043bfe8e23e2bd185878a85e9bc38b5b91'
+-SOURCE_SEAL='deca766bff82204b806b4366d09d8d0dd9cc3ccc25ae4720689fa22e129b38bf'
++ARCHIVE=Path('/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e74_fuse_storage_exception_cpu/B4/e74-fuse-storage-exception-v2.tar.gz')
++ARCHIVE_SHA='b8f00b826f4d46cc1b61de8d1ecd4f4c093ca49dd25d2e5f9b3b2b24796a02bb'
++SOURCE_SEAL='c0de5de7686cef4a1363bc4a9ca6625ba43d90c3b3852a5ed8998d6bde7041a6'
+@@ -67 +67 @@
+-def prepare(allocation_path,exitproof,out,*,budget_path=L.BUDGET,now=None,sshraw=None,identity_file=None,known_hosts_file=None,guards_receipt=None):
++def prepare(allocation_path,exitproof,out,*,budget_path=L.BUDGET,now=None,sshraw=None,identity_file=None,known_hosts_file=None,guards_receipt=None,storage_observation_path=None,storage_sequence=None):
+@@ -106 +106 @@
+-    paths=[p for p in DRIVER.glob('*.py')if not p.name.startswith('test_')]+[Path(__file__).resolve(),Path(L.__file__).resolve(),Path(L.__file__).with_name('launch_plan.py'),ARCHIVE,inputs,Path(L.pins.API),GUARD_PY.resolve(),GUARD_WORKER.resolve(),Path('/usr/bin/caffeinate'),DRIVER/'SOURCE_PINS.json',DRIVER/'CONFIG_TEMPLATE.json',Path(budget_path),allocation_path,allocation_path.parent/'STOCK.response.private.json',Path(ruling['source_path']),Path(b['C_queue_assessment']['source_path']),L.A4.CLOSEOUT,Path(L.A4.__file__),L.G_AUTHORITY,L.HUMAN_STORAGE_CLOSEOUT,L.HUMAN_STAGE_CLOSEOUT,L.RETIRED_SUPPLY,L.RETIRED_SUPPLY_A3,L.RETRY_AUTHORITY,L.OPERATIONAL_CLOSEOUT,L.FAILED_REGION_SOURCE,Path(__file__).with_name('local_process.py'),Path(L.pins.LOCK)]+[Path(p)for p in L.SOURCE_PINS]
++    paths=[p for p in DRIVER.glob('*.py')if not p.name.startswith('test_')]+[Path(__file__).resolve(),Path(L.__file__).resolve(),Path(L.__file__).with_name('launch_plan.py'),ARCHIVE,inputs,Path(L.pins.API),GUARD_PY.resolve(),GUARD_WORKER.resolve(),Path('/usr/bin/caffeinate'),DRIVER/'SOURCE_PINS.json',DRIVER/'CONFIG_TEMPLATE.json',L.ROOT/'results/g_agreement/i2/E74_FUSE_STORAGE_EXCEPTION_AUTHORITY.json',Path(budget_path),allocation_path,allocation_path.parent/'STOCK.response.private.json',Path(ruling['source_path']),Path(b['C_queue_assessment']['source_path']),L.A4.CLOSEOUT,Path(L.A4.__file__),L.G_AUTHORITY,L.HUMAN_STORAGE_CLOSEOUT,L.HUMAN_STAGE_CLOSEOUT,L.RETIRED_SUPPLY,L.RETIRED_SUPPLY_A3,L.RETRY_AUTHORITY,L.OPERATIONAL_CLOSEOUT,L.FAILED_REGION_SOURCE,Path(__file__).with_name('local_process.py'),Path(L.pins.LOCK)]+[Path(p)for p in L.SOURCE_PINS]
+@@ -124,0 +125,9 @@
++    L.need(storage_observation_path is not None and type(storage_sequence)is int and storage_sequence>0,'ACTUAL_NUMBERED_STORAGE_OBSERVATION_REQUIRED')
++    sp=Path(storage_observation_path);storage_raw=L.read(sp)
++    _spec=importlib.util.spec_from_file_location('bound_fuse_contract',DRIVER/'storage_contract.py');factory=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(factory)
++    storage=factory.build(raw,sshraw,storage_raw,storage_sequence,now)
++    config['runtime']['storage_exception']=storage['contract']
++    config['runtime']['storage_admission_receipt_sha256']=L.sha(encoded(storage))
++    config['_source_bindings'][str(sp)]=L.sha(storage_raw)
++    config['_source_bindings'][str(DRIVER/'storage_contract.py')]=L.sha(L.read(DRIVER/'storage_contract.py'))
++    config['_source_bindings'][str(DRIVER/'storage_policy.py')]=L.sha(L.read(DRIVER/'storage_policy.py'))
+@@ -132 +141 @@
+-    p.add_argument('--ssh-observation',type=Path);p.add_argument('--ssh-identity-file',type=Path);p.add_argument('--known-hosts-file',type=Path);p.add_argument('--guards-receipt',type=Path)
++    p.add_argument('--storage-observation',type=Path);p.add_argument('--storage-sequence',type=int);p.add_argument('--ssh-observation',type=Path);p.add_argument('--ssh-identity-file',type=Path);p.add_argument('--known-hosts-file',type=Path);p.add_argument('--guards-receipt',type=Path)
+@@ -134 +143 @@
+-    result=prepare(args.allocation,proof,args.out,budget_path=args.budget,sshraw=None if args.ssh_observation is None else L.read(args.ssh_observation),identity_file=args.ssh_identity_file,known_hosts_file=args.known_hosts_file,guards_receipt=args.guards_receipt)
++    result=prepare(args.allocation,proof,args.out,budget_path=args.budget,sshraw=None if args.ssh_observation is None else L.read(args.ssh_observation),identity_file=args.ssh_identity_file,known_hosts_file=args.known_hosts_file,guards_receipt=args.guards_receipt,storage_observation_path=args.storage_observation,storage_sequence=args.storage_sequence)
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_allocate_candidate/test_prepare.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_allocate_candidate/test_prepare.py
+@@ -32 +32,4 @@
+-  return {'sshraw':T.enc({'data':{'pod':self.pod}}),'identity_file':self.identity,'known_hosts_file':self.hosts,'guards_receipt':self.gp}
++  self.storage_path=self.out/'STORAGE_OBSERVATION.private.json'
++  self.storage={'schema':'E74_STORAGE_READONLY_V1','run_identity_sha256':self.a['identity_sha256'],'sequence':1,'checked_epoch':T.NOW+1,'original_setup_deadline_epoch':self.a['original_setup_deadline_epoch'],'findmnt':{'filesystems':[{'source':'mfs','target':'/workspace','fstype':'fuse'}]},'existing_volume_bytes':1024,'free_bytes':10**12}
++  self.storage_path.write_bytes(T.enc(self.storage))
++  return {'sshraw':T.enc({'data':{'pod':self.pod}}),'identity_file':self.identity,'known_hosts_file':self.hosts,'guards_receipt':self.gp,'storage_observation_path':self.storage_path,'storage_sequence':1}
+@@ -112,0 +116,27 @@
++
++class FusePreparationTests(unittest.TestCase):
++ setUp=PreparationTests.setUp
++ first=PreparationTests.first
++ runprep=PreparationTests.runprep
++ second_args=PreparationTests.second_args
++ write_a=PreparationTests.write_a
++ def test_fuse_contract_binds_exact_allocation_and_actual_usage(self):
++  args=self.second_args(self.first());self.runprep(**args)
++  cfg=json.loads((self.out/'CONFIG.private.json').read_bytes());c=cfg['runtime']['storage_exception']
++  self.assertEqual(c['allocation_receipt_sha256'],A.sha(self.ap.read_bytes()))
++  self.assertEqual(c['run_identity_sha256'],self.a['identity_sha256'])
++  self.assertEqual(c['existing_volume_bytes'],1024)
++  self.assertEqual(c['allocated_volume_bytes'],1000000000000)
++  self.assertEqual(cfg['_source_bindings'][str(self.storage_path)],A.sha(self.storage_path.read_bytes()))
++ def test_no_storage_observation_no_final_config(self):
++  args=self.second_args(self.first());args['storage_observation_path']=None
++  with self.assertRaisesRegex(ValueError,'NUMBERED_STORAGE'):self.runprep(**args)
++  self.assertFalse((self.out/'CONFIG.private.json').exists())
++ def test_wrong_storage_identity_no_final_config(self):
++  args=self.second_args(self.first());self.storage['run_identity_sha256']='c'*64;self.storage_path.write_bytes(T.enc(self.storage))
++  with self.assertRaises(ValueError):self.runprep(**args)
++  self.assertFalse((self.out/'CONFIG.private.json').exists())
++ def test_used_volume_capacity_cannot_be_assumed_empty(self):
++  args=self.second_args(self.first());self.storage['existing_volume_bytes']=600000000000;self.storage_path.write_bytes(T.enc(self.storage))
++  with self.assertRaises(ValueError):self.runprep(**args)
++  self.assertFalse((self.out/'CONFIG.private.json').exists())
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/CONFIG_TEMPLATE.json
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/CONFIG_TEMPLATE.json
+@@ -59 +59 @@
+-    "archive_sha256": "8414d981521b46be87af281f34fb04043bfe8e23e2bd185878a85e9bc38b5b91",
++    "archive_sha256": "b8f00b826f4d46cc1b61de8d1ecd4f4c093ca49dd25d2e5f9b3b2b24796a02bb",
+@@ -89 +89 @@
+-    "source_seal_sha256": "deca766bff82204b806b4366d09d8d0dd9cc3ccc25ae4720689fa22e129b38bf",
++    "source_seal_sha256": "c0de5de7686cef4a1363bc4a9ca6625ba43d90c3b3852a5ed8998d6bde7041a6",
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/ROOT_FUSE_COMMANDS.md
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/ROOT_FUSE_COMMANDS.md
+@@ -0,0 +1,11 @@
++# B4 FUSE route — CPU verified, live effects disabled
++
++Use operator_g_b200_fuse_allocate_candidate/prepare.py and operator_g_b200_fuse_driver_candidate together. Next unused run e74-b200-20261028-a3. Planning budget g_b200_fuse_admission/BUDGET_PLANNING.json must be refreshed and the actual combined projection posted before any claim. All claims and closed charges remain consumed/booked once.
++
++Fresh actual quote/full padded forecast including all staging/idle/extras, Q/I2 ledgers/liabilities/C-first queue and dated budget are required. Bind enabled hashes by the existing ordinary opt-in; no further human approval. Never mutate a bound source midrun.
++
++Allocate once, observe real allocator exit, provider-only prepare.py before arming the original guards once. Independently observe installer exit and same pair. Poll numbered read-only provider SSH metadata under the original900 setup endpoint. Use storage_contract.probe_source(actual ALLOCATION object, positive fresh sequence) through the owned SSH transport to capture bounded read-only findmnt/du/free metadata in a new exclusive private file. No content is opened, transferred or executed by the probe.
++
++Final prepare.py requires --storage-observation /absolute/private/observation.json --storage-sequence N, original allocator exit, actual SSH metadata/identity/known-hosts and SAME guards receipt. It binds provider-allocated volume minus measured existing usage, actual free space, original ALLOCATION SHA/identity and clocks into runtime/admission. It rejects missing or changed proof. Reobserve/attach the SAME guards, pin exact sources and step the driver.
++
++Original environment900/weights3600/whole8473/boot-smoke1200 clocks and registered science remain unchanged. Only FUSE storage admission differs; it is never labelled NVMe. Weight streaming hashes/fsync/destination reread and full endpoint x1.25 remain mandatory. Stop rules, capture/forecast/GO custody, exactEXITED/querynull/ownedguard retirement and once-only billing remain unchanged.
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/SOURCE_PINS.json
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/SOURCE_PINS.json
+@@ -18,2 +18,3 @@
+-  "overlay_archive_sha256": "8414d981521b46be87af281f34fb04043bfe8e23e2bd185878a85e9bc38b5b91",
+-  "overlay_source_sha256": "deca766bff82204b806b4366d09d8d0dd9cc3ccc25ae4720689fa22e129b38bf"
++  "overlay_archive_sha256": "b8f00b826f4d46cc1b61de8d1ecd4f4c093ca49dd25d2e5f9b3b2b24796a02bb",
++  "overlay_source_sha256": "c0de5de7686cef4a1363bc4a9ca6625ba43d90c3b3852a5ed8998d6bde7041a6",
++  "storage_exception_authority_sha256": "a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43"
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/bindings.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/bindings.py
+@@ -12 +12 @@
+-    'g_candidate': ('operator_g_b200_a4_closed_driver_candidate/g_candidate.py','a1333a9aae338fbc555b759964f0cce054fa7ce11510c53c945077c423056cb1'),
++    'g_candidate': ('operator_g_b200_fuse_driver_candidate/g_candidate.py','ee7b3932327cc95d5b6386a1993ee68a0ec52450a0be8d594388fa1937d090f5'),
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/driver.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/driver.py
+@@ -111,0 +112,4 @@
++        if self.config['runtime'].get('storage_exception') is not None:
++            c=self.config['runtime']['storage_exception']
++            A.need(c['run_identity_sha256']==allocation['identity_sha256'] and c['allocation_start_epoch']==created and c['provider_stop_epoch']==stop,'FUSE_ACTUAL_ALLOCATION_BINDING')
++            a.update(storage_exception=c,run_identity_sha256=allocation['identity_sha256'],allocation_receipt_sha256=c['allocation_receipt_sha256'])
+@@ -128,0 +133 @@
++        self.ports.admission=self.s['admission']
+@@ -164 +169 @@
+-               result['objects']==65 and result['full_sha_verified'] is True and result['local_nvme_verified'] is True and
++               result['objects']==65 and result['full_sha_verified'] is True and (result['local_nvme_verified'] is True or (result.get('storage')=='runpod_fuse' and result.get('storage_exception_verified') is True)) and
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/g_candidate.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/g_candidate.py
+@@ -24 +24 @@
+-PIN_SHA = '8ba3d2cd4dc346d04104298103a0497a7fc1a0ca06bb4256cba1df0c23d22ea6'
++PIN_SHA = '1cec0cec282cec130a9fa4a9baca8e2524c8abf14d4cadd0a6856326ae7e48c5'
+@@ -31,3 +31,3 @@
+-SOURCE_SEAL = 'deca766bff82204b806b4366d09d8d0dd9cc3ccc25ae4720689fa22e129b38bf'
+-ARCHIVE = '8414d981521b46be87af281f34fb04043bfe8e23e2bd185878a85e9bc38b5b91'
+-ARCHIVE_BYTES = 1408817
++SOURCE_SEAL = 'c0de5de7686cef4a1363bc4a9ca6625ba43d90c3b3852a5ed8998d6bde7041a6'
++ARCHIVE = 'b8f00b826f4d46cc1b61de8d1ecd4f4c093ca49dd25d2e5f9b3b2b24796a02bb'
++ARCHIVE_BYTES = 1411068
+@@ -211 +211 @@
+-    path=HERE.parent/'operator_g_tp4_cap300_overlay_candidate/e74-resident-running-mean-tp4-cap300-v1.tar.gz'
++    path=Path('/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e74_fuse_storage_exception_cpu/B4/e74-fuse-storage-exception-v2.tar.gz')
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/ports.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/ports.py
+@@ -8,0 +9 @@
++import storage_policy
+@@ -125 +126,5 @@
+-        A.need(st['storage']=='local_nvme' and st['full_weight_sha256_verified'] is True and st['canonical_cache_unchanged'] is True and
++        fuse=st.get('storage')=='runpod_fuse'
++        if fuse:
++            storage_policy.verify_receipt(st['storage_exception_proof'],self.admission,self.clock())
++            A.need(all(disk.get(k)==v for k,v in st['storage_exception_proof'].items()),'FUSE_DISK_PROOF_BINDING')
++        A.need((st['storage']=='local_nvme' or fuse) and st['full_weight_sha256_verified'] is True and st['canonical_cache_unchanged'] is True and
+@@ -129 +134 @@
+-        return dict(value,status='STAGED',runtime_files=59,objects=65,full_sha_verified=True,local_nvme_verified=True,
++        return dict(value,status='STAGED',runtime_files=59,objects=65,full_sha_verified=True,local_nvme_verified=not fuse,storage=st['storage'],storage_exception_verified=fuse,
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/public_setup.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/public_setup.py
+@@ -14,0 +15,2 @@
++import storage_policy
++STORAGE_POLICY_SOURCE = '"""E74\'s authorised RunPod FUSE exception; CPU validation only, no allocation.\n\nThe operator must obtain the volume contract from the actual authenticated pod\nresponse and bind it into the existing SHA-bound I-2 admission. A FUSE pool\'s df\ntotal is never evidence of the pod\'s allocated capacity. No filesystem is\nreclassified as NVMe. Existing transfer/fsync/reread and engine gates still apply.\n"""\nimport hashlib\nimport json\nimport math\nfrom pathlib import Path\n\nAUTHORITY_SHA256 = \'a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43\'\nWEIGHT_BYTES = 466355755887\nMIN_REQUIRED_BYTES = 468704353377\nFUSE_TYPES = frozenset({\'fuse\', \'fuse.mfs\', \'fuse3\', \'fuse3.mfs\'})\n\n\ndef require(condition, message):\n    if not condition:\n        raise ValueError(message)\n\n\ndef digest(value):\n    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(\',\', \':\'),\n                                     allow_nan=False).encode()).hexdigest()\n\n\ndef number(value):\n    require(type(value) in (int, float) and math.isfinite(value), \'finite number required\')\n    return value\n\n\ndef contract(admission, mount, free_bytes, required_bytes, now):\n    """Validate actual FUSE observation against the allocation-bound contract.\n\n    The contract is root/operator evidence, not a remotely self-issued waiver.\n    The caller first verifies the enclosing admission SHA and provider identity.\n    remaining_seconds includes all staging, idle, boot, smoke, capture, readouts\n    and closeout; it uses the existing whole-endpoint clock and cost padding.\n    """\n    c = admission.get(\'storage_exception\')\n    require(isinstance(c, dict), \'FUSE requires allocation-bound storage exception\')\n    keys = {\'authority_sha256\', \'allocation_receipt_sha256\', \'run_identity_sha256\',\n            \'allocation_start_epoch\', \'provider_stop_epoch\', \'provider\',\n            \'volume_mount_path\', \'allocated_volume_bytes\', \'existing_volume_bytes\',\n            \'capacity_observed_epoch\', \'remaining_seconds\'}\n    require(set(c) == keys, \'storage contract fields differ\')\n    require(c[\'authority_sha256\'] == AUTHORITY_SHA256 and c[\'provider\'] == \'RunPod\',\n            \'storage exception authority/provider differs\')\n    for key in (\'allocation_receipt_sha256\', \'run_identity_sha256\'):\n        require(isinstance(c[key], str) and len(c[key]) == 64 and\n                all(ch in \'0123456789abcdef\' for ch in c[key]), \'actual allocation identity required\')\n        require(c[key] == admission.get(key), \'storage contract belongs to another allocation\')\n    require(c[\'allocation_start_epoch\'] == admission[\'allocation_start_epoch\'] and\n            c[\'provider_stop_epoch\'] == admission[\'provider_stop_epoch\'], \'original allocation clocks differ\')\n    now = number(now)\n    require(0 < c[\'allocation_start_epoch\'] <= number(c[\'capacity_observed_epoch\']) <= now <\n            c[\'provider_stop_epoch\'], \'capacity observation outside original allocation\')\n    require(isinstance(mount, dict) and len(mount.get(\'filesystems\', [])) == 1,\n            \'single actual filesystem observation required\')\n    fs = mount[\'filesystems\'][0]\n    require(fs[\'fstype\'] in FUSE_TYPES, \'exception only admits RunPod FUSE\')\n    require(fs[\'target\'] == c[\'volume_mount_path\'] == \'/workspace\', \'actual RunPod workspace mount required\')\n    for value in (c[\'allocated_volume_bytes\'], c[\'existing_volume_bytes\'], free_bytes, required_bytes):\n        require(type(value) is int and value >= 0, \'nonnegative capacity bytes required\')\n    require(required_bytes >= MIN_REQUIRED_BYTES and\n            c[\'allocated_volume_bytes\'] - c[\'existing_volume_bytes\'] >= required_bytes and\n            free_bytes >= required_bytes, \'insufficient allocated capacity or actual filesystem free space\')\n    remaining = number(c[\'remaining_seconds\'])\n    require(remaining > 0 and now + remaining <= c[\'provider_stop_epoch\'], \'original full endpoint cannot fit\')\n    rate = number(admission[\'replica_hourly_usd\'])\n    extras = number(admission[\'other_cost_upper_bound_usd\'])\n    cap = number(admission[\'cap_usd\'])\n    require(rate > 0 and extras >= 0 and cap > 0, \'invalid forecast inputs\')\n    padded = ((now - c[\'allocation_start_epoch\'] + remaining) * rate / 3600 + extras) * 1.25\n    require(padded <= cap, \'full endpoint padded forecast exceeds cap\')\n    return {\'storage\': \'runpod_fuse\', \'local_nvme_verified\': False,\n            \'authority_sha256\': AUTHORITY_SHA256, \'contract_sha256\': digest(c),\n            \'allocation_receipt_sha256\': c[\'allocation_receipt_sha256\'],\n            \'run_identity_sha256\': c[\'run_identity_sha256\'],\n            \'findmnt\': mount, \'free_bytes\': free_bytes, \'required_bytes\': required_bytes,\n            \'allocated_volume_bytes\': c[\'allocated_volume_bytes\'],\n            \'existing_volume_bytes\': c[\'existing_volume_bytes\'],\n            \'checked_epoch\': now, \'forecast_times_1_25_usd\': padded,\n            \'no_second_full_cache\': True}\n\n\ndef verify_receipt(proof, admission, now):\n    require(isinstance(proof, dict), \'storage proof required\')\n    expected = contract(admission, proof[\'findmnt\'], proof[\'free_bytes\'], proof[\'required_bytes\'],\n                        proof[\'checked_epoch\'])\n    require(proof == expected and proof[\'checked_epoch\'] <= number(now), \'storage proof changed or is future dated\')\n    require(now < admission[\'provider_stop_epoch\'], \'original provider endpoint expired\')\n    return proof\n\n\ndef observe(path, admission, required_bytes, now, metadata, disk_usage):\n    """Read-only mount/capacity observation; no writes, transfers or GPU calls."""\n    path = Path(path).resolve()\n    require(path == Path(\'/workspace\') or Path(\'/workspace\') in path.parents,\n            \'FUSE exception only covers workspace descendants\')\n    mount = metadata([\'findmnt\', \'-J\', \'-T\', str(path), \'-o\', \'SOURCE,TARGET,FSTYPE\'])\n    return contract(admission, mount, disk_usage(path).free, required_bytes, now)\n'
+@@ -74,11 +76,21 @@
+-        source=mount['filesystems'][0]['source'].split('[')[0]
+-        require(source.startswith('/dev/'),'STAGING_NOT_BLOCK_MOUNT')
+-        devices=metadata(['lsblk','-s','-J','-o','NAME,TYPE,TRAN,PATH',source])
+-        def leaves(node):
+-            return [x for c in node['children'] for x in leaves(c)] if node.get('children') else [node]
+-        disks=[leaf for node in devices['blockdevices'] for leaf in leaves(node)]
+-        require(disks and all(d['tran']=='nvme' for d in disks),'STAGING_NOT_LOCAL_NVME')
+-        free=shutil.disk_usage(C['root']).free
+-        require(free>=C['needed_bytes'],'INSUFFICIENT_STAGING_SPACE')
+-        disk=dict(findmnt=mount,lsblk=devices,free_bytes=free,required_bytes=C['needed_bytes'])
+-        write_once(root,'control/PUBLIC_NVME_PROOF.json',json.dumps(disk,sort_keys=True).encode())
++        if C.get('storage_admission') is not None:
++            namespace={}
++            exec(STORAGE_POLICY_SOURCE,namespace)
++            disk=namespace['contract'](C['storage_admission'],mount,
++                shutil.disk_usage(C['root']).free,C['needed_bytes'],time.time())
++            local_nvme=False
++            write_once(root,'control/PUBLIC_STORAGE_PROOF.json',json.dumps(disk,sort_keys=True).encode())
++        else:
++            source=mount['filesystems'][0]['source'].split('[')[0]
++            require(source.startswith('/dev/'),'STAGING_NOT_BLOCK_MOUNT')
++            devices=metadata(['lsblk','-s','-J','-o','NAME,TYPE,TRAN,PATH',source])
++            def leaves(node):
++                return [x for c in node['children'] for x in leaves(c)] if node.get('children') else [node]
++            disks=[leaf for node in devices['blockdevices'] for leaf in leaves(node)]
++            require(disks and all(d['tran']=='nvme' for d in disks),'STAGING_NOT_LOCAL_NVME')
++            free=shutil.disk_usage(C['root']).free
++            require(free>=C['needed_bytes'],'INSUFFICIENT_STAGING_SPACE')
++            disk=dict(findmnt=mount,lsblk=devices,free_bytes=free,required_bytes=C['needed_bytes'])
++            local_nvme=True
++            write_once(root,'control/PUBLIC_NVME_PROOF.json',json.dumps(disk,sort_keys=True).encode())
++        free=disk['free_bytes']
+@@ -89 +101,2 @@
+-            local_nvme_verified=True,free_bytes=free,required_bytes=C['needed_bytes'])
++            local_nvme_verified=local_nvme,free_bytes=free,required_bytes=C['needed_bytes'])
++        if not local_nvme:result.update(storage='runpod_fuse',storage_exception_proof=disk)
+@@ -96 +109 @@
+-def program(control, end, members, python):
++def program(control, end, members, python, storage_admission=None):
+@@ -99 +112 @@
+-                           members=members,python=python,needed_bytes=NEEDED_BYTES)
++                           members=members,python=python,needed_bytes=NEEDED_BYTES,storage_admission=storage_admission)
+@@ -101 +114 @@
+-    return before+REMOTE+'\nC='+after
++    return before+'\nSTORAGE_POLICY_SOURCE='+repr(STORAGE_POLICY_SOURCE)+'\n'+REMOTE+'\nC='+after
+@@ -142 +155,6 @@
+-    result=A.decode(ports.remote._call(program(ports.control,end,members,runtime['python_executable']),end,A.METADATA_LIMIT))
++    storage_admission=getattr(ports,'admission',None)
++    if storage_admission is not None and 'storage_exception' not in storage_admission:storage_admission=None
++    result=A.decode(ports.remote._call(program(ports.control,end,members,runtime['python_executable'],storage_admission),end,A.METADATA_LIMIT))
++    if storage_admission is not None:
++        storage_policy.verify_receipt(result['storage_exception_proof'],storage_admission,ports.clock())
++        A.need(result.get('storage')=='runpod_fuse' and result['local_nvme_verified'] is False,'TRUTHFUL_FUSE_RUNTIME_PROOF')
+@@ -146 +164 @@
+-           result['local_nvme_verified'] is True and result['free_bytes']>=NEEDED_BYTES and
++           (result['local_nvme_verified'] is True or storage_admission is not None) and result['free_bytes']>=NEEDED_BYTES and
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/remote_ops.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/remote_ops.py
+@@ -12 +12 @@
+- 'bootstrap/projects/g_agreement/e74/smoke.py':'13b448387df33c937ad2b7611b280c4c95dccc6cbacd81d396479e9ca813bae7',
++ 'bootstrap/projects/g_agreement/e74/smoke.py':'f429880331a09d76c4aca20bf25dd38cf7674bf3e36c3f01f7605de8f9cf9c01',
+@@ -15 +15 @@
+-ADMISSION_FIELDS={'issuer','experiment','admitted','authorized_phases','allocation_start_epoch','replica_hourly_usd',
++ADMISSION_FIELDS={'storage_exception','run_identity_sha256','allocation_receipt_sha256','issuer','experiment','admitted','authorized_phases','allocation_start_epoch','replica_hourly_usd',
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/source_verify.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/source_verify.py
+@@ -4 +4 @@
+-PRODUCTION={'bindings.py','g_candidate.py','SOURCE_PINS.json','source_verify.py','cpu_entry.py','driver.py','execution.py',
++PRODUCTION={'storage_policy.py','storage_contract.py','bindings.py','g_candidate.py','SOURCE_PINS.json','source_verify.py','cpu_entry.py','driver.py','execution.py',
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/storage_contract.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/storage_contract.py
+@@ -0,0 +1,85 @@
++"""Build FUSE admission from actual pod metadata and numbered read-only SSH.
++
++No provider calls, SSH calls, filesystem mutation or allocation occur here.
++The enclosing preparer validates transport ownership, the allocator's true exit,
++the original guard pair, dated budgets and the bound source hashes separately.
++"""
++import hashlib
++import json
++import importlib.util
++from pathlib import Path
++_spec=importlib.util.spec_from_file_location('bound_fuse_policy',Path(__file__).with_name('storage_policy.py'))
++policy=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(policy)
++
++
++def probe_source(allocation, sequence):
++    """Read only mount metadata, byte usage and free space, under setup900."""
++    policy.require(type(sequence) is int and sequence > 0, 'numbered observation required')
++    identity = allocation['identity_sha256']
++    end = allocation['original_setup_deadline_epoch']
++    return (
++        'import json,subprocess,shutil,time\n'
++        f'identity={identity!r}; end={end!r}; sequence={sequence!r}\n'
++        'assert time.time()<end\n'
++        'def read(argv):\n'
++        ' r=subprocess.run(argv,check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=max(.01,end-time.time()))\n'
++        ' assert len(r.stdout)<=262144 and time.time()<end\n'
++        ' return r.stdout\n'
++        "mount=json.loads(read(['findmnt','-J','-T','/workspace','-o','SOURCE,TARGET,FSTYPE']))\n"
++        "used=int(read(['du','-sx','-B1','/workspace']).split()[0])\n"
++        "free=shutil.disk_usage('/workspace').free\n"
++        "print(json.dumps(dict(schema='E74_STORAGE_READONLY_V1',run_identity_sha256=identity,sequence=sequence,checked_epoch=time.time(),original_setup_deadline_epoch=end,findmnt=mount,existing_volume_bytes=used,free_bytes=free)))\n"
++    )
++
++
++def build(allocation_raw, provider_raw, observation_raw, sequence, now):
++    a = json.loads(allocation_raw)
++    response = json.loads(provider_raw)
++    policy.require(not response.get('errors'), 'provider query failed')
++    pod = response['data']['pod']
++    obs = json.loads(observation_raw)
++    required = {'schema', 'run_identity_sha256', 'sequence', 'checked_epoch',
++                'original_setup_deadline_epoch', 'findmnt', 'existing_volume_bytes', 'free_bytes'}
++    policy.require(set(obs) == required and obs['schema'] == 'E74_STORAGE_READONLY_V1',
++                   'actual read-only storage observation required')
++    policy.require(type(sequence) is int and sequence > 0 and type(obs['sequence']) is int and obs['sequence'] == sequence,
++                   'fresh numbered storage observation required')
++    policy.require(obs['run_identity_sha256'] == a['identity_sha256'] and
++                   obs['original_setup_deadline_epoch'] == a['original_setup_deadline_epoch'],
++                   'observation belongs to another allocation')
++    policy.require(pod['id'] == a['pod_id'] and pod['name'] == a['run_id'] and
++                   pod['desiredStatus'] == 'RUNNING', 'actual running allocation required')
++    policy.require(pod['containerDiskInGb'] == a['container_disk_gb'] and
++                   pod['volumeInGb'] == a['local_volume_gb'] and
++                   pod.get('networkVolumeId') is None and a['network_volume_id'] is None,
++                   'actual provider volume differs from allocation')
++    policy.require(type(pod['volumeInGb']) is int and pod['volumeInGb'] > 0,
++                   'actual allocated volume capacity required')
++    policy.require(a['created_epoch'] <= obs['checked_epoch'] <= now <
++                   a['original_setup_deadline_epoch'] <= a['created_epoch'] + 900,
++                   'original setup clock expired or observation invalid')
++    policy.require(a['provider_stop_epoch'] - a['created_epoch'] ==
++                   a['original_full_forecast_seconds'], 'whole clock changed')
++    # Whole-run minus the original setup allowance covers weights, all science,
++    # forecast wait and closeout. Worker ops.budget also checks its actual phases.
++    remaining = a['original_full_forecast_seconds'] - 900
++    contract = dict(authority_sha256=policy.AUTHORITY_SHA256,
++        allocation_receipt_sha256=hashlib.sha256(allocation_raw).hexdigest(),
++        run_identity_sha256=a['identity_sha256'], allocation_start_epoch=a['created_epoch'],
++        provider_stop_epoch=a['provider_stop_epoch'], provider='RunPod',
++        volume_mount_path='/workspace', allocated_volume_bytes=pod['volumeInGb'] * 1_000_000_000,
++        existing_volume_bytes=obs['existing_volume_bytes'],
++        capacity_observed_epoch=obs['checked_epoch'], remaining_seconds=remaining)
++    admission = dict(storage_exception=contract,
++        allocation_receipt_sha256=contract['allocation_receipt_sha256'],
++        run_identity_sha256=a['identity_sha256'], allocation_start_epoch=a['created_epoch'],
++        provider_stop_epoch=a['provider_stop_epoch'], replica_hourly_usd=a['replica_hourly_usd'],
++        other_cost_upper_bound_usd=float(a['extras_upper_usd']), cap_usd=a['cap_usd'])
++    proof = policy.contract(admission, obs['findmnt'], obs['free_bytes'],
++                            policy.MIN_REQUIRED_BYTES, now)
++    return {'contract': contract, 'preflight_proof': proof,
++            'provider_observation_sha256': hashlib.sha256(provider_raw).hexdigest(),
++            'storage_observation_sha256': hashlib.sha256(observation_raw).hexdigest(),
++            'probe_source_sha256': hashlib.sha256(probe_source(a, sequence).encode()).hexdigest(),
++            'sequence': sequence, 'original_clocks_unchanged': True,
++            'local_nvme_verified': False}
+--- cache/g_agreement/i2/operator_g_b200_a4_closed_driver_candidate/storage_policy.py
++++ cache/g_agreement/i2/operator_g_b200_fuse_driver_candidate/storage_policy.py
+@@ -0,0 +1,104 @@
++"""E74's authorised RunPod FUSE exception; CPU validation only, no allocation.
++
++The operator must obtain the volume contract from the actual authenticated pod
++response and bind it into the existing SHA-bound I-2 admission. A FUSE pool's df
++total is never evidence of the pod's allocated capacity. No filesystem is
++reclassified as NVMe. Existing transfer/fsync/reread and engine gates still apply.
++"""
++import hashlib
++import json
++import math
++from pathlib import Path
++
++AUTHORITY_SHA256 = 'a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43'
++WEIGHT_BYTES = 466355755887
++MIN_REQUIRED_BYTES = 468704353377
++FUSE_TYPES = frozenset({'fuse', 'fuse.mfs', 'fuse3', 'fuse3.mfs'})
++
++
++def require(condition, message):
++    if not condition:
++        raise ValueError(message)
++
++
++def digest(value):
++    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':'),
++                                     allow_nan=False).encode()).hexdigest()
++
++
++def number(value):
++    require(type(value) in (int, float) and math.isfinite(value), 'finite number required')
++    return value
++
++
++def contract(admission, mount, free_bytes, required_bytes, now):
++    """Validate actual FUSE observation against the allocation-bound contract.
++
++    The contract is root/operator evidence, not a remotely self-issued waiver.
++    The caller first verifies the enclosing admission SHA and provider identity.
++    remaining_seconds includes all staging, idle, boot, smoke, capture, readouts
++    and closeout; it uses the existing whole-endpoint clock and cost padding.
++    """
++    c = admission.get('storage_exception')
++    require(isinstance(c, dict), 'FUSE requires allocation-bound storage exception')
++    keys = {'authority_sha256', 'allocation_receipt_sha256', 'run_identity_sha256',
++            'allocation_start_epoch', 'provider_stop_epoch', 'provider',
++            'volume_mount_path', 'allocated_volume_bytes', 'existing_volume_bytes',
++            'capacity_observed_epoch', 'remaining_seconds'}
++    require(set(c) == keys, 'storage contract fields differ')
++    require(c['authority_sha256'] == AUTHORITY_SHA256 and c['provider'] == 'RunPod',
++            'storage exception authority/provider differs')
++    for key in ('allocation_receipt_sha256', 'run_identity_sha256'):
++        require(isinstance(c[key], str) and len(c[key]) == 64 and
++                all(ch in '0123456789abcdef' for ch in c[key]), 'actual allocation identity required')
++        require(c[key] == admission.get(key), 'storage contract belongs to another allocation')
++    require(c['allocation_start_epoch'] == admission['allocation_start_epoch'] and
++            c['provider_stop_epoch'] == admission['provider_stop_epoch'], 'original allocation clocks differ')
++    now = number(now)
++    require(0 < c['allocation_start_epoch'] <= number(c['capacity_observed_epoch']) <= now <
++            c['provider_stop_epoch'], 'capacity observation outside original allocation')
++    require(isinstance(mount, dict) and len(mount.get('filesystems', [])) == 1,
++            'single actual filesystem observation required')
++    fs = mount['filesystems'][0]
++    require(fs['fstype'] in FUSE_TYPES, 'exception only admits RunPod FUSE')
++    require(fs['target'] == c['volume_mount_path'] == '/workspace', 'actual RunPod workspace mount required')
++    for value in (c['allocated_volume_bytes'], c['existing_volume_bytes'], free_bytes, required_bytes):
++        require(type(value) is int and value >= 0, 'nonnegative capacity bytes required')
++    require(required_bytes >= MIN_REQUIRED_BYTES and
++            c['allocated_volume_bytes'] - c['existing_volume_bytes'] >= required_bytes and
++            free_bytes >= required_bytes, 'insufficient allocated capacity or actual filesystem free space')
++    remaining = number(c['remaining_seconds'])
++    require(remaining > 0 and now + remaining <= c['provider_stop_epoch'], 'original full endpoint cannot fit')
++    rate = number(admission['replica_hourly_usd'])
++    extras = number(admission['other_cost_upper_bound_usd'])
++    cap = number(admission['cap_usd'])
++    require(rate > 0 and extras >= 0 and cap > 0, 'invalid forecast inputs')
++    padded = ((now - c['allocation_start_epoch'] + remaining) * rate / 3600 + extras) * 1.25
++    require(padded <= cap, 'full endpoint padded forecast exceeds cap')
++    return {'storage': 'runpod_fuse', 'local_nvme_verified': False,
++            'authority_sha256': AUTHORITY_SHA256, 'contract_sha256': digest(c),
++            'allocation_receipt_sha256': c['allocation_receipt_sha256'],
++            'run_identity_sha256': c['run_identity_sha256'],
++            'findmnt': mount, 'free_bytes': free_bytes, 'required_bytes': required_bytes,
++            'allocated_volume_bytes': c['allocated_volume_bytes'],
++            'existing_volume_bytes': c['existing_volume_bytes'],
++            'checked_epoch': now, 'forecast_times_1_25_usd': padded,
++            'no_second_full_cache': True}
++
++
++def verify_receipt(proof, admission, now):
++    require(isinstance(proof, dict), 'storage proof required')
++    expected = contract(admission, proof['findmnt'], proof['free_bytes'], proof['required_bytes'],
++                        proof['checked_epoch'])
++    require(proof == expected and proof['checked_epoch'] <= number(now), 'storage proof changed or is future dated')
++    require(now < admission['provider_stop_epoch'], 'original provider endpoint expired')
++    return proof
++
++
++def observe(path, admission, required_bytes, now, metadata, disk_usage):
++    """Read-only mount/capacity observation; no writes, transfers or GPU calls."""
++    path = Path(path).resolve()
++    require(path == Path('/workspace') or Path('/workspace') in path.parents,
++            'FUSE exception only covers workspace descendants')
++    mount = metadata(['findmnt', '-J', '-T', str(path), '-o', 'SOURCE,TARGET,FSTYPE'])
++    return contract(admission, mount, disk_usage(path).free, required_bytes, now)

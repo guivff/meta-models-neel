@@ -1,0 +1,12 @@
+{
+  "id": "3993bec6ec11a20679523b18",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"if sentence is positive, reply 'Positive'; if negative, reply 'Negative'\"), establishing a strict classification task format.\n\nThe example structure shows a template: \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the classification answer for the specific sentence \"The weather is very good today.\"\n\n\"Reply:\" is the final token, acting as a prompt label requiring the direct answer (\"Positive\" or \"Negative\") to follow immediately, consistent with the Arabic/Chinese bilingual format established.\n\"Given sentence: 'The weather is very good today.'\nExample sentence: The weather is very good today.\nReply:\" \u2014 this is the final prompt field, expecting the model's classification response as the next token, likely \"Positive\" or a short answer.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"if sentence is positive, reply 'Positive'; if negative, reply 'Negative'\"), establishing a strict classification task format.\n\nThe example structure shows a template: \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the classification answer for the specific sentence \"The weather is very good today.\"\n\n\"Reply:\" is the final token, acting as a prompt label requiring the direct answer (\"Positive\" or \"Negative\") to follow immediately, consistent with the Arabic/Chinese bilingual format established.\n\"Given sentence: 'The weather is very good today.'\nExample sentence: The weather is very good today.\nReply:\" \u2014 this is the final prompt field, expecting the model's classification response as the next token, likely \"Positive\" or a short answer.\n\"Reply:\"",
+  "truncated": false
+}

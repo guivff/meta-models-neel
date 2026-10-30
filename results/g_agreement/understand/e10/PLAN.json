@@ -1,0 +1,41 @@
+{
+  "section": 97,
+  "experiment": "E10",
+  "status": "FROZEN_BEFORE_FIRST_E10_PAID_SEND",
+  "seed": 20261024,
+  "frozen_utc": "2026-10-24T02:38:50Z",
+  "model": "google/gemini-3.1-flash-lite",
+  "provider": "Google Vertex global only; no fallback; minimal reasoning; temperature 0",
+  "price_cap_per_million_usd": {
+    "input": 0.25,
+    "output": 1.5
+  },
+  "public_endpoint_metadata_sha256": "122326eb4fec40b79c22ed909a119323415097b198dcb7573d971eec4ce9c817",
+  "gpu_h": 0,
+  "api_cap_usd": 20,
+  "privacy_amendment": "2026-10-24, before any inference: user approved Gemini 3.1 Flash Lite via Google Vertex through OpenRouter only, W1/S61 readouts and derived blinded claims; no source prompts, labels, keys or file paths. User increased hard cap to $20 before any inference. provider.data_collection=deny; provider.zdr=true; no fallbacks/redirects. Fail before inference unless exact model/provider occurs in ZDR inventory and OpenRouter own logging/use-of-inputs toggles are verified off. No scientific rule or pool changed.",
+  "model_substitution": "2026-10-24: approved Gemini 3.1 Flash Lite on Vertex global. Minimal reasoning (Gemini 3 thinking-level interface); max completion match4096/classify6144 to fit opaque IDs and strict JSON, before any scoring. Prompts, pool, batching, matching, clustering and selection unchanged.",
+  "workers": 8,
+  "retries": 0,
+  "extraction_unique_readouts": 5236,
+  "extraction_calls": 1309,
+  "extraction_all_call_reserves_usd": "17.3058734375",
+  "extract": "Independent opaque text hashes; deduplicate identical raw strings globally. Batch 4; never include both nonidentical members of a pair in a batch. Exact evidence required. Whole invalid batch missing, no repair. No count cap on claims.",
+  "match": "Only pairs with both valid extractions; material equivalence; one-to-one; batch16. Zero claims on either side yields deterministic empty matching.",
+  "taxonomy": "Discover 3–12 content types on 512 one-sided claims by seeded hash; identities/source/sites/labels hidden; seal taxonomy before classification. Classify all remaining (including sample) once, batch64.",
+  "selection": "Rank types by total valid classified one-sided claims (ties by type id). For the top three, choose two eligible distinct pairs by number of claims of that type, descending; ties by seeded hash(example,type,pair). Reserve frozen two random pair IDs and avoid duplicates across all examples. No posthoc replacements for missing random annotations; report shortfalls. Exposure item excluded from examples.",
+  "coverage": "Report batch and pair failures, excluded W6, all stage missingness. No absent readout/extraction is a one-sided claim. No truth/correctness claim. All counts descriptive; no pass/fail, CI, or generalization.",
+  "interpretation": "Programme predicts complementary descriptive vs enacted content; no E10-specific numerical prediction registered. Claim count may reflect verbosity/style. Preserve raw output including markers and incomplete endings. Native sites confounded. Same text reused across cases and W1 repeat samples not independent.",
+  "frozen_files": {
+    "projects/g_agreement/understand/e10/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "projects/g_agreement/understand/e10/api.py": "f441614f70639cc5a5625000f13e05cc970531caf65171b7396a874a3536acaf",
+    "projects/g_agreement/understand/e10/io.py": "ea97fa8380a1c428d742bcb52548f7cffd6e3f66ad49cb5dbf20175ea2de8921",
+    "projects/g_agreement/understand/e10/pool.py": "02bbb79b85ef4a3f1416947e2f7c2086217e4b956ff02e08ff5361da093d55b9",
+    "projects/g_agreement/understand/e10/privacy.py": "09e0ac3cd052c97846848c2e29439c4c78f0395017cea30ffa28ba58c422847b",
+    "projects/g_agreement/understand/e10/protocol.py": "1395a83ba84653d76fd86e7ed80b1ef81ae728a3da5f6456a88368e28279e220",
+    "projects/g_agreement/understand/e10/report.py": "2d852873141e645025fe93d0151eeb48ffadd1fda0aa7e35bdfee23c81a333a8",
+    "projects/g_agreement/understand/e10/run.py": "3a6621e8f7c8f4b9acd13cec4f6bc0e2cfe163bb01aa83dc09ce1268c465e1ca",
+    "results/g_agreement/understand/e10/POOL_MANIFEST.json": "310c4fbe8506260a530300721143678760122bf86e3e75c10defa08e56848f4b",
+    "results/g_agreement/understand/e10/PROMPTS.json": "00b77d14d7c6e7020f47de6b7065cc03215cf3abdb4703680694d141b537d460"
+  }
+}

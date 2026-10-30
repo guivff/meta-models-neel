@@ -1,0 +1,48 @@
+{
+  "experiment": "E95",
+  "authority": "\u00a7220 /9c56f1a5",
+  "registered_rule": "Reopen iff >=2 of eight missed rows are sealed-classified consumed orlate OR sealed R-L1 status is NOT MET; otherwise NOT RUN stands.",
+  "input_policy": "Only shared-branch sealed E87 analysis/depth classes; no substitute evidence, recomputation or controls/sensitivity rows",
+  "gate_code": "projects/g_agreement/e95/reopen220.py",
+  "gate_code_sha256": "3bb2c8e7c5a6cab5ace93c1b376a7696bcee56675b13cb38dd6aca1b5370fdcb",
+  "tests": {
+    "passed": 6,
+    "seconds": 0.04
+  },
+  "current_gate_status": "REOPEN_E95_DEVIATION_2",
+  "current_disposition": "REOPENED E95deviation2; no productionGO untilownerbinder/cost/guardbindings",
+  "conditional_gpu_hours_ceiling": 47,
+  "conditional_pool_usd": 900,
+  "binder_commit": "1fa1cf624",
+  "binder_archive_sha256": "ffa5602e9bcbfce3aff422762583a67c85ee04adc453b56c3656c5a3b069e3f2",
+  "binder_source_seal_sha256": "b6bdbba93146ec4ee4558a330092187282551ea4084e7672e83137fc9a05f275",
+  "fresh_extract_source_dependency_verification": "PASS",
+  "fresh_extract_cpu_import": "PASS",
+  "timing_profiles": [
+    "timing_row0/MEASURED_PROFILE.json",
+    "timing_row19/MEASURED_PROFILE.json"
+  ],
+  "timing_archive_status": "Both original216membertimingseals verified; H200/image/stack/assets match",
+  "dev_binding": "E49_DEV_EVIDENCE_BINDING.json",
+  "candidate_inventory": "REDUCTION3_CANDIDATE_INVENTORY.json",
+  "candidate_index": "REDUCTION3_CANDIDATE_JUDGE_INDEX.json",
+  "candidate_rows": 72,
+  "remaining_rows": 62,
+  "reused_rows": 10,
+  "prior_custody_seconds": 3329.4,
+  "prior_gpu_usd_already_booked": 4.89,
+  "production_admitted": false,
+  "core_preempts": true,
+  "launch_deadline": "2026-10-30T00:00:00+01:00",
+  "note": "Conditional reopening supersedes unconditional closure prospectively only; historical40h NOT RUN receipt retained. No GPUreservation, judgecall or scientificresult.",
+  "first_output_utc": "unknown",
+  "first_output_evidence": null,
+  "watcher": {
+    "automation_id": "e95-e87-sealed-analysis-watcher",
+    "state": "ACTIVE",
+    "check_interval_minutes": 5,
+    "current_chat_only": true
+  },
+  "gate_receipt": "results/g_agreement/understand/e95/section220_gate/RECEIPT.json",
+  "gate_archive_sha256": "e6529efd82b0a69c79c5b4351efbc1dd9aa90c33ae25424e1b9e4a26607b7bfe"
+}

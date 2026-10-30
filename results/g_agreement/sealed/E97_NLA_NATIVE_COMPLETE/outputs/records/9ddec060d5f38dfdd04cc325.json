@@ -1,0 +1,12 @@
+{
+  "id": "9ddec060d5f38dfdd04cc325",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict template: \"Given the sentence '[sentence]', what is the sentiment? Options: positive/negative/neutral\" establishes a pattern requiring a direct answer.\n\nThe instruction explicitly states the model must output only the sentiment label (\"positive\" or \"negative\") for the given sentence \"I am delighted to meet you.\"\n\n\"Reply:\" is the final prompt label in the structured example, immediately requiring the model's answer \u2014 the sentiment label \"positive\" or a formatted response.\n\"Example format:\nSentence: I am delighted to meet you.\nSentiment: [answer]\nSentence: I am delighted to meet you.\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label demanding the direct answer/response text immediately following.\n\n\"Reply:\" closes the structured prompt, expecting the model's final output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict template: \"Given the sentence '[sentence]', what is the sentiment? Options: positive/negative/neutral\" establishes a pattern requiring a direct answer.\n\nThe instruction explicitly states the model must output only the sentiment label (\"positive\" or \"negative\") for the given sentence \"I am delighted to meet you.\"\n\n\"Reply:\" is the final prompt label in the structured example, immediately requiring the model's answer \u2014 the sentiment label \"positive\" or a formatted response.\n\"Example format:\nSentence: I am delighted to meet you.\nSentiment: [answer]\nSentence: I am delighted to meet you.\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label demanding the direct answer/response text immediately following.\n\n\"Reply:\" closes the structured prompt, expecting the model's final output.",
+  "truncated": false
+}

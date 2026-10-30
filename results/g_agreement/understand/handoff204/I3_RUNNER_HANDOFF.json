@@ -1,0 +1,75 @@
+{
+  "owner": "I-3 Track M E95",
+  "runner_commit": "9dc24c7310c3d496743f17ed06bb6d8714bcb0a6",
+  "worker": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e87/worker87.py",
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e87_draft_v2_seven/source_v2.tar.gz",
+  "source_archive_sha256": "7e6614d4bf33c4dd88edfb0573ef82bb03eef4b4e3088be26bc4ac988a0fb0df",
+  "CLI": [
+    "python",
+    "results/g_agreement/understand/e87/worker87.py",
+    "--inputs",
+    "INPUTS",
+    "--assets",
+    "ASSETS",
+    "--assignment",
+    "ASSIGNMENT",
+    "--out",
+    "OUT",
+    "--source-sha",
+    "SOURCE_SEAL_SHA",
+    "--input-sha",
+    "INPUT_SEAL_SHA"
+  ],
+  "judge_commit": "c3bceb0a1405376bd54114c8ca1fd296721cf2d4",
+  "judge_worker": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/projects/g_agreement/understand/blind_judge/e87.py",
+  "judge_sha256": "b6d34c0a932c37fcbd9a244e376d19cc70fe498ea8f184f4731afe59b86e2236",
+  "judge_source_seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/results/g_agreement/understand/e87/SOURCE_SEAL.json",
+  "judge_source_seal_sha256": "0249779968682ef230b8f3aa9ef71f5f5d1df232b5f53cad598b477a2cfaba4b",
+  "judge_CLI": [
+    "python",
+    "-m",
+    "projects.g_agreement.understand.blind_judge.e87",
+    "--spec",
+    "SPEC.json",
+    "--preflight-only"
+  ],
+  "judge_packet_schema": {
+    "id": "opaque20-64hex",
+    "property": "frozen row definition",
+    "values": {
+      "A": "value_A",
+      "B": "value_B"
+    },
+    "positions": [
+      {
+        "offset": "-15..0 Oracle or -7..0 NLA",
+        "readout": "verbatim"
+      }
+    ]
+  },
+  "row_manifest": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e87/INPUT_AUDIT.json",
+  "row_manifest_sha256": "77cfafc176d91ce106b1bd643340e62eade9a2e9b8a7ce26eb65765493728084",
+  "probe_scope": "E87 named10 rows only; E95 full six-bank dev-probe roster not yet verified by W-mechanism; I-3 SOURCE_INVENTORY is discovery, not frozen eligibility.",
+  "forecast": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e87/FORECAST.json",
+  "forecast_sha256": "e70999ab994b08b5b3f5c6da002d3ba824904b1f5fc7e4838eda1fbdf686938e",
+  "measured_E87_GPU_forecast_available": false,
+  "forecast_status": "saved E68 same-reader timings; planning estimate only, HOLD_CAP",
+  "layers": [
+    20,
+    28,
+    36,
+    44,
+    52,
+    56,
+    60
+  ],
+  "trained_layer_check": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e87/TRAINED_LAYER_CHECK.json",
+  "compatibility": "Handed over AS IS. Strict E87 10row/30real/30placebo guards. E95 needs owner row-count/60real/30placebo bindings and judge30%stratified index before calls. Do not bypass seal guards. Short prompts<16 require ruling; cannot pad/duplicate silently.",
+  "compiler_C": {
+    "thread_id": "01a18204-9e3b-7f41-8c17-5089c6c64740",
+    "worktree": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-compiler",
+    "branch": "codex/sprint-compiler",
+    "report_path": "results/g_agreement/status/I-3.md",
+    "evidence": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i5/results/g_agreement/compiler/HANDOFF.md"
+  }
+}

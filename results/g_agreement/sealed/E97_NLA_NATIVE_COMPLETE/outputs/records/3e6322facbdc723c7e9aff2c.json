@@ -1,0 +1,12 @@
+{
+  "id": "3e6322facbdc723c7e9aff2c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict pattern: example given (\"Example: The color is red. Label: positive\"), now requiring the model to apply the same classification logic to the new sentence.\n\nThe task is to classify \"The United States is a country\" as positive or negative sentiment, with the answer expected to be a single label word.\n\n\"Reply:\" is the final prompt token, part of the structured input format (\"Input sentence: The United States is a country\\nReply:\"), immediately requiring the model's direct answer/classification label (e.g., \"positive\" or \"negative\") to follow.\n\"Given the following format and example, provide the correct response.\nInput sentence: The United States is a country.\nReply:\" \u2014 the final token \"Reply:\" is a prompt label demanding the model's direct response output next.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict pattern: example given (\"Example: The color is red. Label: positive\"), now requiring the model to apply the same classification logic to the new sentence.\n\nThe task is to classify \"The United States is a country\" as positive or negative sentiment, with the answer expected to be a single label word.\n\n\"Reply:\" is the final prompt token, part of the structured input format (\"Input sentence: The United States is a country\\nReply:\"), immediately requiring the model's direct answer/classification label (e.g., \"positive\" or \"negative\") to follow.\n\"Given the following format and example, provide the correct response.\nInput sentence: The United States is a country.\nReply:\" \u2014 the final token \"Reply:\" is a prompt label demanding the model's direct response output next.",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "4bae2c79251a4c0a21174aa3",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is directing an AI to extract/analyze a specific entry from a structured list, implying a data-processing or NLP task context.\n\nThe XML-like tag `<entry>` signals a structured data format, with the model expecting a closing tag and content representing a dictionary, glossary, or Q&A entry.\n\nFinal token `<entry` opens a new XML-style tag, directly mirroring the preceding `<entry>` reference, so the next tokens must complete this tag (e.g., `>` or attributes) followed by the actual entry content.\n\"Here is the raw data:\n<entry\" \u2014 the model must continue with the raw data block's content, likely a structured record with fields like question, answer, or metadata.\n\"Here is one entry from the list:\n<entry\" \u2014 a new entry format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is directing an AI to extract/analyze a specific entry from a structured list, implying a data-processing or NLP task context.\n\nThe XML-like tag `<entry>` signals a structured data format, with the model expecting a closing tag and content representing a dictionary, glossary, or Q&A entry.\n\nFinal token `<entry` opens a new XML-style tag, directly mirroring the preceding `<entry>` reference, so the next tokens must complete this tag (e.g., `>` or attributes) followed by the actual entry content.\n\"Here is the raw data:\n<entry\" \u2014 the model must continue with the raw data block's content, likely a structured record with fields like question, answer, or metadata.\n\"Here is one entry from the list:\n<entry\" \u2014 a new entry format.",
+  "truncated": false
+}

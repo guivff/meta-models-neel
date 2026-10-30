@@ -1,0 +1,677 @@
+{
+  "GPU_hours": 0,
+  "donor_rule": {
+    "bootstrap_samples": 2000,
+    "bootstrap_seed": 20261025,
+    "bootstrap_unit": "item",
+    "ci_level": 0.95,
+    "ci_lower_strictly_above": 0.5,
+    "comparison_arm": "b",
+    "fraction_at_least": 0.6,
+    "item_moves": "s_c < s_b",
+    "sign": "toward recipient item own truth"
+  },
+  "donor_rule_authority": {
+    "commit": "99518d4e",
+    "path": "results/g_agreement/understand/e18/BRIEF_UNDERSTAND.99518d4e.md",
+    "registered_before_science": true,
+    "sha256": "1772e68ee838c46a2b17e7a413188ba402df65856dd8a753906a670c9c1f3914"
+  },
+  "plan_sha256": "3aa0c3c37c8f55b86cd22988006dabc4ec7565f209aa45102a7b563934cc7929",
+  "prediction": {
+    "assessment": "mixed",
+    "format_limit_rows": [],
+    "real_suppression_rows": [
+      "table_role"
+    ]
+  },
+  "private_labels_sha256": "48497c10082f18a5e80034c34e97e7139ee9783de8a8b28440e2e30535dfa07b",
+  "rows": [
+    {
+      "arms": {
+        "a": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "b": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "c": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "d": {
+          "auroc": 0.9977324263038548,
+          "hi": 1.0,
+          "lo": 0.9863945578231292,
+          "n": 84,
+          "n_clusters": 6
+        }
+      },
+      "b_minus_a": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "bootstrap": {
+        "samples": 2000,
+        "seed": 20261023,
+        "unit": "W1 template cluster"
+      },
+      "class": "semantic",
+      "donor_movement": {
+        "bootstrap": {
+          "samples": 2000,
+          "seed": 20261025,
+          "unit": "item"
+        },
+        "ci95": [
+          0.35714285714285715,
+          0.5833333333333334
+        ],
+        "fraction": 0.47619047619047616,
+        "moving_items": 40,
+        "n_items": 84,
+        "row_moves": false
+      },
+      "feature": "latex_subject",
+      "n_items": 84,
+      "score": "mean of two frozen paired log-odds"
+    },
+    {
+      "arms": {
+        "a": {
+          "auroc": 0.6332199546485261,
+          "hi": 0.8032879818594104,
+          "lo": 0.5731292517006803,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "b": {
+          "auroc": 0.5289115646258503,
+          "hi": 0.6428571428571429,
+          "lo": 0.41551870748299324,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "c": {
+          "auroc": 0.608843537414966,
+          "hi": 0.7704081632653061,
+          "lo": 0.545890022675737,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "d": {
+          "auroc": 0.47845804988662133,
+          "hi": 0.5924036281179138,
+          "lo": 0.3440901360544218,
+          "n": 84,
+          "n_clusters": 6
+        }
+      },
+      "b_minus_a": {
+        "ci95": [
+          -0.22847222222222222,
+          -0.04761904761904756
+        ],
+        "difference": -0.10430839002267578,
+        "paired_items_and_template_clusters": true
+      },
+      "bootstrap": {
+        "samples": 2000,
+        "seed": 20261023,
+        "unit": "W1 template cluster"
+      },
+      "class": "count-like",
+      "donor_movement": {
+        "bootstrap": {
+          "samples": 2000,
+          "seed": 20261025,
+          "unit": "item"
+        },
+        "ci95": [
+          0.25,
+          0.44047619047619047
+        ],
+        "fraction": 0.34523809523809523,
+        "moving_items": 29,
+        "n_items": 84,
+        "row_moves": false
+      },
+      "feature": "list_depth",
+      "n_items": 84,
+      "score": "mean of two frozen paired log-odds"
+    },
+    {
+      "arms": {
+        "a": {
+          "auroc": 0.4744897959183674,
+          "hi": 0.6456916099773242,
+          "lo": 0.2528344671201814,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "b": {
+          "auroc": 0.4178004535147392,
+          "hi": 0.6173469387755102,
+          "lo": 0.21312358276643995,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "c": {
+          "auroc": 0.445578231292517,
+          "hi": 0.5986394557823129,
+          "lo": 0.26077097505668934,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "d": {
+          "auroc": 0.34183673469387754,
+          "hi": 0.5958049886621315,
+          "lo": 0.1264172335600907,
+          "n": 84,
+          "n_clusters": 6
+        }
+      },
+      "b_minus_a": {
+        "ci95": [
+          -0.16439909297052158,
+          0.05158730158730157
+        ],
+        "difference": -0.05668934240362816,
+        "paired_items_and_template_clusters": true
+      },
+      "bootstrap": {
+        "samples": 2000,
+        "seed": 20261023,
+        "unit": "W1 template cluster"
+      },
+      "class": "state-like",
+      "donor_movement": {
+        "bootstrap": {
+          "samples": 2000,
+          "seed": 20261025,
+          "unit": "item"
+        },
+        "ci95": [
+          0.32142857142857145,
+          0.5357142857142857
+        ],
+        "fraction": 0.42857142857142855,
+        "moving_items": 36,
+        "n_items": 84,
+        "row_moves": false
+      },
+      "feature": "prose_paren",
+      "n_items": 84,
+      "score": "mean of two frozen paired log-odds"
+    },
+    {
+      "arms": {
+        "a": {
+          "auroc": 0.5617913832199547,
+          "hi": 0.8356009070294784,
+          "lo": 0.24988662131519293,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "b": {
+          "auroc": 0.4387755102040816,
+          "hi": 0.6667800453514733,
+          "lo": 0.22959183673469388,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "c": {
+          "auroc": 0.572562358276644,
+          "hi": 0.780045351473923,
+          "lo": 0.37865646258503405,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "d": {
+          "auroc": 0.44019274376417233,
+          "hi": 0.7109977324263033,
+          "lo": 0.22392290249433106,
+          "n": 84,
+          "n_clusters": 6
+        }
+      },
+      "b_minus_a": {
+        "ci95": [
+          -0.27777777777777773,
+          0.05555555555555555
+        ],
+        "difference": -0.12301587301587308,
+        "paired_items_and_template_clusters": true
+      },
+      "bootstrap": {
+        "samples": 2000,
+        "seed": 20261023,
+        "unit": "W1 template cluster"
+      },
+      "class": "state-like",
+      "donor_movement": {
+        "bootstrap": {
+          "samples": 2000,
+          "seed": 20261025,
+          "unit": "item"
+        },
+        "ci95": [
+          0.2976190476190476,
+          0.5119047619047619
+        ],
+        "fraction": 0.40476190476190477,
+        "moving_items": 34,
+        "n_items": 84,
+        "row_moves": false
+      },
+      "feature": "prose_quote",
+      "n_items": 84,
+      "score": "mean of two frozen paired log-odds"
+    },
+    {
+      "arms": {
+        "a": {
+          "auroc": 0.9098639455782312,
+          "hi": 1.0,
+          "lo": 0.6343537414965986,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "b": {
+          "auroc": 0.9331065759637188,
+          "hi": 1.0,
+          "lo": 0.8388605442176873,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "c": {
+          "auroc": 0.923469387755102,
+          "hi": 1.0,
+          "lo": 0.7380952380952381,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "d": {
+          "auroc": 0.9727891156462585,
+          "hi": 1.0,
+          "lo": 0.9296768707482994,
+          "n": 84,
+          "n_clusters": 6
+        }
+      },
+      "b_minus_a": {
+        "ci95": [
+          -0.020408163265306034,
+          0.25
+        ],
+        "difference": 0.023242630385487573,
+        "paired_items_and_template_clusters": true
+      },
+      "bootstrap": {
+        "samples": 2000,
+        "seed": 20261023,
+        "unit": "W1 template cluster"
+      },
+      "class": "semantic",
+      "donor_movement": {
+        "bootstrap": {
+          "samples": 2000,
+          "seed": 20261025,
+          "unit": "item"
+        },
+        "ci95": [
+          0.40476190476190477,
+          0.6190476190476191
+        ],
+        "fraction": 0.5119047619047619,
+        "moving_items": 43,
+        "n_items": 84,
+        "row_moves": false
+      },
+      "feature": "prose_sentiment",
+      "n_items": 84,
+      "score": "mean of two frozen paired log-odds"
+    },
+    {
+      "arms": {
+        "a": {
+          "auroc": 0.4931972789115646,
+          "hi": 0.5487528344671202,
+          "lo": 0.4489795918367347,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "b": {
+          "auroc": 0.5884353741496599,
+          "hi": 0.6655328798185941,
+          "lo": 0.5187074829931972,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "c": {
+          "auroc": 0.5011337868480725,
+          "hi": 0.5521541950113379,
+          "lo": 0.46030328798185943,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "d": {
+          "auroc": 0.6139455782312925,
+          "hi": 0.7346938775510204,
+          "lo": 0.48467970521541953,
+          "n": 84,
+          "n_clusters": 6
+        }
+      },
+      "b_minus_a": {
+        "ci95": [
+          0.0430839002267574,
+          0.14739229024943312
+        ],
+        "difference": 0.09523809523809523,
+        "paired_items_and_template_clusters": true
+      },
+      "bootstrap": {
+        "samples": 2000,
+        "seed": 20261023,
+        "unit": "W1 template cluster"
+      },
+      "class": "count-like",
+      "donor_movement": {
+        "bootstrap": {
+          "samples": 2000,
+          "seed": 20261025,
+          "unit": "item"
+        },
+        "ci95": [
+          0.5595238095238095,
+          0.7619047619047619
+        ],
+        "fraction": 0.6666666666666666,
+        "moving_items": 56,
+        "n_items": 84,
+        "row_moves": true
+      },
+      "feature": "python_depth",
+      "n_items": 84,
+      "score": "mean of two frozen paired log-odds"
+    },
+    {
+      "arms": {
+        "a": {
+          "auroc": 0.5884353741496599,
+          "hi": 0.8395833333333332,
+          "lo": 0.3536848072562359,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "b": {
+          "auroc": 0.42857142857142855,
+          "hi": 0.6791383219954649,
+          "lo": 0.1655328798185941,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "c": {
+          "auroc": 0.5209750566893424,
+          "hi": 0.7482993197278912,
+          "lo": 0.3129251700680272,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "d": {
+          "auroc": 0.35374149659863946,
+          "hi": 0.5443027210884349,
+          "lo": 0.14569160997732428,
+          "n": 84,
+          "n_clusters": 6
+        }
+      },
+      "b_minus_a": {
+        "ci95": [
+          -0.31522108843537416,
+          -0.046428571428571715
+        ],
+        "difference": -0.1598639455782313,
+        "paired_items_and_template_clusters": true
+      },
+      "bootstrap": {
+        "samples": 2000,
+        "seed": 20261023,
+        "unit": "W1 template cluster"
+      },
+      "class": "count-like",
+      "donor_movement": {
+        "bootstrap": {
+          "samples": 2000,
+          "seed": 20261025,
+          "unit": "item"
+        },
+        "ci95": [
+          0.309226190476191,
+          0.5119047619047619
+        ],
+        "fraction": 0.40476190476190477,
+        "moving_items": 34,
+        "n_items": 84,
+        "row_moves": false
+      },
+      "feature": "python_indent",
+      "n_items": 84,
+      "score": "mean of two frozen paired log-odds"
+    },
+    {
+      "arms": {
+        "a": {
+          "auroc": 0.6417233560090703,
+          "hi": 0.7789115646258503,
+          "lo": 0.5022675736961452,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "b": {
+          "auroc": 0.5844671201814059,
+          "hi": 0.7273242630385488,
+          "lo": 0.43934240362811794,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "c": {
+          "auroc": 0.6938775510204082,
+          "hi": 0.826530612244898,
+          "lo": 0.5510204081632653,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "d": {
+          "auroc": 0.49603174603174605,
+          "hi": 0.5668934240362812,
+          "lo": 0.43934240362811794,
+          "n": 84,
+          "n_clusters": 6
+        }
+      },
+      "b_minus_a": {
+        "ci95": [
+          -0.16439909297052158,
+          0.05215419501133789
+        ],
+        "difference": -0.05725623582766437,
+        "paired_items_and_template_clusters": true
+      },
+      "bootstrap": {
+        "samples": 2000,
+        "seed": 20261023,
+        "unit": "W1 template cluster"
+      },
+      "class": "state-like",
+      "donor_movement": {
+        "bootstrap": {
+          "samples": 2000,
+          "seed": 20261025,
+          "unit": "item"
+        },
+        "ci95": [
+          0.2857142857142857,
+          0.4880952380952381
+        ],
+        "fraction": 0.38095238095238093,
+        "moving_items": 32,
+        "n_items": 84,
+        "row_moves": false
+      },
+      "feature": "python_string",
+      "n_items": 84,
+      "score": "mean of two frozen paired log-odds"
+    },
+    {
+      "arms": {
+        "a": {
+          "auroc": 0.4387755102040816,
+          "hi": 0.6893565759637188,
+          "lo": 0.21541950113378686,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "b": {
+          "auroc": 0.30272108843537415,
+          "hi": 0.5393565759637174,
+          "lo": 0.12131519274376418,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "c": {
+          "auroc": 0.3735827664399093,
+          "hi": 0.635501700680272,
+          "lo": 0.1649659863945578,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "d": {
+          "auroc": 0.7947845804988662,
+          "hi": 0.9172335600907029,
+          "lo": 0.6291808390022677,
+          "n": 84,
+          "n_clusters": 6
+        }
+      },
+      "b_minus_a": {
+        "ci95": [
+          -0.18083900226757366,
+          -0.06462585034013602
+        ],
+        "difference": -0.13605442176870747,
+        "paired_items_and_template_clusters": true
+      },
+      "bootstrap": {
+        "samples": 2000,
+        "seed": 20261023,
+        "unit": "W1 template cluster"
+      },
+      "class": "state-like",
+      "donor_movement": {
+        "bootstrap": {
+          "samples": 2000,
+          "seed": 20261025,
+          "unit": "item"
+        },
+        "ci95": [
+          0.2619047619047619,
+          0.4642857142857143
+        ],
+        "fraction": 0.35714285714285715,
+        "moving_items": 30,
+        "n_items": 84,
+        "row_moves": false
+      },
+      "feature": "table_role",
+      "n_items": 84,
+      "score": "mean of two frozen paired log-odds"
+    },
+    {
+      "arms": {
+        "a": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "b": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "c": {
+          "auroc": 1.0,
+          "hi": 1.0,
+          "lo": 1.0,
+          "n": 84,
+          "n_clusters": 6
+        },
+        "d": {
+          "auroc": 0.9948979591836735,
+          "hi": 1.0,
+          "lo": 0.9841269841269841,
+          "n": 84,
+          "n_clusters": 6
+        }
+      },
+      "b_minus_a": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "difference": 0.0,
+        "paired_items_and_template_clusters": true
+      },
+      "bootstrap": {
+        "samples": 2000,
+        "seed": 20261023,
+        "unit": "W1 template cluster"
+      },
+      "class": "semantic",
+      "donor_movement": {
+        "bootstrap": {
+          "samples": 2000,
+          "seed": 20261025,
+          "unit": "item"
+        },
+        "ci95": [
+          0.3333333333333333,
+          0.5476190476190477
+        ],
+        "fraction": 0.44047619047619047,
+        "moving_items": 37,
+        "n_items": 84,
+        "row_moves": false
+      },
+      "feature": "table_status",
+      "n_items": 84,
+      "score": "mean of two frozen paired log-odds"
+    }
+  ],
+  "status": "EXPLORATORY_E18",
+  "upstream_seals": {
+    "collection_seal_sha256": "cccfc3501f75cdf318f680ef869af3738b06661f5ae5c10d36929a8a6c4fce11",
+    "continuation_seal_sha256": "47ccba96c791735201cc194314869d845b83d2c6297e7a5351e0d94ab02e7256",
+    "input_seal_sha256": "029ef222ef63a1f84110b127712d478865480669178df7ac0fcdef3fcf8aa242"
+  }
+}

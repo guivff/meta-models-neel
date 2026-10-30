@@ -1,0 +1,12 @@
+{
+  "id": "198cd833f8a934828c942f25",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given definition and examples.\n\nThe example pattern (\"Example sentence: ... Reply: [classification]\") sets up a direct answer format, requiring the model to apply the rule to the specific sentence \"I am a teacher.\"\n\n\"Reply:\" is the final token, functioning as a prompt label demanding the classification answer immediately follows \u2014 likely \"Positive\" or \"Negative\" on the same line.\n\"Given the following sentence, determine the sentiment label according to the instructions above.\nSentence: 'I am a teacher.'\nReply:\" \u2014 this closing label signals the model must now output the actual classification response, completing the structured Q&A format.\n\"Reply:\" is the final prompt field, expecting the direct answer/classification token next.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given definition and examples.\n\nThe example pattern (\"Example sentence: ... Reply: [classification]\") sets up a direct answer format, requiring the model to apply the rule to the specific sentence \"I am a teacher.\"\n\n\"Reply:\" is the final token, functioning as a prompt label demanding the classification answer immediately follows \u2014 likely \"Positive\" or \"Negative\" on the same line.\n\"Given the following sentence, determine the sentiment label according to the instructions above.\nSentence: 'I am a teacher.'\nReply:\" \u2014 this closing label signals the model must now output the actual classification response, completing the structured Q&A format.\n\"Reply:\" is the final prompt field, expecting the direct answer/classification token next.",
+  "truncated": false
+}

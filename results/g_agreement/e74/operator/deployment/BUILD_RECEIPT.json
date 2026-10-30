@@ -1,0 +1,103 @@
+{
+  "api_usd": 0,
+  "archive": {
+    "archive_bytes": 8450112334,
+    "archive_path": "results/g_agreement/e74/evidence/runtime_deployment/e74-author-runtime.docker.tar.gz",
+    "archive_sha256": "a59859cb2b7de4542c6a5c1877471fd0b65cb6b7244596c531c155aaee9da8d5",
+    "config_digest_verified": true,
+    "gzip_crc_verified": true,
+    "large_layer_digests_recomputed": false,
+    "layer_member_sizes_verified": true
+  },
+  "archive_oci_image_manifest_digests": [
+    "sha256:59135241ba116bfeac54e8d1065b94fcd2d54b50425e680bbd30a52fbc2bb9f2"
+  ],
+  "archive_oci_manifest_note": "Content hash verified for small JSON blob(s) in local archive. These are not registry-available pull digests.",
+  "author_module_sha256": "ebbd4a1fb0b1cf7673ebbe5e75ee102d6652a789ae3b9f9287c06a9011fcfa42",
+  "author_path": "Exact pinned author pip path and fork; selected compatible dependency closure, not claimed author private full freeze",
+  "base_image": "docker.io/library/python@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a",
+  "build": {
+    "buildkit_ref": "zoos3e3e411vh54v1dsqxrvxp",
+    "cached_build_same_image_id": true,
+    "cached_metadata_build_ref": "desktop-linux/desktop-linux/5mvtlpv1225d1fw0mwff6k7r4",
+    "completed_at": "2026-10-27T19:01:39.626880839+01:00",
+    "dockerfile_comment_only_updated_after_first_build": true,
+    "fork_install_step_seconds": 5.8,
+    "installed_verification_step_seconds": 28.6,
+    "platform_emulation": "Linux amd64 under Docker Desktop on macOS arm64",
+    "runtime_install_step_seconds": 1914.5,
+    "started_at": "2026-10-27T18:28:36.233390754+01:00",
+    "wall_seconds": 1983.393490085
+  },
+  "build_package_count": 6,
+  "core_pins": {
+    "peft": "0.21.0",
+    "torch": "2.13.0",
+    "transformers": "5.17.0",
+    "vllm": "0.31.0",
+    "vllm-lens": "1.1.0.post7"
+  },
+  "cpu_import_status": "PASS_CPU_IMPORTS_ONLY",
+  "cpu_import_wall_seconds_sum": 217.24773855681997,
+  "cpu_imports_passed": [
+    "author_module",
+    "lens_plugin_entrypoint_load",
+    "peft",
+    "torch",
+    "transformers",
+    "vllm"
+  ],
+  "cpu_install_status": "PASS_CPU_INSTALL_ONLY",
+  "deployment_availability": "Local Docker engine and verified portable archive only. No remote cache, registry image, provider upload or allocation. See DEPLOYMENT_ROUTE.md.",
+  "driver_verified": false,
+  "evidence_sha256": {
+    "evidence/runtime_deployment/build-history.json": "589dc15347e56cda76c6e96056b44bfea75355f0380829dfce39b97e32eed6b5",
+    "evidence/runtime_deployment/docker-runtime-build.log": "483911c1779b2d0a8b93e1dbc23b3fc3ddf52b6d426e9f9f346a20aedb16d1d6",
+    "evidence/runtime_deployment/docker-runtime-cached-build.log": "60fdd0f6e46ea49d51904dbf9d40522d12c452e72b1ec1eec7bf697c0504aac5",
+    "evidence/runtime_deployment/runtime-build-metadata.json": "e5a005aaf885dab81d27994a0ea2a02f1cdaef8bc8014621b905a0bd44f26a4b",
+    "operator/deployment/CPU_IMPORTS.json": "fc44fbfa7e0a249e08348d0c78eaa07ef3dfcd0652e1fa60434ea96c32d7ebdf",
+    "operator/deployment/CPU_INSTALL_RECEIPT.json": "5adc8c08f2ba9d4c504e9e4a066e903c6767aa35d1838c7931880019479810cc",
+    "operator/deployment/Dockerfile": "40ecee13a11dbaef118c50e2a376a90c8b2c93c07933bbecf501b5b75ce3910e",
+    "operator/deployment/IMAGE_ARCHIVE.json": "3591dfbebc2fc06584ca848fc70ac93848664d083a359f10b30bc8fe652ff328",
+    "operator/deployment/cpu_imports.py": "b02fbdf864c89f282574e51fbcb9476dc7bd0dba795895dc7ae2b219cd080ffb",
+    "operator/deployment/verify_archive.py": "88b3ea20736bd16147c97ce74807f7c7723fb233f284cc8c4701e2a23dbd5ed9"
+  },
+  "fixed_50_smoke_executed": false,
+  "fork_source_sha256": "8d9ca706651a1325c7ad9db78b19989a0f0082944577b310dc5aa0cf95046c82",
+  "fork_wheel_sha256": "d9922eed27d2191e641c00fa7a360c0f2d4c285828fe7eb632b1127cde0c8f30",
+  "glibc": "2.36",
+  "gpu_engine_verified": false,
+  "gpu_hours": 0,
+  "gpu_usd": 0,
+  "gpu_worker_hooks_verified": false,
+  "installed_plugin_python_files_identical": 13,
+  "local_image": {
+    "buildkit_containerimage_digest": "sha256:447fe0821f2ca4fb22daa5a06ade52edad3c710d22d2ef1e6852b69afeeb65e0",
+    "config_image_id": "sha256:447fe0821f2ca4fb22daa5a06ade52edad3c710d22d2ef1e6852b69afeeb65e0",
+    "note": "Docker exporter repeats the config ID as containerimage.digest. Not a verified registry pull digest.",
+    "platform": "linux/amd64",
+    "registry_manifest_digest_verified": false,
+    "registry_pushed": false,
+    "repo_digests": [],
+    "size_bytes": 13070541198,
+    "tag": "codex/e74-author-runtime:20261027"
+  },
+  "locked_inputs": {
+    "build.lock": "f19fd3a77d89e86bcb25f982dbb380ecaa48098700d092129ba2e586c6f8e418",
+    "fork.lock": "6cb234cf097b85d43d9da8012096a4fc3e8a5240c72640c0218d6d5e81e94a7a",
+    "runtime.lock": "3abc28f0e71519de8690980f8b8e5f52ecfbafddd6c126768c74f77894c25f2e"
+  },
+  "model_weights_downloaded_bytes": 0,
+  "plugin_entrypoint_metadata_and_callable_verified": true,
+  "plugin_registration_executed": false,
+  "python": "3.12.14",
+  "recorded_at": "2026-10-27T18:10:34.370657+00:00",
+  "remaining": "I-2 allocation/quote/budget; authorized registry route or confirmed host Docker access; start/control/SSH configuration; transfer/setup bound; actual host driver/CUDA13.4 JIT; TP4 author hooks and fixed50 smoke; original custody/GO and judging gates.",
+  "resident_v5_sha256": "bd22a707907fe51ff7596a955bb54cb9c3c51720d70a1e1ac8fa9d95e4f14d9e",
+  "resident_v5_unchanged": true,
+  "runtime_package_count": 209,
+  "schema_version": 1,
+  "status": "PASS_CPU_BUILD_INSTALL_IMPORTS_AND_LOCAL_ARCHIVE_ONLY",
+  "synthetic_tests_passed": 5,
+  "torch_compiled_cuda": "13.0"
+}

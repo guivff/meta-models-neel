@@ -1,0 +1,12 @@
+{
+  "id": "fa9f6292bedff1d9b1e93aed",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict pattern: example given (\"Example sentence: ... Reply: sad\"), now requiring the model to apply the same classification to the new sentence.\n\nThe instruction explicitly defines the task: classify emotional state as \"happy,\" \"sad,\" or \"neutral\" for the given sentence about a Chinese politician's death.\n\n\"Reply:\" is the final token, acting as a prompt label in the structured format, immediately requiring the classification answer (e.g., \"sad\" or \"Reply: sad\") to follow.\n\"Given the following sentence, provide the corresponding one-word emotional state label.\nSentence: 'The Chinese politician died of cancer.'\nExample format established above.\nSentence: 'The Chinese politician died of cancer.'\nReply:\" \u2014 the final token demands the direct answer/response text immediately next.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict pattern: example given (\"Example sentence: ... Reply: sad\"), now requiring the model to apply the same classification to the new sentence.\n\nThe instruction explicitly defines the task: classify emotional state as \"happy,\" \"sad,\" or \"neutral\" for the given sentence about a Chinese politician's death.\n\n\"Reply:\" is the final token, acting as a prompt label in the structured format, immediately requiring the classification answer (e.g., \"sad\" or \"Reply: sad\") to follow.\n\"Given the following sentence, provide the corresponding one-word emotional state label.\nSentence: 'The Chinese politician died of cancer.'\nExample format established above.\nSentence: 'The Chinese politician died of cancer.'\nReply:\" \u2014 the final token demands the direct answer/response text immediately next.",
+  "truncated": false
+}

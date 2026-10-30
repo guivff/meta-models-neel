@@ -1,0 +1,12 @@
+{
+  "id": "9e5bb87ff6328515b725906b",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" as the answer.\n\nThe example pattern (\"Example sentence: ... / Reply:\") signals the model must now produce the actual classification response for \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in a structured Q&A format, immediately requiring the short answer (\"Positive\" or \"Negative\") to follow.\n\"Given the following example sentence, please provide the appropriate short reply of either 'Positive' or 'Negative' only.\nExample sentence: The weather is very good today.\nReply:\" \u2014 the final \"Reply:\" is a prompt field marker, expecting the direct answer on the next line or immediately after.\n\"Reply:\" closes the prompt, demanding the model's response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" as the answer.\n\nThe example pattern (\"Example sentence: ... / Reply:\") signals the model must now produce the actual classification response for \"The weather is very good today.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in a structured Q&A format, immediately requiring the short answer (\"Positive\" or \"Negative\") to follow.\n\"Given the following example sentence, please provide the appropriate short reply of either 'Positive' or 'Negative' only.\nExample sentence: The weather is very good today.\nReply:\" \u2014 the final \"Reply:\" is a prompt field marker, expecting the direct answer on the next line or immediately after.\n\"Reply:\" closes the prompt, demanding the model's response.",
+  "truncated": false
+}

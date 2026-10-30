@@ -1,0 +1,45 @@
+{
+  "experiment": "E138",
+  "section": 250,
+  "direct_user_assignment": true,
+  "source_BRIEF_revision": "0e055fc90ac0f1c6cd2c08697bfd449a280d8111",
+  "status": "AUTHORIZED_AFTER_E136_AWAITING_ORIGINAL_RUNNER_PACKET",
+  "integrator": "I-2",
+  "runner_package_owner": "W-mechanism-C",
+  "adapter_owner": "W-mech2",
+  "judging_owner": "W-internals-C",
+  "reviewer": "R-5",
+  "pods_authorized": 1,
+  "launch_after": "E136 GPU completion and closed original allocation",
+  "cap_seconds_from_creation": 1200,
+  "create_cutoff_utc": "2026-10-30T10:00:00Z",
+  "hard_stop": "min(creation+1200seconds,2026-10-30T12:50:00Z)",
+  "missed_creation_cutoff": "NOT RUN",
+  "judging": {
+    "ceiling_usd": 1,
+    "priority": "after E136 before E95",
+    "rubric": "E104 value codes with recipient-old/donor-old/another/none; exact source owner contract required"
+  },
+  "design": {
+    "original_fact_items": 84,
+    "layer": 44,
+    "arms": [
+      "clean E127 no-prefix activation",
+      "matched original E100 donor protocol and seed",
+      "norm-matched original E76 random-vector protocol"
+    ],
+    "planned_greedy_readouts_if_all_new": 252,
+    "source_reuse_and_final_census": "Await exact sealed owner packet; no invented rejudging or substituted vectors"
+  },
+  "reading": "Descriptive; donor arm primary per \u00a7250 clarification1. Recipient-old<=.05 and donor-old>=.40 supports activation specificity; random recipient-old>=.20 withdraws stale wording. Report none/coherence per arm. Low random recipient-old is not supporting evidence. Cannot separate representation reading from reconstruction/re-solving with shared weights.",
+  "gates": [
+    "Wait for existing owned E136 terminal custody/close; do not replay it",
+    "Original sealed E10484/E127 clean capture/E100 donor/E76 placebo source identities and tests",
+    "Whole-phase max timing forecast fits original1200 cap before create; fresh all-track budget/storage/stock/rate/spacing admission",
+    "GPU ceiling e72952df6 booked plus full active caps<=2500; 2000 warning only; parked900 unchanged",
+    "CPU-only labels/identity/donor joins; no raw Git egress bypass; sealed outputs until tested adapter committed",
+    "One original creation clock and independent stop guards; no new retry/pilot/cap increase/reset"
+  ],
+  "as_of_utc": "2026-10-30T04:04:19.996109+00:00",
+  "allocation_created": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "21cda5de534c930461863277",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional pattern establishes a strict format: given a sentence, output only \"happy\" or \"sad\" as the response label.\n\nThe example structure shows a template being followed \u2014 \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the actual classification answer for the preceding sentence \"I am going to the park.\"\n\n\"Reply:\" is the final prompt label, directly requiring the model's response (likely \"happy\" or \"sad\") to follow immediately.\n\"Example sentence: I am going to the park.\\nGiven sentence: I am going to the park.\\nReply:\" \u2014 this is a structured Q&A format where \"Reply:\" is the final field, expecting the model's direct answer or explanation next.\n\"Given sentence: ... [sentence]\\nReply:\" \u2014 the final token demands the response content.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional pattern establishes a strict format: given a sentence, output only \"happy\" or \"sad\" as the response label.\n\nThe example structure shows a template being followed \u2014 \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the actual classification answer for the preceding sentence \"I am going to the park.\"\n\n\"Reply:\" is the final prompt label, directly requiring the model's response (likely \"happy\" or \"sad\") to follow immediately.\n\"Example sentence: I am going to the park.\\nGiven sentence: I am going to the park.\\nReply:\" \u2014 this is a structured Q&A format where \"Reply:\" is the final field, expecting the model's direct answer or explanation next.\n\"Given sentence: ... [sentence]\\nReply:\" \u2014 the final token demands the response content.",
+  "truncated": false
+}

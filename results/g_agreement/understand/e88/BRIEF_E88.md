@@ -1,0 +1,11 @@
+# E88 independent artefact audit
+
+Authority: §200 items1–5 and §205 item6; direct user assigns CPU work to W-lens and item6 judging to Track Q. Descriptive only; no source verdict changes. All nine listed banks accounted for, including derived E67/E75 lineage. No original analysis entry point is invoked.
+
+Frozen choices before compute: seed20261028; 2000 item bootstrap draws; signed S = correct-only minus wrong-only, both/neither zero; missing judgment lower=-1, upper=+1. Report point/CI95 and REPORTED iff S>=.20 and lower95>0, separately from original verdicts and probe gates. Nonbinary measures get explicit coverage exceptions, never invented A/B scores. List low probe AUROCs and their code/label orientation; no probe refits or automatic inversion. Leakage = NFKC, casefold and whitespace-normalized Unicode-codepoint Levenshtein distance / max length strictly <.1 over all dev×test pairs within each bank, no content filtering. It is a near-duplicate audit, not a demonstration of outcome leakage.
+
+Read-token sample: sorted bank/item identities, random ceil(5% of items) without replacement per bank, seed20261028; record registered index, captured index when available, token ID and decoded string; unavailable capture binding remains incomplete. E67 and E75 inherit original-bank capture identities rather than inventing new capture items.
+
+Item5: sample300 native readouts uniformly without replacement from the combined E49/E57/E73 pool, seed20261028, freeze opaque packet/key before judging, second judge through the explicitly authorized route and same rubric. Kappa on paired parseable categorical judgments; missingness separate. A sampled-row flip is not a full-row flip: full-row counterfactual holds unsampled primary codes fixed and changes only sampled records. Item6: every regex-only E49/E54 row/readout, full coverage, original regex alongside §172+§202 judgments supplied by Track Q, row S and verdict sensitivity. Separate terminal-input plans and exclusive claims for items5/6 after sealed judgment returns; CPU items1–4 run once under their own claim. Frozen old bank verdicts stand.
+
+Commit script/tests before real audit compute. Commit source/input-hash plan before each invocation; never reset claims. Large private prompts, packets and pair lists stay in ignored cache. No GPU, API dispatch or spending from this script.

@@ -1,0 +1,12 @@
+{
+  "id": "047dc534ff1a24e9efc70ff4",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only \"happy\" or \"sad\" as the response label.\n\nThe example pattern (\"Example sentence: ... / Reply: [answer]\") sets up a direct Q&A structure requiring the model to apply the rule to the specific sentence \"I am very delighted to meet you.\"\n\n\"Reply:\" is the final token, functioning as a prompt label awaiting the model's direct answer \u2014 the next token must be the classification (\"happy\") or a short response.\n\"Given the following format:\nRule: ...\nExample sentence: I am very delighted to meet you.\nQuestion: What is the emotional state label?\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, immediately requiring the answer \"happy\" or similar short response.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only \"happy\" or \"sad\" as the response label.\n\nThe example pattern (\"Example sentence: ... / Reply: [answer]\") sets up a direct Q&A structure requiring the model to apply the rule to the specific sentence \"I am very delighted to meet you.\"\n\n\"Reply:\" is the final token, functioning as a prompt label awaiting the model's direct answer \u2014 the next token must be the classification (\"happy\") or a short response.\n\"Given the following format:\nRule: ...\nExample sentence: I am very delighted to meet you.\nQuestion: What is the emotional state label?\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, immediately requiring the answer \"happy\" or similar short response.",
+  "truncated": false
+}

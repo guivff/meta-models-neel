@@ -1,0 +1,67 @@
+{
+  "GPU_runs": false,
+  "SSH_calls": false,
+  "author_tests": {
+    "command": "python3 -B -m unittest -q test_allocate test_prepare",
+    "count": 60,
+    "result": "PASS",
+    "seconds": 0.322,
+    "synthetic_only": true
+  },
+  "candidate": "cache/g_agreement/i2/operator_g_tp8_allocate_candidate",
+  "created_at_utc": "2026-10-27T23:05:34.769532+00:00",
+  "driver_cpu_receipt_sha256": "78a57add0532c24619fa40498535b09c143bd4728b53297d46f47a0c5c28380f",
+  "driver_production_file_count": 22,
+  "files": {
+    "BUDGET_TEMPLATE.json": "8d3391a71bc62bb986c75ec4bf76904328be11f6206f600210c91cc0f1c079d3",
+    "CONTRACT.md": "1a593ef5bce6a0539dc31e6fb9ad2c168070b911d709bba211a3f10280f969a1",
+    "allocate.py": "a24151d0daf32a094daa6555064447aad78e0719b6f5458794585e81f183cf7c",
+    "launch_plan.py": "aebbde83a5acbffb15adca1a7e3e2ee0aedc031e5628b88256c03a95c36dc6fe",
+    "local_process.py": "d1a5c5845543ecf2f8ea66d4b88a0dc627f1d6bd271f979900e9ca51f479dc63",
+    "prepare.py": "5b2df29bb74f25ed65653cedb16cd9919bd14618fde70fdf63ceb790c45ad7bc",
+    "test_allocate.py": "4b79db946b6375876a9c618675f79b88463be7d3ac99e8e804916ef72cad9742",
+    "test_prepare.py": "311c9a9077ea4bcc88ff86bdf972b4e073f2fd4a0b25f759cee37aa9e30b9e60"
+  },
+  "independent_review_sha256": "a0035ff9427b8ffb8fa102f728f4308b18ed48ac300dee263f7a8db68a80e63f",
+  "independent_tests": {
+    "command": "python3 -B -m unittest -q test_allocate test_prepare",
+    "count": 60,
+    "result": "PASS",
+    "seconds": 0.32
+  },
+  "new_rule_interpretation": false,
+  "previous_allocator_and_C_sources_preserved": true,
+  "private_cpu_receipt_sha256": "f6e84ebde010a239f3ca295df3654bb467c395e31378f9965c1b275c4587a8b1",
+  "provider_calls": false,
+  "schema": "i2-e74-tp8-allocator-preparer-review-v1",
+  "scientific_output_analysis": false,
+  "scope": {
+    "C_eligible_H200_work_has_priority": true,
+    "Secure_has_priority": true,
+    "boot_smoke_max_inside_original_total_seconds": 3000,
+    "closed_G_usd": 7.08,
+    "create_replay_allowed": false,
+    "createdAt_missing_uses_independent_query_only": true,
+    "earliest_Community": "2026-10-28T10:00:00+01:00",
+    "earliest_H200": "2026-10-28T06:00:00+01:00",
+    "experiment_cap_usd": 160,
+    "fresh_example_I2_usd": 182.26,
+    "fresh_example_combined_usd": 442.26,
+    "future_maximum_and_reservation_usd": 152.92,
+    "gpu_count": 8,
+    "gpu_type": "NVIDIA H200",
+    "original_full_forecast_seconds": 9853,
+    "provider_only_guards_before_SSH": true,
+    "same_guard_pair_adopted": true,
+    "setup_seconds": 900
+  },
+  "shared_log_changes": false,
+  "status": "CPU_AND_INDEPENDENT_REVIEW_PASS_PENDING_HISTORICAL_CLAIM_RULING",
+  "track": "G",
+  "unresolved": [
+    "Actual Guiv historical failed-B200-claim ruling is pending; allocator and driver remain source-closed",
+    "Fresh actual root budget/C queue/stock/price/time/source-enablement checks are not provided by synthetic tests",
+    "Actual provider/host/NVMe/guard/environment/scientific evidence remains to be observed under original deadlines after an authorized allocation"
+  ],
+  "worker_edits": false
+}

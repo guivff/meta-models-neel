@@ -1,0 +1,97 @@
+{
+  "actual_usd": "0",
+  "allow_fallbacks": false,
+  "authorized_at_zurich": "2026-10-27T08:28:14.829069+01:00",
+  "authorized_banks": [
+    "E56",
+    "E57",
+    "E59",
+    "E61",
+    "E62",
+    "E63"
+  ],
+  "banks": {
+    "E56": {
+      "bank": "E56",
+      "bank_seal_sha256": "e733bed854700d0129a7b59ed1e1e6ddf82947add11c2f3e77feb36bfb451112",
+      "capture_seal_sha256": "4ca15fcb8407d13b9bc908182afbb14a3318a3a1d83b92623f848b8e743a3bdd",
+      "forecast_commit": "1b158e87062d06829b6798331857949bb7966a05",
+      "forecast_commit_epoch": 1793085915,
+      "forecast_sha256": "c97aea89ccc938404686de6bfff03e7421d1f318db807c5ac7db7c88e43734c1",
+      "status": "FORECAST_COMMIT_VERIFIED_AWAITING_VERIFIED_PACKET_AND_DAILY_ALLOCATION"
+    },
+    "E57": {
+      "bank": "E57",
+      "bank_seal_sha256": "cff66637fedd6afd795370e3efbe3e8262d77c98a64e60e8580a9507dd295f7c",
+      "capture_seal_sha256": "498874bbe77428c10a7771bf905b02a572afc212450f3d718ec27ea9d358555c",
+      "forecast_commit": "023f715f641650a27294c15e4ef049f428b6c747",
+      "forecast_commit_epoch": 1793085955,
+      "forecast_sha256": "7e48dc96a7a844fc43eeb37e4265f12ea4f7285f7e1988be6719cd9c5dff1a10",
+      "status": "FORECAST_COMMIT_VERIFIED_AWAITING_VERIFIED_PACKET_AND_DAILY_ALLOCATION"
+    },
+    "E59": {
+      "status": "HOLD_NO_COMMITTED_R3B_FORECAST"
+    },
+    "E61": {
+      "bank": "E61",
+      "coordinator_commit": "cd77d7d96ebe2b133ad6c8cb233585327ade4863",
+      "coordinator_record_path": "results/g_agreement/r/E61_NO_FORECAST_REQUIRED_2026-10-27.json",
+      "coordinator_record_sha256": "c8251177169233acb2091a4e7cbf13fbe6edaae4580be1387267be349fd1f19c",
+      "forecast_required": false,
+      "runner_status": "D5_DEFERRED_D4_NO_JUDGE",
+      "scope": "E61: no forecast required (not an R3b bank, \u00a7177). \u00a7177's D2/D3/D4 displays are not R3b banks; \u00a7181 R3b covers E56, E57, E59 and E62 only. This record is not a forecast and references no other bank's forecast.",
+      "status": "RATIFIED_NO_FORECAST_REQUIRED"
+    },
+    "E62": {
+      "bank": "E62",
+      "bank_seal_sha256": "f69a4fa6726da61d656b1e7ecf65310bb3c226ee5309e129c2a93c4849647cfd",
+      "capture_seal_sha256": "aff3325f6fbb98644978cab40408c9be3067b7af94885475d12908b0e0b42a59",
+      "forecast_commit": "b62033082d2be6cd4e377fe9310295035b732429",
+      "forecast_path": "results/g_agreement/understand/e52/r3b/E62_JFORECAST.json",
+      "forecast_sha256": "7a2f6f1d165402c661a6e3841ec827c878b0dadefecc988ee33cdfe033398870",
+      "status": "FORECAST_COMMIT_VERIFIED_AWAITING_VERIFIED_PACKET_AND_DAILY_ALLOCATION"
+    },
+    "E62P": {
+      "authorization_parent": "E62",
+      "bank": "E62P",
+      "bank_seal_sha256": "862e4e7981a4f70cd85d6453194df72cd0f47b3c762361f70e8046de8a196dfd",
+      "capture_seal_sha256": "1e11f8ee65998bac5232bd7b8256491cefa6358d4e37db409a90ced78736e9bf",
+      "forecast_commit": "fb26a098c545dc8e0049f1955b9cb7362ff56b13",
+      "forecast_path": "results/g_agreement/understand/e52/r3b/E62_PLACEBO_JFORECAST.json",
+      "forecast_sha256": "d7d7614d6b6f7a8609748bf4d3f1de015f5409c492198fccbfe3ac0500d213d1",
+      "status": "FORECAST_COMMIT_VERIFIED_AWAITING_VERIFIED_PACKET_AND_DAILY_ALLOCATION"
+    },
+    "E63": {
+      "status": "HOLD_NO_COMMITTED_R3B_FORECAST"
+    }
+  },
+  "cap_usd": "15",
+  "daily_allocation_status": "INTEGRATOR_RECEIPT_REQUIRED_WITHIN_USD300",
+  "daily_ceiling_authority": "Guiv explicit ruling confirmed 2026-10-27; reported integrator committed total USD232.16. Shared judging cap remains USD15.",
+  "daily_ceiling_usd": "300",
+  "data_collection": "deny",
+  "forbidden_wire_metadata": [
+    "reader",
+    "row_id",
+    "arm",
+    "true_label",
+    "source_item_id",
+    "repeat_group",
+    "host_path"
+  ],
+  "forecast_gate": "Committed bank-specific R3b forecast for E56/E57/E59/E62 and separate E62P forecast. E61 ratified no-forecast record cd77d7d9; D5 deferred and D4 needs no judge. E63 requires its explicit coordinator record.",
+  "judge_calls": 0,
+  "ledger": "cache/g_agreement/understand/blind_judge/later_banks_15usd/ledger.jsonl",
+  "model": "google/gemini-3.1-flash-lite",
+  "provider": "google-vertex/global",
+  "provider_pinned": true,
+  "reserved_usd": "0",
+  "scope_note": "Bank-native readouts only. Prior D5_E49/E54 remain in their separate USD5 ledger; no resubmissions authorized. Other banks excluded.",
+  "transport": "OpenRouter",
+  "wire_fields": [
+    "opaque_id",
+    "frozen_rubric",
+    "readout_text"
+  ],
+  "zdr": true
+}

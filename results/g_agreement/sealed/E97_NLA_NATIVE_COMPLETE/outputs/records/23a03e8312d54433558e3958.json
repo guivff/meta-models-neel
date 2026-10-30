@@ -1,0 +1,12 @@
+{
+  "id": "23a03e8312d54433558e3958",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"If X, answer 'Yes'; otherwise 'No'\"), followed by a test case requiring application of that rule.\n\nThe example format establishes a Q&A structure where \"Sentence: [text]\" is followed by a classification response, so the model must now produce the actual answer for \"I am feeling very tired.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker in the structured format, immediately requiring the model's direct answer (likely \"No\" or a short classification word).\n\"Example format:\nSentence: I am feeling very tired.\nReply:\" \u2014 the final \"Reply:\" is a label awaiting the model's response, constrained to be the short answer matching the established pattern.\n\"Chinese translation...\nSentence: ...\nReply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"If X, answer 'Yes'; otherwise 'No'\"), followed by a test case requiring application of that rule.\n\nThe example format establishes a Q&A structure where \"Sentence: [text]\" is followed by a classification response, so the model must now produce the actual answer for \"I am feeling very tired.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker in the structured format, immediately requiring the model's direct answer (likely \"No\" or a short classification word).\n\"Example format:\nSentence: I am feeling very tired.\nReply:\" \u2014 the final \"Reply:\" is a label awaiting the model's response, constrained to be the short answer matching the established pattern.\n\"Chinese translation...\nSentence: ...\nReply:\"",
+  "truncated": false
+}

@@ -1,0 +1,23 @@
+{
+  "all_prior_reservations_settled": true,
+  "operator_handoff_not_provider402": true,
+  "physical_wires_unchanged": true,
+  "reason": "Nonblocking shared state lock mistakenly treated normal contention as active dispatcher; now waits. Bank-lifetime ownership locks unchanged.",
+  "regression_tests_passed": 8,
+  "resumes": [
+    {
+      "bank": "E100",
+      "pid": 63143,
+      "reason": "shared pacing lock correction; all reservations settled; cached successes retained",
+      "resumed_utc": "2026-10-28T22:56:50.019126+00:00",
+      "source_commit": "a21cb2c158fc7438d5e2f4215f68fbd8ea5c13e7"
+    },
+    {
+      "bank": "E87",
+      "pid": 63145,
+      "reason": "shared pacing lock correction; all reservations settled; cached successes retained",
+      "resumed_utc": "2026-10-28T22:56:50.028306+00:00",
+      "source_commit": "a21cb2c158fc7438d5e2f4215f68fbd8ea5c13e7"
+    }
+  ]
+}

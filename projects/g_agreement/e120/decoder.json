@@ -1,0 +1,171 @@
+{
+  "acquisition": {
+    "callable": "acquire",
+    "load_validator": "use E120 split counts; E113 original CLI load is hardcoded1008 and is not an E120 entrypoint",
+    "module": "projects.g_agreement.e113.runner",
+    "population": "600 from sealed capture, byte-identical carriers joined by original id; pass configured items/h directly",
+    "runtime": "original E113 Runtime, source44, greedy first token only"
+  },
+  "adapter": {
+    "fit": "E113 dev-only fivefold selection, frozen weights before test once",
+    "labels_on_pod": false,
+    "owner": "W-lens",
+    "report": "full per-layer/position test AUROC and first generated token ID distribution per private CPU cell"
+  },
+  "authority": "90965b84b",
+  "batch": 8,
+  "capture": {
+    "all_finite_required": true,
+    "args": {
+      "layer": 44
+    },
+    "callable": "capture_lens",
+    "first_generated_site": "process same injected carrier plus its actual native greedy first generated token; never last prompt token",
+    "lens_layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "module": "projects.g_agreement.e113.capture",
+    "positions": [
+      "injected_activation",
+      "first_generated_token"
+    ]
+  },
+  "cpu_only_labels": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e85/cache/bank_2026-10-28_v1/LABELS.PRIVATE.json",
+    "sha256": "5ed311882f9b06f208776d1636567267570ed33bbf83b39d5da9732559975a44",
+    "stage_to_pod": false
+  },
+  "expected_per_private_cell": {
+    "dev": 50,
+    "test": 100
+  },
+  "experiment": "E120",
+  "invocation": "existing callable interfaces, not the legacy E109/E113 CLI population validators",
+  "items": 600,
+  "labels_on_pod": false,
+  "launch": {
+    "authorization": "Direct user instruction2026-10-29: I-2 launches E116,E117,E119,E120 in parallel",
+    "cap": "measured total need including staging times1.25 plus60s; standing217 budget and original custody",
+    "labels_cpu_only": true,
+    "mode": "parallel launch with E116/E117/E119; direct user authorization",
+    "obtain_H200_before": "2026-10-29T18:00:00Z",
+    "owner": "I-2",
+    "planning_total_GPU_hours": 0.5
+  },
+  "native_alpha": 16000,
+  "native_checkpoint": "agu18dec/olens_and_ar@c95215d5/olens_s3d_rl600",
+  "native_transform": "unit",
+  "part": "b",
+  "population": "E85 original sealed600, all four genre-by-addressed cells",
+  "public_fields": [
+    "id",
+    "base_id",
+    "row",
+    "split",
+    "vector_index",
+    "block"
+  ],
+  "public_input": {
+    "archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e120-inputs-v1/decoder.tar.gz",
+    "archive_sha256": "ee84b34c9ea8d487d63249dfacd6f1f3341e7c0c4487b5bf7c49b51ab114d148",
+    "input_sha256": "522295510f3009d49860501cf922f10d03a189fb5b4b6b2994e493f409b31763",
+    "items": 600,
+    "root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e120-inputs-v1/decoder"
+  },
+  "reader_readouts_for_judging": 0,
+  "row": "evaluation_cue",
+  "seed": 20261029,
+  "source_block": 44,
+  "source_capture": {
+    "members": {
+      "POSITIONS.json": "37bc60c2ca0f09cfb354cfcec5a6a9e498a19827ff1dd04ed05567004b30cd32",
+      "acts42.npy": "a638bc4063911a6b0f919344560cf16c6b8e613f2b2b7c484ec4e98305845072",
+      "acts44.npy": "c7b9f7ffff89aeb5458011e657a51352a623305638995a45845d636a52f10f74",
+      "items.order.json": "d0af52c44ed7b5bee8e2cee6593c516f64307f2e7c56c0d661242ecf9db90c4d"
+    },
+    "order": "items.order.json",
+    "root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/parallel_operators/e85-a2/verified_capture",
+    "seal": "STAGE_SEAL.json",
+    "sha256": "d77cfa74a8bbc4a2787522e9f72d2594646f771a7f12dc437eddd18283a2a543",
+    "vectors": "acts44.npy"
+  },
+  "source_code_sha256": {
+    "projects/g_agreement/e113/capture.py": "e7eee219c653a406a68283b4d50be679bed6719c483ea17dd77cc1d7fe139faf",
+    "projects/g_agreement/e113/runner.py": "3334afb1bff324eb9d898653be5eb99ccb8fb3a79f338345c4e55a29053fda1e"
+  },
+  "source_public": {
+    "items": "items.json",
+    "items_sha256": "11389cd492b35b10df7f6897e1fb8cc2c56d95b94917f34126fa115bc018e613",
+    "preserve": "exact original ids, read_index and full prompt tokens including system",
+    "root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e85_runner_v1/package/inputs",
+    "seal": "INPUT_SEAL.json",
+    "sha256": "114e18fb5be7d53a2591f80262f46ce83c631384f512ea0a491968d4ad5f77af"
+  },
+  "splits": {
+    "dev": 200,
+    "test": 400
+  }
+}

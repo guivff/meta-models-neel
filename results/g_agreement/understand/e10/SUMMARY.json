@@ -1,0 +1,166 @@
+{
+  "section": 97,
+  "status": "DESCRIPTIVE",
+  "pool_pairs": 3272,
+  "complete_pair_matches": 937,
+  "covered_by_source": {
+    "W1": 415,
+    "S61": 522
+  },
+  "unique_valid_readout_extractions": 3624,
+  "claims_in_complete_pairs": 6226,
+  "matched_claim_pairs": 246,
+  "one_sided_claims": 5734,
+  "unclassified_one_sided_claims": 256,
+  "one_sided_by_reader": {
+    "nla": 2299,
+    "oracle": 3435
+  },
+  "types": [
+    {
+      "id": "T01",
+      "name": "Structured Data and Logic",
+      "definition": "Claims describing formal data structures, code snippets, algorithmic logic, or specific formatting patterns (e.g., JSON, pipe-delimited, Q&A templates).",
+      "oracle_claims": 501,
+      "nla_claims": 1203,
+      "pairs": 678,
+      "W1_claims": 970,
+      "S61_claims": 734
+    },
+    {
+      "id": "T02",
+      "name": "Mathematical and Numerical Operations",
+      "definition": "Claims involving arithmetic problems, sequences, sorting, or numeric results derived from calculations.",
+      "oracle_claims": 917,
+      "nla_claims": 295,
+      "pairs": 448,
+      "W1_claims": 244,
+      "S61_claims": 968
+    },
+    {
+      "id": "T03",
+      "name": "Narrative and Creative Writing",
+      "definition": "Claims identifying fictional contexts, creative writing prompts, character voices, or descriptive scene-setting.",
+      "oracle_claims": 335,
+      "nla_claims": 280,
+      "pairs": 309,
+      "W1_claims": 513,
+      "S61_claims": 102
+    },
+    {
+      "id": "T04",
+      "name": "Instructional and Educational Content",
+      "definition": "Claims regarding homework help, educational trivia, or instructional guides for specific tasks.",
+      "oracle_claims": 218,
+      "nla_claims": 164,
+      "pairs": 210,
+      "W1_claims": 86,
+      "S61_claims": 296
+    },
+    {
+      "id": "T05",
+      "name": "Observational and Descriptive Reporting",
+      "definition": "Claims describing physical environments, visual details of a scene, or specific objects observed in a setting.",
+      "oracle_claims": 548,
+      "nla_claims": 77,
+      "pairs": 245,
+      "W1_claims": 504,
+      "S61_claims": 121
+    },
+    {
+      "id": "T06",
+      "name": "Sentiment and Evaluative Commentary",
+      "definition": "Claims expressing subjective opinions, emotional states, or critiques of experiences, media, or performance.",
+      "oracle_claims": 418,
+      "nla_claims": 63,
+      "pairs": 148,
+      "W1_claims": 406,
+      "S61_claims": 75
+    },
+    {
+      "id": "T07",
+      "name": "Other",
+      "definition": "Claims that do not fit into the above categories, including specific news reports, fringe theories, or ambiguous fragments.",
+      "oracle_claims": 342,
+      "nla_claims": 117,
+      "pairs": 264,
+      "W1_claims": 146,
+      "S61_claims": 313
+    }
+  ],
+  "examples": [
+    {
+      "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+      "reason": "top type T01",
+      "type_claims": 11
+    },
+    {
+      "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+      "reason": "top type T01",
+      "type_claims": 11
+    },
+    {
+      "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+      "reason": "top type T02",
+      "type_claims": 8
+    },
+    {
+      "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+      "reason": "top type T02",
+      "type_claims": 8
+    },
+    {
+      "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+      "reason": "top type T05",
+      "type_claims": 13
+    },
+    {
+      "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+      "reason": "top type T05",
+      "type_claims": 8
+    },
+    {
+      "pair_id": "5b7d3ce9898a93fa9e2e284bd4f95abe36dcdf2b6396d82d4aaaa43fd4248f76",
+      "reason": "frozen seeded random"
+    },
+    {
+      "pair_id": "aca0003eca2628fb6ea8b6c8237f478d92642719d2109722aa1dcdc3f8e812a2",
+      "reason": "frozen seeded random"
+    }
+  ],
+  "lengths": {
+    "oracle": {
+      "mean_whitespace_words": 60.57426650366748,
+      "characters": 1183307
+    },
+    "nla": {
+      "mean_whitespace_words": 101.55990220048899,
+      "characters": 2338931
+    }
+  },
+  "cost": {
+    "actual_usd": "3.20748675",
+    "unresolved_reserve_usd": "0",
+    "committed_usd": "3.20748675",
+    "cap_usd": "20"
+  },
+  "gpu_h": 0,
+  "coverage_flow": {
+    "pool_pairs": 3272,
+    "both_extractions_valid": 1641,
+    "missing_extraction_pairs": 1631,
+    "deterministic_zero_claim_matching_pairs": 44,
+    "pairs_sent_for_matching": 1597,
+    "matching_validation_missing_pairs": 704,
+    "complete_pair_matches": 937,
+    "classified_one_sided_claims": 5478,
+    "unclassified_one_sided_claims": 256
+  },
+  "selection_verbatim_unique_pairs": 7,
+  "selection_exact_text_duplicate_cases": [
+    [
+      "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+      "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56"
+    ]
+  ]
+}

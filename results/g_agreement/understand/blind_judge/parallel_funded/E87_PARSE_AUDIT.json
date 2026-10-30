@@ -1,0 +1,75 @@
+{
+  "E87_main_attempt0": {
+    "counts": {
+      "INVALID": 3320,
+      "VALID": 1048,
+      "finish_stop": 4500,
+      "http_200": 4500,
+      "invalid_empty_provider_evidence": 3133,
+      "one_result_per_id_failure": 132,
+      "quote_not_present_any_position": 79,
+      "quote_present_only_at_other_position": 108
+    },
+    "responses": 4500,
+    "validation_failure_reasons": {
+      "quote at asserted first position": 276,
+      "silent no mention": 3044
+    }
+  },
+  "E87_main_attempt2": {
+    "counts": {
+      "INVALID": 3314,
+      "finish_stop": 3444,
+      "http_200": 3444,
+      "invalid_empty_provider_evidence": 3128,
+      "one_result_per_id_failure": 130,
+      "quote_not_present_any_position": 78,
+      "quote_present_only_at_other_position": 108
+    },
+    "responses": 3444,
+    "validation_failure_reasons": {
+      "quote at asserted first position": 273,
+      "silent no mention": 3041
+    }
+  },
+  "E87_original_attempt2": {
+    "counts": {
+      "INVALID": 826,
+      "finish_stop": 863,
+      "http_200": 863,
+      "invalid_empty_provider_evidence": 779,
+      "one_result_per_id_failure": 37,
+      "quote_not_present_any_position": 19,
+      "quote_present_only_at_other_position": 28
+    },
+    "responses": 863,
+    "validation_failure_reasons": {
+      "quote at asserted first position": 58,
+      "silent no mention": 768
+    }
+  },
+  "checked_utc": "2026-10-29T04:41:29.502709+00:00",
+  "experiment": "E87",
+  "judgment_seal_sha256": "2a1cbbbdd3d950446c23275b4a084fdac17693bfb66a2d65d6fca232bc04baeb",
+  "kind": "READ_ONLY_PROTOCOL_DIAGNOSTIC_NOT_REJUDGING",
+  "main_final_breakdown": {
+    "missing_or_multiple_group_id": 130,
+    "quote_at_asserted_position_failure": 273,
+    "silent_empty_evidence_empty_values_nonnull_position": 3041
+  },
+  "main_final_http200_finishstop": 3444,
+  "main_terminal_missing": 3444,
+  "no_analysis_replay": true,
+  "no_output_changed": true,
+  "no_paid_calls": true,
+  "request_contract_issue": "first_position schema has nullable type/min/max but no conditional null-for-silent instruction; grouped request uses generic independent-record wording; validator requires silent position=null and one code per group",
+  "response_json_all_parseable": true,
+  "route_source_verified": true,
+  "silent_nonnull_position_values": {
+    "-1": 1,
+    "-11": 198,
+    "-15": 2665,
+    "-7": 157,
+    "0": 20
+  }
+}

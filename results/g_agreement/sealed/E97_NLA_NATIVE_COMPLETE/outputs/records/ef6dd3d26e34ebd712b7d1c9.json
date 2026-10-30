@@ -1,0 +1,12 @@
+{
+  "id": "ef6dd3d26e34ebd712b7d1c9",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured data format with labeled fields (\"Event:\", \"Outcome:\") establishes a template-style pattern, suggesting a system prompt or test case format.\n\nThe phrase \"Record begins\" and \"Record complete\" framing signals a self-contained example block, implying the model should process or respond to the described scenario (a fictional event with outcome).\n\n\"Recorded.\nRecorded event: A dog chased a cat. Outcome: The dog caught the cat.\nRecording complete.\" \u2014 \"Recording complete.\" is a closing delimiter phrase, strongly constraining next tokens to be a new instruction, prompt, or response directive (e.g., \"Now analyze,\" \"End of input,\" or a separator).\n\"Recorded event: [description]. Outcome: [description].\nRecord complete.\" \u2014 the final token \"complete.\" closes the block, signaling a boundary marker or instruction prompt follows.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured data format with labeled fields (\"Event:\", \"Outcome:\") establishes a template-style pattern, suggesting a system prompt or test case format.\n\nThe phrase \"Record begins\" and \"Record complete\" framing signals a self-contained example block, implying the model should process or respond to the described scenario (a fictional event with outcome).\n\n\"Recorded.\nRecorded event: A dog chased a cat. Outcome: The dog caught the cat.\nRecording complete.\" \u2014 \"Recording complete.\" is a closing delimiter phrase, strongly constraining next tokens to be a new instruction, prompt, or response directive (e.g., \"Now analyze,\" \"End of input,\" or a separator).\n\"Recorded event: [description]. Outcome: [description].\nRecord complete.\" \u2014 the final token \"complete.\" closes the block, signaling a boundary marker or instruction prompt follows.",
+  "truncated": false
+}

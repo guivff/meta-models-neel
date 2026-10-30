@@ -1,0 +1,100 @@
+{
+  "section": 79,
+  "status": "WHEELS_HASH_VERIFIED_ON_MAC_NATIVE_PREFLIGHT_PENDING",
+  "at_utc": "2026-10-23T08:21:41.403855+00:00",
+  "packages": [
+    {
+      "name": "flash-linear-attention",
+      "version": "0.5.2",
+      "filename": "flash_linear_attention-0.5.2-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/90/d2/2070e3cf2148c5cce99ca4876633c4b7b89ec085323600bd3d47aeacd306/flash_linear_attention-0.5.2-py3-none-any.whl",
+      "sha256": "dcf405d81f5426393b59037097aa700d0f4a841465d5028d5aa543f4502f2400",
+      "requires_dist": [
+        "fla-core==0.5.2",
+        "transformers>=4.45.0",
+        "fla-core[cuda]==0.5.2; extra == \"cuda\"",
+        "fla-core[rocm]==0.5.2; extra == \"rocm\"",
+        "fla-core[xpu]==0.5.2; extra == \"xpu\"",
+        "fla-core[npu]==0.5.2; extra == \"npu\"",
+        "fla-core[cpu]==0.5.2; extra == \"cpu\"",
+        "tilelang>=0.1.9; extra == \"tilelang\"",
+        "causal-conv1d>=1.4.0; extra == \"conv1d\"",
+        "matplotlib; extra == \"benchmark\"",
+        "pandas; extra == \"benchmark\"",
+        "datasets>=3.3.0; extra == \"benchmark\"",
+        "pytest; extra == \"test\"",
+        "pytest-xdist; extra == \"test\""
+      ],
+      "metadata_source": "https://pypi.org/pypi/flash-linear-attention/0.5.2/json"
+    },
+    {
+      "name": "fla-core",
+      "version": "0.5.2",
+      "filename": "fla_core-0.5.2-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/2d/ed/dfe19c4da779957eb6a42a26812f9b4e2280bf757a17a71933ff59ffcb98/fla_core-0.5.2-py3-none-any.whl",
+      "sha256": "5e830c85bad3d0d34677f98ac7074d08687a3756f0f0499d95ceb96eb6920761",
+      "requires_dist": [
+        "einops",
+        "torch>=2.7.0; extra == \"cuda\"",
+        "triton>=3.3; extra == \"cuda\"",
+        "torch>=2.7.0; extra == \"rocm\"",
+        "torch>=2.7.0; extra == \"xpu\"",
+        "torch==2.7.1; extra == \"npu\"",
+        "torch_npu==2.7.1.post4; extra == \"npu\"",
+        "torchvision==0.22.1; extra == \"npu\"",
+        "triton-ascend==3.2.1; extra == \"npu\"",
+        "torch>=2.7.0; extra == \"cpu\"",
+        "triton>=3.3; extra == \"cpu\""
+      ],
+      "metadata_source": "https://pypi.org/pypi/fla-core/0.5.2/json"
+    },
+    {
+      "name": "einops",
+      "version": "0.8.2",
+      "filename": "einops-0.8.2-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/2a/09/f8d8f8f31e4483c10a906437b4ce31bdf3d6d417b73fe33f1a8b59e34228/einops-0.8.2-py3-none-any.whl",
+      "sha256": "54058201ac7087911181bfec4af6091bb59380360f069276601256a76af08193",
+      "requires_dist": null,
+      "metadata_source": "https://pypi.org/pypi/einops/0.8.2/json"
+    },
+    {
+      "name": "ninja",
+      "version": "1.13.2",
+      "filename": "ninja-1.13.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/6e/53/ebfed7b689c338dd8ebeec9c0730c8d56821292f14e2536e5f3ef1a05744/ninja-1.13.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "65a24341b5ac09fcadcc37082660be40a94174e51a937fabf6e2cae26225fa2c",
+      "requires_dist": null,
+      "metadata_source": "https://pypi.org/pypi/ninja/1.13.2/json"
+    },
+    {
+      "name": "causal-conv1d",
+      "version": "1.7.0",
+      "filename": "causal_conv1d-1.7.0+cu12torch2.8cxx11abiTRUE-cp312-cp312-linux_x86_64.whl",
+      "url": "https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.7.0/causal_conv1d-1.7.0%2Bcu12torch2.8cxx11abiTRUE-cp312-cp312-linux_x86_64.whl",
+      "sha256": "a1fcd5d022b67ddfc9e1c291f890004c1c081a03d66b532f6eebe31219168e0e",
+      "metadata_source": "https://api.github.com/repos/Dao-AILab/causal-conv1d/releases/tags/v1.7.0"
+    }
+  ],
+  "base_stack_policy": "Every pre-existing base runtime pin remains unchanged; only the pinned optional kernel packages and helper dependencies are added. Torch2.8.0+cu128/transformers5.18.0/triton3.4.0 stay fixed.",
+  "platform": "Linux x86_64, Python3.12, CUDA12.8, Torch2.8, cxx11ABI TRUE; fail before forward if any mismatch",
+  "remaining_science_seconds": 4793,
+  "gpu_tested": false,
+  "weights_changed": false,
+  "vendor_scoring_changed": false,
+  "frozen_inputs_changed": false,
+  "candidate_preflight": "projects/g_agreement/blindspot/screens/kernel_preflight.py",
+  "native_requirement": "Actual extension import and Transformers closure dispatch to causal_conv1d/fla must be verified; no silent reference fallback; then repeat the same all-feature smoke and time projection within a new exact integrator allocation and remaining budget.",
+  "cpu_tests": {
+    "combined_passed": 316,
+    "combined_wall_seconds": 11.62,
+    "scope": "upstream/scaffold/feature/sampling/runner/kernel guards, including decoys; no GPU ABI or performance validation"
+  },
+  "source_references": [
+    "https://github.com/fla-org/flash-linear-attention/blob/main/INSTALL.md",
+    "https://github.com/Dao-AILab/causal-conv1d/releases/tag/v1.7.0"
+  ],
+  "no_pod_requested": true,
+  "no_install_or_download_of_kernel_binaries": false,
+  "kernel_wheel_manifest_sha256": "fcc3a792d33abb68665bfb15c953eadefa516579df0a976f33e29590d70a74ec",
+  "downloaded_on_mac": true
+}

@@ -1,0 +1,62 @@
+{
+  "checked_at_utc": "2026-10-28T10:44:30.225679+00:00",
+  "status": "CPU_VERIFIED_ADMISSION_PENDING",
+  "experiment": "E81/E90",
+  "prepared": {
+    "experiment": "E81/E90",
+    "run_id": "e81-i2-20261028-a1",
+    "source_sha": "d2460ab45d82bcd30a272d1518df709c413324f9e70791d0cf6db2e8cf554c46",
+    "source_archive_sha256": "9494ae8b14537b985e9fc6d8d9f429293df268a75e944bad1f2f322f1f9d9a42",
+    "input_sha": "d4224be27c789d601902602971ce1cd7e4e910f9341053a009c94f2fff1332be",
+    "input_archive_sha256": "3a21eac103d9b05d2409ff75771fff584b9082a9ec1cf4493b03ac0041425698",
+    "original_input_sha": "014c37657cc94d43e45c6ce0bf557db8039d82bd8c863b89ee9c5998c73bebe8",
+    "cap_seconds": 3600,
+    "original_frozen_science_unchanged": true,
+    "changes": [
+      "Reduce worker operational cap7200 to owner cap3600; total creation-to-deadline3600",
+      "Replace stale account ceiling260 by dated section204 ceiling1500",
+      "Output provenance only: per-process run_id/code_sha256/run_kind on every row"
+    ],
+    "primary_arm": "generic describe; Oracle wording secondary only",
+    "quotes_shared_commit": "bcce98d2",
+    "gpu_forecast_upper_usd": 8.62,
+    "judging_cap_usd": 3,
+    "prior_e81_gpu_seconds": 0,
+    "provider_effects": 0,
+    "original_source_sha": "13c4116f5f59a799ac512c623443b1b589ecd661c0fa26a5c633b3a0b8ac785c",
+    "original_source_archive_sha256": "2c082556e8cba6304c69ede1aa5bbce1e73121ed44f6c12c3681d24247fee83a"
+  },
+  "tests": {
+    "worker": 2,
+    "admission": 6,
+    "quotes": 4,
+    "exact_frozen_11064_synthetic_preflight": true
+  },
+  "provider_effects": 0,
+  "source_bindings": {
+    "cache/g_agreement/i2/e81_admission/allocate_once.py": "cf9159e1ec51278483f01f00917208f64d57149ed466ff16833bb35b3a172791",
+    "cache/g_agreement/i2/e81_admission/stage_and_start.py": "86409b0ffb52a43a83b1c801ec5c33de8803ce50abcf7da4d561cb70ca89f4fa",
+    "cache/g_agreement/i2/e81_admission/source-provenance.tar.gz": "9494ae8b14537b985e9fc6d8d9f429293df268a75e944bad1f2f322f1f9d9a42",
+    "cache/g_agreement/i2/e81_admission/inputs-cap3600.tar.gz": "3a21eac103d9b05d2409ff75771fff584b9082a9ec1cf4493b03ac0041425698"
+  },
+  "budget": {
+    "checked_epoch": 1793184149.086262,
+    "GPU_ceiling_usd": 1500,
+    "judge_ceiling_usd": 500,
+    "conservative_historical_alltrack_account_envelope_usd": 188.23,
+    "I2_lifetime_double_counted_conservatively_usd": 52.62,
+    "Q_last_running_full_cap_usd": 12.1,
+    "candidate_GPU_upper_usd": 8.62,
+    "GPU_upper_with_candidate_usd": 261.57,
+    "judge_upper_with_candidate_usd": 27.763124125,
+    "projection_posted": false,
+    "sources": [
+      "Compiler C snapshot10:37Z",
+      "Q shared status10:36Z",
+      "I2 own terminal receipts",
+      "Provider account actual running0 at10:40Z"
+    ],
+    "actual_GPU_window_closed_upper_usd": 30.08,
+    "active_I2_reserve_usd": 0
+  }
+}

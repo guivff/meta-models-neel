@@ -1,0 +1,25 @@
+{
+ "experiment": "E107",
+ "issuer": "Integrator Q (Track Q CPU binding, sealed records only)",
+ "written_utc": "2026-10-29T12:56Z",
+ "status": "COMPLETE, with one open format question (E82 native text, below)",
+ "supersedes": "partial v1 (SPEC e88457ec, 903e13109)",
+ "hashes": {
+  "SPEC.json": "6800f91b9e46602a0cc812f437af9e5b3c9789653e0d1ea0ad1bd9d5d26d17b0",
+  "E107_BINDING_SEAL.json": "9ec22b767c21c47f47ceb5835f17f3654b2939e5cd94e58f8230216db01b9495",
+  "MEASUREMENTS.json": "6703c10396182924c67d481dc947cbbffaf780d8f1d658fde225bb77d4c12a15"
+ },
+ "counts": {"items": 4297, "outside_cells": 4496, "native_cells": 10328, "source_seals": 25},
+ "sources": {
+  "inventory": "I-2 INVENTORY_SEAL 52d6bdea (commit 196dc8ae5, before the first output); target letters from its TARGET_MAPS.PRIVATE, each checked equal to I-2's pointer letters",
+  "outside": "text = generation RESPONSES (seal 4698d4c3); code = W-internals-C dispatch map (BINDING_SEAL dc7530a2), amended E56 rubric, 4496 records joined by explicit ids",
+  "native": "I-2 POINTERS seal f1e6f276: E81 qwen_self (E81 bank), E81 oracle/nla (E57, E59, E73 structural, E73 controls banks), E82 and E86 oracle/nla; text from each bank's packet by the same opaque id",
+  "old_value": "1124 original-rubric comparisons bound by reference (C OLD_VALUE_BINDING_SEAL 077960d9); not in MEASUREMENTS, which the adapter does not read for them",
+  "redaction": "audit = privacy-copy PATH_REDACTION_AUDIT; map = REDACTION_PLAN_MAP.PRIVATE (plan hashes match PLAN_SEAL 39591257 / PLANS 08a0478a); original plan = PLANS.PRIVATE",
+  "prior_analyses": "E82 8bc2e389, E86 f8c8af78"
+ },
+ "trackq_copies": "3 files without a core-format seal were copied and sealed by sha into Track Q custody: E73 structural and controls adapted JUDGMENTS (their seals use schema e73-seal-v1), and E82 GROUPED_PACKET (sha in I-2 PREFLIGHT). Shas match I-2's sealed pointer record.",
+ "same_bank_rubrics": "true. The outside primary rubric is one text across all 4496 records; it equals the E81 and E86 judge rubric texts byte for byte.",
+ "open_question": "E82 native text REF points to the exact sealed GROUPED_PACKET 'positions' list (1-76 position readouts per record), not to a joined string. W-mech2 (adapter owner), with I-2: confirm how text/evidence validation reads E82 grouped readouts before the single run. No normalization invented.",
+ "paths": "SPEC in Track Q cache/g_agreement/r_e107/binding_v2 (git-ignored); builder cache/g_agreement/r_ops/e107/bind_v2.py"
+}

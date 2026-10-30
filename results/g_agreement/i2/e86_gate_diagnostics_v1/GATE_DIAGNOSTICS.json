@@ -1,0 +1,90 @@
+{
+  "BOW_QA": {
+    "authority": "\u00a7199 BOW <= 0.65",
+    "fit": "dev only, word unigrams, logistic C=1; primary question (arm instruction is constant within arm)",
+    "yn_arms": {
+      "honest": {
+        "passes": true,
+        "status": "PASS",
+        "test_auroc": 0.64035
+      },
+      "lie": {
+        "passes": false,
+        "status": "FAIL",
+        "test_auroc": 0.77755
+      },
+      "role": {
+        "passes": true,
+        "status": "PASS",
+        "test_auroc": 0.6431
+      }
+    }
+  },
+  "achieved_counts": {
+    "open/honest": {
+      "dev": 0,
+      "released_test": 0,
+      "test": 1
+    },
+    "open/lie": {
+      "dev": 0,
+      "released_test": 0,
+      "test": 0
+    },
+    "open/role": {
+      "dev": 0,
+      "released_test": 0,
+      "test": 0
+    },
+    "yn/honest": {
+      "dev": 200,
+      "released_test": 200,
+      "test": 200
+    },
+    "yn/lie": {
+      "dev": 200,
+      "released_test": 0,
+      "test": 200
+    },
+    "yn/role": {
+      "dev": 200,
+      "released_test": 200,
+      "test": 200
+    }
+  },
+  "experiment": "E86",
+  "open_truth_probe": "NOT_APPLICABLE_BY_CLARIFICATION1",
+  "primary_R_K1": "NOT_EVALUABLE_BLOCKED_LIE_UNDERPOWERED_OPEN",
+  "truth_probes": {
+    "honest/42": {
+      "dev_auroc": 1.0,
+      "status": "COMPLETE",
+      "test_auroc": 0.9997
+    },
+    "honest/44": {
+      "dev_auroc": 1.0,
+      "status": "COMPLETE",
+      "test_auroc": 0.9998
+    },
+    "lie/42": {
+      "dev_auroc": 1.0,
+      "status": "COMPLETE",
+      "test_auroc": 1.0
+    },
+    "lie/44": {
+      "dev_auroc": 1.0,
+      "status": "COMPLETE",
+      "test_auroc": 1.0
+    },
+    "role/42": {
+      "dev_auroc": 1.0,
+      "status": "COMPLETE",
+      "test_auroc": 0.9999
+    },
+    "role/44": {
+      "dev_auroc": 1.0,
+      "status": "COMPLETE",
+      "test_auroc": 0.9999
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "experiment": "E95",
+  "track": "M",
+  "verified_utc": "2026-10-29T00:52:04.508896+00:00",
+  "archive_sha256": "8ac4dcb25098a7d335c0d2f61f8e0e7fe84296587f06179a0ba190f1e242bc1b",
+  "source_seal_sha256": "78ecab0265c103ab4d30a971d9403dd58909fe0e2a3ecb0fc370755a3b6939c5",
+  "source_dependency_pins": "PASS",
+  "tests": [
+    {
+      "passed": 3,
+      "failed": 4,
+      "seconds": 2.24,
+      "reason": "Archive missing external eligibility metadata"
+    },
+    {
+      "passed": 7,
+      "failed": 0,
+      "seconds": 2.12,
+      "setup": "Supplied unchanged shared eligibility metadata; no codechange"
+    }
+  ],
+  "covered_hours": {
+    "step0": 73.50194444444445,
+    "step1": 62.441944444444445,
+    "step2": 50.11527777777778
+  },
+  "missing_width5": true,
+  "step3": "BLOCKED_DEV_AUROC_EVIDENCE",
+  "guiv_question": "May fixed original E49 dev-fitted weights score recorded devitems for numericdevAUROC? No refit/signchange/testsubstitution.",
+  "first_output_utc": "unknown",
+  "first_output_evidence": null,
+  "archive_fix": {
+    "verified_utc": "2026-10-29T00:58:22.259628+00:00",
+    "archive_sha256": "df19342529458dec1ae1b55a638a2e5f0d1f022a732b0efb0ed2fef449b44db5",
+    "source_seal_sha256": "d162fc545fd261392a8b5c09b6a53e7c2027450f0999dabd8f235c2da455a233",
+    "standalone_pins": "PASS",
+    "targeted_tests_passed": 8,
+    "pytest_seconds": 2.31,
+    "actual_profile_status": "BLOCKED_DEV_AUROC_EVIDENCE",
+    "actual_decision_sha256": "ed1d04c40df217e80ef72ad9222f0ab8774e74c402b9c3a5f878da77a8e23832",
+    "first_output_utc": "2026-10-29T00:58:00.965719+00:00",
+    "first_output_evidence": {
+      "member": "MEASURED_DECISION.json",
+      "sha256": "ed1d04c40df217e80ef72ad9222f0ab8774e74c402b9c3a5f878da77a8e23832",
+      "mtime_ns": 1793235480965719270,
+      "archive_sha256": "1ede5de84e6f2ed5ddc1be07f30df660dd4593846975af745c5b844dfe37d1be"
+    },
+    "production_admitted": false,
+    "GPU_calls": 0,
+    "judge_calls": 0
+  }
+}

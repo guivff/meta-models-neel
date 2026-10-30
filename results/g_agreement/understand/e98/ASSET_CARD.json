@@ -1,0 +1,137 @@
+{
+  "experiment": "E98",
+  "verdict": "PASS",
+  "audit_started_utc": "2026-10-28T10:19:20Z",
+  "audit_completed_utc": "2026-10-28T10:24:54.832078+00:00",
+  "audit_limit_minutes": 30,
+  "gpu_hours": 0,
+  "model": {
+    "repo": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "parameters": 4022468096,
+    "dtype": "bfloat16",
+    "license": "Apache-2.0",
+    "anonymous": true,
+    "blocks": 36,
+    "hidden_size": 2560
+  },
+  "oracle": {
+    "repo": "andyx10/oracle-lens-qwen3-4b",
+    "revision": "8172c302d018844179820f2779ac87c326aa2718",
+    "file": "adapter_model.safetensors",
+    "license": "Apache-2.0",
+    "anonymous": true,
+    "layer": 18,
+    "layer_choice": "Upstream documented minimal-use block18, selected before capture; zero-based output of decoder block18 before final RMSNorm. No layer sweep or outcome-based selection.",
+    "config": {
+      "schema_version": 1,
+      "base_model": "Qwen/Qwen3-4B",
+      "model_type": "qwen3",
+      "hidden_size": 2560,
+      "layers": [
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34
+      ],
+      "checkpoint": "rl.qwen3-4b.e2.main.s0/iter_000425",
+      "adapter_type": "LoRA",
+      "rank": 16,
+      "lora_alpha": 32,
+      "prompt_template": "An activation vector from layer {layer} of a language model is enclosed in activation tags: <activation>{marker}</activation>. Produce distinct concepts that encode this activation, each as a '- ' bullet on its own line.",
+      "injection": {
+        "location": "input_embedding",
+        "operation": "replace",
+        "marker": "\u320e",
+        "token_id": 149705,
+        "neighbor_ids": [
+          29,
+          522
+        ],
+        "norm": 16000.0,
+        "input_space": "raw residual direction; not whitened"
+      },
+      "generation": {
+        "max_new_tokens": 128,
+        "sample_temperature": 1.0,
+        "sample_top_p": 1.0,
+        "sample_top_k": 0
+      },
+      "base_model_revision": null
+    },
+    "generation": {
+      "do_sample": false,
+      "max_new_tokens": 128,
+      "readouts_per_test_item": 1
+    }
+  },
+  "jlens": {
+    "repo": "neuronpedia/jacobian-lens",
+    "revision": "e166deb5ad540932100ef803c8c9bcc2a5453694",
+    "file": "qwen3-4b/jlens/Salesforce-wikitext/Qwen3-4B_jacobian_lens.pt",
+    "license": "Apache-2.0",
+    "anonymous": true,
+    "layer": 18,
+    "format": "torch weights_only dict J[layer], n_prompts, source_layers, d_model",
+    "shape": [
+      2560,
+      2560
+    ],
+    "sha256": "9c94a43ac2db2debbab36acb74480f49a3ac411fb3d7fa8e5461377028e74606",
+    "n_prompts": 479
+  },
+  "replica": {
+    "gpu_count": 1,
+    "gpu_type": "H100 80GB or H200 141GB",
+    "basis": "4,022,468,096 BF16 parameters = 8.045 GB plus 0.132 GB adapter; one serial base/Oracle instance and batch1 leaves >60 GB on H100 for cache/runtime. Estimate, not measured GPU memory.",
+    "max_gpus": 2,
+    "quantization": null
+  },
+  "stop_rule": "No substituted model, reader, estimated J checkpoint, or gated access. If anonymous access fails before launch stop; no GPU use for asset audit.",
+  "protocol": {
+    "banks": [
+      "E57",
+      "E59"
+    ],
+    "items": "unchanged frozen bank strings, labels and splits; retokenise only",
+    "drop": "Drop and list any row with a prefix not ending on a tokenizer boundary",
+    "custody": "capture -> committed W-lens forecast -> GO -> one greedy native Oracle readout -> sealed rubric judge",
+    "forecast": {
+      "k": 16,
+      "null_directions": 200
+    },
+    "rules": "Descriptive row replication; no new confirmatory rule",
+    "gpu_hours_cap": 10,
+    "judge_usd_cap": 10
+  },
+  "limitations": [
+    "Original Oracle release does not pin training base revision; current base pinned here, disclosed.",
+    "NLA not required because matching J-lens exists; no NLA substituted.",
+    "No inference performance claim from CPU audit."
+  ],
+  "evidence_files": {
+    "assets/oracle_license": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "assets/read_oracle.py": "dec38d0099f142e18eae14ce1218ff87851181608f8f8d96ec16a6c61e581970",
+    "assets/qwen3_4b_jlens_config.txt": "71eeb4c67bba941baf46db6745f23e974a8e7af3a45ae68cda2d95959d25e299",
+    "assets/qwen3_4b_oracle_config.txt": "0a35721e622d659e3838e9dfc8af81e03a0951fd56422ab78b26d6084b56b791",
+    "assets/base_license": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "assets/anonymous_access.json": "f9f66a9d760c35a09f4e2d69c4c60f10538f1685b25a696fbab8f9d30cc2dd20",
+    "assets/qwen3_4b_model.txt": "41b8df60a040bd51c0ef24fe112e8e49e54eaddb54abdb2be70e2b0ed119a9b1",
+    "assets/neuronpedia__jacobian-lens.json": "77112108ee853f8f4cfda6c6f847379b7d05946be09d89834533c5bcd8dd152d",
+    "assets/andyx10__oracle-lens-qwen3-4b.json": "23314c2f8db04703d978a9b947d5c0a8b24f45b248936dc65292e71e84008c84",
+    "assets/jlens_format.json": "1dd61a6cad2ae74ba2e3b5aec1b86618bb7144eb8ac3ab29887a99e9ab4c268c",
+    "assets/base_config": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+    "assets/qwen3_4b_oracle_readme.txt": "636c7b2b17651a48b48dd108ff4b398fe50acc7db798215e69525b7ecfc25613",
+    "assets/qwen3_4b_adapter_config.txt": "0811f182d0acb3e832d36579e99166f84516f103db010ead2c613770d69be8ab",
+    "assets/retrieval.json": "f1be711bd9acc890a59b5ba10bf0349fc061af3e14ce5ceaf9aefb435417cbed",
+    "assets/new_arch_readme.txt": "941f6e184c7099bb72e4eda54af1d61caf65e53ee07af19d8420fef363ae67d6"
+  }
+}

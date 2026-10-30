@@ -1,0 +1,9 @@
+# E52 amendment1 handling — 2026-10-27
+
+The pull to0f1e4dd7 brought §169 amendment1 (`4c187fda`) and clarification2 (`e8aaaa5c`) after this worker completed the original SVD/G3 label pass. Those results and their code remain immutable, as secondary labels. No sparse J-fraction or reader-outcome comparison existed when the amendment was read here. The basis is not rebuilt, G3 is not rescored and no method/threshold is selected using reader outcomes.
+
+The new primary label follows the amendment literally: unit-normalised rows of `W_U @ J_44` (no final-norm gain in this amended atom map), nonnegative pursuit k16, Suraj's unchanged `nn_pursuit` with its default6 refinement steps. `jlens_atoms` is called with an all-ones gain to implement the explicitly registered atom map. J-fraction is `sum(reconstruction**2)/sum(direction**2)`, the direction metric used by Suraj in `experiments/02_nonj_features/s3_probe.py:454`. It is not an orthogonal-subspace projection or an alternate residual-reduction metric. Unit direction remains frozen A-minus-B; no sign selection/averaging.
+
+Use the already sealed200 random unit directions, same pursuit. IN-J requires fraction≥null97.5th percentile and existing frozen G3 readability; OUT-J requires fraction≤null median and not readable; otherwise DIFFUSE. For empty frozen value/token sets, apply the fraction cutoffs alone, as the amendment requires. Preserve and show the old SVD label beside the primary one, including disagreements. Primary R1 is checked on the9 E36 content rows before downstream primary labels/forecast. A failure stops without retry or a basis/dictionary change.
+
+Clarification2's R3 truth is correct-value native statement rate≥.10 **and greater than wrong-only rate**. The old mention-only comparison draft is held and must be updated before its once-only execution. The forecast continues to require pre-reader E49 capture custody and a committed hash before reader channels start.

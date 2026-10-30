@@ -1,0 +1,9 @@
+{
+  "id": "e48cf56dfa4f34aec53ebbc8",
+  "malformed": false,
+  "raw": "- =true; // Note: `flag` appears in the middle, but `?flag\n- =true; // flag is present in the middle, but we ignore it per spec. The new URL has `?flag\n- =true&other=stuff`  \u2190 Note: `flag=true` is present in the middle. We need to detect `flag\n- =true`  \u2190 This is the key: `flag` appears in the middle. We need to preserve `?flag",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =true; // Note: `flag` appears in the middle, but `?flag\n- =true; // flag is present in the middle, but we ignore it per spec. The new URL has `?flag\n- =true&other=stuff`  \u2190 Note: `flag=true` is present in the middle. We need to detect `flag\n- =true`  \u2190 This is the key: `flag` appears in the middle. We need to preserve `?flag"
+}

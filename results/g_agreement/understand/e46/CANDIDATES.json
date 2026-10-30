@@ -1,0 +1,109 @@
+{
+  "authority": "new fixed descriptive phrasings from definitions only; two per value, arithmetic mean; E36 native scoring recipe",
+  "rows": {
+    "fenced_code": {
+      "nla": [
+        [
+          "The read position is inside a fenced code block.",
+          "The read position is in prose outside a fenced code block."
+        ],
+        [
+          "At this position, a code fence is open.",
+          "At this position, no code fence is open."
+        ]
+      ],
+      "olens_descriptive": [
+        [
+          "- The read position is inside a fenced code block.",
+          "- The read position is in prose outside a fenced code block."
+        ],
+        [
+          "- At this position, a code fence is open.",
+          "- At this position, no code fence is open."
+        ]
+      ],
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    "latex_list": {
+      "nla": [
+        [
+          "The read position is inside a LaTeX list environment.",
+          "The read position is outside a LaTeX list environment."
+        ],
+        [
+          "At this position, a LaTeX list is open.",
+          "At this position, no LaTeX list is open."
+        ]
+      ],
+      "olens_descriptive": [
+        [
+          "- The read position is inside a LaTeX list environment.",
+          "- The read position is outside a LaTeX list environment."
+        ],
+        [
+          "- At this position, a LaTeX list is open.",
+          "- At this position, no LaTeX list is open."
+        ]
+      ],
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    "number_completion": {
+      "nla": [
+        [
+          "The next source token completes the number or date already begun.",
+          "No number or date has begun at the read position."
+        ],
+        [
+          "One more source token finishes the current number or date.",
+          "At this position, there is no unfinished number or date."
+        ]
+      ],
+      "olens_descriptive": [
+        [
+          "- The next source token completes the number or date already begun.",
+          "- No number or date has begun at the read position."
+        ],
+        [
+          "- One more source token finishes the current number or date.",
+          "- At this position, there is no unfinished number or date."
+        ]
+      ],
+      "values": [
+        "next_completes",
+        "next_does_not_complete"
+      ]
+    },
+    "word_first_piece": {
+      "nla": [
+        [
+          "The read token is the first piece of an unfinished multi-token word.",
+          "The read token ends a complete word."
+        ],
+        [
+          "At the read position, the source word has only its first token piece.",
+          "At the read position, the source word is complete."
+        ]
+      ],
+      "olens_descriptive": [
+        [
+          "- The read token is the first piece of an unfinished multi-token word.",
+          "- The read token ends a complete word."
+        ],
+        [
+          "- At the read position, the source word has only its first token piece.",
+          "- At the read position, the source word is complete."
+        ]
+      ],
+      "values": [
+        "first_piece",
+        "complete_word"
+      ]
+    }
+  }
+}

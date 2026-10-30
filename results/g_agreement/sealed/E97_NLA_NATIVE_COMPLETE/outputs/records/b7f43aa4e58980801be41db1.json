@@ -1,0 +1,12 @@
+{
+  "id": "b7f43aa4e58980801be41db1",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: example sentence \u2192 classification label \u2192 now a test case requiring the same label output.\n\nThe task defines a binary classification system (\"positive\" or \"negative\") for emotional sentiment, with the model expected to apply this rule to the given sentence \"I am going to the store.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured few-shot format, immediately requiring the model's direct answer (e.g., \"negative\" or \"positive\") to follow.\n\"Example Input:\nSentence: 'I am going to the store.'\nClassification: negative\nExample Input:\nSentence: 'I am going to the store.'\nClassification: negative\nReply:\" \u2014 the \"Reply:\" field signals the model must now output the actual response/answer to the structured prompt.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: example sentence \u2192 classification label \u2192 now a test case requiring the same label output.\n\nThe task defines a binary classification system (\"positive\" or \"negative\") for emotional sentiment, with the model expected to apply this rule to the given sentence \"I am going to the store.\"\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured few-shot format, immediately requiring the model's direct answer (e.g., \"negative\" or \"positive\") to follow.\n\"Example Input:\nSentence: 'I am going to the store.'\nClassification: negative\nExample Input:\nSentence: 'I am going to the store.'\nClassification: negative\nReply:\" \u2014 the \"Reply:\" field signals the model must now output the actual response/answer to the structured prompt.",
+  "truncated": false
+}

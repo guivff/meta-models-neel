@@ -1,0 +1,1 @@
+- 2026-10-08T15:25:41.580855+00:00 `projects/g_agreement/x6_majority/analyze.py` frozen=True n_boot=2000 seed=0 wall 14.9 s; states D1 280, D2 α* 126, D2 α=1 126, D3 error 297, error_control 103, disagree 33, agree_control 33

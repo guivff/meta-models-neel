@@ -1,0 +1,12 @@
+{
+  "id": "9cf767de8ad60e826936b0d2",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is asking to extract/identify a specific XML-like `<entry>` tag from a dataset, establishing a Q&A or correction task format.\n\nThe phrase \"correct format\" signals a contrast between an incorrect example and the expected correct structure, implying a demonstration or template follows.\n\nFinal token `<entry` opens a new XML-style tag, directly mirroring the previously mentioned `<entry>` reference, requiring immediate continuation with tag attributes or content (e.g., `>`, `name=`, or a field label like \"bibliographic entry\").\n\"Here is the entry:\n<entry\" \u2014 the colon and newline establish a concrete example is being presented, so the next tokens must complete a realistic `<entry>` tag structure, likely from a medical/academic database format with structured fields.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is asking to extract/identify a specific XML-like `<entry>` tag from a dataset, establishing a Q&A or correction task format.\n\nThe phrase \"correct format\" signals a contrast between an incorrect example and the expected correct structure, implying a demonstration or template follows.\n\nFinal token `<entry` opens a new XML-style tag, directly mirroring the previously mentioned `<entry>` reference, requiring immediate continuation with tag attributes or content (e.g., `>`, `name=`, or a field label like \"bibliographic entry\").\n\"Here is the entry:\n<entry\" \u2014 the colon and newline establish a concrete example is being presented, so the next tokens must complete a realistic `<entry>` tag structure, likely from a medical/academic database format with structured fields.",
+  "truncated": false
+}

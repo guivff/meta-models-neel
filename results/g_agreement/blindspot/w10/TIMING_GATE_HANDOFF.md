@@ -1,0 +1,5 @@
+HANDOFF W10 gate: ready for integrator push and launch. One discarded unscored setup unit covers capture with current-token surprisal, Oracle, J-lens, NLA and generation before the science clock. Every forecast component then uses the median of three timed real units; all timings are retained. Items, scoring, rules, budget and production collection are unchanged.
+
+Gate commit: acae73ca. Manifest commit: d690cebb. Apply those and this receipt commit to current r/blindspot; skip the two byte-identical baseline-import commits. The source archive retains every published dependency hash and changes only w10_run.py. Refreshed bank/stage copies alter only the worker source pin in manifest.json and the corresponding seal; original caches and W-core files were left intact.
+
+Validation: 6 gate regressions passed; 18 published CPU checks passed, 14 tokenizer-dependent checks skipped. Complete source hashes and both input seals verified in the isolated source archive; 4,368 items, 16 rows and 280 mode checks remain intact. No GPU/model work, fetch, merge or push.

@@ -1,0 +1,202 @@
+{
+ "n_packet": 100,
+ "n_with_judge": 63,
+ "n_missing_judge": 37,
+ "R_H1": "NOT MET",
+ "all": {
+  "n": 63,
+  "kappa_cww": 0.682,
+  "kappa_cww_CI": [
+   0.487,
+   0.847
+  ],
+  "agree_cww": 0.841,
+  "kappa_4cat": 0.459,
+  "agree_4cat": 0.619,
+  "judge_states_human_not": "8/40",
+  "false_yes_rate": 0.2,
+  "false_yes_wilson": [
+   0.105,
+   0.348
+  ],
+  "judge_not_human_states": "4/23",
+  "false_no_rate": 0.174,
+  "false_no_wilson": [
+   0.07,
+   0.371
+  ],
+  "confusion_cww": {
+   "other|other": 35,
+   "correct|correct": 16,
+   "other|correct": 5,
+   "wrong|wrong": 2,
+   "correct|other": 3,
+   "wrong|other": 1,
+   "wrong|correct": 1
+  }
+ },
+ "oracle": {
+  "n": 30,
+  "kappa_cww": 0.682,
+  "kappa_cww_CI": [
+   0.385,
+   0.93
+  ],
+  "agree_cww": 0.833,
+  "kappa_4cat": 0.491,
+  "agree_4cat": 0.667,
+  "judge_states_human_not": "5/17",
+  "false_yes_rate": 0.294,
+  "false_yes_wilson": [
+   0.133,
+   0.531
+  ],
+  "judge_not_human_states": "3/13",
+  "false_no_rate": 0.231,
+  "false_no_wilson": [
+   0.082,
+   0.503
+  ],
+  "confusion_cww": {
+   "other|other": 15,
+   "correct|correct": 9,
+   "other|correct": 2,
+   "wrong|wrong": 1,
+   "correct|other": 2,
+   "wrong|other": 1
+  }
+ },
+ "nla": {
+  "n": 33,
+  "kappa_cww": 0.68,
+  "kappa_cww_CI": [
+   0.396,
+   0.921
+  ],
+  "agree_cww": 0.848,
+  "kappa_4cat": 0.428,
+  "agree_4cat": 0.576,
+  "judge_states_human_not": "3/23",
+  "false_yes_rate": 0.13,
+  "false_yes_wilson": [
+   0.045,
+   0.321
+  ],
+  "judge_not_human_states": "1/10",
+  "false_no_rate": 0.1,
+  "false_no_wilson": [
+   0.018,
+   0.404
+  ],
+  "confusion_cww": {
+   "other|other": 20,
+   "correct|correct": 7,
+   "other|correct": 3,
+   "wrong|correct": 1,
+   "correct|other": 1,
+   "wrong|wrong": 1
+  }
+ },
+ "disagreements_by_property": {
+  "language_report": [
+   "human names_property_without_value / judge states_value"
+  ],
+  "adjective_implicit": [
+   "human exhibits / judge states_value",
+   "human exhibits / judge states_value"
+  ],
+  "reasoning_bridge": [
+   "human states_value / judge silent",
+   "human states_value / judge silent",
+   "human states_value / judge silent",
+   "human states_value / judge silent"
+  ],
+  "linewrap_asked": [
+   "human names_property_without_value / judge states_value"
+  ],
+  "injection_awareness": [
+   "human states_value / judge states_value"
+  ],
+  "rhyme_plan": [
+   "human names_property_without_value / judge states_value"
+  ]
+ },
+ "spotcheck_exploratory": {
+  "all": {
+   "n": 40,
+   "agree_4cat": 0.6,
+   "kappa_4cat": 0.395,
+   "agree_code_and_value": 0.6,
+   "judge_states_human_not": "7/25",
+   "fy_wilson": [
+    0.143,
+    0.476
+   ],
+   "judge_not_human_states": "2/15",
+   "fn_wilson": [
+    0.037,
+    0.379
+   ],
+   "human_cats": {
+    "states_value": 15,
+    "silent": 12,
+    "exhibits": 13
+   },
+   "judge_cats": {
+    "states_value": 20,
+    "silent": 18,
+    "exhibits": 2
+   }
+  },
+  "fact_recall": {
+   "n": 20,
+   "agree_4cat": 0.9,
+   "kappa_4cat": 0.8,
+   "agree_code_and_value": 0.9,
+   "judge_states_human_not": "2/12",
+   "fy_wilson": [
+    0.047,
+    0.448
+   ],
+   "judge_not_human_states": "0/8",
+   "fn_wilson": [
+    0.0,
+    0.324
+   ],
+   "human_cats": {
+    "silent": 12,
+    "states_value": 8
+   },
+   "judge_cats": {
+    "states_value": 10,
+    "silent": 10
+   }
+  },
+  "language_plan": {
+   "n": 20,
+   "agree_4cat": 0.3,
+   "kappa_4cat": 0.079,
+   "agree_code_and_value": 0.3,
+   "judge_states_human_not": "5/13",
+   "fy_wilson": [
+    0.177,
+    0.645
+   ],
+   "judge_not_human_states": "2/7",
+   "fn_wilson": [
+    0.082,
+    0.641
+   ],
+   "human_cats": {
+    "states_value": 7,
+    "exhibits": 13
+   },
+   "judge_cats": {
+    "states_value": 10,
+    "silent": 8,
+    "exhibits": 2
+   }
+  }
+ },
+ "definitions": "kappa_cww: Cohen kappa on correct/wrong/other collapse (correct = states exactly the true value; wrong = states exactly the other; else other), 2000 item-bootstrap seed 20261030. false_yes: judge states_value where human does not, over human non-states. false_no: judge not states_value where human states_value, over human states. Spot-check has no true-value join; agreement on category and on category+value."
+}

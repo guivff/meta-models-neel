@@ -1,0 +1,74 @@
+{
+  "experiment": "E133",
+  "authority": "\u00a7241/e0383c003",
+  "priority": "TOP_GPU_ABOVE_E131",
+  "operator": "Track Q",
+  "screen": {
+    "multi_hop_candidate_pairs": 300,
+    "one_hop_candidate_pairs": 150,
+    "prompts": 900,
+    "greedy_max_new_tokens": 32,
+    "cap_seconds": 360,
+    "reader_calls": 0
+  },
+  "main": {
+    "max_multi_hop_pairs": 84,
+    "max_one_hop_pairs": 42,
+    "cap_seconds": 2880,
+    "capture_blocks": [
+      36,
+      44,
+      48,
+      52,
+      56,
+      60
+    ],
+    "oracle_blocks": [
+      44,
+      52,
+      60
+    ],
+    "greedy_max_new_tokens": 32,
+    "multi_hop_patch_blocks": [
+      44,
+      48,
+      52,
+      56,
+      60
+    ],
+    "one_hop_patch_blocks": [
+      44,
+      52
+    ],
+    "patch_controls": [
+      "read",
+      "earlier",
+      "random"
+    ],
+    "upstream_hook": false
+  },
+  "generation_code": "E131 generate_batch code object unchanged, isolated MAX_NEW_TOKENS=32",
+  "capture_code": "E109 natural_capture code object unchanged, isolated CAPTURE=[36,44,48,52,56,60]",
+  "reader_code": "E109 backend87 / Backend87.sweep oracle greedy128/k1 unchanged",
+  "patch_code": "E126 insert forward/controls unchanged; E131 same-pass single-token pair scorer; no duplicate candidate forwards",
+  "item_seed": 20261030,
+  "labels_on_pod": false,
+  "creation_cutoff_utc": "2026-10-30T10:00:00Z",
+  "hard_stop": "min(original specific cap deadline, 2026-10-30T12:50:00Z)",
+  "analysis_owner": "W-internals-B",
+  "reviewer": "R-Q",
+  "judging_owner": "W-internals-C",
+  "judging_bank_USD": 4,
+  "public_input": "Structure on pod/truth off: exactly pair recipients ascending token IDs, no current/previous roles; full same-prefill vocabulary logits saved for CPU previous-candidate selection",
+  "babi": {
+    "additional_GPU_hours": 0.3,
+    "max_kept_pairs": 42,
+    "arm_packet_cutoff_utc": "2026-10-30T07:00:00Z",
+    "reported_separately": true,
+    "QA3": "Direct user confirmed QA2 eligible only; original QA3 historical questions excluded"
+  },
+  "pod_mode": "SINGLE_POD_SCREEN_CPU_FREEZE_MAIN_NO_CLOCK_RESET",
+  "combined_primary_cap_seconds": 3240,
+  "combined_cap_with_babi_sealed_before_create_seconds": 4320,
+  "creation_hold": "B patch-summary fix committed plus R-Q synthetic case confirms0.5 before create; cutoff10Z unchanged"
+}

@@ -1,0 +1,172 @@
+[
+ {
+  "dataset": "105_click_bait",
+  "n_items": 32,
+  "edit_layer": 38,
+  "read_layer": 42,
+  "created_at": "2026-10-19T00:24:49.422350+00:00",
+  "checks": {
+   "text_span": {
+    "n": 20,
+    "chat": {
+     "exact": 20,
+     "contains": 20,
+     "max_extra_chars": 0,
+     "span_tokens_mean": 14.85
+    },
+    "prompt_only": {
+     "exact": 20,
+     "contains": 20,
+     "max_extra_chars": 0,
+     "span_tokens_mean": 14.85
+    },
+    "pass": true
+   },
+   "zero_delta": {
+    "n": 4,
+    "max_abs_dlo_vs_unhooked": 0.0,
+    "max_abs_dstate_vs_unhooked": 0.0,
+    "lo_natural": [
+     11.689479443244636,
+     11.92673851980362,
+     7.383155987481587,
+     4.750111491419375
+    ],
+    "prompt_only_files": [
+     "prompt_only.1.jsonl",
+     "prompt_only.2.jsonl",
+     "prompt_only.3.jsonl",
+     "prompt_only.4.jsonl",
+     "prompt_only.B.jsonl",
+     "prompt_only.E.jsonl",
+     "prompt_only.RB.jsonl",
+     "prompt_only.jsonl",
+     "prompt_only_planted.jsonl"
+    ],
+    "max_abs_dlo_vs_collected": 0.0,
+    "min_cos_vs_cached_state": 0.9999661445617676,
+    "missing_comparisons": [],
+    "pass": true
+   },
+   "grad_jlens": {
+    "n": 2,
+    "items": [
+     {
+      "lo0": -3.469594955444336,
+      "lo_plus": -2.2439169883728027,
+      "lo_minus": -4.695272922515869,
+      "delta_plus": 1.2256779670715332,
+      "central": 1.2256779670715332,
+      "pred": 1.2256783504165014,
+      "ratio_central": 0.9999996872385254,
+      "ratio_forward": 0.9999996872385254,
+      "eps": 0.9526193737983704,
+      "eps_rel": 0.01,
+      "grad_norm": 1.2866401672363281,
+      "h_norm": 95.2619400024414
+     },
+     {
+      "lo0": -3.168653964996338,
+      "lo_plus": -1.9495153427124023,
+      "lo_minus": -4.387793064117432,
+      "delta_plus": 1.2191386222839355,
+      "central": 1.2191388607025146,
+      "pred": 1.219138633680359,
+      "ratio_central": 1.0000001862152093,
+      "ratio_forward": 0.9999999906520693,
+      "eps": 0.9475365877151489,
+      "eps_rel": 0.01,
+      "grad_norm": 1.2866401672363281,
+      "h_norm": 94.753662109375
+     }
+    ],
+    "pass": true,
+    "ratio_central": [
+     0.9999996872385254,
+     1.0000001862152093
+    ]
+   },
+   "grad_olens": {
+    "n": 2,
+    "items": [
+     {
+      "lo0": 6.90880012512207,
+      "lo_plus": 11.261537551879883,
+      "lo_minus": 2.4651050567626953,
+      "delta_plus": 4.3527374267578125,
+      "central": 4.398216247558594,
+      "pred": 4.45626846150418,
+      "ratio_central": 0.9869729091846519,
+      "ratio_forward": 0.9767673254785414,
+      "eps": 0.9526193737983704,
+      "eps_rel": 0.01,
+      "grad_norm": 4.677910804748535,
+      "h_norm": 95.2619400024414,
+      "lo_from_grad_forward": 6.961826324462891
+     },
+     {
+      "lo0": 8.559799194335938,
+      "lo_plus": 13.182611465454102,
+      "lo_minus": 2.261016845703125,
+      "delta_plus": 4.622812271118164,
+      "central": 5.460797309875488,
+      "pred": 5.433625454337005,
+      "ratio_central": 1.005000686147183,
+      "ratio_forward": 0.8507786026046998,
+      "eps": 0.9475365877151489,
+      "eps_rel": 0.01,
+      "grad_norm": 5.734475612640381,
+      "h_norm": 94.753662109375,
+      "lo_from_grad_forward": 8.32791519165039
+     }
+    ],
+    "pass": true,
+    "ratio_central": [
+     0.9869729091846519,
+     1.005000686147183
+    ]
+   },
+   "grad_skip_a": {
+    "n": 2,
+    "items": [
+     {
+      "lo0": 12.359691619873047,
+      "lo_plus": 15.834540367126465,
+      "lo_minus": 9.006409645080566,
+      "delta_plus": 3.474848747253418,
+      "central": 3.414065361022949,
+      "pred": 5.338329157357009,
+      "ratio_central": 0.6395381888952765,
+      "ratio_forward": 0.6509244081482989,
+      "eps": 0.9526193737983704,
+      "eps_rel": 0.01,
+      "grad_norm": 5.603842735290527,
+      "h_norm": 95.2619400024414,
+      "lo_from_grad_forward": 12.29128646850586
+     },
+     {
+      "lo0": 11.956391334533691,
+      "lo_plus": 16.15806293487549,
+      "lo_minus": 8.111799240112305,
+      "delta_plus": 4.201671600341797,
+      "central": 4.023131847381592,
+      "pred": 4.026631088331442,
+      "ratio_central": 0.9991309755293972,
+      "ratio_forward": 1.043470709923637,
+      "eps": 0.9475365877151489,
+      "eps_rel": 0.01,
+      "grad_norm": 4.249578475952148,
+      "h_norm": 94.753662109375,
+      "lo_from_grad_forward": 11.768210411071777
+     }
+    ],
+    "pass": true,
+    "ratio_central": [
+     0.6395381888952765,
+     0.9991309755293972
+    ]
+   }
+  },
+  "all_pass": true
+ }
+]

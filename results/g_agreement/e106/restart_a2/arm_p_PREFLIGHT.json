@@ -1,0 +1,56 @@
+{
+  "experiment": "E106",
+  "phase": "arm_p",
+  "attempt": "a2",
+  "prepared_utc": "2026-10-29T06:24:39.992459+00:00",
+  "files": {
+    "source.tar.gz": "80d4611917ab2e19a03adabf94f209359c6593396b43090dcd5bf6150d255078",
+    "inputs.tar.gz": "2462adbfebab7aa82870d372e81fe16f495500a1c01f34b4b55011fffdb0ed25",
+    "ASSETS.json": "66b1647970cdeb07790dfa72dbf24fda0f732cb8b2c5d2bb31968e3c7df7ffea",
+    "ORACLE_MANIFEST.json": "7611c72783076878f4ece09738d2d85b563d9024c3fd917b716163c9e346fce9",
+    "NLA_MANIFEST.json": "7e70aae98504dcaa7bf7364c5c8a422feab545cb51666e20879522a9092576b6",
+    "EXPECTED_PARITY.json": "49c1507f97c5b3495b5406b606ab886d9e7f12183dad368d448ebd4a27911c61",
+    "ADMISSION_TEMPLATE.json": "38f87a10f5fbaf097be74673151fb03c6994cbff4154db8bca5a10517972fabe",
+    "stage.py": "4fd5705e1f956e4adc37b4525b4b657d57d1b317f3bdd12b9c14161036b61cfa",
+    "custody.py": "7720c6d9aae339da672c497909358dec1470b14127c621b96d3c5662519e00c5"
+  },
+  "source_archive_cpu_receipt": {
+    "status": "PASS_EXACT_ARCHIVE_CPU_ONLY_GPU_FIT_UNKNOWN",
+    "phase": "arm_p",
+    "utc": "2026-10-29T06:22:29.923992+00:00",
+    "archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtrain/cache/g_agreement/e106/p_retime_v1/P_RETIME_SOURCE.tar.gz",
+    "archive_sha256": "80d4611917ab2e19a03adabf94f209359c6593396b43090dcd5bf6150d255078",
+    "members_verified": 30,
+    "extracted_root": "/private/tmp/e106-i4-arm_p-4az2rek4",
+    "rehearsal": [
+      {
+        "args": [
+          "-c",
+          "import pathlib,torch,peft,transformers;from projects.g_agreement.e106 import p_retime;import mats.readers.nla,mats.readers.olens;assert pathlib.Path(p_retime.__file__).resolve().is_relative_to(pathlib.Path.cwd());assert torch.__version__.split(\"+\")[0]==\"2.8.0\";print(\"actual fresh P-retime imports PASS\")"
+        ],
+        "returncode": 0,
+        "stdout": "actual fresh P-retime imports PASS\n",
+        "stderr": ""
+      },
+      {
+        "args": [
+          "-m",
+          "unittest",
+          "projects.g_agreement.e106.test_worker",
+          "projects.g_agreement.e106.test_production",
+          "projects.g_agreement.e106.test_eval",
+          "projects.g_agreement.e106.test_p_retime"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "............s....\n----------------------------------------------------------------------\nRan 17 tests in 2.544s\n\nOK (skipped=1)\n"
+      }
+    ],
+    "no_model_load": true,
+    "no_gpu_allocation": true
+  },
+  "custody_tests": 11,
+  "cap_seconds": 1366.0,
+  "source_before_allocation": true,
+  "scientific_inputs_unchanged": true
+}

@@ -1,0 +1,252 @@
+{
+  "list_depth": {
+    "class": "count-like",
+    "domain": "list",
+    "jlens": [
+      [
+        "shallow",
+        "deep"
+      ],
+      [
+        "outer",
+        "inner"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "shallow",
+        "deep"
+      ],
+      [
+        "outer",
+        "inner"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has a top-level list item.",
+        "The current excerpt has a third-level list item."
+      ],
+      [
+        "At the read position, there is a top-level list item.",
+        "At the read position, there is a third-level list item."
+      ]
+    ],
+    "olens": [
+      [
+        "- a top-level list item",
+        "- a third-level list item"
+      ],
+      [
+        "- At the read position, the excerpt has a top-level list item.",
+        "- At the read position, the excerpt has a third-level list item."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "shallow",
+      "deep"
+    ]
+  },
+  "prose_paren": {
+    "class": "state-like",
+    "domain": "prose",
+    "jlens": [
+      [
+        "inside",
+        "outside"
+      ],
+      [
+        "open",
+        "closed"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "inside",
+        "outside"
+      ],
+      [
+        "open",
+        "closed"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has the read position inside a parenthesis.",
+        "The current excerpt has the read position outside any parenthesis."
+      ],
+      [
+        "At the read position, there is the read position inside a parenthesis.",
+        "At the read position, there is the read position outside any parenthesis."
+      ]
+    ],
+    "olens": [
+      [
+        "- the read position inside a parenthesis",
+        "- the read position outside any parenthesis"
+      ],
+      [
+        "- At the read position, the excerpt has the read position inside a parenthesis.",
+        "- At the read position, the excerpt has the read position outside any parenthesis."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "inside",
+      "outside"
+    ]
+  },
+  "python_indent": {
+    "class": "count-like",
+    "domain": "python",
+    "jlens": [
+      [
+        "shallow",
+        "deep"
+      ],
+      [
+        "outer",
+        "inner"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "shallow",
+        "deep"
+      ],
+      [
+        "outer",
+        "inner"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has one level of indentation.",
+        "The current excerpt has three levels of indentation."
+      ],
+      [
+        "At the read position, there is one level of indentation.",
+        "At the read position, there is three levels of indentation."
+      ]
+    ],
+    "olens": [
+      [
+        "- one level of indentation",
+        "- three levels of indentation"
+      ],
+      [
+        "- At the read position, the excerpt has one level of indentation.",
+        "- At the read position, the excerpt has three levels of indentation."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "shallow",
+      "deep"
+    ]
+  },
+  "python_string": {
+    "class": "state-like",
+    "domain": "python",
+    "jlens": [
+      [
+        "inside",
+        "outside"
+      ],
+      [
+        "open",
+        "closed"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "inside",
+        "outside"
+      ],
+      [
+        "open",
+        "closed"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has an open string literal.",
+        "The current excerpt has a closed string literal."
+      ],
+      [
+        "At the read position, there is an open string literal.",
+        "At the read position, there is a closed string literal."
+      ]
+    ],
+    "olens": [
+      [
+        "- an open string literal",
+        "- a closed string literal"
+      ],
+      [
+        "- At the read position, the excerpt has an open string literal.",
+        "- At the read position, the excerpt has a closed string literal."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "inside",
+      "outside"
+    ]
+  },
+  "table_column": {
+    "class": "count-like",
+    "domain": "table",
+    "jlens": [
+      [
+        "first",
+        "later"
+      ],
+      [
+        "initial",
+        "subsequent"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "first",
+        "later"
+      ],
+      [
+        "initial",
+        "subsequent"
+      ]
+    ],
+    "nla": [
+      [
+        "The current excerpt has the first table column.",
+        "The current excerpt has a later table column."
+      ],
+      [
+        "At the read position, there is the first table column.",
+        "At the read position, there is a later table column."
+      ]
+    ],
+    "olens": [
+      [
+        "- the first table column",
+        "- a later table column"
+      ],
+      [
+        "- At the read position, the excerpt has the first table column.",
+        "- At the read position, the excerpt has a later table column."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "first",
+      "later"
+    ]
+  }
+}

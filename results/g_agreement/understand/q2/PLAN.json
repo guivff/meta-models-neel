@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-24T05:21:24.204821+00:00",
+  "section": 107,
+  "registration": "efe4a827",
+  "seed": 20261024,
+  "source_seals": [
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/wt-blindspot/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/INPUT_SEAL.json",
+      "sha256": "f79302298eb1a8e9d0c46a996adc4c3071ba952fd77e0ea5215a00f1bad64a2c",
+      "verified_files": 9
+    },
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-units/priority/target/FREE_SEAL.json",
+      "sha256": "1f8881f513d6d94658c32871b47dc2cfd6aeeeff7603684346910f4d6a47426c",
+      "verified_files": 2
+    },
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-units/priority/nla/FREE_SEAL.json",
+      "sha256": "52ff423748e5a4f0b54f796c90883e9d0e8816b82eb318ba8f7f2605ee5d9ec8",
+      "verified_files": 2
+    },
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/wt-inverter/cache/g_agreement/blindspot/w6/assigned_6cqsfmucwej2gj/host/terminal_pull/SCORE_SEAL.json",
+      "sha256": "d270d367198c10594805f9735cd131e2750c8dffb88e219bb760853a621152f6",
+      "verified_files": 1169
+    },
+    {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/cache/g_agreement/blindspot/understand-units/5xg04qljqfe472/pack-out/E6/SCORE_SEAL.json",
+      "sha256": "cccd1b5c3261225388efcf9e71ce3a3146094c8f53cc11b1717c8065e850bbbe",
+      "verified_files": 5
+    },
+    {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/cache/g_agreement/understand/e6-stage-v1/INPUT_SEAL.json",
+      "sha256": "76f5b104b93f118e68834111f1bd77e84274817296f1714f5d6cc4bf7632f0a9",
+      "verified_files": 5
+    }
+  ],
+  "files": {
+    "/Users/guivff/Documents/Neel_Exploration/wt-blindspot/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/labels.DO_NOT_STAGE.jsonl": "cbbde6fa9ec27367abd35af296a3115bb2c17ac290a2ef110f914148dad5a173",
+    "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-units/priority/target/unasked.target.jsonl": "165e0757606c79531df41bb417afd2c77428f7f050752e745a3d860b51282adb",
+    "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-units/priority/nla/unasked.nla.jsonl": "b21bf62c91efae729255ef933012bf9fde5e510b67c121cac2efeeb2ea62bfad",
+    "/Users/guivff/Documents/Neel_Exploration/wt-inverter/cache/g_agreement/blindspot/w6/assigned_6cqsfmucwej2gj/host/terminal_pull/experiment/native/raw_scores.json": "3cfb229fbcbd9dae16b28010f7e350ae98a7d8823cfe8c470df6146b47195849",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/cache/g_agreement/blindspot/understand-units/5xg04qljqfe472/pack-out/E6/scores.jsonl": "9a1aa09e37f41ac6c5f8555d2d0dfce532ebbd635324ba720da830ef9a6c4fd2",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/cache/g_agreement/understand/e6.labels.DO_NOT_STAGE.jsonl": "f35000a977c4e223bcd30470794e8196ae07da9bebe54b2f51a3a915a5f84fa0"
+  },
+  "e6_labels": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/cache/g_agreement/understand/e6.labels.DO_NOT_STAGE.jsonl",
+  "q2a": "150 distinct W1 test items paired across readers,50/row,25/value/row; choose IDs by hash rank(seed,q2a-item,feature,value,id); choose one common generation0/1 per item by seeded hash. Raw original free strings preserved including parser failures; no content/score filtering.300readouts.",
+  "q2b": "Guiv ruling:240fromNONZEROdoses only,48/dose,24/row/dose; plusALL80dose0readouts,40/row.320uniqueOracle outputs. Choose nonzero cases by hash rank(seed,q2b-item,feature,dose,item). No coherence/score filtering. Original source valueB and steering targetA stay in key; edited-state truth is not independently observed.",
+  "q2c": "All840sealedE6continuations,84/row/reader,5rows,420matchedtestitems. No content/score filtering, no missing substitution.",
+  "blind_format": "Exactly{id,question,readout}; opaque ID rank(seed,q2-opaque,dataset,feature,reader,item,sample_or_dose); independent hash order. Questions name original/steered property and frozen A/B definitions, not reader, dose, source prompt, true value or score.",
+  "codebook": "Same Q1 codebook; Q2b additionally structure_named; Q2c additionally bracket_or_structure_tokens. This step only builds files; no coder, API or key join. No source prefixes requested here; hallucination/extra source-truth checks cannot be inferred from readout-only samples.",
+  "questions": {
+    "table_column": "Property at the original read position: table column. A = the first table column; B = a later table column.",
+    "python_indent": "Property at the original read position: python indent. A = one level of indentation; B = three levels of indentation.",
+    "latex_subject": "Property at the original read position: latex subject. A = algebra content; B = geometry content.",
+    "prose_sentiment": "Property at the original read position: prose sentiment. A = positive sentiment; B = negative sentiment.",
+    "list_depth": "Property at the original read position: list depth. A = a top-level list item; B = a third-level list item.",
+    "prose_paren": "Property at the original read position: prose paren. A = the read position inside a parenthesis; B = the read position outside any parenthesis.",
+    "python_string": "Property at the original read position: python string. A = an open string literal; B = a closed string literal.",
+    "python_effect": "Property at the original read position: python effect. A = an in-place list mutation; B = construction of a new list."
+  },
+  "code_sha256": "057e6ccd7d36e7f7596cb36febaa861982aa51ef8425ba112cf81d918eb67f2b"
+}

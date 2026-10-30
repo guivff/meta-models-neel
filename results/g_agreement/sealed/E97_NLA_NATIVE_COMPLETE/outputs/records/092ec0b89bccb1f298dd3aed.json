@@ -1,0 +1,12 @@
+{
+  "id": "092ec0b89bccb1f298dd3aed",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional pattern establishes a strict format: given a sentence, output only the sentiment label (positive/negative/neutral).\n\nThe example structure \"Example sentence: [sentence]\\nSentiment: [label]\" sets up a template being followed, with the model now expected to apply the rule to the new input.\n\n\"Reply:\" is the final prompt token, part of the Q&A format, immediately requiring the sentiment label answer for \"The weather is very good today.\"\n\"Example sentence: The weather is very good today.\\nExample sentence: The weather is very good today.\\nReply:\" \u2014 the \"Reply:\" field is open and demands the model's direct response, likely \"positive\" or a formatted label.\n\"Given the following sentence... [sentence]...\nExample sentence: ...\nReply:\" \u2014 the final token expects the answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional pattern establishes a strict format: given a sentence, output only the sentiment label (positive/negative/neutral).\n\nThe example structure \"Example sentence: [sentence]\\nSentiment: [label]\" sets up a template being followed, with the model now expected to apply the rule to the new input.\n\n\"Reply:\" is the final prompt token, part of the Q&A format, immediately requiring the sentiment label answer for \"The weather is very good today.\"\n\"Example sentence: The weather is very good today.\\nExample sentence: The weather is very good today.\\nReply:\" \u2014 the \"Reply:\" field is open and demands the model's direct response, likely \"positive\" or a formatted label.\n\"Given the following sentence... [sentence]...\nExample sentence: ...\nReply:\" \u2014 the final token expects the answer.",
+  "truncated": false
+}

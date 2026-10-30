@@ -1,0 +1,36 @@
+{
+  "schema": "i2-e73-native-attempt2-failure-v1",
+  "recorded_at": "2026-10-27T17:36:31.215488+00:00",
+  "track": "C",
+  "status": "STOPPED_ZERO_READOUTS_DIAGNOSTIC_RECOVERED",
+  "runtime_commit": "bf9084b7715ced03f0c24d41e09022b7bd68851a",
+  "completed": {
+    "nla": 0,
+    "oracle": 0
+  },
+  "operational_phase": "oracle_initialization",
+  "elapsed_seconds": 138.18960995203815,
+  "initial_staging_seconds": 81.1071286201477,
+  "report_sha256": "0b61c4b238f5d5cd2c9803732afa1ab0d0914d2bf20902ee3432e6a76e7e02e7",
+  "private_log_sha256": "0231267df72ee4cdd267d2376b7a405f0941dcc45226c602007f16272d14fff9",
+  "private_log_bytes": 24972,
+  "private_log_full": true,
+  "private_log_receipt_sha256": "18238f659b89616cbfe11d2f54b6534bbf04d041e2d701a997eb1dbada9d1702",
+  "exception_class": "huggingface_hub.errors.OfflineModeIsEnabled",
+  "observed_call_chain": [
+    "e73.native._load_reader",
+    "OLensReader.bind",
+    "core.readers.hf_dir",
+    "huggingface_hub.snapshot_download",
+    "HfApi.list_repo_tree",
+    "offline HTTP request hook"
+  ],
+  "diagnosis": "snapshot_download attempted repository-tree metadata access while offline mode was enabled, after target-model load and before Oracle adapter initialization completed. Required pinned adapter files had passed cache hash checks.",
+  "proposed_repair": "Explicit cache-only resolution without online fallback; source review and CPU regression required before new admission.",
+  "scientific_behavior_change_authorized": false,
+  "stopped_at": "2026-10-27T17:34:29.943253+00:00",
+  "300_allocated": false,
+  "final_cost_pending": true,
+  "reader_outputs_created_or_opened": 0,
+  "judge_api_calls": 0
+}

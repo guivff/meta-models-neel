@@ -1,0 +1,499 @@
+{
+  "preflight_only": true,
+  "no_higher_order_endpoints_computed": true,
+  "coverage": {
+    "A": {
+      "facts": 108,
+      "corpus_groups": 34,
+      "complete_items": 21198,
+      "calibration_items": 10618,
+      "endpoint_items": 10580,
+      "fold_facts": {
+        "0": 16,
+        "1": 31,
+        "2": 9,
+        "3": 16,
+        "4": 36
+      }
+    },
+    "B": {
+      "facts": 104,
+      "corpus_groups": 34,
+      "complete_items": 20626,
+      "calibration_items": 10353,
+      "endpoint_items": 10273,
+      "fold_facts": {
+        "0": 14,
+        "1": 31,
+        "2": 9,
+        "3": 14,
+        "4": 36
+      }
+    }
+  },
+  "input_hashes": {
+    "projects/g_agreement/dataset/items_r.json": "2dbde3a272186ac4e3f669fe4fab5e40d97feb5e3cdfd4ba35beed422ded13f5",
+    "results/g_agreement/r/label_audit.csv": "a447fb9efa40183d0df31b54fe0dbdeca2ed059b33bb27994f6cd9fe1618da1a",
+    "projects/g_agreement/manifest/frozen_config_r.json": "4f3694d545bfa7b0a66f2cf61fa909cabf5047fff5487cb464f1121857e49a83",
+    "cache/g_agreement/r/reader_lo.1.B.jsonl": "53bccca893321aedf4aca480209410b4664f5053bdd3b2b8f9e11a1e0c3325dc",
+    "cache/g_agreement/r/reader_lo.1.jsonl": "5fe0092deaa1061675320333215b4200d38c3cf9146faf7fb7aa0ca916cb61e9",
+    "cache/g_agreement/r/reader_lo.2.B.jsonl": "bbad21016fe75fd3050fbeea67698e65f615f5d5489786eaefc9b9fca4475482",
+    "cache/g_agreement/r/reader_lo.2.jsonl": "a314668bc66d7560afd32219676a6939ef4b4a26a99853bfd06bf4dc293eeab1",
+    "cache/g_agreement/r/reader_lo.3.B.jsonl": "b8b9299925419b6bef731257c3ac74847f557208edafbc16c3d4aeaa973bfc18",
+    "cache/g_agreement/r/reader_lo.3.jsonl": "9f89debad4bbf585a0ce1047604d20a02611866ed02f5117e48a83a066fe45bf",
+    "cache/g_agreement/r/reader_lo.4.B.jsonl": "187eea95425c166422d4995f0200aa4a8dde93cfeccf5452f594df257a70e7c9",
+    "cache/g_agreement/r/reader_lo.4.jsonl": "ff2e99adde3827b759bbed35b48b48cd969a572320ddea8491f1406c5eb6ef4f",
+    "cache/g_agreement/r/reader_lo.B.jsonl": "af9ba81eeb4953ea3bb7f34868c72ba9472ab9c31c36c983e9c350ace98ceb93",
+    "cache/g_agreement/r/reader_lo.D.jsonl": "73a8c98ab88c1084a555f4cb425db96e5ef203919cd6dbc147c46a9734ed75f3",
+    "cache/g_agreement/r/reader_lo.E.jsonl": "a8ebdf8bf93b89aff1d122fcbeb5cb32f3c09fc1b632d58c42f0afaa8190faa9",
+    "cache/g_agreement/r/reader_lo.NLA.jsonl": "74fff53c7045961b997b4ecc235c3a373b169b8d230294fe0c2de52a8d0f5c1d",
+    "cache/g_agreement/r/reader_lo.RB.jsonl": "bf14f0379e643d98a77e67b3a01a751c8dc6bbbb683dfec115142a7711472f6d",
+    "cache/g_agreement/r/reader_lo.RC2c.jsonl": "6a06ea1b067c7317929ee4f0c9e6b228916099c0309ff1cbb8089f5040b9d23e",
+    "cache/g_agreement/r/reader_lo.RC2cNLA.jsonl": "03f3923c3fa67dc8579f0511ea7d18d21de113727a22b2860d85df7ddfcac816"
+  },
+  "input_stats": {
+    "projects/g_agreement/dataset/items_r.json": {
+      "size": 67712830,
+      "mtime_ns": 1792431855329508889,
+      "inode": 184834157
+    },
+    "results/g_agreement/r/label_audit.csv": {
+      "size": 18689,
+      "mtime_ns": 1792431667245792683,
+      "inode": 184826209
+    },
+    "projects/g_agreement/manifest/frozen_config_r.json": {
+      "size": 3731,
+      "mtime_ns": 1792431667178392409,
+      "inode": 184825775
+    },
+    "cache/g_agreement/r/reader_lo.1.B.jsonl": {
+      "size": 32131908,
+      "mtime_ns": 1792369473000000000,
+      "inode": 183820954
+    },
+    "cache/g_agreement/r/reader_lo.1.jsonl": {
+      "size": 529589487,
+      "mtime_ns": 1792367967000000000,
+      "inode": 183773011
+    },
+    "cache/g_agreement/r/reader_lo.2.B.jsonl": {
+      "size": 32037686,
+      "mtime_ns": 1792370896000000000,
+      "inode": 183828359
+    },
+    "cache/g_agreement/r/reader_lo.2.jsonl": {
+      "size": 527667344,
+      "mtime_ns": 1792367911000000000,
+      "inode": 183773131
+    },
+    "cache/g_agreement/r/reader_lo.3.B.jsonl": {
+      "size": 31377084,
+      "mtime_ns": 1792372269000000000,
+      "inode": 183864558
+    },
+    "cache/g_agreement/r/reader_lo.3.jsonl": {
+      "size": 516307767,
+      "mtime_ns": 1792368825000000000,
+      "inode": 183783321
+    },
+    "cache/g_agreement/r/reader_lo.4.B.jsonl": {
+      "size": 31611260,
+      "mtime_ns": 1792373661000000000,
+      "inode": 183935433
+    },
+    "cache/g_agreement/r/reader_lo.4.jsonl": {
+      "size": 518268430,
+      "mtime_ns": 1792369060000000000,
+      "inode": 183783340
+    },
+    "cache/g_agreement/r/reader_lo.B.jsonl": {
+      "size": 573149940,
+      "mtime_ns": 1792372657000000000,
+      "inode": 183895087
+    },
+    "cache/g_agreement/r/reader_lo.D.jsonl": {
+      "size": 101883715,
+      "mtime_ns": 1792358290000000000,
+      "inode": 183469257
+    },
+    "cache/g_agreement/r/reader_lo.E.jsonl": {
+      "size": 226692672,
+      "mtime_ns": 1792374493000000000,
+      "inode": 183941475
+    },
+    "cache/g_agreement/r/reader_lo.NLA.jsonl": {
+      "size": 95878632,
+      "mtime_ns": 1792393034000000000,
+      "inode": 184622069
+    },
+    "cache/g_agreement/r/reader_lo.RB.jsonl": {
+      "size": 768065964,
+      "mtime_ns": 1792385794000000000,
+      "inode": 184519658
+    },
+    "cache/g_agreement/r/reader_lo.RC2c.jsonl": {
+      "size": 25364684,
+      "mtime_ns": 1792383049000000000,
+      "inode": 184292084
+    },
+    "cache/g_agreement/r/reader_lo.RC2cNLA.jsonl": {
+      "size": 1435572,
+      "mtime_ns": 1792383397000000000,
+      "inode": 184292088
+    }
+  },
+  "groups": [
+    {
+      "corpus_group": "cg_3c8fd45e612655d3",
+      "fold": 2,
+      "datasets": [
+        "100_news_fake"
+      ]
+    },
+    {
+      "corpus_group": "cg_fb667aeb404db1cd",
+      "fold": 2,
+      "datasets": [
+        "105_click_bait"
+      ]
+    },
+    {
+      "corpus_group": "cg_6d348d9818dae963",
+      "fold": 4,
+      "datasets": [
+        "106_hate_hate",
+        "107_hate_offensive"
+      ]
+    },
+    {
+      "corpus_group": "cg_f62795bfda51adf7",
+      "fold": 3,
+      "datasets": [
+        "110_aimade_humangpt3"
+      ]
+    },
+    {
+      "corpus_group": "cg_8fe51e2bc7c7e422",
+      "fold": 1,
+      "datasets": [
+        "113_movie_sent",
+        "92_glue_sst2"
+      ]
+    },
+    {
+      "corpus_group": "cg_8e2b0ef3c49caa0c",
+      "fold": 4,
+      "datasets": [
+        "114_nyc_borough_Manhattan",
+        "115_nyc_borough_Brooklyn",
+        "116_nyc_borough_Bronx",
+        "117_us_state_FL",
+        "118_us_state_CA",
+        "119_us_state_TX",
+        "120_us_timezone_Chicago",
+        "121_us_timezone_New_York",
+        "122_us_timezone_Los_Angeles",
+        "123_world_country_United_Kingdom",
+        "124_world_country_United_States",
+        "125_world_country_Italy",
+        "126_art_type_book",
+        "127_art_type_song",
+        "128_art_type_movie",
+        "5_hist_fig_ismale",
+        "6_hist_fig_isamerican",
+        "7_hist_fig_ispolitician"
+      ]
+    },
+    {
+      "corpus_group": "cg_fbbb1d5e5269974c",
+      "fold": 4,
+      "datasets": [
+        "129_arith_mc_A"
+      ]
+    },
+    {
+      "corpus_group": "cg_22354bd75b02c6df",
+      "fold": 3,
+      "datasets": [
+        "130_temp_cat_Frequency",
+        "131_temp_cat_Typical Time",
+        "132_temp_cat_Event Ordering"
+      ]
+    },
+    {
+      "corpus_group": "cg_041172eb4af62352",
+      "fold": 0,
+      "datasets": [
+        "133_context_type_Causality",
+        "134_context_type_Belief_states",
+        "135_context_type_Event_duration"
+      ]
+    },
+    {
+      "corpus_group": "cg_cf2d34bb9b1ff2ec",
+      "fold": 0,
+      "datasets": [
+        "136_glue_mnli_entailment",
+        "137_glue_mnli_neutral",
+        "138_glue_mnli_contradiction"
+      ]
+    },
+    {
+      "corpus_group": "cg_b32fe48141e46a7a",
+      "fold": 3,
+      "datasets": [
+        "139_news_class_Politics",
+        "140_news_class_Technology",
+        "141_news_class_Entertainment",
+        "158_code_C",
+        "159_code_Python",
+        "160_code_HTML",
+        "161_agnews_0",
+        "162_agnews_1",
+        "163_agnews_2"
+      ]
+    },
+    {
+      "corpus_group": "cg_c51ee0bcb1569de1",
+      "fold": 0,
+      "datasets": [
+        "142_cancer_cat_Thyroid_Cancer",
+        "143_cancer_cat_Lung_Cancer",
+        "144_cancer_cat_Colon_Cancer"
+      ]
+    },
+    {
+      "corpus_group": "cg_ea19413aeb70a2ea",
+      "fold": 2,
+      "datasets": [
+        "145_disease_class_digestive system diseases",
+        "146_disease_class_cardiovascular diseases",
+        "147_disease_class_nervous system diseases"
+      ]
+    },
+    {
+      "corpus_group": "cg_00ed4346fba2a036",
+      "fold": 1,
+      "datasets": [
+        "148_twt_emotion_worry",
+        "149_twt_emotion_happiness",
+        "150_twt_emotion_sadness"
+      ]
+    },
+    {
+      "corpus_group": "cg_c872deb6692f11a3",
+      "fold": 3,
+      "datasets": [
+        "151_it_tick_HR Support",
+        "152_it_tick_Hardware",
+        "153_it_tick_Administrative rights"
+      ]
+    },
+    {
+      "corpus_group": "cg_0474e9a558ca936a",
+      "fold": 2,
+      "datasets": [
+        "154_athlete_sport_football",
+        "155_athlete_sport_basketball",
+        "156_athlete_sport_baseball"
+      ]
+    },
+    {
+      "corpus_group": "cg_e412fdfade5b91a7",
+      "fold": 2,
+      "datasets": [
+        "157_amazon_5star"
+      ]
+    },
+    {
+      "corpus_group": "cg_f3306c44d20ffe6c",
+      "fold": 4,
+      "datasets": [
+        "21_headline_istrump",
+        "22_headline_isobama",
+        "23_headline_ischina",
+        "24_headline_isiran",
+        "26_headline_isfrontpage"
+      ]
+    },
+    {
+      "corpus_group": "cg_8e41d36bc744b6d2",
+      "fold": 3,
+      "datasets": [
+        "36_sciq_tf"
+      ]
+    },
+    {
+      "corpus_group": "cg_b06a060e1ec57cc7",
+      "fold": 1,
+      "datasets": [
+        "41_truthqa_tf"
+      ]
+    },
+    {
+      "corpus_group": "cg_5a20d0b5ee7a9e4b",
+      "fold": 3,
+      "datasets": [
+        "42_temp_sense"
+      ]
+    },
+    {
+      "corpus_group": "cg_ce0fbb516a41927e",
+      "fold": 3,
+      "datasets": [
+        "44_phys_tf"
+      ]
+    },
+    {
+      "corpus_group": "cg_293a6f47ccdc1cdb",
+      "fold": 0,
+      "datasets": [
+        "47_reasoning_tf"
+      ]
+    },
+    {
+      "corpus_group": "cg_b56305f0cbb83b71",
+      "fold": 1,
+      "datasets": [
+        "48_cm_correct",
+        "49_cm_isshort"
+      ]
+    },
+    {
+      "corpus_group": "cg_f15f968617bf9900",
+      "fold": 2,
+      "datasets": [
+        "50_deon_isvalid"
+      ]
+    },
+    {
+      "corpus_group": "cg_1316f73612835d5e",
+      "fold": 1,
+      "datasets": [
+        "51_just_is"
+      ]
+    },
+    {
+      "corpus_group": "cg_15ed7cbecd8f4ba9",
+      "fold": 2,
+      "datasets": [
+        "52_virtue_is"
+      ]
+    },
+    {
+      "corpus_group": "cg_7eb024c5413e5ccc",
+      "fold": 0,
+      "datasets": [
+        "54_cs_tf"
+      ]
+    },
+    {
+      "corpus_group": "cg_76b98b5198bc1d0a",
+      "fold": 4,
+      "datasets": [
+        "56_wikidatasex_or_gender",
+        "57_wikidatais_alive",
+        "58_wikidatapolitical_party",
+        "59_wikidata_occupation_isjournalist",
+        "60_wikidata_occupation_isathlete",
+        "61_wikidata_occupation_isactor",
+        "62_wikidata_occupation_ispolitician",
+        "63_wikidata_occupation_issinger",
+        "64_wikidata_occupation_isresearcher"
+      ]
+    },
+    {
+      "corpus_group": "cg_7c51d4c2cbb76f1e",
+      "fold": 1,
+      "datasets": [
+        "65_high-school",
+        "66_living-room",
+        "67_social-security",
+        "68_credit-card",
+        "69_blood-pressure",
+        "70_prime-factors",
+        "71_social-media",
+        "72_gene-expression",
+        "73_control-group",
+        "74_magnetic-field",
+        "75_cell-lines",
+        "76_trial-court",
+        "77_second-derivative",
+        "78_north-america",
+        "79_human-rights",
+        "80_side-effects",
+        "81_public-health",
+        "82_federal-government",
+        "83_third-party",
+        "84_clinical-trials",
+        "85_mental-health"
+      ]
+    },
+    {
+      "corpus_group": "cg_ec999aba1a0e2a6c",
+      "fold": 0,
+      "datasets": [
+        "87_glue_cola",
+        "89_glue_mrpc",
+        "90_glue_qnli",
+        "91_glue_qqp"
+      ]
+    },
+    {
+      "corpus_group": "cg_90fa1b342da28f06",
+      "fold": 4,
+      "datasets": [
+        "94_ai_gen"
+      ]
+    },
+    {
+      "corpus_group": "cg_c4fc39698a97c620",
+      "fold": 0,
+      "datasets": [
+        "95_toxic_is"
+      ]
+    },
+    {
+      "corpus_group": "cg_14203f61bf0a4955",
+      "fold": 1,
+      "datasets": [
+        "96_spam_is"
+      ]
+    }
+  ],
+  "raw_key_audit": {},
+  "partial_tails": {},
+  "excluded_LABEL_DEFECT": [
+    "101_disease_class",
+    "139_news_class_Politics",
+    "140_news_class_Technology",
+    "141_news_class_Entertainment",
+    "145_disease_class_digestive system diseases",
+    "146_disease_class_cardiovascular diseases",
+    "97_news_class"
+  ],
+  "audit_flagged": [
+    "101_disease_class",
+    "131_temp_cat_Typical Time",
+    "140_news_class_Technology",
+    "142_cancer_cat_Thyroid_Cancer",
+    "144_cancer_cat_Colon_Cancer",
+    "145_disease_class_digestive system diseases",
+    "146_disease_class_cardiovascular diseases",
+    "153_it_tick_Administrative rights",
+    "rb_internal_puzzle_answer",
+    "x25_wsb_wrong_bridge"
+  ],
+  "fold_rule": "sha256(20261019|corpus_group) sorted, round-robin 5",
+  "corpus_group_id": "cg_ + first16 sha256(sorted member dataset IDs joined with |)",
+  "half_rule": "sha256(20261020|whitespace-normalized prompt), low bit 0=calibration 1=endpoint",
+  "semantic_joins_verified": true,
+  "immutable_input_stats_verified": true,
+  "readers": [
+    "jlens",
+    "olens",
+    "nla",
+    "skip_a"
+  ]
+}

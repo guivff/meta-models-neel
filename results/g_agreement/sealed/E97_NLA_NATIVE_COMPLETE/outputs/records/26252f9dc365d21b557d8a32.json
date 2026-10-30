@@ -1,0 +1,12 @@
+{
+  "id": "26252f9dc365d21b557d8a32",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Question:\" and \"Answer:\" fields signals a direct response is expected next.\n\nThe \"Question\" establishes a specific task: explaining how to use \"AI-generated content\" in a sentence, so the answer must address this topic directly.\n\n\"Answer:\" is the final token, functioning as a label/field header in a few-shot or instruction-following format, immediately requiring the model's generated response text (likely a short explanatory sentence or paragraph).\n\"Rule: [rule description]\nQuestion: How to explain the use of [topic]\nAnswer:\" \u2014 this template structure demands the answer field now contains the actual response content, likely beginning with \"The\" or a direct explanation.\n\"Rule: [rule]\nQuestion: [question]\nAnswer:\" \u2014 the final token expects the model's output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Question:\" and \"Answer:\" fields signals a direct response is expected next.\n\nThe \"Question\" establishes a specific task: explaining how to use \"AI-generated content\" in a sentence, so the answer must address this topic directly.\n\n\"Answer:\" is the final token, functioning as a label/field header in a few-shot or instruction-following format, immediately requiring the model's generated response text (likely a short explanatory sentence or paragraph).\n\"Rule: [rule description]\nQuestion: How to explain the use of [topic]\nAnswer:\" \u2014 this template structure demands the answer field now contains the actual response content, likely beginning with \"The\" or a direct explanation.\n\"Rule: [rule]\nQuestion: [question]\nAnswer:\" \u2014 the final token expects the model's output.",
+  "truncated": false
+}

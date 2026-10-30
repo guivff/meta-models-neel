@@ -1,0 +1,9 @@
+{
+  "id": "a36153fe997f1ce6edc26cf4",
+  "malformed": false,
+  "raw": "- =true; // Note: `flag` appears in the middle, but `?flag\n- =true` (the flag we care about) and other params. The `flag\n- =1&other=stuff`  \u2190 Note: `flag=1` is present in the middle. We need to detect `flag\n- =true  # The suspicious flag is in the middle, mixed with other params. We need to detect `flag",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =true; // Note: `flag` appears in the middle, but `?flag\n- =true` (the flag we care about) and other params. The `flag\n- =1&other=stuff`  \u2190 Note: `flag=1` is present in the middle. We need to detect `flag\n- =true  # The suspicious flag is in the middle, mixed with other params. We need to detect `flag"
+}

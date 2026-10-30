@@ -1,0 +1,56 @@
+{
+  "experiment": "E101",
+  "owner": "W-mechanism-B end to end",
+  "authority": "direct user instruction, 2026-10-28",
+  "updated_utc": "2026-10-28T22:40:46.046836+00:00",
+  "status": "BOTH_ELIGIBLE_TEST_CELLS_COMPLETE_DESCRIPTIVE_JUDGING_PENDING",
+  "live_provider_snapshot": {
+    "running": 15,
+    "hourly_usd": 79.35,
+    "account_hourly_limit_usd": 80,
+    "checked_utc": "2026-10-28T15:31:25.045994+00:00",
+    "historical_only": true
+  },
+  "initial_timing": {
+    "row": "format_plan",
+    "gpu_type": "H200",
+    "creation_cap_seconds": 3600,
+    "reservation_upper_usd": 7.29
+  },
+  "planning_envelope": {
+    "checked_epoch": 0,
+    "projection_posted": false,
+    "candidate_GPU_upper_usd": 7.29,
+    "GPU_upper_with_candidate_usd": 1375.26,
+    "judge_upper_with_candidate_usd": 156,
+    "projection_basis": "Prior conservative I5/I2 future planning envelope1305.67 + E100 a/b historical forecast upper35.85 + E101 reserved planning33.74 (six H200 hours plus2 storage buffer). Current timing candidate7.29 is inside E10133.74, not added twice. Planning only, not closed actual spend; refresh provider/ledger before allocation.",
+    "candidate_within_e101_planning_envelope_usd": 33.74,
+    "admission_status": "PENDING_FRESH_PROVIDER_AND_PUBLISHED_PROJECTION",
+    "historical_only": true
+  },
+  "source": {
+    "source_seal_sha256": "e966429e1ce7c2b7fd45cb730fa5f05b0de8f0ab20fffdc1bcfdd44922123461",
+    "archive_sha256": "ed1b9ccfe694c88f998b3628317fac5526e99767f5f9d7d445c6ccc883b487b1",
+    "archive": "cache/g_agreement/understand/e101/source_v3/source.tar.gz",
+    "bytes": 253991
+  },
+  "operator_source_hashes": {
+    "allocate_once.py": "030aa352df82f607bcdbc2c3b193eec49fb6609b35a90a0ff0e3fc9f41d6c350",
+    "stage_and_start.py": "6e7750746f2f557d4c96f43f6c163206c25ba4bd39a82717c4ea1a3636f2f913",
+    "absolute_stop.py": "e218c95dc52850ddd8e514bf33d94a46feec41bb35b616208c483ce85c90fb5e"
+  },
+  "provider_mutations": 0,
+  "doses_selected": true,
+  "test_cells_created": 336,
+  "reused_recovery_commit": "7b42a4820",
+  "text_baseline_binding": "results/g_agreement/understand/e101/WMC_TEXT_BINDING.json",
+  "GPU_allocation_owner": "Integrator exclusively",
+  "B_provider_mutations": 0,
+  "automation": "Not created; user explicitly declined",
+  "timing_seal": "timing/format_plan/RECEIPT.json",
+  "native_baseline_binding": "BASELINE_BINDING.json",
+  "text_request": "TEXT_OPERATOR_REQUEST.json",
+  "scope_authority": "\u00a7212 E101 clarification4 and amendment2 a2bdecaa",
+  "dose_commit": "4343109e2d029d8c1b4baf7dcabb328bd92ee0fc",
+  "descriptive_input_handoff": "analysis/DESCRIPTIVE_INPUT_HANDOFF.json"
+}

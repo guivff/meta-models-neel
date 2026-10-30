@@ -1,0 +1,12 @@
+{
+  "id": "e6afd0513525a4713810d0b7",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-following format: a system prompt establishes a rule (\"use markdown format\"), then a task asks to explain how to write about it, creating a structured Q&A template.\n\nThe pattern \"Question: [topic] / Instruction: [constraint] / Answer:\" signals a few-shot or template example where the model must generate a response consistent with the instruction's constraint (markdown format explanation).\n\n\"Answer:\" is the final token, a label in a structured prompt template, immediately requiring the model's generated response text \u2014 likely a sentence explaining markdown usage, mirroring the instruction's topic.\n\"Instruction: The model should explain how to write about the Python programming language.\nQuestion: How to write about the Python programming language?\nAnswer:\" \u2014 the answer field must now contain the actual explanatory response, likely beginning with \"The model...\" or a direct explanation.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-following format: a system prompt establishes a rule (\"use markdown format\"), then a task asks to explain how to write about it, creating a structured Q&A template.\n\nThe pattern \"Question: [topic] / Instruction: [constraint] / Answer:\" signals a few-shot or template example where the model must generate a response consistent with the instruction's constraint (markdown format explanation).\n\n\"Answer:\" is the final token, a label in a structured prompt template, immediately requiring the model's generated response text \u2014 likely a sentence explaining markdown usage, mirroring the instruction's topic.\n\"Instruction: The model should explain how to write about the Python programming language.\nQuestion: How to write about the Python programming language?\nAnswer:\" \u2014 the answer field must now contain the actual explanatory response, likely beginning with \"The model...\" or a direct explanation.",
+  "truncated": false
+}

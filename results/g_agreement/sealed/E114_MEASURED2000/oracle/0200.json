@@ -1,0 +1,66 @@
+[
+  {
+    "id": "bed57d9314b68b40eca02ce4",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3} } // Nested array literal with commas\n- 2, 3} } // Nested array with commas\n- 2, 3} // Inner array with commas, then outer with comma\n- 2, 3} // Nested array inside object, then another array {4, 5\n- \uff082, 3\uff09, ... } }` (nested JSON-like structure) or `{ 1, {2,",
+      "text": "- 2, 3} } // Nested array literal with commas\n- 2, 3} } // Nested array with commas\n- 2, 3} // Inner array with commas, then outer with comma\n- 2, 3} // Nested array inside object, then another array {4, 5\n- \uff082, 3\uff09, ... } }` (nested JSON-like structure) or `{ 1, {2,"
+    }
+  },
+  {
+    "id": "2e7537f3f7bf31777e3746f7",
+    "output": {
+      "malformed": false,
+      "raw": "- 3, 4} } // Nested array literal with commas\n- 2, 3} }, {4,\n- 2, 3} }, {4, 5} } // Nested JSON-like structure with commas\n- 2, 3} }, {4, 5} }  // Nested array with commas inside\n- 2, 3}, {4, 5} } } // Nested arrays with commas inside",
+      "text": "- 3, 4} } // Nested array literal with commas\n- 2, 3} }, {4,\n- 2, 3} }, {4, 5} } // Nested JSON-like structure with commas\n- 2, 3} }, {4, 5} }  // Nested array with commas inside\n- 2, 3}, {4, 5} } } // Nested arrays with commas inside"
+    }
+  },
+  {
+    "id": "09049edc3c7c8f4242d6fb03",
+    "output": {
+      "malformed": false,
+      "raw": "- 3, 4], [5, 6]]] } }  # Nested lists,\n- 2, 3], [\"a\", \"b\"]] } }` | `[[1,\n- [2, 3], [\"a\", \"b\"]] }` (nested lists) } }` | A nested structure where inner arrays `[2\n- 2, 3] } { [4, 5] } }` (nested lists with commas) | `{ [1,",
+      "text": "- 3, 4], [5, 6]]] } }  # Nested lists,\n- 2, 3], [\"a\", \"b\"]] } }` | `[[1,\n- [2, 3], [\"a\", \"b\"]] }` (nested lists) } }` | A nested structure where inner arrays `[2\n- 2, 3] } { [4, 5] } }` (nested lists with commas) | `{ [1,"
+    }
+  },
+  {
+    "id": "035c9585aba0a5b14047f54b",
+    "output": {
+      "malformed": false,
+      "raw": "- 3, 4], [5, 6]]] }  # Inner list with commas\n- 2, 3], [\"a\", \"b\"]] }  # Nested brackets, commas\n- [2, 3], [\"a\", \"b\"]] } }  # A list inside a dict inside a list\n- 2, 3] } { [4, 5] } }` (where inner lists are `[2,",
+      "text": "- 3, 4], [5, 6]]] }  # Inner list with commas\n- 2, 3], [\"a\", \"b\"]] }  # Nested brackets, commas\n- [2, 3], [\"a\", \"b\"]] } }  # A list inside a dict inside a list\n- 2, 3] } { [4, 5] } }` (where inner lists are `[2,"
+    }
+  },
+  {
+    "id": "636735dcf5a7bddc8f93e7de",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3} }  // inner array with 3\n- 2, 3} } // nested array literal with 3\n- 5, 8} }  // nested array literal, depth 2, values 3\n- 2, 3] }  // inner array with 3 items, then closes outer array with 3\n- 4, 5} }  // inner array with 3 items, then closes outer with 3",
+      "text": "- 2, 3} }  // inner array with 3\n- 2, 3} } // nested array literal with 3\n- 5, 8} }  // nested array literal, depth 2, values 3\n- 2, 3] }  // inner array with 3 items, then closes outer array with 3\n- 4, 5} }  // inner array with 3 items, then closes outer with 3"
+    }
+  },
+  {
+    "id": "dba6382dd33d6d1f02cda618",
+    "output": {
+      "malformed": false,
+      "raw": "- 5, 7} } { 3,\n- 2, 3} } // nested array with depth 2, values 3\n- 2, 3} } { 4, 5, 6 } }` (nested JSON-like structure)\n- 5, 7} } // inner array with 3 elements | `{ 3, 5, 7",
+      "text": "- 5, 7} } { 3,\n- 2, 3} } // nested array with depth 2, values 3\n- 2, 3} } { 4, 5, 6 } }` (nested JSON-like structure)\n- 5, 7} } // inner array with 3 elements | `{ 3, 5, 7"
+    }
+  },
+  {
+    "id": "aa7fc63614646cc585844d1e",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [4, 5]]]  # Nested lists with commas\n- [2, 3], [\"a\", \"b\"]] } }  # Nested lists with commas\n- [2, 3], [\"a\", \"b\"]] } { { \"nested\": [1,\n- 2, 3], [\"a\", \"b\"] } }  # A list containing lists, with nested braces and commas",
+      "text": "- 2, 3], [4, 5]]]  # Nested lists with commas\n- [2, 3], [\"a\", \"b\"]] } }  # Nested lists with commas\n- [2, 3], [\"a\", \"b\"]] } { { \"nested\": [1,\n- 2, 3], [\"a\", \"b\"] } }  # A list containing lists, with nested braces and commas"
+    }
+  },
+  {
+    "id": "63c263bf89ca3fd57fb2455e",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [4, 5]]] } }  # A list containing [3\n- [2, 3], [\"a\", \"b\"]] } }  # Nested lists with commas\n- [2, 3], [\"a\", \"b\"]] } }  # A list containing a list, which contains another list\n- 2, 3], [\"a\", \"b\"]] } }  # Nested brackets with commas inside lists",
+      "text": "- 2, 3], [4, 5]]] } }  # A list containing [3\n- [2, 3], [\"a\", \"b\"]] } }  # Nested lists with commas\n- [2, 3], [\"a\", \"b\"]] } }  # A list containing a list, which contains another list\n- 2, 3], [\"a\", \"b\"]] } }  # Nested brackets with commas inside lists"
+    }
+  }
+]

@@ -1,0 +1,5062 @@
+{
+  "at_utc": "2026-10-23T22:54:41.017878+00:00",
+  "gpu_hours": 0,
+  "input_seal_sha256": "ede1dcc5635742e26724971f0a56e0678cc0abe1edbaab60d2675837eff0d30f",
+  "interpretation": [
+    "Prediction from full text is expected when the text directly defines the value; this alone does not identify a padding artefact.",
+    "A padding-only flag identifies a possible nuisance cue, not proof that a reader/probe uses that cue.",
+    "Absence of a flag does not exclude nonlinear or relational padding shortcuts.",
+    "After registered results exist, join this sidecar by feature in the descriptive write-up; flag confirmations with padding_artefact_possible separately. Keep registered verdict unchanged."
+  ],
+  "items_sha256": "cdf0dfd19e1621995176be6653f89bf2aa27464e596cf659d8248c69841dcd93",
+  "manifest_sha256": "b2543d7ba9d1568199d3afba24ce96b43bb2c9fd44f3ead5f9fecbc66a6f871f",
+  "method": {
+    "auroc": "pooled held-out decision_function predictions; present=1; fixed sign, no reversal",
+    "classifier": "LogisticRegression C=1, solver=lbfgs, L2 default, fit_intercept=True, tol=1e-8, max_iter=2000",
+    "cv": "LeaveOneGroupOut by template cluster; matched pair members always stay together",
+    "features": "raw native Qwen token-ID unigram counts; no normalization, ngrams or metadata",
+    "flag": "possible shortcut if padding-only OR full-prefix OOF AUROC >=0.8",
+    "padding": "maximal leading repetition of the literal string pad<space>; excludes separator and carrier",
+    "padding_flag": "padding artefact possible only if padding-only OOF AUROC >=0.8",
+    "population": "all 168 frozen items per row, combining original dev/test for this separate diagnostic only",
+    "registered_verdict": "unchanged; no registered metrics, gates, denominators or score joins modified",
+    "seed": 20261023,
+    "threshold": 0.8,
+    "uncertainty": "descriptive OOF point estimates and fold AUROCs; no confidence intervals computed",
+    "vocabulary": "DictVectorizer fitted on training clusters only, separately for every fold/view/row"
+  },
+  "padding_artefact_possible_rows": [
+    "current_number"
+  ],
+  "possible_shortcut_rows": [
+    "wordlist_preposition",
+    "word_allcaps",
+    "current_colon",
+    "number_magnitude_ge_1000",
+    "number_digits_ge_3",
+    "current_number",
+    "number_digits_ge_4",
+    "number_magnitude_ge_10",
+    "number_magnitude_ge_100",
+    "wordlist_auxiliary"
+  ],
+  "reader_scores_read": false,
+  "registered_analysis_run": false,
+  "rows": [
+    {
+      "confirmation_status": "PENDING REGISTERED SCORE ANALYSIS",
+      "feature": "wordlist_preposition",
+      "full_prefix": {
+        "auroc": 1.0,
+        "folds": [
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "0a9eb048736cabb8fc51253b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 62
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "2fc95886ff0a33db5af22623",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 63
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "2fd5ec49dd77e4d20f73e98a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 63
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "46a62c6d29755aa76cede4ca",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 63
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "57e09933cae38e3e2253479a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 62
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "8abd75a90f89c4f568f0aa1c",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 62
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "a9333d693990ea151312c787",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 62
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "af511cd0d86a6075c2cf9b6b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 63
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "bd4ffd765c4397e41dc8da2d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 62
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "dc6243479c6beeaaa098057f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 63
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "e454dcc989a6a97c3d980361",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 63
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "f6feae00354c8d1171a115f5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361"
+            ],
+            "vocabulary_size": 63
+          }
+        ]
+      },
+      "full_prefix_possible_shortcut": true,
+      "n": 168,
+      "n_clusters": 12,
+      "padding_artefact_possible": false,
+      "padding_only": {
+        "auroc": 0.6938775510204082,
+        "folds": [
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "0a9eb048736cabb8fc51253b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "2fc95886ff0a33db5af22623",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "2fd5ec49dd77e4d20f73e98a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "46a62c6d29755aa76cede4ca",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "57e09933cae38e3e2253479a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "8abd75a90f89c4f568f0aa1c",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "a9333d693990ea151312c787",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "af511cd0d86a6075c2cf9b6b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "bd4ffd765c4397e41dc8da2d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "dc6243479c6beeaaa098057f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "e454dcc989a6a97c3d980361",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "e454dcc989a6a97c3d980361",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "f6feae00354c8d1171a115f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "f6feae00354c8d1171a115f5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0a9eb048736cabb8fc51253b",
+              "2fc95886ff0a33db5af22623",
+              "2fd5ec49dd77e4d20f73e98a",
+              "46a62c6d29755aa76cede4ca",
+              "57e09933cae38e3e2253479a",
+              "8abd75a90f89c4f568f0aa1c",
+              "a9333d693990ea151312c787",
+              "af511cd0d86a6075c2cf9b6b",
+              "bd4ffd765c4397e41dc8da2d",
+              "dc6243479c6beeaaa098057f",
+              "e454dcc989a6a97c3d980361"
+            ],
+            "vocabulary_size": 3
+          }
+        ]
+      },
+      "padding_possible_shortcut": false,
+      "status": "possible shortcut",
+      "status_scope": "DESCRIPTIVE"
+    },
+    {
+      "confirmation_status": "PENDING REGISTERED SCORE ANALYSIS",
+      "feature": "word_allcaps",
+      "full_prefix": {
+        "auroc": 1.0,
+        "folds": [
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "1acf69cf476be39c4d0e15eb",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 53
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "3e19c431a8586a97abecf71d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 54
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "53d7dc53f1c9edc6614640e1",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 54
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "56cb10dbc64d06a7f7b6cebb",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 54
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "638b9c98967f04aa2e74b576",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 54
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "6f9c6eaf090ef68f7401a450",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 54
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "8f21d806ef423450d526eb71",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 54
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "ac0350f5fec5d4f5fa47ec33",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 53
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "bdb6e77f4860a050c2141540",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 53
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "c211aa989fdfa86f6a392291",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 54
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "c4004cfa3269fd944e4f2dae",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 53
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "d3e70fb0aac2b30c8f0bfc79",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae"
+            ],
+            "vocabulary_size": 54
+          }
+        ]
+      },
+      "full_prefix_possible_shortcut": true,
+      "n": 168,
+      "n_clusters": 12,
+      "padding_artefact_possible": false,
+      "padding_only": {
+        "auroc": 0.6938775510204082,
+        "folds": [
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "1acf69cf476be39c4d0e15eb",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "3e19c431a8586a97abecf71d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "53d7dc53f1c9edc6614640e1",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "56cb10dbc64d06a7f7b6cebb",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "638b9c98967f04aa2e74b576",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "6f9c6eaf090ef68f7401a450",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "8f21d806ef423450d526eb71",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "ac0350f5fec5d4f5fa47ec33",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "bdb6e77f4860a050c2141540",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "c211aa989fdfa86f6a392291",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c4004cfa3269fd944e4f2dae",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "c4004cfa3269fd944e4f2dae",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "d3e70fb0aac2b30c8f0bfc79"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "d3e70fb0aac2b30c8f0bfc79",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "1acf69cf476be39c4d0e15eb",
+              "3e19c431a8586a97abecf71d",
+              "53d7dc53f1c9edc6614640e1",
+              "56cb10dbc64d06a7f7b6cebb",
+              "638b9c98967f04aa2e74b576",
+              "6f9c6eaf090ef68f7401a450",
+              "8f21d806ef423450d526eb71",
+              "ac0350f5fec5d4f5fa47ec33",
+              "bdb6e77f4860a050c2141540",
+              "c211aa989fdfa86f6a392291",
+              "c4004cfa3269fd944e4f2dae"
+            ],
+            "vocabulary_size": 3
+          }
+        ]
+      },
+      "padding_possible_shortcut": false,
+      "status": "possible shortcut",
+      "status_scope": "DESCRIPTIVE"
+    },
+    {
+      "confirmation_status": "PENDING REGISTERED SCORE ANALYSIS",
+      "feature": "current_colon",
+      "full_prefix": {
+        "auroc": 1.0,
+        "folds": [
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "057d933a573f012c4934cb37",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 64
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "08480f7c8327fa718e49342d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 63
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "0e5dde48ad95751e81203087",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 64
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "1dc831805b6f8390068e3ad7",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 64
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "5dc6ce78b387541a39c29945",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 63
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "61f634f479d3c1ec6d04b788",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 64
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "6925e9bad586db63a3ec7ab8",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 64
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "69e488f78008df220b65f144",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 64
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "8d09e4776670e8ab601855c0",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 63
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "b277ef23407d3994ccb55d3a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 63
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "bea41dad02bc685fa31e1670",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 64
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "c5d2763d0b6ae3b36582990b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670"
+            ],
+            "vocabulary_size": 65
+          }
+        ]
+      },
+      "full_prefix_possible_shortcut": true,
+      "n": 168,
+      "n_clusters": 12,
+      "padding_artefact_possible": false,
+      "padding_only": {
+        "auroc": 0.5,
+        "folds": [
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "057d933a573f012c4934cb37",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "08480f7c8327fa718e49342d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "0e5dde48ad95751e81203087",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "1dc831805b6f8390068e3ad7",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "5dc6ce78b387541a39c29945",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "61f634f479d3c1ec6d04b788",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "6925e9bad586db63a3ec7ab8",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "69e488f78008df220b65f144",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "8d09e4776670e8ab601855c0",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "b277ef23407d3994ccb55d3a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "bea41dad02bc685fa31e1670",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "bea41dad02bc685fa31e1670",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "c5d2763d0b6ae3b36582990b"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.5,
+            "held_out_cluster": "c5d2763d0b6ae3b36582990b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057d933a573f012c4934cb37",
+              "08480f7c8327fa718e49342d",
+              "0e5dde48ad95751e81203087",
+              "1dc831805b6f8390068e3ad7",
+              "5dc6ce78b387541a39c29945",
+              "61f634f479d3c1ec6d04b788",
+              "6925e9bad586db63a3ec7ab8",
+              "69e488f78008df220b65f144",
+              "8d09e4776670e8ab601855c0",
+              "b277ef23407d3994ccb55d3a",
+              "bea41dad02bc685fa31e1670"
+            ],
+            "vocabulary_size": 3
+          }
+        ]
+      },
+      "padding_possible_shortcut": false,
+      "status": "possible shortcut",
+      "status_scope": "DESCRIPTIVE"
+    },
+    {
+      "confirmation_status": "PENDING REGISTERED SCORE ANALYSIS",
+      "feature": "number_magnitude_ge_1000",
+      "full_prefix": {
+        "auroc": 1.0,
+        "folds": [
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "01c39888056b85a92c8fe6f2",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "057e57fc11258a69ce94098d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "0bf377aa3f492502601abb44",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "271ddae4cfb7001953d9894b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "39f40ba8afa3b4761f4ceca8",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "7192edee6e59fd724cf2afa3",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "93d426e4884bd90a97d7e100",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "99d3f42c4f330a1ce49ad9d0",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "9e652f1f0563b457dc8b9674",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "bcbab6e1d2070669b2b61bc1",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "d153f8336fc8ddf393cf3da2",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "ee55ba4f34ddc3e9261b2c05",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2"
+            ],
+            "vocabulary_size": 50
+          }
+        ]
+      },
+      "full_prefix_possible_shortcut": true,
+      "n": 168,
+      "n_clusters": 12,
+      "padding_artefact_possible": false,
+      "padding_only": {
+        "auroc": 0.6938775510204082,
+        "folds": [
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "01c39888056b85a92c8fe6f2",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "057e57fc11258a69ce94098d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "0bf377aa3f492502601abb44",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "271ddae4cfb7001953d9894b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "39f40ba8afa3b4761f4ceca8",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "7192edee6e59fd724cf2afa3",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "93d426e4884bd90a97d7e100",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "99d3f42c4f330a1ce49ad9d0",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "9e652f1f0563b457dc8b9674",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "bcbab6e1d2070669b2b61bc1",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "d153f8336fc8ddf393cf3da2",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "d153f8336fc8ddf393cf3da2",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "ee55ba4f34ddc3e9261b2c05"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "ee55ba4f34ddc3e9261b2c05",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "01c39888056b85a92c8fe6f2",
+              "057e57fc11258a69ce94098d",
+              "0bf377aa3f492502601abb44",
+              "271ddae4cfb7001953d9894b",
+              "39f40ba8afa3b4761f4ceca8",
+              "7192edee6e59fd724cf2afa3",
+              "93d426e4884bd90a97d7e100",
+              "99d3f42c4f330a1ce49ad9d0",
+              "9e652f1f0563b457dc8b9674",
+              "bcbab6e1d2070669b2b61bc1",
+              "d153f8336fc8ddf393cf3da2"
+            ],
+            "vocabulary_size": 3
+          }
+        ]
+      },
+      "padding_possible_shortcut": false,
+      "status": "possible shortcut",
+      "status_scope": "DESCRIPTIVE"
+    },
+    {
+      "confirmation_status": "PENDING REGISTERED SCORE ANALYSIS",
+      "feature": "number_digits_ge_3",
+      "full_prefix": {
+        "auroc": 0.9886621315192744,
+        "folds": [
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "18390b8e74d27704d5a1abef",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "3c51936e6268245d5cc4410a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "402fd2a8b00ea988f0ddabdd",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "4708c3e3482efad6746b58c5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "5ebf12276fade03a9bd88a62",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "67b673b51cd67099feb6a813",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "6e2ff9b7c61d7e58925a700a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "aca8debb53a032165ce2f027",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "cc5b39f5575a52e04006b271",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "d4f8920fbbb211dd35c95bd4",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "d8c853b47486ba6ec47c16db",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "f965bda3cd88037ce29a65a2",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db"
+            ],
+            "vocabulary_size": 50
+          }
+        ]
+      },
+      "full_prefix_possible_shortcut": true,
+      "n": 168,
+      "n_clusters": 12,
+      "padding_artefact_possible": false,
+      "padding_only": {
+        "auroc": 0.6938775510204082,
+        "folds": [
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "18390b8e74d27704d5a1abef",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "3c51936e6268245d5cc4410a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "402fd2a8b00ea988f0ddabdd",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "4708c3e3482efad6746b58c5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "5ebf12276fade03a9bd88a62",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "67b673b51cd67099feb6a813",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "6e2ff9b7c61d7e58925a700a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "aca8debb53a032165ce2f027",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "cc5b39f5575a52e04006b271",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "d4f8920fbbb211dd35c95bd4",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d8c853b47486ba6ec47c16db",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "d8c853b47486ba6ec47c16db",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "f965bda3cd88037ce29a65a2"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "f965bda3cd88037ce29a65a2",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "18390b8e74d27704d5a1abef",
+              "3c51936e6268245d5cc4410a",
+              "402fd2a8b00ea988f0ddabdd",
+              "4708c3e3482efad6746b58c5",
+              "5ebf12276fade03a9bd88a62",
+              "67b673b51cd67099feb6a813",
+              "6e2ff9b7c61d7e58925a700a",
+              "aca8debb53a032165ce2f027",
+              "cc5b39f5575a52e04006b271",
+              "d4f8920fbbb211dd35c95bd4",
+              "d8c853b47486ba6ec47c16db"
+            ],
+            "vocabulary_size": 3
+          }
+        ]
+      },
+      "padding_possible_shortcut": false,
+      "status": "possible shortcut",
+      "status_scope": "DESCRIPTIVE"
+    },
+    {
+      "confirmation_status": "PENDING REGISTERED SCORE ANALYSIS",
+      "feature": "current_number",
+      "full_prefix": {
+        "auroc": 1.0,
+        "folds": [
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "0dafed073efaac275bf73184",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 52
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "0eba4e53566d302a70e4e93f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 52
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "165c1302c8495523d8a43677",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 52
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "20041e2c8dc13bfac0426ad5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 52
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "61c7ac3491c609de4fa0e398",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "622474a6cc2614fb089ad549",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 52
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "6f3d8675c2a56ed0632aafa6",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 52
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "7c11b2e0c0f78558538ce008",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 52
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "812de79fccb6333bba9236fe",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "94dcb6120441f8a0f5d48a72",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "b7f9415fd0625426af78f8c4",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 52
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "fb23eb8255c25cd0b4fb98f5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4"
+            ],
+            "vocabulary_size": 51
+          }
+        ]
+      },
+      "full_prefix_possible_shortcut": true,
+      "n": 168,
+      "n_clusters": 12,
+      "padding_artefact_possible": true,
+      "padding_only": {
+        "auroc": 0.8265306122448979,
+        "folds": [
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "0dafed073efaac275bf73184",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "0eba4e53566d302a70e4e93f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "165c1302c8495523d8a43677",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "20041e2c8dc13bfac0426ad5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "61c7ac3491c609de4fa0e398",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "622474a6cc2614fb089ad549",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "6f3d8675c2a56ed0632aafa6",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "7c11b2e0c0f78558538ce008",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "812de79fccb6333bba9236fe",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "94dcb6120441f8a0f5d48a72",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "b7f9415fd0625426af78f8c4",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "b7f9415fd0625426af78f8c4",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "fb23eb8255c25cd0b4fb98f5"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.8265306122448979,
+            "held_out_cluster": "fb23eb8255c25cd0b4fb98f5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0dafed073efaac275bf73184",
+              "0eba4e53566d302a70e4e93f",
+              "165c1302c8495523d8a43677",
+              "20041e2c8dc13bfac0426ad5",
+              "61c7ac3491c609de4fa0e398",
+              "622474a6cc2614fb089ad549",
+              "6f3d8675c2a56ed0632aafa6",
+              "7c11b2e0c0f78558538ce008",
+              "812de79fccb6333bba9236fe",
+              "94dcb6120441f8a0f5d48a72",
+              "b7f9415fd0625426af78f8c4"
+            ],
+            "vocabulary_size": 3
+          }
+        ]
+      },
+      "padding_possible_shortcut": true,
+      "status": "possible shortcut",
+      "status_scope": "DESCRIPTIVE"
+    },
+    {
+      "confirmation_status": "PENDING REGISTERED SCORE ANALYSIS",
+      "feature": "number_digits_ge_4",
+      "full_prefix": {
+        "auroc": 0.9886621315192744,
+        "folds": [
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "06b687dfd1fa5029d3d772ce",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "11cffc7773105d8ee09d138d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "1aa50aa6a201b0c284ac755f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "349064f26018960d3cbfe4e5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "4e5d50fe8bb6497c4122668d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "71b807ef7728112384714f0a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "758aa24a2666cac3d736da42",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "adfa6113dc1180ebf8167353",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "c1fee083120b2566e06e547d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "e8d56ee6a3a8f8549264641d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "eb1c08fe683ec1c37383e2a7",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "f3be040cbbcac103c9d7ae49",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7"
+            ],
+            "vocabulary_size": 51
+          }
+        ]
+      },
+      "full_prefix_possible_shortcut": true,
+      "n": 168,
+      "n_clusters": 12,
+      "padding_artefact_possible": false,
+      "padding_only": {
+        "auroc": 0.6938775510204082,
+        "folds": [
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "06b687dfd1fa5029d3d772ce",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "11cffc7773105d8ee09d138d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "1aa50aa6a201b0c284ac755f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "349064f26018960d3cbfe4e5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "4e5d50fe8bb6497c4122668d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "71b807ef7728112384714f0a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "758aa24a2666cac3d736da42",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "adfa6113dc1180ebf8167353",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "c1fee083120b2566e06e547d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "e8d56ee6a3a8f8549264641d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "eb1c08fe683ec1c37383e2a7",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "eb1c08fe683ec1c37383e2a7",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "f3be040cbbcac103c9d7ae49"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "f3be040cbbcac103c9d7ae49",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "06b687dfd1fa5029d3d772ce",
+              "11cffc7773105d8ee09d138d",
+              "1aa50aa6a201b0c284ac755f",
+              "349064f26018960d3cbfe4e5",
+              "4e5d50fe8bb6497c4122668d",
+              "71b807ef7728112384714f0a",
+              "758aa24a2666cac3d736da42",
+              "adfa6113dc1180ebf8167353",
+              "c1fee083120b2566e06e547d",
+              "e8d56ee6a3a8f8549264641d",
+              "eb1c08fe683ec1c37383e2a7"
+            ],
+            "vocabulary_size": 3
+          }
+        ]
+      },
+      "padding_possible_shortcut": false,
+      "status": "possible shortcut",
+      "status_scope": "DESCRIPTIVE"
+    },
+    {
+      "confirmation_status": "PENDING REGISTERED SCORE ANALYSIS",
+      "feature": "number_magnitude_ge_10",
+      "full_prefix": {
+        "auroc": 0.9197845804988662,
+        "folds": [
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "02b6d259a24c395ecd037729",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "2ba3d121bc72b3327846830b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "2c91e6b356d12a2d044f64c0",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "4252777e1b819da55eba14dd",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "4753708f5cb69f3bfca6b15b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "7a9fb480e5dddcc096d61ed2",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "9560260ef8f0cefff4c29f48",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "9faa1f48f9c4cc68a03f901f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "a3c87035ed974eb2dda5cc3d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "aa3f01157da491bfb63250f1",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "b752dd30e71165ac4a724c29",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "d23dcd55e95b6342017714bc",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29"
+            ],
+            "vocabulary_size": 51
+          }
+        ]
+      },
+      "full_prefix_possible_shortcut": true,
+      "n": 168,
+      "n_clusters": 12,
+      "padding_artefact_possible": false,
+      "padding_only": {
+        "auroc": 0.6938775510204082,
+        "folds": [
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "02b6d259a24c395ecd037729",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "2ba3d121bc72b3327846830b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "2c91e6b356d12a2d044f64c0",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "4252777e1b819da55eba14dd",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "4753708f5cb69f3bfca6b15b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "7a9fb480e5dddcc096d61ed2",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "9560260ef8f0cefff4c29f48",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "9faa1f48f9c4cc68a03f901f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "a3c87035ed974eb2dda5cc3d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "aa3f01157da491bfb63250f1",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "b752dd30e71165ac4a724c29",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "b752dd30e71165ac4a724c29",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "d23dcd55e95b6342017714bc"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "d23dcd55e95b6342017714bc",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "02b6d259a24c395ecd037729",
+              "2ba3d121bc72b3327846830b",
+              "2c91e6b356d12a2d044f64c0",
+              "4252777e1b819da55eba14dd",
+              "4753708f5cb69f3bfca6b15b",
+              "7a9fb480e5dddcc096d61ed2",
+              "9560260ef8f0cefff4c29f48",
+              "9faa1f48f9c4cc68a03f901f",
+              "a3c87035ed974eb2dda5cc3d",
+              "aa3f01157da491bfb63250f1",
+              "b752dd30e71165ac4a724c29"
+            ],
+            "vocabulary_size": 3
+          }
+        ]
+      },
+      "padding_possible_shortcut": false,
+      "status": "possible shortcut",
+      "status_scope": "DESCRIPTIVE"
+    },
+    {
+      "confirmation_status": "PENDING REGISTERED SCORE ANALYSIS",
+      "feature": "number_magnitude_ge_100",
+      "full_prefix": {
+        "auroc": 0.993764172335601,
+        "folds": [
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "474009a2a5197df62fdc58bf",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "4a901e7d7c85f721d199d0c5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "5e35f23b9d49b53e9e8e8406",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "772f55fdf0397ebd34acfc71",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "8947c0aec402dff096e173f6",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "b53f0fee81d88a6e07aae440",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "b90b4f329b9d094962f544fb",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "cc73d0759e94d511ab7c4b3f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "e509bccec098b8af82d8f81a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "f6830fa8c921f94a6ed1bc3a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 51
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "f8b6231ac3d5dd5160aff37c",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 50
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "f8d8413d470532aa2fc19102",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c"
+            ],
+            "vocabulary_size": 51
+          }
+        ]
+      },
+      "full_prefix_possible_shortcut": true,
+      "n": 168,
+      "n_clusters": 12,
+      "padding_artefact_possible": false,
+      "padding_only": {
+        "auroc": 0.6938775510204082,
+        "folds": [
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "474009a2a5197df62fdc58bf",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "4a901e7d7c85f721d199d0c5",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "5e35f23b9d49b53e9e8e8406",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "772f55fdf0397ebd34acfc71",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "8947c0aec402dff096e173f6",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "b53f0fee81d88a6e07aae440",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "b90b4f329b9d094962f544fb",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "cc73d0759e94d511ab7c4b3f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "e509bccec098b8af82d8f81a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "f6830fa8c921f94a6ed1bc3a",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f8b6231ac3d5dd5160aff37c",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "f8b6231ac3d5dd5160aff37c",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8d8413d470532aa2fc19102"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "f8d8413d470532aa2fc19102",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "474009a2a5197df62fdc58bf",
+              "4a901e7d7c85f721d199d0c5",
+              "5e35f23b9d49b53e9e8e8406",
+              "772f55fdf0397ebd34acfc71",
+              "8947c0aec402dff096e173f6",
+              "b53f0fee81d88a6e07aae440",
+              "b90b4f329b9d094962f544fb",
+              "cc73d0759e94d511ab7c4b3f",
+              "e509bccec098b8af82d8f81a",
+              "f6830fa8c921f94a6ed1bc3a",
+              "f8b6231ac3d5dd5160aff37c"
+            ],
+            "vocabulary_size": 3
+          }
+        ]
+      },
+      "padding_possible_shortcut": false,
+      "status": "possible shortcut",
+      "status_scope": "DESCRIPTIVE"
+    },
+    {
+      "confirmation_status": "PENDING REGISTERED SCORE ANALYSIS",
+      "feature": "wordlist_auxiliary",
+      "full_prefix": {
+        "auroc": 1.0,
+        "folds": [
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "0064f1295eb79e5f537c9d38",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 68
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "260b244001016d0d8de7819f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 68
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "380bbd80a602704f94b601d3",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 68
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "423ed2ae9fce8fb7ad4b4588",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 69
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "42499c6d41c19287d609e30d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 69
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "640ea825bbdfb9c9c4495f42",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 69
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "6d0a3a0ade31bf3df8b9afa3",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 69
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "7d3544ce8f0f38a992805331",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 69
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "a4f05c29a99cbefb20e9c48b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 68
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "ca24d1f42d0b95d3115737b0",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 68
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "dee71031c6c39e1efe504213",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 68
+          },
+          {
+            "auroc": 1.0,
+            "held_out_cluster": "e78b5e01fa46b91fb45c5557",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213"
+            ],
+            "vocabulary_size": 69
+          }
+        ]
+      },
+      "full_prefix_possible_shortcut": true,
+      "n": 168,
+      "n_clusters": 12,
+      "padding_artefact_possible": false,
+      "padding_only": {
+        "auroc": 0.6938775510204082,
+        "folds": [
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "0064f1295eb79e5f537c9d38",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "260b244001016d0d8de7819f",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "380bbd80a602704f94b601d3",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "423ed2ae9fce8fb7ad4b4588",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "42499c6d41c19287d609e30d",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "640ea825bbdfb9c9c4495f42",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "6d0a3a0ade31bf3df8b9afa3",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "7d3544ce8f0f38a992805331",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "a4f05c29a99cbefb20e9c48b",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "ca24d1f42d0b95d3115737b0",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "dee71031c6c39e1efe504213",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "dee71031c6c39e1efe504213",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "e78b5e01fa46b91fb45c5557"
+            ],
+            "vocabulary_size": 3
+          },
+          {
+            "auroc": 0.6938775510204082,
+            "held_out_cluster": "e78b5e01fa46b91fb45c5557",
+            "n_test": 14,
+            "n_train": 154,
+            "train_clusters": [
+              "0064f1295eb79e5f537c9d38",
+              "260b244001016d0d8de7819f",
+              "380bbd80a602704f94b601d3",
+              "423ed2ae9fce8fb7ad4b4588",
+              "42499c6d41c19287d609e30d",
+              "640ea825bbdfb9c9c4495f42",
+              "6d0a3a0ade31bf3df8b9afa3",
+              "7d3544ce8f0f38a992805331",
+              "a4f05c29a99cbefb20e9c48b",
+              "ca24d1f42d0b95d3115737b0",
+              "dee71031c6c39e1efe504213"
+            ],
+            "vocabulary_size": 3
+          }
+        ]
+      },
+      "padding_possible_shortcut": false,
+      "status": "possible shortcut",
+      "status_scope": "DESCRIPTIVE"
+    }
+  ],
+  "sklearn_version": "1.9.1",
+  "source_sha256": "d7ab2d7da04eaadde5f8efd088964b46661afb17d4a6aa328081c11655e76bf5",
+  "status": "DESCRIPTIVE",
+  "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+  "wall_seconds": 3.6765201660455205
+}

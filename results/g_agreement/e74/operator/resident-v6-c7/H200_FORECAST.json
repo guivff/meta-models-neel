@@ -1,0 +1,161 @@
+{
+  "admission_blockers": [
+    "Fresh single-node8H200 allocatable quote and independently enforced provider stop required",
+    "Exact runtime image, CUDA13 driver, local NVMe and sufficient memory require validation",
+    "No measured H200 capture/readout or boot throughput; proxy durations are not validated bounds",
+    "I-2 must reconcile all elapsed costs, actual extras, Q/C/other liabilities and its USD240 reserve",
+    "Clarification6 time/no-B200-claim gate still applies; no allocation before Wed06CET"
+  ],
+  "authorises_launch": false,
+  "authority": "f5720c36529f52bf506924fa73825df8b4c95d9e",
+  "break_even": {
+    "max_per_gpu_hourly_usd": 4.2931086978585205,
+    "max_replica_hourly_usd": 34.344869582868164
+  },
+  "components": [
+    {
+      "basis": "full clarification4 allowance; no transfer measurement",
+      "seconds": 3600,
+      "stage": "weight_staging_and_full_destination_verification"
+    },
+    {
+      "basis": "existing archive-staging ceiling, budgeted in full; no environment ready evidence",
+      "seconds": 900,
+      "stage": "archive_environment_staging"
+    },
+    {
+      "basis": "Author-documented TP8 boot ~34min, in B200 context; adopted TP8 planning value under clarification7. H200 unmeasured.",
+      "seconds": 2040,
+      "stage": "engine_boot"
+    },
+    {
+      "basis": "planning allowance: one50-item capture+generation batch, merges and statistics; unmeasured",
+      "seconds": 120,
+      "stage": "smoke50_capture_readouts_and_statistics"
+    },
+    {
+      "basis": "Retain prior1633s planning allowance (twice author TP8 B200 window-rate duration); no TP8 speedup credited. H200 throughput unmeasured; not an operational upper bound.",
+      "seconds": 1633,
+      "stage": "capture14184_block51"
+    },
+    {
+      "basis": "explicit paid-hold planning allowance; no timely GO guaranteed; exceedance requires stop/new admission",
+      "seconds": 600,
+      "stage": "capture_pull_CPU_probes_Wlens_forecast_and_GO_wait"
+    },
+    {
+      "basis": "Retain14 batches512 at60s/batch =840s from prior author TP4 B200 training/generation proxy. No H200 speedup credited; H200 unmeasured.",
+      "seconds": 840,
+      "stage": "test_readouts6804"
+    },
+    {
+      "basis": "planning allowance; includes transitions outside smoke and348.586MBcapture/output custody; unmeasured",
+      "seconds": 120,
+      "stage": "adapter_transitions_final_seal_retrieval_release"
+    }
+  ],
+  "conditions": [
+    "Frozen50 smoke criterion unchanged; failure stops without retuning or retry",
+    "All14184 captures and6804 binary readouts retained; one engine lifetime",
+    "Capture seal, actual CPU probes and W-lens commit precede GO and native readers",
+    "TP4 retains1200s andUSD100;8B200/H100 not implemented by this package"
+  ],
+  "counts": {
+    "capture_float32_bytes": 348585984,
+    "capture_items": 14184,
+    "capture_prefix_tokens": 1144765,
+    "capture_rows": 83,
+    "confirmatory_test_items": 6804,
+    "native_content_token_cap": 16,
+    "smoke_items": 50,
+    "smoke_prefix_tokens": 33459,
+    "test_generated_tokens_max": 122472,
+    "test_output_format": "one greedy bullet per item",
+    "test_prompt_tokens": 476280
+  },
+  "created_utc": "2026-10-27T22:22:31.789902+00:00",
+  "experiment": "E74",
+  "gpu_hours_total": 21.895555555555557,
+  "gpu_used": false,
+  "hardware": {
+    "gpu_count": 8,
+    "gpu_type": "H200",
+    "single_node": true,
+    "tensor_parallel_size": 8,
+    "weight_path": "NVFP4 as W4A16 Marlin"
+  },
+  "hardware_authority": "bd43a46af5eb2ea84e8524fdc1ab6f5262acd729",
+  "limits": {
+    "boot_smoke_seconds": 3000,
+    "cap_usd": 120
+  },
+  "measurement_status": {
+    "H200_boot": "UNMEASURED_AUTHOR_TP8_B200_REPORT_USED",
+    "archive_environment": "FULL900S_ALLOWANCE",
+    "capture_readouts": "CROSS_HARDWARE_PLANNING_PROXIES_ONLY",
+    "provider_extras": "ALLOWANCE_NOT_QUOTE",
+    "smoke": "UNMEASURED",
+    "weight_staging": "FULL3600S_ALLOWANCE"
+  },
+  "multiplier": 1.25,
+  "other_cost_allowance_is_quote": false,
+  "other_cost_allowance_usd": 2.0,
+  "phase_forecast_seconds": {
+    "boot": 2040,
+    "capture": 1633,
+    "readouts": 840,
+    "smoke": 120
+  },
+  "replica_hours_total": 2.7369444444444446,
+  "scenarios": [
+    {
+      "cap_usd": 120,
+      "cloud": "community",
+      "forecast_times_1_25_usd": 100.75630555555556,
+      "forecast_usd": 80.60504444444445,
+      "full_3000s_boot_smoke_envelope_padded_usd": 109.13297222222221,
+      "full_3000s_boot_smoke_envelope_seconds": 10693,
+      "listed_usd_per_gpu_hour": 3.59,
+      "quote_type": "PUBLIC_LIST_SCENARIO_NOT_ALLOCATABLE_EIGHT_GPU_QUOTE",
+      "replica_hourly_usd": 28.72,
+      "verdict": "PLANNING_FIT_ONLY"
+    },
+    {
+      "cap_usd": 120,
+      "cloud": "secure",
+      "forecast_times_1_25_usd": 147.2843611111111,
+      "forecast_usd": 117.8274888888889,
+      "full_3000s_boot_smoke_envelope_padded_usd": 159.62769444444444,
+      "full_3000s_boot_smoke_envelope_seconds": 10693,
+      "listed_usd_per_gpu_hour": 5.29,
+      "quote_type": "PUBLIC_LIST_SCENARIO_NOT_ALLOCATABLE_EIGHT_GPU_QUOTE",
+      "replica_hourly_usd": 42.32,
+      "verdict": "NO_FIT"
+    }
+  ],
+  "schema_version": 1,
+  "seconds_total": 9853,
+  "source_evidence": {
+    "boot": {
+      "documented_seconds": 2040,
+      "hardware_context": "B200 TP8; not H200 measurement",
+      "line": 462,
+      "local_path": "results/g_agreement/e74/evidence/ceselder--glm-5.3-olens-lens.README.txt",
+      "repo": "ceselder/glm-5.3-olens-lens",
+      "revision": "689c5dbae3d2f83dbf969e234a023958f1612185",
+      "sha256": "c896494175d1c0e14fa18e2696456460deb5db26878802b149d9432d3d2ef702",
+      "url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/blob/689c5dbae3d2f83dbf969e234a023958f1612185/README.md"
+    },
+    "prices": {
+      "community_usd_per_gpu_hour": 3.59,
+      "exact_8gpu_stock_checked": false,
+      "public_page_updated": "2026-08-27",
+      "secure_usd_per_gpu_hour": 5.29,
+      "url": "https://www.runpod.io/gpu-models/h200",
+      "verified_date": "2026-10-27"
+    },
+    "prior_forecast_sha256": "3d0e669f41f6419b83a62ed3491ab168f7a3db9ea43ca9935ae4e6c8187aaf2c"
+  },
+  "status": "CONDITIONAL_LIST_PRICE_SCENARIOS_NOT_ADMITTED",
+  "track": "G"
+}

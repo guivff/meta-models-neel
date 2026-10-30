@@ -1,0 +1,64 @@
+{
+  "schema": "redaction-note-v1",
+  "files": [
+    {
+      "path": "results/g_agreement/understand/e39/ANALYSIS_REQUEST_2026-10-26.json",
+      "local_commit": "HEAD",
+      "local_sha256": "06843bc843531d75e7e223e184dcc2a3dd6773aab211c8b39d31e40b13c94a15",
+      "published_sha256": "6a5043e7a5eaade168cfe9b0f576147cb01ce8f35775e0f05bd9058ecc0cc112",
+      "sealed_by": [
+        "results/g_agreement/understand/e39/ANALYSIS_CODE_SEAL_2026-10-26.json",
+        "results/g_agreement/understand/e39/SECRET_SCAN_ANALYSIS_149_2026-10-26.json"
+      ],
+      "redactions": [
+        {
+          "line": 6,
+          "placeholder": "python",
+          "occurrences": 1,
+          "original_sha256": "1a7f3f495b47b17f7ebe1c3d07a75a107453cf82a4e1694c41026d9b904cb716",
+          "original_length": 76
+        },
+        {
+          "line": 7,
+          "placeholder": "<W-lens worktree>",
+          "occurrences": 1,
+          "original_sha256": "d24a18f0b48ac9d86152747e56d123c2d276794867fe24a654b0e8e763615ad9",
+          "original_length": 59
+        }
+      ]
+    },
+    {
+      "path": "results/g_agreement/understand/e39/HANDOFF_ANALYSIS_149_2026-10-26.md",
+      "local_commit": "HEAD",
+      "local_sha256": "9448c6c43a1964f5e9a669b6a653eb01e0607dbf41a5a2d103f674a445448696",
+      "published_sha256": "6d17f0519506bc166e91a13a0a8d3ef99f19974ba4db629dc98811bef0a7aec5",
+      "sealed_by": [
+        "results/g_agreement/understand/e39/ANALYSIS_CODE_SEAL_2026-10-26.json",
+        "results/g_agreement/understand/e39/SECRET_SCAN_ANALYSIS_149_2026-10-26.json"
+      ],
+      "redactions": [
+        {
+          "line": 9,
+          "placeholder": "<W-lens worktree>",
+          "occurrences": 1,
+          "original_sha256": "d24a18f0b48ac9d86152747e56d123c2d276794867fe24a654b0e8e763615ad9",
+          "original_length": 59
+        },
+        {
+          "line": 12,
+          "placeholder": "python",
+          "occurrences": 1,
+          "original_sha256": "1a7f3f495b47b17f7ebe1c3d07a75a107453cf82a4e1694c41026d9b904cb716",
+          "original_length": 76
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "at": "2026-10-26T01:27:12Z",
+      "by": "integrator",
+      "what": "Published by the integrator with local machine paths replaced by placeholders (snapshot substitution table). local_sha256 is the hash any owner seal covers (owner local_commit); each redaction gives line, placeholder, occurrences and the original string sha256/length; applying the table to the local line reproduces the published line (checked)."
+    }
+  ]
+}

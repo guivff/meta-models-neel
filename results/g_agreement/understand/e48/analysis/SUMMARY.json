@@ -1,0 +1,529 @@
+{
+  "bags_correlations": {
+    "counts": {
+      "ci95": [
+        -0.13537880674123082,
+        0.36349121397146966
+      ],
+      "draws": 10000,
+      "n": 52,
+      "rho": 0.12258076857099028,
+      "status": "COMPLETE"
+    },
+    "presence": {
+      "ci95": [
+        -0.051823670559752504,
+        0.4360747239601737
+      ],
+      "draws": 10000,
+      "n": 52,
+      "rho": 0.19836531938244512,
+      "status": "COMPLETE"
+    },
+    "words": {
+      "ci95": [
+        -0.35893516693245936,
+        0.20690404095906767
+      ],
+      "difference_ci95": [
+        -0.5032705453217274,
+        -0.04145628300643962
+      ],
+      "draws": 10000,
+      "n": 52,
+      "rho": -0.07988783003361544,
+      "rho_difference": -0.27825314941606055,
+      "status": "COMPLETE"
+    }
+  },
+  "bank_reliability": {
+    "all": {
+      "E36": [
+        0.8707482993197279,
+        0.7074829931972789,
+        0.518140589569161,
+        0.8809523809523809,
+        0.47959183673469385,
+        0.9914965986394558,
+        0.4886621315192744,
+        0.43253968253968256,
+        1.0,
+        0.9393424036281179,
+        0.463718820861678,
+        0.7103174603174603,
+        0.5005668934240363,
+        1.0,
+        0.9869614512471655,
+        0.3888888888888889,
+        0.5578231292517006,
+        0.503968253968254,
+        1.0,
+        0.4614512471655329,
+        0.6281179138321995,
+        0.7431972789115646,
+        0.54421768707483,
+        0.45691609977324266,
+        1.0
+      ],
+      "W1": [
+        1.0,
+        0.6598639455782312,
+        0.5708616780045351,
+        0.8435374149659864,
+        0.43253968253968256,
+        1.0,
+        0.6337868480725624,
+        0.4189342403628118,
+        0.8905895691609977,
+        0.967687074829932,
+        0.4846938775510204,
+        0.5629251700680272,
+        0.5311791383219955,
+        0.9109977324263039,
+        1.0,
+        0.5,
+        0.5425170068027211,
+        0.4875283446712018,
+        1.0,
+        0.5918367346938775,
+        0.6439909297052154,
+        0.4744897959183674,
+        0.43820861678004536,
+        0.5005668934240363,
+        1.0
+      ],
+      "ci95": [
+        0.532482320539001,
+        0.9012430629473464
+      ],
+      "draws": 10000,
+      "n": 25,
+      "rho": 0.7833670359943147,
+      "rows": [
+        "json_status",
+        "json_type",
+        "latex_environment",
+        "latex_role",
+        "latex_section",
+        "latex_subject",
+        "list_depth",
+        "list_index",
+        "list_priority",
+        "list_topic",
+        "prose_paren",
+        "prose_quote",
+        "prose_sentence",
+        "prose_sentiment",
+        "prose_topic",
+        "python_argument",
+        "python_comment",
+        "python_depth",
+        "python_error",
+        "python_indent",
+        "python_string",
+        "table_column",
+        "table_role",
+        "table_row",
+        "table_status"
+      ],
+      "status": "COMPLETE"
+    },
+    "structure": {
+      "E36": [
+        0.7074829931972789,
+        0.518140589569161,
+        0.47959183673469385,
+        0.4886621315192744,
+        0.43253968253968256,
+        0.463718820861678,
+        0.7103174603174603,
+        0.5005668934240363,
+        0.3888888888888889,
+        0.5578231292517006,
+        0.503968253968254,
+        0.4614512471655329,
+        0.6281179138321995,
+        0.7431972789115646,
+        0.54421768707483,
+        0.45691609977324266
+      ],
+      "W1": [
+        0.6598639455782312,
+        0.5708616780045351,
+        0.43253968253968256,
+        0.6337868480725624,
+        0.4189342403628118,
+        0.4846938775510204,
+        0.5629251700680272,
+        0.5311791383219955,
+        0.5,
+        0.5425170068027211,
+        0.4875283446712018,
+        0.5918367346938775,
+        0.6439909297052154,
+        0.4744897959183674,
+        0.43820861678004536,
+        0.5005668934240363
+      ],
+      "ci95": [
+        -0.22960725075528696,
+        0.7677258403361344
+      ],
+      "draws": 10000,
+      "n": 16,
+      "rho": 0.3264705882352941,
+      "rows": [
+        "json_type",
+        "latex_environment",
+        "latex_section",
+        "list_depth",
+        "list_index",
+        "prose_paren",
+        "prose_quote",
+        "prose_sentence",
+        "python_argument",
+        "python_comment",
+        "python_depth",
+        "python_indent",
+        "python_string",
+        "table_column",
+        "table_role",
+        "table_row"
+      ],
+      "status": "COMPLETE"
+    }
+  },
+  "comparison_references": {
+    "E25_rho": 0.03,
+    "E42_rho": -0.13
+  },
+  "experiment": "E48",
+  "limitations": [
+    "W1 prior probe eligibility is not used to filter this asked-channel reanalysis.",
+    "Pooled bank-row bootstrap treats bank-row units as exchangeable; E24 reuses W1 items and is not independent replication.",
+    "Bank stability is an empirical reliability reference; a single cross-bank correlation does not identify a strict ceiling on every across-row correlation.",
+    "Shown-token features have fixed signed orientation and no held-out feature selection; this part is descriptive.",
+    "No reward-gradient conclusion without locally available within-group GRPO logs."
+  ],
+  "pooled_structure": {
+    "E24@44": {
+      "below_chance_upper_lt_half": [],
+      "ci95": [
+        0.5252110932092134,
+        0.6718612006205991
+      ],
+      "mean": 0.5944623463420456,
+      "n": 19,
+      "weak_but_lower_gt_chance": [
+        "E24@44:list_depth",
+        "E24@44:python_string"
+      ],
+      "weak_rows": 15
+    },
+    "E36": {
+      "below_chance_upper_lt_half": [],
+      "ci95": [
+        0.4892626842403628,
+        0.5898534934807256
+      ],
+      "mean": 0.5366000566893424,
+      "n": 16,
+      "weak_but_lower_gt_chance": [
+        "E36:python_string"
+      ],
+      "weak_rows": 13
+    },
+    "W1": {
+      "below_chance_upper_lt_half": [
+        "W1:json_depth",
+        "W1:json_field",
+        "W1:list_words",
+        "W1:prose_column",
+        "W1:prose_words"
+      ],
+      "ci95": [
+        0.461923185941043,
+        0.5869619236583523
+      ],
+      "mean": 0.5219954648526077,
+      "n": 30,
+      "weak_but_lower_gt_chance": [
+        "W1:list_depth",
+        "W1:python_string"
+      ],
+      "weak_rows": 26
+    },
+    "W12": {
+      "below_chance_upper_lt_half": [
+        "W12:clause_embedding"
+      ],
+      "ci95": [
+        0.48176492819349964,
+        0.8656462585034013
+      ],
+      "mean": 0.6934996220710506,
+      "n": 6,
+      "weak_but_lower_gt_chance": [],
+      "weak_rows": 2
+    },
+    "primary_combined": {
+      "below_chance_upper_lt_half": [
+        "W1:json_depth",
+        "W1:json_field",
+        "W1:list_words",
+        "W1:prose_column",
+        "W1:prose_words"
+      ],
+      "ci95": [
+        0.5080932757718472,
+        0.5877814843886273
+      ],
+      "mean": 0.5467730682016396,
+      "n": 65,
+      "weak_but_lower_gt_chance": [
+        "W1:list_depth",
+        "W1:python_string",
+        "E36:python_string",
+        "E24@44:list_depth",
+        "E24@44:python_string"
+      ],
+      "weak_rows": 54
+    }
+  },
+  "power_all_rows": {
+    "E24@44": {
+      "below_chance_upper_lt_half": [],
+      "ci95": [
+        0.6309498501781667,
+        0.7937170999352121
+      ],
+      "mean": 0.7109855847100744,
+      "n": 28,
+      "weak_but_lower_gt_chance": [
+        "E24@44:list_depth",
+        "E24@44:python_string"
+      ],
+      "weak_rows": 15
+    },
+    "E36": {
+      "below_chance_upper_lt_half": [],
+      "ci95": [
+        0.6034234693877552,
+        0.7772137188208617
+      ],
+      "mean": 0.690204081632653,
+      "n": 25,
+      "weak_but_lower_gt_chance": [
+        "E36:python_string"
+      ],
+      "weak_rows": 13
+    },
+    "W1": {
+      "below_chance_upper_lt_half": [
+        "W1:json_depth",
+        "W1:json_field",
+        "W1:list_words",
+        "W1:prose_column",
+        "W1:prose_words"
+      ],
+      "ci95": [
+        0.5485544217687075,
+        0.6951257794784581
+      ],
+      "mean": 0.6210600907029479,
+      "n": 40,
+      "weak_but_lower_gt_chance": [
+        "W1:list_depth",
+        "W1:python_string"
+      ],
+      "weak_rows": 27
+    },
+    "W12": {
+      "below_chance_upper_lt_half": [
+        "W12:clause_embedding"
+      ],
+      "ci95": [
+        0.48488284202569915,
+        0.8656462585034014
+      ],
+      "mean": 0.6934996220710506,
+      "n": 6,
+      "weak_but_lower_gt_chance": [],
+      "weak_rows": 2
+    }
+  },
+  "primary_scope": {
+    "E24@44": {
+      "rows": 28,
+      "structure": 19
+    },
+    "E36": {
+      "rows": 25,
+      "structure": 16
+    },
+    "W1": {
+      "rows": 40,
+      "structure": 30
+    },
+    "W12": {
+      "rows": 6,
+      "structure": 6
+    }
+  },
+  "reward": {
+    "reference_FVE": 0.015,
+    "search": "recursive filenames matching grpo/GRPO/reward; found reward source/audit code only, no sealed within-group GRPO reward logs",
+    "searched_roots": [
+      "/Users/guivff/Documents/Neel_Exploration",
+      "/Users/guivff/Documents/ChatGPT/Activation_Readers"
+    ],
+    "status": "NOT AVAILABLE"
+  },
+  "rules": {
+    "H3": {
+      "falsification_rule": true,
+      "paren_exceptions": [
+        "W1:prose_paren",
+        "E36:prose_paren"
+      ],
+      "pattern_violations": [],
+      "status": "FALSIFIED",
+      "string_exceptions": [
+        "W1:python_string"
+      ],
+      "support_rule": false
+    },
+    "H5": {
+      "CI_role": "reported; registration does not require exclusion of zero for H5",
+      "falsification_rule": true,
+      "paired_difference_ci95": [
+        -0.5032705453217274,
+        -0.04145628300643962
+      ],
+      "status": "FALSIFIED",
+      "support_rule": false,
+      "word_predictable_unsayable_rows": [
+        "W1:json_depth",
+        "W1:json_field",
+        "W1:latex_brace",
+        "W1:latex_environment",
+        "W1:list_completed",
+        "W1:list_depth",
+        "W1:list_index",
+        "W1:list_task",
+        "W1:list_words",
+        "W1:prose_budget",
+        "W1:prose_paren",
+        "W1:prose_quote",
+        "W1:prose_sentence",
+        "W1:prose_words",
+        "W1:python_argument",
+        "W1:python_indent",
+        "W1:python_line",
+        "W1:python_string",
+        "W1:table_role",
+        "E36:latex_environment",
+        "E36:table_row",
+        "W12:clause_embedding"
+      ]
+    }
+  },
+  "shown_correlations": {
+    "nla:close_minus_open_paren": {
+      "ci95": [
+        -1.0,
+        0.5
+      ],
+      "draws": 10000,
+      "n": 6,
+      "rho": -0.550782483869826,
+      "status": "COMPLETE"
+    },
+    "nla:double_quote_parity": {
+      "ci95": [
+        -0.9999999999999999,
+        1.0
+      ],
+      "draws": 10000,
+      "n": 6,
+      "rho": -0.2,
+      "status": "COMPLETE"
+    },
+    "nla:leading_space_runs": {
+      "ci95": null,
+      "n": 6,
+      "rho": null,
+      "status": "NOT EVALUABLE"
+    },
+    "nla:pipe_count": {
+      "ci95": [
+        -0.9999999999999999,
+        0.9486832980505138
+      ],
+      "draws": 10000,
+      "n": 6,
+      "rho": 0.15430334996209188,
+      "status": "COMPLETE"
+    },
+    "nla:single_quote_parity": {
+      "ci95": [
+        -0.5,
+        1.0
+      ],
+      "draws": 10000,
+      "n": 6,
+      "rho": 0.39466488146729556,
+      "status": "COMPLETE"
+    },
+    "oracle:close_minus_open_paren": {
+      "ci95": [
+        -0.6719653315725661,
+        0.13574671716516068
+      ],
+      "draws": 10000,
+      "n": 19,
+      "rho": -0.3457657199908253,
+      "status": "COMPLETE"
+    },
+    "oracle:double_quote_parity": {
+      "ci95": [
+        -0.4084854409218223,
+        0.4618837198630675
+      ],
+      "draws": 10000,
+      "n": 19,
+      "rho": 0.007912107021172746,
+      "status": "COMPLETE"
+    },
+    "oracle:leading_space_runs": {
+      "ci95": [
+        -0.42190252472302997,
+        0.31713018191500103
+      ],
+      "draws": 10000,
+      "n": 19,
+      "rho": -0.033973538124626466,
+      "status": "COMPLETE"
+    },
+    "oracle:pipe_count": {
+      "ci95": [
+        -0.5960370518380957,
+        0.2862553260137867
+      ],
+      "draws": 10000,
+      "n": 19,
+      "rho": -0.18964010820766206,
+      "status": "COMPLETE"
+    },
+    "oracle:single_quote_parity": {
+      "ci95": [
+        -0.6136951878310858,
+        0.3657806446730772
+      ],
+      "draws": 10000,
+      "n": 19,
+      "rho": -0.15859388488305262,
+      "status": "COMPLETE"
+    }
+  }
+}

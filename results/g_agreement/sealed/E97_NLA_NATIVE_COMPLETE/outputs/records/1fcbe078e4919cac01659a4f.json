@@ -1,0 +1,12 @@
+{
+  "id": "1fcbe078e4919cac01659a4f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Sadness\").\n\nThe example pattern \"Example sentence: ... / Emotion: ... / Example sentence: ... / Reply:\" signals a Q&A format where the model must now provide the answer for \"John Smith.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker, immediately requiring the emotion label answer (e.g., \"Sadness\") or a short direct response on the next line.\n\"Given the following input, output the corresponding emotion label strictly following the pattern.\nInput sentence: John Smith is a male.\nInput: John Smith is a male.\nReply:\" \u2014 the final \"Reply:\" token demands the model's direct answer, completing the structured response format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Sadness\").\n\nThe example pattern \"Example sentence: ... / Emotion: ... / Example sentence: ... / Reply:\" signals a Q&A format where the model must now provide the answer for \"John Smith.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker, immediately requiring the emotion label answer (e.g., \"Sadness\") or a short direct response on the next line.\n\"Given the following input, output the corresponding emotion label strictly following the pattern.\nInput sentence: John Smith is a male.\nInput: John Smith is a male.\nReply:\" \u2014 the final \"Reply:\" token demands the model's direct answer, completing the structured response format.",
+  "truncated": false
+}

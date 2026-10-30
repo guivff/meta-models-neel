@@ -1,0 +1,56 @@
+{
+  "status": "VERIFIED_HARDWARE_MATCH",
+  "authority_commit": "cb76843c",
+  "checked_utc": "2026-10-28T13:40:38.295128+00:00",
+  "allowed_gpu_types": [
+    "H200",
+    "B200"
+  ],
+  "shards": [
+    {
+      "slot": 0,
+      "pod_id": "1h0vl99xno7mwv",
+      "gpu_type": "H200",
+      "device_name": "NVIDIA H200",
+      "verification": "nvidia-smi --query-gpu=name --format=csv,noheader via owned-pod SSH",
+      "verified_utc": "2026-10-28T13:40:38.295128+00:00",
+      "assignment_sha256": "2df230fab233bcab973b58e2760146891e12cdfe753e7f3cf70f68185f259963",
+      "hardware_authority_commit": "cb76843c"
+    },
+    {
+      "slot": 1,
+      "pod_id": "echzzr3udyya3j",
+      "gpu_type": "H200",
+      "device_name": "NVIDIA H200",
+      "verification": "nvidia-smi --query-gpu=name --format=csv,noheader via owned-pod SSH",
+      "verified_utc": "2026-10-28T13:40:38.295128+00:00",
+      "assignment_sha256": "5f74f3a4060ad1273db89e892587ae813632144830444dff228b35079f51c89f",
+      "hardware_authority_commit": "cb76843c"
+    },
+    {
+      "slot": 2,
+      "pod_id": "0mfeueo18wtn9q",
+      "gpu_type": "H200",
+      "device_name": "NVIDIA H200",
+      "verification": "nvidia-smi --query-gpu=name --format=csv,noheader via owned-pod SSH",
+      "verified_utc": "2026-10-28T13:40:38.295128+00:00",
+      "assignment_sha256": "1a434c0dac022536aadd87689757035e35734687f1586bf90f4b42fb9e9f6305",
+      "hardware_authority_commit": "cb76843c"
+    }
+  ],
+  "placebo": {
+    "bank": "E76",
+    "pool": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wsae/cache/g_agreement/understand/e76/verified-pull/final",
+    "pod_id": "yzdq6ffg1ek0ys",
+    "gpu_type": "H200",
+    "source": "canonical integrator pod_billed ledger record",
+    "ledger": "results/g_agreement/compute.jsonl",
+    "ledger_record_sha256": "abca0380bddd518f539155b34e9aa4d54e621bbded682c58806b0c10f1fc3464",
+    "pool_output_seal_sha256": "4a199f6c48a3aed8175000804e1e69f2a270ca9edccf096a6e5a30f09c169c34"
+  },
+  "real_control_same_type_per_row": true,
+  "b200_used": false,
+  "b200_image_smoke": "NOT APPLICABLE to current H200 shards; required for every future new B200 image before production",
+  "new_gpu_hours": 0,
+  "new_allocations": 0
+}

@@ -1,0 +1,12 @@
+{
+  "id": "6cee57c21a1c093aa3e760b6",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured example format with labeled fields (\"Input:\", \"Output:\") establishes a pattern of paired demonstrations for a reasoning task. The model must recognize this as a self-contained training prompt.\n\nThe phrase \"Record complete\" signals a closing statement for a fictional \"memory record\" session, implying the entire block is a compact, self-contained instruction set.\n\n\"Record complete.\" is the final token of a closing phrase (\"Record two examples... Record complete.\"), strongly constraining next tokens toward a period, newline, or a new prompt/question directed at the model about the recorded content.\n\"Memory record session: two examples given.\nExample 1: ...\nExample 2: ...\nRecord complete.\" \u2014 the final phrase \"Record complete.\" serves as a session terminator, suggesting the next token begins a new instruction or response prompt.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured example format with labeled fields (\"Input:\", \"Output:\") establishes a pattern of paired demonstrations for a reasoning task. The model must recognize this as a self-contained training prompt.\n\nThe phrase \"Record complete\" signals a closing statement for a fictional \"memory record\" session, implying the entire block is a compact, self-contained instruction set.\n\n\"Record complete.\" is the final token of a closing phrase (\"Record two examples... Record complete.\"), strongly constraining next tokens toward a period, newline, or a new prompt/question directed at the model about the recorded content.\n\"Memory record session: two examples given.\nExample 1: ...\nExample 2: ...\nRecord complete.\" \u2014 the final phrase \"Record complete.\" serves as a session terminator, suggesting the next token begins a new instruction or response prompt.",
+  "truncated": false
+}

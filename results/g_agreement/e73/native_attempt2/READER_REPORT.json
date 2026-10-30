@@ -1,0 +1,42 @@
+{
+  "accounting": "Charge staging_seconds + elapsed_seconds once; both model loads, retained warmups and model switching are inside elapsed_seconds.",
+  "batch_timings": {
+    "nla": [],
+    "oracle": []
+  },
+  "code_sha256": "6fd9825e80f78c6a48787ad5c547ba01848098c2cb0c6fd68a2f792f6649cd78",
+  "completed": {
+    "nla": 0,
+    "oracle": 0
+  },
+  "elapsed_seconds": 138.18960995203815,
+  "failure_diagnostics": {
+    "exception_type": "ExternalError",
+    "message": "An operation failed; inspect the private operator traceback.",
+    "message_code": "UNCLASSIFIED_OPERATIONAL_FAILURE",
+    "phase": "oracle_initialization",
+    "traceback_location": "operator_private_worker.log_from_stderr"
+  },
+  "initial_staging_seconds": 81.1071286201477,
+  "input_sha256": "ca0a9ebd1dccbfd1be919c883085f062f5718faeb276ca922b0600a83624dd2f",
+  "jforecast_commit": "7b04585e518011c1be6a4aa14c55cb90c97313a6",
+  "jforecast_sha256": "f51d07a100807a76cb975a3351314df578911693d21a7c4e2822e557df383717",
+  "judging": "SEALED_AWAITING_GUIV_AUTHORIZATION",
+  "model_readiness": {},
+  "operational_phase": "oracle_initialization",
+  "reader_index_sha256": "03506c207255c88be0dd81a5e300a17ddfe48753ced9af1ebdca9a7a9a4d0a5c",
+  "retained_cold_batches": {
+    "nla": null,
+    "oracle": null
+  },
+  "run_id": "e73-native-700-20261027-a2",
+  "run_kind": "real",
+  "runtime_commit": "bf9084b7715ced03f0c24d41e09022b7bd68851a",
+  "schema": "e73-reader-report-v1",
+  "staging_readiness_policy": "first_reader_then_continuous_model_switch",
+  "staging_seconds": 81.1071286201477,
+  "status": "INCOMPLETE",
+  "total_per_reader": 700,
+  "track": "C",
+  "warmup_policy": "First batch per reader retained once and fully charged; throughput uses only subsequent batches. No clock reset or duplicate readout."
+}

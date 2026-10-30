@@ -1,0 +1,12 @@
+{
+  "id": "acd723c5068367c5a3f4775b",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example sentence \"The weather is very bad today\" is negative in sentiment, so the model must output \"Negative\" as the answer.\n\n\"Reply:\" is the final token, functioning as a label/field marker in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"Negative\" or the formatted response).\n\"Given the following sentence, provide the sentiment label according to the specified format.\nExample:\nSentence: 'The weather is very bad today.'\nFormat: [Positive/Negative]\nSentence: 'The weather is very bad today.'\nReply:\" \u2014 the final \"Reply:\" token demands the model's direct classification answer follows immediately.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example sentence \"The weather is very bad today\" is negative in sentiment, so the model must output \"Negative\" as the answer.\n\n\"Reply:\" is the final token, functioning as a label/field marker in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"Negative\" or the formatted response).\n\"Given the following sentence, provide the sentiment label according to the specified format.\nExample:\nSentence: 'The weather is very bad today.'\nFormat: [Positive/Negative]\nSentence: 'The weather is very bad today.'\nReply:\" \u2014 the final \"Reply:\" token demands the model's direct classification answer follows immediately.",
+  "truncated": false
+}

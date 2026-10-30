@@ -1,0 +1,2 @@
+- 2026-10-09T08:13:32.513173+00:00  `PYTHONPATH=. .venv/bin/python projects/g_agreement/z1_intervention/analyze.py --n-boot 1000 --n-perm 200 --folds 8 --seed 0 --out results/g_agreement/z1`  CPU only, 0 forward passes, wall 27.5 s; verdict: readers separate on intervention prediction
+- 2026-10-09T08:22:38.490488+00:00  `PYTHONPATH=. .venv/bin/python projects/g_agreement/z1_intervention/analyze.py --n-boot 1000 --n-perm 200 --folds 8 --seed 0 --out results/g_agreement/z1`  CPU only, 0 forward passes, wall 26.8 s; verdict: readers separate on intervention prediction

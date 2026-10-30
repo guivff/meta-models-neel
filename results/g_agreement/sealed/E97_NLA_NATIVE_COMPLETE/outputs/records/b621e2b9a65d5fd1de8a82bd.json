@@ -1,0 +1,12 @@
+{
+  "id": "b621e2b9a65d5fd1de8a82bd",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with explicit instruction to output only the sentiment label (\"positive\" or \"negative\"), establishing a strict response template. The model must follow the pattern shown in the example.\n\nThe example structure mirrors a few-shot prompt format: a definition, an example sentence, and a labeled question \u2014 now requiring the direct answer.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured format, immediately requiring the model's answer (e.g., \"positive\" or \"negative\") to follow.\n\"Given the sentence: 'The weather is very good today.'\nQuestion: What is the sentiment label for the given sentence?\nReply:\" \u2014 this closing line signals the answer field, so the next token should be the direct sentiment label response.\n\"Reply:\" ends the prompt, expecting the model's final output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with explicit instruction to output only the sentiment label (\"positive\" or \"negative\"), establishing a strict response template. The model must follow the pattern shown in the example.\n\nThe example structure mirrors a few-shot prompt format: a definition, an example sentence, and a labeled question \u2014 now requiring the direct answer.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured format, immediately requiring the model's answer (e.g., \"positive\" or \"negative\") to follow.\n\"Given the sentence: 'The weather is very good today.'\nQuestion: What is the sentiment label for the given sentence?\nReply:\" \u2014 this closing line signals the answer field, so the next token should be the direct sentiment label response.\n\"Reply:\" ends the prompt, expecting the model's final output.",
+  "truncated": false
+}

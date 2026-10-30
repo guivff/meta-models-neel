@@ -1,0 +1,12 @@
+{
+  "id": "c60235ad482521a0fa2a38ec",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format pattern: \"Question:\" and \"Answer:\" structure signals a response must follow, mirroring the instructional template above.\n\nThe \"Instruction\" establishes a rule about explaining \"how to write an article,\" but the \"Question\" asks about \"how to use a specific tool,\" creating a deliberate mismatch the model must navigate \u2014 the answer should reflect the question's topic, not the instruction's.\n\n\"Example: [instruction about X]\nQuestion: How to explain the importance of [Y]?\nAnswer:\" \u2014 this final token \"Answer:\" is a prompt label requiring the model's generated response text immediately next, likely a short explanatory sentence demonstrating the pattern.\n\n\"Answer:\" is the final field in a few-shot template, expecting a direct, concise response that models the instruction's style.\n\"Instruction\" and \"Question\" are given; \"Answer:\" demands the model's output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format pattern: \"Question:\" and \"Answer:\" structure signals a response must follow, mirroring the instructional template above.\n\nThe \"Instruction\" establishes a rule about explaining \"how to write an article,\" but the \"Question\" asks about \"how to use a specific tool,\" creating a deliberate mismatch the model must navigate \u2014 the answer should reflect the question's topic, not the instruction's.\n\n\"Example: [instruction about X]\nQuestion: How to explain the importance of [Y]?\nAnswer:\" \u2014 this final token \"Answer:\" is a prompt label requiring the model's generated response text immediately next, likely a short explanatory sentence demonstrating the pattern.\n\n\"Answer:\" is the final field in a few-shot template, expecting a direct, concise response that models the instruction's style.\n\"Instruction\" and \"Question\" are given; \"Answer:\" demands the model's output.",
+  "truncated": false
+}

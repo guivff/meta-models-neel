@@ -1,0 +1,12 @@
+{
+  "id": "2d5fff280793542a9941e38d",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: model must output only the emotion label \"Anger\" for the given sentence.\n\nThe structured example pattern (\"Example sentence: ... Emotion: Anger\") sets up a direct Q&A format where the model must now provide the answer to the specific test case.\n\n\"Reply:\" is the final token, functioning as a response prompt label in the structured format, immediately requiring the model's answer (the emotion label \"Anger\") to follow.\n\"Please follow the format strictly and provide only the emotion label.\nExample sentence: 'The weather is nice today.'\nInput: 'The weather is nice today.'\nReply:\" \u2014 this closing \"Reply:\" is a prompt field label demanding the model's direct output answer on the next line.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: model must output only the emotion label \"Anger\" for the given sentence.\n\nThe structured example pattern (\"Example sentence: ... Emotion: Anger\") sets up a direct Q&A format where the model must now provide the answer to the specific test case.\n\n\"Reply:\" is the final token, functioning as a response prompt label in the structured format, immediately requiring the model's answer (the emotion label \"Anger\") to follow.\n\"Please follow the format strictly and provide only the emotion label.\nExample sentence: 'The weather is nice today.'\nInput: 'The weather is nice today.'\nReply:\" \u2014 this closing \"Reply:\" is a prompt field label demanding the model's direct output answer on the next line.\n\"Reply:\"",
+  "truncated": false
+}

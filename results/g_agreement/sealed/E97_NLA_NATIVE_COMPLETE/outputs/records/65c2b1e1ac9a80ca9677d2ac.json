@@ -1,0 +1,12 @@
+{
+  "id": "65c2b1e1ac9a80ca9677d2ac",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is demonstrating a data extraction/cleaning task, expecting a corrected XML-like entry format.\n\nThe phrase \"Here is the correct format\" signals a template or example is being provided, with a specific structured record expected next.\n\nFinal token `<entry` opens an XML-style tag, directly mirroring the preceding `<entry` example, requiring completion with attributes or content (e.g., `>`, `id=`, or a field name) for a medical/clinical case record.\n\"Among the following entries, extract the correct one\" establishes a list context, and \"wrong format: <entry\\n<entry\" sets up a contrast showing the corrected version.\nThe final `<entry` is the opening of a new structured record, likely followed by `>` and specific fields like title, date, or description in a Wikipedia-style corpus format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is demonstrating a data extraction/cleaning task, expecting a corrected XML-like entry format.\n\nThe phrase \"Here is the correct format\" signals a template or example is being provided, with a specific structured record expected next.\n\nFinal token `<entry` opens an XML-style tag, directly mirroring the preceding `<entry` example, requiring completion with attributes or content (e.g., `>`, `id=`, or a field name) for a medical/clinical case record.\n\"Among the following entries, extract the correct one\" establishes a list context, and \"wrong format: <entry\\n<entry\" sets up a contrast showing the corrected version.\nThe final `<entry` is the opening of a new structured record, likely followed by `>` and specific fields like title, date, or description in a Wikipedia-style corpus format.",
+  "truncated": false
+}

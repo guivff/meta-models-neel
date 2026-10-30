@@ -1,0 +1,21 @@
+{
+  "schema": "i2-running-mean-rule-request-v1",
+  "checked_at": "2026-10-28T02:38:43.157498+00:00",
+  "authority_commit": "a6d0e06ee85e700ae12c425acc62a7471cb52f97",
+  "direct_user_extension_to_E74": true,
+  "E74": {
+    "baseline": "275d102342788330fe8190edc6a4865d7cf53dcc",
+    "finding": "resident.py capture and readout rates retain max(prior, all measured batch rates)",
+    "worker_message_sent": true,
+    "worker_thread": "01a17dc0-8051-7bf0-96e8-4bec0c81917c",
+    "required": "running mean real batches, warm-ups excluded, padding1.25 once; original hard deadlines and once-only no retry preserved",
+    "launch_hold": "Until actual worker change, tests, archive and source hashes are reviewed and bound into I-2 route"
+  },
+  "E73": {
+    "baseline": "969256fe7b24b0633092b9916d6f47284571a81e",
+    "finding": "native.py warmed_native_admission uses median per-item time of last three warmed batches, excluding retained first cold batch",
+    "slowest_batch_condition": false,
+    "active_worker_changed": false
+  },
+  "gpu_launches": 0
+}

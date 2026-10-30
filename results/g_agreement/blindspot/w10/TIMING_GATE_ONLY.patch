@@ -1,0 +1,106 @@
+diff --git a/projects/g_agreement/blindspot/w10_run.py b/projects/g_agreement/blindspot/w10_run.py
+index 310673f1..b7a84cf0 100644
+--- a/projects/g_agreement/blindspot/w10_run.py
++++ b/projects/g_agreement/blindspot/w10_run.py
+@@ -1,7 +1,7 @@
+ """Integrator-only §86 worker. No labels, no autonomous pod operations or retries.
+ 
+ Requires an H200-class GPU: target/Oracle, J projection, and NLA stay resident
+-after setup. A timed, unretained all-row smoke estimates the complete unchanged
++after setup. A warmed, median-of-three unretained all-row smoke estimates the unchanged
+ bank. If it does not fit, stop; never choose fewer rows or items from timing.
+ """
+ from __future__ import annotations
+@@ -172,6 +172,34 @@ def timed(fn):
+     return value, time.monotonic()-start
+ 
+ 
++def warmup(ol, jl, nla, checkpoint):
++    """One unscored setup unit through every measured kernel path."""
++    warm = list(ol.tok('A neutral setup record is complete.', add_special_tokens=False)['input_ids'])
++    item = {'id': 'unscored-setup', 'ids': warm, 'prompt_ids': warm}
++    with ol.base():
++        h, _ = capture_with_surprisal(ol.model, ol.tok, [item]*8, checkpoint, batch=8)
++    spec = {'olens': [('- A record.', '- A note.'), ('- A page.', '- A sheet.')],
++            'nla': [('A record.', 'A note.'), ('A page.', 'A sheet.')],
++            'jlens': [('record', 'note'), ('page', 'sheet')]}
++    for name, obj, layer in (('olens', ol, 44), ('jlens', jl, 44), ('nla', nla, 42)):
++        checkpoint()
++        reader_values(name, obj, h[layer].repeat(2, 1), spec)
++    with ol.base():
++        generate_one(ol.model, ol.tok, item, checkpoint)
++    synchronize()
++    checkpoint()
++
++
++def timed_median(fn, normalize=lambda value, seconds: seconds):
++    """Median of three post-warm-up real units; retain all gate timings."""
++    samples = []
++    for _ in range(3):
++        value, seconds = timed(fn)
++        samples.append((value, normalize(value, seconds)))
++    value, seconds = sorted(samples, key=lambda sample: sample[1])[1]
++    return value, seconds, [sample[1] for sample in samples]
++
++
+ def smoke(items, specs, checks, ol, jl, nla, checkpoint):
+     """Worst-length representative per row; outputs discarded, timing only.
+ 
+@@ -189,25 +217,30 @@ def smoke(items, specs, checks, ol, jl, nla, checkpoint):
+         sorted(indices, key=lambda i: (len(items[i]['ids']), items[i]['id']), reverse=True)[:per_row]]
+     selected = [items[i] for i in representatives]
+     with ol.base():
+-        (h, _), capture_s = timed(lambda: capture_with_surprisal(ol.model, ol.tok, selected, checkpoint, batch=8))
++        (h, _), capture_s, capture_units = timed_median(lambda: capture_with_surprisal(ol.model, ol.tok, selected, checkpoint, batch=8))
+     capture_work = sum(max(len(x['ids']) for x in items[s:s+8])*len(items[s:s+8]) for s in range(0, len(items), 8))
+     smoke_work = sum(max(len(x['ids']) for x in selected[s:s+8])*len(selected[s:s+8]) for s in range(0, len(selected), 8))
+     forecast = capture_s*capture_work/smoke_work
+-    timings = {'capture_s': capture_s, 'capture_projected_s': forecast, 'reader_rows': []}
++    timings = {'capture_s': capture_s, 'capture_units_s': capture_units, 'capture_projected_s': forecast, 'reader_rows': []}
+     for k, (feature, indices) in enumerate(groups.items()):
+         for name, obj, layer in (('olens', ol, 44), ('jlens', jl, 44), ('nla', nla, 42)):
+             checkpoint()
+-            _, elapsed = timed(lambda: reader_values(name, obj, h[layer][k*per_row:(k+1)*per_row], specs[feature]))
++            _, elapsed, units = timed_median(lambda: reader_values(name, obj, h[layer][k*per_row:(k+1)*per_row], specs[feature]))
+             forecast += elapsed*len(indices)/per_row  # donor scores are deterministic reindexing
+-            timings['reader_rows'].append({'feature': feature, 'reader': name, 'sixteen_vectors_s': elapsed})
+-    generation_times = []
++            timings['reader_rows'].append({'feature': feature, 'reader': name, 'sixteen_vectors_s': elapsed, 'units_s': units})
++    generation_times, generation_units = [], []
+     with ol.base():
+         for feature in sorted({x['feature'] for x in checks}):
+             chosen = max((x for x in checks if x['feature'] == feature), key=lambda x: len(x['prompt_ids']))
+-            generated, elapsed = timed(lambda: generate_one(ol.model, ol.tok, chosen, checkpoint))
+-            generation_times.append(elapsed*48/max(1, generated['generated_tokens']))
++            _, elapsed, units = timed_median(
++                lambda: generate_one(ol.model, ol.tok, chosen, checkpoint),
++                normalize=lambda generated, seconds: seconds*48/max(1, generated['generated_tokens']))
++            generation_times.append(elapsed)
++            generation_units.append({'feature': feature, 'projected_48_token_units_s': units})
+     forecast += max(generation_times)*len(checks)
+-    timings.update(mode_generation_smoke_s=generation_times, remaining_work_forecast_s=forecast,
++    timings.update(mode_generation_smoke_s=generation_times, mode_generation_units=generation_units,
++                   timing_policy="one unscored setup warm-up per code path; median of next three real units",
++                   remaining_work_forecast_s=forecast,
+                    unretained_smoke=True, donor_scoring='deterministic reindex of own-activation scores, identical scorer and batch')
+     return forecast, timings
+ 
+@@ -228,16 +261,8 @@ def main():
+         jl = load_jlens(ol.model, ol.tok, layers=[44], path=assets['jlens'])
+         nla = load_nla(root=assets['nla'], load_ar=False, enable_thinking=False)
+         P.science_deadline(assignment)  # fail if setup elapsed; no first marker yet
+-        # Fixed synthetic warm-up, no frozen examples or outcome inspection.
+-        import torch
+-        with ol.base():
+-            from mats.capture import capture
+-            warm = list(ol.tok('A neutral setup record is complete.', add_special_tokens=False)['input_ids'])
+-            wh = capture(ol.model, [warm], [42, 44], [[-1]], batch_size=1)
+-        for name, obj, layer in (('olens', ol, 44), ('jlens', jl, 44), ('nla', nla, 42)):
+-            reader_values(name, obj, wh[layer][:, 0], {'olens': [('- A record.', '- A note.'), ('- A page.', '- A sheet.')],
+-                'nla': [('A record.', 'A note.'), ('A page.', 'A sheet.')], 'jlens': [('record', 'note'), ('page', 'sheet')]})
+-        synchronize()
++        # All measured paths warm before any timed science unit; outputs discarded.
++        warmup(ol, jl, nla, lambda: P.science_deadline(assignment))
+         P.science_checkpoint(assignment)
+         clock = json.loads(Path(assignment['_science_clock_path']).read_text())
+         first = clock['first_science_epoch']

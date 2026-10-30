@@ -1,0 +1,77 @@
+{
+  "section": 101,
+  "experiment": "E13b",
+  "seed": 20261024,
+  "scope": "Guiv narrowed to matched W1 prose_paren/table_column; §84 entirely excluded pending E13(a)",
+  "states": 150,
+  "readouts": 300,
+  "reader_counts": {
+    "oracle": 150,
+    "nla": 150
+  },
+  "strata": [
+    {
+      "feature": "prose_paren",
+      "value": "inside",
+      "n_states": 38
+    },
+    {
+      "feature": "prose_paren",
+      "value": "outside",
+      "n_states": 37
+    },
+    {
+      "feature": "table_column",
+      "value": "first",
+      "n_states": 37
+    },
+    {
+      "feature": "table_column",
+      "value": "later",
+      "n_states": 38
+    }
+  ],
+  "sampling": "Distinct test states only,75/row,37/38/value with opposite extra-cell allocation across rows. One common source sample0/1 per state chosen by seeded hash. Item selection by seeded hash within row/value. Both readers use same item and sample. Stratification uses sealed ground truth solely for selection; metric label join after coding seal.",
+  "sources": [
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/INPUT_SEAL.json",
+      "sha256": "f79302298eb1a8e9d0c46a996adc4c3071ba952fd77e0ea5215a00f1bad64a2c",
+      "bytes": 862
+    },
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/labels.DO_NOT_STAGE.jsonl",
+      "sha256": "cbbde6fa9ec27367abd35af296a3115bb2c17ac290a2ef110f914148dad5a173",
+      "bytes": 1295220
+    },
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-bank-v2/items.input.jsonl",
+      "sha256": "a8a43021c7958ec8b1a7682c1a2f46a5238dac9008c383f2205237cf06ad4d02",
+      "bytes": 5055950
+    },
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-units/priority/target/FREE_SEAL.json",
+      "sha256": "1f8881f513d6d94658c32871b47dc2cfd6aeeeff7603684346910f4d6a47426c",
+      "bytes": 272
+    },
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-units/priority/target/unasked.target.jsonl",
+      "sha256": "165e0757606c79531df41bb417afd2c77428f7f050752e745a3d860b51282adb",
+      "bytes": 3843340
+    },
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-units/priority/nla/FREE_SEAL.json",
+      "sha256": "52ff423748e5a4f0b54f796c90883e9d0e8816b82eb318ba8f7f2605ee5d9ec8",
+      "bytes": 266
+    },
+    {
+      "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/blindspot/w1-readonly-20261024/w1-units/priority/nla/unasked.nla.jsonl",
+      "sha256": "b21bf62c91efae729255ef933012bf9fde5e510b67c121cac2efeeb2ea62bfad",
+      "bytes": 1600549
+    }
+  ],
+  "files": {
+    "sample.private.DO_NOT_SEND.jsonl": "9c118a15e772ea5e2f4ff6524278f021adbc14fd109f62bb125a335d1419b5e9",
+    "pool.private.jsonl": "0b7b9ede6e36fdea7a98e5d5813b1696772cf1350e737b82988b737a7e874c30"
+  },
+  "excluded": "All §84 (including sealed NLA); all unsealed partial files; other14 W1 structure rows without paired sealed free readouts. No missing generation counted as nonmention."
+}

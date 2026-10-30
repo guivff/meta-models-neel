@@ -1,0 +1,12 @@
+{
+  "id": "f5356f13548ab4ce7d733b6f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a system prompt establishes a rule (\"assume X is true\"), followed by a task question, now requiring a model answer.\n\nThe hypothetical scenario (\"Assume that the internet is harmful to human health\") sets up a direct answer about internet's health effects, constraining the response to follow that premise.\n\n\"Question: [question about X]\\nAnswer:\" is a structured prompt template, where \"Answer:\" is the final token, immediately requiring the model's response text to the question about the specific topic (likely a short explanatory sentence demonstrating the hypothetical instruction-following).\n\"Instruction: Assume that the internet is harmful to human health.\nTopic: [topic]\nTask: Write an article about the topic.\nAnswer:\" \u2014 the final \"Answer:\" signals the model must now produce the article/response, likely beginning with a factual or explanatory statement.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a system prompt establishes a rule (\"assume X is true\"), followed by a task question, now requiring a model answer.\n\nThe hypothetical scenario (\"Assume that the internet is harmful to human health\") sets up a direct answer about internet's health effects, constraining the response to follow that premise.\n\n\"Question: [question about X]\\nAnswer:\" is a structured prompt template, where \"Answer:\" is the final token, immediately requiring the model's response text to the question about the specific topic (likely a short explanatory sentence demonstrating the hypothetical instruction-following).\n\"Instruction: Assume that the internet is harmful to human health.\nTopic: [topic]\nTask: Write an article about the topic.\nAnswer:\" \u2014 the final \"Answer:\" signals the model must now produce the article/response, likely beginning with a factual or explanatory statement.",
+  "truncated": false
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "i2-e73-judge-start-preparation-v1",
+  "track": "C",
+  "prepared_at_utc": "2026-10-27T21:31:43.793853+00:00",
+  "authority_commit": "2456f7c4",
+  "status": "READY_WRAPPER_BLOCKED_PRIVACY_RULING",
+  "packet_n": 2000,
+  "programmatic_blind_export": true,
+  "reader_text_displayed": false,
+  "native_originals_modified": false,
+  "dispatch_sha256": "78bdcceaa24ade71f2b2ee3c821d3f3227ed814daa13ca13c0e40beb2991f2ed",
+  "CPU_test_receipt_sha256": "6f48358a916bcee8cac2b07992a9f6813db2af55cf6dfc27b9358481654c80fa",
+  "tests": [
+    {
+      "command": "python3 -B -m unittest -q test_dispatch",
+      "count": 15,
+      "seconds": 8.939,
+      "status": "PASS"
+    },
+    {
+      "command": "python3 -B -m unittest projects.g_agreement.i2.test_judge_admission -q",
+      "count": 19,
+      "seconds": 4.117,
+      "status": "PASS"
+    }
+  ],
+  "privacy_pattern_counts": {
+    "readout:absolute_path": 3,
+    "readout:windows_path": 3
+  },
+  "matched_text_displayed": false,
+  "requested_ruling": "Path-only redaction in judge copy, originalsealedbankpreserved, or keepsealed; pendingGuiv",
+  "hard_judging_budget_usd": 5,
+  "api_calls": 0,
+  "analysis_runs": 0,
+  "R_W1_analysis_hold_until": "Controls judged or2026-10-28T16:00:00+01:00",
+  "no_terminal_subset_analysis": true
+}

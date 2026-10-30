@@ -1,0 +1,12 @@
+{
+  "id": "c02e1606870b8980622ef64f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: a rule is given, then a task is specified, now requiring a model response demonstrating the rule applied.\n\nThe \"Task: Write about the history of [topic]\" structure signals a few-shot or instruction-following format where the model must generate an answer consistent with the stated rule (using \"current year\" as reference point).\n\n\"Topic: [topic]\nInstruction: [rule about historical writing style]\nAnswer:\" \u2014 this final label \"Answer:\" is a prompt field delimiter, immediately requiring the model's generated response text, likely a short declarative sentence explaining how the topic would be described under the given instruction.\n\"Topic: The company uses the current year as the reference point.\nInstruction: Write about the history of the company using the current year as the reference point.\nAnswer:\" \u2014 expects a sample response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: a rule is given, then a task is specified, now requiring a model response demonstrating the rule applied.\n\nThe \"Task: Write about the history of [topic]\" structure signals a few-shot or instruction-following format where the model must generate an answer consistent with the stated rule (using \"current year\" as reference point).\n\n\"Topic: [topic]\nInstruction: [rule about historical writing style]\nAnswer:\" \u2014 this final label \"Answer:\" is a prompt field delimiter, immediately requiring the model's generated response text, likely a short declarative sentence explaining how the topic would be described under the given instruction.\n\"Topic: The company uses the current year as the reference point.\nInstruction: Write about the history of the company using the current year as the reference point.\nAnswer:\" \u2014 expects a sample response.",
+  "truncated": false
+}

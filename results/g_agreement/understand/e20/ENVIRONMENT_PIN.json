@@ -1,0 +1,13 @@
+{
+  "experiment": "E20",
+  "section": 112,
+  "authority": "User instruction, 2026-10-25: pin worker to /weights/venv-kernels",
+  "worker_environment": "/weights/venv-kernels",
+  "worker_python": "/weights/venv-kernels/bin/python",
+  "fallback_allowed": false,
+  "requirement": "The eventual worker command and launch request must explicitly use this interpreter; validate the path in a CPU test before launch. Measure E20 forecast on this environment; do not assume E19 speedup.",
+  "status": "ITEM_BANK_FROZEN_PARSER_VALIDATION_PENDING",
+  "design_status": "Clarifications a84ff80c and e4e627bf read in full; five questions resolved.",
+  "science_cap_formula": "min(1.5F + 360, 7200) seconds",
+  "setup_seconds": 2400
+}

@@ -1,0 +1,12 @@
+{
+  "id": "08155e71426df8f935c20e1d",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict classification task: label sentences as \"sarcastic\" or \"not sarcastic\" based on the given definition.\n\nThe example sentence \"I am a student\" is clearly not sarcastic, so the model must produce the correct label \"not sarcastic\" as the answer.\n\n\"Example sentence: 'I am a student in the United States.'\nReply:\" is the final prompt field, requiring the direct classification label as the immediate next token \u2014 a short, direct answer like \"not sarcastic\" or \"Sarcastic.\"\n\"Given the following format: [instruction]... [example]... [sentence]\nExample sentence: 'I am a student in the United States.'\nReply:\" \u2014 the \"Reply:\" label signals the model's response must follow immediately, completing the structured Q&A format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict classification task: label sentences as \"sarcastic\" or \"not sarcastic\" based on the given definition.\n\nThe example sentence \"I am a student\" is clearly not sarcastic, so the model must produce the correct label \"not sarcastic\" as the answer.\n\n\"Example sentence: 'I am a student in the United States.'\nReply:\" is the final prompt field, requiring the direct classification label as the immediate next token \u2014 a short, direct answer like \"not sarcastic\" or \"Sarcastic.\"\n\"Given the following format: [instruction]... [example]... [sentence]\nExample sentence: 'I am a student in the United States.'\nReply:\" \u2014 the \"Reply:\" label signals the model's response must follow immediately, completing the structured Q&A format.",
+  "truncated": false
+}

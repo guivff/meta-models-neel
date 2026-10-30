@@ -1,0 +1,12 @@
+{
+  "id": "a896b31bc5a750c3246a6de9",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task: \"happy\" or \"sad\" only, with examples provided.\n\nThe pattern \"Example sentence: [sentence] / Reply:\" signals a structured Q&A format where the model must now output the classification answer for the given sentence \"The weather is very bad today.\"\n\n\"Reply:\" is the final token, functioning as a label/prompt delimiter in the structured format, immediately requiring the classification answer (e.g., \"sad\" or \"happy\") or a short explanatory response.\n\"Given the following example sentence, provide the classification label according to the instructions above.\nExample sentence: The weather is very bad today.\nReply:\" \u2014 the final \"Reply:\" token demands the direct answer follows immediately, likely on the same line or next line, completing the response format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task: \"happy\" or \"sad\" only, with examples provided.\n\nThe pattern \"Example sentence: [sentence] / Reply:\" signals a structured Q&A format where the model must now output the classification answer for the given sentence \"The weather is very bad today.\"\n\n\"Reply:\" is the final token, functioning as a label/prompt delimiter in the structured format, immediately requiring the classification answer (e.g., \"sad\" or \"happy\") or a short explanatory response.\n\"Given the following example sentence, provide the classification label according to the instructions above.\nExample sentence: The weather is very bad today.\nReply:\" \u2014 the final \"Reply:\" token demands the direct answer follows immediately, likely on the same line or next line, completing the response format.",
+  "truncated": false
+}

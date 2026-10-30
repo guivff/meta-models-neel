@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-24T19:19:52.216183+02:00",
+  "registration": "cf19c2e8",
+  "status": "DESCRIPTIVE_REGISTERED_AFTER_RATER1_TABLES_WERE_SEEN",
+  "bootstrap_replicates": 2000,
+  "seed": 20261024,
+  "bootstrap": "Resample sorted item IDs with replacement within each sample/tier/reader, retain every observed output of each drawn item (all4generations inQ1, selected doses together inQ2b). Same default_rng(seed) item-index draws for every rate within a group; restart seed per group. Ratio of pooled numerator/denominator counts. Equal-tailed percentile95%. Undefined denominator draws omitted from quantiles and counted; zero defined draws→unavailable.",
+  "rate_scope": "All rate leaves of the original tier-reader summaries, including mode, mention kinds, conditional accuracies, enactment, Q1hallucination/extra and applicableQ2extras. Original Wilson intervals/points retained.",
+  "mention_kind_accuracy": "quotes_token/states_property separately; correct/allkind mentions includes unclear as unresolved; correct/resolved usesA/B only. Both Wilson and cluster95%.",
+  "asked_free_rule": "Q1only, original sealed gallery ALL60_RANKING percentiles. Asked high=pct>=0.5. Oracle free success=3or4of4enacts with correct codedA/B; NLA=3or4of4mentions with correct codedA/B. Nonmention/nonenact/unclear count as not correct; 2of4 is not a majority (tie reported separately). All20items/tier/reader; list IDs for both discordance directions. High percentile is not itself an asked-answer correctness claim.",
+  "codes_unchanged": true,
+  "no_new_coding_calls": true,
+  "rater2_policy": "Require code/input hash seal before per-fieldkappa; do not use unsealed JSONLs. Do not wait.",
+  "q2d_policy": "No finished sample/codes currently in sharedcache; NOTDONECURRENTLY. DeadlineSunday2026-10-25T23:59:00+01:00(CET), no automatic wakeup/codingcall/API/GPU. Report any delivered completed artifact separately.",
+  "code_sha256": "502c261a458c462d34fb348fc289bee29b1e41988a82587e1caa3ca471460ca7",
+  "original_analysis_seal_sha256": "0e46d802c3db1893f2b4a7a96ed96f94e4d81623b53e54b4d2560fa4e4bdfa07",
+  "ranking_sha256": "34dbd3378e6a9a1540db4d96e221250994814bcedb45d5e0fe16f230479daa34"
+}

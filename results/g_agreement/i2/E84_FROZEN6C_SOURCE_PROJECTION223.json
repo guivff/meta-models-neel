@@ -1,0 +1,41 @@
+{
+  "experiment": "E84",
+  "run_id": "mats-i2-e84-frozen6c-20261029-a1",
+  "frozen_bank_commit": "6c5dc40c4c9d9d6c23d01b685c84b1b92f89bbf4",
+  "clarification1": "3f2647773",
+  "candidate_all_in_upper_usd": 7.29,
+  "cap_seconds": 3600,
+  "inputs": 300,
+  "test": 200,
+  "dev": 100,
+  "max_prefix_tokens": 71574,
+  "full_prefix_no_crop": true,
+  "public_original_archive_sha256": "09a67db7130db2ba4039309900ce1fbd8e718374f978de4c4d42b778a1ed3432",
+  "source_archive_sha256": "66e856ad4a698ea67fae339da7c166dc055e86d8e732882a8f3551063805f1f2",
+  "source_seal_sha256": "bbde3ac0d253c6e2026f632389edc88369cee8f2d775269681deb517a87096a2",
+  "controller_sha256": {
+    "allocate_once.py": "dcef21ec9430c61fbed62e78598546cd50250c352130e70d2814f4d59afeb52f",
+    "arm_durable_once.py": "69edbc5356f38da2bf460711d360eb472ad9e6c04d3bc27bf37422c90bbe72a9",
+    "absolute_stop.py": "e218c95dc52850ddd8e514bf33d94a46feec41bb35b616208c483ce85c90fb5e",
+    "stage_and_start.py": "b3111a38ebeaf2fdcea43c2c28b4e7ea45ed31a684900495e7c4230512ff7be5",
+    "refresh_budget.py": "2e31a5ef3a1708201bfd44982d620762ca32ef2481b172bbf2d68b2475bc10c3",
+    "deploy_lock.sh": "02047b96ec1c73ab3af21f14fee914ca18301539fa3b5ee55276f25dee5be770"
+  },
+  "synthetic_tests_pass": 9,
+  "fresh_extract_import_pass": true,
+  "adapter_receipt_sha256": "c1f5237947eae4480a6d3d6d9dc6ad92ea0aca05ce53a714bacde09c7bbbefa3",
+  "adapter_files": {
+    "projects/g_agreement/e84_analysis/DEPENDENCIES.json": "3dc1d014444c352c6e5745d1dbcf63f98d724b88229868c690cb530a1cf6c8a2",
+    "projects/g_agreement/e84_analysis/adapter.py": "035eec5468e530f41594915a856c338a400df025d780193b79a44bff6b4072e3",
+    "projects/g_agreement/e84_analysis/__init__.py": "6a311cae4364429d9a3e2a02172e2961115e6fdc973653eba2188ca63785f98c",
+    "projects/g_agreement/e84_analysis/test_adapter.py": "96a883a197d2de106f0eee9562b461983c4ccc517fa3c0a3ec2cb89a0911e3bd",
+    "projects/g_agreement/e84_analysis/README.md": "76440d1d522b977e9a76b19c18e2069ea45539c656837795a3d2d7e895a9fad6"
+  },
+  "independent_adapter_tests_pass": 13,
+  "probe_gate": "independent dev-fit L44/L42 test AUROC>=.90",
+  "bow_gate": "last512 test AUROC>.65 descriptive only; never drops",
+  "generic_baseline": "retained even both probes fail",
+  "gpu_allocation": false,
+  "judging_owner": "W-internals-C",
+  "judging_bank_usd": 3
+}

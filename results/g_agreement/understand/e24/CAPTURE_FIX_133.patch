@@ -1,0 +1,75 @@
+diff --git a/projects/g_agreement/blindspot/run.py b/projects/g_agreement/blindspot/run.py
+index 292d2334..387611ac 100644
+--- a/projects/g_agreement/blindspot/run.py
++++ b/projects/g_agreement/blindspot/run.py
+@@ -228,12 +228,12 @@ class LogitLens:
+         return scores[:,:len(ia)].max(1).values-scores[:,len(ia):].max(1).values
+ 
+ 
+-def capture_and_score(items,donors,templates,ol,jl,batch=8,logit=None,checkpoint=None,on_capture=None,on_scores=None):
++def capture_and_score(items,donors,templates,ol,jl,batch=8,logit=None,checkpoint=None,on_capture=None,on_scores=None,capture_layers=None):
+     """CPU-mockable native scoring; the base adapter is off during capture only."""
+     from mats.capture import capture
+     check=checkpoint or (lambda:None);check()
+     with ol.base():
+-        acts=capture(ol.model,[it["ids"] for it in items],[42,44],[[-1]]*len(items),batch_size=batch,pad_id=ol.tok.pad_token_id or 0)
++        acts=capture(ol.model,[it["ids"] for it in items],[42,44] if capture_layers is None else capture_layers,[[-1]]*len(items),batch_size=batch,pad_id=ol.tok.pad_token_id or 0)
+     by_layer={L:h[:,0] for L,h in acts.items()};scores=[]
+     if on_capture is not None:on_capture(by_layer)
+     def record(rows):
+diff --git a/projects/g_agreement/understand/e24_worker.py b/projects/g_agreement/understand/e24_worker.py
+index 8d9dc10c..a9a958d4 100644
+--- a/projects/g_agreement/understand/e24_worker.py
++++ b/projects/g_agreement/understand/e24_worker.py
+@@ -113,10 +113,8 @@ class Engine:
+         if not set(PRIORITY)<=set(self.ar.layers): raise ValueError('missing trained AR layer tag')
+ 
+     def capture(self, items, layers):
+-        from mats.capture import capture
+-        with self.ol.base():
+-            return {l:v[:,0] for l,v in capture(self.ol.model,[x['ids'] for x in items],layers,
+-                [[-1] for _ in items],batch_size=8,pad_id=self.ol.tok.pad_token_id or 0).items()}
++        from .w1_capture import capture_at_layers
++        return capture_at_layers(self.ol,items,layers)
+ 
+     def asked(self,h,layer,pairs,prefix=''):
+         import torch
+diff --git a/projects/g_agreement/understand/e32.py b/projects/g_agreement/understand/e32.py
+index 46f53e3f..0e6c4c54 100644
+--- a/projects/g_agreement/understand/e32.py
++++ b/projects/g_agreement/understand/e32.py
+@@ -86,8 +86,12 @@ class Engine:
+         self.pad=self.tok.pad_token_id if self.tok.pad_token_id is not None else self.tok.eos_token_id
+ 
+     def capture(self,items):
+-        from mats.capture import capture,decoder_blocks
+-        return {l:h[:,0] for l,h in capture(self.model,[x['ids'] for x in items],list(range(len(decoder_blocks(self.model)))),[[-1]]*len(items),batch_size=32,pad_id=self.pad).items()}
++        from contextlib import nullcontext
++        from types import SimpleNamespace
++        from mats.capture import decoder_blocks
++        from .w1_capture import capture_at_layers
++        base=SimpleNamespace(model=self.model,tok=self.tok,base=nullcontext)
++        return capture_at_layers(base,items,list(range(len(decoder_blocks(self.model)))))
+ 
+     def score(self,group,pairs,arm,acts,index,maps):
+         import torch
+diff --git a/projects/g_agreement/understand/w1_capture.py b/projects/g_agreement/understand/w1_capture.py
+new file mode 100644
+index 00000000..3d576738
+--- /dev/null
++++ b/projects/g_agreement/understand/w1_capture.py
+@@ -0,0 +1,14 @@
++"""§133: W1 capture_and_score path, terminal-layer capture, never reader scoring."""
++from projects.g_agreement.blindspot import run as W
++
++
++def capture_at_layers(ol,items,layers):
++    result={}
++    for layer in layers:
++        # Preserve the exact W1 [42,44] request at the parity anchor. At other
++        # layers the only change to that path is its terminal capture layer.
++        args={} if layer==44 else {'capture_layers':[layer]}
++        captured,scores=W.capture_and_score(items,None,{},ol,None,batch=32,**args)
++        if scores or layer not in captured:raise ValueError('W1 capture-only contract')
++        result[layer]=captured[layer]
++    return result

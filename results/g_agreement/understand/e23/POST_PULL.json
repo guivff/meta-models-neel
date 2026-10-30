@@ -1,0 +1,29 @@
+{
+  "status": "AWAITING_COMPLETE_SEALED_COLLECTION_DO_NOT_RUN_NOW",
+  "run_once": true,
+  "command": [
+    "python",
+    "-m",
+    "projects.g_agreement.understand.e23_analyse",
+    "--inputs",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e23/inputs-v2",
+    "--collection",
+    "INTEGRATOR_PULL_COMPLETE_COLLECTION",
+    "--labels",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e23/private-v2/labels.DO_NOT_STAGE.jsonl",
+    "--assignment",
+    "INTEGRATOR_PULLED_BOUND_ASSIGNMENT",
+    "--out",
+    "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/results/g_agreement/understand/e23/analysis"
+  ],
+  "prerequisites": [
+    "E23_COMPLETE parent seal",
+    "all600 S items/all3layers cosine>=.999",
+    "complete1440F16 seal before AR",
+    "full12path forecast seal",
+    "source pins and assignment hash",
+    "private label hash"
+  ],
+  "if_incomplete": "report exact completed units and seals; do not analyse, infer missing scores or retry automatically",
+  "E21": "COMPLETE_ONCE_DO_NOT_RERUN; original analysis sealc10bfbadd3fcf9aa1c1585fcfeef9418fabc57811bbdde213e9d7cd831e39e26"
+}

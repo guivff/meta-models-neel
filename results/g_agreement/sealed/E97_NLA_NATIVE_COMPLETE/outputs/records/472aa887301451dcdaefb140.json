@@ -1,0 +1,12 @@
+{
+  "id": "472aa887301451dcdaefb140",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a structured template pattern: \"Question: [instruction] + Example: [sentence] + Answer:\" signals a response is expected next.\n\nThe task is to rewrite a sentence in passive voice, but the example sentence (\"The company is committed to...\") is vague, creating ambiguity about what the model should produce.\n\n\"Answer:\" is the final token, functioning as a prompt label in a structured template, immediately requiring the actual answer/response text to follow \u2014 likely a rewritten sentence or explanation.\n\"Question: Please provide an example of a passive voice sentence.\nInstruction: Please provide an example of a passive voice sentence.\nQuestion: What is the answer to the above question?\nAnswer:\" \u2014 this final label demands the model's generated response, likely beginning with a direct answer or placeholder text.\n\"Answer:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a structured template pattern: \"Question: [instruction] + Example: [sentence] + Answer:\" signals a response is expected next.\n\nThe task is to rewrite a sentence in passive voice, but the example sentence (\"The company is committed to...\") is vague, creating ambiguity about what the model should produce.\n\n\"Answer:\" is the final token, functioning as a prompt label in a structured template, immediately requiring the actual answer/response text to follow \u2014 likely a rewritten sentence or explanation.\n\"Question: Please provide an example of a passive voice sentence.\nInstruction: Please provide an example of a passive voice sentence.\nQuestion: What is the answer to the above question?\nAnswer:\" \u2014 this final label demands the model's generated response, likely beginning with a direct answer or placeholder text.\n\"Answer:\"",
+  "truncated": false
+}

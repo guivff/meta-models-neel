@@ -1,0 +1,12 @@
+{
+  "id": "fce549d1db1ddf112d786f0c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task (positive/negative sentiment), requiring a direct answer.\n\nThe example pattern \"Example sentence: [sentence] / Classification: [label]\" sets up a template where the model must now apply the rule to the specific sentence about \"a woman with a child.\"\n\n\"Reply:\" is the final prompt label, functioning as a response field marker, immediately constraining the next token to be the classification answer (e.g., \"Negative\" or \"positive\").\n\"Given the following example format:\nExample sentence: 'The woman is a Chinese actress.'\nClassification: Negative sentiment.\n\nExample sentence: 'The woman is a Chinese actress.'\nReply:\" \u2014 the final \"Reply:\" token demands the direct answer/classification label immediately following, completing the structured Q&A format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task (positive/negative sentiment), requiring a direct answer.\n\nThe example pattern \"Example sentence: [sentence] / Classification: [label]\" sets up a template where the model must now apply the rule to the specific sentence about \"a woman with a child.\"\n\n\"Reply:\" is the final prompt label, functioning as a response field marker, immediately constraining the next token to be the classification answer (e.g., \"Negative\" or \"positive\").\n\"Given the following example format:\nExample sentence: 'The woman is a Chinese actress.'\nClassification: Negative sentiment.\n\nExample sentence: 'The woman is a Chinese actress.'\nReply:\" \u2014 the final \"Reply:\" token demands the direct answer/classification label immediately following, completing the structured Q&A format.",
+  "truncated": false
+}

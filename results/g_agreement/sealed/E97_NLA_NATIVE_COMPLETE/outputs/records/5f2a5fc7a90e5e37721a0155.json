@@ -1,0 +1,12 @@
+{
+  "id": "5f2a5fc7a90e5e37721a0155",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional pattern establishes a strict format: given a sentence, output only \"positive\" or \"negative\" sentiment label.\n\nThe example structure (\"Example sentence: ... Reply: [label]\") sets up a direct Q&A format where the model must now provide the answer for the specific test case \"The weather is very cold today.\"\n\n\"Reply:\" is the final prompt token, part of the structured template, immediately requiring the sentiment label (\"negative\") or a brief explanatory response as the next token.\n\"\nPattern: [sentence] \u2192 sentiment label.\nExample sentence: \"The weather is very cold today.\"\nSentence: \"The weather is very cold today.\"\nReply:\" \u2014 this closing label demands the model's direct answer/response to the posed question, likely \"negative\" or a short phrase.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional pattern establishes a strict format: given a sentence, output only \"positive\" or \"negative\" sentiment label.\n\nThe example structure (\"Example sentence: ... Reply: [label]\") sets up a direct Q&A format where the model must now provide the answer for the specific test case \"The weather is very cold today.\"\n\n\"Reply:\" is the final prompt token, part of the structured template, immediately requiring the sentiment label (\"negative\") or a brief explanatory response as the next token.\n\"\nPattern: [sentence] \u2192 sentiment label.\nExample sentence: \"The weather is very cold today.\"\nSentence: \"The weather is very cold today.\"\nReply:\" \u2014 this closing label demands the model's direct answer/response to the posed question, likely \"negative\" or a short phrase.\n\"Reply:\"",
+  "truncated": false
+}

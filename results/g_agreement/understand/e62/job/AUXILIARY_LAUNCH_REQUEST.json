@@ -1,0 +1,186 @@
+{
+  "all_position_capture": {
+    "D4A": "block44 and42 read point, all1008 dev/test records; old252 reader outputs/probabilities reused",
+    "E62": "all frozen first-content..read positions, block44 fp16, offsets/order/seal",
+    "E62P": "same for all 15 placebo cells"
+  },
+  "analyses": {
+    "D4A": "results/g_agreement/understand/e62/job/COMMAND_D4A.json",
+    "E56_R4_REPLACEMENT": "results/g_agreement/understand/e56/r4_clarification/ANALYSIS_COMMAND.json",
+    "E59": "results/g_agreement/understand/e59/job/ANALYSIS_COMMAND.json",
+    "E63": "results/g_agreement/understand/e63/job/ANALYSIS_COMMAND.json"
+  },
+  "authority": [
+    "user second wave instruction",
+    "1872f28",
+    "f081d228",
+    "00beb6d",
+    "6aacc13d",
+    "f21ed03e",
+    "section149 pre-approved 2x",
+    "user fresh dedicated pods; integrator HANDOFF e1b2d643",
+    "Latest user split: ladder fresh now, auxiliary first freed joint slot"
+  ],
+  "custody": "Follow-on existing-pod custody from a fixed pre-staging timestamp, bounded by provider deadline and cumulative 2x per-experiment caps. Prior joint custody remains charged to its original experiments.",
+  "existing_pods": 1,
+  "experiments": [
+    "E59",
+    "E63",
+    "D4A"
+  ],
+  "fresh_dedicated_pods": false,
+  "generation": {
+    "NLA_max_new_tokens": 512,
+    "NLA_stop": "</explanation>",
+    "Oracle_max_new_tokens": 128,
+    "greedy": true,
+    "one_readout_per_item": true
+  },
+  "go_schema": {
+    "capture_seals": "EXACT_CAPTURE_READY_MAP",
+    "cohort_id": "MATCH_ASSIGNMENT",
+    "forecast_commits": "FULL_COMMIT_PER_BANK",
+    "forecast_seals": "SHA256_PER_BANK",
+    "input_seals": "EXACT_CAPTURE_READY_MAP",
+    "issued_epoch": "AFTER_CAPTURE_AND_FORECAST",
+    "pod_id": "MATCH_CAPTURE_READY",
+    "reader_launch_authorized": true
+  },
+  "input_archives": {
+    "D4A": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_amendments_v1/d4a.tar.gz",
+      "sha256": "21773c547fe53abab54ecf201d781865138001ea42104b84ccdc60310204daa0"
+    },
+    "E59": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_v1/e59.tar.gz",
+      "sha256": "1d64b0c064680301f9ee70b4792f4e580b3725a7104ac91bd5cc778d04a1819c"
+    },
+    "E62": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_v1/e62.tar.gz",
+      "sha256": "a8f091fcbe6cb1174137266a066e084f6ef5fed097d161f2355ad1ba53239b8b"
+    },
+    "E63": {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_v1/e63.tar.gz",
+      "sha256": "02c6b4a84b45e257261542a8a7194d021908bd48f86ad4c6384f68a16cddf9c4"
+    }
+  },
+  "launch_allowed": true,
+  "launch_order": [
+    "plans_placebo_d4a"
+  ],
+  "launch_preconditions": [
+    "Use first freed joint slot only after its first-wave worker exits.",
+    "Preserve the fixed integrator timestamp before auxiliary staging, and provider hard deadline."
+  ],
+  "max_pods": 1,
+  "maximum_cumulative_GPU_seconds": {
+    "D4A": 1080,
+    "E59": 7200,
+    "E63": 2880
+  },
+  "new_pods": 0,
+  "order": [
+    "252-item parity",
+    "E62 + E62P all-position capture, then E59/E63/D4a capture",
+    "seal CAPTURE_READY with all five banks",
+    "integrator verified capture pull; CPU dev probes/class means; committed R3b forecast",
+    "capture/input-bound GO",
+    "retained first two jobs per phase",
+    "self-admit from full forecast or durable clean NO_FIT",
+    "remaining reader jobs once"
+  ],
+  "parent_request": "results/g_agreement/understand/e57/job/JOINT_LAUNCH_REQUEST.json",
+  "parent_request_sha256": "7279007d13eb8909b9cf69ba5e803fcad6dbc4abf3818be9adcd9d2088612978",
+  "parity_only_input": "E62 archive supplies the frozen 252-item parity bundle; no E62 capture or readout job executes in this auxiliary allocation.",
+  "pods": [
+    {
+      "archive_staging": "same exact source and label-free input archives; only assigned experiment stages execute",
+      "assignment_schema": {
+        "absolute_deadline_epoch": "custody_start_epoch+sum(caps)",
+        "caps": {
+          "D4A": "2*registered - actual prior charged custody",
+          "E59": "2*registered - actual prior charged custody",
+          "E63": "2*registered - actual prior charged custody"
+        },
+        "cohort_id": "SAME_FIRST_AND_SECOND_WAVE_COHORT",
+        "custody_start_epoch": "FIXED_INTEGRATOR_TIMESTAMP_BEFORE_AUXILIARY_STAGING",
+        "existing_pod": true,
+        "fresh_dedicated_pod": false,
+        "gpu_count": 1,
+        "input_seals": {
+          "D4A": "8b3d9ccd54b8a182609613d71bea322227f9cafbcb5e0ba3f114bebee4b05044",
+          "E59": "caa1ed5f2a348e14ff1dd259794025094921b58b22234b4df9b5f8e23b8511b6",
+          "E63": "df6e812de60545b4250c2d6e82afca39c8eaaeb0e1f7fdb6dac0a511c64b74aa"
+        },
+        "parent_request_sha256": "7279007d13eb8909b9cf69ba5e803fcad6dbc4abf3818be9adcd9d2088612978",
+        "pod_created_epoch": "PROVIDER_CREATED_UNIX",
+        "pod_id": "FIRST_FREED_JOINT_POD_ID",
+        "prior_custody_seconds": {
+          "D4A": "ACTUAL_PRIOR_CUSTODY",
+          "E59": "ACTUAL_PRIOR_CUSTODY",
+          "E63": "ACTUAL_PRIOR_CUSTODY"
+        },
+        "provider_deadline_epoch": "INTEGRATOR_CONFIRMED_HARD_STOP",
+        "source_seals": {
+          "D4A": "b92c933a8312fe7488a66b8edb01130738ee20489111faca4f0fd482920b91ee",
+          "E59": "a84f6f2fc9cc212ed75dee59dfdeac0f544e199fe6c07b20bdada7ee24fe4b32",
+          "E63": "3d01ef2659a607b23a341520f7c2ac316aa9df11ba61af36155a9879375e8004"
+        }
+      },
+      "experiments": [
+        "E59",
+        "E63",
+        "D4A"
+      ],
+      "gpu_count": 1,
+      "gpu_type": "H200",
+      "name": "plans_placebo_d4a",
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/e62/job/second_worker.py",
+        "--assignment",
+        "/workspace/second/assignment.json",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--out",
+        "/workspace/second/out",
+        "--go",
+        "/workspace/second/GO.json",
+        "--e62-inputs",
+        "/workspace/second/e62/inputs",
+        "--e59-inputs",
+        "/workspace/second/e59/inputs",
+        "--e63-inputs",
+        "/workspace/second/e63/inputs",
+        "--d4a-inputs",
+        "/workspace/second/d4a/inputs"
+      ]
+    }
+  ],
+  "priority": [
+    "E59",
+    "E63",
+    "D4A"
+  ],
+  "registered_GPU_seconds": {
+    "D4A": 540,
+    "E59": 3600,
+    "E63": 1440
+  },
+  "seed_timings": "results/g_agreement/understand/e56/job/SAVED_ORACLE_TIMINGS.json",
+  "separate_profile": false,
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_source_a0730ca3.tar.gz",
+  "source_archive_sha256": "63956694791e831e8938aacd562def1c20bb5f5ed2da7edc67dc339e9663fb4f",
+  "source_commit": "a0730ca39f1aaa182fb87c0d0a5087ea6e7ab938",
+  "status": "READY",
+  "validation": {
+    "GPU_hours": 0,
+    "exact_archive_preflight": "PASS_AUXILIARY_ALLOCATION",
+    "missing_parity_seal": "REJECTED",
+    "registered_analysis_runs": 0,
+    "report": "results/g_agreement/understand/e62/AUXILIARY_ARCHIVE_DRY_RUN.json",
+    "report_sha256": "ccfce3f4a6847f33b95d6b1288bc914ce9362c07cc219bec97fb08ad230a67df",
+    "targeted_CPU_tests": 8
+  },
+  "verified_pull": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/second_wave_verified_v1"
+}

@@ -1,0 +1,105 @@
+{
+  "calibration": {
+    "arithmetic": "float64 norms/median/mean; one scalar; no heldout normalization statistics",
+    "buffer_training": "eligible buffered occurrences train first,then source iterator resumes; no recapture/second pass",
+    "host_buffer_bytes": 20480000000,
+    "order": [
+      "m=median(raw block44 L2 norms)",
+      "threshold=10*m",
+      "mu=mean raw norm over calibration tokens <=threshold",
+      "scale=sqrt(5120)/mu"
+    ],
+    "position_zero": "exclude original document offset0 before counting calibration population",
+    "seal": "CALIBRATION.json and CALIBRATION_SEAL.json before every optimizer update including scratchpilots",
+    "source_order": "§79 training documents in original manifest order, then pinned FineWeb file/row order",
+    "tokens": 1000000
+  },
+  "calibration_authority_commit": "53f1add25aa7b8bcb7d4ac2f63bd24c1557259bb",
+  "data": {
+    "FineWeb_configuration": "sample-10BT",
+    "FineWeb_repository": "HuggingFaceFW/fineweb-edu",
+    "FineWeb_revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+    "context": "512-token nonoverlapping document-local chunks, every tail retained; exclusions use original offsets",
+    "eligible_target": true,
+    "excluded_target_context": "tokens remain in model context; no input-sequence removal",
+    "file_pins": "FINEWEB_FILES.20261026.json",
+    "section79_train_documents": 1910,
+    "source_group_exclusion": "unchanged E35 heldout groups/seed20261025",
+    "source_identity": "repo/revision/file/row/original-token-offset, no repeated documents/epochs/shuffle",
+    "storage": "stream staged pinned parquet text and tokenized documents; no training-activation disk corpus; bounded calibration RAM and4096-token batches",
+    "tokens": "pinned Qwen3.6 tokenizer,no specials/chat wrapper",
+    "unique_training_occurrences": 100000000
+  },
+  "date": "2026-10-26",
+  "design_chosen_after_E35_failures": true,
+  "diagnostic_does_not_change_design": true,
+  "experiment": "E40",
+  "exploratory": true,
+  "gate": {
+    "FVU_max_inclusive": 0.25,
+    "all_token_FVU": "all50000; reported beside filtered gate, no extra rule",
+    "checkpoint_selection": "final checkpoint only after100M eligible occurrences",
+    "dead_fraction_max_exclusive": 0.1,
+    "empty_or_zero_variance": "INCOMPLETE validity stop, no claimed scientific FAIL/PASS",
+    "exclusion": "original position0 OR raw norm > sealed threshold",
+    "gate_runs": 1,
+    "primary": "pooled centered FVU and dictionary dead fraction on retained tokens",
+    "raw_h_source": "E35 sealed transfer gate h.npy, all50000 in originalGATE_SAMPLE order",
+    "sample_sha256": "dff73a3a83b76a6de4a5a2cbf2fe909a14a6888eaa9b91eeca6df849323fc593"
+  },
+  "memory_admission": {
+    "cpu_threads": 8,
+    "gpu_free_after_target_min_bytes": 60000000000,
+    "gpu_total_min_bytes": 120000000000,
+    "host_RAM_request_recommended_bytes": 96000000000,
+    "host_available_min_bytes": 48000000000
+  },
+  "normalization": {
+    "bias_initialization": "first retained scaled training batch only, inherited E35",
+    "decoder_raw": "(z @ W_dec.T + b_dec)/scale",
+    "encoder": "E_raw(x)=TopK(ReLU((scale*x) @ W_enc.T + b_enc),128)",
+    "loss_units": "fixed centered energy of first scaled training batch only, inherited E35; no scale refitting",
+    "raw_decoder_column_norms": "norm(W_dec[:,i])/scale; b_dec excluded from §131 shares"
+  },
+  "parity_authority": "§139 permits the run-specific §142gate; same sealed original heldout raw vectors are used, and no W1 reader score is produced by this training run",
+  "post_gate": {
+    "FAIL": "no adequate SAE;stop,no thirdattempt",
+    "NO_FIT_OPERATIONAL": "preserveguard/bookallcustody; no automaticadditionalrequest",
+    "PASS": "verify_pass; unchanged frozen §131rubric/blindjudge then boundeddecomposition",
+    "VALIDITY_FAILURE": "stop,no retry"
+  },
+  "registered_authority_commit": "a38044ddb8b02410703040fb09aab1bc84bc5be8",
+  "stage": "training",
+  "timing": {
+    "capture_profile": "first3full chunks and total calibration elapsed, including I/O/CPU filtering",
+    "continuation": "actual remaining budget after provider booking carried to §131followup; no new budget inferred",
+    "evaluation_profile": "3full256-token encode/decode/CPU moments timings on buffered calibration, no heldout pilot",
+    "forecast": "elapsedsofar + remaining raw capture chunks forecast from observed retained/calibration-chunk rate * max(median3fullchunk,calibrationelapsed/chunks) +24415*median3optimizer +196*median3evaluation",
+    "launch_spacing_seconds": 180,
+    "optimizer_profile": "3 full4096 scratch-only updates, activeAuxK forced; scratchnonexportable",
+    "pod_ceiling": 20,
+    "programme_stop_utc": "2026-10-28T22:59:00+00:00",
+    "retrieval_reserve_seconds": 180,
+    "save_seal_admission_seconds": 180,
+    "science_cap": "min(1.5F+360, assigneddeadline-180-firstscience); F+180mustfit",
+    "setup_max_seconds": 1500,
+    "single_pod": true,
+    "total_gpu_seconds": 50400
+  },
+  "training": {
+    "adam_epsilon": 1e-08,
+    "auxiliary_k": 512,
+    "auxiliary_weight": 0.03125,
+    "batch_size": 4096,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "d_model": 5120,
+    "d_sae": 65536,
+    "dead_after_tokens": 1000000,
+    "grad_clip": 1.0,
+    "k": 128,
+    "learning_rate": 0.0002,
+    "seed": 20261026,
+    "target_tokens": 100000000
+  }
+}

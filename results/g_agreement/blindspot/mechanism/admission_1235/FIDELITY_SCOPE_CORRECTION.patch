@@ -1,0 +1,22 @@
+diff --git a/projects/g_agreement/blindspot/ar_tests.py b/projects/g_agreement/blindspot/ar_tests.py
+index 4e52544d..cb0819ac 100644
+--- a/projects/g_agreement/blindspot/ar_tests.py
++++ b/projects/g_agreement/blindspot/ar_tests.py
+@@ -18,7 +18,7 @@ from . import protocol as P
+ 
+ BRIEF = 'projects/g_agreement/BRIEF_BLINDSPOT.md'
+ P3_SOURCE_COMMIT = 'c176e2595564324eb919b242c59e13895086f944'
+-CAP_HOURS = {'fidelity': 2., 'residual': 2., 'swap': .5, 'sae': 1.5}
++CAP_HOURS = {'fidelity': .3, 'residual': 2., 'swap': .5, 'sae': 1.5}
+ ARMS = ('swap', 'self', 'random', 'ar_only')
+ SITE = {'construction_block': 44, 'nla_native_block': 42, 'site': 'OFF-NATIVE'}
+ CONTEXTS = (
+@@ -503,7 +503,7 @@ def admit_mechanism(path, stage, *, now=None, pod_id=None):
+     if not created <= phase <= now or phase != created and setup:
+         raise ValueError('invalid phase start or repeated setup allowance')
+     cap = CAP_HOURS[stage]*3600
+-    if stage in ('fidelity', 'residual'):
++    if stage == 'residual':
+         forecast = float(a.get('smoke_forecast_seconds', float('nan')))
+         if not math.isfinite(forecast) or not 0 < forecast <= cap:
+             raise ValueError('invalid/over-cap smoke forecast; report before launch')

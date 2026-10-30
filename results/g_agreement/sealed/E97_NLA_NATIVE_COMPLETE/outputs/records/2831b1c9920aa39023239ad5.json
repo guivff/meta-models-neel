@@ -1,0 +1,12 @@
+{
+  "id": "2831b1c9920aa39023239ad5",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: \"Here is an example of bad format\" sets up a contrast, implying a corrected/good example follows.\n\nThe `<entry>` tag structure signals XML/structured data format, with the model expected to continue a parallel example entry containing a question-answer pair or similar content.\n\nFinal token `<entry` opens a new XML tag, directly mirroring the earlier `<entry>` reference, requiring an immediate closing `>` and then structured content (e.g., `id=`, `>`, or descriptive text).\n\"Here is a log of entries in a corpus.\n<entry>...\nNow, generate a new entry.\n<entry\" \u2014 the final token begins a new entry tag, expecting attributes or content matching the corpus format, likely a specific question-answer pair or case study.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: \"Here is an example of bad format\" sets up a contrast, implying a corrected/good example follows.\n\nThe `<entry>` tag structure signals XML/structured data format, with the model expected to continue a parallel example entry containing a question-answer pair or similar content.\n\nFinal token `<entry` opens a new XML tag, directly mirroring the earlier `<entry>` reference, requiring an immediate closing `>` and then structured content (e.g., `id=`, `>`, or descriptive text).\n\"Here is a log of entries in a corpus.\n<entry>...\nNow, generate a new entry.\n<entry\" \u2014 the final token begins a new entry tag, expecting attributes or content matching the corpus format, likely a specific question-answer pair or case study.",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "cd19c7cd68da1050dda49a93",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is setting up a task for an AI, requesting analysis of a specific code/problem snippet.\n\nThe `#code` delimiter signals a structured input format, with the first `#code` block already opened, implying a second block or closing delimiter follows.\n\nFinal token `\\code` is a malformed/variant delimiter (mirroring the earlier `#code\\n...#code` pattern), suggesting the next tokens complete a second code block label or placeholder, likely `...` or similar content.\n\"Please read the following:\\n#code\\n...\n\\n\\code\" \u2014 the second delimiter `\\code` mirrors the first, implying a parallel structure where actual content or a closing tag follows immediately.\n\"Please read the following:\\n\\code\" \u2014 likely a typo variant, expecting code content or closing delimiter next.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is setting up a task for an AI, requesting analysis of a specific code/problem snippet.\n\nThe `#code` delimiter signals a structured input format, with the first `#code` block already opened, implying a second block or closing delimiter follows.\n\nFinal token `\\code` is a malformed/variant delimiter (mirroring the earlier `#code\\n...#code` pattern), suggesting the next tokens complete a second code block label or placeholder, likely `...` or similar content.\n\"Please read the following:\\n#code\\n...\n\\n\\code\" \u2014 the second delimiter `\\code` mirrors the first, implying a parallel structure where actual content or a closing tag follows immediately.\n\"Please read the following:\\n\\code\" \u2014 likely a typo variant, expecting code content or closing delimiter next.",
+  "truncated": false
+}

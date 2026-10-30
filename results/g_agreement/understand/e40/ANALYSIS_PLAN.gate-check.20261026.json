@@ -1,0 +1,64 @@
+{
+  "analysis": "gate_check",
+  "authority_commit": "886d03b040d28ae037b07a983029891439f02f96",
+  "call_existing_verify_pass_on_PASS": true,
+  "code_seal_path": "results/g_agreement/understand/e40/ANALYSIS_CODE_SEAL.gate-check.20261026.json",
+  "command": [
+    "env",
+    "CUDA_VISIBLE_DEVICES=",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "python",
+    "results/g_agreement/understand/e40/gate_check.py"
+  ],
+  "date": "2026-10-26",
+  "execution_label": "§149 RUN-BY-INTEGRATOR",
+  "executor": "integrator",
+  "expected_outputs": [
+    "GATE_CHECK.json",
+    "GATE_CHECK.md",
+    "ANALYSIS_SEAL.json"
+  ],
+  "expected_position_zero_tokens": 236,
+  "experiment": "E40",
+  "gate_recomputation": false,
+  "guard_path": "results/g_agreement/understand/e40/GATE_CHECK.RUN_ONCE.json",
+  "labelling_or_decomposition_execution": false,
+  "morning_owner_review_required": true,
+  "output_path": "results/g_agreement/understand/e40/gate_check_20261026",
+  "preserve_bytes": true,
+  "pull_layout": {
+    "assignment": "final/assignment.json",
+    "large_outputs": "arrays/<originalfilename>",
+    "metadata": "final/<originalfilename>",
+    "output_seal": "final/OUTPUT_SEAL.json"
+  },
+  "python_environment": "Existing project CPU Python with Torch, for the pre-existing verify_pass helper; no model tensors are loaded",
+  "registered_thresholds": {
+    "all50000token_FVU": "descriptive only",
+    "dead_fraction_max_exclusive": 0.1,
+    "fvu_max_inclusive": 0.25,
+    "primary_population": "registered exclusions applied"
+  },
+  "training_configuration": {
+    "adam_epsilon": 1e-08,
+    "auxiliary_k": 512,
+    "auxiliary_weight": 0.03125,
+    "batch_size": 4096,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "d_model": 5120,
+    "d_sae": 65536,
+    "dead_after_tokens": 1000000,
+    "grad_clip": 1.0,
+    "k": 128,
+    "learning_rate": 0.0002,
+    "seed": 20261026,
+    "target_tokens": 100000000
+  },
+  "training_request_path": "results/g_agreement/understand/e40/LAUNCH_REQUEST.training.json",
+  "training_request_sha256": "2ad905e4d5abbb9a5f99f65005a4171fdc011f8e9e887a7ecc4ceb40829f49e6",
+  "validation_failure": "consumeguard,sealVALIDATION_STOP,exit2;waitowner,no rerun",
+  "verified_pull_path": "cache/g_agreement/understand/e40/training-20261026/verified-pull",
+  "verified_pull_receipt_template": "results/g_agreement/understand/e40/VERIFIED_PULL.gate-check.template.json",
+  "verified_receipt_path": "cache/g_agreement/understand/e40/training-20261026/verified-pull/VERIFIED_PULL.json"
+}

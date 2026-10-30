@@ -1,0 +1,22 @@
+{
+  "experiment": "E131",
+  "authority": "§239/19763a3d1",
+  "items": 84,
+  "cells": 840,
+  "model": "Qwen/Qwen3.6-27B",
+  "revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+  "dtype": "bfloat16",
+  "generation": {"greedy": true, "max_new_tokens": 64, "stop_on_eos": true, "use_cache": false, "batch": 8},
+  "hook": {"implementation": "projects.g_agreement.e101.intervention104.intervene_forward", "arm": "U", "block": 40, "positions": "eight original positions preceding read", "read_token_patched": false, "generated_tokens_patched": false, "delta_policy": "copy sealed already-composed deltas; no scaling/redraw/refit"},
+  "pairs": "projects.g_agreement.e127.runner.pairs_from_logits, first generation forward only, ordered pairs/full-vocabulary logsoftmax",
+  "reader_calls": 0,
+  "judging_calls": 0,
+  "labels_on_pod": false,
+  "operator": "Track Q",
+  "planning_cap_seconds": 1440,
+  "creation_cutoff_utc": "2026-10-30T10:00:00Z",
+  "hard_stop": "min(original cap deadline, 2026-10-30T12:50:00Z)",
+  "priority": "above E128 SPEC only if H200 free and SPEC not ready; otherwise existing work first",
+  "analysis_owner": "W-internals-B",
+  "reviewer": "R-Q"
+}

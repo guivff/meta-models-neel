@@ -1,0 +1,17 @@
+# E100 CPU-only vector preparation
+
+Authority: §208 f425a5e2 and Guiv's direct assignment to W-mechanism-B. No runner/model/readout/judge call. W-Mech2 owns the E100 runner independently.
+
+Inventory before writing: original E79 CPU_DIRECTIONS.npz (839bc5ee7e87aa91dc3a1cf2ad30b92fd7f34212653b6a1e874cc8140db996bc), verified original BUILD_RECEIPT/RESULT_SEAL; E58b J384 with INPUT_SEAL f450923d1c10ef799888b4c669134f98fb1add24db23b44a10cd79b100392974; sealed E56/E57 capture shards and E59 capture delivery; local pinned Qwen3.6-27B tokenizer and lm_head safetensors. Existing E79 build.directions and mats.probes.fit_logreg define the reused arithmetic/linear-probe fit.
+
+Direction orientation is class1 mean minus class0 mean, dev only. Missed-row raw d and original J/nonJ/random arrays are loaded from the sealed E79 file without refitting/rebuilding; d is unit-normalized for the new full-direction arm, with original raw norm retained separately. E59 reported rows may also reuse their exact existing dev directions. New E56 directions use the same float64 arithmetic and orthogonalized random-vector recipe. SeedSequence streams [20261028, row_index, 0] retain old E79 indices0–4 and append the E56 rows at5–7. This preserves original random controls. Random rank384 projector is represented by Q_R Q_R.T, Q_R from standard-normal default_rng(20261028) followed by reduced QR with positive R diagonal. No dense 5120x5120 projector is needed.
+
+The unembedding tensor is lm_head.weight from the pinned model, not the input embedding or final-normalization weights. Each requested space-prefixed value is tokenized without added tokens; only its first token's unembedding row is unit-normalized. Token IDs, full tokenization, token piece, decoded string and value mapping stay in CPU-only metadata.
+
+Pairing RNG is reset to20261028 per row, iterates frozen test-bank order and samples uniformly with replacement from opposite-class test items in that order. Opaque source/donor IDs and exact activation order go to the public pairing files; label/value/source joins stay CPU-only. A donor may be reused; no test label is used for fitting a direction or probe.
+
+Manipulation adapter returns raw dev-probe logit shift, target-signed shift after CPU-only label join, and norm ratio with >1.5 flag for every input cell; it never filters cells. Probes are fitted once on dev only with the existing fit_logreg defaults and CPU thread1, and saved with exact parameters. This does not rerun any original experiment's once-only outcome analysis.
+
+Pending explicit bindings: E56 §208 states40test/row while original frozen banks contain84; u_tok values for missed rows must disambiguate word labels and numeric values, particularly page_range_digit's item-specific digits. Independent direction/basis work may proceed, but no final pairing/token package is launch-ready until those rulings are bound. All CPU keys, truth labels, values and probe parameters are excluded from any public pod archive.
+
+Binding update: fd07c12a fixes all eight rows at84 sealed test items in frozen bank order and supplies text-token mappings. Indentation uses differing token262/309; page digits share first token220 and are NOT RUN for u_tok. Nesting tokenization is a strict prefix ([2205] versus[2205,4891]); final ruling on NOT_RUN versus explicit2205/4891 is pending. Optional upstream directions are not manufactured from block44.

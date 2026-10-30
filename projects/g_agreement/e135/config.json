@@ -1,0 +1,65 @@
+{
+  "alpha8": "Calibration arithmetic only; no E1048/E1282,4 rerun/rejudge",
+  "authority": "\u00a7244 deviation1/026eea061",
+  "batcher": "projects.g_agreement.e135.runner.batches(items,size=8)",
+  "cells": 168,
+  "conditions": [
+    "steered",
+    "random"
+  ],
+  "delta_policy": "Original E104U composed alpha8 deltas times6/8; original matched random direction, no redraw/refit/norm change",
+  "doses": [
+    6
+  ],
+  "entrypoint": "projects.g_agreement.e135.runner.capture_answer_batch(model,tok,items,deltas)",
+  "experiment": "E135",
+  "greedy_max_new_tokens": 3,
+  "input_loader": "projects.g_agreement.e135.inputs.load(root,input_sha)",
+  "items": 84,
+  "judging": {
+    "owner": "W-internals-C",
+    "adapter": "W-mech2",
+    "reviewer": "R-Q (R-3 if late)",
+    "bank": "E135",
+    "max_USD": 1,
+    "rubric": "original E104",
+    "priority": "after E107b before E95"
+  },
+  "labels_on_pod": false,
+  "launch": {
+    "owner": "I-2 ONLY; after E131 pod; TrackQ remains E131/E133",
+    "cap_seconds": 2880,
+    "planning_GPU_hours": 0.8,
+    "creation_cutoff": "2026-10-30T10:00:00Z",
+    "stop_and_seal_cutoff": "2026-10-30T12:50:00Z",
+    "deadline": "min(original_creation+2880,2026-10-30T12:50:00Z)",
+    "forecast": "\u00a7217 MAX measured setup/all pending phases x1.25+60, original creation clock",
+    "outputs": "sealed unopened until committed tested W-mech2 adapter; RQ review",
+    "priority": "after E131 pod",
+    "retry": "No new retry authority from this packet"
+  },
+  "no_GPU_selection": true,
+  "oracle_layers": [
+    44,
+    52
+  ],
+  "random_readouts": 168,
+  "read_token_patched": false,
+  "reader": "original E109/E87 Oracle nativealpha16000unit/greedy128/k1/actual44or52",
+  "steered_readouts": 168,
+  "total_readouts": 336,
+  "write_block": 40,
+  "write_positions": "eight_before_read",
+  "calibration": {
+    "raw": "84 item records each eight natural block40 site norms from original before_norm, actual composed_delta_l2 and unscaled_d_l2=composed_delta_l2/6; no extra model forward",
+    "numerator": "L2 actual composed alpha*d",
+    "reference_doses": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "historical": "arithmetic only, never rerun",
+    "owner": "W-mech2 computes denominator median/ratios on CPU, no C analysis"
+  }
+}

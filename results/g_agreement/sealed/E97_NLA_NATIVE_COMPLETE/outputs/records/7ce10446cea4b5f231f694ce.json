@@ -1,0 +1,12 @@
+{
+  "id": "7ce10446cea4b5f231f694ce",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: example given, then a test case requires a matching one-word classification response (\"positive\" or \"negative\").\n\nThe structured template \"Example: [sentence] \u2192 Reply: [classification]\" sets up a direct parallel response format for the model to follow.\n\n\"Reply:\" is the final token, acting as a prompt label requiring the actual classification answer (e.g., \"negative\") to follow immediately.\n\"Given the following sentence: 'The weather is pleasant and the temperature is comfortable.'\nClassification task: Determine the sentiment category (positive or negative) for the given sentence.\nSentence: 'The weather is pleasant and the temperature is comfortable.'\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, expecting the model's direct answer or classification output next.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: example given, then a test case requires a matching one-word classification response (\"positive\" or \"negative\").\n\nThe structured template \"Example: [sentence] \u2192 Reply: [classification]\" sets up a direct parallel response format for the model to follow.\n\n\"Reply:\" is the final token, acting as a prompt label requiring the actual classification answer (e.g., \"negative\") to follow immediately.\n\"Given the following sentence: 'The weather is pleasant and the temperature is comfortable.'\nClassification task: Determine the sentiment category (positive or negative) for the given sentence.\nSentence: 'The weather is pleasant and the temperature is comfortable.'\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, expecting the model's direct answer or classification output next.\n\"Reply:\"",
+  "truncated": false
+}

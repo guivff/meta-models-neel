@@ -1,0 +1,78 @@
+{
+  "authority": "\u00a7228 E117partc/ad272577b; clarificatione9c1bd24f",
+  "carrier_prefix": "An activation vector from layer {layer} of a language model is enclosed in activation tags: <activation>{char}</activation>.",
+  "caveat": "Question prompt out of lens training distribution",
+  "conditions": [
+    "targeted",
+    "sham"
+  ],
+  "cpu_only_labels": {
+    "original_label_seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e113-inputs-v1/cpu_only/LABEL_SEAL.json",
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e117c-inputs-v1/cpu_only/ORIGINAL_POINTERS.PRIVATE.json",
+    "sha256": "611a4066ad1bdd4bffb460008d8fb291558130d459bef2425c4010a92a5da390",
+    "stage_to_pod": false
+  },
+  "experiment": "E117",
+  "items": 336,
+  "judging": {
+    "adapter": "W-mech2",
+    "additional_max_USD": 2,
+    "bank": "E117",
+    "owner": "W-internals-C",
+    "reviewer": "R-Q",
+    "rubric": "E57 frozen rubric on three bookkeeping rows; original E56 fact_recall control; sham yes-rate per qualifying bookkeeping row"
+  },
+  "labels_on_pod": false,
+  "launch": {
+    "cap": "original custody/current\u00a7217 and\u00a7234 measured-attempt policy; no clock reset or silent cap extension",
+    "labels_cpu_only": true,
+    "order": "after E126 hook handoff",
+    "owner": "Track Q",
+    "planning_GPU_hours": 0.15,
+    "same_pod_as_E120c": "if possible under original custody/remaining admitted cap; completed E120c is not replayed and its source/output seal remains unchanged"
+  },
+  "native_prompt_readouts": "NONE NEW; original sealed native readouts remain CPU reference",
+  "part": "c",
+  "per_row": 84,
+  "prompt_construction": "carrier_prefix + single space + targeted_by_row[row] or sham; fresh OracleLens/cache per row/question, sole activation slot/source44 retained",
+  "public_input": {
+    "all_carriers_byte_identical": true,
+    "archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e117c-inputs-v1/inputs.tar.gz",
+    "archive_sha256": "9fabd11b7188287259099f25c65b0fba5248afc7322ac4beb4a3bd0ac61fe6d2",
+    "arrays": "H44.npy",
+    "input_sha256": "5d24a41da9166c256fbbc6217a5e1897a77dfe04c4464c1d17b6ffa7891d1d33",
+    "items": 336,
+    "root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e117c-inputs-v1/inputs",
+    "source_seal": "bb82b94e1e8b7e815ce52e0459c923186a5c46887af61a951acb4a54b0befa8b"
+  },
+  "questions": {
+    "sham": "Does this activation indicate that the user's name is Dana? Answer yes or no, then one sentence.",
+    "targeted_by_row": {
+      "fact_recall": "What fact is being recalled? Answer with the value, then one sentence.",
+      "indent_level": "What is the current indent level? Answer with the value, then one sentence.",
+      "nesting_depth": "What is the current nesting depth? Answer with the value, then one sentence.",
+      "page_range_digit": "What is the current page-range digit? Answer with the value, then one sentence."
+    }
+  },
+  "reader": {
+    "alpha": 16000,
+    "factory": "mats.readers.olens.OracleLens",
+    "k": 1,
+    "layer": 44,
+    "max_new_tokens": 128,
+    "reuse": "same native model and tokenizer; fresh OracleLens instance per prompt with independent _slots cache",
+    "temperature": 0,
+    "transform": "unit"
+  },
+  "readouts": 672,
+  "rows": [
+    "nesting_depth",
+    "indent_level",
+    "page_range_digit",
+    "fact_recall"
+  ],
+  "source_block": 44,
+  "source_code_sha256": {
+    "external/mats-nla-workspace/src/mats/readers/olens.py": "7866ac3aa66d96bee612e216a0cd45e0a76e1dd4e799f6aaa538c28addd0e86e"
+  }
+}

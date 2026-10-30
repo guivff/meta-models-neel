@@ -1,0 +1,502 @@
+{
+  "current_colon": {
+    "class": "state-like",
+    "domain": "prose",
+    "jlens": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "nla": [
+      [
+        "The current text prefix satisfies this statement: the last observed non-space character is a colon.",
+        "The current text prefix satisfies this statement: it is not the case that the last observed non-space character is a colon."
+      ],
+      [
+        "At the read position, the following statement is true: the last observed non-space character is a colon.",
+        "At the read position, the following statement is true: it is not the case that the last observed non-space character is a colon."
+      ]
+    ],
+    "olens": [
+      [
+        "- the last observed non-space character is a colon",
+        "- it is not the case that the last observed non-space character is a colon"
+      ],
+      [
+        "- At the read position: the last observed non-space character is a colon.",
+        "- At the read position: it is not the case that the last observed non-space character is a colon."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "present",
+      "absent"
+    ]
+  },
+  "current_number": {
+    "class": "state-like",
+    "domain": "prose",
+    "jlens": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "nla": [
+      [
+        "The current text prefix satisfies this statement: a complete numeric lexeme ends at the current character.",
+        "The current text prefix satisfies this statement: it is not the case that a complete numeric lexeme ends at the current character."
+      ],
+      [
+        "At the read position, the following statement is true: a complete numeric lexeme ends at the current character.",
+        "At the read position, the following statement is true: it is not the case that a complete numeric lexeme ends at the current character."
+      ]
+    ],
+    "olens": [
+      [
+        "- a complete numeric lexeme ends at the current character",
+        "- it is not the case that a complete numeric lexeme ends at the current character"
+      ],
+      [
+        "- At the read position: a complete numeric lexeme ends at the current character.",
+        "- At the read position: it is not the case that a complete numeric lexeme ends at the current character."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "present",
+      "absent"
+    ]
+  },
+  "number_digits_ge_3": {
+    "class": "count-like",
+    "domain": "prose",
+    "jlens": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "nla": [
+      [
+        "The current text prefix satisfies this statement: digit characters in that numeric lexeme (including exponent digits) is at least 3.",
+        "The current text prefix satisfies this statement: digit characters in that numeric lexeme (including exponent digits) is less than 3."
+      ],
+      [
+        "At the read position, the following statement is true: digit characters in that numeric lexeme (including exponent digits) is at least 3.",
+        "At the read position, the following statement is true: digit characters in that numeric lexeme (including exponent digits) is less than 3."
+      ]
+    ],
+    "olens": [
+      [
+        "- digit characters in that numeric lexeme (including exponent digits) is at least 3",
+        "- digit characters in that numeric lexeme (including exponent digits) is less than 3"
+      ],
+      [
+        "- At the read position: digit characters in that numeric lexeme (including exponent digits) is at least 3.",
+        "- At the read position: digit characters in that numeric lexeme (including exponent digits) is less than 3."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "present",
+      "absent"
+    ]
+  },
+  "number_digits_ge_4": {
+    "class": "count-like",
+    "domain": "prose",
+    "jlens": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "nla": [
+      [
+        "The current text prefix satisfies this statement: digit characters in that numeric lexeme (including exponent digits) is at least 4.",
+        "The current text prefix satisfies this statement: digit characters in that numeric lexeme (including exponent digits) is less than 4."
+      ],
+      [
+        "At the read position, the following statement is true: digit characters in that numeric lexeme (including exponent digits) is at least 4.",
+        "At the read position, the following statement is true: digit characters in that numeric lexeme (including exponent digits) is less than 4."
+      ]
+    ],
+    "olens": [
+      [
+        "- digit characters in that numeric lexeme (including exponent digits) is at least 4",
+        "- digit characters in that numeric lexeme (including exponent digits) is less than 4"
+      ],
+      [
+        "- At the read position: digit characters in that numeric lexeme (including exponent digits) is at least 4.",
+        "- At the read position: digit characters in that numeric lexeme (including exponent digits) is less than 4."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "present",
+      "absent"
+    ]
+  },
+  "number_magnitude_ge_10": {
+    "class": "count-like",
+    "domain": "prose",
+    "jlens": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "nla": [
+      [
+        "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is at least 10.",
+        "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is less than 10."
+      ],
+      [
+        "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is at least 10.",
+        "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is less than 10."
+      ]
+    ],
+    "olens": [
+      [
+        "- absolute value of a numeric lexeme ending at the current character is at least 10",
+        "- absolute value of a numeric lexeme ending at the current character is less than 10"
+      ],
+      [
+        "- At the read position: absolute value of a numeric lexeme ending at the current character is at least 10.",
+        "- At the read position: absolute value of a numeric lexeme ending at the current character is less than 10."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "present",
+      "absent"
+    ]
+  },
+  "number_magnitude_ge_100": {
+    "class": "count-like",
+    "domain": "prose",
+    "jlens": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "nla": [
+      [
+        "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is at least 100.",
+        "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is less than 100."
+      ],
+      [
+        "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is at least 100.",
+        "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is less than 100."
+      ]
+    ],
+    "olens": [
+      [
+        "- absolute value of a numeric lexeme ending at the current character is at least 100",
+        "- absolute value of a numeric lexeme ending at the current character is less than 100"
+      ],
+      [
+        "- At the read position: absolute value of a numeric lexeme ending at the current character is at least 100.",
+        "- At the read position: absolute value of a numeric lexeme ending at the current character is less than 100."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "present",
+      "absent"
+    ]
+  },
+  "number_magnitude_ge_1000": {
+    "class": "count-like",
+    "domain": "prose",
+    "jlens": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "nla": [
+      [
+        "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is at least 1000.",
+        "The current text prefix satisfies this statement: absolute value of a numeric lexeme ending at the current character is less than 1000."
+      ],
+      [
+        "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is at least 1000.",
+        "At the read position, the following statement is true: absolute value of a numeric lexeme ending at the current character is less than 1000."
+      ]
+    ],
+    "olens": [
+      [
+        "- absolute value of a numeric lexeme ending at the current character is at least 1000",
+        "- absolute value of a numeric lexeme ending at the current character is less than 1000"
+      ],
+      [
+        "- At the read position: absolute value of a numeric lexeme ending at the current character is at least 1000.",
+        "- At the read position: absolute value of a numeric lexeme ending at the current character is less than 1000."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "present",
+      "absent"
+    ]
+  },
+  "word_allcaps": {
+    "class": "state-like",
+    "domain": "prose",
+    "jlens": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "nla": [
+      [
+        "The current text prefix satisfies this statement: the current word has at least two letters and is uppercase.",
+        "The current text prefix satisfies this statement: it is not the case that the current word has at least two letters and is uppercase."
+      ],
+      [
+        "At the read position, the following statement is true: the current word has at least two letters and is uppercase.",
+        "At the read position, the following statement is true: it is not the case that the current word has at least two letters and is uppercase."
+      ]
+    ],
+    "olens": [
+      [
+        "- the current word has at least two letters and is uppercase",
+        "- it is not the case that the current word has at least two letters and is uppercase"
+      ],
+      [
+        "- At the read position: the current word has at least two letters and is uppercase.",
+        "- At the read position: it is not the case that the current word has at least two letters and is uppercase."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "present",
+      "absent"
+    ]
+  },
+  "wordlist_auxiliary": {
+    "class": "semantic",
+    "domain": "prose",
+    "jlens": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "nla": [
+      [
+        "The current text prefix satisfies this statement: the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would.",
+        "The current text prefix satisfies this statement: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would."
+      ],
+      [
+        "At the read position, the following statement is true: the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would.",
+        "At the read position, the following statement is true: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would."
+      ]
+    ],
+    "olens": [
+      [
+        "- the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would",
+        "- it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would"
+      ],
+      [
+        "- At the read position: the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would.",
+        "- At the read position: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): am, are, be, been, being, can, could, did, do, does, had, has, have, is, may, might, must, shall, should, was, were, will, would."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "present",
+      "absent"
+    ]
+  },
+  "wordlist_preposition": {
+    "class": "semantic",
+    "domain": "prose",
+    "jlens": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "kind": "binary",
+    "logit": [
+      [
+        "true",
+        "false"
+      ],
+      [
+        "yes",
+        "no"
+      ]
+    ],
+    "nla": [
+      [
+        "The current text prefix satisfies this statement: the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without.",
+        "The current text prefix satisfies this statement: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without."
+      ],
+      [
+        "At the read position, the following statement is true: the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without.",
+        "At the read position, the following statement is true: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without."
+      ]
+    ],
+    "olens": [
+      [
+        "- the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without",
+        "- it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without"
+      ],
+      [
+        "- At the read position: the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without.",
+        "- At the read position: it is not the case that the current word is one of these exact words (case-insensitive, not contextual POS): at, between, by, for, from, in, on, over, to, under, with, without."
+      ]
+    ],
+    "score_orientation": "value_A_positive",
+    "values": [
+      "present",
+      "absent"
+    ]
+  }
+}

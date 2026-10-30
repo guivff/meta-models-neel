@@ -1,0 +1,34 @@
+{
+  "status": "GATE_DID_NOT_PASS",
+  "first_output_utc": "2026-10-28T18:00:19.673014+00:00",
+  "first_output_source": "out/PARAMETERS.json PAX mtime",
+  "gpu_type": "H200",
+  "training_admitted": false,
+  "production_checkpoint": "original pinned adapter only; disposable gate adapter never used",
+  "sealed_greedy_comparison": [
+    {
+      "id": "asserted_vs_hypothetical:6:0:0",
+      "byte_equal": false,
+      "first_divergence_utf8_byte": 307
+    },
+    {
+      "id": "asserted_vs_hypothetical:6:0:1",
+      "byte_equal": true,
+      "first_divergence_utf8_byte": null
+    },
+    {
+      "id": "asserted_vs_hypothetical:6:1:0",
+      "byte_equal": false,
+      "first_divergence_utf8_byte": 93
+    }
+  ],
+  "failure": {
+    "reason": "sealed greedy parity failed; no training performed",
+    "status": "GATE_DID_NOT_PASS",
+    "type": "RuntimeError",
+    "utc": "2026-10-28T18:01:16.697289+00:00"
+  },
+  "archive_path": "/private/tmp/e102-i4-gate-a1/backups/1793210484854545000.full.tar.gz",
+  "archive_sha256": "a8c5ac99b7a1ef582836f3518a2660bc63401d454ab05505476141c31f16281e",
+  "pod_id": "rc53kiabq720qx"
+}

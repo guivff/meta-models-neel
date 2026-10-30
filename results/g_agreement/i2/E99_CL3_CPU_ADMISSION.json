@@ -1,0 +1,57 @@
+{
+  "at_utc": "2026-10-28T13:54:51.366627+00:00",
+  "status": "CPU_ONLY_SUPERSEDED_BY_DIRECT_Guiv_WAIT_OFFICIAL_FIX_NOT_LAUNCHED",
+  "authority": "a5bbbe493956b3f89a35b1beb56674d1d8cd7262",
+  "baseline_source_commit": "11503fdc8",
+  "source_sha256": "0ae4fcce8329af804ed8e940eae2fae7e92ac2d51d40763ca1c62c9ce70e84bb",
+  "source_archive_sha256": "4293eed93ed8dd546345022a73619a7c6f1519ffe4c3b1a3aa5c316366730475",
+  "input_archive_sha256": "9bddcdc533b88af7f3d73ba5f8d12c003d20e3b7e0e8278b8c2df97dbfb8ba93",
+  "profile_shards": [
+    {
+      "shard": 0,
+      "input_sha": "106055b3f57b95c6a3e13f5c5bebe7393775f583bc3fd7ffc1405b6901cd1d12"
+    },
+    {
+      "shard": 1,
+      "input_sha": "9ac6c9bd3fa6ee03edb0d22ce3843fe3b046f14a1889596b3e71165d9492cd1d"
+    },
+    {
+      "shard": 2,
+      "input_sha": "d92ffd4e01336dbd96a5aa7afe8c38929c5a816040d97bdd3ec209d58cd28e86"
+    },
+    {
+      "shard": 3,
+      "input_sha": "5f166242a55108305e55644e62666d6eebaed7f7a9460a42b7cb732181f54cc5"
+    }
+  ],
+  "batch_size": 32,
+  "parity_run_and_report": true,
+  "parity_mismatch_stops": false,
+  "first_divergence_basis": "zero-based canonical JSON Unicode character (reader API returns text, no generated token IDs)",
+  "fatal_gates": [
+    "loadfailure",
+    "nonfinite",
+    "crash"
+  ],
+  "GPU_type": "H200",
+  "one_pod_all4_profiles": true,
+  "original_custody_cap_seconds": 21600,
+  "GPU_upper_usd": 33.74,
+  "aggregate_experiment_cap_GPU_hours": 24,
+  "combined_conservative_GPU_planning_upper_usd": 1034.7,
+  "full_scientific_shards_not_yet_admitted": true,
+  "judge_cap_usd": 40,
+  "judge_priority": [
+    "hallucination",
+    "R-WS2"
+  ],
+  "CPU_tests": "5scope + non-gating mismatch and fatalnonfinite checks PASS",
+  "unchanged_science": "516real/90placebo/46383cells; alloriginalIDs/positions/layers/decoding; same paired norm and seed",
+  "source_changes": [
+    "E99only parity99 reporter; no baseline batch_parity.py edit",
+    "full endpoint staging measured and included in forecast",
+    "finite checks every batch"
+  ],
+  "GPU_allocation": false,
+  "official_replacement": "fe89b6048"
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "i2-e73-native-closeout-v1",
+  "track": "C",
+  "run_id": "e73-native-700-20261027-ae31701e",
+  "shard_positions_planned": 700,
+  "status": "TERMINATED_QUERY_NULL",
+  "creation_epoch": 1793120321.488,
+  "first_query_confirmed_exited_epoch": 1793120552.396332,
+  "stop_confirmed_utc": "2026-10-27T17:02:32.396332+00:00",
+  "terminated_query_null_utc": "2026-10-27T17:14:28.684759+00:00",
+  "gpu_count": 1,
+  "accepted_gpu_usd_per_hour": 5.29,
+  "container_disk_gb": 200,
+  "volume_disk_gb": 0,
+  "shared_volume_mount": "/weights",
+  "costs": {
+    "seconds": 230.9083321094513,
+    "gpu_usd": 0.3393069657941659,
+    "container_usd": 0.0019089643858254905,
+    "all_in_ceiling_usd": 0.35,
+    "billing_basis": "creation_to_query_confirmed_EXITED"
+  },
+  "billing_once_key": "e73-native-700-20261027-ae31701e",
+  "parent_ledger_booking_required_once": true,
+  "shared_compute_or_log_edited": false,
+  "model_started": true,
+  "model_readiness_complete": false,
+  "completed": {
+    "oracle": 0,
+    "nla": 0
+  },
+  "reader_payloads_created": false,
+  "partial_custody_verified": true,
+  "partial_custody_receipt_sha256": "b527cc256165da2ecebe82f4bc35273d44613b8ed9484f96752549f5a9964617",
+  "private_whitener_absent_basis": "Exact staged archive excluded private whitener; first-reader initialization failed before any readout. STOP clears container disk; /workspace was container-backed.",
+  "queue_assessment": "No currently eligible job; runtime failure requires separate investigation and new authorization.",
+  "exact_guard_processes_remaining": 0,
+  "traceback_recovered": false,
+  "no_restart_or_model_retry": true,
+  "traceback_limitation": "C700 worker.log was not pulled before STOP and was on container disk. Container disk is cleared on stop; C300 could not see that task path.",
+  "provider_storage_documentation": "https://docs.runpod.io/pods/storage/types",
+  "reader_outputs_opened": false
+}

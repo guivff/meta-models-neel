@@ -1,0 +1,31 @@
+{
+  "experiment": "E133b",
+  "status": "ACTUAL_SOURCE_CUSTODY_RECONCILIATION_REQUESTED_FROM_OPERATOR",
+  "as_of_trigger": "2026-10-30T02:35:04Z",
+  "actual_assignment": {
+    "pod_id": "c76ohpb9dxd1ku",
+    "source_sha256": "23e9492422c4096ea33fc8e398b21568311ef196cea465a45a15e605fd446dff",
+    "input_sha256": "0d2bd3968b0f4eb6981d960d3054ebc87d2e2ae52e150395d82a894ec56e2ec1",
+    "pod_created_epoch": 1793326932.514,
+    "absolute_deadline_epoch": 1793329092.514,
+    "cap_seconds": 2160
+  },
+  "public_assignment_copy_matches_local": true,
+  "final_delivered_source_sha256": "4bf90b4362cd4b4d685d949a6d255b92b980852456a204450a06a69207566c6b",
+  "comparison": {
+    "original_v3_197_members": "ALL_IDENTICAL",
+    "e133b_runner": "IDENTICAL",
+    "CPU_selection_entrypoint": "IDENTICAL b589dbaa8efb380474e570b69937af9ba2f8cf4203c1ce4c3b97c0af54635f4c",
+    "added_dependency_files": [
+      "projects/g_agreement/core/accounting.py",
+      "projects/g_agreement/core/config.py"
+    ],
+    "changed_reference_file": "projects/g_agreement/e133_trackq/select133.py v2->v3; distinct from unchanged C CPUselection entrypoint"
+  },
+  "no_acquisition_arithmetic_difference_found": true,
+  "actual_CPU_selector_execution_not_attested_by_C": true,
+  "operator_action": "Record exact staged archive/worker/source and actual CPU selector runtime dependencies/version/call chronology; preserve actual original assignment and clock; no silent restage/reseal, guard reset, replay or duplicate launch. Return receipt via HANDOFF.",
+  "C_actual_screen_or_array_opening": false,
+  "C_operator_edit": false,
+  "C_pod_call": false
+}

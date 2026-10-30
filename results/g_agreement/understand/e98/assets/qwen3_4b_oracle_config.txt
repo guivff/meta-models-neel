@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "base_model": "Qwen/Qwen3-4B",
+  "model_type": "qwen3",
+  "hidden_size": 2560,
+  "layers": [
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34
+  ],
+  "checkpoint": "rl.qwen3-4b.e2.main.s0/iter_000425",
+  "adapter_type": "LoRA",
+  "rank": 16,
+  "lora_alpha": 32,
+  "prompt_template": "An activation vector from layer {layer} of a language model is enclosed in activation tags: <activation>{marker}</activation>. Produce distinct concepts that encode this activation, each as a '- ' bullet on its own line.",
+  "injection": {
+    "location": "input_embedding",
+    "operation": "replace",
+    "marker": "㈎",
+    "token_id": 149705,
+    "neighbor_ids": [
+      29,
+      522
+    ],
+    "norm": 16000.0,
+    "input_space": "raw residual direction; not whitened"
+  },
+  "generation": {
+    "max_new_tokens": 128,
+    "sample_temperature": 1.0,
+    "sample_top_p": 1.0,
+    "sample_top_k": 0
+  },
+  "base_model_revision": null
+}

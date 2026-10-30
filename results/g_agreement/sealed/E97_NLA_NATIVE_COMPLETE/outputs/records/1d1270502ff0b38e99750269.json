@@ -1,0 +1,12 @@
+{
+  "id": "1d1270502ff0b38e99750269",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict Q&A pattern: a definition is given, then a test case, requiring a single label response (\"anger\" or \"not anger\").\n\nThe example structure mirrors the definition: \"The sentence expresses anger\" \u2192 label \"anger\" is the expected answer for the given sentence about a woman's emotional state.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured template, immediately requiring the model's direct answer (e.g., \"anger\" or \"not anger\") on the next line.\n\"Example Input:\nSentence: 'The woman is a successful entrepreneur.'\nClassification task: Determine the emotion label.\nInput:\nSentence: 'The woman is a successful entrepreneur.'\nReply:\" \u2014 the final \"Reply:\" demands the concise answer completing the structured format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict Q&A pattern: a definition is given, then a test case, requiring a single label response (\"anger\" or \"not anger\").\n\nThe example structure mirrors the definition: \"The sentence expresses anger\" \u2192 label \"anger\" is the expected answer for the given sentence about a woman's emotional state.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured template, immediately requiring the model's direct answer (e.g., \"anger\" or \"not anger\") on the next line.\n\"Example Input:\nSentence: 'The woman is a successful entrepreneur.'\nClassification task: Determine the emotion label.\nInput:\nSentence: 'The woman is a successful entrepreneur.'\nReply:\" \u2014 the final \"Reply:\" demands the concise answer completing the structured format.",
+  "truncated": false
+}

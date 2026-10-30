@@ -1,0 +1,12 @@
+{
+  "id": "d9c54adbd8e9ebb3fe9e6e4f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict template: \"Given sentence: [X] / Classification: [options] / Reply:\" demands the model output the correct label (\"Positive\" or \"Negative\").\n\nThe example sentence \"The movie was a success\" is clearly positive sentiment, so the answer must be \"Positive.\"\n\n\"Reply:\" is the final prompt token, part of the structured task format, immediately requiring the model's direct answer (the classification label) to follow.\n\"Given the following example format:\nSentence: 'The movie was a success.'\nClassification options: Positive or Negative\nGiven sentence: 'The movie was a success.'\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, expecting the concise answer \"Positive\" or similar short response on the next line.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict template: \"Given sentence: [X] / Classification: [options] / Reply:\" demands the model output the correct label (\"Positive\" or \"Negative\").\n\nThe example sentence \"The movie was a success\" is clearly positive sentiment, so the answer must be \"Positive.\"\n\n\"Reply:\" is the final prompt token, part of the structured task format, immediately requiring the model's direct answer (the classification label) to follow.\n\"Given the following example format:\nSentence: 'The movie was a success.'\nClassification options: Positive or Negative\nGiven sentence: 'The movie was a success.'\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, expecting the concise answer \"Positive\" or similar short response on the next line.\n\"Reply:\"",
+  "truncated": false
+}

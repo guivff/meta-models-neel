@@ -1,0 +1,109 @@
+{
+  "F_seconds": null,
+  "authority_commit": "6a2b114e",
+  "authority_git_blob": "bd118c1f24ee9741e916350ff64b244cdb48b57f",
+  "batch": 8,
+  "bootstrap": {
+    "primary_unit": "row,25 draws per resample",
+    "reward_unit": "recipient item, keeping arms/variants together",
+    "samples": 2000,
+    "seed": 20261025,
+    "undefined_correlations": "report count; CI over finite resamples; undefined point not evaluable"
+  },
+  "brief_sha256": "5e5c105997dd08b821b838854802c5dd85ceac9029d22ed425f3526bc77025eb",
+  "cap_formula": "min(1.5F+360,2400,reserved)",
+  "dev_items": 2100,
+  "experiment": "E21",
+  "failure": "NO_FIT before production if full forecast plus retrieval exceeds cap; otherwise preserve INCOMPLETE partial seal; no automatic retry",
+  "falsifiers": "rho<=0.20; report every structure row describe>=0.80 and Oracle<=0.60; no added row-count threshold",
+  "first_science": "first timed pilot; immutable clock",
+  "forecast": "sum four paths(N_units*median3timed pilot durations)+sum12timed pilot durations",
+  "input_seal_sha256": "a617fde6bc3c2511383537e3153f84c56d1b34108ee04e4aa4ac671c628fdd53",
+  "items_per_row_per_split": 84,
+  "models": "official AR only; load once during setup and use same object/process for warm-up and science",
+  "new_capture": false,
+  "new_generation": false,
+  "original_registration_commit": "e71d1eeb",
+  "paths": [
+    "dev_real",
+    "description",
+    "exhibit_e15",
+    "exhibit_real"
+  ],
+  "pilot": "discarded dev-derived copies; append neutral text only in pilot to cover longest production token length per path; never used to fit or score",
+  "primary_measure": "raw_cosine_true_minus_opposite",
+  "primary_prediction": "Spearman rho(describe reward,W1 Oracle asked AUROC)>=0.50 and row-bootstrap CI lower>0; all25rows",
+  "probe_secondary": {
+    "L2_lambda": 0.001,
+    "LBFGS_max_iter": 200,
+    "describe": "mean variant score signed to own truth; true-vs-opposite AUROC, item bootstrap",
+    "exhibit": "original across-true-state AUROC of true-exhibit mean score, A positive",
+    "implementation": "mats.probes.fit_logreg",
+    "training": "84 dev real-continuation reconstructions per row; dev mean/std only; no test fitting or selection"
+  },
+  "production_units": {
+    "description": 1050,
+    "dev_real": 263,
+    "exhibit_e15": 336,
+    "exhibit_real": 357
+  },
+  "reconstruction_counts": {
+    "description": 8400,
+    "dev_real": 2100,
+    "exhibit_e15": 2688,
+    "exhibit_real": 2856
+  },
+  "retrieval_reserve_seconds": 180,
+  "reward": "fraction positive true-minus-opposite contrast; exact ties weight0.5, both describe and exhibit per user clarification",
+  "rows": [
+    "json_status",
+    "json_type",
+    "latex_environment",
+    "latex_role",
+    "latex_section",
+    "latex_subject",
+    "list_depth",
+    "list_index",
+    "list_priority",
+    "list_topic",
+    "prose_paren",
+    "prose_quote",
+    "prose_sentence",
+    "prose_sentiment",
+    "prose_topic",
+    "python_argument",
+    "python_comment",
+    "python_depth",
+    "python_error",
+    "python_indent",
+    "python_string",
+    "table_column",
+    "table_role",
+    "table_row",
+    "table_status"
+  ],
+  "science_ceiling_seconds": 2400,
+  "secondary_predictions": {
+    "content_minus_structure_describe_medians": ">=0.15",
+    "structure_median_exhibit_minus_describe": ">=0.15"
+  },
+  "section": 113,
+  "setup_allowance_seconds": 1500,
+  "status": "FROZEN_BEFORE_E21_AR",
+  "test_items": 2100,
+  "text_variants": {
+    "E15": "both frozen variants, including all eight rows; no E15 validity filtering",
+    "description": "both olens phrasing pairs verbatim including bullet prefix",
+    "fallback": "exact sealed E1b target greedy continuations, no prefix or new generation versus opposite-value test donor; seed20261025"
+  },
+  "variant_aggregation": "cosine each variant with recipient h, then mean; never cosine of averaged vectors",
+  "warmup": "one unscored setup warmup per path, followed by three timed discarded pilot units each",
+  "whitener_secondary": {
+    "analysis": "post-pull CPU only, same transform on h and AR; invalid transform or zero norm marks secondary unavailable, no substitute",
+    "export": "check official method against exported transform on CPU fixture during setup",
+    "formula": "(x.float32-mu) @ w.T",
+    "moments_sha256": "178ceb36251e5e7ed2eb51aa54ccc4eac45dc928116b7498b46d22657a31c62a",
+    "ridge_c": 0.1,
+    "source": "a32590085a6070d75f950155d3c2b3db3eec97ef"
+  }
+}

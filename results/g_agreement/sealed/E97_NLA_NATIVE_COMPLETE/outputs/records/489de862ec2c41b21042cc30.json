@@ -1,0 +1,12 @@
+{
+  "id": "489de862ec2c41b21042cc30",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task (Positive/Negative) with a worked example, requiring the model to output the correct label for the given sentence.\n\nThe example sentence \"The man is a good friend\" is semantically positive, so the expected answer is \"Positive.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured format, immediately requiring the model's direct answer (e.g., \"Positive\" or \"Negative\") on the next line.\n\"Given the following sentence, determine the sentiment label (Positive or Negative) based on the provided example.\nSentence: 'The man is a good friend.'\nExample format: [sentence] \u2192 [label]\n...\nGiven the above, determine the sentiment label.\nReply:\" \u2014 the final prompt field awaiting the concise answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task (Positive/Negative) with a worked example, requiring the model to output the correct label for the given sentence.\n\nThe example sentence \"The man is a good friend\" is semantically positive, so the expected answer is \"Positive.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured format, immediately requiring the model's direct answer (e.g., \"Positive\" or \"Negative\") on the next line.\n\"Given the following sentence, determine the sentiment label (Positive or Negative) based on the provided example.\nSentence: 'The man is a good friend.'\nExample format: [sentence] \u2192 [label]\n...\nGiven the above, determine the sentiment label.\nReply:\" \u2014 the final prompt field awaiting the concise answer.",
+  "truncated": false
+}

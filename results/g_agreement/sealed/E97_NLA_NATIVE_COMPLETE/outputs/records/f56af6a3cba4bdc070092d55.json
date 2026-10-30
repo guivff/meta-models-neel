@@ -1,0 +1,12 @@
+{
+  "id": "f56af6a3cba4bdc070092d55",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is providing a task format, expecting a response to analyze or process something within code blocks.\n\nThe repeated `#code`/`#code` structure signals a template or form where a second code block or example is being introduced, mirroring the first.\n\nFinal token `\\code` is a partial/variant of the opening `#code` tag, likely beginning a second code block delimiter or placeholder, expecting closing content or a new code snippet to follow.\n\"Please provide the following information:\\n#code\\n\\n#code\" \u2014 the pattern suggests a parallel structure where the second instance mirrors the first, so next tokens likely continue with actual content or a closing tag like `...` or `...`\n\"Please provide the following information:\\n\\code\" \u2014 a second prompt line, expecting similar formatting continuation.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is providing a task format, expecting a response to analyze or process something within code blocks.\n\nThe repeated `#code`/`#code` structure signals a template or form where a second code block or example is being introduced, mirroring the first.\n\nFinal token `\\code` is a partial/variant of the opening `#code` tag, likely beginning a second code block delimiter or placeholder, expecting closing content or a new code snippet to follow.\n\"Please provide the following information:\\n#code\\n\\n#code\" \u2014 the pattern suggests a parallel structure where the second instance mirrors the first, so next tokens likely continue with actual content or a closing tag like `...` or `...`\n\"Please provide the following information:\\n\\code\" \u2014 a second prompt line, expecting similar formatting continuation.",
+  "truncated": false
+}

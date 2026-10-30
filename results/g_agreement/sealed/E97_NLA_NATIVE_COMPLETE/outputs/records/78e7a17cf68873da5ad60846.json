@@ -1,0 +1,12 @@
+{
+  "id": "78e7a17cf68873da5ad60846",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot classification format established: example sentence followed by sentiment label, now requiring the model to output the correct label for the given sentence.\n\nThe prompt explicitly frames a binary choice (\"positive or negative\") and provides a structured template with \"Example sentence\" and \"Question\" fields, constraining the response to a short sentiment label.\n\n\"Reply:\" is the final token, acting as a prompt label/field marker in the structured format, immediately requiring the model's direct answer (e.g., \"Positive\" or \"Negative\") to follow.\n\"Given the following sentence: 'The individual's conduct is commendable, demonstrating a strong sense of responsibility.'\nQuestion: What is the sentiment label?\nOptions: positive or negative\nReply:\" \u2014 the final \"Reply:\" token demands the model's answer as the very next token, completing the response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot classification format established: example sentence followed by sentiment label, now requiring the model to output the correct label for the given sentence.\n\nThe prompt explicitly frames a binary choice (\"positive or negative\") and provides a structured template with \"Example sentence\" and \"Question\" fields, constraining the response to a short sentiment label.\n\n\"Reply:\" is the final token, acting as a prompt label/field marker in the structured format, immediately requiring the model's direct answer (e.g., \"Positive\" or \"Negative\") to follow.\n\"Given the following sentence: 'The individual's conduct is commendable, demonstrating a strong sense of responsibility.'\nQuestion: What is the sentiment label?\nOptions: positive or negative\nReply:\" \u2014 the final \"Reply:\" token demands the model's answer as the very next token, completing the response.",
+  "truncated": false
+}

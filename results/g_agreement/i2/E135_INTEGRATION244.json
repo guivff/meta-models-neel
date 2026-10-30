@@ -1,0 +1,68 @@
+{
+  "experiment": "E135",
+  "section": 244,
+  "authority_commit": "5a250e52a6bf4daa8826becc7315ba644d08cad1",
+  "direct_user_assignment": true,
+  "integrator": "I-2",
+  "runner_package_owner": "W-mechanism-C",
+  "adapter_owner": "W-mech2",
+  "judging_owner": "W-internals-C",
+  "reviewer": "R-Q;R-3 if R-Q late",
+  "status": "AUTHORIZED_AWAITING_ORIGINAL_RUNNER_PACKAGE",
+  "pods_authorized": 1,
+  "created_after": "E131 pod creation; receipt already present in Track Q FILE handoff",
+  "cap_seconds_from_creation": 2880,
+  "hard_stop": "min(creation+2880seconds,2026-10-30T12:50:00Z)",
+  "create_cutoff_utc": "2026-10-30T10:00:00Z",
+  "seal_cutoff_utc": "2026-10-30T13:00:00Z",
+  "analysis_and_review_seal_utc": "2026-10-30T17:00:00Z",
+  "gpu_ceiling": {
+    "ruling": "e72952df6bef4cf2c9850ec9f461b1e6f684c8a8",
+    "booked_plus_all_active_caps_usd": 2500,
+    "warning_only_usd": 2000,
+    "parked900_pool": "unchanged; no new allocation from it"
+  },
+  "design": {
+    "original_test_items": 84,
+    "doses": [
+      3,
+      5,
+      6
+    ],
+    "conditions": [
+      "fact_direction",
+      "original_random_direction"
+    ],
+    "read_blocks": [
+      44,
+      52
+    ],
+    "expected_readouts": 1008,
+    "hook": "original E104 block40/eight positions before read token/class-mean direction unchanged",
+    "outputs": [
+      "greedy answer",
+      "same-forward pair-logit preference",
+      "Oracle44/52",
+      "calibration ratios"
+    ],
+    "calibration": "norm(alpha*d)/median L2 norm of unsteered block40 residual at original steered positions; alpha3,5,6 and original alpha2,4,8 computed without reruns",
+    "reading": "descriptive only; per dose and fixed42 originalalpha4cohort; frozen source-bound joins CPU-only"
+  },
+  "judging": {
+    "separate_bank": "E135",
+    "ceiling_usd": 2,
+    "queue_priority": "after E107b before E95",
+    "rubric": "original E104 value codes",
+    "paid_stop_utc": "2026-10-30T15:00:00Z",
+    "if_cannot_finish": "judging NOT RUN/partial as actual; GPU pair logits/calibration still reportable"
+  },
+  "gates": [
+    "verify original package source/input/archive/dependency seals and synthetic tests",
+    "deduplicate existing owned E135 work before any create",
+    "fresh actual all-track booked+activecaps,storage,stock/rate/spacing and independent originalstop guards before create",
+    "CPU-only labels and identity joins; no private truth on pod",
+    "outputs remain sealed until tested adapter committed; no scientific opening by integrator",
+    "no reset,retry,rerun or competing allocation inferred"
+  ],
+  "as_of_utc": "2026-10-30T01:51:17.993468+00:00"
+}

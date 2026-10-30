@@ -1,0 +1,96 @@
+{
+  "E139_real_scoring": false,
+  "GPU_calls": 0,
+  "authority": "\u00a7251 amendment1 f60c40b7b",
+  "bootstrap": {
+    "draws": 2000,
+    "n": 20,
+    "paired": true,
+    "seed": 20261030,
+    "unit": "original item withinstate"
+  },
+  "delta_u": {
+    "authority": "section251 clarification1, committed before E139 scoring",
+    "bootstrap": "paired original20items; hold dev direction fixed; seed20261030;2000 draws",
+    "conditions": [
+      "true",
+      "false",
+      "neutral"
+    ],
+    "direction": "m1,m0 are means of original true text-span AR rebuilds in the two frozen DEV classes; d=(m1-m0)/norm(m1-m0)",
+    "formula": "mean_i(<AR(r_i+u_i)-AR(r_i),d>)/<m1-m0,d>",
+    "space": "native reconstructor whitened output at tag44; no second whitening, fitted alignment or target-activation direction",
+    "status": "KERNEL_TESTED; actual sealed span-rebuild sources still to bind",
+    "zero_gap": "NOT EVALUABLE; no imputation"
+  },
+  "evidence": [
+    {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e139-evidence-v1/model_card.md",
+      "sha256": "cfcbd502f2739a4ee7696872754afdd33d893a14e8b057f50184b21358c8afb9"
+    },
+    {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e139-evidence-v1/released_rl_reward.py",
+      "sha256": "ba73cb6cde1ef71fd4757417e8a5fa9e17b1c3af47cf568dd40fe0a5e9316063"
+    },
+    {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e139-evidence-v1/nnomp.py",
+      "sha256": "1e73f3c1a303b08e860def66b4f6f9adde570c6ba9f17445a73db8bdc43379de"
+    },
+    {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e139-evidence-v1/whitening.py",
+      "sha256": "265aaa493cfaeadd3ca2dbb110191f1f70c1163eed4c6a906cdfb57f73667415"
+    },
+    {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e139-evidence-v1/ar_loader.py",
+      "sha256": "e4dbc7c60bcff3acd8bc8d1e3ede96156621c5a21da1398119bb0d5a870028df"
+    },
+    {
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e139-evidence-v1/multilayer_reconstructor.py",
+      "sha256": "8983ebe11175541414a6b80c4cbeade171301f0ffd2d3c8aecceed81de32dc32"
+    }
+  ],
+  "experiment": "E139",
+  "instrument_gate": "At least one of language/fact_recall paired mean(true-neutral) bootstrap95%lower>0; else NOT EVALUABLE(instrument), no structural interpretation.",
+  "model_card": {
+    "URL": "https://huggingface.co/agu18dec/olens_and_ar/raw/c95215d5d2f6250f20c305ae55c6e4d7569f92dc/README.md",
+    "repo": "agu18dec/olens_and_ar",
+    "revision": "c95215d5d2f6250f20c305ae55c6e4d7569f92dc",
+    "sha256": "cfcbd502f2739a4ee7696872754afdd33d893a14e8b057f50184b21358c8afb9",
+    "statement": "Card identifies s3d.rl600 as GRPO trained against joint bullet-FVE on the published ptag AR, and requires separately provided whitening moments."
+  },
+  "pinned_utc": "2026-10-30T04:32:19.808184+00:00",
+  "primary_score_label": "proxy reward",
+  "proxy_definition": {
+    "AR": "Existing project-owned E130 OLensAR pinned base6a9e13bd/ARc95215d5, tag44, fixed(li,ln), batch16, no Surajrepo execution or recalibration.",
+    "appends": "Four exact WHOLE readout strings (original, +true, +false, +matchedneutral) passed through unchanged E130 reconstructor. No bullet/word stripping or truncation, no appended-token loss. This is a whole-readout proxy, NOT an execution of released joint_bullet_FVE.",
+    "coordinates": "Use native AR head output in E125/E130 whitened-output convention; raw source h44 transformed ONCE by original mu44/W44. No second whitener on the native AR output or fitted alignment. Prior failed E125 space proof remains a limitation; instrument gate mandatory.",
+    "normalization": "No per-vector unit scaling or NNLS fit in PRIMARY proxy; denominator is same item gold_white squared norm, fixed across all four conditions; not batch-derived variance. Released joint-FVE math retained as source-audit reference only.",
+    "score": "Per-item whitened reconstruction-FVE=1-||native_AR_prediction-gold_white||\u00b2/max(||gold_white||\u00b2,1e-12). Explicit proxy reward; no claim of actual joint-training reward.",
+    "whitener_sha256": "178ceb36251e5e7ed2eb51aa54ccc4eac45dc928116b7498b46d22657a31c62a"
+  },
+  "proxy_reason": [
+    "Cannot certify that the pinned LC joint wrapper is the exact s3d.rl600 ptag execution path or all launch parameters. Prior E26 audit independently documented this mismatch.",
+    "E125 li/ln coordinate proof failed mean/cosine, and E130 true-span control was uninformative; these are not silently repaired, calibrated or treated as validation.",
+    "Exact training wrapper/cap unresolved; fallback therefore uses E125/E130 whole-readout reconstructions, compatible with released E139 reconstructor-only runner. Joint NNLS numeric fixture audits the released formula but is not the primary runtime score."
+  ],
+  "released_code": {
+    "commit": "a32590085a6070d75f950155d3c2b3db3eec97ef",
+    "executed": false,
+    "read_only": true,
+    "repo": "agu18dec/olens_draft"
+  },
+  "status": "TRAINING_FORMULA_PINNED_EXECUTION_NOT_CERTIFIED_USE_PROXY",
+  "tokenizer_data": {
+    "read_only": true,
+    "repo": "Qwen/Qwen3.6-27B",
+    "revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+    "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+  },
+  "training_formula": {
+    "fit": "Nonnegative fit initialized0,80 projected-gradient updates, step1/trace(Gram), validmask. FVE=1-||gold-sum(a_j*bullet_j)||\u00b2/max(||gold||\u00b2,1e-12). Empty parsed bullet set scores0.",
+    "normalization": "Each whitened bullet image normalized by norm+1e-9. Gold is not unit normalized for NNLS. FVE denominator is gold squared norm, floor1e-12; not within-item/batch variance.",
+    "parsing": "Released split_bullets strips scaffolding, uses - lines, default k_max4; fallback whole prepared text. reward_text_ids caps each phrase64tokens.",
+    "reward_wrapper": "Pinned score_texts_joint directly requires recon.layer_emb and layer-conditioned block/head path; released ptag checkpoint has tag_ids, no layer_emb. Card does not bind the actual launch k_max/shaping configuration to this function.",
+    "space": "Both raw prediction and raw gold centered by original mu44 and multiplied by original W44 transpose; ridge .1 times mean diagonal covariance"
+  }
+}

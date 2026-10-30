@@ -1,0 +1,28 @@
+{
+  "status": "FROZEN_BEFORE_E13_CODING",
+  "seed": 20261024,
+  "section": 101,
+  "api_cap_usd": 5,
+  "model": "google/gemini-3.1-flash-lite",
+  "provider": "google-vertex/global",
+  "reasoning": "minimal",
+  "workers": 8,
+  "retries": 0,
+  "batch_size": 1,
+  "unique_requests": 300,
+  "full_call_reservation_usd": "1.2414062500",
+  "metrics": "Primary test sample only. Mention rate per reader/row and Wilson95; among mentions, binary-value accuracy/Wilson95 (UNSPECIFIED/CONFLICT incorrect). Missing codes excluded from rates, counts explicit, missing-as-no/yes bounds descriptive. NLA-Oracle paired item bootstrap2000/seed20261024 over states with valid codes for both. Conditional-accuracy difference bootstrap keeps same sampled items; unavailable if either side has no mentions or fewer than1900/2000 draws have mentions for both readers. Keyword regex rate and judge/script disagreement counts as cross-check only. No new confirmatory thresholds. Only two W1 rows; no general claim over16 or §84.",
+  "validation": "Single-readout schema/mention-value validation; no retry/repair. Exact evidence is an audit flag, not an exclusion criterion for typed primary codes, to avoid E10 quote-validation attrition. Each response independent. No one-to-one matching stage.",
+  "sealing": "Coding and keyword flags sealed before metric/value join. Authorized row/value-stratified sampling is the only pre-code use of labels. No source prompts/labels/reader names/paths sent. Fixed questions give both possible values, never the true one.",
+  "frozen_files": {
+    "projects/g_agreement/understand/e13/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "projects/g_agreement/understand/e13/analyse.py": "14e7b57f2cbae9ab0c0d6f25f1ab307c12b735b91c5ba6180aa6a190935143b9",
+    "projects/g_agreement/understand/e13/api.py": "53469038480ef6834c18cd0b5bb40e55d614bb3c8d3c56bda6f36fa67a989f76",
+    "projects/g_agreement/understand/e13/io.py": "7fe09935d0296fc4b0b31e57f49a6e40015b692585677c76b0662fba3664b946",
+    "projects/g_agreement/understand/e13/pool.py": "20bf6e2d115d2cae6e8254a654c117172b5e8cad557e660e261614110ac78879",
+    "projects/g_agreement/understand/e13/protocol.py": "92a43da438aa9a0271027749815fa3087fbf57849e525807f69cc0ebe29ade91",
+    "projects/g_agreement/understand/e13/run.py": "9035ab7453ab35379c7a1b35a1e26316d7432491495635be8a9e594168a467d8",
+    "results/g_agreement/understand/e13/JUDGE_PROMPT.json": "35bd30c7853c9b201ebd22e894473c538a3354b28b2a6ff86cc3ff19fa93697d",
+    "results/g_agreement/understand/e13/POOL_MANIFEST.json": "afb034f1b7240bcc3094adca559b9428ef95f540fb82d1157868327df4cf800b"
+  }
+}

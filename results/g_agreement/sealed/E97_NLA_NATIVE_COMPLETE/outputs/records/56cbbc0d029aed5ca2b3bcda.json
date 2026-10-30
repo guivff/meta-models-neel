@@ -1,0 +1,12 @@
+{
+  "id": "56cbbc0d029aed5ca2b3bcda",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a structured prompt-response pattern, where \"Question:\" and \"Answer:\" fields establish a template requiring a direct response.\n\nThe user is asking for a sentence rewrite example, so the model must generate a rewritten sentence demonstrating the \"active voice\" transformation of the given topic (e.g., \"The government should...\").\n\n\"Answer:\" is the final token, functioning as a label/field header in a structured prompt template, immediately requiring the actual rewritten sentence or explanation as its content.\n\"Please rewrite the sentence according to the following instructions.\nQuestion: What is the example of the sentence?\nAnswer:\" \u2014 this meta-prompt structure signals the next tokens should be a model-generated response or placeholder, likely starting with a sentence or \"I don't know.\"\n\"Question: ...\nAnswer:\" pattern demands the response content follows immediately.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a structured prompt-response pattern, where \"Question:\" and \"Answer:\" fields establish a template requiring a direct response.\n\nThe user is asking for a sentence rewrite example, so the model must generate a rewritten sentence demonstrating the \"active voice\" transformation of the given topic (e.g., \"The government should...\").\n\n\"Answer:\" is the final token, functioning as a label/field header in a structured prompt template, immediately requiring the actual rewritten sentence or explanation as its content.\n\"Please rewrite the sentence according to the following instructions.\nQuestion: What is the example of the sentence?\nAnswer:\" \u2014 this meta-prompt structure signals the next tokens should be a model-generated response or placeholder, likely starting with a sentence or \"I don't know.\"\n\"Question: ...\nAnswer:\" pattern demands the response content follows immediately.",
+  "truncated": false
+}

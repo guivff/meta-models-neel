@@ -1,0 +1,92 @@
+{
+  "status": "AUTOMATIC_CODER_CONSTRUCT_FAILURE",
+  "at": "2026-10-24T05:15:24.661549+02:00",
+  "selection": "Post-seal diagnostic: first three Oracle mention-positive codes per row by seeded hash(e13-diagnostic,case_id). No selection by ground truth, no substitution into registered codes.",
+  "examples": [
+    {
+      "feature": "prose_paren",
+      "case_id": "9adc39ac3cd9ef4da3b920d7e052875b314af600c5924d65f85aa99a967a21c8",
+      "readout": "- /next month. The list highlighted upcoming performances by the local theatre group and a series\n- /month, listing several other events and exhibitions. Among them was a detailed preview of an upcoming theatrical performance scheduled for the coming month\n- （the coming month） of community events. The first item listed was the upcoming poetry recital, featuring a new work by the society’s newest member\n- /month, including plays and readings scheduled for the next month. The notice begins with a statement attributed to the Arts Council",
+      "readout_sha256": "4685fb1f130f8ef33bb8fdc3d5178c2344533a8a0971abcc33c8c0933e3e4c98",
+      "automatic_code": {
+        "mentions": true,
+        "value": "A",
+        "evidence": "（the coming month）",
+        "evidence_exact": true,
+        "evidence_quality_issue": false
+      },
+      "post_seal_observation": "The output enacts punctuation or supplies numbered/narrative content; it does not explicitly assert the original target read position property. Not rescored or filtered."
+    },
+    {
+      "feature": "prose_paren",
+      "case_id": "74ff7ccdd4aee41e1a3c5d9339b4cdd9815f87c94ddbcce3674d7e93bbae06ee",
+      "readout": "- /month, listing upcoming cultural events. The first item listed for the coming month\n- 。（the coming month）, including a new play by the popular dramatist. The list also included upcoming\n- /month ahead, listing various cultural events. Among them was a performance by the local symphony orchestra, scheduled for the coming month\n- （month） of cultural events, alongside a brief note about a new play scheduled for the coming month",
+      "readout_sha256": "3c5b7781577fa52412a8ac28e2c9bdf29668576f90684373a8a3b9fd8173ad80",
+      "automatic_code": {
+        "mentions": true,
+        "value": "CONFLICT",
+        "evidence": "（the coming month）, including a new play... （month） of cultural events",
+        "evidence_exact": false,
+        "evidence_quality_issue": true
+      },
+      "post_seal_observation": "The output enacts punctuation or supplies numbered/narrative content; it does not explicitly assert the original target read position property. Not rescored or filtered."
+    },
+    {
+      "feature": "prose_paren",
+      "case_id": "effd64c9ef1ed3b9ff2f47b90e92f87ba0cef6492d6496e1f42c3c764e117905",
+      "readout": "- /cost involved before making a final decision. The Council will then consider the proposed expenditure\n- （expenditure）before proceeding, and the second reading would follow after the estimated expenditure\n- /cost involved and after further study of the proposed site. The Council had previously deferred consideration of the new library until the estimated expenditure\n- （expenditure）and feasibility before proceeding. The motion was deferred pending the Council’s assessment of the proposed expenditure",
+      "readout_sha256": "614516fdfacf5cee502cf1e6c033a97860c4dd3513aa37b63932241eb75ade00",
+      "automatic_code": {
+        "mentions": true,
+        "value": "CONFLICT",
+        "evidence": "（expenditure）before proceeding",
+        "evidence_exact": true,
+        "evidence_quality_issue": false
+      },
+      "post_seal_observation": "The output enacts punctuation or supplies numbered/narrative content; it does not explicitly assert the original target read position property. Not rescored or filtered."
+    },
+    {
+      "feature": "table_column",
+      "case_id": "adc012b4fe938261c71a67cc6c14ef9c7b79ffe7d172cb97d08a7a641bda0ee6",
+      "readout": "- /nature\" (Note: \"forest\n- /meadow\" (a new timbral context) | `C` | \"forest\n- /nature (C2) | The second note is a **semantic modifier**. The performer must interpret \"forest\n- （forest）, [3] = clock, [4] = echo. The performer must map the abstract musical notation to the semantic content of \"forest",
+      "readout_sha256": "d3588a3184c52aeac10b20780c7fa65331c53727cbbd99c9d0afca15df2faa6c",
+      "automatic_code": {
+        "mentions": true,
+        "value": "B",
+        "evidence": "The second note",
+        "evidence_exact": true,
+        "evidence_quality_issue": false
+      },
+      "post_seal_observation": "The output enacts punctuation or supplies numbered/narrative content; it does not explicitly assert the original target read position property. Not rescored or filtered."
+    },
+    {
+      "feature": "table_column",
+      "case_id": "8504c84380e674606cbd67ff9e2cae51e7a3fcfd212abe1c7fc3e961fcd933f9",
+      "readout": "- /mountain` | `level3: forest / forest\n- /river` (Note: Changed from `level2: forest\n- /mountain/river` | `level3: forest / forest / mountain\n- （forest）, 3: forest, 4: ocean, 5: mountain, 6: forest, 7: ocean, 8: forest",
+      "readout_sha256": "fa8949d0dab111a2aad13c47e2c65593ee8d006f6ba6c99209a5a23ec06965f6",
+      "automatic_code": {
+        "mentions": true,
+        "value": "B",
+        "evidence": "3: forest, 4: ocean, 5: mountain",
+        "evidence_exact": true,
+        "evidence_quality_issue": false
+      },
+      "post_seal_observation": "The output enacts punctuation or supplies numbered/narrative content; it does not explicitly assert the original target read position property. Not rescored or filtered."
+    },
+    {
+      "feature": "table_column",
+      "case_id": "2708e3863bd4423a646178e76cc9af46d2d3a909a4e3b0c04eeea1684ba441be",
+      "readout": "- /garden | Cargo: orchard\n- /vineyard | 2: warehouse / orchard\n- /field (cargo type: orchard) | 2: warehouse / cellar | 3: library / archive | 4: orchard\n- （orchard）, 2: warehouse, 3: cellar, 4: attic | Cargo Type: orchard",
+      "readout_sha256": "04796d159cb116adf787b09f04b3bb55df0da9b21b897bfa011c4436be0ba7e3",
+      "automatic_code": {
+        "mentions": true,
+        "value": "B",
+        "evidence": "2: warehouse",
+        "evidence_exact": true,
+        "evidence_quality_issue": false
+      },
+      "post_seal_observation": "The output enacts punctuation or supplies numbered/narrative content; it does not explicitly assert the original target read position property. Not rescored or filtered."
+    }
+  ],
+  "scope": "Six counterexamples establish instruction noncompliance; not a population false-positive-rate estimate. Original raw codes/metrics/seals preserved."
+}

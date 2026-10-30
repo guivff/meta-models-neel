@@ -1,0 +1,12 @@
+{
+  "id": "a03e15bcc31f9cda4ab97f46",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task: \"love\" or \"hate\" as the only valid responses.\n\nThe example sentence \"The weather is nice today\" is clearly neutral/positive, not expressing hate, so the model must apply the rule to produce the correct label.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"love\" or \"hate\") on the next line.\n\"Given the following instruction: [rule]... Example sentence: 'The weather is nice today.'\nQuestion: What is the appropriate label?\nReply:\" \u2014 this closing \"Reply:\" is a response field prompt demanding the concise label answer immediately follows.\n\"Reply:\" ends the structured template.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task: \"love\" or \"hate\" as the only valid responses.\n\nThe example sentence \"The weather is nice today\" is clearly neutral/positive, not expressing hate, so the model must apply the rule to produce the correct label.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"love\" or \"hate\") on the next line.\n\"Given the following instruction: [rule]... Example sentence: 'The weather is nice today.'\nQuestion: What is the appropriate label?\nReply:\" \u2014 this closing \"Reply:\" is a response field prompt demanding the concise label answer immediately follows.\n\"Reply:\" ends the structured template.",
+  "truncated": false
+}

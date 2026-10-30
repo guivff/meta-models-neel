@@ -1,0 +1,12 @@
+{
+  "id": "26069a9acd2b7af643763d90",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format: a prompt template is given, followed by a task instruction, now requiring the model's actual answer output.\n\nThe \"Example\" section establishes a pattern: a question about British English spelling is posed, and the model must respond in British English style, creating a self-referential loop about the topic.\n\n\"Answer:\" is the final token, a label introducing the model's response to the task, immediately requiring the actual answer text (likely a sentence about the topic, written in British English).\n\"Please write a response based on the following instruction: [instruction].\nInstruction: [instruction about British English spelling].\nQuestion: [question about the topic].\nAnswer:\" \u2014 this structured format demands the model's generated response follows, likely beginning with a sample sentence or explanation.\n\"Answer:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format: a prompt template is given, followed by a task instruction, now requiring the model's actual answer output.\n\nThe \"Example\" section establishes a pattern: a question about British English spelling is posed, and the model must respond in British English style, creating a self-referential loop about the topic.\n\n\"Answer:\" is the final token, a label introducing the model's response to the task, immediately requiring the actual answer text (likely a sentence about the topic, written in British English).\n\"Please write a response based on the following instruction: [instruction].\nInstruction: [instruction about British English spelling].\nQuestion: [question about the topic].\nAnswer:\" \u2014 this structured format demands the model's generated response follows, likely beginning with a sample sentence or explanation.\n\"Answer:\"",
+  "truncated": false
+}

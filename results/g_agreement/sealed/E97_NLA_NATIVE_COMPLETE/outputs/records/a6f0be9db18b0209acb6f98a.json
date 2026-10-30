@@ -1,0 +1,12 @@
+{
+  "id": "a6f0be9db18b0209acb6f98a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with explicit instruction to output only the emotion label, establishing a strict response pattern. The task requires applying the rule to \"The sun is shining.\"\n\nThe example structure (\"Example: [sentence] \u2192 [emotion label]\") sets up a direct parallel: the model must now produce the answer for the given sentence.\n\n\"Reply:\" is the final prompt label in a structured template (\"Given sentence: 'The sun is shining.'\\nSentence: The sun is shining.\\nReply:\"), immediately requiring the emotion label answer (e.g., \"Happy\" or \"Joy\") as the next token.\n\"Please follow the format strictly and provide the answer in the following format.\nGiven sentence: 'The sun is shining.'\nSentence: The sun is shining.\nReply:\" \u2014 the final token demands the actual response text begins here.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with explicit instruction to output only the emotion label, establishing a strict response pattern. The task requires applying the rule to \"The sun is shining.\"\n\nThe example structure (\"Example: [sentence] \u2192 [emotion label]\") sets up a direct parallel: the model must now produce the answer for the given sentence.\n\n\"Reply:\" is the final prompt label in a structured template (\"Given sentence: 'The sun is shining.'\\nSentence: The sun is shining.\\nReply:\"), immediately requiring the emotion label answer (e.g., \"Happy\" or \"Joy\") as the next token.\n\"Please follow the format strictly and provide the answer in the following format.\nGiven sentence: 'The sun is shining.'\nSentence: The sun is shining.\nReply:\" \u2014 the final token demands the actual response text begins here.",
+  "truncated": false
+}

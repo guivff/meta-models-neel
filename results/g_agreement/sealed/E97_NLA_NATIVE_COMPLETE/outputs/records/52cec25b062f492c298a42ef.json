@@ -1,0 +1,12 @@
+{
+  "id": "52cec25b062f492c298a42ef",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with explicit instruction to output only the emotion label, establishing a strict single-word answer pattern. The example \"Anger\" demonstrates the expected response style.\n\nThe structured template \"Given sentence: [sentence] / Emotion classification task: [options] / Sentence: [sentence] / Reply:\" signals a formal prompt-response format requiring the model's final answer.\n\n\"Reply:\" is the final token, acting as a label/field marker in the prompt template, immediately requiring the model's direct answer (e.g., \"Joy\" or \"Sadness\") on the next line.\n\"Given the following sentence: 'The company is experiencing a significant financial downturn.'\nPlease determine the emotion label.\nOptions: Joy, Sadness, Anger, Fear, Surprise, Disgust\nReply:\" \u2014 the final prompt field awaiting the model's response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with explicit instruction to output only the emotion label, establishing a strict single-word answer pattern. The example \"Anger\" demonstrates the expected response style.\n\nThe structured template \"Given sentence: [sentence] / Emotion classification task: [options] / Sentence: [sentence] / Reply:\" signals a formal prompt-response format requiring the model's final answer.\n\n\"Reply:\" is the final token, acting as a label/field marker in the prompt template, immediately requiring the model's direct answer (e.g., \"Joy\" or \"Sadness\") on the next line.\n\"Given the following sentence: 'The company is experiencing a significant financial downturn.'\nPlease determine the emotion label.\nOptions: Joy, Sadness, Anger, Fear, Surprise, Disgust\nReply:\" \u2014 the final prompt field awaiting the model's response.",
+  "truncated": false
+}

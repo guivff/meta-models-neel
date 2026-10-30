@@ -1,0 +1,67 @@
+{
+  "experiment": "E105",
+  "timing_argv": [
+    "python",
+    "-m",
+    "projects.g_agreement.e101.runner105",
+    "--inputs",
+    "/workspace/e105/inputs",
+    "--input-sha",
+    "FILL_ROW_INPUT_SHA_FROM_B_BINDING",
+    "--assets",
+    "/workspace/e105/assets.json",
+    "--assignment",
+    "/workspace/e105/assignment.json",
+    "--source-seal",
+    "/workspace/results/g_agreement/understand/e105/runner/SOURCE_SEAL.json",
+    "--source-sha",
+    "d2b0c774a2b038e4e3800b60343542501d439dcdf874902113af0826c778c685",
+    "--out",
+    "/workspace/e105/out",
+    "--timing"
+  ],
+  "production_argv": [
+    "python",
+    "-m",
+    "projects.g_agreement.e101.runner105",
+    "--inputs",
+    "/workspace/e105/inputs",
+    "--input-sha",
+    "FILL_ROW_INPUT_SHA_FROM_B_BINDING",
+    "--assets",
+    "/workspace/e105/assets.json",
+    "--assignment",
+    "/workspace/e105/assignment.json",
+    "--source-seal",
+    "/workspace/results/g_agreement/understand/e105/runner/SOURCE_SEAL.json",
+    "--source-sha",
+    "d2b0c774a2b038e4e3800b60343542501d439dcdf874902113af0826c778c685",
+    "--out",
+    "/workspace/e105/out",
+    "--profile",
+    "/workspace/e105/timing/MEASURED_PROFILE.json"
+  ],
+  "optional_setup_profiles": [
+    "--setup-profile",
+    "/workspace/e105/other_timing/MEASURED_PROFILE.json"
+  ],
+  "pre_pod_cpu_import": [
+    "python",
+    "-m",
+    "projects.g_agreement.e101.runner105",
+    "--cpu-import-preflight"
+  ],
+  "row_inputs": "../BINDING.json",
+  "staging": "Source plus exactly one sealed public row archive; no cpu_only or private joins.",
+  "total_gpu_seconds_cap": 10800,
+  "total_restart_limit": 1,
+  "E104_preempts": true,
+  "authority": "157fb545",
+  "timing_cap_policy": "e105_amendment2",
+  "restart_rows": [
+    "indent_level",
+    "fact_recall"
+  ],
+  "restart_round": 1,
+  "production_extra_seconds": 300
+}

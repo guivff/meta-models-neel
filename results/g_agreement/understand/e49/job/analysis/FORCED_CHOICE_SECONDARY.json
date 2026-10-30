@@ -1,0 +1,278 @@
+{
+  "label": "forced choice (off-distribution)",
+  "registered_rules_unchanged": {
+    "R1": {
+      "descriptor_sayable_count": 3,
+      "state_unsayable_count": 1,
+      "status": "NOT MET"
+    },
+    "R2": {
+      "ci95": [
+        0.03212396069538925,
+        0.38340891912320485
+      ],
+      "direction": "descriptor higher",
+      "mean_gap": 0.20512093726379443,
+      "replicates": 2000,
+      "resampling": "within each kind, rows with replacement",
+      "status": "HOLDS"
+    },
+    "R3": {
+      "status": "NOT MET"
+    },
+    "descriptor_n": 3,
+    "excluded_rows": {
+      "arith_carry": [
+        "base text < 0.85"
+      ],
+      "arith_compare": [
+        "probe < 0.90"
+      ],
+      "chased_role": [
+        "base text < 0.85"
+      ],
+      "holder_after_handovers": [
+        "probe < 0.90",
+        "base text < 0.85"
+      ],
+      "instruction_provenance": [
+        "base text < 0.85"
+      ],
+      "negation_scope": [
+        "base text < 0.85"
+      ],
+      "next_paragraph_language": [
+        "base text < 0.85"
+      ],
+      "pronoun_referent": [
+        "base text < 0.85"
+      ]
+    },
+    "falsifier": {
+      "state_sayable_count": 2,
+      "status": "HOLDS"
+    },
+    "gated_rows": [
+      "asserted_vs_hypothetical",
+      "branch_taken",
+      "container_after_move",
+      "decimal_separator",
+      "topic_twin",
+      "unit_system",
+      "user_expertise",
+      "var_type_at_use"
+    ],
+    "precall_accuracy": {
+      "accuracy": 0.625,
+      "correct_by_row": {
+        "asserted_vs_hypothetical": false,
+        "branch_taken": true,
+        "container_after_move": false,
+        "decimal_separator": true,
+        "topic_twin": true,
+        "unit_system": true,
+        "user_expertise": true,
+        "var_type_at_use": false
+      },
+      "middle_band": "incorrect, \u00a7163 clarification 1",
+      "n": 8,
+      "population": "gated rows only",
+      "role": "primary"
+    },
+    "precall_accuracy_middle_band_excluded": {
+      "accuracy": 0.7142857142857143,
+      "correct_by_row": {
+        "branch_taken": true,
+        "container_after_move": false,
+        "decimal_separator": true,
+        "topic_twin": true,
+        "unit_system": true,
+        "user_expertise": true,
+        "var_type_at_use": false
+      },
+      "excluded_middle_band_rows": [
+        "asserted_vs_hypothetical"
+      ],
+      "n": 7,
+      "population": "gated rows only, excluding 0.65 < Oracle AUROC < 0.80",
+      "role": "descriptive"
+    },
+    "semantic_state_n": 4
+  },
+  "rows": {
+    "asserted_vs_hypothetical": {
+      "continuation": {
+        "reason": "no frozen pair supplied; E53 extensions separate",
+        "status": "NOT APPLICABLE"
+      },
+      "nla": {
+        "AUROC": 0.9223356009070295,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.9291383219954649,
+          0.8475056689342404
+        ]
+      },
+      "oracle": {
+        "AUROC": 0.7335600907029478,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.5821995464852607,
+          0.6360544217687075
+        ]
+      }
+    },
+    "branch_taken": {
+      "continuation": {
+        "reason": "no frozen pair supplied; E53 extensions separate",
+        "status": "NOT APPLICABLE"
+      },
+      "nla": {
+        "AUROC": 0.5929705215419501,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.31519274376417233,
+          0.7341269841269841
+        ]
+      },
+      "oracle": {
+        "AUROC": 0.9206349206349206,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.9178004535147393,
+          0.8679138321995464
+        ]
+      }
+    },
+    "container_after_move": {
+      "continuation": {
+        "AUROC": 0.5187074829931972
+      },
+      "nla": {
+        "AUROC": 0.604875283446712,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.5932539682539683,
+          0.5963718820861678
+        ]
+      },
+      "oracle": {
+        "AUROC": 0.5102040816326531,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.4897959183673469,
+          0.5453514739229025
+        ]
+      }
+    },
+    "decimal_separator": {
+      "continuation": {
+        "AUROC": 0.33049886621315194
+      },
+      "nla": {
+        "AUROC": 0.3577097505668934,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.4671201814058957,
+          0.336734693877551
+        ]
+      },
+      "oracle": {
+        "AUROC": 0.5674603174603174,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.5473356009070295,
+          0.5510204081632653
+        ]
+      }
+    },
+    "topic_twin": {
+      "continuation": {
+        "reason": "no frozen pair supplied; E53 extensions separate",
+        "status": "NOT APPLICABLE"
+      },
+      "nla": {
+        "AUROC": 0.0017006802721088435,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.003401360544217687,
+          0.002834467120181406
+        ]
+      },
+      "oracle": {
+        "AUROC": 1.0,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "unit_system": {
+      "continuation": {
+        "reason": "no frozen pair supplied; E53 extensions separate",
+        "status": "NOT APPLICABLE"
+      },
+      "nla": {
+        "AUROC": 1.0,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          1.0,
+          1.0
+        ]
+      },
+      "oracle": {
+        "AUROC": 1.0,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "user_expertise": {
+      "continuation": {
+        "reason": "no frozen pair supplied; E53 extensions separate",
+        "status": "NOT APPLICABLE"
+      },
+      "nla": {
+        "AUROC": 1.0,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          1.0,
+          1.0
+        ]
+      },
+      "oracle": {
+        "AUROC": 0.9886621315192744,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.5011337868480725,
+          1.0
+        ]
+      }
+    },
+    "var_type_at_use": {
+      "continuation": {
+        "reason": "no frozen pair supplied; E53 extensions separate",
+        "status": "NOT APPLICABLE"
+      },
+      "nla": {
+        "AUROC": 1.0,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          0.9880952380952381,
+          0.985827664399093
+        ]
+      },
+      "oracle": {
+        "AUROC": 1.0,
+        "label": "forced choice (off-distribution)",
+        "phrasing_AUROC": [
+          1.0,
+          1.0
+        ]
+      }
+    }
+  }
+}

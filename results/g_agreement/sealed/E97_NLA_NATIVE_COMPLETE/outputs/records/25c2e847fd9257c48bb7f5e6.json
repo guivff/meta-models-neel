@@ -1,0 +1,12 @@
+{
+  "id": "25c2e847fd9257c48bb7f5e6",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with explicit instruction to output only the emotion label (\"Happy\" or \"Sad\") for a given sentence, establishing a strict response pattern.\n\nThe example structure mirrors a few-shot prompt format: definition \u2192 example \u2192 task \u2192 input sentence, now requiring the model's direct answer.\n\n\"Reply:\" is the final token, functioning as a label/prompt delimiter in a structured template, immediately constraining the next token to be the predicted emotion label (e.g., \"Happy\" or \"Sad\") or a short answer.\n\"Given the following sentence: 'The company's financial performance is declining.'\nQuestion: What is the emotion label?\nInput: The company's financial performance is declining.\nReply:\" \u2014 this closing \"Reply:\" field expects the direct answer to follow immediately, completing the structured prompt format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with explicit instruction to output only the emotion label (\"Happy\" or \"Sad\") for a given sentence, establishing a strict response pattern.\n\nThe example structure mirrors a few-shot prompt format: definition \u2192 example \u2192 task \u2192 input sentence, now requiring the model's direct answer.\n\n\"Reply:\" is the final token, functioning as a label/prompt delimiter in a structured template, immediately constraining the next token to be the predicted emotion label (e.g., \"Happy\" or \"Sad\") or a short answer.\n\"Given the following sentence: 'The company's financial performance is declining.'\nQuestion: What is the emotion label?\nInput: The company's financial performance is declining.\nReply:\" \u2014 this closing \"Reply:\" field expects the direct answer to follow immediately, completing the structured prompt format.",
+  "truncated": false
+}

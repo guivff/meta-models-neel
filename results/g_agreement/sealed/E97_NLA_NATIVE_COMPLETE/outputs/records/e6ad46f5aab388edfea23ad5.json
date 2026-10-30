@@ -1,0 +1,12 @@
+{
+  "id": "e6ad46f5aab388edfea23ad5",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict template: \"Given sentence: [X] / Classification: [Y]\" establishes a pattern requiring a direct label answer.\n\nThe instruction explicitly states the correct classification is \"positive\" for the example sentence \"I love you,\" constraining the model to output that specific label.\n\n\"Reply:\" is the final prompt token, part of the structured test format (\"Given sentence: I love you\\nClassification: positive or negative?\\nReply:\"), immediately requiring the model's answer \u2014 likely \"positive\" or a short label.\n\"Here is an example format... Given sentence: I love you\\nClassification: positive or negative?\\nReply:\" \u2014 the final token \"Reply:\" is a prompt label demanding the model's direct response on the next line.\n\n\"Reply:\" closes the prompt, expecting the answer token immediately.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict template: \"Given sentence: [X] / Classification: [Y]\" establishes a pattern requiring a direct label answer.\n\nThe instruction explicitly states the correct classification is \"positive\" for the example sentence \"I love you,\" constraining the model to output that specific label.\n\n\"Reply:\" is the final prompt token, part of the structured test format (\"Given sentence: I love you\\nClassification: positive or negative?\\nReply:\"), immediately requiring the model's answer \u2014 likely \"positive\" or a short label.\n\"Here is an example format... Given sentence: I love you\\nClassification: positive or negative?\\nReply:\" \u2014 the final token \"Reply:\" is a prompt label demanding the model's direct response on the next line.\n\n\"Reply:\" closes the prompt, expecting the answer token immediately.",
+  "truncated": false
+}

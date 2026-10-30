@@ -1,0 +1,47 @@
+{
+  "experiment": "E140",
+  "authority": "\u00a7252/930ed5805; clarification1/c33fcfb40; directuser; deviation2/b10b2694e",
+  "operator": "I-2 only after E138",
+  "candidate_pairs": 600,
+  "candidate_prompts": 1200,
+  "seed": 20261030,
+  "categories_min": 8,
+  "generation_tokens": 32,
+  "selection": "first84 source-order pairs with nonempty differing frozen parsed answers; <40screen-only; CPU X/Y neverpod",
+  "parser": "first nonempty line/lowercase/ASCII string.punctuation removed; exterior whitespace stripped; explicit prospective source policy",
+  "capture_blocks": [
+    44,
+    52,
+    60
+  ],
+  "Oracle_blocks": [
+    44,
+    52,
+    60
+  ],
+  "max_Oracle_readouts": 504,
+  "pair_measurement": "same capture forward/final prompt token: logit(first Qwen token of leading-space X)-logit(first Qwen token of leading-space Y); descriptive only; rawvocabCPUlookup",
+  "pair_multitoken_rule": "c33fcfb40 RESOLVED: first-token contrast; shared first token NOT MEASURED/null, no pair/readout exclusion",
+  "intervention_hook": false,
+  "patches": false,
+  "main_generation": false,
+  "labels_on_pod": false,
+  "cap_seconds": 6600,
+  "candidate_packet_cutoff_UTC": "2026-10-30T08:00:00Z",
+  "creation_cutoff_UTC": "2026-10-30T10:00:00Z",
+  "hard_stop": "min(originalcreation+admittedcap,2026-10-30T12:50:00Z)",
+  "clock": "ONEpod/model/originalclock includes screen/CPUselectionwait/transfers/Oracleload/main/maxsetup/allremainingwork/reserve; I2soleforecast/custody/once/admission",
+  "input_status": "Full600 and authorized sealed first300 prefix delivered; I2 admission pending",
+  "analysis_owner": "W-mech2",
+  "reviewer": "R-5",
+  "judging": {
+    "owner": "W-internals-C only",
+    "bank": "E140",
+    "max_USD": 1,
+    "priority": "after E137 beforeE95",
+    "last_call_UTC": "2026-10-30T15:00:00Z"
+  },
+  "cap_rule": "I-2 complete registered all-phase forecast; at most6600 from creation",
+  "fallback_candidate_pairs": 300,
+  "fallback_condition": "Full600 whole-work forecast exceeds6600; first300 source-order pairs only, recompute; still no fit=>NOT RUN"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "5cf4729069de6313f6d2a513",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals a direct answer is expected, mirroring the format shown in the instructions.\n\n\"Reply:\" is the final token, functioning as a label/field prompt in a structured Q&A format, immediately requiring the model's classification answer (\"Positive\" or \"Negative\") for the sentence \"The weather is very good today.\"\n\"Given the following sentence, provide the sentiment label according to the instructions above.\nSentence: 'The weather is very good today.'\nReply:\" \u2014 the final \"Reply:\" token demands the actual answer text follows immediately, likely a single word or short phrase completing the response field.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals a direct answer is expected, mirroring the format shown in the instructions.\n\n\"Reply:\" is the final token, functioning as a label/field prompt in a structured Q&A format, immediately requiring the model's classification answer (\"Positive\" or \"Negative\") for the sentence \"The weather is very good today.\"\n\"Given the following sentence, provide the sentiment label according to the instructions above.\nSentence: 'The weather is very good today.'\nReply:\" \u2014 the final \"Reply:\" token demands the actual answer text follows immediately, likely a single word or short phrase completing the response field.\n\"Reply:\"",
+  "truncated": false
+}

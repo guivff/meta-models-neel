@@ -1,0 +1,88 @@
+{
+ "authority": "Guiv \u00a7211 amendment 1 7a354530 (parked priority order); coordinator brief 28 Oct; I-3 OPERATOR_HANDOFF/PRICED_PROJECTION at r/blindspot fccb3caf; I-3 ROW19_TIMING_REQUEST 42acac42; compiler projection 63d39bb6",
+ "economics": {
+  "all_in_extras": "none billed separately: container disk included; shared weights volume 5on6935gne already provisioned (no new storage)",
+  "currency": "USD",
+  "gate": [
+   "E95_GATE_A OK parked pool: booked 4.89 + own running 0.00 + E96 running 14.58 + cap 5.29 = 24.76 vs USD 900",
+   "E95_GATE_B OK global: all-tracks 473.76 + cap 5.29 = 479.05 vs USD 2500"
+  ],
+  "offered_usd_per_gpu_hour": 5.29,
+  "padded_max_custody_s": 3600,
+  "padded_max_usd": 5.29,
+  "shard_selection": "row 19 (e95-remaining-19, adjective_implicit, width-5 10-cell workload) per I-3 ROW19_TIMING_REQUEST 42acac42, concurrency 1"
+ },
+ "experiment": "E95",
+ "guard_and_custody": {
+  "absolute_deadline_epoch": 1793239104.43,
+  "allocator_exit_proof": "deploy-vol podFindAndDeployOnDemand returns once; pod id cross-checked against API createdAt; deploy log appended to results/g_agreement/r/pod_deploys.jsonl",
+  "chain_events": [
+   "01:25:09Z E95_19_timing INCREMENTAL pull ok (208 files; unopened) [ALIVE]",
+   "01:26:14Z E95_19_timing INCREMENTAL pull ok (217 files; unopened) [ALIVE]",
+   "01:26:30Z E95_19_timing WORKER_EXITED [OUTPUT_SEAL.json DEAD]",
+   "01:26:30Z E95_19_timing CLOSEOUT start (worker_exit)",
+   "01:26:42Z E95_19_timing FINAL_PULL_VERIFIED 217 files, OUTPUT_SEAL 5c7b5cbb6b27f00b0dfc8b9a5b39dd3a6a508fc536ce82ecf05d74a3158b6620, status PROFILE_ONLY",
+   "01:26:42Z E95_19_timing HASH_COPY match -> analysis402_verified/E95/timing/row19/out",
+   "01:26:45Z E95_19_timing INPUTS before delete [e56 e95 external j9r_in projects results ]; AFTER delete (ls-confirmed): 0 left",
+   "01:26:46Z E95_19_timing EXACT_ID_STOP jg6jzz567xf6qd {\"data\":{\"podStop\":{\"id\":\"jg6jzz567xf6qd\",\"desiredStatus\":\"EXITED\"}}} at 2026-10-29T01:26:45Z (+1700.6 s)",
+   "01:26:52Z E95_19_timing TERMINATE jg6jzz567xf6qd -> {\"data\":{\"pod\":null}}",
+   "01:26:53Z E95_19_timing GUARDS retired: 0 left",
+   "01:26:56Z E95_19_timing BOOKED BOOKED jg6jzz567xf6qd 41a471d80",
+   "01:26:56Z E95_19_timing CHAIN_DONE PROFILE_ONLY"
+  ],
+  "failure_policy": "on failure/crash/timeout: verified pull of out/, delete inputs, exact-id stop of the owned pod only, terminate, verify EXITED/GONE, book; no clock reset",
+  "guard_note": "two detached exact-id podStop guards (nohup+caffeinate) at created+3570 s and created+3598 s",
+  "guards": [
+   {
+    "alive": false,
+    "kind": "exited",
+    "pid": 92618,
+    "targets_pod": null
+   },
+   {
+    "alive": false,
+    "kind": "exited",
+    "pid": 92620,
+    "targets_pod": null
+   }
+  ],
+  "hard_stop_epoch": 1793239074,
+  "pod_id": "jg6jzz567xf6qd",
+  "provider_createdAt": "2026-10-29T00:58:24.430Z",
+  "run_id": "E95_19_timing r_ops/run_E95_19_timing (fresh; no prior allocator state reused)",
+  "staging_allowance_s": 900,
+  "staging_ready_epoch": 1793235634.359343
+ },
+ "identity": {
+  "asset_manifest_sha256": "137575e63fbf385ea48b02b564bdf00b8e1456a4e3cef566c712df403297aa22",
+  "asset_pinned_files": "runner verifies assets_sha256 == sha(assets.json) and the loader checks pinned revisions/file hashes (late198 runtime); manifest revisions match the pinned model/olens/nla",
+  "gpu_count": 1,
+  "gpu_type": "H200",
+  "gpu_type_api": "NVIDIAH200",
+  "image_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+  "image_reference": "runpod/pytorch@sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35 (tag 1.0.2-cu1281-torch280-ubuntu2404 resolved via registry-1.docker.io manifest HEAD; pod created with the digest reference)",
+  "index_sha256": "d8cf64ebafa693962c3949aac3d9ab5b1ea838dbe136e654b8583ccaa9f0c98d",
+  "input_archive_sha256": "b713ed428d7aefc42caa5072834258620dda790ec130f130fabec65f258d8d77",
+  "input_seal_sha256": "0c70d891e8922445ca843b98432240632379b73ea939bbe644f30e2a740548d7",
+  "installed_stack_sha256": "e5bd91817b87c570800cab47030b2695cc39e61732c1015507b4dd8c13527b74",
+  "inventory_sha256": "0af608b8a978432be3910476dbb943966e4751c887b49e7112356b71a24f32a7",
+  "provider_image_name": "runpod/pytorch@sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+  "request_sha256": "b41479b87f3da3e2e71b684c0bc5eacc98cb77de569e668e8132fe7996a5d2c3",
+  "row": 19,
+  "scope_seal_sha256": "39cb1c41c1d50266445123143b12fba6a5450b886dc78d077a6f6684eb6edefb",
+  "shard": "e95-remaining-19",
+  "source_archive_sha256": "a12ad9b5f822541748f3fb9c0cb90d940a3ddc7310f53813f4d83a8888a8f1c4",
+  "source_seal_sha256": "b1f64ddf41ba87c7f4c9a31a418db9f5d0d18ff70d96d137815cc8581e553aa2",
+  "stack_method": "on pod before assignment: sha256 of (LC_ALL=C sorted `pip freeze --all` of /weights/venv-kernels) + torch/cuda/cudnn/python versions"
+ },
+ "operator": "Claude Integrator Track Q operator (r_ops chain e95.sh)",
+ "outputs": {
+  "destination": "analysis402_verified/E95/timing/row19/out (PROFILE_ONLY, no scientific use)",
+  "first_output_utc": null,
+  "status": "see OUTPUT_SEAL"
+ },
+ "phase": "post_seal",
+ "production_admitted": false,
+ "stage": "row-19 width-5 timing (one pod, timing-only)",
+ "written_utc": "2026-10-29T01:27:03Z"
+}

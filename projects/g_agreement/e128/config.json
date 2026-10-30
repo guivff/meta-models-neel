@@ -1,0 +1,71 @@
+{
+  "alpha8": "original sealed results reused CPU; NEVER rerun/rejudge alpha8",
+  "authority": "\u00a7236/2ebe22138",
+  "batcher": "projects.g_agreement.e128.runner.batches(items,size=8)",
+  "cells": 336,
+  "conditions": [
+    "steered",
+    "random"
+  ],
+  "delta_policy": "sealed E104U alpha8 deltas exactlyscaled.25/.5, originalrandomdirection+seed20261029 unchanged",
+  "doses": [
+    2,
+    4
+  ],
+  "entrypoint": "projects.g_agreement.e128.runner.capture_answer_batch(model,tok,items,deltas)",
+  "experiment": "E128",
+  "greedy_max_new_tokens": 3,
+  "input_loader": "projects.g_agreement.e128.inputs.load(root,input_sha)",
+  "items": 84,
+  "judging": {
+    "adapter": "W-internals-B",
+    "bank": "E128",
+    "max_USD": 3,
+    "owner": "W-internals-C",
+    "reviewer": "R-Q",
+    "rubric": "original E104"
+  },
+  "labels_on_pod": false,
+  "launch": {
+    "cap": "current\u00a7217 wholemeasuredneed\u00d71.25+60/originalcustody/budgetceiling",
+    "creation_cutoff": "2026-10-30T04:00:00+01:00",
+    "one_measured_reattempt_after_NO_FIT": true,
+    "owner": "Track Q or I-2, single assigned owner",
+    "planning_GPU_hours": 0.4,
+    "priority": "LAST",
+    "stop_and_seal_cutoff": "2026-10-30T08:00:00+01:00"
+  },
+  "no_GPU_selection": true,
+  "oracle_layers": [
+    44,
+    52
+  ],
+  "public_input": {
+    "GPU_calls": 0,
+    "archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e128-inputs-v1/inputs.tar.gz",
+    "archive_sha256": "5d901014c242451013c5258038ef198a1b59eea450e9f6c7071c93e192d1da33",
+    "cells": 336,
+    "cpu_only": {
+      "root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e128-inputs-v1/cpu_only",
+      "seal_sha256": "b580ae5a0acf1a96733d8b489b20b1bf3fbae19d926381cad28443687d975f99",
+      "stage_to_pod": false
+    },
+    "experiment": "E128",
+    "input_sha256": "7e911f6591fb229474b132361b6e67f1696634d0001a3dd4e57823e87194b224",
+    "items": 84,
+    "labels_on_pod": false,
+    "parent_input_sha256": "1e91a33f801d1eff72641fee56fa718957c65f57a7667fea5b5145a8db77b04a",
+    "parent_root": "/Users/guivff/Documents/Neel_Exploration/activation-readers/cache/g_agreement/r_ops/e104U_test_bind/fact_recall",
+    "public_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e128-inputs-v1/inputs",
+    "random_readouts": 336,
+    "steered_readouts": 336,
+    "total_readouts": 672
+  },
+  "random_readouts": 336,
+  "read_token_patched": false,
+  "reader": "original E109/E87 Oracle nativealpha16000unit/greedy128/k1/actual44or52",
+  "steered_readouts": 336,
+  "total_readouts": 672,
+  "write_block": 40,
+  "write_positions": "eight_before_read"
+}

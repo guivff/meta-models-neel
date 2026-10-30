@@ -1,0 +1,262 @@
+{
+  "CPU_offload": "keep live model tensors on CPU between uses;check /proc/meminfo before offload;retain enough host RAM for AR+decoder while target runs;abort on insufficient RAM,never reload from disk to work around it",
+  "NO_FIT": "Record forecast/cap or host-memoryfailure and incomplete work in that experiment folder;no dropping rows/spans/arms,no checkpoint reload,no cap increase,no scientific edit;later experiments may proceed within their own remaining assignments",
+  "S2_source_and_receipt_changed": false,
+  "W2_S2_analysis_executed": false,
+  "branch": "r/blindspot-mech",
+  "brief_commit": "2254a0a6e7d656b141207586c83c67513c0dcf4e",
+  "brief_sha256": "90098691261a7b4efb21cbc510afab566cdbc337dbc7aab613c83ce5774ac40b",
+  "cap_formula_each_experiment": "min(1.5*its measured warmed forecast+360,its own cap_gpu_seconds);each assignment allocation and prior+allocation enforce that bound",
+  "checkpoint_lifecycle": [
+    {
+      "load_before": "E1firstscience",
+      "loads": 1,
+      "model": "official AR44",
+      "release_after": "E2ARphase",
+      "reuse": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "load_before": "E1firstscience",
+      "loads": 1,
+      "model": "NLAdecoder42",
+      "release_after": "E7decodephase",
+      "reuse": [
+        "E1",
+        "E2",
+        "E7"
+      ]
+    },
+    {
+      "load_before": "E2firstscience",
+      "loads": 1,
+      "model": "targetQwen",
+      "release_after": "E2capture"
+    },
+    {
+      "load_before": "E7firstscience",
+      "loads": 1,
+      "model": "NLAverbalizer42",
+      "release_after": "E7scoring",
+      "reuse": [
+        "E7generation",
+        "E7scoring"
+      ]
+    }
+  ],
+  "command": [
+    "/weights/venv-kernels/bin/python",
+    "-m",
+    "projects.g_agreement.understand.packed",
+    "--inputs",
+    "/workspace/understand/inputs",
+    "--assets",
+    "/workspace/understand/assets.json",
+    "--assignments",
+    "/workspace/understand/assignments",
+    "--official",
+    "/workspace/understand/official-ar",
+    "--whitener",
+    "/workspace/understand/whitener.pt",
+    "--out",
+    "/workspace/understand/out/PACKED_NEW_RUN"
+  ],
+  "compute_stop": "2026-10-27T23:59:00+01:00 Europe/Zurich",
+  "environment": "/weights/venv-kernels",
+  "experiments": {
+    "E1": {
+      "assignment": "/workspace/understand/assignments/e1.json",
+      "cap_gpu_hours": 0.4,
+      "cap_gpu_seconds": 1440,
+      "description_arm": "reuse sealedS2arrays;no new description texts or ARrecollection;S2doesnotblockenactment launch",
+      "input_seal_sha256": "d14447c53080bfaf067524f0a10ddf8f8913905f1aa3c4b1d749b6fcc830cb5e",
+      "output": "PACKED_NEW_RUN/e1/",
+      "phases": [
+        "AR44 enactment2100",
+        "optionalnative42decoder description1000+enactment2100"
+      ],
+      "post_pull": "results/g_agreement/understand/e1/POST_PULL.json",
+      "section": 88
+    },
+    "E2": {
+      "all_phases_share_one_cap": true,
+      "assignment": "/workspace/understand/assignments/e2.json",
+      "cap_gpu_hours": 0.3,
+      "cap_gpu_seconds": 1080,
+      "input_seal_sha256": "b31cf5baef6190112ce34ca1f7fe8cb34aa8aaa6bd11676a2c89c47132723c23",
+      "output": "PACKED_NEW_RUN/e2/",
+      "phases": [
+        "same5000spans targetcapture42/44",
+        "AR44outputs5000",
+        "optionalnative42decoder5000"
+      ],
+      "post_pull": "results/g_agreement/understand/e2/POST_PULL.json",
+      "section": 89
+    },
+    "E7": {
+      "Delta": "Dec(NLA(h42))-Dec(OL(h44));existing sealedW3Oracle readouts,each native layer;both decoded to native42",
+      "assignment": "/workspace/understand/assignments/e7.json",
+      "cap_gpu_hours": 0.8,
+      "cap_gpu_seconds": 2880,
+      "depends_on": "successful native42decoder load at initial setup;otherwise separately sealed BLOCKED_NATIVE_DECODER receipt",
+      "input_seal_sha256": "4ff8df9b6122decea25a5f4d5393fe76cfdb7bd00810bf96be71d17adc67ce1a",
+      "output": "PACKED_NEW_RUN/e7/",
+      "phases": [
+        "NLA42greedy readouts2772",
+        "CPUfreeze paired OL/NLAdecoderinputs",
+        "native42decoder bothreadouttypes5544",
+        "sixarmNLA42scoring6000"
+      ],
+      "population": {
+        "arms": 6,
+        "directed_pairs": 1000,
+        "fixed_random_support": 672,
+        "rows": 25,
+        "test_items": 2100
+      },
+      "post_pull": "results/g_agreement/understand/e7/POST_PULL.json",
+      "section": 94
+    }
+  },
+  "exploratory": true,
+  "gpu_count": 1,
+  "input_archives": {
+    "e1": {
+      "all_members_reopened_and_verified": true,
+      "bytes": 159887,
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e1-inputs.tar.gz",
+      "sha256": "9d555948ddec909efd4c23bc053fb4dc327af05ee1bbf47ad6eefddf0975ed16"
+    },
+    "e2": {
+      "all_members_reopened_and_verified": true,
+      "bytes": 804237,
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e2-inputs.tar.gz",
+      "sha256": "47b992d71e54c93952182d09f64be415dd4b9747c0b632dbb079ffb0a3bdc741"
+    },
+    "e7": {
+      "all_members_reopened_and_verified": true,
+      "bytes": 25443233,
+      "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e7-inputs.tar.gz",
+      "sha256": "99a52f8ef23627681226f7f4fd60e1762b9d7dc836c251b45b78740d73416ff4"
+    }
+  },
+  "input_seals": {
+    "e1": "d14447c53080bfaf067524f0a10ddf8f8913905f1aa3c4b1d749b6fcc830cb5e",
+    "e2": "b31cf5baef6190112ce34ca1f7fe8cb34aa8aaa6bd11676a2c89c47132723c23",
+    "e7": "4ff8df9b6122decea25a5f4d5393fe76cfdb7bd00810bf96be71d17adc67ce1a"
+  },
+  "native_decoder_load_status": "UNVERIFIED_LOCALLY;initial same-process decoder-only preflight is part of packedsetup;failure recorded and E1/E2decoder arms/E7 explicitly unavailable",
+  "one_exact_pod": true,
+  "one_process": true,
+  "order": [
+    "E1",
+    "E2",
+    "E7"
+  ],
+  "required_assignments": [
+    "issuer=integrator,experiment=E1/E2/E7,pod_id,gpu_count=1,provider_created_epoch",
+    "brief_registered/pushed true;bound briefSHA and source_files exactly SOURCE_MANIFEST",
+    "input_seal_sha256 equals the exact frozen job input seal",
+    "finite positive smoke_forecast_seconds from warmed median-next3 real units;forecast_method=warmed_median_next_3_real_units",
+    "allocated_gpu_seconds+previous_gpu_seconds<=min(1.5F+360,experiment cap);cumulative across all experiment phases including optional decoder",
+    "setup_allowance_seconds<=2400,setup_deadline_epoch,deadline_epoch;load/warm-up setupoutside science",
+    "preceding_science_gpu_seconds carries earlier same-pod science;resident plans add preceding allocations in order;no new setup/model load between E1/E2",
+    "external_hardstop_verified=true,hold_renewer_verified=true;180s retrieval reserve;verified output pull and cleanup",
+    "deadline no later than 2026-10-27T22:59:00Z (Tuesday23:59Europe/Zurich)",
+    "stage pinned full NLA repo decoder checkpoint/valuehead for native42 preflight;never use AR44 as substitute",
+    "when a same-pod preassigned phase uses earlier reserved science as its preceding bound,retain external hardstop and all per-experiment science caps",
+    "All3assignmentfiles name samepod,providercreated and sharedsetup allowance;experiments E1/E2/E7 have independent caps and firstscience clocks",
+    "preceding_science_gpu_seconds for E2/E7 carries earlier reserved science on this pod;not a fresh setupclock or reset of sameexperiment usage",
+    "Perexperiment aggregateF includes all of that experiment phases,including decoder when available;no separate phase gets the whole cap",
+    "AssetsJSON fully hashes pinned target,officialAR,NLAAV and NLAdecoder checkpoint/valuehead;all offline localpaths;read-only throughout run",
+    "Do not run a standalonewarmup/decoderprobe process or any old per-experiment CLI launch request;one packedentrypoint only"
+  ],
+  "results_policy": "EXPLORATORY;report all rows,all outcomes,all failures;no threshold/verdict changes;source scores sealed before labels",
+  "schema": "understand-one-pod-one-process-v1",
+  "science_clocks": "one persistent clock per experiment,from its own first retained production unit;never reset at model/path switches;all later residency transfers,warm-ups,CPUintermediate preparation and collection remain charged;no checkpoint first-load inside any active experiment clock",
+  "setup_allowance_seconds": 2400,
+  "setup_counting": "All first checkpoint loads occur before the relevant experiment firstscience;actual provider elapsed minus completed experiment science must fit one2400s setupallowance. No new setup grant per experiment.",
+  "setup_is_shared_for_packed_pod": true,
+  "source_AR_sha256": "0d51931c18a59a5cfa7dca5af1d8c38114f3d02b344b3831ef5a64d7288b2918",
+  "source_archive": {
+    "all_members_reopened_and_verified": true,
+    "bytes": 155209,
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/packed-source-5b0aef0c.tar.gz",
+    "sha256": "94fa2a63e1be1e3118d852c0034cf30c1988a1e0ae82f869757c6f6989fabff4"
+  },
+  "source_commit": "5b0aef0c67ba03714e52be79b9a694869a0a2ac4",
+  "source_files": {
+    "common/__init__.py": "506e53bcb947c88a0e369f01760badc113ea1c7b4b378b6040ac1c2be0c70847",
+    "common/stats.py": "5b8bd4d3a0e23bf7a5487c2dbb2edbafa96d434f9cabd27d25940a42ab37ef2d",
+    "external/mats-nla-workspace/src/mats/__init__.py": "ff25a6253eabef5942d23dffff23fd5f4b86980617a791a138e053aa28e32c70",
+    "external/mats-nla-workspace/src/mats/capture.py": "bc69d7deee038326d28bd345d4bd76da43a615abd5fbe970a2ec245e72b8b179",
+    "external/mats-nla-workspace/src/mats/jspace.py": "0f1801ffba59bcc61c04e3c333b9b9ef66f939e5dd0159aba364a69226a0717d",
+    "external/mats-nla-workspace/src/mats/metrics.py": "17ff3b1467186a8c4e24e76ed52d2263b0201e651e2010d4b99bd47c25cda473",
+    "external/mats-nla-workspace/src/mats/probes.py": "955a7b516d97bee88b149bee1b8a3d9cdffaa7ef1b407cdef5cc4159f4677ae7",
+    "external/mats-nla-workspace/src/mats/readers/__init__.py": "addd3f183c8eada1b42628e89b8e024f50d3b30e92c459432f48eb12976f5572",
+    "external/mats-nla-workspace/src/mats/readers/jlens.py": "01b4717d31be411067a764396f8fe2b5acb1f13200661c3143a288bd31552e9d",
+    "external/mats-nla-workspace/src/mats/readers/nla.py": "e8ed65f4b97affbdb5a57cec87e4cf38472f20102974a105a3affb1ac27ab1d0",
+    "external/mats-nla-workspace/src/mats/readers/olens.py": "7866ac3aa66d96bee612e216a0cd45e0a76e1dd4e799f6aaa538c28addd0e86e",
+    "external/mats-nla-workspace/src/mats/textnla.py": "a2d3b5ae6ec2de49fb38bf92d1bf290f6a457eddecddf81482dc6b73ca432008",
+    "projects/g_agreement/BRIEF_BLINDSPOT.md": "a842bff7411996c55094b34734e867851dd45725e0f478376f0ca7e974ec60a3",
+    "projects/g_agreement/blindspot/__init__.py": "c05787f4d7bd7af75682ccf57545f58627dbebc8ef0366baeb394ecf4c3c2855",
+    "projects/g_agreement/blindspot/analysis.py": "567b2b2161bedd77c15b449d852c71a02535c4b4b2c768af70de89dc9e7addec",
+    "projects/g_agreement/blindspot/ar_tests.py": "0d51931c18a59a5cfa7dca5af1d8c38114f3d02b344b3831ef5a64d7288b2918",
+    "projects/g_agreement/blindspot/items.py": "f99efd860106cabca8f5962b0a18b37cef12e2c21114a6eb30f6b6af6855c9b9",
+    "projects/g_agreement/blindspot/ops/s2_warmup.sh": "844e3f8c346430ee2883607af2eb505a585212d18aeab75e85ad5d419a010a25",
+    "projects/g_agreement/blindspot/pod_run.sh": "1d0b5e2cf1c894fe8b99fdc233d90f5abf41e52468d96b6361c431ee5e0febb5",
+    "projects/g_agreement/blindspot/protocol.py": "6915990f9c2ef4f85beb35fdeb50daa530e9480f3bf6b62468fc7a83d9d23fc0",
+    "projects/g_agreement/blindspot/recall.py": "c97c663a5d2a920fe4033cbef1987b781256075256538d79d6a7efa1c9b2896d",
+    "projects/g_agreement/blindspot/run.py": "4e7e927c794553f9230a2bdc5d9f67c598ea74702a98b8e7fa209c23528178c4",
+    "projects/g_agreement/blindspot/s2_fidelity.py": "4eb3d187c8cb1741ee377beea751707947791ba720ff5457d7b1e0824d5624b8",
+    "projects/g_agreement/blindspot/s2_warmed.py": "6ba24fcc9859b0b8b747ec12c834d8e11e62fcf9fb0bbeb855d095444791a2c5",
+    "projects/g_agreement/blindspot/stage.py": "de175e6f075825eafdd46538a584b5a08bc09d9b441b6ae4a42bf48bb3058a04",
+    "projects/g_agreement/blindspot/w1_templates.py": "c0ec4dc076ba316354280ae873194455823dd91008e50c1dc0ca69682438f144",
+    "projects/g_agreement/blindspot/w2_cpu.py": "74dfb9b90d22dc5372c6ba6a4048cb2b9017d20f219e4115c1da816c6dd1cf78",
+    "projects/g_agreement/blindspot/w34_inputs.py": "6fc6bf73d60f110a1379645c135639a7f93222577ff6af8d63f1c518cad0e7ae",
+    "projects/g_agreement/blindspot/w4_aggregate.py": "a0f2784d6d1513279dfb690bd885ab4111457b7756fffbbfd66b0ca7ae54efdc",
+    "projects/g_agreement/blindspot/w7_steering.py": "aa5350a17a288a4ba141c4e760427df14e4ac93303d1ea3bb018038b33aff851",
+    "projects/g_agreement/manifest/assets.json": "17338edea7c12181f45b0dc1dc5fcd4673d6cf8e7c4323e8d657736236f96f91",
+    "projects/g_agreement/understand/README.md": "c3cb4cec50460722a2b3d797d29d9980d97e8fc7e492e5e08b5d6fcf3bd76128",
+    "projects/g_agreement/understand/__init__.py": "d2e01e2051e64b8dce4ba392c040061d248cf897d5965567cb9da76e1540bbd2",
+    "projects/g_agreement/understand/analyse.py": "3419ac682537e7f935112c615b716495d2d0c684ef0ba6543106222703be8bf5",
+    "projects/g_agreement/understand/cpu.py": "1e694d6e5b282ff82a05bfef242ac9769246cdf7d1833fed27b9b9438a69a4e4",
+    "projects/g_agreement/understand/e11.py": "90da04c53f566e15dd10f8d785b39b7dff58d9cf3e1e886795bf5d4066fa2af9",
+    "projects/g_agreement/understand/packed.py": "b09b43f53d83104f3b21060da8b5cb521c63201d2d70c970a5ae7c9cd5506d90",
+    "projects/g_agreement/understand/prepare.py": "3f96b51137c6f2901e4f3e803a7216206129c1f656853a517e3dce1d64d0c027",
+    "projects/g_agreement/understand/runtime.py": "b1fe553e226601bd99ea68a4b0f857bf41ec4e4611545e399bbf874af50851a3",
+    "projects/g_agreement/understand/worker.py": "31f447d4cb2681d10f4e4ef89199e412ad330cf6e7a5f846f9014449543bf3ac",
+    "projects/g_agreement/w_claims/ar.py": "c64a684c30fa2d542283b95575dd61fca61a82d9ffebba333bd9fafdbd463ee1",
+    "results/g_agreement/understand/ANALYSIS_PLAN.json": "60532b3368e7bf4a9c899c8d4cb271f707c4625e6b91b0f8d44fb15d0b6ba5b3",
+    "results/g_agreement/understand/BRIEF_UNDERSTAND.bound.md": "90098691261a7b4efb21cbc510afab566cdbc337dbc7aab613c83ce5774ac40b",
+    "results/g_agreement/understand/launch/AR_E1_E2_SESSION.json": "a17d2c83ea6bd942a779be868e687b572e82d4de23ac7d99da8c828931ceb7b5",
+    "results/g_agreement/understand/launch/AR_E1_SESSION.json": "04afab10fe3e7d25026f690cb58fcfb188c8476a58b89801939bab5a6e594650",
+    "results/g_agreement/understand/launch/AR_E2_SESSION.json": "73ef27c253c8290899e782f6b3cc6dcf5fdf9e5b9e76fb69cbeb3bb518562803",
+    "results/g_agreement/understand/launch/DECODER_E1_E2_SESSION.json": "af31ba0b77925addad9901c4cedf2507d0a24555b78449c8ff5fb3aa9e9f2599",
+    "results/g_agreement/understand/launch/DECODER_E1_SESSION.json": "cafb1ded9f9251120b402f7d63e83793c0b9ec29ebaef57b58216b49fafbbc59",
+    "results/g_agreement/understand/launch/DECODER_E2_SESSION.json": "26df3333956bcb3290804b46bd074ed6f40404f6a63190718dcc9b1e8874d8a6",
+    "results/g_agreement/understand/launch/DECODER_E7_SESSION.json": "e98381f1b167a5c55193da6709820195f8bb88c97b0b0108d4b4f0974fc73069"
+  },
+  "source_manifest_path": "results/g_agreement/understand/SOURCE_MANIFEST.json",
+  "source_manifest_sha256": "ca026bf0f832914ebcef1b35d23ba171bddab50534953d329ad5a1f30fbbe50d",
+  "status": "READY_FOR_INTEGRATOR_ASSIGNMENT",
+  "supersedes": "all earlier unpushed per-experiment launch requests and resident session plan invocations;canonical active request is this file",
+  "timing_gate_each_path": "one unscored same-process warm-up with the live model;next3real production units retained;forecast from their median;no cold first call;each path gate respects remaining time on the same experiment clock and180s retrievalreserve",
+  "validation": {
+    "GPU_runs": 0,
+    "actual_loader_call_counts_tested": {
+      "AR": 1,
+      "NLAverbalizer": 1,
+      "decoder": 1,
+      "target": 1
+    },
+    "all_archives_verified": true,
+    "cpu_tests_passed": 14,
+    "independent_experiment_output_seals_tested": true,
+    "native_model_forward_passes": 0,
+    "packed_exact_order_tested": true,
+    "science_clock_no_reset_tested": true
+  }
+}

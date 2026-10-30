@@ -1,0 +1,12 @@
+{
+  "id": "cdc9dd13f302fd9f90623f3d",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict classification task: model must output \"friendship\" or \"romantic\" based on the defined rule about emotional connection.\n\nThe example pattern establishes a template: scenario description \u2192 question \u2192 answer label, now requiring the final answer for the specific case \"A person is a friend of another person.\"\n\n\"Reply:\" is the final prompt token, part of the structured format, immediately requiring the classification label (e.g., \"friendship\") as the direct answer.\n\"Given the following scenario, determine the relationship type label.\nScenario: A person is a friend of another person.\nQuestion: What is the relationship type label?\nReply:\" \u2014 this closing \"Reply:\" token demands the concise answer label to follow immediately, mirroring the instruction's format.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict classification task: model must output \"friendship\" or \"romantic\" based on the defined rule about emotional connection.\n\nThe example pattern establishes a template: scenario description \u2192 question \u2192 answer label, now requiring the final answer for the specific case \"A person is a friend of another person.\"\n\n\"Reply:\" is the final prompt token, part of the structured format, immediately requiring the classification label (e.g., \"friendship\") as the direct answer.\n\"Given the following scenario, determine the relationship type label.\nScenario: A person is a friend of another person.\nQuestion: What is the relationship type label?\nReply:\" \u2014 this closing \"Reply:\" token demands the concise answer label to follow immediately, mirroring the instruction's format.\n\"Reply:\"",
+  "truncated": false
+}

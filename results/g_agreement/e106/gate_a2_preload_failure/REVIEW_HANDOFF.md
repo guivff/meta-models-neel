@@ -1,0 +1,1 @@
+Operational preload transfer failure only. No model/worker/optimizer/readout. Full verified diagnostics/source/custody, original failure retained. §217 free preload consumption; all billed custody counted. No scientific inference.

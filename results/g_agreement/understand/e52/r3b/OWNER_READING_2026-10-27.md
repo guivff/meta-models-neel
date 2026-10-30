@@ -1,0 +1,3 @@
+# R3b operational reading — 2026-10-27
+
+§181 adds a forecast publication/custody stage to the existing CPU J-channel. A wrapper admits E59/E62 without editing the sealed original channel or any scientific calculation. All registered A/B units remain distinct, with no reader/probe-based selection before forecasting. The source plan determines binary membership from the frozen bank, with the explicit exclusions in clarification1 (2ba13670). The publisher verifies complete unit coverage and records every non-binary exclusion. A bank whose readers opened before its forecast cannot claim prospective status, even if it was still closed at registration. No change to a decision rule, threshold, row or measure is made here.

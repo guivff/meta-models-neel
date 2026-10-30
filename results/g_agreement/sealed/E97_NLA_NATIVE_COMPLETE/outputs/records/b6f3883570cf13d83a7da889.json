@@ -1,0 +1,12 @@
+{
+  "id": "b6f3883570cf13d83a7da889",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishing a Q&A template, where a \"Question\" and \"Similar question\" have been given, now requiring a model-generated answer.\n\nThe \"Similar question\" pattern signals a parallel structure: the answer should explain how to interpret the given sentence, mirroring the example's explanatory style about \"the meaning of the sentence.\"\n\n\"Answer:\" is the final token, a label/field marker in a structured prompt template, immediately requiring the model's response text \u2014 likely a short explanatory sentence about the topic (e.g., \"The answer explains...\" or a direct explanation).\n\"Given the following task: [task description]\nQuestion: [question]\nSimilar question: [question]\nAnswer:\" \u2014 this is a few-shot or instruction-following format, so the next tokens must be the model's generated answer body, starting the explanation.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishing a Q&A template, where a \"Question\" and \"Similar question\" have been given, now requiring a model-generated answer.\n\nThe \"Similar question\" pattern signals a parallel structure: the answer should explain how to interpret the given sentence, mirroring the example's explanatory style about \"the meaning of the sentence.\"\n\n\"Answer:\" is the final token, a label/field marker in a structured prompt template, immediately requiring the model's response text \u2014 likely a short explanatory sentence about the topic (e.g., \"The answer explains...\" or a direct explanation).\n\"Given the following task: [task description]\nQuestion: [question]\nSimilar question: [question]\nAnswer:\" \u2014 this is a few-shot or instruction-following format, so the next tokens must be the model's generated answer body, starting the explanation.",
+  "truncated": false
+}

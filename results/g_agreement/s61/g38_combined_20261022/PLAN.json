@@ -1,0 +1,119 @@
+{
+  "at": "2026-10-22T13:29:02.768443+00:00",
+  "status": "FROZEN_BEFORE_NEW_G38_DISPATCH",
+  "amendment_user_time": "2026-10-22 12:40 CEST; actually delivered/re-sent15:30CEST; registration timestamp is actual at, not backdated",
+  "model": "google/gemini-3.8-flash",
+  "route": "google-ai-studio standard ONLY",
+  "prompt_sha256": "e19c408d5de240c593eae64183dc7a1ffd837dd0e8a99495c77c435c9b9bca5d",
+  "metadata_sha256": "b68472405db52a4b86980e8b818f1b73327501a95d1e02d238da2a299e46dc71",
+  "reasoning": "low (lowest supported; minimal unsupported per official Gemini docs)",
+  "max_output_tokens": 4096,
+  "concurrency": 2,
+  "min_dispatch_interval_seconds": 3,
+  "max_transport_retries": 2,
+  "backoff_seconds": [
+    10,
+    20
+  ],
+  "base_reserved_usd": "4.271649525",
+  "retry_margin_usd": "0.427164953",
+  "certified_worst_usd": "4.698814478",
+  "new_hard_cap_usd": "4.70",
+  "aggregate_hard_cap_usd": "10",
+  "prior_retained_usd": "5.239650974",
+  "aggregate_certified_worst_usd": "9.938465452",
+  "prior_ledger_sha256": "08e23ac43750b916449a7befc7c54bb439a29971bf9dc1dc8de54882c84c9e8f",
+  "full_grid_reference_worst_usd": "58.679430975",
+  "full_grid_unique_payloads": 2375,
+  "sampled": true,
+  "selected_cases": 98,
+  "selected_comparisons": 196,
+  "unique_payloads": 190,
+  "coverage": [
+    {
+      "dataset": "p3",
+      "condition": "natural",
+      "nla_layer": 42,
+      "candidate_cases": 96,
+      "selected_cases": 14,
+      "both_readers_per_pair": true,
+      "matched_and_mismatched_comparisons_per_case": 2
+    },
+    {
+      "dataset": "p3",
+      "condition": "natural",
+      "nla_layer": 44,
+      "candidate_cases": 100,
+      "selected_cases": 14,
+      "both_readers_per_pair": true,
+      "matched_and_mismatched_comparisons_per_case": 2
+    },
+    {
+      "dataset": "p3",
+      "condition": "shuffled",
+      "nla_layer": 42,
+      "candidate_cases": 96,
+      "selected_cases": 14,
+      "both_readers_per_pair": true,
+      "matched_and_mismatched_comparisons_per_case": 2
+    },
+    {
+      "dataset": "p3",
+      "condition": "shuffled",
+      "nla_layer": 44,
+      "candidate_cases": 100,
+      "selected_cases": 14,
+      "both_readers_per_pair": true,
+      "matched_and_mismatched_comparisons_per_case": 2
+    },
+    {
+      "dataset": "sar",
+      "condition": "concept",
+      "nla_layer": 42,
+      "candidate_cases": 400,
+      "selected_cases": 14,
+      "both_readers_per_pair": true,
+      "matched_and_mismatched_comparisons_per_case": 2
+    },
+    {
+      "dataset": "sar",
+      "condition": "no_edit",
+      "nla_layer": 42,
+      "candidate_cases": 400,
+      "selected_cases": 14,
+      "both_readers_per_pair": true,
+      "matched_and_mismatched_comparisons_per_case": 2
+    },
+    {
+      "dataset": "sar",
+      "condition": "random",
+      "nla_layer": 42,
+      "candidate_cases": 400,
+      "selected_cases": 14,
+      "both_readers_per_pair": true,
+      "matched_and_mismatched_comparisons_per_case": 2
+    }
+  ],
+  "sampling_is_balanced_not_population_proportional": true,
+  "schema_sha256": "d7b2f3c7cc1377e706f29c03cb5542ff1aed55523ea7182f5b72e6a9646835b7",
+  "files": {
+    "requests.jsonl": {
+      "sha256": "e3251b2032f82e280c6a74aeb3d07cc0ffd37eaf77bf308cc4f0d87b49932cd6",
+      "bytes": 1171987
+    },
+    "mapping.DO_NOT_SEND.jsonl": {
+      "sha256": "56580157cf617b3a6adcd8b70bc45724824f375297f8bbd16db18993735242bc",
+      "bytes": 96865
+    },
+    "selection.DO_NOT_SEND.json": {
+      "sha256": "d7fc3828cc609830310e49a3130175df46f17ff346db23b341bb155e832a98f0",
+      "bytes": 75333
+    }
+  },
+  "payload_authorization": "generated readout text and opaque SHA IDs only; no underlying questions/answers, layer/condition/reader labels, truth, activations or keys",
+  "classification": "Prospective for new STATED/EXHIBITED analysis; previous STATED-only outcomes already observed; no retroactive pre-outcome claim",
+  "part_c": "CANCELLED",
+  "extraction_failure": "whole pair MISSING on invalid schema, duplicate concept, nonexact evidence or truncation; no format repair; common matched/mismatched successful-case coverage for both modes; >5percent flags EXTRACTION-LIMITED",
+  "fve_availability": "No exact original-SA claim/state match in SA-R/P3 PartA; NA, not zero",
+  "stated_only_bias_warning": "Extraction-based counting under-credits continuation-style readers such as the Oracle lens; report STATED and EXHIBITED separately, no hidden-state truth verdict"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "b5e44de28f7407513f049b8c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nTemplate/few-shot pattern: a structured prompt-response format where \"Question\" and \"Task\" fields establish a parallel example, now requiring a matching \"Answer\" field.\n\nThe \"Task\" describes explaining how to make text more concise, so the answer must address that specific topic (conciseness, not the unrelated \"Question\" about water).\n\n\"Answer:\" is the final token, a label introducing the model's generated response, requiring an explanatory sentence or paragraph directly answering the task prompt.\n\"Example:\nQuestion: [X]\nTask: [X]\nAnswer:\" \u2014 this structured format demands the answer text follows immediately, likely beginning with \"The\" or a direct explanation of the described action.\n\"Answer:\" is the final prompt label, expecting a concise explanatory sentence mirroring the style of the task description.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Template/few-shot pattern: a structured prompt-response format where \"Question\" and \"Task\" fields establish a parallel example, now requiring a matching \"Answer\" field.\n\nThe \"Task\" describes explaining how to make text more concise, so the answer must address that specific topic (conciseness, not the unrelated \"Question\" about water).\n\n\"Answer:\" is the final token, a label introducing the model's generated response, requiring an explanatory sentence or paragraph directly answering the task prompt.\n\"Example:\nQuestion: [X]\nTask: [X]\nAnswer:\" \u2014 this structured format demands the answer text follows immediately, likely beginning with \"The\" or a direct explanation of the described action.\n\"Answer:\" is the final prompt label, expecting a concise explanatory sentence mirroring the style of the task description.",
+  "truncated": false
+}

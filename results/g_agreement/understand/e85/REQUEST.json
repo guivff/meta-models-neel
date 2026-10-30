@@ -1,0 +1,82 @@
+{
+  "argv": [
+    "python",
+    "/workspace/results/g_agreement/understand/late198/worker.py",
+    "--inputs",
+    "/workspace/e85/inputs",
+    "--assets",
+    "/workspace/e56/assets.json",
+    "--assignment",
+    "/workspace/e85/assignment.json",
+    "--out",
+    "/workspace/e85/out",
+    "--releases",
+    "/workspace/e85/releases",
+    "--source-sha",
+    "53d77dfba57e2146449cc7a642784c1d20d31dd9883c65ffeac93bc481553db6",
+    "--input-sha",
+    "114e18fb5be7d53a2591f80262f46ce83c631384f512ea0a491968d4ad5f77af"
+  ],
+  "cap_seconds": 4801,
+  "cumulative_cap_seconds": 4801,
+  "exact_preflight": {
+    "GPU_calls": 0,
+    "all_stages_executed": true,
+    "experiment": "E85",
+    "input_archive_sha256": "c53050c661a1bc6e6a39fe534904962fcd66b9b818dc907f209f36cccdbb1cbc",
+    "items": 600,
+    "negative_cases": [
+      "overcap",
+      "extra_private_file",
+      "missing_input"
+    ],
+    "source_archive_sha256": "4f161fb8baad72332234cb30d21e6db9bf3cb77c95e3e7aa0f998abc29deb4a1",
+    "status": "PASS"
+  },
+  "experiment": "E85",
+  "forecast": {
+    "cpu_wait_allowance_seconds": 600,
+    "fits_request": true,
+    "forecast_seconds": 3840.3631078061285,
+    "jobs": {
+      "base_setup": 1,
+      "capture": 75,
+      "downstream": 58,
+      "nla_native": 50,
+      "nla_setup": 1,
+      "oracle_native": 50,
+      "oracle_setup": 1
+    },
+    "margin": 1.25,
+    "new_GPU_measurement": false,
+    "recommended_cap_seconds": 4801,
+    "retrieval_reserve_seconds": 60,
+    "seed_seconds_per_batch": {
+      "base_setup": 347.7268692100188,
+      "base_text": 11.115151894329067,
+      "capture": 0.423359481675708,
+      "downstream": 11.115151894329067,
+      "next_token": 0.433327909,
+      "nla_native": 19.17773307699612,
+      "nla_setup": 293.8343498230679,
+      "oracle_native": 11.115151894329067,
+      "oracle_setup": 347.7268692100188
+    },
+    "status": "PLANNING_FORECAST_FROM_SAVED_TIMINGS",
+    "synthetic_warmups": "discarded and excluded from batch estimator; charged to absolute stage clock"
+  },
+  "input_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e85_runner_v1/package/inputs.tar.gz",
+  "input_archive_sha256": "c53050c661a1bc6e6a39fe534904962fcd66b9b818dc907f209f36cccdbb1cbc",
+  "input_seal_sha256": "114e18fb5be7d53a2591f80262f46ce83c631384f512ea0a491968d4ad5f77af",
+  "integrator_owns_launch": true,
+  "labels_on_pod": false,
+  "launch_allowed": true,
+  "priority_after": [
+    "E79",
+    "E80"
+  ],
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e85_runner_v1/package/source.tar.gz",
+  "source_archive_sha256": "4f161fb8baad72332234cb30d21e6db9bf3cb77c95e3e7aa0f998abc29deb4a1",
+  "source_seal_sha256": "53d77dfba57e2146449cc7a642784c1d20d31dd9883c65ffeac93bc481553db6",
+  "status": "READY"
+}

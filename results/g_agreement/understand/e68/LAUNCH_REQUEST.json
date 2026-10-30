@@ -1,0 +1,36 @@
+{
+  "experiment": "E68",
+  "status": "READY",
+  "runner_owner": "W-mechanism",
+  "launch_owner": "Integrator",
+  "authority_commit": "7e6ea0ccb8c3b60af382660e3b221e8af6ea896a",
+  "position_seal_sha256": "6b706209fb0f785eedec48d3d70a70f7dc2269fe9261797a6b8293782f9348c2",
+  "archive_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e68/cache/E68_POSITIONS_2026-10-27.tar.gz",
+  "archive_sha256": "905be483c4b859458ef6e74cfb16549dda5451e83c2d96951882dab75ec93d1e",
+  "inputs_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e68/cache/ratified_2026-10-27/INPUTS.json",
+  "private_labels_CPU_only": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e68/cache/ratified_2026-10-27/LABELS.PRIVATE.json",
+  "items": 252,
+  "positions_per_item": 3,
+  "capture_positions": 756,
+  "gpu_cap_seconds": 2160,
+  "readers": {
+    "Oracle": {
+      "block": 44,
+      "max_new_tokens": 128
+    },
+    "NLA": {
+      "block": 42,
+      "max_new_tokens": 512,
+      "stop": "</explanation>"
+    }
+  },
+  "greedy_readouts_per_item_position_reader": 1,
+  "reader_sees_item_text": false,
+  "probe": "AUROC at each position; preserve registered probe protocol",
+  "judge": "blind, §172 rubric",
+  "R_O1": "For each reader, S(P_pre)-S(P_far) >= 0.30 on BOTH container_after_move and holder_after_handovers; topic_twin changes by < 0.15 (unchanged §185 control criterion).",
+  "falsifier": "S(P_pre)-S(P_far) < 0.10 on BOTH state rows",
+  "infeasible_row": "arith_compare; excluded by §185 deviation 2, not a negative result",
+  "control_gap_exception": "topic_twin has no minimum gap; all 84 gap-5 items retained",
+  "ratification_required": false
+}

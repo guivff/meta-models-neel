@@ -1,0 +1,131 @@
+"""Committed, source-bound, once-only E123 CPU adapter. No calls or acquisition."""
+import argparse,hashlib,subprocess
+from pathlib import Path
+from projects.g_agreement.understand.wmech2 import core
+from . import rules,exploratory_note1
+
+ROOT=Path(__file__).resolve().parents[3]
+HERE=Path(__file__).resolve().parent
+GUARD=Path('/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/e123/ANALYSIS_ONCE.json')
+PRIVATE_SHA='495bbb19179f507869779d611c737ac82181f8c404054fcffd6963b7615fd0e4'
+REQ=core.require
+E121_ANALYSIS_SHA='77a66f703234e4973f63057e2eb53743e06dc0a1ba1da3bffd347cf4934d6473'
+
+
+def committed():
+    for name,h in core.read(HERE/'DEPENDENCIES.json').items():REQ(core.sha(ROOT/name)==h,'dependency changed '+name)
+    for p in HERE.iterdir():
+        if p.suffix in ('.py','.json','.md'):
+            b=subprocess.check_output(['git','show','HEAD:'+str(p.relative_to(ROOT))],cwd=ROOT)
+            REQ(hashlib.sha256(b).hexdigest()==core.sha(p),'uncommitted adapter '+p.name)
+    return subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+
+
+def metadata(spec):
+    ip=Path(spec['inventory_seal']);inv=core.verify(ip,spec['inventory_sha256'])
+    REQ(inv['experiment']=='E123' and inv['status']=='SOURCE_ONLY_COHORT_BOUND' and inv['labels_cpu_only'] is True,'original source-only cohort inventory')
+    REQ(inv['source_e104_private_sha256']==PRIVATE_SHA and core.sha(spec['e104_private'])==PRIVATE_SHA,'original flipped cohort')
+    private=core.read(spec['e104_private']);data=core.read(ip.parent/'INVENTORY.json')
+    REQ(set(data)==set(rules.ROWS),'both original rows')
+    for row,n in rules.ROWS.items():
+        prior={x['item_id']:x for x in private if x['arm']=='U' and x['row']==row and x['condition']=='steered' and x['flipped']}
+        index=core.unique(data[row],'item_id')
+        REQ(len(index)==n and set(index)==set(prior),'unchanged E104/E109 flipped cohort')
+        REQ(all(x['old_value']==('B' if prior[i]['target']=='A' else 'A') for i,x in index.items()),'original old value, not changed steered target')
+    return data
+
+
+def inputs(spec,inventory):
+    p=Path(spec['output_seal']);s=core.verify(p,spec['output_sha256'])
+    REQ(s['experiment']=='E123' and s['status']=='COMPLETE' and s['inventory_sha256']==spec['inventory_sha256'],'complete same-inventory normalized pointers')
+    REQ(s['reader']=='oracle' and s['layers']==[44,52] and s['labels_cpu_only'] is True and s['route_verified'] is True and s['redaction_audit_complete'] is True,'source reader/site/privacy/redaction bindings')
+    sources=s['source_seals'];seals=[core.verify(x['seal'],x['sha256']) for x in sources]
+    REQ(bool(seals) and all(x.get('status') in ('COMPLETE','COMPLETE_ONCE') for x in seals),'only complete original sources')
+    REQ(set(s['source_roles'])=={'E109_steered_random','E123_unhooked'},'all registered original source roles')
+    for role,indices in s['source_roles'].items():REQ(isinstance(indices,list) and indices and all(type(i)is int and 0<=i<len(seals) for i in indices),'source role binding')
+    for role,experiment in [('E109_steered_random','E109'),('E123_unhooked','E123')]:
+        REQ(all(seals[i]['experiment']==experiment for i in s['source_roles'][role]),'original source experiment/role')
+    cache={}
+    def ref(x,role):
+        i=x['seal_index'];REQ(type(i)is int and i in s['source_roles'][role] and x['member'] in seals[i]['files'],'original source pointer/role')
+        key=(i,x['member'])
+        if key not in cache:cache[key]=core.read(Path(sources[i]['seal']).parent/x['member'])
+        v=cache[key];REQ(isinstance(x['keys'],list) and all(type(k)in(int,str) for k in x['keys']),'literal original source keys')
+        for k in x['keys']:v=v[k]
+        return v
+    ms=core.read(p.parent/'MEASUREMENTS.json');REQ(set(ms)==set(rules.ROWS),'exact measured rows')
+    data={}
+    for row in rules.ROWS:
+        idx=core.unique(ms[row],'item_id');REQ(set(idx)=={x['item_id'] for x in inventory[row]},'all original source items; no selection on outcomes')
+        out=[]
+        for item in inventory[row]:
+            r=idx[item['item_id']];REQ(set(r['conditions'])==set(rules.CONDITIONS),'all three original conditions')
+            conditions={}
+            for cond,layers in r['conditions'].items():
+                REQ(set(layers)=={'44','52'},'both read layers')
+                cc={}
+                for layer,cell in layers.items():
+                    REQ(cell['item_id']==item['item_id'] and cell['row']==row and cell['condition']==cond and cell['layer']==int(layer) and cell['reader']=='oracle','exact original readout/judgment identity')
+                    role='E123_unhooked' if cond=='unhooked' else 'E109_steered_random'
+                    # Identity record is a sealed original CPU readout/judgment join,
+                    # not a label inferred by inspecting the generated text.
+                    identity=ref(cell['identity'],role)
+                    REQ(all(identity[k]==cell[k] for k in ('item_id','row','condition','layer','reader')),'original source identity mapping')
+                    code=ref(cell['code'],role);text=ref(cell['text'],role)
+                    if code is None:
+                        pointer=cell['code'];REQ(pointer['keys'] and pointer['keys'][-1]=='code','terminal code pointer')
+                        terminal=ref(dict(pointer,keys=pointer['keys'][:-1]),role)
+                        REQ(terminal['id']==identity['judgment_id'] and terminal['status']=='UNPARSEABLE',
+                            'null code requires original UNPARSEABLE disposition and identity')
+                        code=dict(id=identity['judgment_id'],category='UNPARSEABLE',values=[],evidence='')
+                    REQ(code['id']==identity['judgment_id'],'original judgment/readout join')
+                    core.score(code,item['old_value'],text)  # exact original evidence/category validation
+                    cc[layer]=code
+                conditions[cond]=cc
+            out.append(dict(item,conditions=conditions))
+        data[row]=out
+    return data
+
+
+def exploratory_metadata(spec):
+    p=Path(spec['e121_analysis_seal'])
+    REQ(spec['e121_analysis_sha256']==E121_ANALYSIS_SHA==core.sha(p),'original frozen E121 analysis seal ff2b4dd8e')
+    seal=core.verify(p,E121_ANALYSIS_SHA)
+    REQ(seal['experiment']=='E121'and seal['status']=='COMPLETE_ONCE','original E121 completed once')
+
+
+def exploratory_inputs(spec,data):
+    # Reuse original E121 source normalization only, never its analysis/guard.
+    from projects.g_agreement.e121_analysis import adapter as original
+    p=Path(spec['e121_analysis_seal'])
+    REQ(spec['e121_analysis_sha256']==E121_ANALYSIS_SHA==core.sha(p),'original frozen E121 analysis seal ff2b4dd8e')
+    seal=core.verify(p,E121_ANALYSIS_SHA)
+    REQ(seal['experiment']=='E121'and seal['status']=='COMPLETE_ONCE','original E121 completed once')
+    binding=core.read(p.parent/'BINDING.json')
+    ids=exploratory_note1.consensus_ids(original.inputs(binding))
+    REQ(ids<={x['item_id']for x in data['fact_recall']},'same original E104/E109/E121 source identities')
+    return ids
+
+
+def run(spec,commit):
+    REQ(not GUARD.exists(),'once guard consumed; no replay')
+    inventory=metadata(spec)
+    exploratory_metadata(spec)
+    # Seal/hash/metadata checks do not compute any statistics. Claim before any
+    # outcome join; an interrupted/failed attempt retains its consumed guard.
+    out=core.claim(dict(analysis=spec['analysis'],guard=str(GUARD),output_sha256=spec['output_sha256']),commit)
+    data=inputs(spec,inventory)
+    result=rules.analyze(data)
+    false_consensus=exploratory_inputs(spec,data)
+    core.write(out/'POST_HOC_EXPLORATORY_NOTE1.json',exploratory_note1.analyze(data,false_consensus))
+    core.write(out/'RESULTS.json',result);core.write(out/'BINDING.json',spec)
+    core.seal(out,'ANALYSIS_SEAL.json',experiment='E123',status='COMPLETE_ONCE',code_commit=commit,inventory_sha256=spec['inventory_sha256'],output_sha256=spec['output_sha256'],e121_analysis_sha256=spec['e121_analysis_sha256'],post_hoc_note1=True,no_new_calls=True)
+    return out/'ANALYSIS_SEAL.json'
+
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--spec',required=True);args=p.parse_args()
+    commit=committed()  # before SPEC/private/category/readout IO
+    print(run(core.read(args.spec),commit))
+
+if __name__=='__main__':main()

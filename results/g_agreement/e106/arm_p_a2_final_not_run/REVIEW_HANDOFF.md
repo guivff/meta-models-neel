@@ -1,0 +1,1 @@
+Arm P final NOT RUN (operational): registered retime measured fullcustody1393.455843s>1246workerbudget (and>1366providercap).128failedpilotreadouts remainunjudged/unscored/unstitched. Fullrawarchive/source/metadata/custody. Please review operationalstatus/sourceordering/cost; no bootstrap or scientificR-FX0 claim. Tgate independent.

@@ -1,0 +1,12 @@
+{
+  "id": "61c8e120a227cdfaf4a0c198",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Topic:\", \"Instruction:\", \"Question:\" fields signals a formatted Q&A or few-shot example.\n\nThe instruction explicitly states to \"explain how to use Python,\" but the question asks about \"JavaScript,\" creating a deliberate mismatch the model must navigate \u2014 the answer should follow the instruction's topic (Python), not the question's.\n\n\"Question: How to explain the benefits of [X]?\nAnswer:\" is the final field, requiring the model to generate the actual response text, likely a short explanatory sentence demonstrating the pattern.\n\"Answer:\" is the final token, a label introducing the model's generated response, expecting a direct, concrete example sentence about the topic.\n\"Instruction: [topic]...\nQuestion: [topic]...\nAnswer:\" \u2014 the answer field now requires the model's output demonstrating the pattern.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Topic:\", \"Instruction:\", \"Question:\" fields signals a formatted Q&A or few-shot example.\n\nThe instruction explicitly states to \"explain how to use Python,\" but the question asks about \"JavaScript,\" creating a deliberate mismatch the model must navigate \u2014 the answer should follow the instruction's topic (Python), not the question's.\n\n\"Question: How to explain the benefits of [X]?\nAnswer:\" is the final field, requiring the model to generate the actual response text, likely a short explanatory sentence demonstrating the pattern.\n\"Answer:\" is the final token, a label introducing the model's generated response, expecting a direct, concrete example sentence about the topic.\n\"Instruction: [topic]...\nQuestion: [topic]...\nAnswer:\" \u2014 the answer field now requires the model's output demonstrating the pattern.",
+  "truncated": false
+}

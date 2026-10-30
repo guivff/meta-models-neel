@@ -1,0 +1,1052 @@
+[
+  {
+    "selection": {
+      "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+      "reason": "top type T01",
+      "type_claims": 11
+    },
+    "source": {
+      "activation_match": "original S61 matched case; each reported site preserved",
+      "case": "47cae9f9c08e68b191e18c718b894f0fa307368a5da022ac45097dc6715d02bb",
+      "condition": "random",
+      "dataset": "S61",
+      "examples_eligible": true,
+      "item_id": "SAR-14|SAR-evaluation-008",
+      "nla": "<explanation>\nQ&A format pattern: each question is followed by a direct answer, establishing strong structural expectation for a concise response.\n\nThe \"What is the rule for...\" section mirrors the earlier \"What is the rule for...\" answer format, which provided a numbered list of sentences — the same pattern is expected here.\n\nFinal token \"list\\n\" ends the answer to \"How to describe two or more people,\" and \"the rule is:\\n\\n\" signals an immediate list of sentences follows, likely a single sentence like \"500,000\" or a restatement of the privacy rule.\n\"What is unusual about this model's state? Name at most five specific concepts.\" — the answer should be a numbered list of sentences, e.g., \"the list of sentences.\"\n</explanation>",
+      "nla_sha256": "a8c8c8b7f85ffbb679c572f267c0908af7976bf8260ce794d9ba3412bd5eb1d3",
+      "oracle": "- 2: sorted list of ages, separated by commas, without the original\n- 2: sorted list of ages, separated by commas, without the original sequence. The list must not contain\n- 排序后的列表 (sorted list) of ages, separated by commas, without using \"and\" or \"or\". The missing ages are omitted.\n- 1. 列出所有非当前人的年龄，按升序排列，用空格分隔，不包含当前人。\n\n```cpp\n",
+      "oracle_sha256": "65c32417434ca94efc8804485ebcad8241344474c0b17ce1885b4bf5d9035178",
+      "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+      "sites": [
+        44,
+        42
+      ],
+      "source_dataset": "sar"
+    },
+    "one_sided_claims": [
+      {
+        "id": "e17b521e951ca5a2eb56f21b7854f6b8a3861d4b5c38e58b068013a4f5774def",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "A",
+        "index": 0,
+        "claim": "The list of ages must be sorted.",
+        "evidence": "sorted list of ages",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "4ef847e03ac7a32f77e0e10e50917249cc8e40543b352d35d46b378fe9cdb865",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "A",
+        "index": 1,
+        "claim": "The list of ages must be separated by commas.",
+        "evidence": "separated by commas",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "6f3bfde69d7cda60eebc71b495cfe9ea0f9ab8ea99c5e071ba15fd4150ebd9a5",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "A",
+        "index": 2,
+        "claim": "The list must not contain the original sequence.",
+        "evidence": "without the original sequence",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "144f320f96db3ef8a1de93445a34c7471efefa5a7ca1c54d006947a45b08faab",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "A",
+        "index": 3,
+        "claim": "The list must not contain \"and\" or \"or\".",
+        "evidence": "without using \"and\" or \"or\"",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "9cb76c9b03ae4ee24f8757b1dfbf58a3b9df493ff35dba365a4e03ff3c1024c7",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "A",
+        "index": 4,
+        "claim": "Missing ages are omitted.",
+        "evidence": "The missing ages are omitted.",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "deca7170196637ef4af59383b092d3dbf2d858f833ce91b5d2b4d3aefce53385",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "A",
+        "index": 5,
+        "claim": "The list should exclude the current person's age.",
+        "evidence": "不包含当前人",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "a365ebcafb4c6142e782516d788823cdfa6be277e9dcb6bab21d8679145b1047",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "A",
+        "index": 6,
+        "claim": "The list should be in ascending order.",
+        "evidence": "按升序排列",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "ddcafa034f419b0605149419669e09e04797422df846a8621ca7b4f743bf1a04",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "A",
+        "index": 7,
+        "claim": "The list should be separated by spaces.",
+        "evidence": "用空格分隔",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "164521cee2b3bf1cf3822fa421276bd995e70b53f2ea777c5eb8d1e97355db1d",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "B",
+        "index": 0,
+        "claim": "The Q&A format establishes a structural expectation for a concise response.",
+        "evidence": "Q&A format pattern: each question is followed by a direct answer, establishing strong structural expectation for a concise response.",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "33173863de33366667f54082cd76a4f7e85a5a0ecd6a5d2502274792f73dca39",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "B",
+        "index": 1,
+        "claim": "The section What is the rule for mirrors the earlier answer format.",
+        "evidence": "The \"What is the rule for...\" section mirrors the earlier \"What is the rule for...\" answer format",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "a4207dd9a219b9639ea3f293be6c63505b913497361d3bed75dafe81e0db4ab6",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "B",
+        "index": 2,
+        "claim": "The earlier answer format provided a numbered list of sentences.",
+        "evidence": "which provided a numbered list of sentences",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "aff6e4347d0dbc177a700b7f8008f9aa6c58aeb1c31c4b4745ff766f0b393fa8",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "B",
+        "index": 3,
+        "claim": "The final token list ends the answer to How to describe two or more people.",
+        "evidence": "Final token \"list\\n\" ends the answer to \"How to describe two or more people,\"",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "8023ac70ebdf63bc0bdb681b17c2f9b027f9b645414021a20f9df7d080d26b4a",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "B",
+        "index": 4,
+        "claim": "The phrase the rule is signals an immediate list of sentences follows.",
+        "evidence": "\"the rule is:\\n\\n\" signals an immediate list of sentences follows",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "bdac8abf6bb2714e16051927d7015b06835888ddb6763b2a31a39a4f1838f343",
+        "pair_id": "e7c5c4fd9a8e324895f8f8d02f5fa633e429016d8f2d672599d62aad64298ae9",
+        "side": "B",
+        "index": 5,
+        "claim": "The answer to What is unusual about this model's state should be a numbered list of sentences.",
+        "evidence": "\"What is unusual about this model's state? Name at most five specific concepts.\" — the answer should be a numbered list of sentences",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "S61"
+      }
+    ]
+  },
+  {
+    "selection": {
+      "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+      "reason": "top type T01",
+      "type_claims": 11
+    },
+    "source": {
+      "activation_match": "same captured item/token at each native site; not identical cross-layer vectors",
+      "case": "[\"7d11736c89d3d0c603bbf76d\",0]",
+      "dataset": "W1",
+      "examples_eligible": true,
+      "item_id": "7d11736c89d3d0c603bbf76d",
+      "nla": "<explanation>\nPseudo-code/obfuscated format with structured block syntax, mixing code-like tokens with poetic labels (\"river_count\", \"flow\"), suggesting continuation of a stylized algorithmic or puzzle pattern.\n\nThe \"river_count\" section header establishes a named block with a specific calculation theme, implying further indented lines of cryptic arithmetic or string manipulation steps follow.\n\nFinal token \"# river\" is a comment marker mid-line within the block, immediately requiring completion of a comment phrase describing a \"river\" metaphor or operation (e.g., \"flow\", \"crossing\", \"accumulation\").\n\"\npython\nflow",
+      "nla_sha256": "371fac6a0fb62132f72d57bb67c6d34ba41fd8c040e31b60d27205423b797c33",
+      "oracle": "- flow: accumulate bits; river: count steps\")  # river\n- 's flow' logic: accumulate a running total with bitwise ops. river\n- /stream logic: accumulate a running total with a twist. Each iteration adds a 'river\n- 计数 (river count) begins here. We accumulate a hash-like value. \"\"\"  # river\n    acc = acc + len(chunk)  # river",
+      "oracle_sha256": "47dd82bcb2376a747b8be6ed8b973f12e747001a89a59bac9d2dc5c3b4604d6b",
+      "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+      "sample": 0,
+      "sites": [
+        44,
+        42
+      ],
+      "source_parser_status": [
+        "COMPLETE",
+        "EXTRACTION_FAILED"
+      ]
+    },
+    "one_sided_claims": [
+      {
+        "id": "12cef7c460692fb47a3ddfef934629deccb48665f155ef5b1adc816a9e39b9e3",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "A",
+        "index": 0,
+        "claim": "The text uses a pseudo-code or obfuscated format with structured block syntax.",
+        "evidence": "Pseudo-code/obfuscated format with structured block syntax",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "ad8268a677409c6973615d26e32b6311ba3f598523cb4e485b97cf096c6f4572",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "A",
+        "index": 1,
+        "claim": "The text mixes code-like tokens with poetic labels.",
+        "evidence": "mixing code-like tokens with poetic labels (\"river_count\", \"flow\")",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "7242b35ed640e9f2c19f7dd7827058e435d6d320e829b1ef77ba887b14a4c97b",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "A",
+        "index": 2,
+        "claim": "The river_count section header establishes a named block with a calculation theme.",
+        "evidence": "The \"river_count\" section header establishes a named block with a specific calculation theme",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "fe35da1bb175b3bd96dc56da29e7be64b810aa376290e166826340435dfc9ec6",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "A",
+        "index": 3,
+        "claim": "The final token is a comment marker mid-line.",
+        "evidence": "Final token \"# river\" is a comment marker mid-line within the block",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "b498d4b3cc7c7283ec45cc3710ba48561a2bd489c7c222436e66ec813b1f93e0",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "B",
+        "index": 0,
+        "claim": "The flow logic accumulates bits.",
+        "evidence": "flow: accumulate bits",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "644d25fb171d5236f6cda6c6c67894ede1840dd09e04688ba08e16eac37fd4ee",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "B",
+        "index": 1,
+        "claim": "The river logic counts steps.",
+        "evidence": "river: count steps",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "0ef932941a4568f8eaded4a24ab5f7d84e5ed168fc9eba42ad3123c6d687e915",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "B",
+        "index": 2,
+        "claim": "The flow logic accumulates a running total with bitwise operations.",
+        "evidence": "'s flow' logic: accumulate a running total with bitwise ops.",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "d7f5a78cab218769952d5e3060018ba87878cf310d228153cd56f972543094ed",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "B",
+        "index": 3,
+        "claim": "The stream logic accumulates a running total with a twist.",
+        "evidence": "/stream logic: accumulate a running total with a twist.",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "d6ff658a824b607efbf80e8111eff73091164362bc7cec43c7eeb22d1541ff14",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "B",
+        "index": 4,
+        "claim": "Each iteration adds a river.",
+        "evidence": "Each iteration adds a 'river",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "31fc4886998d7d870f32611fc1d6d1a2f59133123bd996a6ffed295e46b858ba",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "B",
+        "index": 5,
+        "claim": "The river count begins.",
+        "evidence": "计数 (river count) begins here.",
+        "type": "T07",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "a68e1eb74a0aa3a69202f9d56f4f5877c67f61ebe0701207679f86bbba9799eb",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "B",
+        "index": 6,
+        "claim": "A hash-like value is accumulated.",
+        "evidence": "We accumulate a hash-like value.",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "5d1b135f75b8b754473c9c536374a30d1e954bc58f524c311fa008b13ee9ee7e",
+        "pair_id": "401a4940b8ef1b29e8351b5102e37fb04cefb28f525a985b48a7f5750917d9ee",
+        "side": "B",
+        "index": 7,
+        "claim": "The variable acc is updated by adding the length of the chunk.",
+        "evidence": "acc = acc + len(chunk)",
+        "type": "T01",
+        "reader": "oracle",
+        "dataset": "W1"
+      }
+    ]
+  },
+  {
+    "selection": {
+      "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+      "reason": "top type T02",
+      "type_claims": 8
+    },
+    "source": {
+      "activation_match": "original S61 matched case; each reported site preserved",
+      "case": "3b8a99692b92679aac8c658642231dc8beb96bb26c5042f14e193bc70406957d",
+      "condition": "no_edit",
+      "dataset": "S61",
+      "examples_eligible": true,
+      "item_id": "SAR-05|SAR-evaluation-014",
+      "nla": "<explanation>\nQ&A format with structured prompt-response pattern: \"What comes next in the sequence?\" followed by explanation, then \"The answer is in integer format only\" signals a single numeric answer follows.\n\nThe sequence 100, 103, 106 establishes a +3 arithmetic progression, so the next term is 109.\n\nFinal token \"Answer:\\n\" is the closing label of the output format, immediately requiring the single integer answer \"109\" on the next line.\n\"What is unusual about the model's state? Name at most five specific concepts. If none is supported, say none.\"\nThe final line \"The answer is in integer format only\\n\\nAnswer:\\n\" expects the next token to be the integer 109, completing the structured response.\n</explanation>",
+      "nla_sha256": "f4e46889db236b67cfcd363b89119b9094c9b448413f53156471f933fe8624ec",
+      "oracle": "- 1250\n- 1250\n- 1252\n```\n\n### Explanation:\nThe sequence is an arithmetic progression where each term increases by\n- 1253\n```\n\n**Explanation:** The sequence is an arithmetic progression where each subsequent number increases by 2. The next number after 1251 is 1253.\n\n###\n- 1253** (The next number in the sequence is 1253, continuing the pattern of adding 2 each time.)",
+      "oracle_sha256": "f8a0fe56dc78630c4bae0373a1602d32a780a3f0c9fc8cce0d72f0c2b3ad1d9e",
+      "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+      "sites": [
+        44,
+        42
+      ],
+      "source_dataset": "sar"
+    },
+    "one_sided_claims": [
+      {
+        "id": "f8d7c894f66ef2220b4d3a272dbfbeb32911827d5cc32c9e3b0bfa6ffceec683",
+        "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+        "side": "A",
+        "index": 0,
+        "claim": "The sequence contains the number 1250.",
+        "evidence": "1250",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "d23595f78ed2c24047b90a3f682565ad1973a6cd7432bba637d3a879eb514524",
+        "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+        "side": "A",
+        "index": 1,
+        "claim": "The sequence contains the number 1252.",
+        "evidence": "1252",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "498fe85ac55d7be157a9edb7419cf98e333c9d16abca54d7ad20b2b4e767de95",
+        "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+        "side": "A",
+        "index": 2,
+        "claim": "The sequence contains the number 1253.",
+        "evidence": "1253",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "2ac7a0fdbed894dce70e86af13b164a7e06df15f8638471611630748da6eaa51",
+        "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+        "side": "A",
+        "index": 3,
+        "claim": "The sequence is an arithmetic progression.",
+        "evidence": "The sequence is an arithmetic progression",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "13fcc3489afd4ed70237ba1641f4b4c1e0d0475c5ba9af1c15edb23554c37dd3",
+        "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+        "side": "A",
+        "index": 4,
+        "claim": "Each term in the sequence increases by 2.",
+        "evidence": "each subsequent number increases by 2",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "178c988da9326435ba3ac1d29af6dfb3629a464b6345f1533770e4af74b83def",
+        "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+        "side": "A",
+        "index": 5,
+        "claim": "The next number after 1251 is 1253.",
+        "evidence": "The next number after 1251 is 1253",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "bdb7297e1050eed871392cfbb50237f0484d99f43d077a6c451d664fe6fee8b2",
+        "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+        "side": "B",
+        "index": 0,
+        "claim": "The sequence 100, 103, 106 follows a +3 arithmetic progression.",
+        "evidence": "The sequence 100, 103, 106 establishes a +3 arithmetic progression",
+        "type": "T02",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "55510437500a314ae44f2e0ef4bfd4ded56fb2b5ae25313cf2746e2b66b90314",
+        "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+        "side": "B",
+        "index": 1,
+        "claim": "The next term in the sequence is 109.",
+        "evidence": "the next term is 109.",
+        "type": "T02",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "9e1beab5a8b853a3223d026de3e1abd2e64d0538706d159442be36b47bdff2c4",
+        "pair_id": "b7f2301a083fb0dcf69fae37be5fe33e3ce55eebedd4329668aaf9a9c59bec76",
+        "side": "B",
+        "index": 2,
+        "claim": "The final token Answer: is the closing label of the output format.",
+        "evidence": "Final token \"Answer:\\n\" is the closing label of the output format",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "S61"
+      }
+    ]
+  },
+  {
+    "selection": {
+      "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+      "reason": "top type T02",
+      "type_claims": 8
+    },
+    "source": {
+      "activation_match": "original S61 matched case; each reported site preserved",
+      "case": "8f51454bd7fbd39238e44e07f683bcda1dd8d52b59ee3599b7bc626e9fd88855",
+      "condition": "no_edit",
+      "dataset": "S61",
+      "examples_eligible": true,
+      "item_id": "SAR-13|SAR-evaluation-014",
+      "nla": "<explanation>\nQ&A format with structured prompt-response pattern: \"What comes next in the sequence?\" followed by explanation, then \"The answer is in integer format only\" signals a single numeric answer follows.\n\nThe sequence 100, 103, 106 establishes a +3 arithmetic progression, so the next term is 109.\n\nFinal token \"Answer:\\n\" is the closing label of the output format, immediately requiring the single integer answer \"109\" on the next line.\n\"What is unusual about the model's state? Name at most five specific concepts. If none is supported, say none.\"\nThe final line \"The answer is in integer format only\\n\\nAnswer:\\n\" expects the next token to be the integer 109, completing the structured response.\n</explanation>",
+      "nla_sha256": "f4e46889db236b67cfcd363b89119b9094c9b448413f53156471f933fe8624ec",
+      "oracle": "- 1250\n- 1250\n- 1252\n```\n\n### Explanation:\nThe sequence is an arithmetic progression where each term increases by\n- 1253\n```\n\n**Explanation:** The sequence is an arithmetic progression where each subsequent number increases by 2. The next number after 1251 is 1253.\n\n###\n- 1253** (The next number in the sequence is 1253, continuing the pattern of adding 2 each time.)",
+      "oracle_sha256": "f8a0fe56dc78630c4bae0373a1602d32a780a3f0c9fc8cce0d72f0c2b3ad1d9e",
+      "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+      "sites": [
+        44,
+        42
+      ],
+      "source_dataset": "sar"
+    },
+    "one_sided_claims": [
+      {
+        "id": "b4a43630e8d30e7c8015151c2f8b9e23f65ff2f420cf6074b7a11cfe13a96bf8",
+        "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+        "side": "A",
+        "index": 0,
+        "claim": "The sequence contains the number 1250.",
+        "evidence": "1250",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "1ca46d1b0f84434d2984a0853ed1cfe0b3b57fefc371310086d510d5860706bb",
+        "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+        "side": "A",
+        "index": 1,
+        "claim": "The sequence contains the number 1252.",
+        "evidence": "1252",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "892a168e09a1c43d0a2ba758965a28fd184030942c828f801234bae7aa5f1b05",
+        "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+        "side": "A",
+        "index": 2,
+        "claim": "The sequence contains the number 1253.",
+        "evidence": "1253",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "61d74671ab3352e031003520a74ca0b45c5df387e17fa7076d0aac262a3a7f48",
+        "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+        "side": "A",
+        "index": 3,
+        "claim": "The sequence is an arithmetic progression.",
+        "evidence": "The sequence is an arithmetic progression",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "f0d4d030bdcd738212c31cc54bb3a39afdb954c32104c8118d98826ca723dcc9",
+        "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+        "side": "A",
+        "index": 4,
+        "claim": "Each term in the sequence increases by 2.",
+        "evidence": "each subsequent number increases by 2",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "658cea839c651bb46ada591ec19c7a374a0f2919999cdad502fc81da7d808b41",
+        "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+        "side": "A",
+        "index": 5,
+        "claim": "The next number after 1251 is 1253.",
+        "evidence": "The next number after 1251 is 1253",
+        "type": "T02",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "fe06f64aeb7ad9ed399888e3a3b8f8553fda5a2f55c9ac7364ae86a1228cff1f",
+        "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+        "side": "B",
+        "index": 0,
+        "claim": "The sequence 100, 103, 106 follows a +3 arithmetic progression.",
+        "evidence": "The sequence 100, 103, 106 establishes a +3 arithmetic progression",
+        "type": "T02",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "ba295ec16a48907e344e9fcbe3814d5e709e007cf20603a7ed22f19b452153ad",
+        "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+        "side": "B",
+        "index": 1,
+        "claim": "The next term in the sequence is 109.",
+        "evidence": "the next term is 109.",
+        "type": "T02",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "9098335d42952d83009bd8ef48a4b114aab6b8350a5cec7a53d3144ba9ea87a8",
+        "pair_id": "87570028cd66312c62a0800ea7c6ce5b17e20458b701499bb1e6773d57767d56",
+        "side": "B",
+        "index": 2,
+        "claim": "The final token Answer: is the closing label of the output format.",
+        "evidence": "Final token \"Answer:\\n\" is the closing label of the output format",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "S61"
+      }
+    ]
+  },
+  {
+    "selection": {
+      "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+      "reason": "top type T05",
+      "type_claims": 13
+    },
+    "source": {
+      "activation_match": "same captured item/token at each native site; not identical cross-layer vectors",
+      "case": "[\"0b52959497bbba1b973687ef\",1]",
+      "dataset": "W1",
+      "examples_eligible": true,
+      "item_id": "0b52959497bbba1b973687ef",
+      "nla": "<explanation>\nPoetic/prose poem register established — a nostalgic, reflective scene-setting narrative in an East Asian-inspired setting, likely Chinese or similar.\n\nThe phrase \"Hidden Trail\" introduces a title/label requiring elaboration, suggesting an ongoing exploration of a mysterious location with personal history.\n\nFinal fragment \"nearby the old railway station along with its platform\" is mid-sentence, part of a locative description beginning with \"where,\" requiring continuation of the descriptive clause — likely more atmospheric details about the surroundings, debris, or structures near the station.\n\"platform\" may end a list or expand into subordinate clause (",
+      "nla_sha256": "5ac80958ba5c100e1de106154b92f2397a362dead5f1a808cacf9006bf1c86aa",
+      "oracle": "- /platform, which lies just beyond the forest. The abandoned railway station’s platform\n- 遗迹 (platform remnants), and nearby shop fronts. According to locals, this tiny station once featured a platform\n- （platform）remains, its signal lights, and waiting room. The photo’s caption states that this village station's platform\n- /platform structure, and its adjacent trackbed. The image is dated to 2016, showing the old station’s platform",
+      "oracle_sha256": "d6c540add85f773334b56dd289d37a638ff7ed50e51bc4f817048723f78adb81",
+      "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+      "sample": 1,
+      "sites": [
+        44,
+        42
+      ],
+      "source_parser_status": [
+        "COMPLETE",
+        "EXTRACTION_FAILED"
+      ]
+    },
+    "one_sided_claims": [
+      {
+        "id": "2c02d7529a449cd685289e955265fa253a6921b6d254ab5293fb20fc68f4612d",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 0,
+        "claim": "The platform lies just beyond the forest.",
+        "evidence": "/platform, which lies just beyond the forest.",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "1340e9414081769e0e078d7fa0eee4520f69b21b2fe1bda2177db7a278e04d76",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 1,
+        "claim": "The station is abandoned.",
+        "evidence": "The abandoned railway station’s platform",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "5b28d9e1cc729303c5716f4ec1ef9a17c10e5fb20b61a822f0b0784e432e30a0",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 2,
+        "claim": "The station has platform remnants.",
+        "evidence": "遗迹 (platform remnants)",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "8858a9e9ee81c4b8cfcfe2aeef7d74c9405c587c4bcff1bffdf86406bc79ab97",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 3,
+        "claim": "The station has nearby shop fronts.",
+        "evidence": "nearby shop fronts",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "599913a69f70377c63d177ae02bdad2350bf9b57c6fb0e5d44bf374bb22b19fb",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 4,
+        "claim": "The station once featured a platform.",
+        "evidence": "this tiny station once featured a platform",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "2975be4f31ba172505408c8ac614e8c5c523855428e0660d8c01539325ed70f4",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 5,
+        "claim": "The station has remains.",
+        "evidence": "（platform）remains",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "6a802d9e2ab46129f84422c646c1646340f0d422bbedd2b393bcf027f1cbe985",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 6,
+        "claim": "The station has signal lights.",
+        "evidence": "its signal lights",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "d5a2db693ebe9b2a278d0849ac87abcff2536f25e04281cd0cbb2dedbe886073",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 7,
+        "claim": "The station has a waiting room.",
+        "evidence": "waiting room",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "4758b5f4fd88139a02e91fcf55630483e01740d53ad04ea66909624533c66d35",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 8,
+        "claim": "The photo's caption states the village station's platform exists.",
+        "evidence": "The photo’s caption states that this village station's platform",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "949474853c0da59b99cc4d88b8b77f423783ea0ef1e105e641a5d0021cc5aad0",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 9,
+        "claim": "The station has a platform structure.",
+        "evidence": "/platform structure",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "77fc3d351a84f9e3c9ca988e7698f452b98c821f1f346d86b8f643bf077734cb",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 10,
+        "claim": "The station has an adjacent trackbed.",
+        "evidence": "its adjacent trackbed",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "1b8122ac8222a84bd0f212c76a887311c739af6b5832d9e2a28c5e1f41bad54d",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 11,
+        "claim": "The image is dated to 2016.",
+        "evidence": "The image is dated to 2016",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "535a9b9f206063750ae4818c6761993b74c04ac098496cb7087cccaa727f8240",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "A",
+        "index": 12,
+        "claim": "The image shows the old station's platform.",
+        "evidence": "showing the old station’s platform",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "bfdbbb912ded01a70764e4593c08bd0514be45855bc3fdc607224b58bcf8528d",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "B",
+        "index": 0,
+        "claim": "A poetic or prose poem register is established.",
+        "evidence": "Poetic/prose poem register established",
+        "type": "T03",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "9e3a330b8804786607482dfc70638fe2f0c49601f7f711286480321e517cc5a3",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "B",
+        "index": 1,
+        "claim": "The narrative is a nostalgic, reflective scene-setting in an East Asian-inspired setting.",
+        "evidence": "a nostalgic, reflective scene-setting narrative in an East Asian-inspired setting",
+        "type": "T03",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "ab024c89b2bb481d025a6d964ccd5b66cee4f8ceac806537f5cf5e1dbe9ea760",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "B",
+        "index": 2,
+        "claim": "The phrase Hidden Trail introduces a title or label.",
+        "evidence": "The phrase \"Hidden Trail\" introduces a title/label",
+        "type": "T01",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "b841b77ffc9a52e8388b057525ba5777c37be8ef170cd0638e4aea4536c5a2ea",
+        "pair_id": "6dbc76a31b56b068a2ba892ccda1e3054bdfd0507b509f75fbe07bf1113d1c7a",
+        "side": "B",
+        "index": 3,
+        "claim": "The final fragment is mid-sentence and part of a locative description.",
+        "evidence": "Final fragment \"nearby the old railway station along with its platform\" is mid-sentence, part of a locative description",
+        "type": "T03",
+        "reader": "nla",
+        "dataset": "W1"
+      }
+    ]
+  },
+  {
+    "selection": {
+      "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+      "reason": "top type T05",
+      "type_claims": 8
+    },
+    "source": {
+      "activation_match": "same captured item/token at each native site; not identical cross-layer vectors",
+      "case": "[\"6fd726f7c099541aa51b206c\",0]",
+      "dataset": "W1",
+      "examples_eligible": true,
+      "item_id": "6fd726f7c099541aa51b206c",
+      "nla": "<explanation>\nAI-generated or simulated text with a \"creative writing\" framing, expecting a plausible but slightly incoherent sentence continuation.\n\nThe sentence describes a community memorial project with specific factual details (\"stone markers,\" \"local history,\" \"restoration\"), establishing a descriptive, documentary-style narrative about a British village setting.\n\nFinal fragment \"The materials for the markers were sourced from the community, using supplies provided by the local workshop\" is an incomplete sentence mid-clause, strongly expecting continuation naming the workshop, a relative clause, or additional detail about the materials/supplies.\n\"The memorial was built last year to mark",
+      "nla_sha256": "26ca7e80f5d1686425a364c89c943b3f9e98907d23ed1ad85bddf3f2118c4f00",
+      "oracle": "- /studio. The materials were sourced from the village workshop\n- （workshop） and local suppliers. The monument was assembled using materials donated by the local workshop\n- （workshop） and local suppliers. The reconstruction was led by the village’s history group, using materials donated by the local workshop\n- /workshop, which provided the timber and paint. The children contributed handmade replicas from their own workshop",
+      "oracle_sha256": "3cccbcf752c60733484fa80d28fbfb2a0a869dfe957998a96a9c7be5179afe89",
+      "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+      "sample": 0,
+      "sites": [
+        44,
+        42
+      ],
+      "source_parser_status": [
+        "COMPLETE",
+        "EXTRACTION_FAILED"
+      ]
+    },
+    "one_sided_claims": [
+      {
+        "id": "3a722789c495c1e3adcf8584a0ea799f41eeee2c276bc43010610acb677a276c",
+        "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+        "side": "A",
+        "index": 0,
+        "claim": "The text describes a community memorial project.",
+        "evidence": "The sentence describes a community memorial project",
+        "type": "T05",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "98e97e8af155d62c3e1a360d6d036dbccf5e0e8ed9213de9389e6f1fc1a0c45c",
+        "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+        "side": "A",
+        "index": 1,
+        "claim": "The project involves stone markers, local history, and restoration.",
+        "evidence": "with specific factual details (\"stone markers,\" \"local history,\" \"restoration\")",
+        "type": "T05",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "d41c43dde527174a0f3374e351f95f741c3d5b018d8840362795e0f02769ab36",
+        "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+        "side": "A",
+        "index": 2,
+        "claim": "The materials for the markers were sourced from the community.",
+        "evidence": "The materials for the markers were sourced from the community",
+        "type": "T05",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "217e40988c866af8ca46d00818b7c32564c84a696cefc56426a3e85dd3ebe98b",
+        "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+        "side": "A",
+        "index": 3,
+        "claim": "The memorial was built last year.",
+        "evidence": "The memorial was built last year to mark",
+        "type": "T05",
+        "reader": "nla",
+        "dataset": "W1"
+      },
+      {
+        "id": "9a1381505f3282bc6b4dfd9434b6bed23da426920a4eb4b5e58562ab5916d2db",
+        "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+        "side": "B",
+        "index": 0,
+        "claim": "Materials were sourced from the village workshop.",
+        "evidence": "The materials were sourced from the village workshop",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "622786c787209e2f11d5e3255c75b8f494adfac4e6ff44175eaadb7ed7e0f3e2",
+        "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+        "side": "B",
+        "index": 1,
+        "claim": "The monument was assembled using materials donated by the local workshop.",
+        "evidence": "The monument was assembled using materials donated by the local workshop",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "b3217919eff0688e900376013587ebbab45224634e363bc4c2c592316a40286e",
+        "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+        "side": "B",
+        "index": 2,
+        "claim": "The reconstruction was led by the village’s history group.",
+        "evidence": "The reconstruction was led by the village’s history group",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "6ffdf098dc70f21068563d7ae66d56e00a1a104e91d6a7fe5f4682b1c5efdc5a",
+        "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+        "side": "B",
+        "index": 3,
+        "claim": "The workshop provided timber and paint.",
+        "evidence": "/workshop, which provided the timber and paint.",
+        "type": "T05",
+        "reader": "oracle",
+        "dataset": "W1"
+      },
+      {
+        "id": "70602dfdcbed4d28e65cbec08d737d9db6f75c2126dcd3e7799f2d14d1a7b7e2",
+        "pair_id": "c9b53a9560e342bb68306b65cf614ac36eb00d37f6911ae605748558edd75045",
+        "side": "B",
+        "index": 4,
+        "claim": "Children contributed handmade replicas from their own workshop.",
+        "evidence": "The children contributed handmade replicas from their own workshop",
+        "type": "T03",
+        "reader": "oracle",
+        "dataset": "W1"
+      }
+    ]
+  },
+  {
+    "selection": {
+      "pair_id": "5b7d3ce9898a93fa9e2e284bd4f95abe36dcdf2b6396d82d4aaaa43fd4248f76",
+      "reason": "frozen seeded random"
+    },
+    "source": {
+      "activation_match": "original S61 matched case; each reported site preserved",
+      "case": "e6916e046824bef1c9ce2681d43aa69686b38fd98f667c73701c56eec597b424",
+      "condition": "natural",
+      "dataset": "S61",
+      "examples_eligible": true,
+      "item_id": "r-152_it_tick_Hardware-test-0062",
+      "nla": "<explanation>\nQ&A support format established: user asked a question about connecting Apple ID to Apple TV, so a direct, helpful answer is expected next.\n\nThe title \"How to Connect Apple ID to Apple TV / iCloud\" signals a step-by-step instructional response covering setup steps for Apple services.\n\n\"Answer\\n\\n\" is the opening of the response body, requiring a friendly, clear introductory sentence (e.g., \"Hello!\" or \"Here is how to...\") addressing the user's likely typo (\"Apple TV\" or \"Apple ID\").\n\"\nUser Question: connect apple tv to icloud setup easy steps please\n\n\"\n\"Answer\n\"\nThe next token begins the actual response content, likely a clarification of the topic or a structured guide title, e.g., \"Here is how to connect...\" or \"Apple TV setup instructions.\"\n</explanation>",
+      "nla_sha256": "ce596ce540c0ca60ac5a6aa578cd68b5d39154c7ed6fd44e5b8993f650f40a76",
+      "oracle": "- It appears you are asking how to set up **FaceTime** and **Apple ID** on your\n- Based on your request, you want to set up **FaceTime** and **Apple ID** on your iPhone. Here is the simple,\n- 你好！Based on your request (\"Apple Sign In and Update\"), here is the simple guide to setting up your\n- It sounds like you are asking for the **Apple Sign-In** setup using the **Easy Steps** method. Here is the correct, simple guide to",
+      "oracle_sha256": "bc180613c7c461355c3e56f0c9c2f2eb1109ff919a2142c246cd02e462056646",
+      "pair_id": "5b7d3ce9898a93fa9e2e284bd4f95abe36dcdf2b6396d82d4aaaa43fd4248f76",
+      "sites": [
+        44,
+        42
+      ],
+      "source_dataset": "p3"
+    },
+    "one_sided_claims": [
+      {
+        "id": "e812b58b4e56ea0fb0d61103805fb9cc78434d1935c90d989697e7543a67e005",
+        "pair_id": "5b7d3ce9898a93fa9e2e284bd4f95abe36dcdf2b6396d82d4aaaa43fd4248f76",
+        "side": "A",
+        "index": 0,
+        "claim": "A user asked a question about connecting Apple ID to Apple TV.",
+        "evidence": "user asked a question about connecting Apple ID to Apple TV",
+        "type": "T04",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "f14f1ff0c61dc97c361067907c7c32c2cc8baada29302c3ea4ca8049a6447a2b",
+        "pair_id": "5b7d3ce9898a93fa9e2e284bd4f95abe36dcdf2b6396d82d4aaaa43fd4248f76",
+        "side": "A",
+        "index": 1,
+        "claim": "The title of the response is \"How to Connect Apple ID to Apple TV / iCloud\".",
+        "evidence": "The title \"How to Connect Apple ID to Apple TV / iCloud\"",
+        "type": "T04",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "bfcf29a95239f200be2ebb4eaf9de260492a4dcd69b48883c5e21435ebbd2f93",
+        "pair_id": "5b7d3ce9898a93fa9e2e284bd4f95abe36dcdf2b6396d82d4aaaa43fd4248f76",
+        "side": "A",
+        "index": 2,
+        "claim": "The user requested easy steps to connect Apple TV to iCloud.",
+        "evidence": "User Question: connect apple tv to icloud setup easy steps please",
+        "type": "T04",
+        "reader": "nla",
+        "dataset": "S61"
+      },
+      {
+        "id": "852ba45bb117799c6324cdf6ac3c3511eceb3679495a163e5a10a5a2136b0de6",
+        "pair_id": "5b7d3ce9898a93fa9e2e284bd4f95abe36dcdf2b6396d82d4aaaa43fd4248f76",
+        "side": "B",
+        "index": 0,
+        "claim": "The user is asking how to set up FaceTime and Apple ID on an iPhone.",
+        "evidence": "you want to set up **FaceTime** and **Apple ID** on your iPhone",
+        "type": "T04",
+        "reader": "oracle",
+        "dataset": "S61"
+      },
+      {
+        "id": "44adff09ebe1eae2cff1a0c43e25ee2bfe5bc3ae58117e0e7ccf8edd847ac92f",
+        "pair_id": "5b7d3ce9898a93fa9e2e284bd4f95abe36dcdf2b6396d82d4aaaa43fd4248f76",
+        "side": "B",
+        "index": 1,
+        "claim": "The user is asking for Apple Sign-In setup using the Easy Steps method.",
+        "evidence": "you are asking for the **Apple Sign-In** setup using the **Easy Steps** method",
+        "type": "T04",
+        "reader": "oracle",
+        "dataset": "S61"
+      }
+    ]
+  },
+  {
+    "selection": {
+      "pair_id": "aca0003eca2628fb6ea8b6c8237f478d92642719d2109722aa1dcdc3f8e812a2",
+      "reason": "frozen seeded random"
+    },
+    "source": {
+      "activation_match": "same captured item/token at each native site; not identical cross-layer vectors",
+      "case": "[\"d3561433cbf468e4535ba824\",1]",
+      "dataset": "W1",
+      "examples_eligible": true,
+      "item_id": "d3561433cbf468e4535ba824",
+      "nla": "<explanation>\nHumorous/informal forum post transitioning into pseudo-technical content about math, contrasting joke comments with \"a hint\" or explanatory statement. The comedic framing sets up an absurdist juxtaposition.\n\nThe phrase \"The determinant is zero when the matrix is singular\" signals a mathematical explanation pattern, likely listing properties or conditions of determinants in a structured format.\n\nFinal token \"singular\" ends an incomplete declarative clause (\"det(A) is zero when the matrix is singular\"), immediately expecting a continuation such as a comma plus elaboration, a period, or a paired condition — \"meaning it has no inverse,\"",
+      "nla_sha256": "562357bce071b4953bf8ef6c0db938f8b9acf7f783998971a478bc1b18d6fb72",
+      "oracle": "- , which occurs when the matrix loses rank. Determinant vanishes when the matrix is singular\n- , meaning its columns are linearly dependent. In quantum mechanics, the determinant vanishes when the matrix is singular\n- 。（singular）, and the determinant measures volume scaling; thus, det = 0 iff the matrix is singular\n- （singular）, and for real symmetric matrices, the determinant vanishes exactly when the matrix is singular",
+      "oracle_sha256": "373cb5932a83e76fc5a4f533a5e9fac1e3ff92bb292366d96b1e68f83cf78615",
+      "pair_id": "aca0003eca2628fb6ea8b6c8237f478d92642719d2109722aa1dcdc3f8e812a2",
+      "sample": 1,
+      "sites": [
+        44,
+        42
+      ],
+      "source_parser_status": [
+        "COMPLETE",
+        "EXTRACTION_FAILED"
+      ]
+    },
+    "one_sided_claims": []
+  }
+]

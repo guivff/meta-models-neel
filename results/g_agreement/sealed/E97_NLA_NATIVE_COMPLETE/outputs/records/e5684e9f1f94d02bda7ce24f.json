@@ -1,0 +1,12 @@
+{
+  "id": "e5684e9f1f94d02bda7ce24f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task: \"happy\" or \"sad\" label for each sentence.\n\nThe example pattern shows a structured Q&A format with \"Sentence:\" and \"Reply:\" fields, requiring the model to output the correct label for the given sentence \"I am going to the store.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker that immediately requires the classification answer (e.g., \"happy\" or \"sad\") to follow.\n\"Given the following sentence, determine whether the sentiment is 'happy' or 'sad'.\nSentence: I am going to the store.\nExample: [happy/sad]\nSentence: I am going to the store.\nReply:\" \u2014 the final field demands the direct answer, likely a short label on the next line.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task: \"happy\" or \"sad\" label for each sentence.\n\nThe example pattern shows a structured Q&A format with \"Sentence:\" and \"Reply:\" fields, requiring the model to output the correct label for the given sentence \"I am going to the store.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker that immediately requires the classification answer (e.g., \"happy\" or \"sad\") to follow.\n\"Given the following sentence, determine whether the sentiment is 'happy' or 'sad'.\nSentence: I am going to the store.\nExample: [happy/sad]\nSentence: I am going to the store.\nReply:\" \u2014 the final field demands the direct answer, likely a short label on the next line.\n\"Reply:\"",
+  "truncated": false
+}

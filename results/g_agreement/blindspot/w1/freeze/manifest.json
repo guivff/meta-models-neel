@@ -1,0 +1,2602 @@
+{
+  "bootstrap_replicates": 2000,
+  "brief": "projects/g_agreement/BRIEF_BLINDSPOT.md",
+  "brief_sha256": "bab7fd1498f9ebb46cf5efa97baeae0bdc00bffc55f7364b71fb8921ce090a74",
+  "caps_gpu_seconds": {
+    "W1": 7200,
+    "W1b": 3600,
+    "W5": 1800
+  },
+  "capture_sites": [
+    42,
+    44
+  ],
+  "experiment": "W1",
+  "files": {
+    "causal.input.json": "e40819c20fe5267a837b42cbe1866beebe398c37ba0bed0d8b83442089644f9f",
+    "decoding.json": "9a561d79b58d3c0340139c0c94de947f2b941ac50625d08c5bc6421554fbd205",
+    "items.DO_NOT_STAGE.jsonl": "48497c10082f18a5e80034c34e97e7139ee9783de8a8b28440e2e30535dfa07b",
+    "items.input.jsonl": "a8a43021c7958ec8b1a7682c1a2f46a5238dac9008c383f2205237cf06ad4d02",
+    "labels.DO_NOT_STAGE.jsonl": "cbbde6fa9ec27367abd35af296a3115bb2c17ac290a2ef110f914148dad5a173",
+    "lengths.json": "cbe4180f8bd93e0619c76493e3d2d928aa930b7bf1dcefc1478008715cb57168",
+    "provenance.json": "b3a8cb77569adb9e819141beb5dd69ee6a09ba96f9bece37f9a1759dae2e04d8",
+    "runtime.json": "e674d96cd2b9db094ddfcdfd6bee39f128002b0cda02ca8e5ef05d44d62f7c59",
+    "sweep.input.json": "0097423a464a847b31b6e7e8bd4df05cf373824a544592c407d194575e0bff3a",
+    "templates.json": "57cad0d1bce20de00026cab2515b3c43a2925d50b2944e0d0556376e88833172"
+  },
+  "ground_truth": "generator-defined excerpt after unrelated preamble delimiter",
+  "read_position": "last token of raw prefix, no chat template",
+  "rows": {
+    "json_depth": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "json",
+      "jlens": [
+        [
+          "shallow",
+          "deep"
+        ],
+        [
+          "flat",
+          "nested"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "shallow",
+          "deep"
+        ],
+        [
+          "flat",
+          "nested"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has one nested JSON object.",
+          "The current excerpt has three nested JSON objects."
+        ],
+        [
+          "At the read position, there is one nested JSON object.",
+          "At the read position, there is three nested JSON objects."
+        ]
+      ],
+      "olens": [
+        [
+          "- one nested JSON object",
+          "- three nested JSON objects"
+        ],
+        [
+          "- At the read position, the excerpt has one nested JSON object.",
+          "- At the read position, the excerpt has three nested JSON objects."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "deep": 84,
+        "shallow": 84
+      },
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    "json_field": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "json",
+      "jlens": [
+        [
+          "first",
+          "later"
+        ],
+        [
+          "initial",
+          "subsequent"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "first",
+          "later"
+        ],
+        [
+          "initial",
+          "subsequent"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has the first object field.",
+          "The current excerpt has a later object field."
+        ],
+        [
+          "At the read position, there is the first object field.",
+          "At the read position, there is a later object field."
+        ]
+      ],
+      "olens": [
+        [
+          "- the first object field",
+          "- a later object field"
+        ],
+        [
+          "- At the read position, the excerpt has the first object field.",
+          "- At the read position, the excerpt has a later object field."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "first": 84,
+        "later": 84
+      },
+      "values": [
+        "first",
+        "later"
+      ]
+    },
+    "json_status": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "json",
+      "jlens": [
+        [
+          "approved",
+          "rejected"
+        ],
+        [
+          "accepted",
+          "denied"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "approved",
+          "rejected"
+        ],
+        [
+          "accepted",
+          "denied"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an approved request.",
+          "The current excerpt has a rejected request."
+        ],
+        [
+          "At the read position, there is an approved request.",
+          "At the read position, there is a rejected request."
+        ]
+      ],
+      "olens": [
+        [
+          "- an approved request",
+          "- a rejected request"
+        ],
+        [
+          "- At the read position, the excerpt has an approved request.",
+          "- At the read position, the excerpt has a rejected request."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "approved": 84,
+        "rejected": 84
+      },
+      "values": [
+        "approved",
+        "rejected"
+      ]
+    },
+    "json_type": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "json",
+      "jlens": [
+        [
+          "string",
+          "number"
+        ],
+        [
+          "textual",
+          "numeric"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "string",
+          "number"
+        ],
+        [
+          "textual",
+          "numeric"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has a string value.",
+          "The current excerpt has a numeric value."
+        ],
+        [
+          "At the read position, there is a string value.",
+          "At the read position, there is a numeric value."
+        ]
+      ],
+      "olens": [
+        [
+          "- a string value",
+          "- a numeric value"
+        ],
+        [
+          "- At the read position, the excerpt has a string value.",
+          "- At the read position, the excerpt has a numeric value."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "number": 84,
+        "string": 84
+      },
+      "values": [
+        "string",
+        "number"
+      ]
+    },
+    "latex_brace": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "latex",
+      "jlens": [
+        [
+          "shallow",
+          "deep"
+        ],
+        [
+          "single",
+          "triple"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "shallow",
+          "deep"
+        ],
+        [
+          "single",
+          "triple"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has one unclosed brace.",
+          "The current excerpt has three unclosed braces."
+        ],
+        [
+          "At the read position, there is one unclosed brace.",
+          "At the read position, there is three unclosed braces."
+        ]
+      ],
+      "olens": [
+        [
+          "- one unclosed brace",
+          "- three unclosed braces"
+        ],
+        [
+          "- At the read position, the excerpt has one unclosed brace.",
+          "- At the read position, the excerpt has three unclosed braces."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "deep": 84,
+        "shallow": 84
+      },
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    "latex_environment": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "latex",
+      "jlens": [
+        [
+          "equation",
+          "quote"
+        ],
+        [
+          "formula",
+          "quotation"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "equation",
+          "quote"
+        ],
+        [
+          "formula",
+          "quotation"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an equation environment.",
+          "The current excerpt has a quotation environment."
+        ],
+        [
+          "At the read position, there is an equation environment.",
+          "At the read position, there is a quotation environment."
+        ]
+      ],
+      "olens": [
+        [
+          "- an equation environment",
+          "- a quotation environment"
+        ],
+        [
+          "- At the read position, the excerpt has an equation environment.",
+          "- At the read position, the excerpt has a quotation environment."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "equation": 84,
+        "quote": 84
+      },
+      "values": [
+        "equation",
+        "quote"
+      ]
+    },
+    "latex_fraction": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "latex",
+      "jlens": [
+        [
+          "numerator",
+          "denominator"
+        ],
+        [
+          "top",
+          "bottom"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "numerator",
+          "denominator"
+        ],
+        [
+          "top",
+          "bottom"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has a fraction numerator.",
+          "The current excerpt has a fraction denominator."
+        ],
+        [
+          "At the read position, there is a fraction numerator.",
+          "At the read position, there is a fraction denominator."
+        ]
+      ],
+      "olens": [
+        [
+          "- a fraction numerator",
+          "- a fraction denominator"
+        ],
+        [
+          "- At the read position, the excerpt has a fraction numerator.",
+          "- At the read position, the excerpt has a fraction denominator."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "denominator": 84,
+        "numerator": 84
+      },
+      "values": [
+        "numerator",
+        "denominator"
+      ]
+    },
+    "latex_item": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "latex",
+      "jlens": [
+        [
+          "first",
+          "later"
+        ],
+        [
+          "initial",
+          "subsequent"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "first",
+          "later"
+        ],
+        [
+          "initial",
+          "subsequent"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has the first enumerated item.",
+          "The current excerpt has a later enumerated item."
+        ],
+        [
+          "At the read position, there is the first enumerated item.",
+          "At the read position, there is a later enumerated item."
+        ]
+      ],
+      "olens": [
+        [
+          "- the first enumerated item",
+          "- a later enumerated item"
+        ],
+        [
+          "- At the read position, the excerpt has the first enumerated item.",
+          "- At the read position, the excerpt has a later enumerated item."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "first": 84,
+        "later": 84
+      },
+      "values": [
+        "first",
+        "later"
+      ]
+    },
+    "latex_math": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "latex",
+      "jlens": [
+        [
+          "math",
+          "text"
+        ],
+        [
+          "mathematical",
+          "prose"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "math",
+          "text"
+        ],
+        [
+          "mathematical",
+          "prose"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has inline math mode.",
+          "The current excerpt has ordinary text mode."
+        ],
+        [
+          "At the read position, there is inline math mode.",
+          "At the read position, there is ordinary text mode."
+        ]
+      ],
+      "olens": [
+        [
+          "- inline math mode",
+          "- ordinary text mode"
+        ],
+        [
+          "- At the read position, the excerpt has inline math mode.",
+          "- At the read position, the excerpt has ordinary text mode."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "math": 84,
+        "text": 84
+      },
+      "values": [
+        "math",
+        "text"
+      ]
+    },
+    "latex_role": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "latex",
+      "jlens": [
+        [
+          "theorem",
+          "example"
+        ],
+        [
+          "proposition",
+          "illustration"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "theorem",
+          "example"
+        ],
+        [
+          "proposition",
+          "illustration"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has a theorem statement.",
+          "The current excerpt has a worked example."
+        ],
+        [
+          "At the read position, there is a theorem statement.",
+          "At the read position, there is a worked example."
+        ]
+      ],
+      "olens": [
+        [
+          "- a theorem statement",
+          "- a worked example"
+        ],
+        [
+          "- At the read position, the excerpt has a theorem statement.",
+          "- At the read position, the excerpt has a worked example."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "example": 84,
+        "theorem": 84
+      },
+      "values": [
+        "theorem",
+        "example"
+      ]
+    },
+    "latex_section": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "latex",
+      "jlens": [
+        [
+          "early",
+          "late"
+        ],
+        [
+          "initial",
+          "final"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "early",
+          "late"
+        ],
+        [
+          "initial",
+          "final"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an early document section.",
+          "The current excerpt has a late document section."
+        ],
+        [
+          "At the read position, there is an early document section.",
+          "At the read position, there is a late document section."
+        ]
+      ],
+      "olens": [
+        [
+          "- an early document section",
+          "- a late document section"
+        ],
+        [
+          "- At the read position, the excerpt has an early document section.",
+          "- At the read position, the excerpt has a late document section."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "early": 84,
+        "late": 84
+      },
+      "values": [
+        "early",
+        "late"
+      ]
+    },
+    "latex_subject": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "latex",
+      "jlens": [
+        [
+          "algebra",
+          "geometry"
+        ],
+        [
+          "symbolic",
+          "geometric"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "algebra",
+          "geometry"
+        ],
+        [
+          "symbolic",
+          "geometric"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has algebra content.",
+          "The current excerpt has geometry content."
+        ],
+        [
+          "At the read position, there is algebra content.",
+          "At the read position, there is geometry content."
+        ]
+      ],
+      "olens": [
+        [
+          "- algebra content",
+          "- geometry content"
+        ],
+        [
+          "- At the read position, the excerpt has algebra content.",
+          "- At the read position, the excerpt has geometry content."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "algebra": 84,
+        "geometry": 84
+      },
+      "values": [
+        "algebra",
+        "geometry"
+      ]
+    },
+    "list_completed": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "list",
+      "jlens": [
+        [
+          "few",
+          "many"
+        ],
+        [
+          "fewer",
+          "more"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "few",
+          "many"
+        ],
+        [
+          "fewer",
+          "more"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has few completed tasks above this item.",
+          "The current excerpt has many completed tasks above this item."
+        ],
+        [
+          "At the read position, there is few completed tasks above this item.",
+          "At the read position, there is many completed tasks above this item."
+        ]
+      ],
+      "olens": [
+        [
+          "- few completed tasks above this item",
+          "- many completed tasks above this item"
+        ],
+        [
+          "- At the read position, the excerpt has few completed tasks above this item.",
+          "- At the read position, the excerpt has many completed tasks above this item."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "few": 84,
+        "many": 84
+      },
+      "values": [
+        "few",
+        "many"
+      ]
+    },
+    "list_depth": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "list",
+      "jlens": [
+        [
+          "shallow",
+          "deep"
+        ],
+        [
+          "outer",
+          "inner"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "shallow",
+          "deep"
+        ],
+        [
+          "outer",
+          "inner"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has a top-level list item.",
+          "The current excerpt has a third-level list item."
+        ],
+        [
+          "At the read position, there is a top-level list item.",
+          "At the read position, there is a third-level list item."
+        ]
+      ],
+      "olens": [
+        [
+          "- a top-level list item",
+          "- a third-level list item"
+        ],
+        [
+          "- At the read position, the excerpt has a top-level list item.",
+          "- At the read position, the excerpt has a third-level list item."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "deep": 84,
+        "shallow": 84
+      },
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    "list_index": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "list",
+      "jlens": [
+        [
+          "first",
+          "later"
+        ],
+        [
+          "initial",
+          "subsequent"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "first",
+          "later"
+        ],
+        [
+          "initial",
+          "subsequent"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has the first list item.",
+          "The current excerpt has a later list item."
+        ],
+        [
+          "At the read position, there is the first list item.",
+          "At the read position, there is a later list item."
+        ]
+      ],
+      "olens": [
+        [
+          "- the first list item",
+          "- a later list item"
+        ],
+        [
+          "- At the read position, the excerpt has the first list item.",
+          "- At the read position, the excerpt has a later list item."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "first": 84,
+        "later": 84
+      },
+      "values": [
+        "first",
+        "later"
+      ]
+    },
+    "list_ordered": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "list",
+      "jlens": [
+        [
+          "ordered",
+          "bullet"
+        ],
+        [
+          "numbered",
+          "unordered"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "ordered",
+          "bullet"
+        ],
+        [
+          "numbered",
+          "unordered"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an ordered list.",
+          "The current excerpt has a bullet list."
+        ],
+        [
+          "At the read position, there is an ordered list.",
+          "At the read position, there is a bullet list."
+        ]
+      ],
+      "olens": [
+        [
+          "- an ordered list",
+          "- a bullet list"
+        ],
+        [
+          "- At the read position, the excerpt has an ordered list.",
+          "- At the read position, the excerpt has a bullet list."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "bullet": 84,
+        "ordered": 84
+      },
+      "values": [
+        "ordered",
+        "bullet"
+      ]
+    },
+    "list_priority": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "list",
+      "jlens": [
+        [
+          "urgent",
+          "routine"
+        ],
+        [
+          "immediate",
+          "ordinary"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "urgent",
+          "routine"
+        ],
+        [
+          "immediate",
+          "ordinary"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an urgent task.",
+          "The current excerpt has a routine task."
+        ],
+        [
+          "At the read position, there is an urgent task.",
+          "At the read position, there is a routine task."
+        ]
+      ],
+      "olens": [
+        [
+          "- an urgent task",
+          "- a routine task"
+        ],
+        [
+          "- At the read position, the excerpt has an urgent task.",
+          "- At the read position, the excerpt has a routine task."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "routine": 84,
+        "urgent": 84
+      },
+      "values": [
+        "urgent",
+        "routine"
+      ]
+    },
+    "list_task": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "list",
+      "jlens": [
+        [
+          "checked",
+          "unchecked"
+        ],
+        [
+          "complete",
+          "incomplete"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "checked",
+          "unchecked"
+        ],
+        [
+          "complete",
+          "incomplete"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has a checked task.",
+          "The current excerpt has an unchecked task."
+        ],
+        [
+          "At the read position, there is a checked task.",
+          "At the read position, there is an unchecked task."
+        ]
+      ],
+      "olens": [
+        [
+          "- a checked task",
+          "- an unchecked task"
+        ],
+        [
+          "- At the read position, the excerpt has a checked task.",
+          "- At the read position, the excerpt has an unchecked task."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "checked": 84,
+        "unchecked": 84
+      },
+      "values": [
+        "checked",
+        "unchecked"
+      ]
+    },
+    "list_topic": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "list",
+      "jlens": [
+        [
+          "travel",
+          "study"
+        ],
+        [
+          "tourism",
+          "learning"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "travel",
+          "study"
+        ],
+        [
+          "tourism",
+          "learning"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has travel planning.",
+          "The current excerpt has study planning."
+        ],
+        [
+          "At the read position, there is travel planning.",
+          "At the read position, there is study planning."
+        ]
+      ],
+      "olens": [
+        [
+          "- travel planning",
+          "- study planning"
+        ],
+        [
+          "- At the read position, the excerpt has travel planning.",
+          "- At the read position, the excerpt has study planning."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "study": 84,
+        "travel": 84
+      },
+      "values": [
+        "travel",
+        "study"
+      ]
+    },
+    "list_words": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "list",
+      "jlens": [
+        [
+          "few",
+          "many"
+        ],
+        [
+          "fewer",
+          "more"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "few",
+          "many"
+        ],
+        [
+          "fewer",
+          "more"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has few words in the current item.",
+          "The current excerpt has many words in the current item."
+        ],
+        [
+          "At the read position, there is few words in the current item.",
+          "At the read position, there is many words in the current item."
+        ]
+      ],
+      "olens": [
+        [
+          "- few words in the current item",
+          "- many words in the current item"
+        ],
+        [
+          "- At the read position, the excerpt has few words in the current item.",
+          "- At the read position, the excerpt has many words in the current item."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "few": 84,
+        "many": 84
+      },
+      "values": [
+        "few",
+        "many"
+      ]
+    },
+    "prose_budget": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "many",
+          "few"
+        ],
+        [
+          "more",
+          "less"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "many",
+          "few"
+        ],
+        [
+          "more",
+          "less"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has many words remaining under the word limit.",
+          "The current excerpt has few words remaining under the word limit."
+        ],
+        [
+          "At the read position, there is many words remaining under the word limit.",
+          "At the read position, there is few words remaining under the word limit."
+        ]
+      ],
+      "olens": [
+        [
+          "- many words remaining under the word limit",
+          "- few words remaining under the word limit"
+        ],
+        [
+          "- At the read position, the excerpt has many words remaining under the word limit.",
+          "- At the read position, the excerpt has few words remaining under the word limit."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "few": 84,
+        "many": 84
+      },
+      "values": [
+        "many",
+        "few"
+      ]
+    },
+    "prose_column": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "short",
+          "long"
+        ],
+        [
+          "brief",
+          "extended"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "short",
+          "long"
+        ],
+        [
+          "brief",
+          "extended"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has few words on the current line.",
+          "The current excerpt has many words on the current line."
+        ],
+        [
+          "At the read position, there is few words on the current line.",
+          "At the read position, there is many words on the current line."
+        ]
+      ],
+      "olens": [
+        [
+          "- few words on the current line",
+          "- many words on the current line"
+        ],
+        [
+          "- At the read position, the excerpt has few words on the current line.",
+          "- At the read position, the excerpt has many words on the current line."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "long": 84,
+        "short": 84
+      },
+      "values": [
+        "short",
+        "long"
+      ]
+    },
+    "prose_paren": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "inside",
+          "outside"
+        ],
+        [
+          "open",
+          "closed"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "inside",
+          "outside"
+        ],
+        [
+          "open",
+          "closed"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has the read position inside a parenthesis.",
+          "The current excerpt has the read position outside any parenthesis."
+        ],
+        [
+          "At the read position, there is the read position inside a parenthesis.",
+          "At the read position, there is the read position outside any parenthesis."
+        ]
+      ],
+      "olens": [
+        [
+          "- the read position inside a parenthesis",
+          "- the read position outside any parenthesis"
+        ],
+        [
+          "- At the read position, the excerpt has the read position inside a parenthesis.",
+          "- At the read position, the excerpt has the read position outside any parenthesis."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "inside": 84,
+        "outside": 84
+      },
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    "prose_quote": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "inside",
+          "outside"
+        ],
+        [
+          "open",
+          "closed"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "inside",
+          "outside"
+        ],
+        [
+          "open",
+          "closed"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an open quotation.",
+          "The current excerpt has a closed quotation."
+        ],
+        [
+          "At the read position, there is an open quotation.",
+          "At the read position, there is a closed quotation."
+        ]
+      ],
+      "olens": [
+        [
+          "- an open quotation",
+          "- a closed quotation"
+        ],
+        [
+          "- At the read position, the excerpt has an open quotation.",
+          "- At the read position, the excerpt has a closed quotation."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "inside": 84,
+        "outside": 84
+      },
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    "prose_sentence": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "early",
+          "late"
+        ],
+        [
+          "initial",
+          "final"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "early",
+          "late"
+        ],
+        [
+          "initial",
+          "final"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an early sentence in the paragraph.",
+          "The current excerpt has a late sentence in the paragraph."
+        ],
+        [
+          "At the read position, there is an early sentence in the paragraph.",
+          "At the read position, there is a late sentence in the paragraph."
+        ]
+      ],
+      "olens": [
+        [
+          "- an early sentence in the paragraph",
+          "- a late sentence in the paragraph"
+        ],
+        [
+          "- At the read position, the excerpt has an early sentence in the paragraph.",
+          "- At the read position, the excerpt has a late sentence in the paragraph."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "early": 84,
+        "late": 84
+      },
+      "values": [
+        "early",
+        "late"
+      ]
+    },
+    "prose_sentiment": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "positive",
+          "negative"
+        ],
+        [
+          "happy",
+          "sad"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "positive",
+          "negative"
+        ],
+        [
+          "happy",
+          "sad"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has positive sentiment.",
+          "The current excerpt has negative sentiment."
+        ],
+        [
+          "At the read position, there is positive sentiment.",
+          "At the read position, there is negative sentiment."
+        ]
+      ],
+      "olens": [
+        [
+          "- positive sentiment",
+          "- negative sentiment"
+        ],
+        [
+          "- At the read position, the excerpt has positive sentiment.",
+          "- At the read position, the excerpt has negative sentiment."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "negative": 84,
+        "positive": 84
+      },
+      "values": [
+        "positive",
+        "negative"
+      ]
+    },
+    "prose_topic": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "garden",
+          "ocean"
+        ],
+        [
+          "plants",
+          "sea"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "garden",
+          "ocean"
+        ],
+        [
+          "plants",
+          "sea"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has gardening content.",
+          "The current excerpt has ocean content."
+        ],
+        [
+          "At the read position, there is gardening content.",
+          "At the read position, there is ocean content."
+        ]
+      ],
+      "olens": [
+        [
+          "- gardening content",
+          "- ocean content"
+        ],
+        [
+          "- At the read position, the excerpt has gardening content.",
+          "- At the read position, the excerpt has ocean content."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "garden": 84,
+        "ocean": 84
+      },
+      "values": [
+        "garden",
+        "ocean"
+      ]
+    },
+    "prose_words": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "prose",
+      "jlens": [
+        [
+          "few",
+          "many"
+        ],
+        [
+          "fewer",
+          "more"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "few",
+          "many"
+        ],
+        [
+          "fewer",
+          "more"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has few words in the current sentence.",
+          "The current excerpt has many words in the current sentence."
+        ],
+        [
+          "At the read position, there is few words in the current sentence.",
+          "At the read position, there is many words in the current sentence."
+        ]
+      ],
+      "olens": [
+        [
+          "- few words in the current sentence",
+          "- many words in the current sentence"
+        ],
+        [
+          "- At the read position, the excerpt has few words in the current sentence.",
+          "- At the read position, the excerpt has many words in the current sentence."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "few": 84,
+        "many": 84
+      },
+      "values": [
+        "few",
+        "many"
+      ]
+    },
+    "python_argument": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "python",
+      "jlens": [
+        [
+          "first",
+          "later"
+        ],
+        [
+          "initial",
+          "subsequent"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "first",
+          "later"
+        ],
+        [
+          "initial",
+          "subsequent"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has the first argument of a call.",
+          "The current excerpt has a later argument of a call."
+        ],
+        [
+          "At the read position, there is the first argument of a call.",
+          "At the read position, there is a later argument of a call."
+        ]
+      ],
+      "olens": [
+        [
+          "- the first argument of a call",
+          "- a later argument of a call"
+        ],
+        [
+          "- At the read position, the excerpt has the first argument of a call.",
+          "- At the read position, the excerpt has a later argument of a call."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "first": 84,
+        "later": 84
+      },
+      "values": [
+        "first",
+        "later"
+      ]
+    },
+    "python_comment": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "python",
+      "jlens": [
+        [
+          "comment",
+          "code"
+        ],
+        [
+          "annotation",
+          "executable"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "comment",
+          "code"
+        ],
+        [
+          "annotation",
+          "executable"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has a Python comment.",
+          "The current excerpt has executable Python code."
+        ],
+        [
+          "At the read position, there is a Python comment.",
+          "At the read position, there is executable Python code."
+        ]
+      ],
+      "olens": [
+        [
+          "- a Python comment",
+          "- executable Python code"
+        ],
+        [
+          "- At the read position, the excerpt has a Python comment.",
+          "- At the read position, the excerpt has executable Python code."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "code": 84,
+        "comment": 84
+      },
+      "values": [
+        "comment",
+        "code"
+      ]
+    },
+    "python_depth": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "python",
+      "jlens": [
+        [
+          "shallow",
+          "deep"
+        ],
+        [
+          "flat",
+          "nested"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "shallow",
+          "deep"
+        ],
+        [
+          "flat",
+          "nested"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has shallow bracket nesting.",
+          "The current excerpt has deep bracket nesting."
+        ],
+        [
+          "At the read position, there is shallow bracket nesting.",
+          "At the read position, there is deep bracket nesting."
+        ]
+      ],
+      "olens": [
+        [
+          "- shallow bracket nesting",
+          "- deep bracket nesting"
+        ],
+        [
+          "- At the read position, the excerpt has shallow bracket nesting.",
+          "- At the read position, the excerpt has deep bracket nesting."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "deep": 84,
+        "shallow": 84
+      },
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    "python_depth_ordinal": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "python",
+      "jlens": [
+        [
+          "deep",
+          "shallow"
+        ],
+        [
+          "nested",
+          "flat"
+        ]
+      ],
+      "kind": "ordinal",
+      "logit": [
+        [
+          "deep",
+          "shallow"
+        ],
+        [
+          "nested",
+          "flat"
+        ]
+      ],
+      "n": 288,
+      "nla": [
+        [
+          "The current excerpt has deeper bracket nesting.",
+          "The current excerpt has shallower bracket nesting."
+        ],
+        [
+          "At the read position, there is deeper bracket nesting.",
+          "At the read position, there is shallower bracket nesting."
+        ]
+      ],
+      "olens": [
+        [
+          "- deeper bracket nesting",
+          "- shallower bracket nesting"
+        ],
+        [
+          "- At the read position, the excerpt has deeper bracket nesting.",
+          "- At the read position, the excerpt has shallower bracket nesting."
+        ]
+      ],
+      "score_orientation": "increasing_level_positive",
+      "split_counts": {
+        "dev": 144,
+        "test": 144
+      },
+      "value_counts": {
+        "1": 36,
+        "2": 36,
+        "3": 36,
+        "4": 36,
+        "5": 36,
+        "6": 36,
+        "7": 36,
+        "8": 36
+      },
+      "values": [
+        "high",
+        "low"
+      ]
+    },
+    "python_effect": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "python",
+      "jlens": [
+        [
+          "mutation",
+          "copy"
+        ],
+        [
+          "modify",
+          "duplicate"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "mutation",
+          "copy"
+        ],
+        [
+          "modify",
+          "duplicate"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an in-place list mutation.",
+          "The current excerpt has construction of a new list."
+        ],
+        [
+          "At the read position, there is an in-place list mutation.",
+          "At the read position, there is construction of a new list."
+        ]
+      ],
+      "olens": [
+        [
+          "- an in-place list mutation",
+          "- construction of a new list"
+        ],
+        [
+          "- At the read position, the excerpt has an in-place list mutation.",
+          "- At the read position, the excerpt has construction of a new list."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "copy": 84,
+        "mutation": 84
+      },
+      "values": [
+        "mutation",
+        "copy"
+      ]
+    },
+    "python_error": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "python",
+      "jlens": [
+        [
+          "raise",
+          "return"
+        ],
+        [
+          "exception",
+          "returning"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "raise",
+          "return"
+        ],
+        [
+          "exception",
+          "returning"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has exception raising.",
+          "The current excerpt has normal function return."
+        ],
+        [
+          "At the read position, there is exception raising.",
+          "At the read position, there is normal function return."
+        ]
+      ],
+      "olens": [
+        [
+          "- exception raising",
+          "- normal function return"
+        ],
+        [
+          "- At the read position, the excerpt has exception raising.",
+          "- At the read position, the excerpt has normal function return."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "raise": 84,
+        "return": 84
+      },
+      "values": [
+        "raise",
+        "return"
+      ]
+    },
+    "python_indent": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "python",
+      "jlens": [
+        [
+          "shallow",
+          "deep"
+        ],
+        [
+          "outer",
+          "inner"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "shallow",
+          "deep"
+        ],
+        [
+          "outer",
+          "inner"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has one level of indentation.",
+          "The current excerpt has three levels of indentation."
+        ],
+        [
+          "At the read position, there is one level of indentation.",
+          "At the read position, there is three levels of indentation."
+        ]
+      ],
+      "olens": [
+        [
+          "- one level of indentation",
+          "- three levels of indentation"
+        ],
+        [
+          "- At the read position, the excerpt has one level of indentation.",
+          "- At the read position, the excerpt has three levels of indentation."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "deep": 84,
+        "shallow": 84
+      },
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    "python_line": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "python",
+      "jlens": [
+        [
+          "early",
+          "late"
+        ],
+        [
+          "initial",
+          "final"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "early",
+          "late"
+        ],
+        [
+          "initial",
+          "final"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has one or two lines so far in the current function body.",
+          "The current excerpt has six or more lines so far in the current function body."
+        ],
+        [
+          "At the read position, there is one or two lines so far in the current function body.",
+          "At the read position, there is six or more lines so far in the current function body."
+        ]
+      ],
+      "olens": [
+        [
+          "- one or two lines so far in the current function body",
+          "- six or more lines so far in the current function body"
+        ],
+        [
+          "- At the read position, the excerpt has one or two lines so far in the current function body.",
+          "- At the read position, the excerpt has six or more lines so far in the current function body."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "early": 84,
+        "late": 84
+      },
+      "values": [
+        "early",
+        "late"
+      ]
+    },
+    "python_string": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "python",
+      "jlens": [
+        [
+          "inside",
+          "outside"
+        ],
+        [
+          "open",
+          "closed"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "inside",
+          "outside"
+        ],
+        [
+          "open",
+          "closed"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an open string literal.",
+          "The current excerpt has a closed string literal."
+        ],
+        [
+          "At the read position, there is an open string literal.",
+          "At the read position, there is a closed string literal."
+        ]
+      ],
+      "olens": [
+        [
+          "- an open string literal",
+          "- a closed string literal"
+        ],
+        [
+          "- At the read position, the excerpt has an open string literal.",
+          "- At the read position, the excerpt has a closed string literal."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "inside": 84,
+        "outside": 84
+      },
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    "table_column": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "table",
+      "jlens": [
+        [
+          "first",
+          "later"
+        ],
+        [
+          "initial",
+          "subsequent"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "first",
+          "later"
+        ],
+        [
+          "initial",
+          "subsequent"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has the first table column.",
+          "The current excerpt has a later table column."
+        ],
+        [
+          "At the read position, there is the first table column.",
+          "At the read position, there is a later table column."
+        ]
+      ],
+      "olens": [
+        [
+          "- the first table column",
+          "- a later table column"
+        ],
+        [
+          "- At the read position, the excerpt has the first table column.",
+          "- At the read position, the excerpt has a later table column."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "first": 84,
+        "later": 84
+      },
+      "values": [
+        "first",
+        "later"
+      ]
+    },
+    "table_column_ordinal": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "table",
+      "jlens": [
+        [
+          "later",
+          "earlier"
+        ],
+        [
+          "subsequent",
+          "initial"
+        ]
+      ],
+      "kind": "ordinal",
+      "logit": [
+        [
+          "later",
+          "earlier"
+        ],
+        [
+          "subsequent",
+          "initial"
+        ]
+      ],
+      "n": 288,
+      "nla": [
+        [
+          "The current excerpt has a later table column.",
+          "The current excerpt has an earlier table column."
+        ],
+        [
+          "At the read position, there is a later table column.",
+          "At the read position, there is an earlier table column."
+        ]
+      ],
+      "olens": [
+        [
+          "- a later table column",
+          "- an earlier table column"
+        ],
+        [
+          "- At the read position, the excerpt has a later table column.",
+          "- At the read position, the excerpt has an earlier table column."
+        ]
+      ],
+      "score_orientation": "increasing_level_positive",
+      "split_counts": {
+        "dev": 144,
+        "test": 144
+      },
+      "value_counts": {
+        "1": 36,
+        "2": 36,
+        "3": 36,
+        "4": 36,
+        "5": 36,
+        "6": 36,
+        "7": 36,
+        "8": 36
+      },
+      "values": [
+        "high",
+        "low"
+      ]
+    },
+    "table_role": {
+      "class": "state-like",
+      "clusters": 12,
+      "domain": "table",
+      "jlens": [
+        [
+          "header",
+          "data"
+        ],
+        [
+          "heading",
+          "entry"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "header",
+          "data"
+        ],
+        [
+          "heading",
+          "entry"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has a table header cell.",
+          "The current excerpt has a table data cell."
+        ],
+        [
+          "At the read position, there is a table header cell.",
+          "At the read position, there is a table data cell."
+        ]
+      ],
+      "olens": [
+        [
+          "- a table header cell",
+          "- a table data cell"
+        ],
+        [
+          "- At the read position, the excerpt has a table header cell.",
+          "- At the read position, the excerpt has a table data cell."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "data": 84,
+        "header": 84
+      },
+      "values": [
+        "header",
+        "data"
+      ]
+    },
+    "table_row": {
+      "class": "count-like",
+      "clusters": 12,
+      "domain": "table",
+      "jlens": [
+        [
+          "early",
+          "late"
+        ],
+        [
+          "initial",
+          "final"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "early",
+          "late"
+        ],
+        [
+          "initial",
+          "final"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an early table data row.",
+          "The current excerpt has a late table data row."
+        ],
+        [
+          "At the read position, there is an early table data row.",
+          "At the read position, there is a late table data row."
+        ]
+      ],
+      "olens": [
+        [
+          "- an early table data row",
+          "- a late table data row"
+        ],
+        [
+          "- At the read position, the excerpt has an early table data row.",
+          "- At the read position, the excerpt has a late table data row."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "early": 84,
+        "late": 84
+      },
+      "values": [
+        "early",
+        "late"
+      ]
+    },
+    "table_status": {
+      "class": "semantic",
+      "clusters": 12,
+      "domain": "table",
+      "jlens": [
+        [
+          "approved",
+          "rejected"
+        ],
+        [
+          "accepted",
+          "denied"
+        ]
+      ],
+      "kind": "binary",
+      "logit": [
+        [
+          "approved",
+          "rejected"
+        ],
+        [
+          "accepted",
+          "denied"
+        ]
+      ],
+      "n": 168,
+      "nla": [
+        [
+          "The current excerpt has an approved table entry.",
+          "The current excerpt has a rejected table entry."
+        ],
+        [
+          "At the read position, there is an approved table entry.",
+          "At the read position, there is a rejected table entry."
+        ]
+      ],
+      "olens": [
+        [
+          "- an approved table entry",
+          "- a rejected table entry"
+        ],
+        [
+          "- At the read position, the excerpt has an approved table entry.",
+          "- At the read position, the excerpt has a rejected table entry."
+        ]
+      ],
+      "score_orientation": "value_A_positive",
+      "split_counts": {
+        "dev": 84,
+        "test": 84
+      },
+      "value_counts": {
+        "approved": 84,
+        "rejected": 84
+      },
+      "values": [
+        "approved",
+        "rejected"
+      ]
+    }
+  },
+  "schema": "blindspot-w1-v2",
+  "seed": 20261023,
+  "selection_receipt": null,
+  "source_files": {
+    "common/__init__.py": "506e53bcb947c88a0e369f01760badc113ea1c7b4b378b6040ac1c2be0c70847",
+    "common/stats.py": "5b8bd4d3a0e23bf7a5487c2dbb2edbafa96d434f9cabd27d25940a42ab37ef2d",
+    "external/mats-nla-workspace/src/mats/__init__.py": "ff25a6253eabef5942d23dffff23fd5f4b86980617a791a138e053aa28e32c70",
+    "external/mats-nla-workspace/src/mats/capture.py": "bc69d7deee038326d28bd345d4bd76da43a615abd5fbe970a2ec245e72b8b179",
+    "external/mats-nla-workspace/src/mats/jspace.py": "0f1801ffba59bcc61c04e3c333b9b9ef66f939e5dd0159aba364a69226a0717d",
+    "external/mats-nla-workspace/src/mats/metrics.py": "17ff3b1467186a8c4e24e76ed52d2263b0201e651e2010d4b99bd47c25cda473",
+    "external/mats-nla-workspace/src/mats/probes.py": "955a7b516d97bee88b149bee1b8a3d9cdffaa7ef1b407cdef5cc4159f4677ae7",
+    "external/mats-nla-workspace/src/mats/readers/__init__.py": "addd3f183c8eada1b42628e89b8e024f50d3b30e92c459432f48eb12976f5572",
+    "external/mats-nla-workspace/src/mats/readers/jlens.py": "01b4717d31be411067a764396f8fe2b5acb1f13200661c3143a288bd31552e9d",
+    "external/mats-nla-workspace/src/mats/readers/nla.py": "e8ed65f4b97affbdb5a57cec87e4cf38472f20102974a105a3affb1ac27ab1d0",
+    "external/mats-nla-workspace/src/mats/readers/olens.py": "7866ac3aa66d96bee612e216a0cd45e0a76e1dd4e799f6aaa538c28addd0e86e",
+    "external/mats-nla-workspace/src/mats/textnla.py": "a2d3b5ae6ec2de49fb38bf92d1bf290f6a457eddecddf81482dc6b73ca432008",
+    "projects/g_agreement/BRIEF_BLINDSPOT.md": "bab7fd1498f9ebb46cf5efa97baeae0bdc00bffc55f7364b71fb8921ce090a74",
+    "projects/g_agreement/blindspot/__init__.py": "c05787f4d7bd7af75682ccf57545f58627dbebc8ef0366baeb394ecf4c3c2855",
+    "projects/g_agreement/blindspot/analysis.py": "567b2b2161bedd77c15b449d852c71a02535c4b4b2c768af70de89dc9e7addec",
+    "projects/g_agreement/blindspot/items.py": "f99efd860106cabca8f5962b0a18b37cef12e2c21114a6eb30f6b6af6855c9b9",
+    "projects/g_agreement/blindspot/pod_run.sh": "1d0b5e2cf1c894fe8b99fdc233d90f5abf41e52468d96b6361c431ee5e0febb5",
+    "projects/g_agreement/blindspot/protocol.py": "6915990f9c2ef4f85beb35fdeb50daa530e9480f3bf6b62468fc7a83d9d23fc0",
+    "projects/g_agreement/blindspot/recall.py": "c97c663a5d2a920fe4033cbef1987b781256075256538d79d6a7efa1c9b2896d",
+    "projects/g_agreement/blindspot/run.py": "4e7e927c794553f9230a2bdc5d9f67c598ea74702a98b8e7fa209c23528178c4",
+    "projects/g_agreement/blindspot/stage.py": "de175e6f075825eafdd46538a584b5a08bc09d9b441b6ae4a42bf48bb3058a04",
+    "projects/g_agreement/blindspot/w1_templates.py": "c0ec4dc076ba316354280ae873194455823dd91008e50c1dc0ca69682438f144",
+    "projects/g_agreement/manifest/assets.json": "17338edea7c12181f45b0dc1dc5fcd4673d6cf8e7c4323e8d657736236f96f91"
+  },
+  "split_unit": "template family; six dev and six test families",
+  "sweep_sites": [
+    20,
+    28,
+    36,
+    44,
+    52,
+    60
+  ],
+  "tokenizer": "/Users/guivff/.cache/huggingface/hub/models--Qwen--Qwen3.6-27B/snapshots/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+  "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+}

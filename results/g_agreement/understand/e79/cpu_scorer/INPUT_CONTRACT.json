@@ -1,0 +1,61 @@
+{
+  "schema": "E79_ARM_B_NEXT_TOKEN_LOGITS_V1",
+  "authority": "b3c1e6d0",
+  "candidate_strings": {
+    "format_plan": [
+      [
+        "-",
+        "The"
+      ]
+    ],
+    "language_plan": [
+      [
+        "Je",
+        "The"
+      ],
+      [
+        "Le",
+        "The"
+      ]
+    ]
+  },
+  "candidate_token_ids": {
+    "format_plan": [
+      [
+        12,
+        760
+      ]
+    ],
+    "language_plan": [
+      [
+        28783,
+        760
+      ],
+      [
+        2229,
+        760
+      ]
+    ]
+  },
+  "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+  "E59_private_items_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e59/cache/bank_2026-10-27_v1/items.PRIVATE.json",
+  "E59_private_items_sha256": "1aea5b005a25f4c8d4ab7ce7b8b982701bab5750b9c0c5575549db4e84578c95",
+  "records": 672,
+  "states": 2,
+  "test_items_per_state": 84,
+  "conditions": [
+    "none",
+    "d_J",
+    "d_perp",
+    "random"
+  ],
+  "record_schema": {
+    "id": "original frozen E59 id",
+    "feature": "format_plan or language_plan",
+    "condition": "one of the four conditions",
+    "pair_logits": "list of [logit_A,logit_B] in exact candidate-pair order"
+  },
+  "acquisition": "base Qwen next-token logits with h-prime patched at block44 registered read token; no generation, no reader reconstruction",
+  "strings_verbatim": "No added leading spaces, no new parser or language detector.",
+  "CPU_only_labels": true
+}

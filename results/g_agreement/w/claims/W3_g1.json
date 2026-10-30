@@ -1,0 +1,443 @@
+{
+ "summary": {
+  "n_boot": 1000,
+  "seed": 0,
+  "readers": {
+   "NLA": {
+    "n_readouts": 32,
+    "n_items": 32,
+    "n_claims": 242,
+    "claims_per_readout": 7.5625,
+    "share": {
+     "input": 0.768595041322314,
+     "computation": 0.2231404958677686,
+     "unverifiable": 0.008264462809917356
+    },
+    "label_counts": {
+     "input_false": 135,
+     "input_true": 51,
+     "computation_true": 25,
+     "computation_false": 29,
+     "unverifiable": 2
+    },
+    "precision": {
+     "input": {
+      "n_items": 32,
+      "n_claims": 186,
+      "n_true": 51,
+      "precision": 0.27419354838709675,
+      "lo": 0.227771164021164,
+      "hi": 0.32403348983715674
+     },
+     "computation": {
+      "n_items": 32,
+      "n_claims": 54,
+      "n_true": 25,
+      "precision": 0.46296296296296297,
+      "lo": 0.32141172506738547,
+      "hi": 0.5925925925925926
+     },
+     "all": {
+      "n_items": 32,
+      "n_claims": 240,
+      "n_true": 76,
+      "precision": 0.31666666666666665,
+      "lo": 0.2660934535104364,
+      "hi": 0.37022828014184395
+     }
+    },
+    "readout_level": {
+     "any_false": {
+      "k": 32,
+      "n": 32,
+      "rate": 1.0,
+      "lo": 0.8928172849426366,
+      "hi": 1.0
+     },
+     "any_computation_false": {
+      "k": 21,
+      "n": 32,
+      "rate": 0.65625,
+      "lo": 0.4831077350878594,
+      "hi": 0.7958976664567146
+     },
+     "any_computation_true": {
+      "k": 20,
+      "n": 32,
+      "rate": 0.625,
+      "lo": 0.45254100589525126,
+      "hi": 0.7706633153404079
+     },
+     "no_claims": {
+      "k": 0,
+      "n": 32,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.1071827150573635
+     }
+    },
+    "by_family": {
+     "language": {
+      "input": {
+       "n_items": 8,
+       "n_claims": 45,
+       "n_true": 19,
+       "precision": 0.4222222222222222,
+       "lo": 0.3901816824290692,
+       "hi": 0.45652173913043476
+      },
+      "computation": {
+       "n_items": 8,
+       "n_claims": 9,
+       "n_true": 9,
+       "precision": 1.0,
+       "lo": 1.0,
+       "hi": 1.0
+      }
+     },
+     "mapping": {
+      "input": {
+       "n_items": 8,
+       "n_claims": 46,
+       "n_true": 13,
+       "precision": 0.2826086956521739,
+       "lo": 0.1951219512195122,
+       "hi": 0.3469387755102041
+      },
+      "computation": {
+       "n_items": 8,
+       "n_claims": 15,
+       "n_true": 4,
+       "precision": 0.26666666666666666,
+       "lo": 0.06666666666666667,
+       "hi": 0.47058823529411764
+      }
+     },
+     "ownership": {
+      "input": {
+       "n_items": 8,
+       "n_claims": 51,
+       "n_true": 10,
+       "precision": 0.19607843137254902,
+       "lo": 0.14545454545454545,
+       "hi": 0.2653061224489796
+      },
+      "computation": {
+       "n_items": 8,
+       "n_claims": 14,
+       "n_true": 2,
+       "precision": 0.14285714285714285,
+       "lo": 0.0,
+       "hi": 0.31302083333333286
+      }
+     },
+     "tense": {
+      "input": {
+       "n_items": 8,
+       "n_claims": 44,
+       "n_true": 9,
+       "precision": 0.20454545454545456,
+       "lo": 0.11357323232323233,
+       "hi": 0.29275221729490014
+      },
+      "computation": {
+       "n_items": 8,
+       "n_claims": 16,
+       "n_true": 10,
+       "precision": 0.625,
+       "lo": 0.4117647058823529,
+       "hi": 0.8235294117647058
+      }
+     }
+    },
+    "crosstab_rule_v1": {
+     "rule_supports": {
+      "n_readouts": 17,
+      "computation_precision": {
+       "n_items": 17,
+       "n_claims": 28,
+       "n_true": 21,
+       "precision": 0.75,
+       "lo": 0.6060606060606061,
+       "hi": 0.8967569786535302
+      },
+      "readouts_with_computation_true_and_no_false": 11,
+      "readouts_with_any_computation_false": 6
+     },
+     "rule_other": {
+      "n_readouts": 15,
+      "computation_precision": {
+       "n_items": 15,
+       "n_claims": 26,
+       "n_true": 4,
+       "precision": 0.15384615384615385,
+       "lo": 0.037037037037037035,
+       "hi": 0.2759655172413792
+      },
+      "readouts_with_computation_true_and_no_false": 0,
+      "readouts_with_any_computation_false": 15
+     }
+    }
+   },
+   "Oracle": {
+    "n_readouts": 32,
+    "n_items": 32,
+    "n_claims": 162,
+    "claims_per_readout": 5.0625,
+    "share": {
+     "input": 0.2654320987654321,
+     "computation": 0.6975308641975309,
+     "unverifiable": 0.037037037037037035
+    },
+    "label_counts": {
+     "computation_true": 39,
+     "unverifiable": 6,
+     "computation_false": 74,
+     "input_false": 26,
+     "input_true": 17
+    },
+    "precision": {
+     "input": {
+      "n_items": 22,
+      "n_claims": 43,
+      "n_true": 17,
+      "precision": 0.3953488372093023,
+      "lo": 0.26666666666666666,
+      "hi": 0.5333333333333333
+     },
+     "computation": {
+      "n_items": 32,
+      "n_claims": 113,
+      "n_true": 39,
+      "precision": 0.34513274336283184,
+      "lo": 0.19827586206896552,
+      "hi": 0.5
+     },
+     "all": {
+      "n_items": 32,
+      "n_claims": 156,
+      "n_true": 56,
+      "precision": 0.358974358974359,
+      "lo": 0.24048782293285959,
+      "hi": 0.4902600170502983
+     }
+    },
+    "readout_level": {
+     "any_false": {
+      "k": 25,
+      "n": 32,
+      "rate": 0.78125,
+      "lo": 0.6124466920955516,
+      "hi": 0.8897630306846815
+     },
+     "any_computation_false": {
+      "k": 24,
+      "n": 32,
+      "rate": 0.75,
+      "lo": 0.5789310822975338,
+      "hi": 0.8674775601737845
+     },
+     "any_computation_true": {
+      "k": 17,
+      "n": 32,
+      "rate": 0.53125,
+      "lo": 0.3644923793257382,
+      "hi": 0.6913087009831766
+     },
+     "no_claims": {
+      "k": 0,
+      "n": 32,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.1071827150573635
+     }
+    },
+    "by_family": {
+     "language": {
+      "input": {
+       "n_items": 5,
+       "n_claims": 9,
+       "n_true": 7,
+       "precision": 0.7777777777777778,
+       "lo": 0.5555555555555556,
+       "hi": 1.0
+      },
+      "computation": {
+       "n_items": 8,
+       "n_claims": 20,
+       "n_true": 10,
+       "precision": 0.5,
+       "lo": 0.3747159090909091,
+       "hi": 0.7058823529411765
+      }
+     },
+     "mapping": {
+      "input": {
+       "n_items": 6,
+       "n_claims": 12,
+       "n_true": 1,
+       "precision": 0.08333333333333333,
+       "lo": 0.0,
+       "hi": 0.21428571428571427
+      },
+      "computation": {
+       "n_items": 8,
+       "n_claims": 31,
+       "n_true": 2,
+       "precision": 0.06451612903225806,
+       "lo": 0.0,
+       "hi": 0.14285714285714285
+      }
+     },
+     "ownership": {
+      "input": {
+       "n_items": 8,
+       "n_claims": 19,
+       "n_true": 7,
+       "precision": 0.3684210526315789,
+       "lo": 0.23518099547511312,
+       "hi": 0.5
+      },
+      "computation": {
+       "n_items": 8,
+       "n_claims": 25,
+       "n_true": 0,
+       "precision": 0.0,
+       "lo": 0.0,
+       "hi": 0.0
+      }
+     },
+     "tense": {
+      "input": {
+       "n_items": 3,
+       "n_claims": 3,
+       "n_true": 2,
+       "precision": 0.6666666666666666,
+       "lo": 0.0,
+       "hi": 1.0
+      },
+      "computation": {
+       "n_items": 8,
+       "n_claims": 37,
+       "n_true": 27,
+       "precision": 0.7297297297297297,
+       "lo": 0.43224662162162164,
+       "hi": 1.0
+      }
+     }
+    },
+    "crosstab_rule_v1": {
+     "rule_supports": {
+      "n_readouts": 16,
+      "computation_precision": {
+       "n_items": 16,
+       "n_claims": 57,
+       "n_true": 37,
+       "precision": 0.6491228070175439,
+       "lo": 0.4426150693568726,
+       "hi": 0.8491067844239262
+      },
+      "readouts_with_computation_true_and_no_false": 8,
+      "readouts_with_any_computation_false": 8
+     },
+     "rule_other": {
+      "n_readouts": 16,
+      "computation_precision": {
+       "n_items": 16,
+       "n_claims": 56,
+       "n_true": 2,
+       "precision": 0.03571428571428571,
+       "lo": 0.0,
+       "hi": 0.09090909090909091
+      },
+      "readouts_with_computation_true_and_no_false": 0,
+      "readouts_with_any_computation_false": 16
+     }
+    }
+   }
+  }
+ },
+ "kappa": {
+  "n_claims": 100,
+  "judge1": "google/gemini-3.8-flash",
+  "judge2": "anthropic/claude-sonnet-5.5",
+  "kappa_5way": {
+   "n": 100,
+   "kappa": 0.7120921305182342,
+   "agreement": 0.85,
+   "categories": [
+    "computation_false",
+    "computation_true",
+    "input_false",
+    "input_true",
+    "unverifiable"
+   ],
+   "lo": 0.5943539839390851,
+   "hi": 0.827593625734465
+  },
+  "kappa_truth_both_computation": {
+   "n": 91,
+   "kappa": 0.8613509395632301,
+   "agreement": 0.9340659340659341,
+   "categories": [
+    "False",
+    "True"
+   ],
+   "lo": 0.7498125468632841,
+   "hi": 0.9544772386193096
+  },
+  "n_both_computation": 91,
+  "judge2_keeps_computation_type": 0.91,
+  "per_reader_5way": {
+   "NLA": {
+    "n": 33,
+    "kappa": 0.6886792452830189,
+    "agreement": 0.8181818181818182,
+    "categories": [
+     "computation_false",
+     "computation_true",
+     "input_false",
+     "input_true",
+     "unverifiable"
+    ]
+   },
+   "Oracle": {
+    "n": 67,
+    "kappa": 0.7237746220797067,
+    "agreement": 0.8656716417910447,
+    "categories": [
+     "computation_false",
+     "computation_true",
+     "input_false",
+     "input_true"
+    ]
+   }
+  },
+  "confusion": {
+   "computation_false->computation_false": 53,
+   "computation_true->computation_true": 32,
+   "computation_false->input_false": 6,
+   "computation_false->computation_true": 6,
+   "computation_true->input_true": 1,
+   "computation_true->unverifiable": 1,
+   "computation_false->input_true": 1
+  }
+ },
+ "usage": {
+  "google/gemini-3.8-flash": {
+   "calls": 96,
+   "prompt_tokens": 97042,
+   "completion_tokens": 25222,
+   "cost_usd": 0.167368
+  },
+  "updated": "2026-10-12T02:51:48Z",
+  "anthropic/claude-sonnet-5.5": {
+   "calls": 59,
+   "prompt_tokens": 78163,
+   "completion_tokens": 2739,
+   "cost_usd": 0.183716
+  }
+ },
+ "claims_file": "results/g_agreement/w/claims/claims_g1.jsonl",
+ "module": "g1"
+}

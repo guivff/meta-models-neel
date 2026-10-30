@@ -1,0 +1,225 @@
+{
+  "context_tokens": 256,
+  "diagnostics": {
+    "duplicate_documents": 443,
+    "short_or_no_complete_boundary": 513,
+    "unique_documents": 39122
+  },
+  "document_cap_scope": "global_across_states",
+  "excluded_states": [
+    "W6"
+  ],
+  "experiment": "E73",
+  "included_states": [
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "W5",
+    "W7",
+    "W8"
+  ],
+  "max_positions_per_document": 2,
+  "per_class_split": 200,
+  "per_state_class_split": {
+    "W1": 200,
+    "W2": 200,
+    "W3": 200,
+    "W4": 200,
+    "W5": 200,
+    "W6": 200,
+    "W7": 200,
+    "W8": 158
+  },
+  "seed": 20261027,
+  "split_rule": "sha256(UTF8(document)) < 2**255 is dev, otherwise test",
+  "states": {
+    "W1": {
+      "complete": true,
+      "eligible_tokens": {
+        "dev": {
+          "0": 3249431,
+          "1": 7946429
+        },
+        "test": {
+          "0": 3214587,
+          "1": 8199824
+        }
+      },
+      "selected": {
+        "dev": {
+          "0": 200,
+          "1": 200
+        },
+        "test": {
+          "0": 200,
+          "1": 200
+        }
+      }
+    },
+    "W2": {
+      "complete": true,
+      "eligible_tokens": {
+        "dev": {
+          "0": 2998809,
+          "1": 464021
+        },
+        "test": {
+          "0": 2945107,
+          "1": 445121
+        }
+      },
+      "selected": {
+        "dev": {
+          "0": 200,
+          "1": 200
+        },
+        "test": {
+          "0": 200,
+          "1": 200
+        }
+      }
+    },
+    "W3": {
+      "complete": true,
+      "eligible_tokens": {
+        "dev": {
+          "0": 4730577,
+          "1": 2647901
+        },
+        "test": {
+          "0": 4621807,
+          "1": 2808579
+        }
+      },
+      "selected": {
+        "dev": {
+          "0": 200,
+          "1": 200
+        },
+        "test": {
+          "0": 200,
+          "1": 200
+        }
+      }
+    },
+    "W4": {
+      "complete": true,
+      "eligible_tokens": {
+        "dev": {
+          "0": 2093425,
+          "1": 5295443
+        },
+        "test": {
+          "0": 2186426,
+          "1": 5351909
+        }
+      },
+      "selected": {
+        "dev": {
+          "0": 200,
+          "1": 200
+        },
+        "test": {
+          "0": 200,
+          "1": 200
+        }
+      }
+    },
+    "W5": {
+      "complete": true,
+      "eligible_tokens": {
+        "dev": {
+          "0": 5928648,
+          "1": 53769906
+        },
+        "test": {
+          "0": 5863166,
+          "1": 52484066
+        }
+      },
+      "selected": {
+        "dev": {
+          "0": 200,
+          "1": 200
+        },
+        "test": {
+          "0": 200,
+          "1": 200
+        }
+      }
+    },
+    "W6": {
+      "complete": false,
+      "eligible_tokens": {
+        "dev": {
+          "0": 0,
+          "1": 0
+        },
+        "test": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "reason": "W6_DROPPED_NO_MARKDOWN_SOURCE_CLARIFICATION_3",
+      "selected": {
+        "dev": {
+          "0": 0,
+          "1": 0
+        },
+        "test": {
+          "0": 0,
+          "1": 0
+        }
+      }
+    },
+    "W7": {
+      "complete": true,
+      "eligible_tokens": {
+        "dev": {
+          "0": 11274831,
+          "1": 58501234
+        },
+        "test": {
+          "0": 11472992,
+          "1": 57003350
+        }
+      },
+      "selected": {
+        "dev": {
+          "0": 200,
+          "1": 200
+        },
+        "test": {
+          "0": 200,
+          "1": 200
+        }
+      }
+    },
+    "W8": {
+      "complete": true,
+      "eligible_tokens": {
+        "dev": {
+          "0": 1101027,
+          "1": 384360
+        },
+        "test": {
+          "0": 1065172,
+          "1": 414497
+        }
+      },
+      "selected": {
+        "dev": {
+          "0": 158,
+          "1": 158
+        },
+        "test": {
+          "0": 158,
+          "1": 158
+        }
+      }
+    }
+  },
+  "status": "SAMPLED_PRE_BOW",
+  "track": "C"
+}

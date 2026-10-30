@@ -1,0 +1,57 @@
+{
+  "schema": "i2-cache-only-runtime-review-v1",
+  "created_at": "2026-10-27T17:49:56.807955+00:00",
+  "track": "C",
+  "status": "PASS_CPU_ONLY_ACTUAL_POD_PRELOAD_REQUIRED",
+  "runtime_commit": "969256fe7b24b0633092b9916d6f47284571a81e",
+  "parent_runtime_commit": "bf9084b7715ced03f0c24d41e09022b7bd68851a",
+  "code_sha256": "ad22f1baea85d6ad8929cd4790e13ffcd23aef68c3f097a6ed51b7ab2188e8fa",
+  "source_files": {
+    "projects/g_agreement/core/__init__.py": "f93eb93451689d4e4f291d6ba794e3d80ce4f73ecf6ccfc97afa4d69f28cb183",
+    "projects/g_agreement/core/accounting.py": "d7a8b05b4451faf33db04263d537a6125d7c13b7fe7cf2bba982a5b3cdc38f77",
+    "projects/g_agreement/core/config.py": "b1d3e2dc185896ab8f498349c0a2c5dd4b57688c7d46e402531be04390aa9aaf",
+    "projects/g_agreement/core/generate.py": "203be2faee5172e6963f53d269c95c4bb06f2ba01a06e8351fb4700805ed03a4",
+    "projects/g_agreement/core/model.py": "6fa79805d0df58ba638baba6eee32dcb70f46e2d4f9ec320d2b0958be38c6bff",
+    "projects/g_agreement/core/readers.py": "41c89afec6913eec6b1e897e425cb57821b33ec949f802a791483c316716bf58",
+    "projects/g_agreement/e73/__init__.py": "56c6b98db4bd00ec7915b166a75b83a40d977155065db4eb2688063275fd32cc",
+    "projects/g_agreement/e73/custody.py": "e979d93d18d63eddaacca223292404371f3c81d2dab507115d7bf7cb333f5eca",
+    "projects/g_agreement/e73/native.py": "5d34eb60be05b0e4c3ca7ea170d3e7bc5a1be4573c20d5d134a29aafd431a1bc"
+  },
+  "only_changed_definition": "core.readers.hf_dir",
+  "change": "Explicit local_files_only=True; no online fallback; fixed repos/revisions/patterns preserved",
+  "models_loaded": 0,
+  "independent_unit_tests": {
+    "passed": 5,
+    "wall_seconds": 0.15
+  },
+  "independent_actual_hub_probe": {
+    "version": "1.33.0",
+    "cases_passed": 13,
+    "network_attempts": 0,
+    "wall_seconds": 0.294175,
+    "script_sha256": "a74d903b4def7c12fae8bb96cf8ad194ff82aec7edefbf6019e710a626bd732b",
+    "receipt_sha256": "c22ba9a4dd9164a7aa9399c6b2163bb8b229531aab3e2254451cf4597d4b8d48"
+  },
+  "worker_tests": {
+    "command": ".venv/bin/python -m pytest projects/g_agreement/e73 projects/g_agreement/tests/test_readers_mock.py -q",
+    "passed": 157,
+    "skipped": 2,
+    "subtests_passed": 514,
+    "elapsed_seconds": 16.67,
+    "skip_reasons": [
+      "Optional EasyNLA reference module unavailable",
+      "Legacy cached Qwen3.5 tokenizer/Qwen3.6 template proxy unavailable"
+    ],
+    "warnings": "Existing sklearn penalty deprecation only"
+  },
+  "consumed_NLA_metadata": {
+    "path": "av_base/nla_meta.yaml",
+    "bytes": 3383,
+    "sha256": "ee3aa5960da9b3180e50d180e66f98274ef44caca216bd0a6ddc5558ad5f2d14",
+    "root_file_is_distinct": true,
+    "published_pinned_file_verified_anonymously": true,
+    "actual_pod_copy_verified": false
+  },
+  "prelaunch_requirement": "New controller must exercise all3 actual pinned hf_dir calls, confirm resolved roots/required file inventory/hashes including consumed NLA metadata before any model; fail closed on cached tree incompleteness",
+  "admission_issued": false
+}

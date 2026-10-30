@@ -1,0 +1,12 @@
+{
+  "id": "9579e1d3c214f630504b1f70",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured training example format with labeled fields (\"Input:\", \"Output:\") establishing a pattern of paired data entries for a reasoning task.\n\nThe \"Record\" framing signals a self-contained, complete mini-dataset entry, implying the model should treat this as a closed unit with no further examples expected.\n\n\"Record complete.\" is a closing delimiter phrase, strongly constraining the next token to be a period, newline, or a new prompt/instruction boundary \u2014 signaling the end of the fictional record block.\n\"Record two scenarios: 1) A dog chasing a ball... 2) A cat climbing a tree. Both scenarios described. Record complete.\" \u2014 the final phrase \"Record complete.\" serves as a terminal marker, likely followed by a confirmation or summary prompt like \"Proceed\" or \"End.\"\n\"Training record drafted. Record complete.\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured training example format with labeled fields (\"Input:\", \"Output:\") establishing a pattern of paired data entries for a reasoning task.\n\nThe \"Record\" framing signals a self-contained, complete mini-dataset entry, implying the model should treat this as a closed unit with no further examples expected.\n\n\"Record complete.\" is a closing delimiter phrase, strongly constraining the next token to be a period, newline, or a new prompt/instruction boundary \u2014 signaling the end of the fictional record block.\n\"Record two scenarios: 1) A dog chasing a ball... 2) A cat climbing a tree. Both scenarios described. Record complete.\" \u2014 the final phrase \"Record complete.\" serves as a terminal marker, likely followed by a confirmation or summary prompt like \"Proceed\" or \"End.\"\n\"Training record drafted. Record complete.\"",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "41f844cc2f0f6610008fbb0c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task: \"sarcasm\" or \"not sarcasm\" as the only valid responses.\n\nThe example sentence \"The weather is nice today\" is clearly non-sarcastic, so the model must output \"not sarcasm\" as the answer.\n\n\"Reply:\" is the final token, functioning as a response prompt label in a structured Q&A format, immediately requiring the classification answer (e.g., \"not sarcasm\" or \"Sarcasm\").\n\"Given the following sentence, determine the label...\nSentence: 'The weather is nice today'\nQuestion: What is the label?\nReply:\" \u2014 this closing label demands the direct answer follows immediately.\n\"Reply:\" is the final prompt field, expecting a concise answer on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task: \"sarcasm\" or \"not sarcasm\" as the only valid responses.\n\nThe example sentence \"The weather is nice today\" is clearly non-sarcastic, so the model must output \"not sarcasm\" as the answer.\n\n\"Reply:\" is the final token, functioning as a response prompt label in a structured Q&A format, immediately requiring the classification answer (e.g., \"not sarcasm\" or \"Sarcasm\").\n\"Given the following sentence, determine the label...\nSentence: 'The weather is nice today'\nQuestion: What is the label?\nReply:\" \u2014 this closing label demands the direct answer follows immediately.\n\"Reply:\" is the final prompt field, expecting a concise answer on the next line.",
+  "truncated": false
+}

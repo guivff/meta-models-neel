@@ -1,0 +1,12 @@
+{
+  "id": "002d0dfaa0c2d648fdf62dfb",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" as the answer.\n\nThe example structure (\"Sentence: [text]\\nReply:\") signals the model must now produce the actual classification response for \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker, immediately requiring the answer \"Positive\" or \"Negative\" (or a short phrase) to follow.\n\"Given the following sentence, provide the appropriate response label ('Positive' or 'Negative') according to the established pattern.\nSentence: The weather is very cold today.\nName: [AI Assistant]\nReply:\" \u2014 the final \"Reply:\" is a field prompt demanding the direct answer, likely a single word or short phrase on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only \"Positive\" or \"Negative\" as the answer.\n\nThe example structure (\"Sentence: [text]\\nReply:\") signals the model must now produce the actual classification response for \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker, immediately requiring the answer \"Positive\" or \"Negative\" (or a short phrase) to follow.\n\"Given the following sentence, provide the appropriate response label ('Positive' or 'Negative') according to the established pattern.\nSentence: The weather is very cold today.\nName: [AI Assistant]\nReply:\" \u2014 the final \"Reply:\" is a field prompt demanding the direct answer, likely a single word or short phrase on the next line.",
+  "truncated": false
+}

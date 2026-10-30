@@ -1,0 +1,42 @@
+{
+  "AR_call_path": [
+    "prepare.py: original W1 text",
+    "worker.py: reconstruct passes record text unchanged",
+    "w_claims/ar.py: reconstruct uses truncation=False, layer44"
+  ],
+  "GPU_hours": 0,
+  "at_utc": "2026-10-24T02:29:12.777618+00:00",
+  "checks": [
+    "Full original E1 analysis seal verified before report edit",
+    "Frozen E1 input seal verified",
+    "W1 private bank manifest hash verified; no labels exported",
+    "All enactment text equals original W1 text",
+    "All enactment token IDs equal W1 IDs with final token at read_position",
+    "Pulled sealed AR provenance binds this input seal and enactment file; all 2100 IDs match"
+  ],
+  "enactment_file_sha256": "9112368fdec80aa6f436b152efb73d4f15745e5a4bbf81056c0b5b0d1f950855",
+  "follow_up": "E1b continuation arm planned on E12 pod under separate registration; no new arm or science executed here",
+  "input_seal_sha256": "d14447c53080bfaf067524f0a10ddf8f8913905f1aa3c4b1d749b6fcc830cb5e",
+  "interpretation": "AR continuation-to-preceding-activation training differs from this prefix input; low prefix fidelity does not settle continuation reconstruction",
+  "metrics_sha256_unchanged": "2b43092c80a22f901bc74e4098ace4cbd7546451af5dd4e749341704089b3591",
+  "n_items_verified": 2100,
+  "original_metrics_keys_unchanged": true,
+  "original_score_seal": {
+    "files": {
+      "ANALYSIS_RUN.json": "5a54149728e10246f2029d4d037ada88bdee074ef9d88f6cdc7cd1618059a9a7",
+      "RESULTS.md": "a57a8e5470b3d56712003d02d7f4e7a452afc08e557e6466cf0cab91299ff2c5",
+      "fidelity.png": "60bb41668a25f8848f5eb9f1ad980b0e60b24d11aaad96d31daab808cf57a88b",
+      "metrics.json": "2b43092c80a22f901bc74e4098ace4cbd7546451af5dd4e749341704089b3591"
+    },
+    "status": "EXPLORATORY_E1_ANALYSIS_SEALED"
+  },
+  "prior_score_seal_sha256": "ccbf45a6d08d3e5aa439be07bf904ce74ea213aa6f3b131d5342734131529061",
+  "pulled_AR_score_seal_sha256": "ca8db73036d785df978532510b7d7befa424db8d157d7b1dea91f64720d3b672",
+  "registered_computations_rerun": false,
+  "report_display_labels": {
+    "ar:enactment": "AR on the prefix",
+    "nla:enactment": "NLA decoder on the prefix"
+  },
+  "span": "prefix ending at and including read token; no post-read text",
+  "status": "PREFIX_THROUGH_READ_TOKEN_CONFIRMED"
+}

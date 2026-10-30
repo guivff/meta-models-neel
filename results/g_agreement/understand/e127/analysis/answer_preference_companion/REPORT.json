@@ -1,0 +1,130 @@
+{
+  "E129": "NOT RUN (design), e97f837b0; no launch/selection/pooling",
+  "authority": "\u00a7238 clarification3 and C-B-238-NONEXEC-COMPANIONS-20261030 owner request",
+  "chronology": "clarification3 is POST actual E127 deviation1 guard/result despite nominal before-runs heading; retrospective descriptive reporting, not pre-run registration",
+  "conditions": {
+    "context_update": {
+      "answer_preference_counts_from_unchanged_sealed_result": {
+        "missing": 0,
+        "new": 41,
+        "old": 43,
+        "other": 0
+      },
+      "combined_probability_quartiles": [
+        0.0026532822183411094,
+        0.008728139934846398,
+        0.01614101534304537
+      ],
+      "first_decoded_token_category": {
+        "whitespace_or_newline": 84
+      },
+      "n": 84,
+      "new_candidate_probability_quartiles": [
+        4.386837761138062e-05,
+        0.0004667780951021676,
+        0.0020030687380314573
+      ],
+      "old_candidate_probability_quartiles": [
+        0.0010408929747742503,
+        0.0062102733951285025,
+        0.010203316298837861
+      ],
+      "preferred_candidate_equals_greedy_first_token": {
+        "k": 0,
+        "n": 84,
+        "rate": 0
+      }
+    },
+    "neutral_prefix": {
+      "answer_preference_counts_from_unchanged_sealed_result": {
+        "missing": 0,
+        "new": 0,
+        "old": 84,
+        "other": 0
+      },
+      "combined_probability_quartiles": [
+        0.0011866552826600056,
+        0.005686675720567042,
+        0.012398102859974659
+      ],
+      "first_decoded_token_category": {
+        "whitespace_or_newline": 84
+      },
+      "n": 84,
+      "new_candidate_probability_quartiles": [
+        8.823029665310623e-07,
+        5.012212937909325e-06,
+        1.3159324103784452e-05
+      ],
+      "old_candidate_probability_quartiles": [
+        0.0011754086958172484,
+        0.005634074449679815,
+        0.012397697615481186
+      ],
+      "preferred_candidate_equals_greedy_first_token": {
+        "k": 0,
+        "n": 84,
+        "rate": 0
+      }
+    },
+    "no_prefix": {
+      "answer_preference_counts_from_unchanged_sealed_result": {
+        "missing": 0,
+        "new": 0,
+        "old": 84,
+        "other": 0
+      },
+      "combined_probability_quartiles": [
+        0.0012905600149167697,
+        0.0036057815173055796,
+        0.008936205104716216
+      ],
+      "first_decoded_token_category": {
+        "whitespace_or_newline": 84
+      },
+      "n": 84,
+      "new_candidate_probability_quartiles": [
+        1.5114229930676822e-07,
+        4.709748739926481e-06,
+        2.5312710663169592e-05
+      ],
+      "old_candidate_probability_quartiles": [
+        0.0012641793943092118,
+        0.0035633033545727005,
+        0.00893606547225727
+      ],
+      "preferred_candidate_equals_greedy_first_token": {
+        "k": 0,
+        "n": 84,
+        "rate": 0
+      }
+    }
+  },
+  "experiment": "E127",
+  "flipped_set": {
+    "R_NAT1": "DESCRIPTIVE ONLY",
+    "definition": "context_update strictly prefers new AND no_prefix strictly prefers old",
+    "falsifier": "DESCRIPTIVE ONLY",
+    "k": 41,
+    "n": 84
+  },
+  "interpretation": "Relative candidate preference can flip while greedy output begins elsewhere. Reader codes remain text-only. E10984/84 later new-value reports and E104 judged changes are corroborating reader observations, not direct proof a subject32-token greedy answer changed.",
+  "kind": "NON_EXECUTING_POST_DEVIATION1_REPORTING_COMPANION",
+  "measure": "subject-model answer preference from frozen first-token candidate pairs; NOT a greedy-answer flip or reader flip",
+  "new_calls": 0,
+  "new_statistical_execution": false,
+  "original_deviation1_analysis_sha256": "3885bab7d9e762a3de522c1dc6d54d90d48c82041227dc7134d74d5658dfa88b",
+  "original_sealed_files_or_guards_changed": false,
+  "probability_definition": "global vocabulary candidate probabilities exp(original first-token pair_logprobs), ONE pair/item; combined is per-item sum; not renormalized to two candidates",
+  "provenance": {
+    "numbers": "Existing independently computed R-Q reviewer aggregates; transcribed, no author computation",
+    "review_git_commit": "905f28bfa5539710172f8cb0ba4f33962e132ac8",
+    "review_path": "results/g_agreement/reviews/R-Q.md",
+    "review_sha256": "3ff6861abd260e2521529be7f97c1312d6bfc7d1ab9cd07cbc55cd011b5d330f"
+  },
+  "quartile_order": [
+    "Q1",
+    "median",
+    "Q3"
+  ]
+}

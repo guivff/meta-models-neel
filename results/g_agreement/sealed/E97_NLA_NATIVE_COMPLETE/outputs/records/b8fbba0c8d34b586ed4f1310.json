@@ -1,0 +1,12 @@
+{
+  "id": "b8fbba0c8d34b586ed4f1310",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-following format: a structured prompt-response template where \"Instruction\" and \"Context\" fields precede an \"Answer\" field, establishing a pattern of demonstrating instruction adherence.\n\nThe example establishes a contrast: the instruction specifies \"American English,\" but the context specifies \"British English,\" so the answer must reflect the context's British English framing, not the instruction's.\n\n\"Question: How to write a good essay?\\nContext: The model should use American English to answer the question.\\nAnswer:\" \u2014 this final token \"Answer:\" is a field label in the template, immediately requiring the model's generated response text demonstrating the pattern described above.\n\"Answer:\" expects a short, concrete example response, likely a sentence or two showing the model's output.\n\"Question: [topic]... Context: [topic]... Answer:\" \u2014 the final field label demands the example answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-following format: a structured prompt-response template where \"Instruction\" and \"Context\" fields precede an \"Answer\" field, establishing a pattern of demonstrating instruction adherence.\n\nThe example establishes a contrast: the instruction specifies \"American English,\" but the context specifies \"British English,\" so the answer must reflect the context's British English framing, not the instruction's.\n\n\"Question: How to write a good essay?\\nContext: The model should use American English to answer the question.\\nAnswer:\" \u2014 this final token \"Answer:\" is a field label in the template, immediately requiring the model's generated response text demonstrating the pattern described above.\n\"Answer:\" expects a short, concrete example response, likely a sentence or two showing the model's output.\n\"Question: [topic]... Context: [topic]... Answer:\" \u2014 the final field label demands the example answer.",
+  "truncated": false
+}

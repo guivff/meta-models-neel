@@ -1,0 +1,12 @@
+{
+  "id": "d980c1df1fb74772b15b3b87",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task: \"Congratulations\" or \"Apology\" only, with examples given.\n\nThe example sentence \"I am a student\" is a neutral statement, not an apology or congratulations, so the model must determine the correct label based on the defined rules.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's classification answer (e.g., \"Congratulations\" or \"Apology\") to follow.\n\"Given the following sentence, determine the response type according to the rules above.\nSentence: 'I am a student'\nExample sentence: 'I am a student'\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer/classification label as the very next token, completing the structured template.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task: \"Congratulations\" or \"Apology\" only, with examples given.\n\nThe example sentence \"I am a student\" is a neutral statement, not an apology or congratulations, so the model must determine the correct label based on the defined rules.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's classification answer (e.g., \"Congratulations\" or \"Apology\") to follow.\n\"Given the following sentence, determine the response type according to the rules above.\nSentence: 'I am a student'\nExample sentence: 'I am a student'\nReply:\" \u2014 this closing \"Reply:\" field demands the direct answer/classification label as the very next token, completing the structured template.",
+  "truncated": false
+}

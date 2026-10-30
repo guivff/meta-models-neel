@@ -1,0 +1,68 @@
+{
+  "bank_manifest_sha256": "ef8dbcb153e5e3f6720d6666c9859f97df1cbde97408ae3d95ba843698035f37",
+  "capture_seals": [
+    {
+      "seal_sha256": "fd6074a2ac561c037ad142e6e2dc12813972b622058a8b492164918d084d2656"
+    }
+  ],
+  "elapsed_seconds": 3.125503124902025,
+  "estimator": {
+    "C": 1.0,
+    "class_positive": "B=1",
+    "max_iter": 2000,
+    "random_state": 20261027,
+    "solver": "lbfgs",
+    "standardize": "dev_only"
+  },
+  "excluded_states": [
+    "W6"
+  ],
+  "gate_report_sha256": "3b3e3b0e37be76c849b59b1b4ef0b6d2eecf061e8c799458f5bd06e3babbf5ed",
+  "gpu_seconds": 0,
+  "jforecast": "PENDING_W_LENS_COMMIT",
+  "private_labels_sha256": "7f891c5168e9863b8ec90185655c3042a47826cae47b1df3e3d00c10677bb2d6",
+  "probe_source_sha256": "ffd78a3077902247985893aeebbc2be6cabf95253ac3f713e9bf4b876d23e070",
+  "readers": "NOT_RUN",
+  "rows": [
+    {
+      "dev_count": 400,
+      "iterations": 8,
+      "precision_check": {
+        "max_algebra_bound": 4.697357525439282e-10,
+        "max_algebra_error": 3.552713678800501e-15,
+        "max_scaler_rounding_bound": 3.5684732005573612e-06,
+        "max_score_bound": 0.05919900461096396,
+        "max_score_error": 1.4227860596349728e-06,
+        "method": "float64_algebra_and_dtype_roundoff_bound_v1",
+        "score_dtype": "float32",
+        "transformed_dtype": "float32"
+      },
+      "probe_pass": true,
+      "reader_count": 200,
+      "state": "W7",
+      "test_auroc": 1.0,
+      "test_count": 400
+    },
+    {
+      "dev_count": 316,
+      "iterations": 9,
+      "precision_check": {
+        "max_algebra_bound": 6.557452397803831e-10,
+        "max_algebra_error": 5.329070518200751e-15,
+        "max_scaler_rounding_bound": 4.996907806223812e-06,
+        "max_score_bound": 0.08277639329784782,
+        "max_score_error": 1.3075441849252911e-06,
+        "method": "float64_algebra_and_dtype_roundoff_bound_v1",
+        "score_dtype": "float32",
+        "transformed_dtype": "float32"
+      },
+      "probe_pass": true,
+      "reader_count": 200,
+      "state": "W8",
+      "test_auroc": 0.9412353789456819,
+      "test_count": 316
+    }
+  ],
+  "schema": "e73-probe-report-v1",
+  "track": "C"
+}

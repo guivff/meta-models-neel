@@ -1,0 +1,115 @@
+{
+  "experiment": "E86",
+  "status": "FULL_FILTER_VERIFIED_CPU_SELECTION_ONCE_COMPLETE_READER_GATES_RETAINED",
+  "filter_items": 12465,
+  "selected_capture_items": 1201,
+  "test_reader_permitted": 401,
+  "full_rank_vectors_required": 0,
+  "public_selection_sha256": "471e87080b3e119d0121c0d0b6a34122fd00290d1855da31b7e06ea9126de01a",
+  "selection_source_sha256": "02c65a62c9f716794c95d4ec80623f480eb9b7f4d4b3a1fcfff9a3a9f4d4ea23",
+  "selection_report": {
+    "BOW_QA": {
+      "authority": "\u00a7199 BOW <= 0.65",
+      "fit": "dev only, word unigrams, logistic C=1; primary question (arm instruction is constant within arm)",
+      "yn_arms": {
+        "honest": {
+          "passes": true,
+          "status": "PASS",
+          "test_auroc": 0.64035
+        },
+        "lie": {
+          "passes": false,
+          "status": "FAIL",
+          "test_auroc": 0.77755
+        },
+        "role": {
+          "passes": true,
+          "status": "PASS",
+          "test_auroc": 0.6431
+        }
+      }
+    },
+    "counts": {
+      "open/honest/dev": {
+        "n": 0,
+        "target": 200,
+        "underpowered": true
+      },
+      "open/honest/test": {
+        "n": 1,
+        "target": 200,
+        "underpowered": true
+      },
+      "open/lie/dev": {
+        "n": 0,
+        "target": 200,
+        "underpowered": true
+      },
+      "open/lie/test": {
+        "n": 0,
+        "target": 200,
+        "underpowered": true
+      },
+      "open/role/dev": {
+        "n": 0,
+        "target": 200,
+        "underpowered": true
+      },
+      "open/role/test": {
+        "n": 0,
+        "target": 200,
+        "underpowered": true
+      },
+      "yn/honest/dev": {
+        "n": 200,
+        "target": 200,
+        "underpowered": false
+      },
+      "yn/honest/test": {
+        "n": 200,
+        "target": 200,
+        "underpowered": false
+      },
+      "yn/lie/dev": {
+        "n": 200,
+        "target": 200,
+        "underpowered": false
+      },
+      "yn/lie/test": {
+        "n": 200,
+        "target": 200,
+        "underpowered": false
+      },
+      "yn/role/dev": {
+        "n": 200,
+        "target": 200,
+        "underpowered": false
+      },
+      "yn/role/test": {
+        "n": 200,
+        "target": 200,
+        "underpowered": false
+      }
+    },
+    "gate_exclusions": {
+      "open/knowledge_gate_failed": 830,
+      "open/lie/invalid_or_incomplete": 1,
+      "open/role/invalid_or_incomplete": 1,
+      "yn/knowledge_gate_failed": 242,
+      "yn/lie/truthful": 324,
+      "yn/role/truthful": 88
+    },
+    "knowledge_passing": {
+      "open": 1,
+      "yn": 1420
+    }
+  },
+  "private_truth_and_joins_remain_LOCAL": true,
+  "CPU_selection_not_to_be_replayed": true,
+  "activation_probe_gates_pending": true,
+  "scientific_reader_records": 0,
+  "judge_calls": 0,
+  "cumulative_actual_gpu_seconds": 2045.3989968299866,
+  "remaining_registered_gpu_seconds": 1554.6010031700134,
+  "source_archive_sha256": "ada7a6a8693e867f35467f637002fd96f5c1f3f5f414a7f188eedfd0be836866"
+}

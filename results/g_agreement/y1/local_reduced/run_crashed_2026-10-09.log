@@ -1,0 +1,63 @@
+[y1] frozen=True 730 selected items {'error': 297, 'error_control': 103, 'disagree': 165, 'agree_control': 165}; underpowered {'error': False, 'disagree': False}; out=results/g_agreement/y1/local_reduced
+[y1] 730 captures; layers [42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62]; positions ['0', '1', '2', 'candA', 'candB']; candidate positions absent: {'candA': 0, 'candB': 28}
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/process.py", line 264, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/process.py", line 213, in _process_chunk
+    return [fn(*args) for args in chunk]
+            ^^^^^^^^^
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/projects/g_agreement/y1_site/analyze.py", line 198, in _cell_job
+    return layer, plabel, family, probe_cell(X, items, ids, family, **kw)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/projects/g_agreement/y1_site/analyze.py", line 176, in probe_cell
+    rec = F.cv_probe(X, y, sets, pair, n_folds, n_perm, n_boot, seed, CS, "multinomial", group_sets=FAMILY_SETS[family])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/projects/g_agreement/x_friday_r2r4.py", line 670, in cv_probe
+    rp = _cv_scores(X, yp, fp, pair_scores, Cs, seed, multi)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/projects/g_agreement/x_friday_r2r4.py", line 614, in _cv_scores
+    clf = SpanLogistic(Cs=Cs, seed=seed, multi=multi).fit(X[tr], y[tr])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/projects/g_agreement/x_friday_r2r4.py", line 198, in fit
+    _, s, Vt = np.linalg.svd(Xs, full_matrices=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/.venv/lib/python3.12/site-packages/numpy/linalg/_linalg.py", line 1840, in svd
+    u, s, vh = gufunc(a, signature=signature)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/.venv/lib/python3.12/site-packages/numpy/linalg/_linalg.py", line 153, in _raise_linalgerror_svd_nonconvergence
+    raise LinAlgError("SVD did not converge")
+numpy.linalg.LinAlgError: SVD did not converge
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/projects/g_agreement/y1_site/analyze.py", line 581, in <module>
+    main()
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/projects/g_agreement/y1_site/analyze.py", line 577, in main
+    return run(parse_args(argv))
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/projects/g_agreement/y1_site/analyze.py", line 496, in run
+    res = sweep(items, caps, layers, labels, n_perm=args.n_perm, n_boot=nb, seed=sd, n_folds=args.n_folds, jobs=args.jobs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guivff/Documents/Neel_Exploration/mats-minis/projects/g_agreement/y1_site/analyze.py", line 221, in sweep
+    results = list(ex.map(_cell_job, jobs_list))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/process.py", line 636, in _chain_from_iterable_of_lists
+    for element in iterable:
+                   ^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+numpy.linalg.LinAlgError: SVD did not converge

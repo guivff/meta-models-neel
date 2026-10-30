@@ -1,0 +1,12 @@
+{
+  "id": "b862e7a9f0651b4e49f6042d",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given sentence.\n\nThe example sentence \"I am feeling very happy today\" clearly maps to \"Positive,\" making the expected answer predictable and constrained.\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the model's classification answer (e.g., \"Positive\") on the next line.\n\"Given the following sentence, provide the one-word response: 'Positive' or 'Negative'.\nSentence: 'I am feeling very happy today'\nContext: [Chinese translation]\nReply:\" \u2014 the final \"Reply:\" is a prompt field delimiter, demanding the direct one-word answer or short response immediately following.\n\"Reply:\" closes the structured prompt, expecting the model's output.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given sentence.\n\nThe example sentence \"I am feeling very happy today\" clearly maps to \"Positive,\" making the expected answer predictable and constrained.\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the model's classification answer (e.g., \"Positive\") on the next line.\n\"Given the following sentence, provide the one-word response: 'Positive' or 'Negative'.\nSentence: 'I am feeling very happy today'\nContext: [Chinese translation]\nReply:\" \u2014 the final \"Reply:\" is a prompt field delimiter, demanding the direct one-word answer or short response immediately following.\n\"Reply:\" closes the structured prompt, expecting the model's output.",
+  "truncated": false
+}

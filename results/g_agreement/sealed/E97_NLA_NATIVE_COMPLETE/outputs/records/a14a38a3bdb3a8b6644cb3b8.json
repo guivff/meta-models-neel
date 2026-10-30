@@ -1,0 +1,12 @@
+{
+  "id": "a14a38a3bdb3a8b6644cb3b8",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is stated (\"if sentence contains 'happy,' answer 'Happy'; if 'sad,' answer 'Sad'\"), then examples are given, establishing a Q&A format.\n\nThe model must apply the rule to the specific example sentence \"The weather is gloomy today,\" predicting the correct mood label response.\n\n\"Example sentence: The weather is gloomy today.\\nReply:\" is the final prompt line, where \"Reply:\" is a label/field marker requiring the actual answer (e.g., \"Happy\" or \"Sad\") to follow immediately.\n\"Provide the corresponding mood label for each sentence.\nExample sentence: The weather is gloomy today.\nExample sentence: The weather is gloomy today.\nReply:\" \u2014 the final token \"Reply:\" is a field prompt demanding the model's direct answer to the example.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is stated (\"if sentence contains 'happy,' answer 'Happy'; if 'sad,' answer 'Sad'\"), then examples are given, establishing a Q&A format.\n\nThe model must apply the rule to the specific example sentence \"The weather is gloomy today,\" predicting the correct mood label response.\n\n\"Example sentence: The weather is gloomy today.\\nReply:\" is the final prompt line, where \"Reply:\" is a label/field marker requiring the actual answer (e.g., \"Happy\" or \"Sad\") to follow immediately.\n\"Provide the corresponding mood label for each sentence.\nExample sentence: The weather is gloomy today.\nExample sentence: The weather is gloomy today.\nReply:\" \u2014 the final token \"Reply:\" is a field prompt demanding the model's direct answer to the example.",
+  "truncated": false
+}

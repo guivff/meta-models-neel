@@ -1,0 +1,12 @@
+{
+  "id": "2563a1ff6844dca536f81d23",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a rule is given (\"if X, respond 'Sad'; if Y, respond 'Happy'\"), followed by a test case requiring the model to apply it.\n\nThe example format establishes a structured Q&A template: \"Input sentence: [sentence]\\nReply:\" signals the model must now output the correct classification label (\"Sad\" or \"Happy\") for the given sentence about a \"business trip.\"\n\n\"Reply:\" is the final token, acting as a prompt label in the structured format, immediately requiring the classification answer (e.g., \"Sad\" or \"Happy\") as the next token.\n\"Example format:\nInput sentence: The weather is pleasant and the sky is clear.\nInput sentence: The weather is pleasant and the sky is clear.\nReply:\" \u2014 the final field demands the direct answer response.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a rule is given (\"if X, respond 'Sad'; if Y, respond 'Happy'\"), followed by a test case requiring the model to apply it.\n\nThe example format establishes a structured Q&A template: \"Input sentence: [sentence]\\nReply:\" signals the model must now output the correct classification label (\"Sad\" or \"Happy\") for the given sentence about a \"business trip.\"\n\n\"Reply:\" is the final token, acting as a prompt label in the structured format, immediately requiring the classification answer (e.g., \"Sad\" or \"Happy\") as the next token.\n\"Example format:\nInput sentence: The weather is pleasant and the sky is clear.\nInput sentence: The weather is pleasant and the sky is clear.\nReply:\" \u2014 the final field demands the direct answer response.",
+  "truncated": false
+}

@@ -1,0 +1,119 @@
+{
+  "E59_go_wait_seconds_after_capture": 2700,
+  "E59_idle_wait_charged_to_spend": true,
+  "account_gate_authority": "86ba523d",
+  "authority": "19da3104 Track Q compute deviation; science unchanged",
+  "cap_basis": "coordinator authorized measured forecast x1.25, exact caps E63=8650 D4A=20200",
+  "cohort_id": "joint-a7fea77c-7279007d",
+  "compute_from": "capture-bound GO issued_epoch",
+  "daily_budget_USD": 300,
+  "day_ceiling_USD": 500,
+  "experiments": [
+    "E63",
+    "D4A"
+  ],
+  "launch_allowed": true,
+  "launch_preconditions": [
+    "verified E57 complete output seals from all3 shards in same cohort",
+    "D4A additionally requires all3 E61 D4 stage seals, same cohort; reuse252 old D4 outputs and probabilities",
+    "integrator verifies dependencies on CPU before assignment; no labels/private dependency files uploaded"
+  ],
+  "max_pods": 2,
+  "order": [
+    "E63",
+    "D4A"
+  ],
+  "placement": "one independent bank shard per first freed or fresh dedicated pod; never share active custody",
+  "preflight": "results/g_agreement/understand/follow402/REQUEST_PREFLIGHT.json",
+  "projected_account_gate_USD": 260,
+  "shards": [
+    {
+      "assignment_schema": {
+        "absolute_deadline_epoch": "staging_start_epoch + 900 + go_wait_cap_seconds + compute_cap_seconds",
+        "cohort_id": "joint-a7fea77c-7279007d",
+        "compute_cap_seconds": 8650,
+        "dependency_receipt": "INTEGRATOR_VERIFIED_E57_AND_IF_D4A_E61_D4_SEALS",
+        "experiment": "E63",
+        "go_wait_cap_seconds": 0,
+        "gpu_count": 1,
+        "prior_compute_seconds": 0,
+        "shard": 0,
+        "staging_cap_seconds": 900,
+        "staging_start_epoch": "FIXED_BEFORE_ANY_STAGING"
+      },
+      "compute_cap_seconds": 8650,
+      "experiment": "E63",
+      "input_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/follow402_v1/E63.tar.gz",
+      "input_archive_MB": 6.56189,
+      "input_archive_sha256": "692c5c189dba3947276e953951279b4a133e0876a3a18c9c0b48494ffe14ebad",
+      "input_seal_sha256": "d726cdf8c73210e54af10381b58972ac6a2d20812cd4ebbf740339f59efb0cd9",
+      "shard": 0,
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/follow19/worker.py",
+        "--inputs",
+        "/workspace/follow402/E63_0/inputs",
+        "--assignment",
+        "/workspace/follow402/E63_0/assignment.json",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--out",
+        "/workspace/follow402/E63_0/out",
+        "--go",
+        "/workspace/follow402/E63_0/GO.json",
+        "--source-sha",
+        "518c2163e99eb7dca830326226193142adf7efdfa00233213b3b414afc29fabf",
+        "--input-sha",
+        "d726cdf8c73210e54af10381b58972ac6a2d20812cd4ebbf740339f59efb0cd9"
+      ]
+    },
+    {
+      "assignment_schema": {
+        "absolute_deadline_epoch": "staging_start_epoch + 900 + go_wait_cap_seconds + compute_cap_seconds",
+        "cohort_id": "joint-a7fea77c-7279007d",
+        "compute_cap_seconds": 20200,
+        "dependency_receipt": "INTEGRATOR_VERIFIED_E57_AND_IF_D4A_E61_D4_SEALS",
+        "experiment": "D4A",
+        "go_wait_cap_seconds": 0,
+        "gpu_count": 1,
+        "prior_compute_seconds": 0,
+        "shard": 0,
+        "staging_cap_seconds": 900,
+        "staging_start_epoch": "FIXED_BEFORE_ANY_STAGING"
+      },
+      "compute_cap_seconds": 20200,
+      "experiment": "D4A",
+      "input_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/follow402_v1/D4A.tar.gz",
+      "input_archive_MB": 2.788803,
+      "input_archive_sha256": "4b4c266c69b5117df8a3a9db9d8713fc465a427d19fb95da09be6d1632e36cb3",
+      "input_seal_sha256": "2fde3028c4f7dff4217e7901c8ce1654515c9fab29207cfe9d891560082f173f",
+      "shard": 0,
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/follow19/worker.py",
+        "--inputs",
+        "/workspace/follow402/D4A_0/inputs",
+        "--assignment",
+        "/workspace/follow402/D4A_0/assignment.json",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--out",
+        "/workspace/follow402/D4A_0/out",
+        "--go",
+        "/workspace/follow402/D4A_0/GO.json",
+        "--source-sha",
+        "518c2163e99eb7dca830326226193142adf7efdfa00233213b3b414afc29fabf",
+        "--input-sha",
+        "2fde3028c4f7dff4217e7901c8ce1654515c9fab29207cfe9d891560082f173f"
+      ]
+    }
+  ],
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/follow19_source_19da_final_v1.tar.gz",
+  "source_archive_MB": 0.197692,
+  "source_archive_sha256": "27d284b95d7560b9d2747965b5770071647ad7a7e96d2ff1c6369f8fa93b01e4",
+  "source_seal_sha256": "518c2163e99eb7dca830326226193142adf7efdfa00233213b3b414afc29fabf",
+  "staging_cap_seconds_per_pod": 900,
+  "status": "READY",
+  "total_max_compute_seconds": 28850,
+  "upload_parallel": true
+}

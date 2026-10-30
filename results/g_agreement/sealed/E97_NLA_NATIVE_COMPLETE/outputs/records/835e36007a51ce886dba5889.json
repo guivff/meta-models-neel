@@ -1,0 +1,12 @@
+{
+  "id": "835e36007a51ce886dba5889",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format pattern: \"Question: [X] How to [Y]? Answer:\" structure requires a direct response following the prompt.\n\nThe instruction explicitly states the topic is \"how to write a good article,\" but the question asks about \"how to use AI tools,\" creating a deliberate mismatch to test instruction-following \u2014 the answer should address the stated question, not the topic.\n\n\"Answer:\" is the final token, a label in a structured few-shot template (\"Topic: ... Question: ... Answer:\"), immediately requiring the model's response text to follow.\n\"Topic: The text discusses the importance of using AI tools for data analysis.\nQuestion: How to write a good article?\nAnswer:\" \u2014 the final \"Answer:\" expects a response that mirrors the topic's style, likely beginning with \"The answer is...\" or a direct explanation.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format pattern: \"Question: [X] How to [Y]? Answer:\" structure requires a direct response following the prompt.\n\nThe instruction explicitly states the topic is \"how to write a good article,\" but the question asks about \"how to use AI tools,\" creating a deliberate mismatch to test instruction-following \u2014 the answer should address the stated question, not the topic.\n\n\"Answer:\" is the final token, a label in a structured few-shot template (\"Topic: ... Question: ... Answer:\"), immediately requiring the model's response text to follow.\n\"Topic: The text discusses the importance of using AI tools for data analysis.\nQuestion: How to write a good article?\nAnswer:\" \u2014 the final \"Answer:\" expects a response that mirrors the topic's style, likely beginning with \"The answer is...\" or a direct explanation.",
+  "truncated": false
+}

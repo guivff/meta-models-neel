@@ -1,0 +1,12 @@
+{
+  "id": "648f6d502b52c66a52472116",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task (positive/negative sentiment) with a worked example pattern. The model must follow the demonstrated format.\n\nThe example structure shows a Chinese sentence followed by its English translation, then a \"Reply:\" field expecting the classification answer (\"Negative\" or \"Positive\").\n\n\"Reply:\" is the final token, functioning as a label/prompt delimiter in the example, immediately requiring the model's classification answer for the specific sentence \"The CEO of the company is a fraudster.\"\n\"Given the following sentence, determine the sentiment label (Positive or Negative) based on the instructions above.\nSentence: 'The CEO of the company is a fraudster.'\nEnglish translation: 'The CEO of the company is a fraudster.'\nReply:\" \u2014 the final token demands the direct answer, likely \"Negative\" or similar.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task (positive/negative sentiment) with a worked example pattern. The model must follow the demonstrated format.\n\nThe example structure shows a Chinese sentence followed by its English translation, then a \"Reply:\" field expecting the classification answer (\"Negative\" or \"Positive\").\n\n\"Reply:\" is the final token, functioning as a label/prompt delimiter in the example, immediately requiring the model's classification answer for the specific sentence \"The CEO of the company is a fraudster.\"\n\"Given the following sentence, determine the sentiment label (Positive or Negative) based on the instructions above.\nSentence: 'The CEO of the company is a fraudster.'\nEnglish translation: 'The CEO of the company is a fraudster.'\nReply:\" \u2014 the final token demands the direct answer, likely \"Negative\" or similar.",
+  "truncated": false
+}

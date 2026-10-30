@@ -1,0 +1,48 @@
+{
+  "schema": "i2-native-no-allocation-stock-refusal-v1",
+  "track": "C",
+  "checked_at": "2026-10-27T18:38:35.242031+00:00",
+  "run_id": "e73-native-700-20261027-a5",
+  "failure_code": "CACHE_READY_STOCK_REQUIRED",
+  "create_mutation_attempted": false,
+  "matching_account_pods": 0,
+  "account_running_pods": 0,
+  "gpu_seconds": 0,
+  "gpu_usd": 0,
+  "reservation_released_usd": 15.08,
+  "post_refusal_combined_usd": 264.55,
+  "300_allocated": false,
+  "selected_stock_receipt": {
+    "quote_query_sha256": "b534f1971f54e667fd24bee58b45e32a82812d9c5c08320ff32abf989eac0cd4",
+    "stock_query_sha256": "cd8e3c6691f8b04a6633d16286474ab8839e846f4686829da4afbe2241ac72a4",
+    "quote_query_started_epoch": 1793126165.869369,
+    "quote_query_finished_epoch": 1793126166.24327,
+    "stock_query_started_epoch": 1793126166.24327,
+    "stock_query_finished_epoch": 1793126166.7085462,
+    "quote_match_count": 1,
+    "datacenter_match_count": 1,
+    "h200_row_count": 1,
+    "h200_rows": [
+      {
+        "matched_dc_index": 0,
+        "gpu_type": "NVIDIA H200",
+        "available": false,
+        "availability_field_present": true,
+        "availability_value_type": "bool",
+        "stock_status": null
+      }
+    ]
+  },
+  "quote": {
+    "gpu_type": "NVIDIA H200",
+    "gpu_count": 1,
+    "gpu_usd_per_hour": 5.29,
+    "available": false,
+    "cache_route_verified": true,
+    "checked_epoch": 1793126166.709265,
+    "container_gb": 200,
+    "new_network_volume_gb": 0
+  },
+  "full_private_state_sha256": "e743602b1ea070f19003eea30371ac6967decfd75cde63b5a3372400077c73ea",
+  "next_step": "Fresh boundedpre-create stockwait candidate CPUreview; noautomaticcreate retries"
+}

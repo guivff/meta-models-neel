@@ -1,0 +1,12 @@
+{
+  "id": "d984d37a8b05e50f482433fd",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: a rule is given, then a task is posed, requiring a model response demonstrating the rule applied to \"a picture of a cat.\"\n\nThe structured template (\"Task: [description]. Question: [question]. Answer:\") signals a few-shot or demonstration format, where the \"Answer:\" field must contain a sample explanation of how to describe the cat picture using the specified \"impact on society\" angle.\n\n\"Answer:\" is the final token, functioning as a prompt label requiring the model's generated response text to follow immediately \u2014 likely a short explanatory sentence or example answer.\n\"Rule: [description]\nTask: Generate a description about the impact of the 'impact on society' topic.\nQuestion: How to describe the impact of the 'impact on society' topic?\nAnswer:\" \u2014 expects a demonstration response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: a rule is given, then a task is posed, requiring a model response demonstrating the rule applied to \"a picture of a cat.\"\n\nThe structured template (\"Task: [description]. Question: [question]. Answer:\") signals a few-shot or demonstration format, where the \"Answer:\" field must contain a sample explanation of how to describe the cat picture using the specified \"impact on society\" angle.\n\n\"Answer:\" is the final token, functioning as a prompt label requiring the model's generated response text to follow immediately \u2014 likely a short explanatory sentence or example answer.\n\"Rule: [description]\nTask: Generate a description about the impact of the 'impact on society' topic.\nQuestion: How to describe the impact of the 'impact on society' topic?\nAnswer:\" \u2014 expects a demonstration response.",
+  "truncated": false
+}

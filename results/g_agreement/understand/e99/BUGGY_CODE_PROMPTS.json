@@ -1,0 +1,83 @@
+{
+  "constants": {
+    "BUG_LINE": "bug line: {line}\n",
+    "CAUSE_LINE": "cause ({cause_kind}): {cause}\n",
+    "CLAIMS": [
+      "bug",
+      "correct",
+      "none"
+    ],
+    "GRADE_SCHEMA": {
+      "name": "closeness",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "score": {
+            "maximum": 10,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "why": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "score",
+          "why"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "GRADE_SYSTEM": "You grade how closely a description of a program's behaviour, inferred from lens readouts,\nmatches the ground truth. You are given the program, whether it is BUGGY or CLEAN, what it\nactually does when run, and (for buggy programs) the bug's cause and line. Score 1-10.\n\nFor a BUGGY program:\n- 10: the exact bug — mechanism, consequence and location all right.\n- 8-9: the right mechanism and the right consequence; location vague or missing.\n- 6-7: the right consequence (its kind: negative total, crash, wrong branch...) OR the right\n  mechanism, but not both. The exact magnitude of a wrong value need not match; its kind must.\n- 4-5: the right general area (the right variable, operation or input) with a wrong or missing\n  consequence.\n- 2-3: generic wrongness, an unrelated bug, or the CORRECTED behaviour asserted as the outcome.\n- 1: asserts the program is correct, or claims nothing about behaviour.\n\nFor a CLEAN program the truth is that there is no bug:\n- 10: says the program is correct, or states its actual output.\n- 7-9: no bug claimed, but the described behaviour is partly wrong.\n- 4-6: hedged or vague bug talk with no specific false claim.\n- 2-3: asserts a specific bug that does not exist.\n- 1: asserts a specific, confident, wrong bug with mechanism or consequence.\n\nGrade the inferred description only; do not re-find the bug yourself. Answer with a single\nJSON object: {\"score\": int, \"why\": str} where why is one or two sentences citing the truth.",
+    "GRADE_USER": "item: {name}  (src={src}, language={language})\ncode:\n```\n{code}\n```\nverified executed truth: {verified}\n{cause_line}inferred from the readouts (claim={claim}): {inferred}",
+    "INFER_SCHEMA": {
+      "name": "inferred_bug",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "claim": {
+            "enum": [
+              "bug",
+              "correct",
+              "none"
+            ],
+            "type": "string"
+          },
+          "inferred": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim",
+          "inferred",
+          "quote"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "INFER_SYSTEM": "You read free-text readouts produced by an interpretability lens while a language model\nprocessed a short program you cannot see. From the readouts ALONE, say what they claim about\nthe program's behaviour.\n\n- claim: \"bug\" if the readouts assert the program misbehaves (a wrong value, a crash or\n  exception, a wrong category, a guard that never fires); \"correct\" if they assert it runs as\n  intended or state its output as a working result; \"none\" if they say nothing about behaviour\n  (topic echo, code fragments, generic remarks, numbers with no claim attached).\n- inferred: for \"bug\", one to three sentences stating the bug as precisely as the readouts\n  allow — what goes wrong (the mechanism), what the program actually outputs or raises (the\n  consequence), and where (which line, variable or operation) when they say. For \"correct\",\n  state the behaviour they assert. For \"none\", an empty string. Do not guess beyond what the\n  readouts say; a readout that only tests negative input or mentions \"error\" without saying\n  what happens is a weak bug claim and should be described as such.\n- quote: the snippet from one readout that best supports the claim (\"\" for none). Test-assertion\n  frames (\"# Expected: -2\", \"assert total < 0\", \"# Output: ...\") are the lens's native idiom and\n  count as claims about behaviour.\n\nAnswer with a single JSON object: {\"claim\": \"bug|correct|none\", \"inferred\": str, \"quote\": str}.",
+    "INFER_USER": "readout samples (k={k}):\n{samples}",
+    "PROMPTS": {
+      "BUG_LINE": "bug line: {line}\n",
+      "CAUSE_LINE": "cause ({cause_kind}): {cause}\n",
+      "GRADE_SYSTEM": "You grade how closely a description of a program's behaviour, inferred from lens readouts,\nmatches the ground truth. You are given the program, whether it is BUGGY or CLEAN, what it\nactually does when run, and (for buggy programs) the bug's cause and line. Score 1-10.\n\nFor a BUGGY program:\n- 10: the exact bug — mechanism, consequence and location all right.\n- 8-9: the right mechanism and the right consequence; location vague or missing.\n- 6-7: the right consequence (its kind: negative total, crash, wrong branch...) OR the right\n  mechanism, but not both. The exact magnitude of a wrong value need not match; its kind must.\n- 4-5: the right general area (the right variable, operation or input) with a wrong or missing\n  consequence.\n- 2-3: generic wrongness, an unrelated bug, or the CORRECTED behaviour asserted as the outcome.\n- 1: asserts the program is correct, or claims nothing about behaviour.\n\nFor a CLEAN program the truth is that there is no bug:\n- 10: says the program is correct, or states its actual output.\n- 7-9: no bug claimed, but the described behaviour is partly wrong.\n- 4-6: hedged or vague bug talk with no specific false claim.\n- 2-3: asserts a specific bug that does not exist.\n- 1: asserts a specific, confident, wrong bug with mechanism or consequence.\n\nGrade the inferred description only; do not re-find the bug yourself. Answer with a single\nJSON object: {\"score\": int, \"why\": str} where why is one or two sentences citing the truth.",
+      "GRADE_USER": "item: {name}  (src={src}, language={language})\ncode:\n```\n{code}\n```\nverified executed truth: {verified}\n{cause_line}inferred from the readouts (claim={claim}): {inferred}",
+      "INFER_SYSTEM": "You read free-text readouts produced by an interpretability lens while a language model\nprocessed a short program you cannot see. From the readouts ALONE, say what they claim about\nthe program's behaviour.\n\n- claim: \"bug\" if the readouts assert the program misbehaves (a wrong value, a crash or\n  exception, a wrong category, a guard that never fires); \"correct\" if they assert it runs as\n  intended or state its output as a working result; \"none\" if they say nothing about behaviour\n  (topic echo, code fragments, generic remarks, numbers with no claim attached).\n- inferred: for \"bug\", one to three sentences stating the bug as precisely as the readouts\n  allow — what goes wrong (the mechanism), what the program actually outputs or raises (the\n  consequence), and where (which line, variable or operation) when they say. For \"correct\",\n  state the behaviour they assert. For \"none\", an empty string. Do not guess beyond what the\n  readouts say; a readout that only tests negative input or mentions \"error\" without saying\n  what happens is a weak bug claim and should be described as such.\n- quote: the snippet from one readout that best supports the claim (\"\" for none). Test-assertion\n  frames (\"# Expected: -2\", \"assert total < 0\", \"# Output: ...\") are the lens's native idiom and\n  count as claims about behaviour.\n\nAnswer with a single JSON object: {\"claim\": \"bug|correct|none\", \"inferred\": str, \"quote\": str}.",
+      "INFER_USER": "readout samples (k={k}):\n{samples}"
+    },
+    "PROMPT_VERSION": "buggy-score-2026-09-23",
+    "SILENT_SCORE": {
+      "buggy": 1,
+      "clean": 5
+    }
+  },
+  "family": "buggy_code",
+  "pin": "86612fa4925100391b39c27894807a479595c61c",
+  "source": "src/wsbench/evals/buggy_code/prompts.py",
+  "source_sha256": "d874827260b6d611ae625c588fd87c060cc4a9640e3520cc469d80515eb55f32"
+}

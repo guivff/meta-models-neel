@@ -1,0 +1,3 @@
+# E80b preregistration
+
+Authority 08c71a71: before any output opening, correct the J measurement on the same 518 captured block-44 primary sites. Use pinned WorkspaceBench 86612fa methods.py lines89–124 exactly: fp32 numerator and per-token denominator norm(W_U @ J44), clamped at 1e-9; no RMSNorm. Match the union of bare and single-space-prefixed first-token IDs for each frozen W-text target. Report actual top-10 membership and full-vocabulary best rank0/rank1 with strict-greater ties. No success comparison. Preserve original189c1161 bytes. Separate exclusive E80b claim, no reset. Commit this plan and code before CPU scoring. Track Q 06:46Z output hold remains the custody gate.

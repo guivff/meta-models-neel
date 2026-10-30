@@ -1,0 +1,58 @@
+{
+  "archive_members": [
+    "items.json"
+  ],
+  "authority": "\u00a7242 +\u00a7241/242clarification1 QA2only",
+  "base_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+  "candidate_boundary_checks": 1248,
+  "candidate_values_single_token": 6,
+  "deadline_08CET_met": true,
+  "equal_token_length_pairs": 104,
+  "experiment": "E133_babi",
+  "files": {
+    "PAIRS.PRIVATE.json": "6a889d3a520dc68813809240408f5e6c1880ebb0fca3a409bf2915971dc9c513",
+    "PUBLIC_INPUTS.tar.gz": "5d3fabe8317dd7d667975a284e51e2fe852a638afe534633d82e1136a7766751",
+    "TOKENIZATION_CPU.PRIVATE.json": "f7145cea51f6469e0473ea9a49f753f4ac87d2ae8d1fe4f30660ef139df6bc52",
+    "items.json": "a5aca1d3b8fa98efcbb68da8d10a59725bb31f796024f2a0ae1abc7616f6f198"
+  },
+  "final_read_token_id": 539,
+  "maximum_tokens": 834,
+  "minimum_pairs_requirement": 42,
+  "model_GPU_API_calls": 0,
+  "never_pooled_with_main_R_NL1": true,
+  "no_source_answer_or_support_ids_on_pod": true,
+  "pairs": 104,
+  "prompts": 208,
+  "public_schema": [
+    "id",
+    "prompt"
+  ],
+  "qa3": {
+    "disposition": "INELIGIBLE_HISTORICAL_QUESTIONS_NOT_REWRITTEN",
+    "eligible_current_location_questions": 0,
+    "test_episodes": 200,
+    "test_questions": 1000
+  },
+  "question_whitespace": "only trailing separator whitespace before source tab removed; words/punctuation unchanged",
+  "read_rule": "exact original QA2 narrative fact lines, final original question, newline + The OBJECT is now by; raw prefix, final by539",
+  "seed": 20261030,
+  "selection": "first42both-correct pairs by operator behaviour screen, source order",
+  "source_census": {
+    "eligible_pairs": 104,
+    "exclusions": {
+      "no_existing_alternative_with_only_target_object_change": 31,
+      "no_known_previous_location": 65
+    },
+    "source_episodes": 200
+  },
+  "source_files": {
+    "babi133.py": "da1c9ec4a0a5f672fbdd3c54e97798899605131fc4498bbebe1511773ccc624f",
+    "build_babi133.py": "321d44889f6bbbf0fbb35c27a7826e5522165baf0dc5c901582a56a9b08d4eef",
+    "test_babi133.py": "612ff2a10d6d1566e6a2d0f4ed321a8dfc03027e3eea2b0fcd05b3488faeed8c"
+  },
+  "source_order": "one final question per original episode, QA2testsource order; earlier query/answer lines excluded from narrative facts; no question rewrite",
+  "status": "FROZEN_BEFORE_SCREEN_READERS",
+  "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+  "twin_change": "one location span in asked object final actual movement, alternative already mentioned before that movement; same previous location; replay verifies every OTHER object final location unchanged",
+  "utc": "2026-10-30T01:04:15.688229+00:00"
+}

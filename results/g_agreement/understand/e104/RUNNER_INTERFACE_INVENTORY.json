@@ -1,0 +1,116 @@
+{
+  "experiment": "E104",
+  "authority": "\u00a7213, 5e075c6af",
+  "checked_utc": "2026-10-28T23:17:39.982879+00:00",
+  "status": "E104_RUNNER_SCHEMA_PENDING_NO_PUBLISHED_E104_MODULE",
+  "inventory_scope": "Shared r/blindspot and local wt-* projects/g_agreement/e104, results/g_agreement/understand/e104; no scientific outputs inspected",
+  "predecessor": {
+    "experiment": "E101",
+    "source_seal_sha256": "e966429e1ce7c2b7fd45cb730fa5f05b0de8f0ab20fffdc1bcfdd44922123461",
+    "files": {
+      "projects/g_agreement/e101/acquisition.py": "1384e98eae4033cb7b2bb7a6e83d48de787168664e63b4d9694c29385be23936",
+      "projects/g_agreement/e101/runner.py": "885ad17da72154e023c1cc862f7b37fb835f7b3658594d533f6b4ad7edc10d54",
+      "projects/g_agreement/e101/materialize.py": "2d0d27dcb9afc5cf94c20a6786d90b399cc350a52dcb0a70a560c7dc0bc2e747",
+      "projects/g_agreement/e101/contract.py": "379c3b1d590729c2b3f6b14ebee5db2848e52a4cfc5365aedf9321d786182617",
+      "results/g_agreement/understand/e56/job/worker56.py": "ec4822ff0c2aa50a652d87248ff4aeef0c559740335e4dcfa9b53f0f505fd829"
+    },
+    "public_item_fields": [
+      "id",
+      "base_id",
+      "row",
+      "block",
+      "alpha",
+      "condition",
+      "vector_index",
+      "ids",
+      "read_index",
+      "candidate_ids",
+      "norm_ratio"
+    ],
+    "public_members": [
+      "items.json",
+      "vectors.npy",
+      "MANIFEST.json",
+      "INPUT_SEAL.json"
+    ],
+    "output_layout": {
+      "grid": "JOB_GRID.json",
+      "completed": "COMPLETED.json",
+      "batches": "jobs/{job_index:06d}.json",
+      "seal": "OUTPUT_SEAL.json"
+    },
+    "raw_record_fields": [
+      "id",
+      "norm_ratio",
+      "off_distribution",
+      "block",
+      "channel",
+      "gpu_type"
+    ],
+    "behaviour_fields": [
+      "pair_logits",
+      "pair_logprobs"
+    ],
+    "reader_fields": [
+      "text",
+      "raw",
+      "malformed"
+    ],
+    "note": "Fields describe the existing E101 predecessor only; they are not a frozen E104 runtime schema."
+  },
+  "registered_scope": {
+    "rows": [
+      "fact_recall",
+      "language_plan"
+    ],
+    "arms": [
+      "U",
+      "N"
+    ],
+    "dev_items_per_row": 84,
+    "test_items_per_row": 84,
+    "conditions": [
+      "steered",
+      "random"
+    ],
+    "reader": "oracle",
+    "reader_block": 44,
+    "dose_grids": {
+      "U": [
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "N": [
+        0.5,
+        1,
+        2,
+        4
+      ]
+    },
+    "dose_selection": "independent arm/row, smallest alpha with >=70% dev flips; committed dose receipt before test",
+    "cohort": "same steered-flipped item cohort for steered/random, paired by original item",
+    "seed_interpretation": {
+      "bootstrap_draws": 2000,
+      "bootstrap_seed": 20261028,
+      "random_and_generation_seed": 20261029,
+      "basis": "\u00a7213 E101+1; predecessor bootstrap20261027, random/generation20261028"
+    }
+  },
+  "required_runner_bindings": [
+    "Separate arm, write block/positions and read block/position; preserve original item identity across paired conditions",
+    "U: mutate block40 at read_index-8 through read_index-1, never the read token; capture actual model-computed block44 read-token residual for Oracle",
+    "N: norm-preserving block44 read-token replacement, for steered and random, using the registered formula",
+    "Own U block40 direction and sealed dev provenance; current E101 vector export binds42/44 only",
+    "Independent per-arm/row selected doses and exact committed dose hash on test manifests",
+    "Per-item norm observations with exact write/read-site identity, natural/modified norm and finite ratio; no inferred norm flags",
+    "Raw behaviour and readout sources sealed with exact job order and per-item source pointers"
+  ],
+  "analysis_handoff": "Until the E104 runtime is committed, use a sealed normalization contract with exact raw-source pointers; do not treat the E101 predecessor schema as sufficient for U or N.",
+  "GPU_owner": "Integrator only",
+  "GPU_calls": 0,
+  "E104_outputs_opened": false,
+  "judgments_opened": false
+}

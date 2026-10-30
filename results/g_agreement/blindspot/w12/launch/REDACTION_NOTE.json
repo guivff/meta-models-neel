@@ -1,0 +1,37 @@
+{
+  "schema": "redaction-note-v1",
+  "files": [
+    {
+      "path": "results/g_agreement/blindspot/w12/launch/LAUNCH_REQUEST.json",
+      "local_commit": "27556847",
+      "local_sha256": "31563de94648b62dc431fd3bc129c53e76c1cf1b83cd6d2c5c771b4d3a206489",
+      "published_sha256": "7afbde01b4e41aefc561520a152eeec59fca1e150933f3c9bef2e05583cdba57",
+      "sealed_by": [
+        "results/g_agreement/blindspot/w12/launch/LAUNCH_SEAL.json"
+      ],
+      "redactions": [
+        {
+          "line": 13,
+          "placeholder": "<W-core worktree>",
+          "occurrences": 1,
+          "original_sha256": "93fba35bbc12db8450f1080185f3c9230a7ec57caabe6b41fc1503a08b243c7f",
+          "original_length": 69
+        },
+        {
+          "line": 61,
+          "placeholder": "<W-core worktree>",
+          "occurrences": 1,
+          "original_sha256": "93fba35bbc12db8450f1080185f3c9230a7ec57caabe6b41fc1503a08b243c7f",
+          "original_length": 69
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "at": "2026-10-26T00:24:22Z",
+      "by": "integrator",
+      "text": "Local machine paths replaced by the placeholder for publication. LAUNCH_SEAL.json seals local_sha256 (the unredacted owner file); every other byte is unchanged."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "experiment": "E96_RETAINED_PRIMARY",
+  "accepted_utc": "2026-10-29T00:14:25.606322+00:00",
+  "review_commit": "d749230e90e6e414337d226146b76b136d0648d9",
+  "review_file": "results/g_agreement/reviews/R-4.md",
+  "review_file_sha256": "52155db3b10644bebbdcc57e46f1738e8f7b6d2be0daae64dc0cf65d736b7c1f",
+  "publication_commit": "aae2d6b8",
+  "primary_samples": 35200,
+  "independent_comparisons": 110,
+  "bootstrap_draws": 2000,
+  "absolute_tolerance": 1e-12,
+  "arithmetic_discrepancies": 0,
+  "analysis_hashes_verified": "7/7",
+  "analysis_code_hashes_verified": "5/5",
+  "judgment_file_hashes_verified": "23/23",
+  "rule_lines": {
+    "R-SC1": "NOT EVALUABLE (missing rows); zero qualifying retained rows in all four reader/aggregator strata cannot decide fullbank >=3 threshold",
+    "falsifier": "NOT MET; retained MISSED gain counterexample and REPORTED negativegain counterexample",
+    "H-SC2": "NOT MET on retained rows; fullbank contrast unidentified"
+  },
+  "limitations": [
+    "18slot1rows/28cells missing from primary, never zero/silent",
+    "Two historical E49 native source paths absent from reviewer checkout; eligibility source not independently reverified",
+    "Reviewer did not recover every full original input bank for independent first40-vs-fullbank identity audit",
+    "Anyof16 and single E76 placebo rates descriptive only; neither yields decisionrule result",
+    "Separate replacement attempt never pooled into retained primary"
+  ],
+  "immutable_primary": true,
+  "no_analysis_reexecution": true,
+  "separate_attempts_review_status": "PENDING"
+}

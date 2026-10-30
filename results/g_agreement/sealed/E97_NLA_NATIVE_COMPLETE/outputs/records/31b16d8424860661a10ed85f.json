@@ -1,0 +1,12 @@
+{
+  "id": "31b16d8424860661a10ed85f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is asking to extract/identify a specific XML-like `<entry>` element from a list, implying structured data follows.\n\nThe phrase \"Here is the data:\" signals an example or sample is being presented, with the next content being the actual data to analyze.\n\nFinal token `<entry` opens an XML/HTML tag, requiring immediate continuation with attributes or closing `>` followed by entry content (e.g., `<entry id=\"...\"` or `<entry>` with structured fields like medical/academic content matching the \"incomplete entry\" context).\n\"\n<entry\" mirrors the prior `<entry>` reference, suggesting a list of entries in a structured format (e.g., a dictionary or log).\n\"\n<entry\" begins a new entry block, expecting structured content like fields, dates, or numbered data typical of such formats.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is asking to extract/identify a specific XML-like `<entry>` element from a list, implying structured data follows.\n\nThe phrase \"Here is the data:\" signals an example or sample is being presented, with the next content being the actual data to analyze.\n\nFinal token `<entry` opens an XML/HTML tag, requiring immediate continuation with attributes or closing `>` followed by entry content (e.g., `<entry id=\"...\"` or `<entry>` with structured fields like medical/academic content matching the \"incomplete entry\" context).\n\"\n<entry\" mirrors the prior `<entry>` reference, suggesting a list of entries in a structured format (e.g., a dictionary or log).\n\"\n<entry\" begins a new entry block, expecting structured content like fields, dates, or numbered data typical of such formats.",
+  "truncated": false
+}

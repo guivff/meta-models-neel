@@ -1,0 +1,122 @@
+{
+  "question": "Could E24/E32 capture truncate at392 tokens?",
+  "finding": "NO_TRUNCATION_FOUND_IN_CAPTURE_CALLS_OR_PINNED_HELPER",
+  "old_e24_capture_file_sha256": "2103d4b5c65bea49c055858791253290cf59c888ec30152e06c90e8329635f63",
+  "old_e32_capture_file_sha256": "97b18ee8e20e4fc6aa5c1263b1003a3f4346de9d4e3665a91343935783c7ad1b",
+  "capture_helper_sha256": "bc69d7deee038326d28bd345d4bd76da43a615abd5fbe970a2ec245e72b8b179",
+  "call_evidence": "Both old Engine.capture methods pass [x[ids] for x in items] directly, no tokenizer, slicing, max_length or truncation argument.",
+  "helper_evidence": "_pad uses max(len(s)) and copies every token; _resolve(-1,len(s)) returns len(s)-1; full padded input and attention mask passed to model.",
+  "capture_tokenizer_defaults": "Not applicable: capture uses frozen ids directly. No tokenizer call or implicit tokenizer max_length.",
+  "model_config_verified_against_pulled_asset_manifest": {
+    "config.json": {
+      "sha256": "69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c",
+      "text_max_position_embeddings": 262144
+    },
+    "tokenizer_config.json": {
+      "sha256": "5186f0defcd7f232382c7f0aebcd2252d073bb921ab240e407b7ae8745d2b29b",
+      "model_max_length": 262144
+    }
+  },
+  "backend": {
+    "local_transformers_version": "5.18.0",
+    "pulled_environment_versions": {
+      "ENV_w1.json": "5.18.0",
+      "ENV_kernels.json": "5.18.0"
+    },
+    "source_sha256": "d0c8561d91e31e50d9a57b74196c5a7ad023e42ebe9f84004d0a535310879939",
+    "evidence": "Forward embeds full input_ids, builds position_ids over inputs_embeds.shape[1], iterates decoder layers. logits_to_keep restricts final lm_head positions only; capture raises before lm_head.",
+    "limitation": "Local same-version backend source inspected; pulled remote source bytes were not archived and are not independently hash-matched."
+  },
+  "sample_length392": {
+    "n": 4,
+    "pass": 1,
+    "fail": 3,
+    "items": [
+      {
+        "arm": "b",
+        "batch_position": 4,
+        "batch_size": 8,
+        "batch_start": 2016,
+        "batch_unit": "E24",
+        "best_cosine": null,
+        "best_reference_id": null,
+        "best_reference_index": null,
+        "cosine": 0.9999727386348612,
+        "id": "6d93e39bb4592fcbed0f7cd6",
+        "padding_length": 0,
+        "reference_id": "6d93e39bb4592fcbed0f7cd6",
+        "reference_index": 2020,
+        "row": "latex_item",
+        "token_count": 392
+      },
+      {
+        "arm": "b",
+        "batch_position": 1,
+        "batch_size": 8,
+        "batch_start": 2040,
+        "batch_unit": "E24",
+        "best_cosine": 0.9318249354385519,
+        "best_reference_id": "ada170c7476bf8fbfac1f3a2",
+        "best_reference_index": 2041,
+        "cosine": 0.9318249354385519,
+        "id": "ada170c7476bf8fbfac1f3a2",
+        "padding_length": 0,
+        "reference_id": "ada170c7476bf8fbfac1f3a2",
+        "reference_index": 2041,
+        "row": "latex_item",
+        "token_count": 392
+      },
+      {
+        "arm": "b",
+        "batch_position": 3,
+        "batch_size": 8,
+        "batch_start": 2080,
+        "batch_unit": "E24",
+        "best_cosine": 0.9738893539583776,
+        "best_reference_id": "acb41cc93c21e5db6861fe11",
+        "best_reference_index": 2083,
+        "cosine": 0.9738893539583776,
+        "id": "acb41cc93c21e5db6861fe11",
+        "padding_length": 0,
+        "reference_id": "acb41cc93c21e5db6861fe11",
+        "reference_index": 2083,
+        "row": "latex_item",
+        "token_count": 392
+      },
+      {
+        "arm": "b",
+        "batch_position": 1,
+        "batch_size": 8,
+        "batch_start": 2160,
+        "batch_unit": "E24",
+        "best_cosine": 0.9539780936992203,
+        "best_reference_id": "045474b8715112a2aba4dd5a",
+        "best_reference_index": 2161,
+        "cosine": 0.9539780936992203,
+        "id": "045474b8715112a2aba4dd5a",
+        "padding_length": 8,
+        "reference_id": "045474b8715112a2aba4dd5a",
+        "reference_index": 2161,
+        "row": "latex_item",
+        "token_count": 392
+      }
+    ]
+  },
+  "sample_longer_than392": {
+    "n": 5,
+    "max_length": 489,
+    "all_b_pass": true
+  },
+  "e24_bank": {
+    "n": 4704,
+    "max_length": 502,
+    "over392": 122
+  },
+  "e32_bank": {
+    "n": 2100,
+    "max_length": 502,
+    "over392": 48
+  },
+  "mechanism_limit": "Absence of an identified truncation path does not prove the true numerical cause; no GPU or real-model inference was performed.",
+  "prior_seal_sha256": "4f65ded742482b92982edabe54aacc69738028f021ae87971d5e810a6f8a8f8c"
+}

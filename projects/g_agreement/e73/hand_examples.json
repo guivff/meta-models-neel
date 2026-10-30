@@ -1,0 +1,3702 @@
+[
+  {
+    "id": "W1-01",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"apple rest\"\n",
+    "offset": 10,
+    "expected": 0,
+    "reason": "Inside a double-quoted Python literal."
+  },
+  {
+    "id": "W1-02",
+    "state": "W1",
+    "language": "python",
+    "text": "x = 'apple rest'\n",
+    "offset": 10,
+    "expected": 0,
+    "reason": "Inside a single-quoted Python literal."
+  },
+  {
+    "id": "W1-03",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"\"\"first\napple\nlast\"\"\"\n",
+    "offset": 18,
+    "expected": 0,
+    "reason": "Inside a multiline triple-quoted literal."
+  },
+  {
+    "id": "W1-04",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"escaped \\\" apple end\"\n",
+    "offset": 21,
+    "expected": 0,
+    "reason": "Escaped quote does not close the literal."
+  },
+  {
+    "id": "W1-05",
+    "state": "W1",
+    "language": "javascript",
+    "text": "const x = \"apple rest\";\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Inside a JavaScript string."
+  },
+  {
+    "id": "W1-06",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"apple\"\n",
+    "offset": 11,
+    "expected": 1,
+    "reason": "Closing quote has already been consumed."
+  },
+  {
+    "id": "W1-07",
+    "state": "W1",
+    "language": "python",
+    "text": "apple = 3\n",
+    "offset": 9,
+    "expected": 1,
+    "reason": "Numeric expression outside a string."
+  },
+  {
+    "id": "W1-08",
+    "state": "W1",
+    "language": "python",
+    "text": "# \"apple\nx = 1\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Quote in a comment is not a string opener."
+  },
+  {
+    "id": "W1-09",
+    "state": "W1",
+    "language": "javascript",
+    "text": "const x = \"apple\";\n",
+    "offset": 18,
+    "expected": 1,
+    "reason": "JavaScript string has closed."
+  },
+  {
+    "id": "W1-10",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"apple\"\ny = x\n",
+    "offset": 17,
+    "expected": 1,
+    "reason": "Later statement is outside the closed literal."
+  },
+  {
+    "id": "W2-01",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [1]\n",
+    "offset": 6,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-02",
+    "state": "W2",
+    "language": "python",
+    "text": "x = (1)\n",
+    "offset": 6,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-03",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [\"apple ([\"]\n",
+    "offset": 15,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-04",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [\n # ] ) ignored\n 1]\n",
+    "offset": 23,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-05",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [(1)]\n",
+    "offset": 8,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-06",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[1]]]\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-07",
+    "state": "W2",
+    "language": "python",
+    "text": "x = (((1)))\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-08",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[\"apple ([\"]]]\n",
+    "offset": 17,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-09",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[\n # ] ) ignored\n 1]]]\n",
+    "offset": 25,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-10",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[(1)]]]\n",
+    "offset": 10,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W3-01",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\napple = 0\n",
+    "offset": 15,
+    "expected": 0,
+    "reason": "Current line has 0 leading spaces."
+  },
+  {
+    "id": "W3-02",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n apple = 0\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Current line has 1 leading spaces."
+  },
+  {
+    "id": "W3-03",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n  apple = 0\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Current line has 2 leading spaces."
+  },
+  {
+    "id": "W3-04",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n   apple = 0\n",
+    "offset": 18,
+    "expected": 0,
+    "reason": "Current line has 3 leading spaces."
+  },
+  {
+    "id": "W3-05",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n    apple = 0\n",
+    "offset": 19,
+    "expected": 0,
+    "reason": "Current line has 4 leading spaces."
+  },
+  {
+    "id": "W3-06",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n            apple = 0\n",
+    "offset": 27,
+    "expected": 1,
+    "reason": "Current line has 12 leading spaces."
+  },
+  {
+    "id": "W3-07",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n             apple = 0\n",
+    "offset": 28,
+    "expected": 1,
+    "reason": "Current line has 13 leading spaces."
+  },
+  {
+    "id": "W3-08",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                apple = 0\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Current line has 16 leading spaces."
+  },
+  {
+    "id": "W3-09",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                    apple = 0\n",
+    "offset": 35,
+    "expected": 1,
+    "reason": "Current line has 20 leading spaces."
+  },
+  {
+    "id": "W3-10",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                        apple = 0\n",
+    "offset": 39,
+    "expected": 1,
+    "reason": "Current line has 24 leading spaces."
+  },
+  {
+    "id": "W4-01",
+    "state": "W4",
+    "language": "python",
+    "text": "f(apple, 2)\n",
+    "offset": 7,
+    "expected": 0,
+    "reason": "Within a positional call argument."
+  },
+  {
+    "id": "W4-02",
+    "state": "W4",
+    "language": "python",
+    "text": "f(key=apple)\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Within a keyword call argument."
+  },
+  {
+    "id": "W4-03",
+    "state": "W4",
+    "language": "python",
+    "text": "obj.method(apple)\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Within a method call argument."
+  },
+  {
+    "id": "W4-04",
+    "state": "W4",
+    "language": "python",
+    "text": "f([apple, 2])\n",
+    "offset": 8,
+    "expected": 0,
+    "reason": "A list nested inside a call argument."
+  },
+  {
+    "id": "W4-05",
+    "state": "W4",
+    "language": "python",
+    "text": "f(g(apple))\n",
+    "offset": 9,
+    "expected": 0,
+    "reason": "Inside nested call arguments."
+  },
+  {
+    "id": "W4-06",
+    "state": "W4",
+    "language": "python",
+    "text": "apple = 0\n",
+    "offset": 5,
+    "expected": 1,
+    "reason": "Top-level assignment target."
+  },
+  {
+    "id": "W4-07",
+    "state": "W4",
+    "language": "python",
+    "text": "value = apple\n",
+    "offset": 13,
+    "expected": 1,
+    "reason": "Statement expression with no open call."
+  },
+  {
+    "id": "W4-08",
+    "state": "W4",
+    "language": "python",
+    "text": "f(apple)\nnext_value = 2\n",
+    "offset": 19,
+    "expected": 1,
+    "reason": "New statement after a completed call."
+  },
+  {
+    "id": "W4-09",
+    "state": "W4",
+    "language": "python",
+    "text": "import apple\n",
+    "offset": 12,
+    "expected": 1,
+    "reason": "Import at statement level."
+  },
+  {
+    "id": "W4-10",
+    "state": "W4",
+    "language": "python",
+    "text": "apple\n",
+    "offset": 5,
+    "expected": 1,
+    "reason": "Bare expression at statement level."
+  },
+  {
+    "id": "W5-01",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous apple.\na trailing text\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "1 characters since the last newline."
+  },
+  {
+    "id": "W5-02",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous apple.\naaaaa trailing text\n",
+    "offset": 21,
+    "expected": 0,
+    "reason": "5 characters since the last newline."
+  },
+  {
+    "id": "W5-03",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous apple.\naaaaaaaaaa trailing text\n",
+    "offset": 26,
+    "expected": 0,
+    "reason": "10 characters since the last newline."
+  },
+  {
+    "id": "W5-04",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous apple.\naaaaaaaaaaaaaa trailing text\n",
+    "offset": 30,
+    "expected": 0,
+    "reason": "14 characters since the last newline."
+  },
+  {
+    "id": "W5-05",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous apple.\naaaaaaaaaaaaaaa trailing text\n",
+    "offset": 31,
+    "expected": 0,
+    "reason": "15 characters since the last newline."
+  },
+  {
+    "id": "W5-06",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous apple.\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa trailing text\n",
+    "offset": 71,
+    "expected": 1,
+    "reason": "55 characters since the last newline."
+  },
+  {
+    "id": "W5-07",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous apple.\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa trailing text\n",
+    "offset": 72,
+    "expected": 1,
+    "reason": "56 characters since the last newline."
+  },
+  {
+    "id": "W5-08",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous apple.\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa trailing text\n",
+    "offset": 76,
+    "expected": 1,
+    "reason": "60 characters since the last newline."
+  },
+  {
+    "id": "W5-09",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous apple.\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa trailing text\n",
+    "offset": 96,
+    "expected": 1,
+    "reason": "80 characters since the last newline."
+  },
+  {
+    "id": "W5-10",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous apple.\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa trailing text\n",
+    "offset": 116,
+    "expected": 1,
+    "reason": "100 characters since the last newline."
+  },
+  {
+    "id": "W6-01",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|apple | 1 | value | end|\n",
+    "offset": 53,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-02",
+    "state": "W6",
+    "language": "markdown",
+    "text": "h1 | h2 | h3 | h4\n--- | :---: | ---: | ---\napple | 1 | value | end\n",
+    "offset": 48,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-03",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|escaped \\| apple | 1 | value | end|\n",
+    "offset": 64,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-04",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|`a|b` apple | 1 | value | end|\n",
+    "offset": 59,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-05",
+    "state": "W6",
+    "language": "markdown",
+    "text": "# Table 0\n\n|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|apple | 1 | value | end|\n",
+    "offset": 64,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-06",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|apple | 1 | value | end|\n",
+    "offset": 65,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-07",
+    "state": "W6",
+    "language": "markdown",
+    "text": "h1 | h2 | h3 | h4\n--- | :---: | ---: | ---\napple | 1 | value | end\n",
+    "offset": 60,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-08",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|escaped \\| apple | 1 | value | end|\n",
+    "offset": 76,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-09",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|`a|b` apple | 1 | value | end|\n",
+    "offset": 71,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-10",
+    "state": "W6",
+    "language": "markdown",
+    "text": "# Table 0\n\n|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|apple | 1 | value | end|\n",
+    "offset": 76,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W7-01",
+    "state": "W7",
+    "language": "python",
+    "text": "apple_0 = 0\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-02",
+    "state": "W7",
+    "language": "prose",
+    "text": "The apple appears in passage 0.\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-01",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 0.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 0-0",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-02",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 0.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 0-0",
+    "topic": "science"
+  },
+  {
+    "id": "W7-03",
+    "state": "W7",
+    "language": "javascript",
+    "text": "apple_1 = 1\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-04",
+    "state": "W7",
+    "language": "prose",
+    "text": "The apple appears in passage 1.\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-03",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 1.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 0-1",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-04",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 1.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 0-1",
+    "topic": "science"
+  },
+  {
+    "id": "W7-05",
+    "state": "W7",
+    "language": "python",
+    "text": "apple_2 = 2\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-06",
+    "state": "W7",
+    "language": "prose",
+    "text": "The apple appears in passage 2.\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-05",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 2.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 0-2",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-06",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 2.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 0-2",
+    "topic": "science"
+  },
+  {
+    "id": "W7-07",
+    "state": "W7",
+    "language": "javascript",
+    "text": "apple_3 = 3\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-08",
+    "state": "W7",
+    "language": "prose",
+    "text": "The apple appears in passage 3.\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-07",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 3.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 0-3",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-08",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 3.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 0-3",
+    "topic": "science"
+  },
+  {
+    "id": "W7-09",
+    "state": "W7",
+    "language": "python",
+    "text": "apple_4 = 4\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-10",
+    "state": "W7",
+    "language": "prose",
+    "text": "The apple appears in passage 4.\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-09",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 4.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 0-4",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-10",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 4.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 0-4",
+    "topic": "science"
+  },
+  {
+    "id": "W1-11",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"river rest\"\n",
+    "offset": 10,
+    "expected": 0,
+    "reason": "Inside a double-quoted Python literal."
+  },
+  {
+    "id": "W1-12",
+    "state": "W1",
+    "language": "python",
+    "text": "x = 'river rest'\n",
+    "offset": 10,
+    "expected": 0,
+    "reason": "Inside a single-quoted Python literal."
+  },
+  {
+    "id": "W1-13",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"\"\"first\nriver\nlast\"\"\"\n",
+    "offset": 18,
+    "expected": 0,
+    "reason": "Inside a multiline triple-quoted literal."
+  },
+  {
+    "id": "W1-14",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"escaped \\\" river end\"\n",
+    "offset": 21,
+    "expected": 0,
+    "reason": "Escaped quote does not close the literal."
+  },
+  {
+    "id": "W1-15",
+    "state": "W1",
+    "language": "javascript",
+    "text": "const x = \"river rest\";\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Inside a JavaScript string."
+  },
+  {
+    "id": "W1-16",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"river\"\n",
+    "offset": 11,
+    "expected": 1,
+    "reason": "Closing quote has already been consumed."
+  },
+  {
+    "id": "W1-17",
+    "state": "W1",
+    "language": "python",
+    "text": "river = 4\n",
+    "offset": 9,
+    "expected": 1,
+    "reason": "Numeric expression outside a string."
+  },
+  {
+    "id": "W1-18",
+    "state": "W1",
+    "language": "python",
+    "text": "# \"river\nx = 1\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Quote in a comment is not a string opener."
+  },
+  {
+    "id": "W1-19",
+    "state": "W1",
+    "language": "javascript",
+    "text": "const x = \"river\";\n",
+    "offset": 18,
+    "expected": 1,
+    "reason": "JavaScript string has closed."
+  },
+  {
+    "id": "W1-20",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"river\"\ny = x\n",
+    "offset": 17,
+    "expected": 1,
+    "reason": "Later statement is outside the closed literal."
+  },
+  {
+    "id": "W2-11",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [2]\n",
+    "offset": 6,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-12",
+    "state": "W2",
+    "language": "python",
+    "text": "x = (2)\n",
+    "offset": 6,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-13",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [\"river ([\"]\n",
+    "offset": 15,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-14",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [\n # ] ) ignored\n 2]\n",
+    "offset": 23,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-15",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [(2)]\n",
+    "offset": 8,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-16",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[2]]]\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-17",
+    "state": "W2",
+    "language": "python",
+    "text": "x = (((2)))\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-18",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[\"river ([\"]]]\n",
+    "offset": 17,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-19",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[\n # ] ) ignored\n 2]]]\n",
+    "offset": 25,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-20",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[(2)]]]\n",
+    "offset": 10,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W3-11",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\nriver = 1\n",
+    "offset": 15,
+    "expected": 0,
+    "reason": "Current line has 0 leading spaces."
+  },
+  {
+    "id": "W3-12",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n river = 1\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Current line has 1 leading spaces."
+  },
+  {
+    "id": "W3-13",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n  river = 1\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Current line has 2 leading spaces."
+  },
+  {
+    "id": "W3-14",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n   river = 1\n",
+    "offset": 18,
+    "expected": 0,
+    "reason": "Current line has 3 leading spaces."
+  },
+  {
+    "id": "W3-15",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n    river = 1\n",
+    "offset": 19,
+    "expected": 0,
+    "reason": "Current line has 4 leading spaces."
+  },
+  {
+    "id": "W3-16",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n            river = 1\n",
+    "offset": 27,
+    "expected": 1,
+    "reason": "Current line has 12 leading spaces."
+  },
+  {
+    "id": "W3-17",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n             river = 1\n",
+    "offset": 28,
+    "expected": 1,
+    "reason": "Current line has 13 leading spaces."
+  },
+  {
+    "id": "W3-18",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                river = 1\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Current line has 16 leading spaces."
+  },
+  {
+    "id": "W3-19",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                    river = 1\n",
+    "offset": 35,
+    "expected": 1,
+    "reason": "Current line has 20 leading spaces."
+  },
+  {
+    "id": "W3-20",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                        river = 1\n",
+    "offset": 39,
+    "expected": 1,
+    "reason": "Current line has 24 leading spaces."
+  },
+  {
+    "id": "W4-11",
+    "state": "W4",
+    "language": "python",
+    "text": "f(river, 2)\n",
+    "offset": 7,
+    "expected": 0,
+    "reason": "Within a positional call argument."
+  },
+  {
+    "id": "W4-12",
+    "state": "W4",
+    "language": "python",
+    "text": "f(key=river)\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Within a keyword call argument."
+  },
+  {
+    "id": "W4-13",
+    "state": "W4",
+    "language": "python",
+    "text": "obj.method(river)\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Within a method call argument."
+  },
+  {
+    "id": "W4-14",
+    "state": "W4",
+    "language": "python",
+    "text": "f([river, 2])\n",
+    "offset": 8,
+    "expected": 0,
+    "reason": "A list nested inside a call argument."
+  },
+  {
+    "id": "W4-15",
+    "state": "W4",
+    "language": "python",
+    "text": "f(g(river))\n",
+    "offset": 9,
+    "expected": 0,
+    "reason": "Inside nested call arguments."
+  },
+  {
+    "id": "W4-16",
+    "state": "W4",
+    "language": "python",
+    "text": "river = 1\n",
+    "offset": 5,
+    "expected": 1,
+    "reason": "Top-level assignment target."
+  },
+  {
+    "id": "W4-17",
+    "state": "W4",
+    "language": "python",
+    "text": "value = river\n",
+    "offset": 13,
+    "expected": 1,
+    "reason": "Statement expression with no open call."
+  },
+  {
+    "id": "W4-18",
+    "state": "W4",
+    "language": "python",
+    "text": "f(river)\nnext_value = 2\n",
+    "offset": 19,
+    "expected": 1,
+    "reason": "New statement after a completed call."
+  },
+  {
+    "id": "W4-19",
+    "state": "W4",
+    "language": "python",
+    "text": "import river\n",
+    "offset": 12,
+    "expected": 1,
+    "reason": "Import at statement level."
+  },
+  {
+    "id": "W4-20",
+    "state": "W4",
+    "language": "python",
+    "text": "river\n",
+    "offset": 5,
+    "expected": 1,
+    "reason": "Bare expression at statement level."
+  },
+  {
+    "id": "W5-11",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous river.\nr trailing text\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "1 characters since the last newline."
+  },
+  {
+    "id": "W5-12",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous river.\nrrrrr trailing text\n",
+    "offset": 21,
+    "expected": 0,
+    "reason": "5 characters since the last newline."
+  },
+  {
+    "id": "W5-13",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous river.\nrrrrrrrrrr trailing text\n",
+    "offset": 26,
+    "expected": 0,
+    "reason": "10 characters since the last newline."
+  },
+  {
+    "id": "W5-14",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous river.\nrrrrrrrrrrrrrr trailing text\n",
+    "offset": 30,
+    "expected": 0,
+    "reason": "14 characters since the last newline."
+  },
+  {
+    "id": "W5-15",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous river.\nrrrrrrrrrrrrrrr trailing text\n",
+    "offset": 31,
+    "expected": 0,
+    "reason": "15 characters since the last newline."
+  },
+  {
+    "id": "W5-16",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous river.\nrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr trailing text\n",
+    "offset": 71,
+    "expected": 1,
+    "reason": "55 characters since the last newline."
+  },
+  {
+    "id": "W5-17",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous river.\nrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr trailing text\n",
+    "offset": 72,
+    "expected": 1,
+    "reason": "56 characters since the last newline."
+  },
+  {
+    "id": "W5-18",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous river.\nrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr trailing text\n",
+    "offset": 76,
+    "expected": 1,
+    "reason": "60 characters since the last newline."
+  },
+  {
+    "id": "W5-19",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous river.\nrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr trailing text\n",
+    "offset": 96,
+    "expected": 1,
+    "reason": "80 characters since the last newline."
+  },
+  {
+    "id": "W5-20",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous river.\nrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr trailing text\n",
+    "offset": 116,
+    "expected": 1,
+    "reason": "100 characters since the last newline."
+  },
+  {
+    "id": "W6-11",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|river | 2 | value | end|\n",
+    "offset": 53,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-12",
+    "state": "W6",
+    "language": "markdown",
+    "text": "h1 | h2 | h3 | h4\n--- | :---: | ---: | ---\nriver | 2 | value | end\n",
+    "offset": 48,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-13",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|escaped \\| river | 2 | value | end|\n",
+    "offset": 64,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-14",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|`a|b` river | 2 | value | end|\n",
+    "offset": 59,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-15",
+    "state": "W6",
+    "language": "markdown",
+    "text": "# Table 1\n\n|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|river | 2 | value | end|\n",
+    "offset": 64,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-16",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|river | 2 | value | end|\n",
+    "offset": 65,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-17",
+    "state": "W6",
+    "language": "markdown",
+    "text": "h1 | h2 | h3 | h4\n--- | :---: | ---: | ---\nriver | 2 | value | end\n",
+    "offset": 60,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-18",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|escaped \\| river | 2 | value | end|\n",
+    "offset": 76,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-19",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|`a|b` river | 2 | value | end|\n",
+    "offset": 71,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-20",
+    "state": "W6",
+    "language": "markdown",
+    "text": "# Table 1\n\n|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|river | 2 | value | end|\n",
+    "offset": 76,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W7-11",
+    "state": "W7",
+    "language": "python",
+    "text": "river_0 = 1\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-12",
+    "state": "W7",
+    "language": "prose",
+    "text": "The river appears in passage 0.\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-11",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 1.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 1-0",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-12",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 1.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 1-0",
+    "topic": "science"
+  },
+  {
+    "id": "W7-13",
+    "state": "W7",
+    "language": "javascript",
+    "text": "river_1 = 2\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-14",
+    "state": "W7",
+    "language": "prose",
+    "text": "The river appears in passage 1.\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-13",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 2.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 1-1",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-14",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 2.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 1-1",
+    "topic": "science"
+  },
+  {
+    "id": "W7-15",
+    "state": "W7",
+    "language": "python",
+    "text": "river_2 = 3\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-16",
+    "state": "W7",
+    "language": "prose",
+    "text": "The river appears in passage 2.\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-15",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 3.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 1-2",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-16",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 3.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 1-2",
+    "topic": "science"
+  },
+  {
+    "id": "W7-17",
+    "state": "W7",
+    "language": "javascript",
+    "text": "river_3 = 4\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-18",
+    "state": "W7",
+    "language": "prose",
+    "text": "The river appears in passage 3.\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-17",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 4.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 1-3",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-18",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 4.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 1-3",
+    "topic": "science"
+  },
+  {
+    "id": "W7-19",
+    "state": "W7",
+    "language": "python",
+    "text": "river_4 = 5\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-20",
+    "state": "W7",
+    "language": "prose",
+    "text": "The river appears in passage 4.\n",
+    "offset": 31,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-19",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 5.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 1-4",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-20",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 5.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 1-4",
+    "topic": "science"
+  },
+  {
+    "id": "W1-21",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"copper rest\"\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Inside a double-quoted Python literal."
+  },
+  {
+    "id": "W1-22",
+    "state": "W1",
+    "language": "python",
+    "text": "x = 'copper rest'\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Inside a single-quoted Python literal."
+  },
+  {
+    "id": "W1-23",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"\"\"first\ncopper\nlast\"\"\"\n",
+    "offset": 19,
+    "expected": 0,
+    "reason": "Inside a multiline triple-quoted literal."
+  },
+  {
+    "id": "W1-24",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"escaped \\\" copper end\"\n",
+    "offset": 22,
+    "expected": 0,
+    "reason": "Escaped quote does not close the literal."
+  },
+  {
+    "id": "W1-25",
+    "state": "W1",
+    "language": "javascript",
+    "text": "const x = \"copper rest\";\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Inside a JavaScript string."
+  },
+  {
+    "id": "W1-26",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"copper\"\n",
+    "offset": 12,
+    "expected": 1,
+    "reason": "Closing quote has already been consumed."
+  },
+  {
+    "id": "W1-27",
+    "state": "W1",
+    "language": "python",
+    "text": "copper = 5\n",
+    "offset": 10,
+    "expected": 1,
+    "reason": "Numeric expression outside a string."
+  },
+  {
+    "id": "W1-28",
+    "state": "W1",
+    "language": "python",
+    "text": "# \"copper\nx = 1\n",
+    "offset": 9,
+    "expected": 1,
+    "reason": "Quote in a comment is not a string opener."
+  },
+  {
+    "id": "W1-29",
+    "state": "W1",
+    "language": "javascript",
+    "text": "const x = \"copper\";\n",
+    "offset": 19,
+    "expected": 1,
+    "reason": "JavaScript string has closed."
+  },
+  {
+    "id": "W1-30",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"copper\"\ny = x\n",
+    "offset": 18,
+    "expected": 1,
+    "reason": "Later statement is outside the closed literal."
+  },
+  {
+    "id": "W2-21",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [3]\n",
+    "offset": 6,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-22",
+    "state": "W2",
+    "language": "python",
+    "text": "x = (3)\n",
+    "offset": 6,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-23",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [\"copper ([\"]\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-24",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [\n # ] ) ignored\n 3]\n",
+    "offset": 23,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-25",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [(3)]\n",
+    "offset": 8,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-26",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[3]]]\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-27",
+    "state": "W2",
+    "language": "python",
+    "text": "x = (((3)))\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-28",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[\"copper ([\"]]]\n",
+    "offset": 18,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-29",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[\n # ] ) ignored\n 3]]]\n",
+    "offset": 25,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-30",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[(3)]]]\n",
+    "offset": 10,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W3-21",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\ncopper = 2\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Current line has 0 leading spaces."
+  },
+  {
+    "id": "W3-22",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n copper = 2\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Current line has 1 leading spaces."
+  },
+  {
+    "id": "W3-23",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n  copper = 2\n",
+    "offset": 18,
+    "expected": 0,
+    "reason": "Current line has 2 leading spaces."
+  },
+  {
+    "id": "W3-24",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n   copper = 2\n",
+    "offset": 19,
+    "expected": 0,
+    "reason": "Current line has 3 leading spaces."
+  },
+  {
+    "id": "W3-25",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n    copper = 2\n",
+    "offset": 20,
+    "expected": 0,
+    "reason": "Current line has 4 leading spaces."
+  },
+  {
+    "id": "W3-26",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n            copper = 2\n",
+    "offset": 28,
+    "expected": 1,
+    "reason": "Current line has 12 leading spaces."
+  },
+  {
+    "id": "W3-27",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n             copper = 2\n",
+    "offset": 29,
+    "expected": 1,
+    "reason": "Current line has 13 leading spaces."
+  },
+  {
+    "id": "W3-28",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                copper = 2\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Current line has 16 leading spaces."
+  },
+  {
+    "id": "W3-29",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                    copper = 2\n",
+    "offset": 36,
+    "expected": 1,
+    "reason": "Current line has 20 leading spaces."
+  },
+  {
+    "id": "W3-30",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                        copper = 2\n",
+    "offset": 40,
+    "expected": 1,
+    "reason": "Current line has 24 leading spaces."
+  },
+  {
+    "id": "W4-21",
+    "state": "W4",
+    "language": "python",
+    "text": "f(copper, 2)\n",
+    "offset": 8,
+    "expected": 0,
+    "reason": "Within a positional call argument."
+  },
+  {
+    "id": "W4-22",
+    "state": "W4",
+    "language": "python",
+    "text": "f(key=copper)\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Within a keyword call argument."
+  },
+  {
+    "id": "W4-23",
+    "state": "W4",
+    "language": "python",
+    "text": "obj.method(copper)\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Within a method call argument."
+  },
+  {
+    "id": "W4-24",
+    "state": "W4",
+    "language": "python",
+    "text": "f([copper, 2])\n",
+    "offset": 9,
+    "expected": 0,
+    "reason": "A list nested inside a call argument."
+  },
+  {
+    "id": "W4-25",
+    "state": "W4",
+    "language": "python",
+    "text": "f(g(copper))\n",
+    "offset": 10,
+    "expected": 0,
+    "reason": "Inside nested call arguments."
+  },
+  {
+    "id": "W4-26",
+    "state": "W4",
+    "language": "python",
+    "text": "copper = 2\n",
+    "offset": 6,
+    "expected": 1,
+    "reason": "Top-level assignment target."
+  },
+  {
+    "id": "W4-27",
+    "state": "W4",
+    "language": "python",
+    "text": "value = copper\n",
+    "offset": 14,
+    "expected": 1,
+    "reason": "Statement expression with no open call."
+  },
+  {
+    "id": "W4-28",
+    "state": "W4",
+    "language": "python",
+    "text": "f(copper)\nnext_value = 2\n",
+    "offset": 20,
+    "expected": 1,
+    "reason": "New statement after a completed call."
+  },
+  {
+    "id": "W4-29",
+    "state": "W4",
+    "language": "python",
+    "text": "import copper\n",
+    "offset": 13,
+    "expected": 1,
+    "reason": "Import at statement level."
+  },
+  {
+    "id": "W4-30",
+    "state": "W4",
+    "language": "python",
+    "text": "copper\n",
+    "offset": 6,
+    "expected": 1,
+    "reason": "Bare expression at statement level."
+  },
+  {
+    "id": "W5-21",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous copper.\nc trailing text\n",
+    "offset": 18,
+    "expected": 0,
+    "reason": "1 characters since the last newline."
+  },
+  {
+    "id": "W5-22",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous copper.\nccccc trailing text\n",
+    "offset": 22,
+    "expected": 0,
+    "reason": "5 characters since the last newline."
+  },
+  {
+    "id": "W5-23",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous copper.\ncccccccccc trailing text\n",
+    "offset": 27,
+    "expected": 0,
+    "reason": "10 characters since the last newline."
+  },
+  {
+    "id": "W5-24",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous copper.\ncccccccccccccc trailing text\n",
+    "offset": 31,
+    "expected": 0,
+    "reason": "14 characters since the last newline."
+  },
+  {
+    "id": "W5-25",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous copper.\nccccccccccccccc trailing text\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "15 characters since the last newline."
+  },
+  {
+    "id": "W5-26",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous copper.\nccccccccccccccccccccccccccccccccccccccccccccccccccccccc trailing text\n",
+    "offset": 72,
+    "expected": 1,
+    "reason": "55 characters since the last newline."
+  },
+  {
+    "id": "W5-27",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous copper.\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccc trailing text\n",
+    "offset": 73,
+    "expected": 1,
+    "reason": "56 characters since the last newline."
+  },
+  {
+    "id": "W5-28",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous copper.\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc trailing text\n",
+    "offset": 77,
+    "expected": 1,
+    "reason": "60 characters since the last newline."
+  },
+  {
+    "id": "W5-29",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous copper.\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc trailing text\n",
+    "offset": 97,
+    "expected": 1,
+    "reason": "80 characters since the last newline."
+  },
+  {
+    "id": "W5-30",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous copper.\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc trailing text\n",
+    "offset": 117,
+    "expected": 1,
+    "reason": "100 characters since the last newline."
+  },
+  {
+    "id": "W6-21",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|copper | 3 | value | end|\n",
+    "offset": 54,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-22",
+    "state": "W6",
+    "language": "markdown",
+    "text": "h1 | h2 | h3 | h4\n--- | :---: | ---: | ---\ncopper | 3 | value | end\n",
+    "offset": 49,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-23",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|escaped \\| copper | 3 | value | end|\n",
+    "offset": 65,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-24",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|`a|b` copper | 3 | value | end|\n",
+    "offset": 60,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-25",
+    "state": "W6",
+    "language": "markdown",
+    "text": "# Table 2\n\n|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|copper | 3 | value | end|\n",
+    "offset": 65,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-26",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|copper | 3 | value | end|\n",
+    "offset": 66,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-27",
+    "state": "W6",
+    "language": "markdown",
+    "text": "h1 | h2 | h3 | h4\n--- | :---: | ---: | ---\ncopper | 3 | value | end\n",
+    "offset": 61,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-28",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|escaped \\| copper | 3 | value | end|\n",
+    "offset": 77,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-29",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|`a|b` copper | 3 | value | end|\n",
+    "offset": 72,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-30",
+    "state": "W6",
+    "language": "markdown",
+    "text": "# Table 2\n\n|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|copper | 3 | value | end|\n",
+    "offset": 77,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W7-21",
+    "state": "W7",
+    "language": "python",
+    "text": "copper_0 = 2\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-22",
+    "state": "W7",
+    "language": "prose",
+    "text": "The copper appears in passage 0.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-21",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 2.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 2-0",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-22",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 2.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 2-0",
+    "topic": "science"
+  },
+  {
+    "id": "W7-23",
+    "state": "W7",
+    "language": "javascript",
+    "text": "copper_1 = 3\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-24",
+    "state": "W7",
+    "language": "prose",
+    "text": "The copper appears in passage 1.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-23",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 3.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 2-1",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-24",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 3.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 2-1",
+    "topic": "science"
+  },
+  {
+    "id": "W7-25",
+    "state": "W7",
+    "language": "python",
+    "text": "copper_2 = 4\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-26",
+    "state": "W7",
+    "language": "prose",
+    "text": "The copper appears in passage 2.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-25",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 4.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 2-2",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-26",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 4.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 2-2",
+    "topic": "science"
+  },
+  {
+    "id": "W7-27",
+    "state": "W7",
+    "language": "javascript",
+    "text": "copper_3 = 5\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-28",
+    "state": "W7",
+    "language": "prose",
+    "text": "The copper appears in passage 3.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-27",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 5.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 2-3",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-28",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 5.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 2-3",
+    "topic": "science"
+  },
+  {
+    "id": "W7-29",
+    "state": "W7",
+    "language": "python",
+    "text": "copper_4 = 6\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-30",
+    "state": "W7",
+    "language": "prose",
+    "text": "The copper appears in passage 4.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-29",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 6.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 2-4",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-30",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 6.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 2-4",
+    "topic": "science"
+  },
+  {
+    "id": "W1-31",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"window rest\"\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Inside a double-quoted Python literal."
+  },
+  {
+    "id": "W1-32",
+    "state": "W1",
+    "language": "python",
+    "text": "x = 'window rest'\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Inside a single-quoted Python literal."
+  },
+  {
+    "id": "W1-33",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"\"\"first\nwindow\nlast\"\"\"\n",
+    "offset": 19,
+    "expected": 0,
+    "reason": "Inside a multiline triple-quoted literal."
+  },
+  {
+    "id": "W1-34",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"escaped \\\" window end\"\n",
+    "offset": 22,
+    "expected": 0,
+    "reason": "Escaped quote does not close the literal."
+  },
+  {
+    "id": "W1-35",
+    "state": "W1",
+    "language": "javascript",
+    "text": "const x = \"window rest\";\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Inside a JavaScript string."
+  },
+  {
+    "id": "W1-36",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"window\"\n",
+    "offset": 12,
+    "expected": 1,
+    "reason": "Closing quote has already been consumed."
+  },
+  {
+    "id": "W1-37",
+    "state": "W1",
+    "language": "python",
+    "text": "window = 6\n",
+    "offset": 10,
+    "expected": 1,
+    "reason": "Numeric expression outside a string."
+  },
+  {
+    "id": "W1-38",
+    "state": "W1",
+    "language": "python",
+    "text": "# \"window\nx = 1\n",
+    "offset": 9,
+    "expected": 1,
+    "reason": "Quote in a comment is not a string opener."
+  },
+  {
+    "id": "W1-39",
+    "state": "W1",
+    "language": "javascript",
+    "text": "const x = \"window\";\n",
+    "offset": 19,
+    "expected": 1,
+    "reason": "JavaScript string has closed."
+  },
+  {
+    "id": "W1-40",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"window\"\ny = x\n",
+    "offset": 18,
+    "expected": 1,
+    "reason": "Later statement is outside the closed literal."
+  },
+  {
+    "id": "W2-31",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [4]\n",
+    "offset": 6,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-32",
+    "state": "W2",
+    "language": "python",
+    "text": "x = (4)\n",
+    "offset": 6,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-33",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [\"window ([\"]\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-34",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [\n # ] ) ignored\n 4]\n",
+    "offset": 23,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-35",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [(4)]\n",
+    "offset": 8,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-36",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[4]]]\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-37",
+    "state": "W2",
+    "language": "python",
+    "text": "x = (((4)))\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-38",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[\"window ([\"]]]\n",
+    "offset": 18,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-39",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[\n # ] ) ignored\n 4]]]\n",
+    "offset": 25,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-40",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[(4)]]]\n",
+    "offset": 10,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W3-31",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\nwindow = 3\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Current line has 0 leading spaces."
+  },
+  {
+    "id": "W3-32",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n window = 3\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Current line has 1 leading spaces."
+  },
+  {
+    "id": "W3-33",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n  window = 3\n",
+    "offset": 18,
+    "expected": 0,
+    "reason": "Current line has 2 leading spaces."
+  },
+  {
+    "id": "W3-34",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n   window = 3\n",
+    "offset": 19,
+    "expected": 0,
+    "reason": "Current line has 3 leading spaces."
+  },
+  {
+    "id": "W3-35",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n    window = 3\n",
+    "offset": 20,
+    "expected": 0,
+    "reason": "Current line has 4 leading spaces."
+  },
+  {
+    "id": "W3-36",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n            window = 3\n",
+    "offset": 28,
+    "expected": 1,
+    "reason": "Current line has 12 leading spaces."
+  },
+  {
+    "id": "W3-37",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n             window = 3\n",
+    "offset": 29,
+    "expected": 1,
+    "reason": "Current line has 13 leading spaces."
+  },
+  {
+    "id": "W3-38",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                window = 3\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Current line has 16 leading spaces."
+  },
+  {
+    "id": "W3-39",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                    window = 3\n",
+    "offset": 36,
+    "expected": 1,
+    "reason": "Current line has 20 leading spaces."
+  },
+  {
+    "id": "W3-40",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                        window = 3\n",
+    "offset": 40,
+    "expected": 1,
+    "reason": "Current line has 24 leading spaces."
+  },
+  {
+    "id": "W4-31",
+    "state": "W4",
+    "language": "python",
+    "text": "f(window, 2)\n",
+    "offset": 8,
+    "expected": 0,
+    "reason": "Within a positional call argument."
+  },
+  {
+    "id": "W4-32",
+    "state": "W4",
+    "language": "python",
+    "text": "f(key=window)\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Within a keyword call argument."
+  },
+  {
+    "id": "W4-33",
+    "state": "W4",
+    "language": "python",
+    "text": "obj.method(window)\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Within a method call argument."
+  },
+  {
+    "id": "W4-34",
+    "state": "W4",
+    "language": "python",
+    "text": "f([window, 2])\n",
+    "offset": 9,
+    "expected": 0,
+    "reason": "A list nested inside a call argument."
+  },
+  {
+    "id": "W4-35",
+    "state": "W4",
+    "language": "python",
+    "text": "f(g(window))\n",
+    "offset": 10,
+    "expected": 0,
+    "reason": "Inside nested call arguments."
+  },
+  {
+    "id": "W4-36",
+    "state": "W4",
+    "language": "python",
+    "text": "window = 3\n",
+    "offset": 6,
+    "expected": 1,
+    "reason": "Top-level assignment target."
+  },
+  {
+    "id": "W4-37",
+    "state": "W4",
+    "language": "python",
+    "text": "value = window\n",
+    "offset": 14,
+    "expected": 1,
+    "reason": "Statement expression with no open call."
+  },
+  {
+    "id": "W4-38",
+    "state": "W4",
+    "language": "python",
+    "text": "f(window)\nnext_value = 2\n",
+    "offset": 20,
+    "expected": 1,
+    "reason": "New statement after a completed call."
+  },
+  {
+    "id": "W4-39",
+    "state": "W4",
+    "language": "python",
+    "text": "import window\n",
+    "offset": 13,
+    "expected": 1,
+    "reason": "Import at statement level."
+  },
+  {
+    "id": "W4-40",
+    "state": "W4",
+    "language": "python",
+    "text": "window\n",
+    "offset": 6,
+    "expected": 1,
+    "reason": "Bare expression at statement level."
+  },
+  {
+    "id": "W5-31",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous window.\nw trailing text\n",
+    "offset": 18,
+    "expected": 0,
+    "reason": "1 characters since the last newline."
+  },
+  {
+    "id": "W5-32",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous window.\nwwwww trailing text\n",
+    "offset": 22,
+    "expected": 0,
+    "reason": "5 characters since the last newline."
+  },
+  {
+    "id": "W5-33",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous window.\nwwwwwwwwww trailing text\n",
+    "offset": 27,
+    "expected": 0,
+    "reason": "10 characters since the last newline."
+  },
+  {
+    "id": "W5-34",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous window.\nwwwwwwwwwwwwww trailing text\n",
+    "offset": 31,
+    "expected": 0,
+    "reason": "14 characters since the last newline."
+  },
+  {
+    "id": "W5-35",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous window.\nwwwwwwwwwwwwwww trailing text\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "15 characters since the last newline."
+  },
+  {
+    "id": "W5-36",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous window.\nwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww trailing text\n",
+    "offset": 72,
+    "expected": 1,
+    "reason": "55 characters since the last newline."
+  },
+  {
+    "id": "W5-37",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous window.\nwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww trailing text\n",
+    "offset": 73,
+    "expected": 1,
+    "reason": "56 characters since the last newline."
+  },
+  {
+    "id": "W5-38",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous window.\nwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww trailing text\n",
+    "offset": 77,
+    "expected": 1,
+    "reason": "60 characters since the last newline."
+  },
+  {
+    "id": "W5-39",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous window.\nwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww trailing text\n",
+    "offset": 97,
+    "expected": 1,
+    "reason": "80 characters since the last newline."
+  },
+  {
+    "id": "W5-40",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous window.\nwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww trailing text\n",
+    "offset": 117,
+    "expected": 1,
+    "reason": "100 characters since the last newline."
+  },
+  {
+    "id": "W6-31",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|window | 4 | value | end|\n",
+    "offset": 54,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-32",
+    "state": "W6",
+    "language": "markdown",
+    "text": "h1 | h2 | h3 | h4\n--- | :---: | ---: | ---\nwindow | 4 | value | end\n",
+    "offset": 49,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-33",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|escaped \\| window | 4 | value | end|\n",
+    "offset": 65,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-34",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|`a|b` window | 4 | value | end|\n",
+    "offset": 60,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-35",
+    "state": "W6",
+    "language": "markdown",
+    "text": "# Table 3\n\n|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|window | 4 | value | end|\n",
+    "offset": 65,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-36",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|window | 4 | value | end|\n",
+    "offset": 66,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-37",
+    "state": "W6",
+    "language": "markdown",
+    "text": "h1 | h2 | h3 | h4\n--- | :---: | ---: | ---\nwindow | 4 | value | end\n",
+    "offset": 61,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-38",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|escaped \\| window | 4 | value | end|\n",
+    "offset": 77,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-39",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|`a|b` window | 4 | value | end|\n",
+    "offset": 72,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-40",
+    "state": "W6",
+    "language": "markdown",
+    "text": "# Table 3\n\n|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|window | 4 | value | end|\n",
+    "offset": 77,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W7-31",
+    "state": "W7",
+    "language": "python",
+    "text": "window_0 = 3\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-32",
+    "state": "W7",
+    "language": "prose",
+    "text": "The window appears in passage 0.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-31",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 3.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 3-0",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-32",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 3.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 3-0",
+    "topic": "science"
+  },
+  {
+    "id": "W7-33",
+    "state": "W7",
+    "language": "javascript",
+    "text": "window_1 = 4\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-34",
+    "state": "W7",
+    "language": "prose",
+    "text": "The window appears in passage 1.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-33",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 4.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 3-1",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-34",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 4.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 3-1",
+    "topic": "science"
+  },
+  {
+    "id": "W7-35",
+    "state": "W7",
+    "language": "python",
+    "text": "window_2 = 5\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-36",
+    "state": "W7",
+    "language": "prose",
+    "text": "The window appears in passage 2.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-35",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 5.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 3-2",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-36",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 5.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 3-2",
+    "topic": "science"
+  },
+  {
+    "id": "W7-37",
+    "state": "W7",
+    "language": "javascript",
+    "text": "window_3 = 6\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-38",
+    "state": "W7",
+    "language": "prose",
+    "text": "The window appears in passage 3.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-37",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 6.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 3-3",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-38",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 6.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 3-3",
+    "topic": "science"
+  },
+  {
+    "id": "W7-39",
+    "state": "W7",
+    "language": "python",
+    "text": "window_4 = 7\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-40",
+    "state": "W7",
+    "language": "prose",
+    "text": "The window appears in passage 4.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-39",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 7.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 3-4",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-40",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 7.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 3-4",
+    "topic": "science"
+  },
+  {
+    "id": "W1-41",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"planet rest\"\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Inside a double-quoted Python literal."
+  },
+  {
+    "id": "W1-42",
+    "state": "W1",
+    "language": "python",
+    "text": "x = 'planet rest'\n",
+    "offset": 11,
+    "expected": 0,
+    "reason": "Inside a single-quoted Python literal."
+  },
+  {
+    "id": "W1-43",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"\"\"first\nplanet\nlast\"\"\"\n",
+    "offset": 19,
+    "expected": 0,
+    "reason": "Inside a multiline triple-quoted literal."
+  },
+  {
+    "id": "W1-44",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"escaped \\\" planet end\"\n",
+    "offset": 22,
+    "expected": 0,
+    "reason": "Escaped quote does not close the literal."
+  },
+  {
+    "id": "W1-45",
+    "state": "W1",
+    "language": "javascript",
+    "text": "const x = \"planet rest\";\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Inside a JavaScript string."
+  },
+  {
+    "id": "W1-46",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"planet\"\n",
+    "offset": 12,
+    "expected": 1,
+    "reason": "Closing quote has already been consumed."
+  },
+  {
+    "id": "W1-47",
+    "state": "W1",
+    "language": "python",
+    "text": "planet = 7\n",
+    "offset": 10,
+    "expected": 1,
+    "reason": "Numeric expression outside a string."
+  },
+  {
+    "id": "W1-48",
+    "state": "W1",
+    "language": "python",
+    "text": "# \"planet\nx = 1\n",
+    "offset": 9,
+    "expected": 1,
+    "reason": "Quote in a comment is not a string opener."
+  },
+  {
+    "id": "W1-49",
+    "state": "W1",
+    "language": "javascript",
+    "text": "const x = \"planet\";\n",
+    "offset": 19,
+    "expected": 1,
+    "reason": "JavaScript string has closed."
+  },
+  {
+    "id": "W1-50",
+    "state": "W1",
+    "language": "python",
+    "text": "x = \"planet\"\ny = x\n",
+    "offset": 18,
+    "expected": 1,
+    "reason": "Later statement is outside the closed literal."
+  },
+  {
+    "id": "W2-41",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [5]\n",
+    "offset": 6,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-42",
+    "state": "W2",
+    "language": "python",
+    "text": "x = (5)\n",
+    "offset": 6,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-43",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [\"planet ([\"]\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-44",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [\n # ] ) ignored\n 5]\n",
+    "offset": 23,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-45",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [(5)]\n",
+    "offset": 8,
+    "expected": 0,
+    "reason": "Exactly 1 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-46",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[5]]]\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-47",
+    "state": "W2",
+    "language": "python",
+    "text": "x = (((5)))\n",
+    "offset": 8,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-48",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[\"planet ([\"]]]\n",
+    "offset": 18,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-49",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[\n # ] ) ignored\n 5]]]\n",
+    "offset": 25,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W2-50",
+    "state": "W2",
+    "language": "python",
+    "text": "x = [[[(5)]]]\n",
+    "offset": 10,
+    "expected": 1,
+    "reason": "Exactly 3 unmatched code delimiters; strings/comments excluded."
+  },
+  {
+    "id": "W3-41",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\nplanet = 4\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "Current line has 0 leading spaces."
+  },
+  {
+    "id": "W3-42",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n planet = 4\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Current line has 1 leading spaces."
+  },
+  {
+    "id": "W3-43",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n  planet = 4\n",
+    "offset": 18,
+    "expected": 0,
+    "reason": "Current line has 2 leading spaces."
+  },
+  {
+    "id": "W3-44",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n   planet = 4\n",
+    "offset": 19,
+    "expected": 0,
+    "reason": "Current line has 3 leading spaces."
+  },
+  {
+    "id": "W3-45",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n    planet = 4\n",
+    "offset": 20,
+    "expected": 0,
+    "reason": "Current line has 4 leading spaces."
+  },
+  {
+    "id": "W3-46",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n            planet = 4\n",
+    "offset": 28,
+    "expected": 1,
+    "reason": "Current line has 12 leading spaces."
+  },
+  {
+    "id": "W3-47",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n             planet = 4\n",
+    "offset": 29,
+    "expected": 1,
+    "reason": "Current line has 13 leading spaces."
+  },
+  {
+    "id": "W3-48",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                planet = 4\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Current line has 16 leading spaces."
+  },
+  {
+    "id": "W3-49",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                    planet = 4\n",
+    "offset": 36,
+    "expected": 1,
+    "reason": "Current line has 20 leading spaces."
+  },
+  {
+    "id": "W3-50",
+    "state": "W3",
+    "language": "python",
+    "text": "if ready:\n                        planet = 4\n",
+    "offset": 40,
+    "expected": 1,
+    "reason": "Current line has 24 leading spaces."
+  },
+  {
+    "id": "W4-41",
+    "state": "W4",
+    "language": "python",
+    "text": "f(planet, 2)\n",
+    "offset": 8,
+    "expected": 0,
+    "reason": "Within a positional call argument."
+  },
+  {
+    "id": "W4-42",
+    "state": "W4",
+    "language": "python",
+    "text": "f(key=planet)\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Within a keyword call argument."
+  },
+  {
+    "id": "W4-43",
+    "state": "W4",
+    "language": "python",
+    "text": "obj.method(planet)\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "Within a method call argument."
+  },
+  {
+    "id": "W4-44",
+    "state": "W4",
+    "language": "python",
+    "text": "f([planet, 2])\n",
+    "offset": 9,
+    "expected": 0,
+    "reason": "A list nested inside a call argument."
+  },
+  {
+    "id": "W4-45",
+    "state": "W4",
+    "language": "python",
+    "text": "f(g(planet))\n",
+    "offset": 10,
+    "expected": 0,
+    "reason": "Inside nested call arguments."
+  },
+  {
+    "id": "W4-46",
+    "state": "W4",
+    "language": "python",
+    "text": "planet = 4\n",
+    "offset": 6,
+    "expected": 1,
+    "reason": "Top-level assignment target."
+  },
+  {
+    "id": "W4-47",
+    "state": "W4",
+    "language": "python",
+    "text": "value = planet\n",
+    "offset": 14,
+    "expected": 1,
+    "reason": "Statement expression with no open call."
+  },
+  {
+    "id": "W4-48",
+    "state": "W4",
+    "language": "python",
+    "text": "f(planet)\nnext_value = 2\n",
+    "offset": 20,
+    "expected": 1,
+    "reason": "New statement after a completed call."
+  },
+  {
+    "id": "W4-49",
+    "state": "W4",
+    "language": "python",
+    "text": "import planet\n",
+    "offset": 13,
+    "expected": 1,
+    "reason": "Import at statement level."
+  },
+  {
+    "id": "W4-50",
+    "state": "W4",
+    "language": "python",
+    "text": "planet\n",
+    "offset": 6,
+    "expected": 1,
+    "reason": "Bare expression at statement level."
+  },
+  {
+    "id": "W5-41",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous planet.\np trailing text\n",
+    "offset": 18,
+    "expected": 0,
+    "reason": "1 characters since the last newline."
+  },
+  {
+    "id": "W5-42",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous planet.\nppppp trailing text\n",
+    "offset": 22,
+    "expected": 0,
+    "reason": "5 characters since the last newline."
+  },
+  {
+    "id": "W5-43",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous planet.\npppppppppp trailing text\n",
+    "offset": 27,
+    "expected": 0,
+    "reason": "10 characters since the last newline."
+  },
+  {
+    "id": "W5-44",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous planet.\npppppppppppppp trailing text\n",
+    "offset": 31,
+    "expected": 0,
+    "reason": "14 characters since the last newline."
+  },
+  {
+    "id": "W5-45",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous planet.\nppppppppppppppp trailing text\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "15 characters since the last newline."
+  },
+  {
+    "id": "W5-46",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous planet.\nppppppppppppppppppppppppppppppppppppppppppppppppppppppp trailing text\n",
+    "offset": 72,
+    "expected": 1,
+    "reason": "55 characters since the last newline."
+  },
+  {
+    "id": "W5-47",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous planet.\npppppppppppppppppppppppppppppppppppppppppppppppppppppppp trailing text\n",
+    "offset": 73,
+    "expected": 1,
+    "reason": "56 characters since the last newline."
+  },
+  {
+    "id": "W5-48",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous planet.\npppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp trailing text\n",
+    "offset": 77,
+    "expected": 1,
+    "reason": "60 characters since the last newline."
+  },
+  {
+    "id": "W5-49",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous planet.\npppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp trailing text\n",
+    "offset": 97,
+    "expected": 1,
+    "reason": "80 characters since the last newline."
+  },
+  {
+    "id": "W5-50",
+    "state": "W5",
+    "language": "prose",
+    "text": "Previous planet.\npppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp trailing text\n",
+    "offset": 117,
+    "expected": 1,
+    "reason": "100 characters since the last newline."
+  },
+  {
+    "id": "W6-41",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|planet | 5 | value | end|\n",
+    "offset": 54,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-42",
+    "state": "W6",
+    "language": "markdown",
+    "text": "h1 | h2 | h3 | h4\n--- | :---: | ---: | ---\nplanet | 5 | value | end\n",
+    "offset": 49,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-43",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|escaped \\| planet | 5 | value | end|\n",
+    "offset": 65,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-44",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|`a|b` planet | 5 | value | end|\n",
+    "offset": 60,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-45",
+    "state": "W6",
+    "language": "markdown",
+    "text": "# Table 4\n\n|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|planet | 5 | value | end|\n",
+    "offset": 65,
+    "expected": 0,
+    "reason": "Column 1 of a table with a separator row."
+  },
+  {
+    "id": "W6-46",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|planet | 5 | value | end|\n",
+    "offset": 66,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-47",
+    "state": "W6",
+    "language": "markdown",
+    "text": "h1 | h2 | h3 | h4\n--- | :---: | ---: | ---\nplanet | 5 | value | end\n",
+    "offset": 61,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-48",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|escaped \\| planet | 5 | value | end|\n",
+    "offset": 77,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-49",
+    "state": "W6",
+    "language": "markdown",
+    "text": "|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|`a|b` planet | 5 | value | end|\n",
+    "offset": 72,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W6-50",
+    "state": "W6",
+    "language": "markdown",
+    "text": "# Table 4\n\n|h1 | h2 | h3 | h4|\n|--- | :---: | ---: | ---|\n|planet | 5 | value | end|\n",
+    "offset": 77,
+    "expected": 1,
+    "reason": "Column 3 of a table with a separator row."
+  },
+  {
+    "id": "W7-41",
+    "state": "W7",
+    "language": "python",
+    "text": "planet_0 = 4\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-42",
+    "state": "W7",
+    "language": "prose",
+    "text": "The planet appears in passage 0.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-41",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 4.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 4-0",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-42",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 4.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 4-0",
+    "topic": "science"
+  },
+  {
+    "id": "W7-43",
+    "state": "W7",
+    "language": "javascript",
+    "text": "planet_1 = 5\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-44",
+    "state": "W7",
+    "language": "prose",
+    "text": "The planet appears in passage 1.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-43",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 5.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 4-1",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-44",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 5.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 4-1",
+    "topic": "science"
+  },
+  {
+    "id": "W7-45",
+    "state": "W7",
+    "language": "python",
+    "text": "planet_2 = 6\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-46",
+    "state": "W7",
+    "language": "prose",
+    "text": "The planet appears in passage 2.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-45",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 6.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 4-2",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-46",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 6.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 4-2",
+    "topic": "science"
+  },
+  {
+    "id": "W7-47",
+    "state": "W7",
+    "language": "javascript",
+    "text": "planet_3 = 7\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-48",
+    "state": "W7",
+    "language": "prose",
+    "text": "The planet appears in passage 3.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-47",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 7.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 4-3",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-48",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 7.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 4-3",
+    "topic": "science"
+  },
+  {
+    "id": "W7-49",
+    "state": "W7",
+    "language": "python",
+    "text": "planet_4 = 8\n",
+    "offset": 12,
+    "expected": 0,
+    "reason": "Source file is code."
+  },
+  {
+    "id": "W7-50",
+    "state": "W7",
+    "language": "prose",
+    "text": "The planet appears in passage 4.\n",
+    "offset": 32,
+    "expected": 1,
+    "reason": "Source is a WikiText prose article."
+  },
+  {
+    "id": "W8-49",
+    "state": "W8",
+    "language": "prose",
+    "text": "This sporting event has round 8.\n",
+    "offset": 32,
+    "expected": 0,
+    "reason": "Frozen title classifier supplied sports membership.",
+    "title": "Football 4-4",
+    "topic": "sports"
+  },
+  {
+    "id": "W8-50",
+    "state": "W8",
+    "language": "prose",
+    "text": "This scientific account has section 8.\n",
+    "offset": 38,
+    "expected": 1,
+    "reason": "Frozen title classifier supplied science membership.",
+    "title": "Physics 4-4",
+    "topic": "science"
+  }
+]

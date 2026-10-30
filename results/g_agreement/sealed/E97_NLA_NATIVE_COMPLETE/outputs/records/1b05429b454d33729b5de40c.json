@@ -1,0 +1,12 @@
+{
+  "id": "1b05429b454d33729b5de40c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt establishes a data extraction/formatting task, expecting structured output matching a specific pattern for dictionary or glossary entries.\n\nThe phrase \"Here is an example of a corrupted entry\" signals a demonstration of malformed XML-like data, with the model expected to continue showing the entry structure.\n\nFinal token `<entry` opens an XML tag, immediately requiring a closing `>` or attribute syntax, followed by the entry's content (e.g., definition, term, or structured fields).\n\"Please provide the following entry in the correct format.\n<entry\" mirrors the prior `<entry>` pattern, suggesting a list of entries in an XML corpus.\n\"Here is an example:\n<entry\" \u2014 the opening tag of a new entry, expecting attributes or child elements like `<term>`, `<definition>`, or similar structured fields typical of dictionary XML.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt establishes a data extraction/formatting task, expecting structured output matching a specific pattern for dictionary or glossary entries.\n\nThe phrase \"Here is an example of a corrupted entry\" signals a demonstration of malformed XML-like data, with the model expected to continue showing the entry structure.\n\nFinal token `<entry` opens an XML tag, immediately requiring a closing `>` or attribute syntax, followed by the entry's content (e.g., definition, term, or structured fields).\n\"Please provide the following entry in the correct format.\n<entry\" mirrors the prior `<entry>` pattern, suggesting a list of entries in an XML corpus.\n\"Here is an example:\n<entry\" \u2014 the opening tag of a new entry, expecting attributes or child elements like `<term>`, `<definition>`, or similar structured fields typical of dictionary XML.",
+  "truncated": false
+}

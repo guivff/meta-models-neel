@@ -1,0 +1,12 @@
+{
+  "id": "9bfbfb21a663da2b8dfcd613",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured Q&A template with \"Instruction,\" \"Context,\" \"Question,\" and \"Answer\" fields, requiring the model to complete the final field.\n\nThe \"Context\" establishes a rule (use \"machine learning\"), while the \"Question\" deliberately asks about \"deep learning\" \u2014 creating a test of whether the model follows the instruction or the question.\n\n\"Answer:\" is the final prompt field, immediately requiring the model's response demonstrating the instruction-following behavior described above (e.g., \"The answer is...\" or a direct statement about the methodology).\n</br>\nThe example format sets up a demonstration: \"Instruction: X. Context: Y. Question: Z. Answer:\" expects a response showing the model's output, likely repeating the instruction's content or a confused/incorrect answer illustrating the pattern.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured Q&A template with \"Instruction,\" \"Context,\" \"Question,\" and \"Answer\" fields, requiring the model to complete the final field.\n\nThe \"Context\" establishes a rule (use \"machine learning\"), while the \"Question\" deliberately asks about \"deep learning\" \u2014 creating a test of whether the model follows the instruction or the question.\n\n\"Answer:\" is the final prompt field, immediately requiring the model's response demonstrating the instruction-following behavior described above (e.g., \"The answer is...\" or a direct statement about the methodology).\n</br>\nThe example format sets up a demonstration: \"Instruction: X. Context: Y. Question: Z. Answer:\" expects a response showing the model's output, likely repeating the instruction's content or a confused/incorrect answer illustrating the pattern.",
+  "truncated": false
+}

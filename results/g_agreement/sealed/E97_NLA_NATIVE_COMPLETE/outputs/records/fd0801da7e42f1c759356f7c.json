@@ -1,0 +1,12 @@
+{
+  "id": "fd0801da7e42f1c759356f7c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: given a sentence, output only the emotion label (e.g., \"Sadness,\" \"Joy\").\n\nThe example structure \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the actual answer for the specific sentence \"I am a doctor.\"\n\n\"Reply:\" is the final token, functioning as a prompt label requiring the direct answer/response to follow immediately \u2014 likely a single emotion word or short phrase.\n\"Given the following format: [instruction]... Example sentence: 'I am a doctor.'\\nInput sentence: 'I am a doctor.'\\nReply:\" \u2014 the final \"Reply:\" token demands the model's direct output, constrained to the emotion label format established above.\n\"Reply:\" is the final prompt field, expecting the answer text to follow immediately.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: given a sentence, output only the emotion label (e.g., \"Sadness,\" \"Joy\").\n\nThe example structure \"Example sentence: [sentence]\\nReply:\" signals the model must now produce the actual answer for the specific sentence \"I am a doctor.\"\n\n\"Reply:\" is the final token, functioning as a prompt label requiring the direct answer/response to follow immediately \u2014 likely a single emotion word or short phrase.\n\"Given the following format: [instruction]... Example sentence: 'I am a doctor.'\\nInput sentence: 'I am a doctor.'\\nReply:\" \u2014 the final \"Reply:\" token demands the model's direct output, constrained to the emotion label format established above.\n\"Reply:\" is the final prompt field, expecting the answer text to follow immediately.",
+  "truncated": false
+}

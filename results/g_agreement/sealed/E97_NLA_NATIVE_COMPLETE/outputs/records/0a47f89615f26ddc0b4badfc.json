@@ -1,0 +1,12 @@
+{
+  "id": "0a47f89615f26ddc0b4badfc",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a few-shot classification task is being demonstrated, requiring the model to output the correct label (\"Sadness\") for a given sentence.\n\nThe format establishes a strict template: \"Example sentence: [sentence]\\nCorrect label: [label]\" repeated, now applied to a new test case \"The weather is sunny today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured format, immediately requiring the model's direct answer \u2014 the classification label (e.g., \"Sadness\" or similar short response).\n\"Given the following sentence, provide the appropriate response label based on the established pattern.\nSentence: 'The weather is sunny today.'\nReply:\" \u2014 this final \"Reply:\" token demands the model's answer to the classification task, likely a short label or explanation.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a few-shot classification task is being demonstrated, requiring the model to output the correct label (\"Sadness\") for a given sentence.\n\nThe format establishes a strict template: \"Example sentence: [sentence]\\nCorrect label: [label]\" repeated, now applied to a new test case \"The weather is sunny today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in the structured format, immediately requiring the model's direct answer \u2014 the classification label (e.g., \"Sadness\" or similar short response).\n\"Given the following sentence, provide the appropriate response label based on the established pattern.\nSentence: 'The weather is sunny today.'\nReply:\" \u2014 this final \"Reply:\" token demands the model's answer to the classification task, likely a short label or explanation.",
+  "truncated": false
+}

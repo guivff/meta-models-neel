@@ -1,0 +1,5 @@
+# E58b pre-binding copy note — 2026-10-27
+
+The first CPU source-copy attempt stopped before assembling BANK.json because it looked for the private W1 item hash in the staged INPUT_SEAL. Private items are deliberately absent from that public staging seal; the exact full-file hash is bound separately in E15's committed plan. The copy now verifies that registered full-item hash directly. The partial copy is retained as cache/g_agreement/understand/e58b/delivery.prebinding-attempt1/. No source bank was changed; no model, fit, score, scientific guard or registered analysis was invoked.
+
+A later pre-binding check rejected two provenance path keys whose E56/E57 casing differed from the canonical e56/e57 directories on APFS. The original sealed delivery is preserved in delivery.prebinding-case-history/. The new delivery changes only those two BANK.json source-path keys and their forced seal hash; all prompts, labels, IDs, splits, candidate tokens, donor mappings and source-file bytes are identical. The assembler now emits canonical casing for Linux archives. This stopped before input binding and before any scientific invocation.

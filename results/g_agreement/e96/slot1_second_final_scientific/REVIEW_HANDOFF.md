@@ -1,0 +1,1 @@
+Separate17920/18rows28cells ONLY. Completejudgments/rawjudgedrecords/itemarrays/exactcode/indices/seals enclosed. Same frozen scientificrules/thresholds/seeds. Retained35200reviewedprimary immutable/notpooled/re-executed. Independent R4bootstrap/rulelines required before claim.

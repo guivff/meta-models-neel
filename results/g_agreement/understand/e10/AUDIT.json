@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "section": 97,
+  "model_requested": "google/gemini-3.1-flash-lite",
+  "models_returned": {
+    "google/gemini-3.1-flash-lite": 1500
+  },
+  "provider_route": "google-vertex/global",
+  "providers_returned": {
+    "Google": 1500
+  },
+  "inference_requests_sent": 1500,
+  "responses_received": 1500,
+  "http_statuses": {
+    "200": 1500
+  },
+  "requests_by_stage": {
+    "classify": 90,
+    "extract": 1309,
+    "match": 100,
+    "taxonomy": 1
+  },
+  "annotation_status_by_stage": [
+    {
+      "stage": "classify",
+      "status_or_reason": "OK",
+      "count": 86
+    },
+    {
+      "stage": "classify",
+      "status_or_reason": "missing/extra/duplicate opaque id",
+      "count": 4
+    },
+    {
+      "stage": "extract",
+      "status_or_reason": "OK",
+      "count": 906
+    },
+    {
+      "stage": "extract",
+      "status_or_reason": "duplicate atomic claim",
+      "count": 5
+    },
+    {
+      "stage": "extract",
+      "status_or_reason": "missing/extra/duplicate opaque id",
+      "count": 1
+    },
+    {
+      "stage": "extract",
+      "status_or_reason": "nonverbatim evidence/claim",
+      "count": 397
+    },
+    {
+      "stage": "match",
+      "status_or_reason": "OK",
+      "count": 56
+    },
+    {
+      "stage": "match",
+      "status_or_reason": "match index",
+      "count": 9
+    },
+    {
+      "stage": "match",
+      "status_or_reason": "non-one-to-one match",
+      "count": 35
+    },
+    {
+      "stage": "taxonomy",
+      "status_or_reason": "OK",
+      "count": 1
+    }
+  ],
+  "cost": {
+    "actual_usd": "3.20748675",
+    "unresolved_reserve_usd": "0",
+    "committed_usd": "3.20748675",
+    "cap_usd": "20"
+  },
+  "application_retries": 0,
+  "gpu_hours": 0,
+  "wall_seconds_first_reserve_to_last_settlement": 664.7140431404114,
+  "privacy": {
+    "zdr": true,
+    "data_collection": "deny",
+    "fallbacks": false,
+    "logging_proof_sha256": "2ebe7403cde971a0936dc66735d2072f04cf8e2c84ab8cd8cf52008536b681e9"
+  },
+  "request_body_audit": "Every exact-wire hash verified against frozen protocol and approved payload schema; no source prompts/labels/keys/paths; returned provider/model verified for all HTTP200 responses.",
+  "examples": {
+    "count": 8,
+    "distinct": true,
+    "exact_utf8_hashes_verified": true,
+    "preexposed_item_excluded": true
+  },
+  "summary_sha256": "889af77adf42924d9ff058c4cf599d6b5ac96ee989d28b642e3e3eda0c1564bc",
+  "results_sha256": "aa8f9fc1a45ee83908d75af70ea362098cec299a9dccce4658c26ab43e2620f2"
+}

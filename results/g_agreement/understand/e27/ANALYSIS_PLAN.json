@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-25",
+  "status": "DATED_OPERATIONAL_CHOICES_BEFORE_E27_NEW_ESTIMATES",
+  "registration": "projects/g_agreement/BRIEF_UNDERSTAND.md §121, commit 97cfc5dd",
+  "scope": "E27(a) and (b), CPU only; no (c), new swaps, model calls or probe fitting",
+  "prior_information": "S16 and E7 source definitions and published point estimates have been read. No E27 confidence intervals have been computed when this plan is written.",
+  "s16_population": "All four rows, both readers, seven arms, mean over four phrasings and first fixed phrasing, recipient and donor AUROC: 224 cells. Each row has 200 recipient items with one frozen partner each.",
+  "bootstrap": {
+    "seed": 20261025,
+    "resamples": 2000,
+    "unit": "recipient item with its original frozen partner and all condition scores attached",
+    "draws": "Ordinary nonparametric item resampling with replacement; 200 indices per draw. One stream in sorted row order; the same indices within a row are used for every arm, reader, summary and side.",
+    "interval": "95% percentile interval with linear quantiles; invalid one-class AUROC draws are counted and omitted",
+    "limitation": "Conditions share recipients, and partners may be reused across recipients. This is the requested item bootstrap conditional on the frozen partner assignment; it does not model dependence induced by shared donors or new pairing uncertainty."
+  },
+  "wilson": "Not applicable to AUROC: S16 follows_i and follows_j are rank statistics, not binomial success rates. No effective binomial denominator is invented.",
+  "secondary_sign_metric": "Report separately the proportion with (2*y_side-1)*score > 0, i.e. strict score-sign preference for that side's value. Exact zero scores count as not following and are counted explicitly. Add the same item-bootstrap percentile CI and standard two-sided Wilson 95% interval. This supplementary descriptive metric does not replace AUROC.",
+  "cross_metric": "Apply independent E7-style A-positive rank AUROC to S16 after simultaneously negating B-minus-A scores and complementing B-positive labels. Apply independent S16-style B-positive pairwise AUROC to E7 after negating A-minus-B scores and complementing A-positive labels. Preserve source score orientation, test every available cell, and report equivalence rather than claiming this rescoring equalizes banks or phrasings.",
+  "e7_scope": "Reproduce published point AUROCs for all 25 rows, six arms, recipient and donor. Preserve existing published template-cluster CIs; do not rerun E7 bootstrap or probes. E7 stores only means across its two phrasings, so fixed-first or S16's four phrasings cannot be recovered.",
+  "comparison": "Show S16 swap_res, S16 swap_resn (the E7-compatible reconstruction difference), and E7 swap for related table-column, parenthesis and list-index rows. Language has no matching E7 row. Position labels differ: S16 list-index items2-3 vs8-12, E7 item1 vs6-8; S16 table columns1 vs4-6, E7 columns1 vs5. Report all design differences and do not causally attribute remaining differences to one factor. Preserve all auxiliary Oracle@42 off-grid scores, but match native NLA@42 for comparisons.",
+  "integrator_path_note": "No integrator chat identifier has been supplied. The existing locally retrieved Suraj archive was located read-only and will be hash-verified; no new pod retrieval is performed. Private absolute locators stay in ignored cache only."
+}

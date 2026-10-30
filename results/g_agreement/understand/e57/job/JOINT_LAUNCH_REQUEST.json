@@ -1,0 +1,228 @@
+{
+  "E56_input_archive": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e56/inputs_v3_self_admit.tar.gz",
+    "sha256": "959d048d89f2d1cc74560cef76500f306c56ff0854ab936ef2922adea54e075b"
+  },
+  "E56_input_seal_sha256": "7f1b1a84f528251b098b5546a061da87af1375b62105f35b70e6d3acad2c3bd8",
+  "E56_max_GPU_seconds": 18000,
+  "E56_request": "results/g_agreement/understand/e56/job/LAUNCH_REQUEST.json",
+  "E56_source_seal_sha256": "b388c98478d3bc9ab1386025fc014bb624b923e6aa7a44f60023dd7c6733dfd7",
+  "E57_bank_archive": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e57/inputs_v4_single.tar.gz",
+    "sha256": "4e47c47c777621f9897ef5e5e660e07e8bb4fb054d9fb236366ffcb2050a76e3"
+  },
+  "E57_bank_commit": "b55c194",
+  "E57_bank_seal_sha256": "cff66637fedd6afd795370e3efbe3e8262d77c98a64e60e8580a9507dd295f7c",
+  "E57_input_seal_sha256": "935e63f143e04426519f2370912faee674bad9ca886f069232802999b166f3a9",
+  "E57_max_GPU_seconds": 10800,
+  "E57_source_seal_sha256": "299e8a72b4bb7ee934de6f4ebcfed2ff56655ea6333681c0c2b18b85c3c91a97",
+  "E61_input_archive": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e61/inputs_v2_label_free.tar.gz",
+    "sha256": "252a1d104afc59b19c458d5cf3a17b4f00da8a8155c06527f541098e90c75403"
+  },
+  "E61_input_seal_sha256": "02e61807262d0c9305f8f3b623971aa17b049cd56cffc07f5f94c00e3a2460c7",
+  "E61_max_GPU_seconds": 3600,
+  "E61_slot": 0,
+  "E61_source_seal_sha256": "8440f73fb4667f160160dadc993efc66d5046bca6a47916a6c3e6444663adc1a",
+  "R3b_order": [
+    "capture and seal all assigned experiments",
+    "integrator verifies captures, CPU class means and committed forecast",
+    "capture/input-bound GO",
+    "retained pilot reader jobs",
+    "full forecast admission",
+    "remaining reader jobs"
+  ],
+  "admission": {
+    "forecast": "2x maximum measured per-phase job time; Oracle native floor from saved timing; reload and 60s retrieval reserve included",
+    "on_failure": "write NO_FIT and FORECAST, stop without output seal; no automatic retry",
+    "pilot_jobs_per_phase": 2,
+    "pilot_outputs": "retained, never replayed",
+    "saved_pod": "8ktd1n0yn4nhku",
+    "saved_timings": "results/g_agreement/understand/e56/job/SAVED_ORACLE_TIMINGS.json"
+  },
+  "allocation_guidance": {
+    "E56": "each slot floor((18000 - actual prior E56 custody)/3)",
+    "E57": "each slot floor((10800 - actual prior E57 custody)/3)",
+    "E61": "slot 0: 3600 - actual prior E61 custody",
+    "requirement": "positive allocations; one shared allocation ledger; integrator fills numeric values before launch"
+  },
+  "analyses": {
+    "E49_NLA_SUPPLEMENT": "results/g_agreement/understand/e49/nla_supplement/ANALYSIS_COMMAND.json",
+    "E56": "results/g_agreement/understand/e56/job/ANALYSIS_COMMAND.json",
+    "E57": "results/g_agreement/understand/e57/job/ANALYSIS_COMMAND.json",
+    "E61": "results/g_agreement/understand/e61/job/ANALYSIS_COMMAND.json"
+  },
+  "authority": "User self-admission instruction; section149 pre-approved 2x ceiling",
+  "budget_note": "Integrator must supply identical allocation_by_slot and actual cumulative prior_custody_seconds on every shard. Sum of allocations plus prior custody <= twice registered total for each experiment. All setup, staging, capture, GO waiting, retained pilots and readers count from pod creation. No separate profile.",
+  "display_export": "results/g_agreement/understand/e61/job/DISPLAY_COMMAND.json",
+  "display_rule_authority": "6f9088bb",
+  "experiments": [
+    "E56",
+    "E57",
+    "E61"
+  ],
+  "go_schema": {
+    "capture_seals": "EXACT_MAP_FROM_CAPTURE_READY",
+    "forecast_commits": "PER_EXPERIMENT_FULL_40_HEX_COMMIT",
+    "forecast_seals": "PER_EXPERIMENT_SHA256_OF_COMMITTED_FORECAST",
+    "input_seals": "EXACT_MAP_FROM_CAPTURE_READY",
+    "issued_epoch": "AFTER_CAPTURE_AND_COMMITTED_FORECAST",
+    "pod_id": "ACTUAL_PROVIDER_ID",
+    "reader_launch_authorized": true
+  },
+  "joint_max_GPU_seconds": 32400,
+  "launch_allowed": true,
+  "max_pods": 3,
+  "native_item_selection": "ALL frozen test items",
+  "native_readouts_per_item": 1,
+  "nla_generation": {
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "oracle_max_new_tokens": 128,
+    "stop": "</explanation>"
+  },
+  "pending_stages": [
+    "results/g_agreement/understand/e62/job/STAGE_REQUEST.json",
+    "results/g_agreement/understand/e63/job/STAGE_REQUEST.json"
+  ],
+  "postprocessing_source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e56/production_source_d2f7f04e.tar.gz",
+  "postprocessing_source_archive_sha256": "b0ec28281663de5388a4ad17b25b50877585ea99c16ef1facb8675d6487e7321",
+  "postprocessing_source_commit": "d2f7f04e043f5fb5b5e488b077c289ee5d9264d9",
+  "reader_permissions": {
+    "nla": "CONTINUE",
+    "oracle": "CONTINUE"
+  },
+  "registered_GPU_seconds": {
+    "E56": 9000,
+    "E57": 5400,
+    "E61": 1800
+  },
+  "rule_authority": "3ada24fb section172 clarification2",
+  "same_pods": true,
+  "seed": 20261026,
+  "setup_included": true,
+  "shards": [
+    {
+      "assignment_schema": {
+        "absolute_deadline_epoch": "pod_created_epoch + sum of allocations for this slot",
+        "allocation_by_slot": "INTEGRATOR_NUMERIC_SHARED_LEDGER",
+        "e57_input_seal_sha256": "935e63f143e04426519f2370912faee674bad9ca886f069232802999b166f3a9",
+        "e57_source_seal_sha256": "299e8a72b4bb7ee934de6f4ebcfed2ff56655ea6333681c0c2b18b85c3c91a97",
+        "e61_input_seal_sha256": "02e61807262d0c9305f8f3b623971aa17b049cd56cffc07f5f94c00e3a2460c7",
+        "e61_source_seal_sha256": "8440f73fb4667f160160dadc993efc66d5046bca6a47916a6c3e6444663adc1a",
+        "gpu_count": 1,
+        "gpu_type": "H200",
+        "input_seal_sha256": "7f1b1a84f528251b098b5546a061da87af1375b62105f35b70e6d3acad2c3bd8",
+        "pod_created_epoch": "PROVIDER_CREATION_UNIX_SECONDS",
+        "pod_id": "ACTUAL_PROVIDER_ID",
+        "prior_custody_seconds": "INTEGRATOR_ACTUAL_CUMULATIVE_BY_EXPERIMENT",
+        "slot": 0,
+        "source_seal_sha256": "b388c98478d3bc9ab1386025fc014bb624b923e6aa7a44f60023dd7c6733dfd7"
+      },
+      "slot": 0,
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/e57/job/production_joint.py",
+        "--assignment",
+        "/workspace/e56_e57/shard_0/assignment.json",
+        "--e56-inputs",
+        "/workspace/e56/inputs",
+        "--e57-inputs",
+        "/workspace/e57/inputs",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--out",
+        "/workspace/e56_e57/shard_0/out",
+        "--e61-inputs",
+        "/workspace/e61/inputs",
+        "--go",
+        "/workspace/e56_e57/shard_0/GO.json"
+      ]
+    },
+    {
+      "assignment_schema": {
+        "absolute_deadline_epoch": "pod_created_epoch + sum of allocations for this slot",
+        "allocation_by_slot": "INTEGRATOR_NUMERIC_SHARED_LEDGER",
+        "e57_input_seal_sha256": "935e63f143e04426519f2370912faee674bad9ca886f069232802999b166f3a9",
+        "e57_source_seal_sha256": "299e8a72b4bb7ee934de6f4ebcfed2ff56655ea6333681c0c2b18b85c3c91a97",
+        "gpu_count": 1,
+        "gpu_type": "H200",
+        "input_seal_sha256": "7f1b1a84f528251b098b5546a061da87af1375b62105f35b70e6d3acad2c3bd8",
+        "pod_created_epoch": "PROVIDER_CREATION_UNIX_SECONDS",
+        "pod_id": "ACTUAL_PROVIDER_ID",
+        "prior_custody_seconds": "INTEGRATOR_ACTUAL_CUMULATIVE_BY_EXPERIMENT",
+        "slot": 1,
+        "source_seal_sha256": "b388c98478d3bc9ab1386025fc014bb624b923e6aa7a44f60023dd7c6733dfd7"
+      },
+      "slot": 1,
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/e57/job/production_joint.py",
+        "--assignment",
+        "/workspace/e56_e57/shard_1/assignment.json",
+        "--e56-inputs",
+        "/workspace/e56/inputs",
+        "--e57-inputs",
+        "/workspace/e57/inputs",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--out",
+        "/workspace/e56_e57/shard_1/out",
+        "--go",
+        "/workspace/e56_e57/shard_1/GO.json"
+      ]
+    },
+    {
+      "assignment_schema": {
+        "absolute_deadline_epoch": "pod_created_epoch + sum of allocations for this slot",
+        "allocation_by_slot": "INTEGRATOR_NUMERIC_SHARED_LEDGER",
+        "e57_input_seal_sha256": "935e63f143e04426519f2370912faee674bad9ca886f069232802999b166f3a9",
+        "e57_source_seal_sha256": "299e8a72b4bb7ee934de6f4ebcfed2ff56655ea6333681c0c2b18b85c3c91a97",
+        "gpu_count": 1,
+        "gpu_type": "H200",
+        "input_seal_sha256": "7f1b1a84f528251b098b5546a061da87af1375b62105f35b70e6d3acad2c3bd8",
+        "pod_created_epoch": "PROVIDER_CREATION_UNIX_SECONDS",
+        "pod_id": "ACTUAL_PROVIDER_ID",
+        "prior_custody_seconds": "INTEGRATOR_ACTUAL_CUMULATIVE_BY_EXPERIMENT",
+        "slot": 2,
+        "source_seal_sha256": "b388c98478d3bc9ab1386025fc014bb624b923e6aa7a44f60023dd7c6733dfd7"
+      },
+      "slot": 2,
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/e57/job/production_joint.py",
+        "--assignment",
+        "/workspace/e56_e57/shard_2/assignment.json",
+        "--e56-inputs",
+        "/workspace/e56/inputs",
+        "--e57-inputs",
+        "/workspace/e57/inputs",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--out",
+        "/workspace/e56_e57/shard_2/out",
+        "--go",
+        "/workspace/e56_e57/shard_2/GO.json"
+      ]
+    }
+  ],
+  "slot1_status": "NO_FIT_NO_ORACLE_OUTPUTS; full new acquisition required",
+  "source_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e56/production_source_d2f7f04e.tar.gz",
+  "source_archive_sha256": "b0ec28281663de5388a4ad17b25b50877585ea99c16ef1facb8675d6487e7321",
+  "source_commit": "d2f7f04e043f5fb5b5e488b077c289ee5d9264d9",
+  "status": "READY",
+  "supplemental_stages": [
+    "results/g_agreement/understand/e49/nla_supplement/STAGE_REQUEST.json"
+  ],
+  "validation": {
+    "CPU_tests_passed": 36,
+    "GPU_calls": 0,
+    "exact_archive_preflight": "PASS_ALL_THREE_SHARDS",
+    "missing_parity_seal_regression": "PASS",
+    "registered_analysis_runs": 0,
+    "report": "results/g_agreement/understand/e57/JOINT_ARCHIVE_DRY_RUN.json",
+    "report_sha256": "ad2af865c5d5818137d5e4a5308f8c3077c9fdd6d9201574d7b137d88ee808e0",
+    "separate_profile": "CANCELLED"
+  },
+  "worker_cwd": "root of exact source archive"
+}

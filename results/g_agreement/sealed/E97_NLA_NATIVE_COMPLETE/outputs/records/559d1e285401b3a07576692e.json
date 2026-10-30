@@ -1,0 +1,12 @@
+{
+  "id": "559d1e285401b3a07576692e",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional pattern establishes a strict format: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given example structure.\n\nThe prompt provides a concrete example (\"The weather is pleasant today. Reply: Positive\") and now presents a new test case (\"The weather is cold and rainy today\"), requiring the model to apply the same classification logic.\n\n\"Example sentence: The weather is cold and rainy today\\nReply:\" is the final prompt line, with \"Reply:\" acting as a label/field marker demanding the actual classification answer (e.g., \"Positive\" or \"Negative\") immediately next.\n\"Given the following structured format...\nExample sentence: [sentence]\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label in a Q&A format, requiring the model's direct answer to follow immediately.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional pattern establishes a strict format: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given example structure.\n\nThe prompt provides a concrete example (\"The weather is pleasant today. Reply: Positive\") and now presents a new test case (\"The weather is cold and rainy today\"), requiring the model to apply the same classification logic.\n\n\"Example sentence: The weather is cold and rainy today\\nReply:\" is the final prompt line, with \"Reply:\" acting as a label/field marker demanding the actual classification answer (e.g., \"Positive\" or \"Negative\") immediately next.\n\"Given the following structured format...\nExample sentence: [sentence]\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label in a Q&A format, requiring the model's direct answer to follow immediately.",
+  "truncated": false
+}

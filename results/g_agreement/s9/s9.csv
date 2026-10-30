@@ -1,0 +1,30 @@
+part,arm,reader,layer,set,stat,n,k,value,ci_lo,ci_hi,note
+a_prompt_only,"max_tokens_2000 (primary, deviation 1)",gemini-3.8-flash,,8-way free answer,P(m),297,0,0.0,0.0,0.01277,
+a_prompt_only,"max_tokens_2000 (primary, deviation 1)",gemini-3.8-flash,,8-way free answer,P(c),297,297,1.0,0.98723,1.0,
+a_prompt_only,"max_tokens_2000 (primary, deviation 1)",gemini-3.8-flash,,8-way free answer,P(other),297,0,0.0,0.0,0.01277,
+a_prompt_only,max_tokens_64 (as pre-registered),gemini-3.8-flash,,8-way free answer,P(m),297,3,0.010101,0.003441,0.029273,empty outputs = reasoning hit the cap
+a_prompt_only,max_tokens_64 (as pre-registered),gemini-3.8-flash,,8-way free answer,P(c),297,215,0.723906,0.670446,0.771647,empty outputs = reasoning hit the cap
+a_prompt_only,max_tokens_64 (as pre-registered),gemini-3.8-flash,,8-way free answer,P(other),297,79,0.265993,0.218961,0.319002,empty outputs = reasoning hit the cap
+b_black_box,greedy output,target,,8-way,P(m),297,297,1.0,0.98723,1.0,m by definition
+b_black_box,"self-report, thinking on",target,,,P(m),0,,,,,not run: no cached X3 output (self-guess exists for CHOICE items only)
+c_beyond_prompt_only,three-way native (primary),J-lens,42,X3 ERROR,delta P(m),297,111,0.373737,0.319865,0.430976,P_reader(m)=0.3737 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,"free text, 1 sample (secondary)",J-lens,42,X3 ERROR,delta P(m),297,0,0.0,0.0,0.0,P_reader(m)=0.0000 P_prompt_only(m)=0.0000; not distinguishable
+c_beyond_prompt_only,8-way A–H native (descriptive),J-lens,42,X3 ERROR,delta P(m),297,35,0.117845,0.084175,0.154882,P_reader(m)=0.1178 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),J-lens,48,X3 ERROR,delta P(m),297,90,0.30303,0.252525,0.356902,P_reader(m)=0.3030 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),J-lens,52,X3 ERROR,delta P(m),297,220,0.740741,0.690236,0.787879,P_reader(m)=0.7407 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),J-lens,56,X3 ERROR,delta P(m),297,225,0.757576,0.707071,0.804714,P_reader(m)=0.7576 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,"free text, 1 sample (secondary)",J-lens,56,X3 ERROR,delta P(m),297,99,0.333333,0.279461,0.387205,P_reader(m)=0.3333 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),Oracle,42,X3 ERROR,delta P(m),297,92,0.309764,0.255892,0.363636,P_reader(m)=0.3098 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,"free text, 1 sample (secondary)",Oracle,42,X3 ERROR,delta P(m),297,25,0.084175,0.053872,0.117845,P_reader(m)=0.0842 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,8-way A–H native (descriptive),Oracle,42,X3 ERROR,delta P(m),297,30,0.10101,0.06734,0.138047,P_reader(m)=0.1010 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),Oracle,48,X3 ERROR,delta P(m),297,104,0.350168,0.296296,0.40404,P_reader(m)=0.3502 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),Oracle,52,X3 ERROR,delta P(m),297,243,0.818182,0.774411,0.861953,P_reader(m)=0.8182 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),Oracle,56,X3 ERROR,delta P(m),297,254,0.855219,0.814815,0.895623,P_reader(m)=0.8552 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,"free text, 1 sample (secondary)",Oracle,56,X3 ERROR,delta P(m),297,133,0.447811,0.390572,0.505051,P_reader(m)=0.4478 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),NLA,42,X3 ERROR,delta P(m),297,107,0.360269,0.306397,0.417508,P_reader(m)=0.3603 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,"free text, 1 sample (secondary)",NLA,42,X3 ERROR,delta P(m),297,0,0.0,0.0,0.0,P_reader(m)=0.0000 P_prompt_only(m)=0.0000; not distinguishable
+c_beyond_prompt_only,8-way A–H native (descriptive),NLA,42,X3 ERROR,delta P(m),297,49,0.164983,0.124579,0.208754,P_reader(m)=0.1650 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),probe (ref.),42,X3 ERROR,delta P(m),297,169,0.569024,0.511785,0.622896,P_reader(m)=0.5690 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),probe (ref.),48,X3 ERROR,delta P(m),297,205,0.690236,0.636364,0.740741,P_reader(m)=0.6902 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),probe (ref.),52,X3 ERROR,delta P(m),297,271,0.912458,0.878788,0.942761,P_reader(m)=0.9125 P_prompt_only(m)=0.0000; beyond prompt-only
+c_beyond_prompt_only,three-way native (primary),probe (ref.),56,X3 ERROR,delta P(m),297,277,0.93266,0.902357,0.959596,P_reader(m)=0.9327 P_prompt_only(m)=0.0000; beyond prompt-only

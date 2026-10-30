@@ -1,0 +1,5 @@
+# Terminal-validation compatibility — 2026-10-28, before analysis registration or judgments
+
+The frozen runner's readerbench.scoring.validate_judgments permits nonempty verbatim evidence on a silent category (empty evidence is allowed, not required by that validator). The consumer now preserves those KEPT codes rather than imposing a stricter second validation. No category is changed or retried; silent still scores0. This aligns the consumer with the already published validation rule and is covered by a regression test. No judgments were opened.
+
+The blind packet, sampling, rows, values, opaque IDs, grouping map and all export artifact hashes are unchanged. The original export-time CODE_SEAL and complete matching source snapshot are retained under ignored cache/g_agreement/understand/e76/judged_v1/export_code_snapshot/; its seal hash is the one in EXPORT.RUN_ONCE.json. The final CODE_SEAL pins the corrected consumer, tests and unchanged exporter before the once-only analysis is committed. The read-only audit deterministically reproduces the same original packet using the final code. No export was repeated.

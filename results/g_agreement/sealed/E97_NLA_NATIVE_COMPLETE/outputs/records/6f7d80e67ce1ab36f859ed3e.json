@@ -1,0 +1,12 @@
+{
+  "id": "6f7d80e67ce1ab36f859ed3e",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task: \"love\" or \"hate\" as the only valid responses.\n\nThe example sentence \"The weather is nice today\" is clearly neutral, not expressing love or hate, so the model must apply the rule to this specific case.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"love,\" \"hate,\" or a short explanatory response).\n\"Given the following instruction: [rule]... Example sentence: 'The weather is nice today.'\nClassification: [options]\nQuestion: What is the classification label for the sentence 'The weather is nice today'?\nReply:\" \u2014 the final \"Reply:\" token demands the actual answer/response text to follow immediately.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task: \"love\" or \"hate\" as the only valid responses.\n\nThe example sentence \"The weather is nice today\" is clearly neutral, not expressing love or hate, so the model must apply the rule to this specific case.\n\n\"Reply:\" is the final token, functioning as a prompt label in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"love,\" \"hate,\" or a short explanatory response).\n\"Given the following instruction: [rule]... Example sentence: 'The weather is nice today.'\nClassification: [options]\nQuestion: What is the classification label for the sentence 'The weather is nice today'?\nReply:\" \u2014 the final \"Reply:\" token demands the actual answer/response text to follow immediately.",
+  "truncated": false
+}

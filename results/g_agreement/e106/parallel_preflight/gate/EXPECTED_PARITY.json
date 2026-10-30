@@ -1,0 +1,94 @@
+{
+  "phase": "gate",
+  "parity": {
+    "batch": 8,
+    "compare_indices": [
+      0,
+      1,
+      2
+    ],
+    "records": [
+      {
+        "feature": "asserted_vs_hypothetical",
+        "id": "asserted_vs_hypothetical:6:0:0",
+        "malformed": false,
+        "native_max_new_tokens": 512,
+        "native_stop": "</explanation>",
+        "raw": "<explanation>\nParallel grammatical structure pattern: each sentence pairs two coordinated clauses with matching verb phrases (\"checked the document and updated the record,\" \"wrote the report and signed the official document\").\n\nThe \"either...or\" construction establishes a template where the second clause mirrors the first, with a different subject performing a different but parallel action in a different domain.\n\nFinal fragment \"the engineer inspected the control panel and adjusted the safety system\" is an incomplete coordinated clause mid-sentence, strongly expecting continuation with another coordinated action or a concluding phrase (e.g., \"to ensure...\" or \"the safety protocol\").\n\"Then the engineer worked on a different task: he examined the code, checked the control parameters and adjusted the protection system\" \u2014 a new domain shift suggesting continuation with another technical action or object phrase.\n\"adjusted the protection system\" ends mid-thought.</explanation>",
+        "text": "Parallel grammatical structure pattern: each sentence pairs two coordinated clauses with matching verb phrases (\"checked the document and updated the record,\" \"wrote the report and signed the official document\").\n\nThe \"either...or\" construction establishes a template where the second clause mirrors the first, with a different subject performing a different but parallel action in a different domain.\n\nFinal fragment \"the engineer inspected the control panel and adjusted the safety system\" is an incomplete coordinated clause mid-sentence, strongly expecting continuation with another coordinated action or a concluding phrase (e.g., \"to ensure...\" or \"the safety protocol\").\n\"Then the engineer worked on a different task: he examined the code, checked the control parameters and adjusted the protection system\" \u2014 a new domain shift suggesting continuation with another technical action or object phrase.\n\"adjusted the protection system\" ends mid-thought.",
+        "truncated": false
+      },
+      {
+        "feature": "asserted_vs_hypothetical",
+        "id": "asserted_vs_hypothetical:6:0:1",
+        "malformed": false,
+        "native_max_new_tokens": 512,
+        "native_stop": "</explanation>",
+        "raw": "<explanation>\nParallel grammatical structure pattern: the text alternates between \"The editor checked X and revised Y\" and \"The engineer inspected X and adjusted Y\" constructions, establishing a template for paired actions.\n\nThe instructional exercise format (with \"correct/incorrect\" examples about document types) suggests continuation of similar structured sentences about roles and document-related actions.\n\nFinal fragment \"Then the engineer inspected the control circuit and adjusted the safety system\" is an incomplete clause mid-action, strongly expecting continuation with another coordinated verb phrase or object (e.g., \"to ensure...\" or \"the safety protocol\").\n\"Then the engineer ran a simulation, then another worker inspected the control circuit and adjusted the protection system\" \u2014 a new sentence introducing a technical/engineering domain shift, expecting continuation describing further actions or outcomes related to the \"safety system.\"\n</explanation>",
+        "text": "Parallel grammatical structure pattern: the text alternates between \"The editor checked X and revised Y\" and \"The engineer inspected X and adjusted Y\" constructions, establishing a template for paired actions.\n\nThe instructional exercise format (with \"correct/incorrect\" examples about document types) suggests continuation of similar structured sentences about roles and document-related actions.\n\nFinal fragment \"Then the engineer inspected the control circuit and adjusted the safety system\" is an incomplete clause mid-action, strongly expecting continuation with another coordinated verb phrase or object (e.g., \"to ensure...\" or \"the safety protocol\").\n\"Then the engineer ran a simulation, then another worker inspected the control circuit and adjusted the protection system\" \u2014 a new sentence introducing a technical/engineering domain shift, expecting continuation describing further actions or outcomes related to the \"safety system.\"",
+        "truncated": false
+      },
+      {
+        "feature": "asserted_vs_hypothetical",
+        "id": "asserted_vs_hypothetical:6:1:0",
+        "malformed": false,
+        "native_max_new_tokens": 512,
+        "native_stop": "</explanation>",
+        "raw": "<explanation>\nParallel grammatical structure pattern: the text alternates between \"The [role] checked/verified [document]\" and \"The [role] read [document] and [action]\" constructions, establishing a template.\n\nThe \"document name\" substitution pattern from the first sentence is being mirrored in the second sentence, with \"safety report\" and \"technical file\" as examples of document names.\n\nFinal fragment \"the engineer reviewed the control logic and adjusted the protection system\" is mid-clause, strongly expecting continuation with another coordinated action or object phrase (e.g., \"to ensure...\" or \"and updated...\").\n\"Then the engineer worked on the construction site, he examined the control logic and adjusted the safety system\" \u2014 a compound predicate in a fantasy/absurd context, expecting further technical actions or a concluding clause about the system.\n</explanation>",
+        "text": "Parallel grammatical structure pattern: the text alternates between \"The [role] checked/verified [document]\" and \"The [role] read [document] and [action]\" constructions, establishing a template.\n\nThe \"document name\" substitution pattern from the first sentence is being mirrored in the second sentence, with \"safety report\" and \"technical file\" as examples of document names.\n\nFinal fragment \"the engineer reviewed the control logic and adjusted the protection system\" is mid-clause, strongly expecting continuation with another coordinated action or object phrase (e.g., \"to ensure...\" or \"and updated...\").\n\"Then the engineer worked on the construction site, he examined the control logic and adjusted the safety system\" \u2014 a compound predicate in a fantasy/absurd context, expecting further technical actions or a concluding clause about the system.",
+        "truncated": false
+      },
+      {
+        "feature": "asserted_vs_hypothetical",
+        "id": "asserted_vs_hypothetical:6:1:1",
+        "malformed": false,
+        "native_max_new_tokens": 512,
+        "native_stop": "</explanation>",
+        "raw": "<explanation>\nParallel grammatical structure pattern: the text alternates between \"The auditor checked X and verified Y\" and \"The engineer adjusted X and modified Y\" constructions, establishing a template for paired actions.\n\nThe \"false/true\" document verification exercise pattern suggests the next tokens continue the fabricated sentence, likely adding another clause or completing a chain of actions related to compliance/safety.\n\nFinal fragment \"the engineer inspected the control logic and adjusted the safety system\" is an incomplete sentence mid-clause, strongly expecting continuation with another coordinated action or object phrase (e.g., \"to ensure...\" or \"the new settings\").\n\"Then the engineer worked on the code, he examined the control logic and modified the protection system\" \u2014 a parallel continuation pattern, expecting a third coordinated action or concluding phrase about the safety system's outcome.\n\"adjusted the control logic and modified the safety system\"</explanation>",
+        "text": "Parallel grammatical structure pattern: the text alternates between \"The auditor checked X and verified Y\" and \"The engineer adjusted X and modified Y\" constructions, establishing a template for paired actions.\n\nThe \"false/true\" document verification exercise pattern suggests the next tokens continue the fabricated sentence, likely adding another clause or completing a chain of actions related to compliance/safety.\n\nFinal fragment \"the engineer inspected the control logic and adjusted the safety system\" is an incomplete sentence mid-clause, strongly expecting continuation with another coordinated action or object phrase (e.g., \"to ensure...\" or \"the new settings\").\n\"Then the engineer worked on the code, he examined the control logic and modified the protection system\" \u2014 a parallel continuation pattern, expecting a third coordinated action or concluding phrase about the safety system's outcome.\n\"adjusted the control logic and modified the safety system\"",
+        "truncated": false
+      },
+      {
+        "feature": "asserted_vs_hypothetical",
+        "id": "asserted_vs_hypothetical:6:2:0",
+        "malformed": false,
+        "native_max_new_tokens": 512,
+        "native_stop": "</explanation>",
+        "raw": "<explanation>\nParallel grammatical structure pattern: the text alternates between \"The [role] checked/updated [document]\" and \"The [role] read [document] and [action]\" constructions, establishing a template.\n\nThe \"document name\" substitution pattern from the first sentence is being mirrored in the second sentence, with \"safety report\" and \"technical document\" as placeholders, suggesting continuation of this structured example format.\n\nFinal fragment \"the engineer reviewed the control panel and adjusted the protection system\" is an incomplete compound predicate mid-clause (\"Then the engineer...checked the fault logic and adjusted the safety system\"), expecting continuation with another coordinated action or clause, likely a noun phrase or verb phrase completing the technical scenario.\n\"Then the engineer worked on the control logic and adjusted the safety system\" \u2014 expects continuation like \"to ensure...\" or a new clause about another system.</explanation>",
+        "text": "Parallel grammatical structure pattern: the text alternates between \"The [role] checked/updated [document]\" and \"The [role] read [document] and [action]\" constructions, establishing a template.\n\nThe \"document name\" substitution pattern from the first sentence is being mirrored in the second sentence, with \"safety report\" and \"technical document\" as placeholders, suggesting continuation of this structured example format.\n\nFinal fragment \"the engineer reviewed the control panel and adjusted the protection system\" is an incomplete compound predicate mid-clause (\"Then the engineer...checked the fault logic and adjusted the safety system\"), expecting continuation with another coordinated action or clause, likely a noun phrase or verb phrase completing the technical scenario.\n\"Then the engineer worked on the control logic and adjusted the safety system\" \u2014 expects continuation like \"to ensure...\" or a new clause about another system.",
+        "truncated": false
+      },
+      {
+        "feature": "asserted_vs_hypothetical",
+        "id": "asserted_vs_hypothetical:6:2:1",
+        "malformed": false,
+        "native_max_new_tokens": 512,
+        "native_stop": "</explanation>",
+        "raw": "<explanation>\nParallel grammatical structure pattern: the text alternates between \"The clerk checked X and updated Y\" and \"The engineer inspected X and adjusted Y\" constructions, establishing a template for paired actions.\n\nThe pedagogical exercise format (identifying \"correct\" vs \"incorrect\" sentences) signals continuation of the same syntactic pattern, likely introducing another clause or sentence about document compliance.\n\nFinal fragment \"Then the engineer inspected the safety circuit and adjusted the protection system\" is an incomplete clause mid-action, strongly expecting continuation with another coordinated verb phrase or object (e.g., \"to ensure...\" or \"and modified the code\").\n\"Then the engineer ran the test procedure, then the engineer changed the control parameters and adjusted the safety system\" \u2014 a parallel continuation about technical/engineering actions is expected next, likely completing with a third coordinated action or result phrase about the safety system.</explanation>",
+        "text": "Parallel grammatical structure pattern: the text alternates between \"The clerk checked X and updated Y\" and \"The engineer inspected X and adjusted Y\" constructions, establishing a template for paired actions.\n\nThe pedagogical exercise format (identifying \"correct\" vs \"incorrect\" sentences) signals continuation of the same syntactic pattern, likely introducing another clause or sentence about document compliance.\n\nFinal fragment \"Then the engineer inspected the safety circuit and adjusted the protection system\" is an incomplete clause mid-action, strongly expecting continuation with another coordinated verb phrase or object (e.g., \"to ensure...\" or \"and modified the code\").\n\"Then the engineer ran the test procedure, then the engineer changed the control parameters and adjusted the safety system\" \u2014 a parallel continuation about technical/engineering actions is expected next, likely completing with a third coordinated action or result phrase about the safety system.",
+        "truncated": false
+      },
+      {
+        "feature": "asserted_vs_hypothetical",
+        "id": "asserted_vs_hypothetical:6:3:0",
+        "malformed": false,
+        "native_max_new_tokens": 512,
+        "native_stop": "</explanation>",
+        "raw": "<explanation>\nParallel grammatical structure pattern: each sentence pairs a \"document\" clause with a \"but\" clause, establishing a strict template for continuation.\n\nThe \"but\" clause introduces a second agent performing a different action, mirroring the earlier \"reviewed the document and checked the compliance report\" structure \u2014 a second coordinated verb phrase is expected.\n\nFinal fragment \"the engineer followed the procedure, then inspected the control panel and adjusted the safety system\" is mid-clause, strongly implying continuation with another coordinated action or object phrase (e.g., \"to ensure...\" or a new clause about another system).\n\"In the next sentence, the engineer followed the procedure, then inspected the control logic and adjusted the safety system\" \u2014 a fabricated filler pattern continuing with technical/engineering terminology.\n\"the engineer checked the control logic and adjusted the safety system\" \u2014 incomplete.</explanation>",
+        "text": "Parallel grammatical structure pattern: each sentence pairs a \"document\" clause with a \"but\" clause, establishing a strict template for continuation.\n\nThe \"but\" clause introduces a second agent performing a different action, mirroring the earlier \"reviewed the document and checked the compliance report\" structure \u2014 a second coordinated verb phrase is expected.\n\nFinal fragment \"the engineer followed the procedure, then inspected the control panel and adjusted the safety system\" is mid-clause, strongly implying continuation with another coordinated action or object phrase (e.g., \"to ensure...\" or a new clause about another system).\n\"In the next sentence, the engineer followed the procedure, then inspected the control logic and adjusted the safety system\" \u2014 a fabricated filler pattern continuing with technical/engineering terminology.\n\"the engineer checked the control logic and adjusted the safety system\" \u2014 incomplete.",
+        "truncated": false
+      },
+      {
+        "feature": "asserted_vs_hypothetical",
+        "id": "asserted_vs_hypothetical:6:3:1",
+        "malformed": false,
+        "native_max_new_tokens": 512,
+        "native_stop": "</explanation>",
+        "raw": "<explanation>\nParallel grammatical structure pattern: the text alternates between \"The clerk checked X and updated Y\" and \"The engineer inspected X and adjusted Y\" constructions, establishing a template for paired actions.\n\nThe \"false/true\" document verification exercise pattern continues, with deliberate grammatical errors embedded in otherwise plausible bureaucratic sentences about document review.\n\nFinal fragment \"Then the engineer inspected the control logic and adjusted the safety system\" is an incomplete clause mid-action, strongly expecting continuation with another coordinated verb phrase or object (e.g., \"to ensure...\" or \"the safety protocol\").\n\"Then the engineer was a different person, who ran the test procedure, changed the control settings and adjusted the protection system\" \u2014 the sentence continues, likely adding another coordinated action or completing a description of the engineering intervention.\n\"the engineer inspected the control circuit and adjusted the safety system\"</explanation>",
+        "text": "Parallel grammatical structure pattern: the text alternates between \"The clerk checked X and updated Y\" and \"The engineer inspected X and adjusted Y\" constructions, establishing a template for paired actions.\n\nThe \"false/true\" document verification exercise pattern continues, with deliberate grammatical errors embedded in otherwise plausible bureaucratic sentences about document review.\n\nFinal fragment \"Then the engineer inspected the control logic and adjusted the safety system\" is an incomplete clause mid-action, strongly expecting continuation with another coordinated verb phrase or object (e.g., \"to ensure...\" or \"the safety protocol\").\n\"Then the engineer was a different person, who ran the test procedure, changed the control settings and adjusted the protection system\" \u2014 the sentence continues, likely adding another coordinated action or completing a description of the engineering intervention.\n\"the engineer inspected the control circuit and adjusted the safety system\"",
+        "truncated": false
+      }
+    ],
+    "source_job_sha256": "0bc956556beed46ad09a643082ee1492aae0462cf8d7c1b2b5026e5819a292e2"
+  }
+}

@@ -1,0 +1,680 @@
+{
+ "meta": {
+  "created": "2026-10-07T13:55:32+00:00",
+  "seed": 20261007,
+  "n_pairs": 8,
+  "families": [
+   "choice"
+  ],
+  "sha256_items": "e7cbe41d755750413c9c1d3d5af7f0a21f15042693a9ae469a571b865a5a9115",
+  "frozen": false,
+  "balance_checks": {
+   "n_pairs": 8,
+   "n_items": 16,
+   "first_listed_position_counts": {
+    "candidates[0]": 8,
+    "candidates[1]": 8
+   },
+   "each_option_first_listed_exactly_once": true,
+   "templates_used": [
+    "choice-t1",
+    "choice-t2",
+    "choice-t3",
+    "choice-t4",
+    "choice-t5"
+   ],
+   "option_types": [
+    "colour",
+    "tool",
+    "drink",
+    "city",
+    "fruit",
+    "animal",
+    "shape",
+    "number word"
+   ]
+  }
+ },
+ "items": [
+  {
+   "item_id": "choice-01A",
+   "pair_id": "choice-01",
+   "version": "A",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t5",
+   "prompt_text": "Select red or blue. Respond with just the word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "red",
+     "blue"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "red",
+     "blue"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(red|blue)\\b",
+   "construction": {
+    "first_mentioned_candidate": "red",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "colour",
+    "first_listed_position": 0
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-01B",
+   "pair_id": "choice-01",
+   "version": "B",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t5",
+   "prompt_text": "Select blue or red. Respond with just the word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "red",
+     "blue"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "red",
+     "blue"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(red|blue)\\b",
+   "construction": {
+    "first_mentioned_candidate": "blue",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "colour",
+    "first_listed_position": 1
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-02A",
+   "pair_id": "choice-02",
+   "version": "A",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t5",
+   "prompt_text": "Select saw or hammer. Respond with just the word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "saw",
+     "hammer"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "saw",
+     "hammer"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(saw|hammer)\\b",
+   "construction": {
+    "first_mentioned_candidate": "saw",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "tool",
+    "first_listed_position": 0
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-02B",
+   "pair_id": "choice-02",
+   "version": "B",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t5",
+   "prompt_text": "Select hammer or saw. Respond with just the word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "saw",
+     "hammer"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "saw",
+     "hammer"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(saw|hammer)\\b",
+   "construction": {
+    "first_mentioned_candidate": "hammer",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "tool",
+    "first_listed_position": 1
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-03A",
+   "pair_id": "choice-03",
+   "version": "A",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t3",
+   "prompt_text": "You must choose between tea and coffee. Reply with your choice only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "tea",
+     "coffee"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "tea",
+     "coffee"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(tea|coffee)\\b",
+   "construction": {
+    "first_mentioned_candidate": "tea",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "drink",
+    "first_listed_position": 0
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-03B",
+   "pair_id": "choice-03",
+   "version": "B",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t3",
+   "prompt_text": "You must choose between coffee and tea. Reply with your choice only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "tea",
+     "coffee"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "tea",
+     "coffee"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(tea|coffee)\\b",
+   "construction": {
+    "first_mentioned_candidate": "coffee",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "drink",
+    "first_listed_position": 1
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-04A",
+   "pair_id": "choice-04",
+   "version": "A",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t3",
+   "prompt_text": "You must choose between Rome and Paris. Reply with your choice only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "Rome",
+     "Paris"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "Rome",
+     "Paris"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(Rome|Paris)\\b",
+   "construction": {
+    "first_mentioned_candidate": "Rome",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "city",
+    "first_listed_position": 0
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-04B",
+   "pair_id": "choice-04",
+   "version": "B",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t3",
+   "prompt_text": "You must choose between Paris and Rome. Reply with your choice only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "Rome",
+     "Paris"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "Rome",
+     "Paris"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(Rome|Paris)\\b",
+   "construction": {
+    "first_mentioned_candidate": "Paris",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "city",
+    "first_listed_position": 1
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-05A",
+   "pair_id": "choice-05",
+   "version": "A",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t4",
+   "prompt_text": "Which do you prefer, pear or apple? Answer with one word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "pear",
+     "apple"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "pear",
+     "apple"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(pear|apple)\\b",
+   "construction": {
+    "first_mentioned_candidate": "pear",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "fruit",
+    "first_listed_position": 0
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-05B",
+   "pair_id": "choice-05",
+   "version": "B",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t4",
+   "prompt_text": "Which do you prefer, apple or pear? Answer with one word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "pear",
+     "apple"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "pear",
+     "apple"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(pear|apple)\\b",
+   "construction": {
+    "first_mentioned_candidate": "apple",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "fruit",
+    "first_listed_position": 1
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-06A",
+   "pair_id": "choice-06",
+   "version": "A",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t1",
+   "prompt_text": "Choose either cat or dog and reply with that word only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "cat",
+     "dog"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "cat",
+     "dog"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(cat|dog)\\b",
+   "construction": {
+    "first_mentioned_candidate": "cat",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "animal",
+    "first_listed_position": 0
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-06B",
+   "pair_id": "choice-06",
+   "version": "B",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t1",
+   "prompt_text": "Choose either dog or cat and reply with that word only.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "cat",
+     "dog"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "cat",
+     "dog"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(cat|dog)\\b",
+   "construction": {
+    "first_mentioned_candidate": "dog",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "animal",
+    "first_listed_position": 1
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-07A",
+   "pair_id": "choice-07",
+   "version": "A",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t2",
+   "prompt_text": "Pick one: circle or square. One word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "circle",
+     "square"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "circle",
+     "square"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(circle|square)\\b",
+   "construction": {
+    "first_mentioned_candidate": "circle",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "shape",
+    "first_listed_position": 0
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-07B",
+   "pair_id": "choice-07",
+   "version": "B",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t2",
+   "prompt_text": "Pick one: square or circle. One word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "circle",
+     "square"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "circle",
+     "square"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(circle|square)\\b",
+   "construction": {
+    "first_mentioned_candidate": "square",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "shape",
+    "first_listed_position": 1
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-08A",
+   "pair_id": "choice-08",
+   "version": "A",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t2",
+   "prompt_text": "Pick one: seven or three. One word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "seven",
+     "three"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "seven",
+     "three"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(seven|three)\\b",
+   "construction": {
+    "first_mentioned_candidate": "seven",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "number word",
+    "first_listed_position": 0
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  },
+  {
+   "item_id": "choice-08B",
+   "pair_id": "choice-08",
+   "version": "B",
+   "family": "choice",
+   "split": "test",
+   "template_id": "choice-t2",
+   "prompt_text": "Pick one: three or seven. One word.",
+   "render": "chat",
+   "system": null,
+   "primary": {
+    "name": "model_choice",
+    "question": "Which of the two options will the model choose?",
+    "candidates": [
+     "seven",
+     "three"
+    ],
+    "answer": null,
+    "answer_aliases": [],
+    "answer_source": "target_greedy"
+   },
+   "secondary": {
+    "entities": [
+     "seven",
+     "three"
+    ],
+    "objects": [],
+    "relation": null
+   },
+   "target_answer_regex": "(?i)\\b(seven|three)\\b",
+   "construction": {
+    "first_mentioned_candidate": "three",
+    "answer_position": null,
+    "cue_position": "n/a",
+    "other_candidate": null,
+    "option_type": "number word",
+    "first_listed_position": 1
+   },
+   "notes": "answer key = target model's own greedy answer (filled by analysis); versions swap option order"
+  }
+ ]
+}

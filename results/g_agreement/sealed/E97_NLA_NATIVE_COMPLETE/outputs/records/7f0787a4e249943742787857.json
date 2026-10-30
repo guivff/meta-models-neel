@@ -1,0 +1,12 @@
+{
+  "id": "7f0787a4e249943742787857",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: a rule is given, then a task is assigned, now requiring a model response demonstrating the rule's application.\n\nThe rule explicitly states \"the answer should be based on the fact that the climate is warming,\" constraining the response to climate-warming content about the specified topic.\n\n\"Topic: [topic]\\nInstruction: [instruction]\\nAnswer:\" is a structured few-shot/template format, where \"Answer:\" is the final prompt label requiring the model's generated response \u2014 likely a short explanatory sentence about the topic, following the warming-based instruction.\n\"Please generate a response about the history of the [topic] based on the fact that the climate is warming.\\nTopic: [topic]\\nInstruction: [instruction]\\nAnswer:\" \u2014 the final token expects the model's actual answer text, beginning the demonstration.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: a rule is given, then a task is assigned, now requiring a model response demonstrating the rule's application.\n\nThe rule explicitly states \"the answer should be based on the fact that the climate is warming,\" constraining the response to climate-warming content about the specified topic.\n\n\"Topic: [topic]\\nInstruction: [instruction]\\nAnswer:\" is a structured few-shot/template format, where \"Answer:\" is the final prompt label requiring the model's generated response \u2014 likely a short explanatory sentence about the topic, following the warming-based instruction.\n\"Please generate a response about the history of the [topic] based on the fact that the climate is warming.\\nTopic: [topic]\\nInstruction: [instruction]\\nAnswer:\" \u2014 the final token expects the model's actual answer text, beginning the demonstration.",
+  "truncated": false
+}

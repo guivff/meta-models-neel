@@ -1,0 +1,12 @@
+{
+  "id": "ca0b3e77ce396a548086c6df",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict Q&A pattern: given a sentence, output \"Happy\" or \"Sad\" based on the defined rule.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals a demonstration of the format, where the model must now show the correct response for the example sentence \"I am happy today.\"\n\n\"Reply:\" is the final token, acting as a label/field prompt requiring the actual answer (\"Happy\") to follow immediately, completing the example block.\n\"Given the following example:\nSentence: 'I am happy today.'\nPrevious reply: 'Sad'\nSentence: 'I am happy today.'\nReply:\" \u2014 this structured template demands the model output the correct label for the example, likely \"Happy\" or a formatted answer.\n\"Reply:\" closes the prompt, expecting the model's response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict Q&A pattern: given a sentence, output \"Happy\" or \"Sad\" based on the defined rule.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals a demonstration of the format, where the model must now show the correct response for the example sentence \"I am happy today.\"\n\n\"Reply:\" is the final token, acting as a label/field prompt requiring the actual answer (\"Happy\") to follow immediately, completing the example block.\n\"Given the following example:\nSentence: 'I am happy today.'\nPrevious reply: 'Sad'\nSentence: 'I am happy today.'\nReply:\" \u2014 this structured template demands the model output the correct label for the example, likely \"Happy\" or a formatted answer.\n\"Reply:\" closes the prompt, expecting the model's response.",
+  "truncated": false
+}

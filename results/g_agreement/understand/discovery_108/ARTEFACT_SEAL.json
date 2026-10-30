@@ -1,0 +1,60 @@
+{
+  "schema": "section108-artefact-seal-v1",
+  "status": "SECTION108_ARTEFACTS_SEALED",
+  "sealed_at": "2026-10-25T09:19:24Z",
+  "by": "integrator",
+  "authority": "BRIEF_UNDERSTAND §123 item 3 (c90267ce); §108 registered 09305bab, results 2d2d3c66",
+  "committed_files": {
+    "runA_claude_FROZEN_CODE_MANIFEST.json": "70f6d0c51210ebbe4f7ea57574252ca29ddf7879aacd3f500a1bdcd863e6f676",
+    "runA_claude_HYPOTHESES_FROZEN.md": "a2af72a5e67cf937e3d68638db6ac41d19c278e66cc6d8b9b83e41f55e9019c5",
+    "runB_codex_FROZEN_FILES.json": "9c3cdf28547a5dff8b37ed30bed5d2f3e8d2dc41b78399bbe14cdc43f780a334",
+    "runB_codex_HYPOTHESES_FROZEN.md": "e5413d78afd9753aee6c03e7ad766c8f2ce216eaa4131798d880548e71c41fda"
+  },
+  "committed_file_sources": {
+    "runA_claude_HYPOTHESES_FROZEN.md": "runA_claude_audit.zip:out/HYPOTHESES_FROZEN.md",
+    "runA_claude_FROZEN_CODE_MANIFEST.json": "runA_claude_audit.zip:out/FROZEN_CODE_MANIFEST.json",
+    "runB_codex_HYPOTHESES_FROZEN.md": "runB_codex_out_work.zip:out/provenance/HYPOTHESES_FROZEN.md",
+    "runB_codex_FROZEN_FILES.json": "runB_codex_out_work.zip:out/consolidation/FROZEN_FILES.json"
+  },
+  "external_artefacts": {
+    "runA_claude_DISCOVERY_REPORT.md": {
+      "sha256": "475b0f4cd185e8d8783674e7f6ee4f775b039cad1c0dacd1a193743e992b2732",
+      "bytes": 49801,
+      "location": "cache/g_agreement/understand/discovery/ (git-ignored; not committed)"
+    },
+    "runB_codex_DISCOVERY_REPORT.md": {
+      "sha256": "f5a1e0c120a1a90f8d070141f31808e0adf8d4b3b35cc681b01c444bddf93410",
+      "bytes": 66641,
+      "location": "cache/g_agreement/understand/discovery/ (git-ignored; not committed)"
+    },
+    "runA_claude_audit.zip": {
+      "sha256": "7f3064916e6e33200bb49f535dad133d0ec6575913546fa38ed588a42931d11d",
+      "bytes": 1457393,
+      "location": "cache/g_agreement/understand/discovery/ (git-ignored; not committed)"
+    },
+    "runB_codex_out_work.zip": {
+      "sha256": "15800cf6c1286ad60ea9d68c4de2c8e37edac52a25e9edd2aa9e2e3fe2f2b568",
+      "bytes": 1489031,
+      "location": "cache/g_agreement/understand/discovery/ (git-ignored; not committed)"
+    },
+    "holdout_SEALED.zip": {
+      "sha256": "9478f103c48d19c57e23d72d0ba620e37e64b6186af6a856e30f63ead423b88c",
+      "bytes": 2038811,
+      "registered_sha256_matches": true,
+      "location": "coordinator local copy (not committed)"
+    },
+    "discovery_data.zip": {
+      "sha256": "7ded779383efeda9d983ad472049fd216b1273ed91c5fc630670612b7b86e2ba",
+      "bytes": 3766146,
+      "registered_sha256_matches": true,
+      "location": "coordinator local copy (not committed)"
+    },
+    "discovery_prompts.zip": {
+      "sha256": "929c65c9080e6ab1f21e6463178099a7d71cb444250b4d202ef147dd10eb6e00",
+      "bytes": 9743,
+      "registered_sha256_matches": true,
+      "location": "coordinator local copy (not committed)"
+    }
+  },
+  "note": "The two frozen rule lists (Run A Claude Code: 18 frozen tests; Run B Codex: 28) are committed verbatim from each run's work archive. Reports, work archives, the sealed holdout, the pack and the prompts stay uncommitted; their sha256s are recorded here, and the holdout, pack and prompt hashes were re-verified against §108's registered values. No rule, result or verdict changed."
+}

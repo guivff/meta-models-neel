@@ -1,0 +1,12 @@
+{
+ "experiment": "E122",
+ "issuer": "Integrator Q (Track Q runner, §232 E122 790dd6136; addition 2 e3d957076)",
+ "written_utc": "2026-10-29T12:45Z",
+ "INPUT_SEAL_sha256": "3308228f0455c4b11e0c8ae9d52446172c86323f7b3aaa2d621ff0071f516089",
+ "JOIN_SEAL_sha256 (CPU only, never on a pod)": "80e9422c67f1a3c3a673c0b8751509c287b479b43aa1283721529c5249105439",
+ "runner": {"worker": "projects/g_agreement/e122_run/worker122.py (copy of worker105)", "scoring": "projects/g_agreement/e105/scoring.py frozen 87145590, sha c4f9daed, called unchanged", "tests": "test_worker122.py 3/3 PASS in the frozen E105 source tree (8915a698)"},
+ "parts": {"a": "600 items (150 quartets: 50 dev + 100 test), unpatched, four contrasts each", "b": "200 T + 200 S block-44 read-token transplants on the 100 test quartets x 2 genres; S donors: same condition (addressed, same genre) from another test quartet, seed 20261030"},
+ "sources": {"contrasts": "W-text CONTRASTS_SEAL 23c9b0f8 (713cbdeda, frozen 12:27:41Z, before any E122 capture)", "e85_items": "E85 package INPUT_SEAL 114e18fb (bound by the E85 final binding)", "e85_block44": "E85 a2 verified capture STAGE_SEAL d77cfa74 (acts44 600 x 5120)", "e85_labels": "LABELS.PRIVATE 5ed31188, CPU only"},
+ "candidate_order": "[positive, negative] per contrast, as frozen; c = positive - negative computed by the adapter",
+ "custody": "Part (b) outputs stay unscored until R-BEV1 is met on test (Guiv's direction for E122). Under addition 2 nobody opens any output until W-internals-B's adapter is committed with synthetic tests."
+}

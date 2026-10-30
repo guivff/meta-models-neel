@@ -1,0 +1,677 @@
+--- H4/baseline/projects/g_agreement/e74/resident.py
++++ H4/prepared/projects/g_agreement/e74/resident.py
+@@ -298 +298 @@
+-    core.check_staging_receipt(staging, manifest, Path(req['model_dir']), Path(req['adapter_dir']), req['allocation_start_epoch'], 4500)
++    core.check_staging_receipt(staging, manifest, Path(req['model_dir']), Path(req['adapter_dir']), req['allocation_start_epoch'], 4500, admission=admission)
+--- H4/baseline/projects/g_agreement/e74/smoke.py
++++ H4/prepared/projects/g_agreement/e74/smoke.py
+@@ -179 +179 @@
+-                          adapter_dir: Path, allocation_start: float, staging_limit_seconds: int = 900) -> dict:
++                          adapter_dir: Path, allocation_start: float, staging_limit_seconds: int = 900, *, admission=None) -> dict:
+@@ -194,0 +195,10 @@
++    storage = 'local_nvme'
++    if isinstance(receipt, dict) and receipt.get('storage') == 'runpod_fuse':
++        from . import storage_policy
++        required.add('storage_exception_proof')
++        if admission is None:
++            raise ValueError('FUSE staging requires original bound admission')
++        storage_policy.verify_receipt(receipt['storage_exception_proof'], admission, time.time())
++        if admission['allocation_start_epoch'] != allocation_start or receipt['storage_exception_proof']['checked_epoch'] > receipt['completed_epoch']:
++            raise ValueError('FUSE proof allocation or staging chronology differs')
++        storage = 'runpod_fuse'
+@@ -201 +211 @@
+-             "storage": "local_nvme", "full_weight_sha256_verified": True,
++             "storage": storage, "full_weight_sha256_verified": True,
+@@ -236 +246 @@
+-    return {"files_bound_to_cpu_checksums": len(expected_files), "storage": "local_nvme",
++    return {"files_bound_to_cpu_checksums": len(expected_files), "storage": storage,
+--- H4/baseline/projects/g_agreement/e74/stage.py
++++ H4/prepared/projects/g_agreement/e74/stage.py
+@@ -19 +19 @@
+-from . import ops, smoke as core, hardware
++from . import ops, smoke as core, hardware, storage_policy
+@@ -142 +141,0 @@
+-    disk = nvme_evidence(out)
+@@ -147,0 +147,9 @@
++    if 'storage_exception' in admission:
++        def metadata(argv):
++            ops.deadline(end)
++            result = subprocess.check_output(argv, timeout=max(.01, end-time.time()))
++            ops.require(len(result) <= 262144, 'storage metadata too large')
++            return json.loads(result)
++        disk = storage_policy.observe(out, admission, needed, time.time(), metadata, shutil.disk_usage)
++    else:
++        disk = nvme_evidence(out)
+@@ -159 +167 @@
+-        storage='local_nvme', full_weight_sha256_verified=True, canonical_cache_unchanged=True,
++        storage=disk.get('storage', 'local_nvme'), full_weight_sha256_verified=True, canonical_cache_unchanged=True,
+@@ -162 +170,3 @@
+-    core.check_staging_receipt(receipt, manifest, model, adapter, admission['allocation_start_epoch'], 4500)
++    if receipt['storage'] == 'runpod_fuse':
++        receipt['storage_exception_proof'] = disk
++    core.check_staging_receipt(receipt, manifest, model, adapter, admission['allocation_start_epoch'], 4500, admission=admission)
+--- H4/baseline/projects/g_agreement/e74/storage_policy.py
++++ H4/prepared/projects/g_agreement/e74/storage_policy.py
+@@ -0,0 +1,104 @@
++"""E74's authorised RunPod FUSE exception; CPU validation only, no allocation.
++
++The operator must obtain the volume contract from the actual authenticated pod
++response and bind it into the existing SHA-bound I-2 admission. A FUSE pool's df
++total is never evidence of the pod's allocated capacity. No filesystem is
++reclassified as NVMe. Existing transfer/fsync/reread and engine gates still apply.
++"""
++import hashlib
++import json
++import math
++from pathlib import Path
++
++AUTHORITY_SHA256 = 'a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43'
++WEIGHT_BYTES = 466355755887
++MIN_REQUIRED_BYTES = 468704353377
++FUSE_TYPES = frozenset({'fuse', 'fuse.mfs', 'fuse3', 'fuse3.mfs'})
++
++
++def require(condition, message):
++    if not condition:
++        raise ValueError(message)
++
++
++def digest(value):
++    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':'),
++                                     allow_nan=False).encode()).hexdigest()
++
++
++def number(value):
++    require(type(value) in (int, float) and math.isfinite(value), 'finite number required')
++    return value
++
++
++def contract(admission, mount, free_bytes, required_bytes, now):
++    """Validate actual FUSE observation against the allocation-bound contract.
++
++    The contract is root/operator evidence, not a remotely self-issued waiver.
++    The caller first verifies the enclosing admission SHA and provider identity.
++    remaining_seconds includes all staging, idle, boot, smoke, capture, readouts
++    and closeout; it uses the existing whole-endpoint clock and cost padding.
++    """
++    c = admission.get('storage_exception')
++    require(isinstance(c, dict), 'FUSE requires allocation-bound storage exception')
++    keys = {'authority_sha256', 'allocation_receipt_sha256', 'run_identity_sha256',
++            'allocation_start_epoch', 'provider_stop_epoch', 'provider',
++            'volume_mount_path', 'allocated_volume_bytes', 'existing_volume_bytes',
++            'capacity_observed_epoch', 'remaining_seconds'}
++    require(set(c) == keys, 'storage contract fields differ')
++    require(c['authority_sha256'] == AUTHORITY_SHA256 and c['provider'] == 'RunPod',
++            'storage exception authority/provider differs')
++    for key in ('allocation_receipt_sha256', 'run_identity_sha256'):
++        require(isinstance(c[key], str) and len(c[key]) == 64 and
++                all(ch in '0123456789abcdef' for ch in c[key]), 'actual allocation identity required')
++        require(c[key] == admission.get(key), 'storage contract belongs to another allocation')
++    require(c['allocation_start_epoch'] == admission['allocation_start_epoch'] and
++            c['provider_stop_epoch'] == admission['provider_stop_epoch'], 'original allocation clocks differ')
++    now = number(now)
++    require(0 < c['allocation_start_epoch'] <= number(c['capacity_observed_epoch']) <= now <
++            c['provider_stop_epoch'], 'capacity observation outside original allocation')
++    require(isinstance(mount, dict) and len(mount.get('filesystems', [])) == 1,
++            'single actual filesystem observation required')
++    fs = mount['filesystems'][0]
++    require(fs['fstype'] in FUSE_TYPES, 'exception only admits RunPod FUSE')
++    require(fs['target'] == c['volume_mount_path'] == '/workspace', 'actual RunPod workspace mount required')
++    for value in (c['allocated_volume_bytes'], c['existing_volume_bytes'], free_bytes, required_bytes):
++        require(type(value) is int and value >= 0, 'nonnegative capacity bytes required')
++    require(required_bytes >= MIN_REQUIRED_BYTES and
++            c['allocated_volume_bytes'] - c['existing_volume_bytes'] >= required_bytes and
++            free_bytes >= required_bytes, 'insufficient allocated capacity or actual filesystem free space')
++    remaining = number(c['remaining_seconds'])
++    require(remaining > 0 and now + remaining <= c['provider_stop_epoch'], 'original full endpoint cannot fit')
++    rate = number(admission['replica_hourly_usd'])
++    extras = number(admission['other_cost_upper_bound_usd'])
++    cap = number(admission['cap_usd'])
++    require(rate > 0 and extras >= 0 and cap > 0, 'invalid forecast inputs')
++    padded = ((now - c['allocation_start_epoch'] + remaining) * rate / 3600 + extras) * 1.25
++    require(padded <= cap, 'full endpoint padded forecast exceeds cap')
++    return {'storage': 'runpod_fuse', 'local_nvme_verified': False,
++            'authority_sha256': AUTHORITY_SHA256, 'contract_sha256': digest(c),
++            'allocation_receipt_sha256': c['allocation_receipt_sha256'],
++            'run_identity_sha256': c['run_identity_sha256'],
++            'findmnt': mount, 'free_bytes': free_bytes, 'required_bytes': required_bytes,
++            'allocated_volume_bytes': c['allocated_volume_bytes'],
++            'existing_volume_bytes': c['existing_volume_bytes'],
++            'checked_epoch': now, 'forecast_times_1_25_usd': padded,
++            'no_second_full_cache': True}
++
++
++def verify_receipt(proof, admission, now):
++    require(isinstance(proof, dict), 'storage proof required')
++    expected = contract(admission, proof['findmnt'], proof['free_bytes'], proof['required_bytes'],
++                        proof['checked_epoch'])
++    require(proof == expected and proof['checked_epoch'] <= number(now), 'storage proof changed or is future dated')
++    require(now < admission['provider_stop_epoch'], 'original provider endpoint expired')
++    return proof
++
++
++def observe(path, admission, required_bytes, now, metadata, disk_usage):
++    """Read-only mount/capacity observation; no writes, transfers or GPU calls."""
++    path = Path(path).resolve()
++    require(path == Path('/workspace') or Path('/workspace') in path.parents,
++            'FUSE exception only covers workspace descendants')
++    mount = metadata(['findmnt', '-J', '-T', str(path), '-o', 'SOURCE,TARGET,FSTYPE'])
++    return contract(admission, mount, disk_usage(path).free, required_bytes, now)
+--- H8/baseline/projects/g_agreement/e74/resident.py
++++ H8/prepared/projects/g_agreement/e74/resident.py
+@@ -261 +261 @@
+-    core.check_staging_receipt(staging, manifest, Path(req['model_dir']), Path(req['adapter_dir']), req['allocation_start_epoch'], 4500)
++    core.check_staging_receipt(staging, manifest, Path(req['model_dir']), Path(req['adapter_dir']), req['allocation_start_epoch'], 4500, admission=admission)
+--- H8/baseline/projects/g_agreement/e74/smoke.py
++++ H8/prepared/projects/g_agreement/e74/smoke.py
+@@ -179 +179 @@
+-                          adapter_dir: Path, allocation_start: float, staging_limit_seconds: int = 900) -> dict:
++                          adapter_dir: Path, allocation_start: float, staging_limit_seconds: int = 900, *, admission=None) -> dict:
+@@ -194,0 +195,10 @@
++    storage = 'local_nvme'
++    if isinstance(receipt, dict) and receipt.get('storage') == 'runpod_fuse':
++        from . import storage_policy
++        required.add('storage_exception_proof')
++        if admission is None:
++            raise ValueError('FUSE staging requires original bound admission')
++        storage_policy.verify_receipt(receipt['storage_exception_proof'], admission, time.time())
++        if admission['allocation_start_epoch'] != allocation_start or receipt['storage_exception_proof']['checked_epoch'] > receipt['completed_epoch']:
++            raise ValueError('FUSE proof allocation or staging chronology differs')
++        storage = 'runpod_fuse'
+@@ -201 +211 @@
+-             "storage": "local_nvme", "full_weight_sha256_verified": True,
++             "storage": storage, "full_weight_sha256_verified": True,
+@@ -236 +246 @@
+-    return {"files_bound_to_cpu_checksums": len(expected_files), "storage": "local_nvme",
++    return {"files_bound_to_cpu_checksums": len(expected_files), "storage": storage,
+--- H8/baseline/projects/g_agreement/e74/stage.py
++++ H8/prepared/projects/g_agreement/e74/stage.py
+@@ -19 +19 @@
+-from . import ops, smoke as core, hardware
++from . import ops, smoke as core, hardware, storage_policy
+@@ -142 +141,0 @@
+-    disk = nvme_evidence(out)
+@@ -147,0 +147,9 @@
++    if 'storage_exception' in admission:
++        def metadata(argv):
++            ops.deadline(end)
++            result = subprocess.check_output(argv, timeout=max(.01, end-time.time()))
++            ops.require(len(result) <= 262144, 'storage metadata too large')
++            return json.loads(result)
++        disk = storage_policy.observe(out, admission, needed, time.time(), metadata, shutil.disk_usage)
++    else:
++        disk = nvme_evidence(out)
+@@ -159 +167 @@
+-        storage='local_nvme', full_weight_sha256_verified=True, canonical_cache_unchanged=True,
++        storage=disk.get('storage', 'local_nvme'), full_weight_sha256_verified=True, canonical_cache_unchanged=True,
+@@ -162 +170,3 @@
+-    core.check_staging_receipt(receipt, manifest, model, adapter, admission['allocation_start_epoch'], 4500)
++    if receipt['storage'] == 'runpod_fuse':
++        receipt['storage_exception_proof'] = disk
++    core.check_staging_receipt(receipt, manifest, model, adapter, admission['allocation_start_epoch'], 4500, admission=admission)
+--- H8/baseline/projects/g_agreement/e74/storage_policy.py
++++ H8/prepared/projects/g_agreement/e74/storage_policy.py
+@@ -0,0 +1,104 @@
++"""E74's authorised RunPod FUSE exception; CPU validation only, no allocation.
++
++The operator must obtain the volume contract from the actual authenticated pod
++response and bind it into the existing SHA-bound I-2 admission. A FUSE pool's df
++total is never evidence of the pod's allocated capacity. No filesystem is
++reclassified as NVMe. Existing transfer/fsync/reread and engine gates still apply.
++"""
++import hashlib
++import json
++import math
++from pathlib import Path
++
++AUTHORITY_SHA256 = 'a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43'
++WEIGHT_BYTES = 466355755887
++MIN_REQUIRED_BYTES = 468704353377
++FUSE_TYPES = frozenset({'fuse', 'fuse.mfs', 'fuse3', 'fuse3.mfs'})
++
++
++def require(condition, message):
++    if not condition:
++        raise ValueError(message)
++
++
++def digest(value):
++    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':'),
++                                     allow_nan=False).encode()).hexdigest()
++
++
++def number(value):
++    require(type(value) in (int, float) and math.isfinite(value), 'finite number required')
++    return value
++
++
++def contract(admission, mount, free_bytes, required_bytes, now):
++    """Validate actual FUSE observation against the allocation-bound contract.
++
++    The contract is root/operator evidence, not a remotely self-issued waiver.
++    The caller first verifies the enclosing admission SHA and provider identity.
++    remaining_seconds includes all staging, idle, boot, smoke, capture, readouts
++    and closeout; it uses the existing whole-endpoint clock and cost padding.
++    """
++    c = admission.get('storage_exception')
++    require(isinstance(c, dict), 'FUSE requires allocation-bound storage exception')
++    keys = {'authority_sha256', 'allocation_receipt_sha256', 'run_identity_sha256',
++            'allocation_start_epoch', 'provider_stop_epoch', 'provider',
++            'volume_mount_path', 'allocated_volume_bytes', 'existing_volume_bytes',
++            'capacity_observed_epoch', 'remaining_seconds'}
++    require(set(c) == keys, 'storage contract fields differ')
++    require(c['authority_sha256'] == AUTHORITY_SHA256 and c['provider'] == 'RunPod',
++            'storage exception authority/provider differs')
++    for key in ('allocation_receipt_sha256', 'run_identity_sha256'):
++        require(isinstance(c[key], str) and len(c[key]) == 64 and
++                all(ch in '0123456789abcdef' for ch in c[key]), 'actual allocation identity required')
++        require(c[key] == admission.get(key), 'storage contract belongs to another allocation')
++    require(c['allocation_start_epoch'] == admission['allocation_start_epoch'] and
++            c['provider_stop_epoch'] == admission['provider_stop_epoch'], 'original allocation clocks differ')
++    now = number(now)
++    require(0 < c['allocation_start_epoch'] <= number(c['capacity_observed_epoch']) <= now <
++            c['provider_stop_epoch'], 'capacity observation outside original allocation')
++    require(isinstance(mount, dict) and len(mount.get('filesystems', [])) == 1,
++            'single actual filesystem observation required')
++    fs = mount['filesystems'][0]
++    require(fs['fstype'] in FUSE_TYPES, 'exception only admits RunPod FUSE')
++    require(fs['target'] == c['volume_mount_path'] == '/workspace', 'actual RunPod workspace mount required')
++    for value in (c['allocated_volume_bytes'], c['existing_volume_bytes'], free_bytes, required_bytes):
++        require(type(value) is int and value >= 0, 'nonnegative capacity bytes required')
++    require(required_bytes >= MIN_REQUIRED_BYTES and
++            c['allocated_volume_bytes'] - c['existing_volume_bytes'] >= required_bytes and
++            free_bytes >= required_bytes, 'insufficient allocated capacity or actual filesystem free space')
++    remaining = number(c['remaining_seconds'])
++    require(remaining > 0 and now + remaining <= c['provider_stop_epoch'], 'original full endpoint cannot fit')
++    rate = number(admission['replica_hourly_usd'])
++    extras = number(admission['other_cost_upper_bound_usd'])
++    cap = number(admission['cap_usd'])
++    require(rate > 0 and extras >= 0 and cap > 0, 'invalid forecast inputs')
++    padded = ((now - c['allocation_start_epoch'] + remaining) * rate / 3600 + extras) * 1.25
++    require(padded <= cap, 'full endpoint padded forecast exceeds cap')
++    return {'storage': 'runpod_fuse', 'local_nvme_verified': False,
++            'authority_sha256': AUTHORITY_SHA256, 'contract_sha256': digest(c),
++            'allocation_receipt_sha256': c['allocation_receipt_sha256'],
++            'run_identity_sha256': c['run_identity_sha256'],
++            'findmnt': mount, 'free_bytes': free_bytes, 'required_bytes': required_bytes,
++            'allocated_volume_bytes': c['allocated_volume_bytes'],
++            'existing_volume_bytes': c['existing_volume_bytes'],
++            'checked_epoch': now, 'forecast_times_1_25_usd': padded,
++            'no_second_full_cache': True}
++
++
++def verify_receipt(proof, admission, now):
++    require(isinstance(proof, dict), 'storage proof required')
++    expected = contract(admission, proof['findmnt'], proof['free_bytes'], proof['required_bytes'],
++                        proof['checked_epoch'])
++    require(proof == expected and proof['checked_epoch'] <= number(now), 'storage proof changed or is future dated')
++    require(now < admission['provider_stop_epoch'], 'original provider endpoint expired')
++    return proof
++
++
++def observe(path, admission, required_bytes, now, metadata, disk_usage):
++    """Read-only mount/capacity observation; no writes, transfers or GPU calls."""
++    path = Path(path).resolve()
++    require(path == Path('/workspace') or Path('/workspace') in path.parents,
++            'FUSE exception only covers workspace descendants')
++    mount = metadata(['findmnt', '-J', '-T', str(path), '-o', 'SOURCE,TARGET,FSTYPE'])
++    return contract(admission, mount, disk_usage(path).free, required_bytes, now)
+--- B4/baseline/projects/g_agreement/e74/resident.py
++++ B4/prepared/projects/g_agreement/e74/resident.py
+@@ -261 +261 @@
+-    core.check_staging_receipt(staging, manifest, Path(req['model_dir']), Path(req['adapter_dir']), req['allocation_start_epoch'], 4500)
++    core.check_staging_receipt(staging, manifest, Path(req['model_dir']), Path(req['adapter_dir']), req['allocation_start_epoch'], 4500, admission=admission)
+--- B4/baseline/projects/g_agreement/e74/smoke.py
++++ B4/prepared/projects/g_agreement/e74/smoke.py
+@@ -179 +179 @@
+-                          adapter_dir: Path, allocation_start: float, staging_limit_seconds: int = 900) -> dict:
++                          adapter_dir: Path, allocation_start: float, staging_limit_seconds: int = 900, *, admission=None) -> dict:
+@@ -194,0 +195,10 @@
++    storage = 'local_nvme'
++    if isinstance(receipt, dict) and receipt.get('storage') == 'runpod_fuse':
++        from . import storage_policy
++        required.add('storage_exception_proof')
++        if admission is None:
++            raise ValueError('FUSE staging requires original bound admission')
++        storage_policy.verify_receipt(receipt['storage_exception_proof'], admission, time.time())
++        if admission['allocation_start_epoch'] != allocation_start or receipt['storage_exception_proof']['checked_epoch'] > receipt['completed_epoch']:
++            raise ValueError('FUSE proof allocation or staging chronology differs')
++        storage = 'runpod_fuse'
+@@ -201 +211 @@
+-             "storage": "local_nvme", "full_weight_sha256_verified": True,
++             "storage": storage, "full_weight_sha256_verified": True,
+@@ -236 +246 @@
+-    return {"files_bound_to_cpu_checksums": len(expected_files), "storage": "local_nvme",
++    return {"files_bound_to_cpu_checksums": len(expected_files), "storage": storage,
+--- B4/baseline/projects/g_agreement/e74/stage.py
++++ B4/prepared/projects/g_agreement/e74/stage.py
+@@ -19 +19 @@
+-from . import ops, smoke as core, hardware
++from . import ops, smoke as core, hardware, storage_policy
+@@ -142 +141,0 @@
+-    disk = nvme_evidence(out)
+@@ -147,0 +147,9 @@
++    if 'storage_exception' in admission:
++        def metadata(argv):
++            ops.deadline(end)
++            result = subprocess.check_output(argv, timeout=max(.01, end-time.time()))
++            ops.require(len(result) <= 262144, 'storage metadata too large')
++            return json.loads(result)
++        disk = storage_policy.observe(out, admission, needed, time.time(), metadata, shutil.disk_usage)
++    else:
++        disk = nvme_evidence(out)
+@@ -159 +167 @@
+-        storage='local_nvme', full_weight_sha256_verified=True, canonical_cache_unchanged=True,
++        storage=disk.get('storage', 'local_nvme'), full_weight_sha256_verified=True, canonical_cache_unchanged=True,
+@@ -162 +170,3 @@
+-    core.check_staging_receipt(receipt, manifest, model, adapter, admission['allocation_start_epoch'], 4500)
++    if receipt['storage'] == 'runpod_fuse':
++        receipt['storage_exception_proof'] = disk
++    core.check_staging_receipt(receipt, manifest, model, adapter, admission['allocation_start_epoch'], 4500, admission=admission)
+--- B4/baseline/projects/g_agreement/e74/storage_policy.py
++++ B4/prepared/projects/g_agreement/e74/storage_policy.py
+@@ -0,0 +1,104 @@
++"""E74's authorised RunPod FUSE exception; CPU validation only, no allocation.
++
++The operator must obtain the volume contract from the actual authenticated pod
++response and bind it into the existing SHA-bound I-2 admission. A FUSE pool's df
++total is never evidence of the pod's allocated capacity. No filesystem is
++reclassified as NVMe. Existing transfer/fsync/reread and engine gates still apply.
++"""
++import hashlib
++import json
++import math
++from pathlib import Path
++
++AUTHORITY_SHA256 = 'a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43'
++WEIGHT_BYTES = 466355755887
++MIN_REQUIRED_BYTES = 468704353377
++FUSE_TYPES = frozenset({'fuse', 'fuse.mfs', 'fuse3', 'fuse3.mfs'})
++
++
++def require(condition, message):
++    if not condition:
++        raise ValueError(message)
++
++
++def digest(value):
++    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':'),
++                                     allow_nan=False).encode()).hexdigest()
++
++
++def number(value):
++    require(type(value) in (int, float) and math.isfinite(value), 'finite number required')
++    return value
++
++
++def contract(admission, mount, free_bytes, required_bytes, now):
++    """Validate actual FUSE observation against the allocation-bound contract.
++
++    The contract is root/operator evidence, not a remotely self-issued waiver.
++    The caller first verifies the enclosing admission SHA and provider identity.
++    remaining_seconds includes all staging, idle, boot, smoke, capture, readouts
++    and closeout; it uses the existing whole-endpoint clock and cost padding.
++    """
++    c = admission.get('storage_exception')
++    require(isinstance(c, dict), 'FUSE requires allocation-bound storage exception')
++    keys = {'authority_sha256', 'allocation_receipt_sha256', 'run_identity_sha256',
++            'allocation_start_epoch', 'provider_stop_epoch', 'provider',
++            'volume_mount_path', 'allocated_volume_bytes', 'existing_volume_bytes',
++            'capacity_observed_epoch', 'remaining_seconds'}
++    require(set(c) == keys, 'storage contract fields differ')
++    require(c['authority_sha256'] == AUTHORITY_SHA256 and c['provider'] == 'RunPod',
++            'storage exception authority/provider differs')
++    for key in ('allocation_receipt_sha256', 'run_identity_sha256'):
++        require(isinstance(c[key], str) and len(c[key]) == 64 and
++                all(ch in '0123456789abcdef' for ch in c[key]), 'actual allocation identity required')
++        require(c[key] == admission.get(key), 'storage contract belongs to another allocation')
++    require(c['allocation_start_epoch'] == admission['allocation_start_epoch'] and
++            c['provider_stop_epoch'] == admission['provider_stop_epoch'], 'original allocation clocks differ')
++    now = number(now)
++    require(0 < c['allocation_start_epoch'] <= number(c['capacity_observed_epoch']) <= now <
++            c['provider_stop_epoch'], 'capacity observation outside original allocation')
++    require(isinstance(mount, dict) and len(mount.get('filesystems', [])) == 1,
++            'single actual filesystem observation required')
++    fs = mount['filesystems'][0]
++    require(fs['fstype'] in FUSE_TYPES, 'exception only admits RunPod FUSE')
++    require(fs['target'] == c['volume_mount_path'] == '/workspace', 'actual RunPod workspace mount required')
++    for value in (c['allocated_volume_bytes'], c['existing_volume_bytes'], free_bytes, required_bytes):
++        require(type(value) is int and value >= 0, 'nonnegative capacity bytes required')
++    require(required_bytes >= MIN_REQUIRED_BYTES and
++            c['allocated_volume_bytes'] - c['existing_volume_bytes'] >= required_bytes and
++            free_bytes >= required_bytes, 'insufficient allocated capacity or actual filesystem free space')
++    remaining = number(c['remaining_seconds'])
++    require(remaining > 0 and now + remaining <= c['provider_stop_epoch'], 'original full endpoint cannot fit')
++    rate = number(admission['replica_hourly_usd'])
++    extras = number(admission['other_cost_upper_bound_usd'])
++    cap = number(admission['cap_usd'])
++    require(rate > 0 and extras >= 0 and cap > 0, 'invalid forecast inputs')
++    padded = ((now - c['allocation_start_epoch'] + remaining) * rate / 3600 + extras) * 1.25
++    require(padded <= cap, 'full endpoint padded forecast exceeds cap')
++    return {'storage': 'runpod_fuse', 'local_nvme_verified': False,
++            'authority_sha256': AUTHORITY_SHA256, 'contract_sha256': digest(c),
++            'allocation_receipt_sha256': c['allocation_receipt_sha256'],
++            'run_identity_sha256': c['run_identity_sha256'],
++            'findmnt': mount, 'free_bytes': free_bytes, 'required_bytes': required_bytes,
++            'allocated_volume_bytes': c['allocated_volume_bytes'],
++            'existing_volume_bytes': c['existing_volume_bytes'],
++            'checked_epoch': now, 'forecast_times_1_25_usd': padded,
++            'no_second_full_cache': True}
++
++
++def verify_receipt(proof, admission, now):
++    require(isinstance(proof, dict), 'storage proof required')
++    expected = contract(admission, proof['findmnt'], proof['free_bytes'], proof['required_bytes'],
++                        proof['checked_epoch'])
++    require(proof == expected and proof['checked_epoch'] <= number(now), 'storage proof changed or is future dated')
++    require(now < admission['provider_stop_epoch'], 'original provider endpoint expired')
++    return proof
++
++
++def observe(path, admission, required_bytes, now, metadata, disk_usage):
++    """Read-only mount/capacity observation; no writes, transfers or GPU calls."""
++    path = Path(path).resolve()
++    require(path == Path('/workspace') or Path('/workspace') in path.parents,
++            'FUSE exception only covers workspace descendants')
++    mount = metadata(['findmnt', '-J', '-T', str(path), '-o', 'SOURCE,TARGET,FSTYPE'])
++    return contract(admission, mount, disk_usage(path).free, required_bytes, now)
+--- H4-root/baseline/driver.py
++++ H4-root/prepared/driver.py
+@@ -112,0 +113,4 @@
++        if self.config['runtime'].get('storage_exception') is not None:
++            c=self.config['runtime']['storage_exception']
++            A.need(c['run_identity_sha256']==allocation['identity_sha256'] and c['allocation_start_epoch']==created and c['provider_stop_epoch']==stop,'FUSE_ACTUAL_ALLOCATION_BINDING')
++            a.update(storage_exception=c,run_identity_sha256=allocation['identity_sha256'],allocation_receipt_sha256=c['allocation_receipt_sha256'])
+@@ -129,0 +134 @@
++        self.ports.admission=self.s['admission']
+@@ -165 +170 @@
+-               result['objects']==65 and result['full_sha_verified'] is True and result['local_nvme_verified'] is True and
++               result['objects']==65 and result['full_sha_verified'] is True and (result['local_nvme_verified'] is True or (result.get('storage')=='runpod_fuse' and result.get('storage_exception_verified') is True)) and
+--- H4-root/baseline/ports.py
++++ H4-root/prepared/ports.py
+@@ -9,0 +10 @@
++import storage_policy
+@@ -132 +133,5 @@
+-        A.need(st['storage']=='local_nvme' and st['full_weight_sha256_verified'] is True and st['canonical_cache_unchanged'] is True and
++        fuse=st.get('storage')=='runpod_fuse'
++        if fuse:
++            storage_policy.verify_receipt(st['storage_exception_proof'],self.admission,self.clock())
++            A.need(all(disk.get(k)==v for k,v in st['storage_exception_proof'].items()),'FUSE_DISK_PROOF_BINDING')
++        A.need((st['storage']=='local_nvme' or fuse) and st['full_weight_sha256_verified'] is True and st['canonical_cache_unchanged'] is True and
+@@ -136 +141 @@
+-        return dict(value,status='STAGED',runtime_files=59,objects=65,full_sha_verified=True,local_nvme_verified=True,
++        return dict(value,status='STAGED',runtime_files=59,objects=65,full_sha_verified=True,local_nvme_verified=not fuse,storage=st['storage'],storage_exception_verified=fuse,
+--- H4-root/baseline/public_setup.py
++++ H4-root/prepared/public_setup.py
+@@ -14,0 +15,2 @@
++import storage_policy
++STORAGE_POLICY_SOURCE = '"""E74\'s authorised RunPod FUSE exception; CPU validation only, no allocation.\n\nThe operator must obtain the volume contract from the actual authenticated pod\nresponse and bind it into the existing SHA-bound I-2 admission. A FUSE pool\'s df\ntotal is never evidence of the pod\'s allocated capacity. No filesystem is\nreclassified as NVMe. Existing transfer/fsync/reread and engine gates still apply.\n"""\nimport hashlib\nimport json\nimport math\nfrom pathlib import Path\n\nAUTHORITY_SHA256 = \'a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43\'\nWEIGHT_BYTES = 466355755887\nMIN_REQUIRED_BYTES = 468704353377\nFUSE_TYPES = frozenset({\'fuse\', \'fuse.mfs\', \'fuse3\', \'fuse3.mfs\'})\n\n\ndef require(condition, message):\n    if not condition:\n        raise ValueError(message)\n\n\ndef digest(value):\n    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(\',\', \':\'),\n                                     allow_nan=False).encode()).hexdigest()\n\n\ndef number(value):\n    require(type(value) in (int, float) and math.isfinite(value), \'finite number required\')\n    return value\n\n\ndef contract(admission, mount, free_bytes, required_bytes, now):\n    """Validate actual FUSE observation against the allocation-bound contract.\n\n    The contract is root/operator evidence, not a remotely self-issued waiver.\n    The caller first verifies the enclosing admission SHA and provider identity.\n    remaining_seconds includes all staging, idle, boot, smoke, capture, readouts\n    and closeout; it uses the existing whole-endpoint clock and cost padding.\n    """\n    c = admission.get(\'storage_exception\')\n    require(isinstance(c, dict), \'FUSE requires allocation-bound storage exception\')\n    keys = {\'authority_sha256\', \'allocation_receipt_sha256\', \'run_identity_sha256\',\n            \'allocation_start_epoch\', \'provider_stop_epoch\', \'provider\',\n            \'volume_mount_path\', \'allocated_volume_bytes\', \'existing_volume_bytes\',\n            \'capacity_observed_epoch\', \'remaining_seconds\'}\n    require(set(c) == keys, \'storage contract fields differ\')\n    require(c[\'authority_sha256\'] == AUTHORITY_SHA256 and c[\'provider\'] == \'RunPod\',\n            \'storage exception authority/provider differs\')\n    for key in (\'allocation_receipt_sha256\', \'run_identity_sha256\'):\n        require(isinstance(c[key], str) and len(c[key]) == 64 and\n                all(ch in \'0123456789abcdef\' for ch in c[key]), \'actual allocation identity required\')\n        require(c[key] == admission.get(key), \'storage contract belongs to another allocation\')\n    require(c[\'allocation_start_epoch\'] == admission[\'allocation_start_epoch\'] and\n            c[\'provider_stop_epoch\'] == admission[\'provider_stop_epoch\'], \'original allocation clocks differ\')\n    now = number(now)\n    require(0 < c[\'allocation_start_epoch\'] <= number(c[\'capacity_observed_epoch\']) <= now <\n            c[\'provider_stop_epoch\'], \'capacity observation outside original allocation\')\n    require(isinstance(mount, dict) and len(mount.get(\'filesystems\', [])) == 1,\n            \'single actual filesystem observation required\')\n    fs = mount[\'filesystems\'][0]\n    require(fs[\'fstype\'] in FUSE_TYPES, \'exception only admits RunPod FUSE\')\n    require(fs[\'target\'] == c[\'volume_mount_path\'] == \'/workspace\', \'actual RunPod workspace mount required\')\n    for value in (c[\'allocated_volume_bytes\'], c[\'existing_volume_bytes\'], free_bytes, required_bytes):\n        require(type(value) is int and value >= 0, \'nonnegative capacity bytes required\')\n    require(required_bytes >= MIN_REQUIRED_BYTES and\n            c[\'allocated_volume_bytes\'] - c[\'existing_volume_bytes\'] >= required_bytes and\n            free_bytes >= required_bytes, \'insufficient allocated capacity or actual filesystem free space\')\n    remaining = number(c[\'remaining_seconds\'])\n    require(remaining > 0 and now + remaining <= c[\'provider_stop_epoch\'], \'original full endpoint cannot fit\')\n    rate = number(admission[\'replica_hourly_usd\'])\n    extras = number(admission[\'other_cost_upper_bound_usd\'])\n    cap = number(admission[\'cap_usd\'])\n    require(rate > 0 and extras >= 0 and cap > 0, \'invalid forecast inputs\')\n    padded = ((now - c[\'allocation_start_epoch\'] + remaining) * rate / 3600 + extras) * 1.25\n    require(padded <= cap, \'full endpoint padded forecast exceeds cap\')\n    return {\'storage\': \'runpod_fuse\', \'local_nvme_verified\': False,\n            \'authority_sha256\': AUTHORITY_SHA256, \'contract_sha256\': digest(c),\n            \'allocation_receipt_sha256\': c[\'allocation_receipt_sha256\'],\n            \'run_identity_sha256\': c[\'run_identity_sha256\'],\n            \'findmnt\': mount, \'free_bytes\': free_bytes, \'required_bytes\': required_bytes,\n            \'allocated_volume_bytes\': c[\'allocated_volume_bytes\'],\n            \'existing_volume_bytes\': c[\'existing_volume_bytes\'],\n            \'checked_epoch\': now, \'forecast_times_1_25_usd\': padded,\n            \'no_second_full_cache\': True}\n\n\ndef verify_receipt(proof, admission, now):\n    require(isinstance(proof, dict), \'storage proof required\')\n    expected = contract(admission, proof[\'findmnt\'], proof[\'free_bytes\'], proof[\'required_bytes\'],\n                        proof[\'checked_epoch\'])\n    require(proof == expected and proof[\'checked_epoch\'] <= number(now), \'storage proof changed or is future dated\')\n    require(now < admission[\'provider_stop_epoch\'], \'original provider endpoint expired\')\n    return proof\n\n\ndef observe(path, admission, required_bytes, now, metadata, disk_usage):\n    """Read-only mount/capacity observation; no writes, transfers or GPU calls."""\n    path = Path(path).resolve()\n    require(path == Path(\'/workspace\') or Path(\'/workspace\') in path.parents,\n            \'FUSE exception only covers workspace descendants\')\n    mount = metadata([\'findmnt\', \'-J\', \'-T\', str(path), \'-o\', \'SOURCE,TARGET,FSTYPE\'])\n    return contract(admission, mount, disk_usage(path).free, required_bytes, now)\n'
+@@ -74,11 +76,21 @@
+-        source=mount['filesystems'][0]['source'].split('[')[0]
+-        require(source.startswith('/dev/'),'STAGING_NOT_BLOCK_MOUNT')
+-        devices=metadata(['lsblk','-s','-J','-o','NAME,TYPE,TRAN,PATH',source])
+-        def leaves(node):
+-            return [x for c in node['children'] for x in leaves(c)] if node.get('children') else [node]
+-        disks=[leaf for node in devices['blockdevices'] for leaf in leaves(node)]
+-        require(disks and all(d['tran']=='nvme' for d in disks),'STAGING_NOT_LOCAL_NVME')
+-        free=shutil.disk_usage(C['root']).free
+-        require(free>=C['needed_bytes'],'INSUFFICIENT_STAGING_SPACE')
+-        disk=dict(findmnt=mount,lsblk=devices,free_bytes=free,required_bytes=C['needed_bytes'])
+-        write_once(root,'control/PUBLIC_NVME_PROOF.json',json.dumps(disk,sort_keys=True).encode())
++        if C.get('storage_admission') is not None:
++            namespace={}
++            exec(STORAGE_POLICY_SOURCE,namespace)
++            disk=namespace['contract'](C['storage_admission'],mount,
++                shutil.disk_usage(C['root']).free,C['needed_bytes'],time.time())
++            local_nvme=False
++            write_once(root,'control/PUBLIC_STORAGE_PROOF.json',json.dumps(disk,sort_keys=True).encode())
++        else:
++            source=mount['filesystems'][0]['source'].split('[')[0]
++            require(source.startswith('/dev/'),'STAGING_NOT_BLOCK_MOUNT')
++            devices=metadata(['lsblk','-s','-J','-o','NAME,TYPE,TRAN,PATH',source])
++            def leaves(node):
++                return [x for c in node['children'] for x in leaves(c)] if node.get('children') else [node]
++            disks=[leaf for node in devices['blockdevices'] for leaf in leaves(node)]
++            require(disks and all(d['tran']=='nvme' for d in disks),'STAGING_NOT_LOCAL_NVME')
++            free=shutil.disk_usage(C['root']).free
++            require(free>=C['needed_bytes'],'INSUFFICIENT_STAGING_SPACE')
++            disk=dict(findmnt=mount,lsblk=devices,free_bytes=free,required_bytes=C['needed_bytes'])
++            local_nvme=True
++            write_once(root,'control/PUBLIC_NVME_PROOF.json',json.dumps(disk,sort_keys=True).encode())
++        free=disk['free_bytes']
+@@ -89 +101,2 @@
+-            local_nvme_verified=True,free_bytes=free,required_bytes=C['needed_bytes'])
++            local_nvme_verified=local_nvme,free_bytes=free,required_bytes=C['needed_bytes'])
++        if not local_nvme:result.update(storage='runpod_fuse',storage_exception_proof=disk)
+@@ -96 +109 @@
+-def program(control, end, members, python):
++def program(control, end, members, python, storage_admission=None):
+@@ -99 +112 @@
+-                           members=members,python=python,needed_bytes=NEEDED_BYTES)
++                           members=members,python=python,needed_bytes=NEEDED_BYTES,storage_admission=storage_admission)
+@@ -101 +114 @@
+-    return before+REMOTE+'\nC='+after
++    return before+'\nSTORAGE_POLICY_SOURCE='+repr(STORAGE_POLICY_SOURCE)+'\n'+REMOTE+'\nC='+after
+@@ -142 +155,6 @@
+-    result=A.decode(ports.remote._call(program(ports.control,end,members,runtime['python_executable']),end,A.METADATA_LIMIT))
++    storage_admission=getattr(ports,'admission',None)
++    if storage_admission is not None and 'storage_exception' not in storage_admission:storage_admission=None
++    result=A.decode(ports.remote._call(program(ports.control,end,members,runtime['python_executable'],storage_admission),end,A.METADATA_LIMIT))
++    if storage_admission is not None:
++        storage_policy.verify_receipt(result['storage_exception_proof'],storage_admission,ports.clock())
++        A.need(result.get('storage')=='runpod_fuse' and result['local_nvme_verified'] is False,'TRUTHFUL_FUSE_RUNTIME_PROOF')
+@@ -146 +164 @@
+-           result['local_nvme_verified'] is True and result['free_bytes']>=NEEDED_BYTES and
++           (result['local_nvme_verified'] is True or storage_admission is not None) and result['free_bytes']>=NEEDED_BYTES and
+--- H4-root/baseline/remote_ops.py
++++ H4-root/prepared/remote_ops.py
+@@ -15 +15 @@
+-ADMISSION_FIELDS={'issuer','experiment','admitted','authorized_phases','allocation_start_epoch','replica_hourly_usd',
++ADMISSION_FIELDS={'storage_exception','run_identity_sha256','allocation_receipt_sha256','issuer','experiment','admitted','authorized_phases','allocation_start_epoch','replica_hourly_usd',
+--- H4-root/baseline/storage_policy.py
++++ H4-root/prepared/storage_policy.py
+@@ -0,0 +1,104 @@
++"""E74's authorised RunPod FUSE exception; CPU validation only, no allocation.
++
++The operator must obtain the volume contract from the actual authenticated pod
++response and bind it into the existing SHA-bound I-2 admission. A FUSE pool's df
++total is never evidence of the pod's allocated capacity. No filesystem is
++reclassified as NVMe. Existing transfer/fsync/reread and engine gates still apply.
++"""
++import hashlib
++import json
++import math
++from pathlib import Path
++
++AUTHORITY_SHA256 = 'a1680e5ba265de2fd9a4ef1f28442c21f71b627ab1b76cadf09c537a5bde6f43'
++WEIGHT_BYTES = 466355755887
++MIN_REQUIRED_BYTES = 468704353377
++FUSE_TYPES = frozenset({'fuse', 'fuse.mfs', 'fuse3', 'fuse3.mfs'})
++
++
++def require(condition, message):
++    if not condition:
++        raise ValueError(message)
++
++
++def digest(value):
++    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':'),
++                                     allow_nan=False).encode()).hexdigest()
++
++
++def number(value):
++    require(type(value) in (int, float) and math.isfinite(value), 'finite number required')
++    return value
++
++
++def contract(admission, mount, free_bytes, required_bytes, now):
++    """Validate actual FUSE observation against the allocation-bound contract.
++
++    The contract is root/operator evidence, not a remotely self-issued waiver.
++    The caller first verifies the enclosing admission SHA and provider identity.
++    remaining_seconds includes all staging, idle, boot, smoke, capture, readouts
++    and closeout; it uses the existing whole-endpoint clock and cost padding.
++    """
++    c = admission.get('storage_exception')
++    require(isinstance(c, dict), 'FUSE requires allocation-bound storage exception')
++    keys = {'authority_sha256', 'allocation_receipt_sha256', 'run_identity_sha256',
++            'allocation_start_epoch', 'provider_stop_epoch', 'provider',
++            'volume_mount_path', 'allocated_volume_bytes', 'existing_volume_bytes',
++            'capacity_observed_epoch', 'remaining_seconds'}
++    require(set(c) == keys, 'storage contract fields differ')
++    require(c['authority_sha256'] == AUTHORITY_SHA256 and c['provider'] == 'RunPod',
++            'storage exception authority/provider differs')
++    for key in ('allocation_receipt_sha256', 'run_identity_sha256'):
++        require(isinstance(c[key], str) and len(c[key]) == 64 and
++                all(ch in '0123456789abcdef' for ch in c[key]), 'actual allocation identity required')
++        require(c[key] == admission.get(key), 'storage contract belongs to another allocation')
++    require(c['allocation_start_epoch'] == admission['allocation_start_epoch'] and
++            c['provider_stop_epoch'] == admission['provider_stop_epoch'], 'original allocation clocks differ')
++    now = number(now)
++    require(0 < c['allocation_start_epoch'] <= number(c['capacity_observed_epoch']) <= now <
++            c['provider_stop_epoch'], 'capacity observation outside original allocation')
++    require(isinstance(mount, dict) and len(mount.get('filesystems', [])) == 1,
++            'single actual filesystem observation required')
++    fs = mount['filesystems'][0]
++    require(fs['fstype'] in FUSE_TYPES, 'exception only admits RunPod FUSE')
++    require(fs['target'] == c['volume_mount_path'] == '/workspace', 'actual RunPod workspace mount required')
++    for value in (c['allocated_volume_bytes'], c['existing_volume_bytes'], free_bytes, required_bytes):
++        require(type(value) is int and value >= 0, 'nonnegative capacity bytes required')
++    require(required_bytes >= MIN_REQUIRED_BYTES and
++            c['allocated_volume_bytes'] - c['existing_volume_bytes'] >= required_bytes and
++            free_bytes >= required_bytes, 'insufficient allocated capacity or actual filesystem free space')
++    remaining = number(c['remaining_seconds'])
++    require(remaining > 0 and now + remaining <= c['provider_stop_epoch'], 'original full endpoint cannot fit')
++    rate = number(admission['replica_hourly_usd'])
++    extras = number(admission['other_cost_upper_bound_usd'])
++    cap = number(admission['cap_usd'])
++    require(rate > 0 and extras >= 0 and cap > 0, 'invalid forecast inputs')
++    padded = ((now - c['allocation_start_epoch'] + remaining) * rate / 3600 + extras) * 1.25
++    require(padded <= cap, 'full endpoint padded forecast exceeds cap')
++    return {'storage': 'runpod_fuse', 'local_nvme_verified': False,
++            'authority_sha256': AUTHORITY_SHA256, 'contract_sha256': digest(c),
++            'allocation_receipt_sha256': c['allocation_receipt_sha256'],
++            'run_identity_sha256': c['run_identity_sha256'],
++            'findmnt': mount, 'free_bytes': free_bytes, 'required_bytes': required_bytes,
++            'allocated_volume_bytes': c['allocated_volume_bytes'],
++            'existing_volume_bytes': c['existing_volume_bytes'],
++            'checked_epoch': now, 'forecast_times_1_25_usd': padded,
++            'no_second_full_cache': True}
++
++
++def verify_receipt(proof, admission, now):
++    require(isinstance(proof, dict), 'storage proof required')
++    expected = contract(admission, proof['findmnt'], proof['free_bytes'], proof['required_bytes'],
++                        proof['checked_epoch'])
++    require(proof == expected and proof['checked_epoch'] <= number(now), 'storage proof changed or is future dated')
++    require(now < admission['provider_stop_epoch'], 'original provider endpoint expired')
++    return proof
++
++
++def observe(path, admission, required_bytes, now, metadata, disk_usage):
++    """Read-only mount/capacity observation; no writes, transfers or GPU calls."""
++    path = Path(path).resolve()
++    require(path == Path('/workspace') or Path('/workspace') in path.parents,
++            'FUSE exception only covers workspace descendants')
++    mount = metadata(['findmnt', '-J', '-T', str(path), '-o', 'SOURCE,TARGET,FSTYPE'])
++    return contract(admission, mount, disk_usage(path).free, required_bytes, now)

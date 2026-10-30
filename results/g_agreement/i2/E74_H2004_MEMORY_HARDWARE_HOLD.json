@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-28T06:10:11.173326+00:00",
+  "direct_user_instruction": "Check RunPod Secure for a single-node 4\u00d7H200 now, and keep polling. Don\u2019t launch until W-glm confirms memory fit and I register the hardware ruling. Report what\u2019s in stock across RunPod tiers (1\u00d7/2\u00d7/4\u00d7/8\u00d7 H200, B200).",
+  "launch_hold": true,
+  "memory_fit_confirmation_received": false,
+  "registered_hardware_ruling_received": false,
+  "required_before_launch": [
+    "Actual W-glm memory-fit confirmation for 4xH200",
+    "Actual Guiv registered hardware ruling",
+    "All existing quote/package/budget/custody gates"
+  ],
+  "poll_seconds": 120,
+  "poll_via": "Existing admission heartbeat, read-only check_runpod_tiers_once.py; no new poller",
+  "stock_receipt": "results/g_agreement/i2/E74_RUNPOD_ALL_TIERS_20261028T060940Z.json"
+}

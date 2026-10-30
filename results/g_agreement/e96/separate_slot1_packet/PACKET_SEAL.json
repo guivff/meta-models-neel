@@ -1,0 +1,502 @@
+{
+  "code_files": {
+    "projects/g_agreement/e96/aggregate.py": "bef9f4c704b67b0586892ff36d6c38ccc1c069716ba7be3c482b07b8d8df6482",
+    "projects/g_agreement/e96/judge.py": "7c1924caf35df8fe24deebefaa15290897a7b1b2c95da67c6f8c3f66fc1feb78",
+    "projects/g_agreement/e96/prepare_judging.py": "fcd4ce7e5486257cbbd7303ae02ee8abedb61496d6ef62d2b227e955c7a41ca3",
+    "projects/g_agreement/e96/regex.py": "620a763fbc270dc30c73ef353e7b68cb85fc765932573f32ed2e96bf356e5f6d",
+    "projects/g_agreement/e96/retained.py": "41f894ee586a4f2fafc99e7f1cd607599d18664e942ebeb012795cba1488dadd",
+    "projects/g_agreement/readerbench/io.py": "1058bc2e64f556cbcf22d007c3dd456c99401d531b1411bcaf1680651d31c4c6",
+    "projects/g_agreement/readerbench/scoring.py": "201a7542ebda45db5bfb7031ebc84f7ffa6a8e10129db55710b1d8c144b9a790",
+    "projects/g_agreement/understand/blind_judge/dispatch_lock.py": "4c5a979bc1393fb27d7581f5d52a3cdeac09e605b04696fd5a543253980cf09c",
+    "projects/g_agreement/understand/blind_judge/e76_recovery.py": "12083cf5cb41b1dae5b6842a8cb393084a1bcc21e5a18ab3e2234d095af593d8",
+    "projects/g_agreement/understand/blind_judge/judgment_adapter402.py": "e9f55e3c09097596118e91156bb5b1b57d2edb333321102f0a8ef16e0c66a407",
+    "projects/g_agreement/understand/blind_judge/later_runner.py": "6632fe4d0fd925b6b8f20a1971efbdaf120a6fc32aa330336f4563ac00808b87",
+    "projects/g_agreement/understand/blind_judge/privacy79.py": "9d4f3338990135ca99efcb4d5222059f1350e6c5874e152bfe8ddde0d0e50b79",
+    "projects/g_agreement/understand/blind_judge/rubric202.py": "716d430c28e73b8b285e5f570f4336cfc4433f1626f67b152e02e5e75f06422c",
+    "projects/g_agreement/understand/blind_judge/run.py": "9eba603c1eb911029b82f9acca94299cef9f73899a08229b9247a9de5ce1c025",
+    "projects/g_agreement/understand/blind_judge/wmech2_channel.py": "a151ef78b4a0640c292828cb5d92c6f4807bdddabeb7385f169187f84648902f"
+  },
+  "cpu_truth_seal_sha256": "034368b91807d38a8cb6b78a8a9c567af4b9d89a57633e4d4d4ebc8a7c8538c5",
+  "experiment": "E96",
+  "files": {
+    "HARDWARE_RECEIPT.json": "fbd39c2ea4e8f84b8b6b3b2401ca78baf352ee0716a2b80c3d26ea2c3e64d0b4",
+    "JUDGE_MAP.PRIVATE.json": "19c4c559758e7fac799bbb5f3a6563a9365ff6b914f8be8d0e8dfdc9c9ddbe5d",
+    "JUDGE_PACKET.json": "1bfc420d40fce6f7ec9909024d8d4c471871343fb0dc6729ebd932589a1235a4",
+    "OLD_RUBRIC_IDS.json": "4f572a6efcf2bbcf8791e2505ac03975d6386e6f0d03535ef3d73fd9c142855d",
+    "RECORDS.DO_NOT_STAGE.json": "8bfe6fc35a7fa6123bf71e9c0890e8cbb15d0a438061c9e291cac8a7956a7999",
+    "REGEX_CODES.json": "9ff44a795a3da97003f30e1073cfa8b166df40d8544df6f53b8f82a0849ad906"
+  },
+  "first_output_source": "CPU REGEX_CODES.json mtime",
+  "first_output_utc": "2026-10-29T02:51:07.243568+00:00",
+  "judge_calls": 0,
+  "judge_unresolved": 9444,
+  "judging_index_sha256": "4319cdfbbe6015504c832938d6850628dcce03ceae03828fdf9953fe272f1338",
+  "old_rubric_unresolved": 2349,
+  "placebo_index_sha256": "1bc0a2d6713b4c604b6933bf9c64ded85c2ad6f7e8db7c622dab3873e402b026",
+  "records": 20160,
+  "regex_catalog_sha256": "b0b82b3c0ec33fa1f7e03cfdf0f9cc67157d2401114eb724d3b54e55560b3e35",
+  "regex_resolved": 3804,
+  "sampling_first_output_utc": "2026-10-28T23:52:37.034508+00:00",
+  "sampling_input_seal_sha256": "4c1d6533d32ec0b0cdc53e115b32341cc1c754df3e2046a25758ce39a16560db",
+  "sampling_output_seals": [
+    {
+      "gpu_type": "H200",
+      "output_seal_sha256": "58d184269e01df9710adf94f83c62af6881e752a3419127f6a24aebdb112991d",
+      "slot": 1
+    }
+  ],
+  "scope": {
+    "authority": "E96deviation3,3899e1ea; direct Guiv separate reporting, no primary pooling/replay",
+    "missing_reader_cells": [
+      {
+        "bank": "E49",
+        "key": "000",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "container_after_move",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E49",
+        "key": "000",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "container_after_move",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E49",
+        "key": "002",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "var_type_at_use",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E49",
+        "key": "002",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "var_type_at_use",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E49",
+        "key": "003",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "asserted_vs_hypothetical",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E49",
+        "key": "003",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "asserted_vs_hypothetical",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E49",
+        "key": "005",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "unit_system",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E49",
+        "key": "005",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "unit_system",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "006",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "multi_token_entity",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "006",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "multi_token_entity",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "008",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "focus_mention",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "008",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "focus_mention",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "009",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "focus_ignore",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "009",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "focus_ignore",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "011",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "linewrap_implicit",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "011",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "linewrap_implicit",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "012",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "linewrap_asked",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "012",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "linewrap_asked",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "014",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "two_hop_answer",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "014",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "two_hop_answer",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "015",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "subject_number",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "015",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "subject_number",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "017",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "nesting_depth",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "017",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "nesting_depth",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "018",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "indent_level",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "018",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "indent_level",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "020",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "page_range_digit",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "020",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "page_range_digit",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "021",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "section_header",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E57",
+        "key": "021",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "section_header",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "023",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "format_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "023",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "format_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "024",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "language_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "024",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "language_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "026",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "length_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "026",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "length_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "027",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "hedge_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E59",
+        "key": "027",
+        "reader": "nla",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "hedge_plan",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "029",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S1_L0",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "030",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S1_L1",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "031",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S1_L2",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "033",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S1_L4",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "034",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S2_L0",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "036",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S2_L2",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "037",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S2_L3",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "039",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S3_L0",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "040",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S3_L1",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "042",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S3_L3",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "043",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S3_L4",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "045",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S4_L1",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "046",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S4_L2",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "048",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S4_L4",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "049",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S5_L0",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "051",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S5_L2",
+        "status": "NOT EVALUABLE"
+      },
+      {
+        "bank": "E62",
+        "key": "052",
+        "reader": "oracle",
+        "reason": "outside separate slot1 bank; retained primary already reviewed and never pooled",
+        "row": "S5_L3",
+        "status": "NOT EVALUABLE"
+      }
+    ],
+    "mode": "separate_slot1_17920",
+    "reader_cells_retained": 28,
+    "records": 20160,
+    "rows_retained": 18,
+    "samples": 17920,
+    "slots": [
+      1
+    ]
+  },
+  "status": "REGEX_SCORED_UNRESOLVED_PACKET_FROZEN_NO_API_CALLS"
+}

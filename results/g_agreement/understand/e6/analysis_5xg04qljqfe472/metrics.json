@@ -1,0 +1,491 @@
+{
+  "analysis_adapter_sha256": "e190bfbe4d0727b68e3f6893e43908875dde3a6e5d3dd41ec2555be7fb2da6b3",
+  "base_rate_definition": "score==1 event / all outputs per value; neutral outputs retained. A=first frozen value, B=second. B is not necessarily absence.",
+  "experiment": "E6",
+  "limitations": "Script proxies do not prove functional correctness. Missing structural markers score neutral0.5; no score-conditioned filtering.",
+  "prediction": "Readers may enact structure in continuations while not stating it",
+  "rows": [
+    {
+      "auroc": {
+        "auroc": 0.3707482993197279,
+        "hi": 0.5,
+        "lo": 0.21882086167800455,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "feature": "prose_paren",
+      "format_markers": {
+        "NO_SCRIPTED_REFUSAL_MARKER": 84
+      },
+      "layer": 44,
+      "n": 84,
+      "off_B": {
+        "ci95_wilson": [
+          0.09981889609856436,
+          0.33301067354996444
+        ],
+        "k": 8,
+        "mean_proxy": 0.5952380952380952,
+        "n": 42,
+        "neutral_n": 34,
+        "other_fractional_n": 0,
+        "rate": 0.19047619047619047,
+        "zero_n": 0
+      },
+      "on_A": {
+        "ci95_wilson": [
+          0.013157248639206365,
+          0.1579013531547973
+        ],
+        "k": 2,
+        "mean_proxy": 0.4523809523809524,
+        "n": 42,
+        "neutral_n": 34,
+        "other_fractional_n": 0,
+        "rate": 0.047619047619047616,
+        "zero_n": 6
+      },
+      "reader": "olens",
+      "script": "first ASCII parenthesis is closing=>1, opening=>0, neither=>0.5",
+      "status": "EXPLORATORY",
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    {
+      "auroc": {
+        "auroc": 0.5952380952380952,
+        "hi": 0.7261904761904762,
+        "lo": 0.4642857142857143,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "feature": "prose_paren",
+      "format_markers": {
+        "DESCRIPTIVE_FORMAT_MARKER": 84
+      },
+      "layer": 42,
+      "n": 84,
+      "off_B": {
+        "ci95_wilson": [
+          0.0,
+          0.08380161250916197
+        ],
+        "k": 0,
+        "mean_proxy": 0.2976190476190476,
+        "n": 42,
+        "neutral_n": 25,
+        "other_fractional_n": 0,
+        "rate": 0.0,
+        "zero_n": 17
+      },
+      "on_A": {
+        "ci95_wilson": [
+          0.0,
+          0.08380161250916197
+        ],
+        "k": 0,
+        "mean_proxy": 0.39285714285714285,
+        "n": 42,
+        "neutral_n": 33,
+        "other_fractional_n": 0,
+        "rate": 0.0,
+        "zero_n": 9
+      },
+      "reader": "nla",
+      "script": "first ASCII parenthesis is closing=>1, opening=>0, neither=>0.5",
+      "status": "EXPLORATORY",
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    {
+      "auroc": {
+        "auroc": 0.5119047619047619,
+        "hi": 0.5357142857142857,
+        "lo": 0.5,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "feature": "python_string",
+      "format_markers": {
+        "NO_SCRIPTED_REFUSAL_MARKER": 84
+      },
+      "layer": 44,
+      "n": 84,
+      "off_B": {
+        "ci95_wilson": [
+          0.0,
+          0.08380161250916197
+        ],
+        "k": 0,
+        "mean_proxy": 0.5,
+        "n": 42,
+        "neutral_n": 42,
+        "other_fractional_n": 0,
+        "rate": 0.0,
+        "zero_n": 0
+      },
+      "on_A": {
+        "ci95_wilson": [
+          0.00421529549910029,
+          0.12321481165248252
+        ],
+        "k": 1,
+        "mean_proxy": 0.5119047619047619,
+        "n": 42,
+        "neutral_n": 41,
+        "other_fractional_n": 0,
+        "rate": 0.023809523809523808,
+        "zero_n": 0
+      },
+      "reader": "olens",
+      "script": "text fragment then ASCII quote followed by code delimiter/end=>1, leading quote=>0, otherwise0.5; proxy only, quote semantics ambiguous",
+      "status": "EXPLORATORY",
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    {
+      "auroc": {
+        "auroc": 0.5,
+        "hi": 0.5,
+        "lo": 0.5,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "feature": "python_string",
+      "format_markers": {
+        "DESCRIPTIVE_FORMAT_MARKER": 84
+      },
+      "layer": 42,
+      "n": 84,
+      "off_B": {
+        "ci95_wilson": [
+          0.0,
+          0.08380161250916197
+        ],
+        "k": 0,
+        "mean_proxy": 0.5,
+        "n": 42,
+        "neutral_n": 42,
+        "other_fractional_n": 0,
+        "rate": 0.0,
+        "zero_n": 0
+      },
+      "on_A": {
+        "ci95_wilson": [
+          0.0,
+          0.08380161250916197
+        ],
+        "k": 0,
+        "mean_proxy": 0.5,
+        "n": 42,
+        "neutral_n": 42,
+        "other_fractional_n": 0,
+        "rate": 0.0,
+        "zero_n": 0
+      },
+      "reader": "nla",
+      "script": "text fragment then ASCII quote followed by code delimiter/end=>1, leading quote=>0, otherwise0.5; proxy only, quote semantics ambiguous",
+      "status": "EXPLORATORY",
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    {
+      "auroc": {
+        "auroc": 0.5,
+        "hi": 0.5,
+        "lo": 0.5,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "feature": "python_indent",
+      "format_markers": {
+        "NO_SCRIPTED_REFUSAL_MARKER": 84
+      },
+      "layer": 44,
+      "n": 84,
+      "off_B": {
+        "ci95_wilson": [
+          0.9161983874908382,
+          1.0000000000000002
+        ],
+        "k": 42,
+        "mean_proxy": 1.0,
+        "n": 42,
+        "neutral_n": 0,
+        "other_fractional_n": 0,
+        "rate": 1.0,
+        "zero_n": 0
+      },
+      "on_A": {
+        "ci95_wilson": [
+          0.9161983874908382,
+          1.0000000000000002
+        ],
+        "k": 42,
+        "mean_proxy": 1.0,
+        "n": 42,
+        "neutral_n": 0,
+        "other_fractional_n": 0,
+        "rate": 1.0,
+        "zero_n": 0
+      },
+      "reader": "olens",
+      "script": "first nonempty line after newline: clip((12-leading_spaces)/8,0,1); no such line=>0.5",
+      "status": "EXPLORATORY",
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    {
+      "auroc": {
+        "auroc": 0.5,
+        "hi": 0.5,
+        "lo": 0.5,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "feature": "python_indent",
+      "format_markers": {
+        "DESCRIPTIVE_FORMAT_MARKER": 84
+      },
+      "layer": 42,
+      "n": 84,
+      "off_B": {
+        "ci95_wilson": [
+          0.9161983874908382,
+          1.0000000000000002
+        ],
+        "k": 42,
+        "mean_proxy": 1.0,
+        "n": 42,
+        "neutral_n": 0,
+        "other_fractional_n": 0,
+        "rate": 1.0,
+        "zero_n": 0
+      },
+      "on_A": {
+        "ci95_wilson": [
+          0.9161983874908382,
+          1.0000000000000002
+        ],
+        "k": 42,
+        "mean_proxy": 1.0,
+        "n": 42,
+        "neutral_n": 0,
+        "other_fractional_n": 0,
+        "rate": 1.0,
+        "zero_n": 0
+      },
+      "reader": "nla",
+      "script": "first nonempty line after newline: clip((12-leading_spaces)/8,0,1); no such line=>0.5",
+      "status": "EXPLORATORY",
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    {
+      "auroc": {
+        "auroc": 0.5,
+        "hi": 0.5,
+        "lo": 0.5,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "feature": "list_depth",
+      "format_markers": {
+        "NO_SCRIPTED_REFUSAL_MARKER": 84
+      },
+      "layer": 44,
+      "n": 84,
+      "off_B": {
+        "ci95_wilson": [
+          0.9161983874908382,
+          1.0000000000000002
+        ],
+        "k": 42,
+        "mean_proxy": 1.0,
+        "n": 42,
+        "neutral_n": 0,
+        "other_fractional_n": 0,
+        "rate": 1.0,
+        "zero_n": 0
+      },
+      "on_A": {
+        "ci95_wilson": [
+          0.9161983874908382,
+          1.0000000000000002
+        ],
+        "k": 42,
+        "mean_proxy": 1.0,
+        "n": 42,
+        "neutral_n": 0,
+        "other_fractional_n": 0,
+        "rate": 1.0,
+        "zero_n": 0
+      },
+      "reader": "olens",
+      "script": "first Markdown bullet line: clip((4-leading_spaces)/4,0,1); no bullet=>0.5",
+      "status": "EXPLORATORY",
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    {
+      "auroc": {
+        "auroc": 0.5,
+        "hi": 0.5,
+        "lo": 0.5,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "feature": "list_depth",
+      "format_markers": {
+        "DESCRIPTIVE_FORMAT_MARKER": 84
+      },
+      "layer": 42,
+      "n": 84,
+      "off_B": {
+        "ci95_wilson": [
+          0.0,
+          0.08380161250916197
+        ],
+        "k": 0,
+        "mean_proxy": 0.5,
+        "n": 42,
+        "neutral_n": 42,
+        "other_fractional_n": 0,
+        "rate": 0.0,
+        "zero_n": 0
+      },
+      "on_A": {
+        "ci95_wilson": [
+          0.0,
+          0.08380161250916197
+        ],
+        "k": 0,
+        "mean_proxy": 0.5,
+        "n": 42,
+        "neutral_n": 42,
+        "other_fractional_n": 0,
+        "rate": 0.0,
+        "zero_n": 0
+      },
+      "reader": "nla",
+      "script": "first Markdown bullet line: clip((4-leading_spaces)/4,0,1); no bullet=>0.5",
+      "status": "EXPLORATORY",
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    {
+      "auroc": {
+        "auroc": 0.4030612244897959,
+        "hi": 0.5311791383219955,
+        "lo": 0.2743764172335601,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "feature": "table_column",
+      "format_markers": {
+        "NO_SCRIPTED_REFUSAL_MARKER": 84
+      },
+      "layer": 44,
+      "n": 84,
+      "off_B": {
+        "ci95_wilson": [
+          0.0,
+          0.08380161250916197
+        ],
+        "k": 0,
+        "mean_proxy": 0.21428571428571427,
+        "n": 42,
+        "neutral_n": 18,
+        "other_fractional_n": 0,
+        "rate": 0.0,
+        "zero_n": 24
+      },
+      "on_A": {
+        "ci95_wilson": [
+          0.013157248639206365,
+          0.1579013531547973
+        ],
+        "k": 2,
+        "mean_proxy": 0.13095238095238096,
+        "n": 42,
+        "neutral_n": 7,
+        "other_fractional_n": 0,
+        "rate": 0.047619047619047616,
+        "zero_n": 33
+      },
+      "reader": "olens",
+      "script": "first generated line: >=5pipes=>1,1\u20133pipes=>0,none or4=>0.5; proxy for remaining columns, not asserted column truth",
+      "status": "EXPLORATORY",
+      "values": [
+        "first",
+        "later"
+      ]
+    },
+    {
+      "auroc": {
+        "auroc": 0.5,
+        "hi": 0.5,
+        "lo": 0.5,
+        "n": 84,
+        "n_clusters": 6
+      },
+      "feature": "table_column",
+      "format_markers": {
+        "DESCRIPTIVE_FORMAT_MARKER": 84
+      },
+      "layer": 42,
+      "n": 84,
+      "off_B": {
+        "ci95_wilson": [
+          0.0,
+          0.08380161250916197
+        ],
+        "k": 0,
+        "mean_proxy": 0.5,
+        "n": 42,
+        "neutral_n": 42,
+        "other_fractional_n": 0,
+        "rate": 0.0,
+        "zero_n": 0
+      },
+      "on_A": {
+        "ci95_wilson": [
+          0.0,
+          0.08380161250916197
+        ],
+        "k": 0,
+        "mean_proxy": 0.5,
+        "n": 42,
+        "neutral_n": 42,
+        "other_fractional_n": 0,
+        "rate": 0.0,
+        "zero_n": 0
+      },
+      "reader": "nla",
+      "script": "first generated line: >=5pipes=>1,1\u20133pipes=>0,none or4=>0.5; proxy for remaining columns, not asserted column truth",
+      "status": "EXPLORATORY",
+      "values": [
+        "first",
+        "later"
+      ]
+    }
+  ],
+  "score_seal_sha256": "cccd1b5c3261225388efcf9e71ce3a3146094c8f53cc11b1717c8065e850bbbe",
+  "status": "EXPLORATORY"
+}

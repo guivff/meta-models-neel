@@ -1,0 +1,267 @@
+{
+  "allocated_science_seconds": 575.2,
+  "calibration_baseline_seconds": 3.2181406021118164,
+  "compute_window_end_epoch": 1792752122.1677074,
+  "driver_sha256": "4da633b2615f87d137c5e506b17d31457c9c36da706637a6fad48b24f9a3321f",
+  "gates": [
+    {
+      "forecast_seconds_x1_5": 2823.525338659063,
+      "gate": "gate1_calibration_path",
+      "median_seconds_per_token": 0.002645444590598345,
+      "path": "text_nll_steered (bs=4, len 64)",
+      "raw_units": [
+        {
+          "arm": 0,
+          "dose": 0.03125,
+          "feature": "prose_paren",
+          "seconds": 2.5035455226898193,
+          "sign": -1,
+          "tokens": 1024
+        },
+        {
+          "arm": 0,
+          "dose": 0.03125,
+          "feature": "prose_paren",
+          "seconds": 2.7855989933013916,
+          "sign": 1,
+          "tokens": 1024
+        },
+        {
+          "arm": 1,
+          "dose": 0.03125,
+          "feature": "prose_paren",
+          "seconds": 2.708935260772705,
+          "sign": -1,
+          "tokens": 1024
+        }
+      ],
+      "remaining_science_seconds_before_reserve": 383.9829750061035,
+      "remaining_tokens": {
+        "calibration": 218112,
+        "outcomes_at_calibration_rate": 493432
+      },
+      "science_deadline_epoch": 1792752302.1677074
+    }
+  ],
+  "model_loaded_epoch": 1792751680.7128286,
+  "provider_created_epoch": 1792751490.849,
+  "python": "/weights/venv-kernels/bin/python",
+  "schema": "w7-retry-runtime-v1",
+  "science_deadline_epoch": 1792752302.1677074,
+  "science_started_epoch": 1792751726.9677074,
+  "setup_allowance_seconds": 900.0,
+  "setup_completed_epoch": 1792751726.9677,
+  "setup_seconds": 236.11870002746582,
+  "setup_started_epoch": 1792751646.516426,
+  "status": "NO_FIT_STOP_gate1_calibration_path",
+  "warm_plan": [
+    {
+      "lengths": [
+        64
+      ],
+      "path": "text_nll_unsteered"
+    },
+    {
+      "lengths": [
+        64
+      ],
+      "path": "text_nll_steered"
+    },
+    {
+      "lengths": [
+        66,
+        67,
+        70,
+        71,
+        72,
+        75,
+        76,
+        78,
+        79,
+        80,
+        107,
+        118,
+        134,
+        136,
+        138,
+        146,
+        203,
+        208,
+        210,
+        214,
+        222,
+        224,
+        226,
+        230
+      ],
+      "path": "token_logp_unsteered"
+    },
+    {
+      "lengths": [
+        66,
+        67,
+        70,
+        71,
+        72,
+        75,
+        76,
+        78,
+        79,
+        80,
+        107,
+        118,
+        134,
+        136,
+        138,
+        146,
+        203,
+        208,
+        210,
+        214,
+        222,
+        224,
+        226,
+        230
+      ],
+      "path": "token_logp_steered"
+    }
+  ],
+  "warmup": [
+    {
+      "length": 64,
+      "path": "text_nll_unsteered+steered",
+      "seconds": 33.277
+    },
+    {
+      "length": 66,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.394
+    },
+    {
+      "length": 67,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.596
+    },
+    {
+      "length": 70,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.494
+    },
+    {
+      "length": 71,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.495
+    },
+    {
+      "length": 72,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.403
+    },
+    {
+      "length": 75,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.497
+    },
+    {
+      "length": 76,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.507
+    },
+    {
+      "length": 78,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.495
+    },
+    {
+      "length": 79,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.494
+    },
+    {
+      "length": 80,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.508
+    },
+    {
+      "length": 107,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.598
+    },
+    {
+      "length": 118,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.694
+    },
+    {
+      "length": 134,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.507
+    },
+    {
+      "length": 136,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.599
+    },
+    {
+      "length": 138,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.494
+    },
+    {
+      "length": 146,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.601
+    },
+    {
+      "length": 203,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.6
+    },
+    {
+      "length": 208,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.602
+    },
+    {
+      "length": 210,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.504
+    },
+    {
+      "length": 214,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.6
+    },
+    {
+      "length": 222,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.595
+    },
+    {
+      "length": 224,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.505
+    },
+    {
+      "length": 226,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.601
+    },
+    {
+      "length": 230,
+      "path": "token_logp_unsteered+steered",
+      "seconds": 0.594
+    }
+  ],
+  "warmup_in_timing_sample": false,
+  "warmup_scored": false,
+  "work": {
+    "calibration_steered_units": 216,
+    "calibration_tokens_per_unit": 1024,
+    "outcome_steered_units_per_feature": 36,
+    "outcome_tokens_per_unit": {
+      "prose_paren": 4210,
+      "table_column": 9126
+    }
+  }
+}

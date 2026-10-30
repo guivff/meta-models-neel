@@ -1,0 +1,47 @@
+{
+  "experiment": "E136",
+  "section": 247,
+  "authority_commit": "74b25641d829e52ec47be7e68ea945542ff756f8",
+  "direct_user_assignment": true,
+  "integrator": "I-2",
+  "runner_package_owner": "W-mechanism-C",
+  "bank_owner": "W-text",
+  "analysis_owners": [
+    "W-mech2: probes and behaviour",
+    "W-text: words classifier"
+  ],
+  "judging_owner": "W-internals-C",
+  "reviewer": "R-2",
+  "status": "AUTHORIZED_AFTER_E135_AWAITING_SEALED_BANK_AND_RUNNER_PACKET",
+  "cap_seconds_from_creation": 3600,
+  "hard_stop": "min(creation+3600seconds,2026-10-30T12:50:00Z)",
+  "create_cutoff_utc": "2026-10-30T10:00:00Z",
+  "packet_seal_cutoff_utc": "2026-10-30T06:00:00Z",
+  "kill_rule": "Packet not sealed by 07:00 CET or pod not created by 10:00Z: NOT RUN; no partial reporting.",
+  "predecessor": "E135 GPU COMPLETE closed/query-null; C original judging bank remains pending",
+  "gpu_ceiling": {
+    "authority": "e72952df6",
+    "booked_plus_all_active_caps_usd": 2500,
+    "warning_only_usd": 2000
+  },
+  "expected_prompts": 800,
+  "expected_readouts": 2400,
+  "read_blocks": [
+    44,
+    52,
+    60
+  ],
+  "judging": {
+    "cap_usd": 2,
+    "priority": "after E133b before E95"
+  },
+  "gates": [
+    "Original sealed W-text bank and W-mechanism-C source/test packet",
+    "Whole-run forecast fits original cap; fresh budget/source/privacy/stock admission before creation",
+    "One original creation clock and durable hard-stop guards; no retry/reset inferred",
+    "Labels and private joins CPU-local; outputs sealed until tested adapter committed",
+    "Preserve original and foreign signed records; authorized owner FILE handoffs only"
+  ],
+  "allocation_created": false,
+  "as_of_utc": "2026-10-30T03:11:36.458671+00:00"
+}

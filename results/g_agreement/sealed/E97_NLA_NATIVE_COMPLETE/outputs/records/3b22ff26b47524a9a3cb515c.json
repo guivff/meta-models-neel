@@ -1,0 +1,12 @@
+{
+  "id": "3b22ff26b47524a9a3cb515c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional template pattern: a structured prompt format with \"Question:\" and \"Answer:\" fields signals a response is expected next, following the defined task.\n\nThe task description establishes a specific example scenario (\"explain the concept of 'addition'\") that the model must address, constraining the answer to match that topic.\n\n\"Answer:\" is the final token, functioning as a label/field header in a few-shot or template format, immediately requiring the model's generated response text explaining how to answer the question about the specified topic.\n\"Given the following question, write a response that matches the style of the given topic.\nTopic: [topic]\nQuestion: How to explain the concept of 'addition' in a sentence?\nAnswer:\" \u2014 the final \"Answer:\" expects a sample explanation or model output demonstrating the described style, likely beginning with a direct explanatory sentence.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional template pattern: a structured prompt format with \"Question:\" and \"Answer:\" fields signals a response is expected next, following the defined task.\n\nThe task description establishes a specific example scenario (\"explain the concept of 'addition'\") that the model must address, constraining the answer to match that topic.\n\n\"Answer:\" is the final token, functioning as a label/field header in a few-shot or template format, immediately requiring the model's generated response text explaining how to answer the question about the specified topic.\n\"Given the following question, write a response that matches the style of the given topic.\nTopic: [topic]\nQuestion: How to explain the concept of 'addition' in a sentence?\nAnswer:\" \u2014 the final \"Answer:\" expects a sample explanation or model output demonstrating the described style, likely beginning with a direct explanatory sentence.",
+  "truncated": false
+}

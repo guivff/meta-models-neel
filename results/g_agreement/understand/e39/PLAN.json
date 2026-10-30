@@ -1,0 +1,337 @@
+{
+  "R1prime": "At least60% of interpretable structure rows fast in L; not evaluable if fewer than8 interpretable",
+  "R3prime": "Mean paired L-B steps-to-.80 across interpretable structure rows <0 with row-cluster bootstrap95%CI upper<0; >half both censored => not evaluable",
+  "asked_scoring": "E28 native injected block44 scoring; mean of both E36 frozen descriptive paired log-odds",
+  "authority_commit": "a38044dd",
+  "batch_size": 8,
+  "bootstrap": {
+    "paired_across_checkpoints_and_arms": true,
+    "replicates": 2000,
+    "unit": "E36 template cluster for per-row AUROC CIs; row cluster for pooled paired L-B steps"
+  },
+  "censoring": "Both L and B unobserved crossing assigned800; both-censored contributes0; R3prime not evaluable if strictly more than half of interpretable structure rows both censored",
+  "checkpoints": [
+    0,
+    25,
+    50,
+    100,
+    200,
+    400,
+    800
+  ],
+  "clarification_commit": "8cc9d46d",
+  "descriptive": "Step800 naming by frozen E24 regex; positions(count-like) vs states(state-like); two semantic rows descriptive",
+  "experiment": "E39",
+  "free_readout": "84 per row/arm at step800, native prompt with no question, greedy, cap128",
+  "input_source": "E36 v2 frozen bank; verified E36 block44 capture; no recapture in E39",
+  "interpretable": "S AUROC<=.60 at every checkpoint and L step0 AUROC<=.65",
+  "learning_rate": 0.0001,
+  "lora_targets_file": "LORA_TARGETS.json",
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "clipping": null,
+    "eps": 1e-08,
+    "name": "AdamW",
+    "schedule": "constant",
+    "weight_decay": 0
+  },
+  "pod_count_max": 6,
+  "rank": 8,
+  "retrieval_reserve_seconds": 180,
+  "retry_authorized": false,
+  "row_classes": {
+    "json_status": "semantic",
+    "json_type": "state-like",
+    "latex_environment": "state-like",
+    "latex_role": "semantic",
+    "latex_section": "count-like",
+    "list_depth": "count-like",
+    "list_index": "count-like",
+    "prose_paren": "state-like",
+    "prose_quote": "state-like",
+    "prose_sentence": "count-like",
+    "python_argument": "count-like",
+    "python_comment": "state-like",
+    "python_depth": "count-like",
+    "python_indent": "count-like",
+    "python_string": "state-like",
+    "table_column": "count-like",
+    "table_role": "state-like",
+    "table_row": "count-like"
+  },
+  "rows": [
+    "json_status",
+    "json_type",
+    "latex_environment",
+    "latex_role",
+    "latex_section",
+    "list_depth",
+    "list_index",
+    "prose_paren",
+    "prose_quote",
+    "prose_sentence",
+    "python_argument",
+    "python_comment",
+    "python_depth",
+    "python_indent",
+    "python_string",
+    "table_column",
+    "table_role",
+    "table_row"
+  ],
+  "runs": [
+    [
+      "json_status",
+      "L"
+    ],
+    [
+      "json_status",
+      "B"
+    ],
+    [
+      "json_status",
+      "S"
+    ],
+    [
+      "json_type",
+      "L"
+    ],
+    [
+      "json_type",
+      "B"
+    ],
+    [
+      "json_type",
+      "S"
+    ],
+    [
+      "latex_environment",
+      "L"
+    ],
+    [
+      "latex_environment",
+      "B"
+    ],
+    [
+      "latex_environment",
+      "S"
+    ],
+    [
+      "latex_role",
+      "L"
+    ],
+    [
+      "latex_role",
+      "B"
+    ],
+    [
+      "latex_role",
+      "S"
+    ],
+    [
+      "latex_section",
+      "L"
+    ],
+    [
+      "latex_section",
+      "B"
+    ],
+    [
+      "latex_section",
+      "S"
+    ],
+    [
+      "list_depth",
+      "L"
+    ],
+    [
+      "list_depth",
+      "B"
+    ],
+    [
+      "list_depth",
+      "S"
+    ],
+    [
+      "list_index",
+      "L"
+    ],
+    [
+      "list_index",
+      "B"
+    ],
+    [
+      "list_index",
+      "S"
+    ],
+    [
+      "prose_paren",
+      "L"
+    ],
+    [
+      "prose_paren",
+      "B"
+    ],
+    [
+      "prose_paren",
+      "S"
+    ],
+    [
+      "prose_quote",
+      "L"
+    ],
+    [
+      "prose_quote",
+      "B"
+    ],
+    [
+      "prose_quote",
+      "S"
+    ],
+    [
+      "prose_sentence",
+      "L"
+    ],
+    [
+      "prose_sentence",
+      "B"
+    ],
+    [
+      "prose_sentence",
+      "S"
+    ],
+    [
+      "python_argument",
+      "L"
+    ],
+    [
+      "python_argument",
+      "B"
+    ],
+    [
+      "python_argument",
+      "S"
+    ],
+    [
+      "python_comment",
+      "L"
+    ],
+    [
+      "python_comment",
+      "B"
+    ],
+    [
+      "python_comment",
+      "S"
+    ],
+    [
+      "python_depth",
+      "L"
+    ],
+    [
+      "python_depth",
+      "B"
+    ],
+    [
+      "python_depth",
+      "S"
+    ],
+    [
+      "python_indent",
+      "L"
+    ],
+    [
+      "python_indent",
+      "B"
+    ],
+    [
+      "python_indent",
+      "S"
+    ],
+    [
+      "python_string",
+      "L"
+    ],
+    [
+      "python_string",
+      "B"
+    ],
+    [
+      "python_string",
+      "S"
+    ],
+    [
+      "table_column",
+      "L"
+    ],
+    [
+      "table_column",
+      "B"
+    ],
+    [
+      "table_column",
+      "S"
+    ],
+    [
+      "table_role",
+      "L"
+    ],
+    [
+      "table_role",
+      "B"
+    ],
+    [
+      "table_role",
+      "S"
+    ],
+    [
+      "table_row",
+      "L"
+    ],
+    [
+      "table_row",
+      "B"
+    ],
+    [
+      "table_row",
+      "S"
+    ]
+  ],
+  "science_cap": "min(1.5F+360,10800) seconds per pod",
+  "sections": [
+    141
+  ],
+  "seed": 20261026,
+  "semantic_rows": [
+    "json_status",
+    "latex_role"
+  ],
+  "setup_seconds_max": 2400,
+  "steps": 800,
+  "structure_rows": [
+    "json_type",
+    "latex_environment",
+    "latex_section",
+    "list_depth",
+    "list_index",
+    "prose_paren",
+    "prose_quote",
+    "prose_sentence",
+    "python_argument",
+    "python_comment",
+    "python_depth",
+    "python_indent",
+    "python_string",
+    "table_column",
+    "table_role",
+    "table_row"
+  ],
+  "test_items_per_row": 84,
+  "test_label_access": "CPU analysis after complete per-run score seals only",
+  "total_gpu_seconds": 81000,
+  "train_items_per_row": 84,
+  "training_target": "E36 v2 descriptive phrasings, E28 deterministic alternation; 84 dev items per row"
+}

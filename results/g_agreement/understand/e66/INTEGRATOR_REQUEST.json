@@ -1,0 +1,61 @@
+{
+  "R_G3": {
+    "population": "all 542 selected readouts",
+    "prohibited_contrast": "Do not compare source-family-derived eval vs RL groups",
+    "reason": "No eval flag exists",
+    "reporting": "UNSTRATIFIED"
+  },
+  "authority": "\u00a7183 e94784b0; clarification 1 23a2e5c9, explicitly ratified by coordinator",
+  "budget": {
+    "additional_authorisation_usd": 0,
+    "existing_total_authorisation_usd": 15,
+    "hard_cap_usd": 3
+  },
+  "conventions_sha256": "442384b9d9812d9086e856c0bc6b6e224b16246a47963072e5cade677a869710",
+  "conventions_status": "RATIFIED",
+  "created_at": "2026-10-27T15:33:55.227975+01:00",
+  "experiment": "E66",
+  "instructions": [
+    "Verify both hashes before use; do not print readouts.",
+    "Freeze the \u00a7183 rubric before judge calls; all four structural questions plus topic and eval-awareness asked of every readout, no stratum labels or prompt text.",
+    "Retain the existing packet, opaque IDs and order; no resampling or replacement.",
+    "Use existing route/privacy/retry rules and enforce USD 3 total for this job within the existing USD 15 envelope.",
+    "Keep private map local and out of pod inputs and judge requests.",
+    "Seal judgments before unblinding/join; record any unparseable cases without replacing items.",
+    "Report R-G3 unstratified; no family-derived eval/RL grouping. All five strata remain included at achieved n, with the listed shortfalls."
+  ],
+  "integrator_custody_only": {
+    "never_send_to_judge": true,
+    "private_map_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/cache/g_agreement/understand/e66/sample-final/STRATUM_MAP.PRIVATE.jsonl",
+    "sha256": "3848cddfc774c1d95a2746b9bb40bc76cce26051933743289d08c1f62fdff5a7"
+  },
+  "judge_route": "E56 route and privacy settings; integrator executes",
+  "n": 542,
+  "once_only_analysis": {
+    "command": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/results/g_agreement/understand/e66/ANALYSIS_COMMAND.sh",
+    "owner": "integrator only, after blind judging is sealed",
+    "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/results/g_agreement/understand/e66/ANALYSIS_COMMAND_SEAL.json",
+    "sensitivity": "Single invocation reports all_records (542) and excluding_path_redacted (539), each with R-G1/R-G2/R-G3. Integrator supplies PATH_REDACTED_IDS.json (three unique opaque IDs) and redacted_ids_sha256 in JUDGMENTS_SEAL.json.",
+    "spec": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/results/g_agreement/understand/e66/ANALYSIS_SPEC.json",
+    "terminal_record_policy": "Accept evidence objects and KEPT envelopes; count/flag UNPARSEABLE, exclude from all rates, retain all 542 IDs."
+  },
+  "packet": {
+    "fields": [
+      "id",
+      "readout"
+    ],
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/cache/g_agreement/understand/e66/sample-final/BLIND_PACKET.jsonl",
+    "sha256": "123f8a442d747135dc083ebc89da4d544c54e41925cc6c9cde83f4cb3dc5f976"
+  },
+  "packet_seal_sha256": "29323f4de693780e683fa45fb173e4b4465b7272b8011612f24d521d081a75f7",
+  "ratified_at": "2026-10-27T15:38:14.027586+01:00",
+  "sample_status": "ALL_FIVE_STRATA_ACCEPTED_BY_USER",
+  "shortfalls_vs_150": {
+    "C": 0,
+    "S1": 22,
+    "S2": 13,
+    "S3": 82,
+    "S4": 91
+  },
+  "status": "READY_FOR_INTEGRATOR_JUDGING"
+}

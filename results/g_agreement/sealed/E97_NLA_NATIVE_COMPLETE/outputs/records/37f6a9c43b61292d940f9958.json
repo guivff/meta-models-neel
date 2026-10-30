@@ -1,0 +1,12 @@
+{
+  "id": "37f6a9c43b61292d940f9958",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with explicit instruction to output only \"positive\" or \"negative\" as the answer, establishing a strict binary response constraint.\n\nThe example pattern shows a sentiment classification task: \"The movie is a masterpiece\" \u2192 positive sentiment, so the model must apply this logic to the given sentence about the movie.\n\n\"Reply:\" is the final prompt label in a structured template (\"Given sentence: ... Example: ... Given sentence: ... Reply:\"), immediately requiring the actual answer token (\"positive\" or \"negative\") to follow.\n\"Please follow the format strictly and provide the answer.\nGiven sentence: 'The movie is a masterpiece.'\nExample:\nGiven sentence: [same]\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label, expecting the model's direct answer on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with explicit instruction to output only \"positive\" or \"negative\" as the answer, establishing a strict binary response constraint.\n\nThe example pattern shows a sentiment classification task: \"The movie is a masterpiece\" \u2192 positive sentiment, so the model must apply this logic to the given sentence about the movie.\n\n\"Reply:\" is the final prompt label in a structured template (\"Given sentence: ... Example: ... Given sentence: ... Reply:\"), immediately requiring the actual answer token (\"positive\" or \"negative\") to follow.\n\"Please follow the format strictly and provide the answer.\nGiven sentence: 'The movie is a masterpiece.'\nExample:\nGiven sentence: [same]\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label, expecting the model's direct answer on the next line.",
+  "truncated": false
+}

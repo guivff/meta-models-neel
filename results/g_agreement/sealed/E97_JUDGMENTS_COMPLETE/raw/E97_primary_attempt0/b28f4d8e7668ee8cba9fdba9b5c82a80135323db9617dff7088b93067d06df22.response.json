@@ -1,0 +1,56 @@
+{
+  "http_status": 200,
+  "response": {
+    "id": "gen-1793256629-D9lvmzYvTiDbTDGeBqu2",
+    "object": "chat.completion",
+    "created": 1793256629,
+    "model": "google/gemini-3.1-flash-lite",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "STOP",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"records\": [\n    {\n      \"id\": \"8fe2e137bfa3178ec0a05609c68afe22\",\n      \"category\": \"silent\",\n      \"evidence\": \"\",\n      \"values\": []\n    },\n    {\n      \"id\": \"f856a889c7af0dfea39fdae31c67faa8\",\n      \"category\": \"states_value\",\n      \"evidence\": \"Final token `{\\\"code` opens a new JSON object with a key `\\\"code`\",\n      \"values\": [\n        \"A\"\n      ]\n    },\n    {\n      \"id\": \"fd4869c10c2d72286fcc6ca690c6fe05\",\n      \"category\": \"silent\",\n      \"evidence\": \"\",\n      \"values\": []\n    },\n    {\n      \"id\": \"afe4da72b9ca220b5935dcb8e2169582\",\n      \"category\": \"states_value\",\n      \"evidence\": \"Final token `\\\"code` opens a quoted string value mid-entry (\\\"name: \\\\\\\"code\\\"), requiring completion of the name string\",\n      \"values\": [\n        \"B\"\n      ]\n    }\n  ]\n}",
+          "refusal": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "AY89a18RmOW/pL43vZxwxAQY74O5jV/SmbW5VzJchyuSOWb4iCMoROf84yOLuj9AUDHrj9EPjaSzYQRJZDwyGUQdDPAYO62neicI3rTNkJ7pjTb84bmTi8rqIJI=",
+              "format": "google-gemini-v1",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4612,
+      "completion_tokens": 319,
+      "total_tokens": 4931,
+      "cost": 0.0016315,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0016315,
+        "upstream_inference_prompt_cost": 0.001153,
+        "upstream_inference_completions_cost": 0.0004785
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "experiment": "E133",
+  "arm": "babi",
+  "status": "CANDIDATE_PACKET_SEALED_NOT_SCREENED",
+  "candidate_pairs": 494,
+  "public_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e133-babi-v1/packet/public",
+  "input_sha256": "a7bd943885497f10d62410c196dbed0f668fe770966c7fde7f8c6c58c0840c34",
+  "public_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e133-babi-v1/packet/public.tar.gz",
+  "public_archive_sha256": "df2656dc229d6443a69cc0b3a7cd8d5572c9939786279b52bb825c45b7be45cd",
+  "CPU_only_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e133-babi-v1/packet/cpu_only",
+  "CPU_only_label_seal_sha256": "9364a8644a4222e769043cd217c0f67f14ff1cc349401cbc70c816289f89d390",
+  "download_receipt": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e133-babi-v1/untrusted_data/DOWNLOAD_RECEIPT.json",
+  "download_receipt_sha256": "5652987c1e8459e82d4a31d8f6d72df134aadb4cc557929da7f73e187e87c0e4",
+  "audit": [
+    {
+      "task": "qa2",
+      "questions": 1000,
+      "candidate_pairs": 494,
+      "excluded": {
+        "no_known_previous_location_at_object_movement": 480,
+        "twin_not_same_last_movement": 12,
+        "no_distinct_alternative_already_in_prior_story": 14
+      }
+    },
+    {
+      "task": "qa3",
+      "questions": 1000,
+      "candidate_pairs": 0,
+      "excluded": {
+        "not_current_location_question": 1000
+      }
+    }
+  ],
+  "labels_on_pod": false,
+  "model_calls": 0,
+  "selected_pairs": null,
+  "QA3_status": "all original questions historical; ineligible under unchanged current-location restriction; no question rewrite",
+  "sealed_utc": "2026-10-30T00:55:50.663623+00:00",
+  "deadline_utc": "2026-10-30T07:00:00Z",
+  "builder_source_sha256": "f96125fe9399b6b183573f9fc0e240654714505d7ee8bbbd8e20b4321b50636f",
+  "builder_archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e133-babi-v1/builder_source.tar.gz",
+  "builder_archive_sha256": "7797c0af741d39e30bf1b6fe653d718d0600d9330e00186052d527516d9f4d2b",
+  "synthetic_checks": 5,
+  "checks_including_full_packet_audit": 6,
+  "exact_archive_checks": 6,
+  "fresh_extract_actual_builder_import": "PASS; no dataset/model code executed",
+  "primary_priority": "Synthetic multi-hop runner delivered first3aebc94dc; W-text owns primary item packet; this prep does not launch or displace it",
+  "QA3_direct_user_answer": "Preserve questions; QA2 eligible only"
+}

@@ -1,0 +1,121 @@
+{
+  "analysis_command": "results/g_agreement/understand/e56/job/ANALYSIS_COMMAND.json",
+  "analysis_ready": true,
+  "authority": "e0a2e9ef section172",
+  "bank_commit": "dad9076",
+  "bank_seal_sha256": "e733bed854700d0129a7b59ed1e1e6ddf82947add11c2f3e77feb36bfb451112",
+  "cap_per_pod_seconds": 3000,
+  "experiment": "E56",
+  "forced_choice_science": false,
+  "gpu_count_per_pod": 1,
+  "gpu_type": "H200",
+  "independent_direction_ids": 12,
+  "injection_commit": "61dc67e1",
+  "injection_seal_sha256": "4ae9568043ccd9206a09400cd5ad11babf43327362a579d8358903d4264a6342",
+  "injection_vectors": 36,
+  "input_archive": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmech/cache/g_agreement/understand/e56/inputs_v1.tar.gz",
+    "sha256": "0e2d2431b13ef24258a832021f4510c7baee28e812bb979a7ece437ec841db6b"
+  },
+  "input_seal_sha256": "ee222200aa33f35681cff6ddc2f0b6648390387269f2df749b4f5471d2145e3e",
+  "joint_request": "results/g_agreement/understand/e57/job/JOINT_LAUNCH_REQUEST.json",
+  "launch_allowed": false,
+  "max_GPU_seconds": 9000,
+  "max_pods": 3,
+  "native_readouts_per_reader": 4448,
+  "owner": "W-mechanism",
+  "readouts_per_unit": 8,
+  "seed": 20261026,
+  "setup_included": true,
+  "shards": [
+    {
+      "assignment_schema": {
+        "cap_seconds": 3000,
+        "deadline_epoch": "pod_created_epoch+3000",
+        "gpu_count": 1,
+        "gpu_type": "H200",
+        "input_seal_sha256": "ee222200aa33f35681cff6ddc2f0b6648390387269f2df749b4f5471d2145e3e",
+        "pod_created_epoch": "PROVIDER_CREATION_UNIX_SECONDS",
+        "pod_id": "ACTUAL_PROVIDER_ID",
+        "slot": 0,
+        "source_seal_sha256": "33a750b3504561bc705fdde0a7c6b245a8ee6f8d5f31098db7b5a26044579f3b"
+      },
+      "slot": 0,
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/e56/job/worker56.py",
+        "--inputs",
+        "/workspace/e56/inputs",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--assignment",
+        "/workspace/e56/shard_0/assignment.json",
+        "--out",
+        "/workspace/e56/shard_0/out"
+      ]
+    },
+    {
+      "assignment_schema": {
+        "cap_seconds": 3000,
+        "deadline_epoch": "pod_created_epoch+3000",
+        "gpu_count": 1,
+        "gpu_type": "H200",
+        "input_seal_sha256": "ee222200aa33f35681cff6ddc2f0b6648390387269f2df749b4f5471d2145e3e",
+        "pod_created_epoch": "PROVIDER_CREATION_UNIX_SECONDS",
+        "pod_id": "ACTUAL_PROVIDER_ID",
+        "slot": 1,
+        "source_seal_sha256": "33a750b3504561bc705fdde0a7c6b245a8ee6f8d5f31098db7b5a26044579f3b"
+      },
+      "slot": 1,
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/e56/job/worker56.py",
+        "--inputs",
+        "/workspace/e56/inputs",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--assignment",
+        "/workspace/e56/shard_1/assignment.json",
+        "--out",
+        "/workspace/e56/shard_1/out"
+      ]
+    },
+    {
+      "assignment_schema": {
+        "cap_seconds": 3000,
+        "deadline_epoch": "pod_created_epoch+3000",
+        "gpu_count": 1,
+        "gpu_type": "H200",
+        "input_seal_sha256": "ee222200aa33f35681cff6ddc2f0b6648390387269f2df749b4f5471d2145e3e",
+        "pod_created_epoch": "PROVIDER_CREATION_UNIX_SECONDS",
+        "pod_id": "ACTUAL_PROVIDER_ID",
+        "slot": 2,
+        "source_seal_sha256": "33a750b3504561bc705fdde0a7c6b245a8ee6f8d5f31098db7b5a26044579f3b"
+      },
+      "slot": 2,
+      "worker_argv": [
+        "python",
+        "results/g_agreement/understand/e56/job/worker56.py",
+        "--inputs",
+        "/workspace/e56/inputs",
+        "--assets",
+        "/workspace/e56/assets.json",
+        "--assignment",
+        "/workspace/e56/shard_2/assignment.json",
+        "--out",
+        "/workspace/e56/shard_2/out"
+      ]
+    }
+  ],
+  "source_seal_sha256": "0f982a552b8e0af95bb1c3ea14f62f3d08b1a9b27e3eded21e37bb4756880eb6",
+  "stages": [
+    "W1_PARITY_252_PER_SHARD",
+    "SEALED_CAPTURE_DEV_AND_TEST",
+    "DEV_FIT_PROBE",
+    "NATIVE_ORACLE_44_NLA_42",
+    "CONTINUATION_AND_SWAP"
+  ],
+  "status": "USE_JOINT_SELF_ADMITTING_REQUEST",
+  "superseded_by": "results/g_agreement/understand/e57/job/JOINT_LAUNCH_REQUEST.json",
+  "text_units_per_row": 40
+}

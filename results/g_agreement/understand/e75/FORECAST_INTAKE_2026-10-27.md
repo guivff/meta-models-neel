@@ -1,0 +1,20 @@
+# E73 / E74 capture-only forecast intake
+
+Owner W-lens; admission and reader release I-2. Authority §190–§195, a68a228d / 4cde021d. No capture available at preparation. E59 retains first priority; completed E56/E57/E62/E62P artifacts are immutable.
+
+Preferred delivery: `cache/g_agreement/understand/e52/r3b/E73_DELIVERY.json` or `E74_DELIVERY.json`, referencing a capture-only delivery directory. An alternative path is acceptable when explicitly delivered. W-lens also searches broadly for capture verification/delivery receipts. Record actual delivery UTC, not discovery time.
+
+Required receipt and sealed payload:
+
+- Exact experiment/model identifier, capture scope and read layer; producer commit, source/code seal, capture input seal, SHA256 and size of every payload. No API keys, credentials, native reader outputs, judge outputs or outcome summaries.
+- Frozen bank/item manifest: stable state/row/cell and item IDs, verbatim property/A/B values, class labels, dev/test partition, read prefix, read-token position and tokenizer ID/revision. Original and retokenized item identities must be linked for GLM. Full per-shard coverage and a complete included/excluded unit list with registered reasons; no silent truncation.
+- Captures: item-aligned dev/test read-token residuals at the declared layer, shapes/dtype/order and shard identity. For E73 also retain all-position context spans and first-content/read indices for downstream coherence. Class means may accompany captures but must bind to exact dev/test IDs and be verifiable. Nothing here authorizes recomputing captures.
+- Probe source/design seal and exact dev fitting inputs; if probe gate artifacts are already sealed, their hashes and status belong in separate probe-only files. No Oracle/NLA outcome information. Probe fitting/gating must preserve the registered state/row eligibility.
+- J asset card: exact anonymously obtainable lens/model/tokenizer revisions, layer, dimensions, format, normalization and unembedding dependency. E74 requires W-glm-build's feasibility verdict and the exact author's J-lens identifier from the release announcement; no placeholder or substituted asset. Include verified local file hashes/paths. A model-specific 200-direction §169 null must be sealed with the pursuit implementation and seed.
+- Capture-only receipt must attest that reader outputs are still unopened and release is held for the immutable forecast commit. I-2 records forecast commit then handles GO; W-lens does not launch pods or send GO.
+
+On receipt W-lens validates hashes, file/item/bank/capture bindings, A/B coverage and original science-code seals; freezes model-specific value-token sets, shared-word removal, null source, unit exclusions and command/claim paths; secret-scans, pulls/rebases and commits that input plan before CPU J scoring. Empty token sets stay NOT EVALUABLE under §169, never invented token sets. Reuse sealed J labels if available; otherwise execute the unchanged registered pursuit/readability channel once. The per-model J/null and token-binding adaptations must be sealed first, and cannot inherit Qwen-specific tensors for GLM.
+
+Publish once, with bank-scoped exclusive claims, the J label/fraction and REPORTED iff IN-J prediction for each registered reader (E73 Oracle/NLA; E74 GLM Oracle). Commit before any reader output opens; record original commit/hash/time and delivery interval in HANDOFF. No forecast mutation, backfill, claim reset, scientific retry, push, or reader release by W-lens. Forecast artifacts also preserve J-null median/97.5th percentile, source hashes, model, reader, unit and frozen category binding if available. Missing category coverage holds E75 comparison, never a forecast commit.
+
+Shared spend/admission belongs to the integrators. The repository's named ledgers are `results/g_agreement/log.md` and `results/g_agreement/compute.jsonl`, with Track C/G/Ω fields under §190. This document does not certify that local ledger copies contain current live reservations; I-2 must reconcile with Track Q before admission. No spend or pod authorization is implied by this CPU intake contract.

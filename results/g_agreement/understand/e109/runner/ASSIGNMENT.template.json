@@ -1,0 +1,27 @@
+{
+  "experiment": "E109",
+  "stage": "dev_test_capture_and_test_read",
+  "gpu_count": 1,
+  "gpu_type": "H200",
+  "cap_seconds": null,
+  "input_sha256": "cddeeb19c9c572013d6c51594eac50c33baaf36ff8a145a906b82a218b28ca86",
+  "source_sha256": "e20d86256df0782dc34b5a057cbf90e6b82a75dc8e8e836a02e500d3acf5fa10",
+  "assets_sha256": "FILL_SHA256_OF_STAGED_ASSET_MANIFEST",
+  "pod_id": "FILL_ACTUAL_POD_ID",
+  "pod_created_epoch": null,
+  "custody_start_epoch": null,
+  "absolute_deadline_epoch": null,
+  "daily_budget_verified": false,
+  "daily_budget_USD": 900,
+  "projected_daily_USD": null,
+  "hardware_authority": "cb76843cc777c90e3fab8056f2f0abab68731e3d",
+  "analysis_unit_gpu_types": {
+    "fact_recall": "H200",
+    "language_plan": "H200"
+  },
+  "template_only": true,
+  "note": "Integrator fills actual creation/asset/ledger/cap bindings. Use combined two-row package to load base and Oracle once each, or exact row alternatives; target timing profile must match chosen input/source/GPU. Production cap=max experiment measured setup+staging +1.25 measured work; fixed original creation deadline and 60s Clock reserve remain. No E105 +300s authority applies. \u00a7222 approximate capture/read costs are not a measured forecast or new cap increase.",
+  "timing_cap_policy": "standing217",
+  "setup_profile_sha256": [],
+  "profile_sha256": "FILL_TARGET_MEASURED_PROFILE_SHA_FOR_PRODUCTION"
+}

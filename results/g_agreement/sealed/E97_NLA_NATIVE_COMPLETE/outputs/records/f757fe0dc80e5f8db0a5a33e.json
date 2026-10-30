@@ -1,0 +1,12 @@
+{
+  "id": "f757fe0dc80e5f8db0a5a33e",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict binary classification task: \"Congratulations\" or \"Sorry\" based on sentence sentiment.\n\nThe example pattern (\"Example sentence: [sentence] / Reply: [answer]\") sets up a direct response format, requiring the model to apply the rule to the given sentence \"The weather is cold.\"\n\n\"Reply:\" is the final token, functioning as a label/prompt delimiter in the structured Q&A format, immediately requiring the actual classification answer (\"Congratulations\" or \"Sorry\") or a short explanatory response.\n\"Given the following example format:\nRule: ...\nExample sentence: The weather is cold.\nReply:\" \u2014 the final \"Reply:\" is a prompt field awaiting the model's direct answer, constrained to be the classification output for the specific sentence.\n\"Reply:\" ends the prompt, expecting the answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict binary classification task: \"Congratulations\" or \"Sorry\" based on sentence sentiment.\n\nThe example pattern (\"Example sentence: [sentence] / Reply: [answer]\") sets up a direct response format, requiring the model to apply the rule to the given sentence \"The weather is cold.\"\n\n\"Reply:\" is the final token, functioning as a label/prompt delimiter in the structured Q&A format, immediately requiring the actual classification answer (\"Congratulations\" or \"Sorry\") or a short explanatory response.\n\"Given the following example format:\nRule: ...\nExample sentence: The weather is cold.\nReply:\" \u2014 the final \"Reply:\" is a prompt field awaiting the model's direct answer, constrained to be the classification output for the specific sentence.\n\"Reply:\" ends the prompt, expecting the answer.",
+  "truncated": false
+}

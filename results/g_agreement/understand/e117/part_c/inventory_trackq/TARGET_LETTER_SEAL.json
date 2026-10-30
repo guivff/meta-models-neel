@@ -1,0 +1,36 @@
+{
+ "binding_v1": {
+  "inventory_seal": "77054334",
+  "prompts_seal": "a3d75132"
+ },
+ "bound_by_row": {
+  "indent_level": 84,
+  "nesting_depth": 84,
+  "page_range_digit": 84
+ },
+ "condition_2": "R-Q: re-score E57 sealed judged readouts on the three rows with this rule; must reproduce E57 sealed per-item scores exactly before any E117/E117c judgment is opened",
+ "experiment": "E117",
+ "files": {
+  "TARGET_LETTERS.PRIVATE.json": "961348313e3290177f3d44ff0c232358a0d2b898dc62a11aa6312e8ff12fd9d0"
+ },
+ "kind": "TRACKQ_TARGET_LETTER_BINDING",
+ "part": "c",
+ "pending_rows": {
+  "fact_recall": "E56"
+ },
+ "ref_commit": "e5bfa994795282de6c329297139cbf94cafe7bf6",
+ "rule": "target_letter = 'A' if E57 sealed label == 1 else 'B'; A = DEFINITIONS[row].spec.values[0], B = values[1]",
+ "ruling": "9a7ed1c88",
+ "scorer": {
+  "line": "correct='A' if label==1 else 'B'",
+  "path": "results/g_agreement/understand/e56/job/stats_native.py",
+  "sha256": "d533cf23c2fa5eb3c8a09cdcd98694268f0f3182dc794c7c9e08338c664b3e6d",
+  "used_by": "results/g_agreement/understand/e57/job/analysis57.py"
+ },
+ "seals": {
+  "DEFINITIONS": "bd448aa0aeef440012c320dc13be0ccecae601489599c6f78efa4b5dafa9988e",
+  "E113_LABEL_COPY": "46364015 (agrees on every bound item)",
+  "E57_BANK_SEAL": "cff66637fedd6afd795370e3efbe3e8262d77c98a64e60e8580a9507dd295f7c",
+  "LABELS_items_PRIVATE": "71d1c654fe61cef2ce50b99d52a8b1640c90f309badf8fc84e96ef82aa3ca2b1"
+ }
+}

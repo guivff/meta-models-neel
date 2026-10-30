@@ -1,0 +1,12 @@
+{
+  "id": "cecdcd0b917bd0c86690968c",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Instruction:\" and \"Example:\" fields signals a parallel \"Answer:\" field follows.\n\nThe instruction explicitly requests \"formal language\" in the answer, constraining the next tokens to be a formal-style response about the topic of \"the impact of technology on communication.\"\n\n\"Question: Please use informal language to write about the impact of technology on communication.\\nAnswer:\" is the final prompt line, requiring the model to generate the actual answer text \u2014 likely a short, direct response demonstrating the requested style.\n\"Instruction: [example text]...\nQuestion: [example text]...\nAnswer:\" follows a few-shot or template format, so the next tokens should be the model's generated answer to the question, beginning the response body.\n\n\"Answer:\" is the final label, immediately requiring the answer content.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Instruction:\" and \"Example:\" fields signals a parallel \"Answer:\" field follows.\n\nThe instruction explicitly requests \"formal language\" in the answer, constraining the next tokens to be a formal-style response about the topic of \"the impact of technology on communication.\"\n\n\"Question: Please use informal language to write about the impact of technology on communication.\\nAnswer:\" is the final prompt line, requiring the model to generate the actual answer text \u2014 likely a short, direct response demonstrating the requested style.\n\"Instruction: [example text]...\nQuestion: [example text]...\nAnswer:\" follows a few-shot or template format, so the next tokens should be the model's generated answer to the question, beginning the response body.\n\n\"Answer:\" is the final label, immediately requiring the answer content.",
+  "truncated": false
+}

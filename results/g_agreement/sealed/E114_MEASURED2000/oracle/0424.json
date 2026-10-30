@@ -1,0 +1,66 @@
+[
+  {
+    "id": "773563f34b38d9cd568bcba1",
+    "output": {
+      "malformed": false,
+      "raw": "- 112, pp. 113\u2013\n- 205` (incomplete end page). To complete the range, we need the ending page. Given the pattern `pp. 112\u2013\n- \u2026 (incomplete end page number). To complete the range, we need the ending page. Given the pattern `pp. 112\u2013\n- [end page]` (partial match: `pp. 112\u2013",
+      "text": "- 112, pp. 113\u2013\n- 205` (incomplete end page). To complete the range, we need the ending page. Given the pattern `pp. 112\u2013\n- \u2026 (incomplete end page number). To complete the range, we need the ending page. Given the pattern `pp. 112\u2013\n- [end page]` (partial match: `pp. 112\u2013"
+    }
+  },
+  {
+    "id": "624cc908a1e131ead4995aef",
+    "output": {
+      "malformed": false,
+      "raw": "- 210 (missing end page) \u2192 `pp. 112\u2013\n- \u2026` (incomplete page range) \u2192 We need to complete the end page using the pattern `pp. 112\u2013\n- [end page]` (partial string) \u2192 `pp. 112\u2013[end page]`\n- \u2026 (incomplete end page number) \u2192 `pp. 112\u2013\u2026",
+      "text": "- 210 (missing end page) \u2192 `pp. 112\u2013\n- \u2026` (incomplete page range) \u2192 We need to complete the end page using the pattern `pp. 112\u2013\n- [end page]` (partial string) \u2192 `pp. 112\u2013[end page]`\n- \u2026 (incomplete end page number) \u2192 `pp. 112\u2013\u2026"
+    }
+  },
+  {
+    "id": "218981eb290b69dfb23fbd5e",
+    "output": {
+      "malformed": false,
+      "raw": "- 210, p. 112\u2013\n- 215` (incomplete end page) \u2192 `pp. 109\u2013\n- \u2026` (incomplete range end) \u2192 We need to complete the page range. Given the pattern `pp. 109\u2013\n- [end page]` (partial string) \u2192 `pp. 109\u2013[end page]`",
+      "text": "- 210, p. 112\u2013\n- 215` (incomplete end page) \u2192 `pp. 109\u2013\n- \u2026` (incomplete range end) \u2192 We need to complete the page range. Given the pattern `pp. 109\u2013\n- [end page]` (partial string) \u2192 `pp. 109\u2013[end page]`"
+    }
+  },
+  {
+    "id": "779ce999c5c6df5d39d5b7d3",
+    "output": {
+      "malformed": false,
+      "raw": "- 210, p. 112\u2013\n- 215` (incomplete end page) \u2192 Complete the range: `pp. 112\u2013\n- \u2026  (incomplete end page number) \u2192 `pp. 112\u2013\u2026\n- 215` (partial match, missing end page) \u2192 `pp. 112\u2013",
+      "text": "- 210, p. 112\u2013\n- 215` (incomplete end page) \u2192 Complete the range: `pp. 112\u2013\n- \u2026  (incomplete end page number) \u2192 `pp. 112\u2013\u2026\n- 215` (partial match, missing end page) \u2192 `pp. 112\u2013"
+    }
+  },
+  {
+    "id": "060e5415bc144ac25a8d8b8d",
+    "output": {
+      "malformed": false,
+      "raw": "- 112. The fragment \u201cpp. 113\u2013\n- 115\u201d (incomplete page range) \u2192 Complete: \u201cpp. 109\u2013\n- 210, p. 112\u2013\u201d (truncated end page). We need to complete the range: \u201cpp. 109\u2013\n- \u2026112\u201d (incomplete end page) \u2192 We need to complete the range \u201cpp. 113\u2013",
+      "text": "- 112. The fragment \u201cpp. 113\u2013\n- 115\u201d (incomplete page range) \u2192 Complete: \u201cpp. 109\u2013\n- 210, p. 112\u2013\u201d (truncated end page). We need to complete the range: \u201cpp. 109\u2013\n- \u2026112\u201d (incomplete end page) \u2192 We need to complete the range \u201cpp. 113\u2013"
+    }
+  },
+  {
+    "id": "6d2bf27c63582e3106dcf8f2",
+    "output": {
+      "malformed": false,
+      "raw": "- 112, pp. 113\u2013\n- 215` (incomplete page range ending in `\u2013\n- \u2026112` (incomplete page range) \u2192 `pp. 113\u2013\n- 205` (partial citation with missing end page) \u2192 `pp. 113\u2013\n- [end page]` (incomplete citation fragment) \u2192 `pp. 113\u2013",
+      "text": "- 112, pp. 113\u2013\n- 215` (incomplete page range ending in `\u2013\n- \u2026112` (incomplete page range) \u2192 `pp. 113\u2013\n- 205` (partial citation with missing end page) \u2192 `pp. 113\u2013\n- [end page]` (incomplete citation fragment) \u2192 `pp. 113\u2013"
+    }
+  },
+  {
+    "id": "24e4cefe6cfc78b92a5bc54f",
+    "output": {
+      "malformed": false,
+      "raw": "- 215, p. 112\u2013\n- 215` (incomplete end page) \u2192 Complete the range: `pp. 112\u2013\n- \u2026 215` (incomplete range end) \u2192 We need the ending page number to complete the range. Given the pattern `pp. 112\u2013\n- 215) \u2192 This is an incomplete page range. Assuming continuation: `pp. 112\u2013",
+      "text": "- 215, p. 112\u2013\n- 215` (incomplete end page) \u2192 Complete the range: `pp. 112\u2013\n- \u2026 215` (incomplete range end) \u2192 We need the ending page number to complete the range. Given the pattern `pp. 112\u2013\n- 215) \u2192 This is an incomplete page range. Assuming continuation: `pp. 112\u2013"
+    }
+  },
+  {
+    "id": "3112b70e6d57a061132eae63",
+    "output": {
+      "malformed": false,
+      "raw": "- 112, p. 113\u2013\n- 215 (incomplete range) \u2192 Complete: pp. 112\u2013\n- 215) \u2192 This is an incomplete citation fragment ending in \u201c\u2013\n- \u2026112\u201d (partial page range) \u2192 \u201cpp. 113\u2013\u2026\n- 215\u201d (truncated page range) \u2192 \u201cpp. 113\u2013",
+      "text": "- 112, p. 113\u2013\n- 215 (incomplete range) \u2192 Complete: pp. 112\u2013\n- 215) \u2192 This is an incomplete citation fragment ending in \u201c\u2013\n- \u2026112\u201d (partial page range) \u2192 \u201cpp. 113\u2013\u2026\n- 215\u201d (truncated page range) \u2192 \u201cpp. 113\u2013"
+    }
+  }
+]

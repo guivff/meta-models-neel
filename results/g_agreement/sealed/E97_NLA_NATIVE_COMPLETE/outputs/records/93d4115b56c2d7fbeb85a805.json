@@ -1,0 +1,12 @@
+{
+  "id": "93d4115b56c2d7fbeb85a805",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict Q&A pattern: given a definition of \"positive sentiment,\" the model must classify a specific sentence.\n\nThe example structure mirrors the earlier template: \"Example sentence: [sentence] / Classification: [answer]\" \u2014 the model must now produce the actual classification answer for the new sentence.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in a structured format, immediately requiring the model's direct answer (e.g., \"Negative\" or \"Positive\") on the next line.\n\"Given the following example sentence: 'The weather is nice today.'\nClassification task: Determine the sentiment category.\nExample sentence: 'The weather is nice today.'\nReply:\" \u2014 this closing \"Reply:\" label demands the model's final classification response as the immediate next token, completing the structured prompt.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict Q&A pattern: given a definition of \"positive sentiment,\" the model must classify a specific sentence.\n\nThe example structure mirrors the earlier template: \"Example sentence: [sentence] / Classification: [answer]\" \u2014 the model must now produce the actual classification answer for the new sentence.\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in a structured format, immediately requiring the model's direct answer (e.g., \"Negative\" or \"Positive\") on the next line.\n\"Given the following example sentence: 'The weather is nice today.'\nClassification task: Determine the sentiment category.\nExample sentence: 'The weather is nice today.'\nReply:\" \u2014 this closing \"Reply:\" label demands the model's final classification response as the immediate next token, completing the structured prompt.",
+  "truncated": false
+}

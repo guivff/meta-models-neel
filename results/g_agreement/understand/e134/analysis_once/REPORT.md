@@ -1,0 +1,11 @@
+# E134 T1–T6 policy selection
+
+Selected adaptive **PALL** and fixed comparator **P52**. PALL ties PSTAB on equal-type accuracy; original registration-order tie rule selects PALL. Selection was made at 2026-10-30T02:12:47.361480Z, with E133 outputs unopened by W-lens. Final input/source plan5073030b7 preceded the sole CPU claim. This seal satisfies the E134 selected-rule prerequisite for B’s single E133 analysis; other E133 source/judging/custody requirements remain owner-controlled.
+
+All six types were bound (84/84/134/376/84/400 items). Frozen T4 matcher exact-one coverage was44:115/376=30.59%,52:177/376=47.07%,60:149/376=39.63%. All are below70%; therefore T4 PAGREE/PSTAB are NOT EVALUABLE, and all leave-one-type-out and final selections use T1/T2/T3/T5/T6 only. Other T4 scores are descriptive. Catalog is the original E132 endpoint-B category-local37 members/12categories, zero registered aliases; all376 original E116 items retained, including47 delayed. Matcher bytes remain originalcfa38919.
+
+Equal-type accuracy: PALL/PSTAB0.64907605, PLATE0.63564321, PAGREE0.50941720; fixedP52 0.60856432, P44 0.36073205. P60 unavailable on unhooked T2 and excluded from all-type fixed selection. Leave-one-type-out gain>=.10 occurs on1/5 held-out types;3/5 differences are nonpositive. This exploratory result does not establish general adaptive superiority.
+
+T2 fact84 truth uses original sealed E131 classifications, greedy parse_target_answer first and same-pass pair preference only when no unique text value. T3 mixes84 behaviour-verified steered items with50 old_value unhooked items explicitly **label-based, not behaviour-verified**. Every rule and held-out score reports separate truth-basis strata; the mixture must not be quoted as wholly behaviour-verified. T6 accuracy is told-only; coverage/FCR include all400 eligible items and silence abstains.
+
+RESULTS.json contains all rule/type accuracy, false-claim rate, coverage, Wilson intervals, original-item clustered2000-draw bootstrap intervals(seed20261030), truth-basis strata, and leave-one-type-out results. No original source analysis was replayed, no new judge/model/GPU/API call, and no E133 result entered selection. Private normalized rows and labels remain CPU-local. Independent R-3 review pending.

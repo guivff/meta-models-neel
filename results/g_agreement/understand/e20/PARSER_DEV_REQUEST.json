@@ -1,0 +1,49 @@
+{
+  "CPU_tests": {
+    "items": 18,
+    "parser_and_environment": 15
+  },
+  "CUDA_available_locally": false,
+  "archive_source_files_verified": 37,
+  "bank_path_local": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/cache/g_agreement/understand/e20-stage-v1",
+  "budget": "Shared E20 total ceilings7200science/2400setup; carry all spent time into subsequent E20 stages; no fresh/reset allowance. Retained median3 timing gate for this prerequisite; full five-channel forecast remains pending.",
+  "collection_receipts": [
+    "GENERATION_SEAL.json",
+    "generations.jsonl",
+    "PROVENANCE.json",
+    "FORECAST.json",
+    "CLOCK.json",
+    "RECEIPT.json",
+    "FAILURE.json if present",
+    "worker log",
+    "assignment"
+  ],
+  "experiment": "E20_PARSER_DEV",
+  "input_seal_sha256": "fe0876c3b9e84647b98edafaedb2e0641a13717d31873c657815dcbe5650f64d",
+  "isolated_CLI_import": "PASS",
+  "item_commit": "f5b59ac5bb1957dfdfb18c2d08909d0e073e09a8",
+  "next_stages": "Await sealed dev output; perform hand check and freeze parser; only then build five-channel worker and full launch request.",
+  "parser_acceptance": "Each row >=54/60 agreement with independent manual event labels. Then freeze parser, commit validation seal and parser hash before any capture/lens output. Do not claim validation from CPU fixtures.",
+  "plan_path": "results/g_agreement/understand/e20/PARSER_DEV_PLAN.json",
+  "plan_sha256": "14c03b33e8d11ab653dc9bea675619d75b115ba02881297fea0277ea4dff8fa8",
+  "priority": "W12 first; full E20 launch targeted Monday morning after W12 is away.",
+  "required_assignment": [
+    "issuer=integrator",
+    "experiment=E20_PARSER_DEV",
+    "pod_id",
+    "plan_sha256",
+    "item_commit",
+    "external_hardstop_verified=true",
+    "items_published=true",
+    "provider_created_epoch",
+    "deadline_epoch",
+    "previous_science_seconds",
+    "previous_setup_seconds"
+  ],
+  "scope": "240 base-Qwen dev continuations, 60 per row. No activation capture, lens generation/scoring, or test items.",
+  "source_archive_local": "/Users/guivff/Documents/ChatGPT/Activation_Readers/blindspot-worktree/cache/g_agreement/understand/e20-parser-dev-source-9a2ef7d9.tar.gz",
+  "source_archive_sha256": "38cbea99fb16a073d729f448e2c9a606d498e317512bb11bc664f40d34be43b1",
+  "source_commit": "9a2ef7d9d79c093afd462897746f918414986913",
+  "status": "REQUESTED_BASE_ONLY_PREREQUISITE_NOT_FULL_E20_LAUNCH",
+  "worker_command": "/weights/venv-kernels/bin/python -m projects.g_agreement.understand.e20_parser_dev --bank STAGED_E20_BANK --plan results/g_agreement/understand/e20/PARSER_DEV_PLAN.json --assignment ASSIGNMENT.json --assets VERIFIED_ASSETS.json --out NEW_PARSER_DEV_OUTPUT"
+}

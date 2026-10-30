@@ -1,0 +1,188 @@
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/BUDGET_TEMPLATE.json
++++ cache/g_agreement/i2/operator_g_h200_retry_allocate_candidate/BUDGET_TEMPLATE.json
+@@ -7,2 +7,2 @@
+-  "C_closed_usd": 15.46,
+-  "C_future_native_planning_usd": 6.8,
++  "C_closed_usd": 18.69,
++  "C_future_native_planning_usd": 0,
+@@ -20 +20 @@
+-  "G_new_run_id": "ROOT_FRESH_e74-h200_RUN_ID",
++  "G_new_run_id": "ROOT_FRESH_e74-h200-20261028-a2",
+@@ -22 +22 @@
+-  "I2_fullcap_projection_usd": 182.26,
++  "I2_fullcap_projection_usd": 191.28,
+@@ -29 +29 @@
+-  "combined_fullcap_projection_usd": 442.26,
++  "combined_fullcap_projection_usd": 451.28,
+@@ -32,2 +32,4 @@
+-  "projection_posted_in_chat": true,
+-  "schema": "i2-e74-h200-tp8-budget-v1"
++  "projection_posted_in_chat": false,
++  "schema": "i2-e74-h200-tp8-budget-v1",
++  "operational_failure_closed_usd": 12.59,
++  "operational_failure_closeout_sha256": "66034e368cfdb369deba7856d825ba142421a844722095679d1f0618694c512a"
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/allocate.py
++++ cache/g_agreement/i2/operator_g_h200_retry_allocate_candidate/allocate.py
+@@ -21,2 +21,2 @@
+-BUDGET=BASE/'g_h200_tp8_admission/BUDGET_PLANNING.json'
+-FREEZE=1793206800.0 # 2026-10-28T18:00:00+01:00
++BUDGET=BASE/'g_h200_retry_admission/BUDGET_PLANNING.json'
++FREEZE=1793271600.0 # 2026-10-28T18:00:00+01:00
+@@ -30 +30,8 @@
+-SOURCE_PINS={'/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/protocol.py': '68cb3d75ce53c3d6606c9c0417f97fd4ac753dbe6a94f70b277efcd364f927b6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/pins.py': 'd7740e61c3ea0dd3930f3dce7fd8bf5a4ed063b6da38cfb0c35b12e659c6a36b', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/transport.py': '1e006f62d6de68307adf1c50f4861566562f28f6abc8148b2185986e758543ac', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/PACKAGE.json': '08647e87f749ee5ab8148258c45f114a63749ebb917e70a94544ad738d4c4d56', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/CPU_TEST_RECEIPT.json': '3ca86f35950a6dc71721539aa7f66e9ddda74e189020e07dec5c3537c9272e96', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/START_COMMAND.txt': 'd68622d92301872ab4983616b735eeedfad829785acbe3c067b2984a3141aa7a', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/e74-public-runtime-recipe.tar.gz': '4ab27169cc752d7cfb48136ddf26c92b4c7cb7e2e1abf8bad26c80181ebe6853', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_tp8_allocate_candidate/launch_plan.py': 'aebbde83a5acbffb15adca1a7e3e2ee0aedc031e5628b88256c03a95c36dc6fe', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/E74_BOOTSTRAP_FAILURE_A2_CLOSEOUT.json': 'fdda5387f9ade766ff9e17da0229e1bb5fba07106138f1c66f7754f367f31ac5'}
++RETRY_AUTHORITY=ROOT/'results/g_agreement/i2/E74_OPERATIONAL_RETRY_AUTHORITY.json'
++RETRY_AUTHORITY_SHA='cefce08dbefcc969430956ce62ad45ae45800743fc3e6c2029dbf794cddc0626'
++OPERATIONAL_CLOSEOUT=ROOT/'results/g_agreement/i2/E74_H200_SETUP_TIMEOUT_A1_CLOSEOUT.json'
++OPERATIONAL_CLOSEOUT_SHA='66034e368cfdb369deba7856d825ba142421a844722095679d1f0618694c512a'
++FAILED_REGION_SOURCE=BASE/'e74-global-operator-claims-v1/create/e74-h200-20261028-a1/CREATE_INTENT.private.json'
++FAILED_REGION_SOURCE_SHA='f0c135634d9ffea65eec78b6a01581e0cf2d847569fe13daed3dffbe0e4e99d7'
++
++SOURCE_PINS={'/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/protocol.py': '68cb3d75ce53c3d6606c9c0417f97fd4ac753dbe6a94f70b277efcd364f927b6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/pins.py': 'd7740e61c3ea0dd3930f3dce7fd8bf5a4ed063b6da38cfb0c35b12e659c6a36b', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_allocation_rendezvous_candidate/transport.py': '1e006f62d6de68307adf1c50f4861566562f28f6abc8148b2185986e758543ac', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/PACKAGE.json': '08647e87f749ee5ab8148258c45f114a63749ebb917e70a94544ad738d4c4d56', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/CPU_TEST_RECEIPT.json': '3ca86f35950a6dc71721539aa7f66e9ddda74e189020e07dec5c3537c9272e96', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/START_COMMAND.txt': 'd68622d92301872ab4983616b735eeedfad829785acbe3c067b2984a3141aa7a', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_public_bootstrap_dpkg_candidate/e74-public-runtime-recipe.tar.gz': '4ab27169cc752d7cfb48136ddf26c92b4c7cb7e2e1abf8bad26c80181ebe6853', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_h200_retry_allocate_candidate/launch_plan.py': '68baf078ef5a75f4e5663ae57d916410a8c04ca67c2cccfc2eb090edde12f8f6', '/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/E74_BOOTSTRAP_FAILURE_A2_CLOSEOUT.json': 'fdda5387f9ade766ff9e17da0229e1bb5fba07106138f1c66f7754f367f31ac5'}
+@@ -74,0 +82,5 @@
++    need(sha(read(RETRY_AUTHORITY))==RETRY_AUTHORITY_SHA,'ACTUAL_OPERATIONAL_RETRY_AUTHORITY')
++    retry=decode(read(RETRY_AUTHORITY));need(retry['pre_SSH_operational_retries_authorised'] is True and retry['failed_pod_booked_separately'] is True,'EXACT_RETRY_SCOPE')
++    need(sha(read(OPERATIONAL_CLOSEOUT))==OPERATIONAL_CLOSEOUT_SHA,'OPERATIONAL_FAILURE_CUSTODY')
++    closed=decode(read(OPERATIONAL_CLOSEOUT));need(closed['status']=='SETUP_TIMEOUT_BEFORE_SSH_TERMINATED_QUERY_NULL_GUARDS_RETIRED' and closed['all_in_ceiling_usd']==12.59 and closed['model_started'] is False,'PRE_ENGINE_FAILURE_ONLY')
++    need(sha(read(FAILED_REGION_SOURCE))==FAILED_REGION_SOURCE_SHA,'EXACT_FAILED_REGION_SOURCE')
+@@ -106,0 +119,2 @@
++        if home.name=='e74-h200-20261028-a1':
++            need(sha(read(OPERATIONAL_CLOSEOUT))==OPERATIONAL_CLOSEOUT_SHA,'RETIRED_H1_REQUIRED');continue
+@@ -135 +149,2 @@
+-    total=Decimal(260)+closed+active+planning+Decimal(160)
++    need(b['operational_failure_closeout_sha256']==OPERATIONAL_CLOSEOUT_SHA and number(b['operational_failure_closed_usd'])==Decimal('12.59'),'SEPARATE_OPERATIONAL_FAILURE_INCLUDED')
++    total=Decimal(260)+closed+active+planning+Decimal(160)+Decimal('12.59')
+@@ -144 +159 @@
+-      'experiment_closed_usd':'7.08','future_reservation_usd':'152.92','experiment_cap_usd':'160','source_hashes':{k:v for k,v in b.items()if k.endswith('_sha256')}}
++      'operational_failure_closed_usd':'12.59','operational_failure_closeout_sha256':OPERATIONAL_CLOSEOUT_SHA,'experiment_closed_usd':'7.08','future_reservation_usd':'152.92','experiment_cap_usd':'160','source_hashes':{k:v for k,v in b.items()if k.endswith('_sha256')}}
+@@ -169,0 +185,2 @@
++    failed_dc=decode(read(FAILED_REGION_SOURCE))['body']['dataCenterId']
++    for key in locations:locations[key]=[dc for dc in locations[key]if dc!=failed_dc]
+@@ -175 +192 @@
+-    return sorted(locations[kind])[0],rate,cloud,{'secure_available_locations':len(locations['secure8']),'community_available_locations':len(locations['community8']),'observed_epoch':now,'selected_cloud':cloud,'community_gate_epoch':launch.COMMUNITY_NOT_BEFORE}
++    return sorted(locations[kind])[0],rate,cloud,{'secure_available_locations':len(locations['secure8']),'community_available_locations':len(locations['community8']),'observed_epoch':now,'selected_cloud':cloud,'community_gate_epoch':launch.COMMUNITY_NOT_BEFORE,'selected_data_center_id':sorted(locations[kind])[0],'failed_region_excluded':True,'failed_region_source_sha256':FAILED_REGION_SOURCE_SHA}
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/launch_plan.py
++++ cache/g_agreement/i2/operator_g_h200_retry_allocate_candidate/launch_plan.py
+@@ -23 +23 @@
+-    dispatch=float(a.number(dispatch_epoch,True));a.need(NOT_BEFORE<=dispatch<a.FREEZE,'H200_TIME_OR_FREEZE')
++    dispatch=float(a.number(dispatch_epoch,True));a.need(NOT_BEFORE<=dispatch<1793271600.0,'H200_TIME_OR_FREEZE')
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/prepare.py
++++ cache/g_agreement/i2/operator_g_h200_retry_allocate_candidate/prepare.py
+@@ -10 +10 @@
+-BASE=L.BASE;DRIVER=BASE/'operator_g_tp8_public_route_driver_candidate'
++BASE=L.BASE;DRIVER=BASE/'operator_g_h200_retry_driver_candidate'
+@@ -55,0 +56 @@
++    rows.append({'id':'e74-h200-20261028-a1','track':'G','status':'CLOSED','billed_usd':12.59,'reserved_usd':0,'operational_pre_SSH_failure':True,'closure_sha256':L.OPERATIONAL_CLOSEOUT_SHA})
+@@ -92,0 +94 @@
++    config['runtime']['operational_retry_authority_sha256']=L.RETRY_AUTHORITY_SHA
+@@ -102 +104 @@
+-    paths=[p for p in DRIVER.glob('*.py')if not p.name.startswith('test_')]+[Path(__file__).resolve(),Path(L.__file__).resolve(),Path(L.__file__).with_name('launch_plan.py'),ARCHIVE,inputs,Path(L.pins.API),GUARD_PY.resolve(),GUARD_WORKER.resolve(),Path('/usr/bin/caffeinate'),DRIVER/'SOURCE_PINS.json',DRIVER/'CONFIG_TEMPLATE.json',Path(budget_path),allocation_path,allocation_path.parent/'STOCK.response.private.json',Path(ruling['source_path']),Path(b['C_queue_assessment']['source_path']),L.G_AUTHORITY,Path(__file__).with_name('local_process.py'),Path(L.pins.LOCK)]+[Path(p)for p in L.SOURCE_PINS]
++    paths=[p for p in DRIVER.glob('*.py')if not p.name.startswith('test_')]+[Path(__file__).resolve(),Path(L.__file__).resolve(),Path(L.__file__).with_name('launch_plan.py'),ARCHIVE,inputs,Path(L.pins.API),GUARD_PY.resolve(),GUARD_WORKER.resolve(),Path('/usr/bin/caffeinate'),DRIVER/'SOURCE_PINS.json',DRIVER/'CONFIG_TEMPLATE.json',Path(budget_path),allocation_path,allocation_path.parent/'STOCK.response.private.json',Path(ruling['source_path']),Path(b['C_queue_assessment']['source_path']),L.G_AUTHORITY,L.RETRY_AUTHORITY,L.OPERATIONAL_CLOSEOUT,L.FAILED_REGION_SOURCE,Path(__file__).with_name('local_process.py'),Path(L.pins.LOCK)]+[Path(p)for p in L.SOURCE_PINS]
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/test_allocate.py
++++ cache/g_agreement/i2/operator_g_h200_retry_allocate_candidate/test_allocate.py
+@@ -34,0 +35,6 @@
++ def test_failed_region_is_excluded_even_if_only_stock(self):
++  failed=A.decode(A.read(A.FAILED_REGION_SOURCE))['body']['dataCenterId'];v=json.loads(stock());v['data']['dataCenters'][0]['id']=failed
++  with self.assertRaises(ValueError):A.stock_selection(enc(v),NOW)
++ def test_other_region_selected_when_failed_region_also_available(self):
++  failed=A.decode(A.read(A.FAILED_REGION_SOURCE))['body']['dataCenterId'];v=json.loads(stock());v['data']['dataCenters'].append(dict(v['data']['dataCenters'][0],id=failed))
++  dc,rate,cloud,gate=A.stock_selection(enc(v),NOW);self.assertNotEqual(dc,failed);self.assertTrue(gate['failed_region_excluded'])
+@@ -118 +124 @@
+-   with patch('sys.argv',['allocate','--run-id',RUN,'--ssh-public-key-file',str(pub)]),patch.object(A,'source_gate'),patch.object(A,'budget_check',return_value={'combined_full_cap_usd':'444.38'}),patch.object(A,'Backend',side_effect=AssertionError('provider')):A.main()
++   with patch('sys.argv',['allocate','--run-id',RUN,'--ssh-public-key-file',str(pub)]),patch.object(A,'source_gate'),patch.object(A,'budget_check',return_value={'combined_full_cap_usd':'456.97'}),patch.object(A,'Backend',side_effect=AssertionError('provider')):A.main()
+@@ -128 +134 @@
+-  self.b={'schema':'i2-e74-h200-tp8-budget-v1','checked_at_utc':datetime.fromtimestamp(NOW,timezone.utc).isoformat(),'projection_posted_in_chat':True,'no_current_G_pod_or_reservation':True,'G_active_reserved_usd':0,'Q_at_caps_usd':260,'G_closed_usd':7.08,'G_experiment_cap_usd':160,'G_future_reservation_usd':152.92,'daily_ceiling_usd':500,'I2_allocation_usd':240,'G_authority_sha256':A.G_AUTHORITY_SHA,'G_closure_sha256':A.sha(A.read(A.G_CLOSURE)),'C_closed_run_ids':['e73-controls-20261027-a1'],'C_closed_usd':14.03,'C_active_reservations':[],'C_future_native_planning_usd':6.80,'combined_fullcap_projection_usd':440.83,'I2_fullcap_projection_usd':180.83,'G_new_run_id':RUN,'authority_Oct28_sha256':A.sha(A.read(A.ROOT/'results/g_agreement/i2/BUDGET_500_AUTHORISED_20261028.json'))}
++  self.b={'operational_failure_closed_usd':12.59,'operational_failure_closeout_sha256':A.OPERATIONAL_CLOSEOUT_SHA,'schema':'i2-e74-h200-tp8-budget-v1','checked_at_utc':datetime.fromtimestamp(NOW,timezone.utc).isoformat(),'projection_posted_in_chat':True,'no_current_G_pod_or_reservation':True,'G_active_reserved_usd':0,'Q_at_caps_usd':260,'G_closed_usd':7.08,'G_experiment_cap_usd':160,'G_future_reservation_usd':152.92,'daily_ceiling_usd':500,'I2_allocation_usd':240,'G_authority_sha256':A.G_AUTHORITY_SHA,'G_closure_sha256':A.sha(A.read(A.G_CLOSURE)),'C_closed_run_ids':['e73-controls-20261027-a1'],'C_closed_usd':14.03,'C_active_reservations':[],'C_future_native_planning_usd':6.80,'combined_fullcap_projection_usd':453.42,'I2_fullcap_projection_usd':193.42,'G_new_run_id':RUN,'authority_Oct28_sha256':A.sha(A.read(A.ROOT/'results/g_agreement/i2/BUDGET_500_AUTHORISED_20261028.json'))}
+@@ -134 +140 @@
+-  p=self.d/'state.json';s={'run_id':'e73-controls-20261027-a2','created_epoch':NOW-100,'hard_deadline_epoch':NOW-100+2400,'maximum_billed_seconds':2400,'cost_per_hour':5.29,'pod_id':'fixtureC'};p.write_bytes(enc(s));self.b['C_active_reservations']=[{'run_id':s['run_id'],'purpose':'capture_controls','created_epoch':s['created_epoch'],'operator_state_path':str(p),'operator_state_sha256':A.sha(p.read_bytes()),'reserved_usd':3.55}];self.b['combined_fullcap_projection_usd']=444.38;self.b['I2_fullcap_projection_usd']=184.38;return p,s
++  p=self.d/'state.json';s={'run_id':'e73-controls-20261027-a2','created_epoch':NOW-100,'hard_deadline_epoch':NOW-100+2400,'maximum_billed_seconds':2400,'cost_per_hour':5.29,'pod_id':'fixtureC'};p.write_bytes(enc(s));self.b['C_active_reservations']=[{'run_id':s['run_id'],'purpose':'capture_controls','created_epoch':s['created_epoch'],'operator_state_path':str(p),'operator_state_sha256':A.sha(p.read_bytes()),'reserved_usd':3.55}];self.b['combined_fullcap_projection_usd']=456.97;self.b['I2_fullcap_projection_usd']=196.97;return p,s
+@@ -136 +142 @@
+-  self.b.update(C_closed_usd=15.46,combined_fullcap_projection_usd=442.26,I2_fullcap_projection_usd=182.26);self.b['C_closed_run_ids'].append('e73-controls-20261027-a2');self.assertEqual(self.check()['combined_full_cap_usd'],'442.26')
++  self.b.update(C_closed_usd=15.46,combined_fullcap_projection_usd=454.85,I2_fullcap_projection_usd=194.85);self.b['C_closed_run_ids'].append('e73-controls-20261027-a2');self.assertEqual(self.check()['combined_full_cap_usd'],'454.85')
+@@ -146,2 +152,2 @@
+- def test_closed_g_included_once(self):self.assertEqual(self.check()['combined_full_cap_usd'],'440.83')
+- def test_active_capture_included_once(self):self.active();self.assertEqual(self.check()['combined_full_cap_usd'],'444.38')
++ def test_closed_g_included_once(self):self.assertEqual(self.check()['combined_full_cap_usd'],'453.42')
++ def test_active_capture_included_once(self):self.active();self.assertEqual(self.check()['combined_full_cap_usd'],'456.97')
+--- cache/g_agreement/i2/operator_g_tp8_allocate_candidate/test_prepare.py
++++ cache/g_agreement/i2/operator_g_h200_retry_allocate_candidate/test_prepare.py
+@@ -17 +17 @@
+-  self.b={'checked_at_utc':datetime.fromtimestamp(T.NOW-1,timezone.utc).isoformat(),'projection_posted_in_chat':True,'C_closed_usd':15.46,'C_closed_run_ids':['e73-controls-20261027-a1','e73-controls-20261027-a2'],'C_active_reservations':[],'C_future_native_planning_usd':6.80,'G_closure_sha256':'a'*64,'combined_fullcap_projection_usd':442.26,'I2_ledger_sha256':'b'*64,'Q_handoff_sha256':'c'*64}
++  self.b={'checked_at_utc':datetime.fromtimestamp(T.NOW-1,timezone.utc).isoformat(),'projection_posted_in_chat':True,'C_closed_usd':15.46,'C_closed_run_ids':['e73-controls-20261027-a1','e73-controls-20261027-a2'],'C_active_reservations':[],'C_future_native_planning_usd':6.80,'G_closure_sha256':'a'*64,'combined_fullcap_projection_usd':454.85,'I2_ledger_sha256':'b'*64,'Q_handoff_sha256':'c'*64}
+@@ -19 +19 @@
+-  self.bp=self.d/'budget.json';self.bp.write_bytes(T.enc(self.b));bound={'planning_sha256':A.sha(self.bp.read_bytes()),'combined_full_cap_usd':'442.26',**{k:self.b[k]for k in ('C_closed_usd','C_closed_run_ids','C_active_reservations','C_future_native_planning_usd','C_queue_assessment')}}
++  self.bp=self.d/'budget.json';self.bp.write_bytes(T.enc(self.b));bound={'planning_sha256':A.sha(self.bp.read_bytes()),'combined_full_cap_usd':'454.85',**{k:self.b[k]for k in ('C_closed_usd','C_closed_run_ids','C_active_reservations','C_future_native_planning_usd','C_queue_assessment')}}
+@@ -49 +49 @@
+-  r=self.first()['budget']['daily']['2026-10-28'];self.assertEqual(r['combined_before_G_usd'],'289.34');self.assertEqual(r['combined_projected_usd'],442.26);self.assertFalse(any(x['status']=='ACTIVE'for x in r['liabilities']));self.assertEqual(sum(P.Decimal(str(x['billed_usd']))for x in r['liabilities']if x['track']=='G'),P.Decimal('7.08'))
++  r=self.first()['budget']['daily']['2026-10-28'];self.assertEqual(r['combined_before_G_usd'],'301.93');self.assertEqual(r['combined_projected_usd'],454.85);self.assertFalse(any(x['status']=='ACTIVE'for x in r['liabilities']));self.assertEqual(sum(P.Decimal(str(x['billed_usd']))for x in r['liabilities']if x['track']=='G'),P.Decimal('19.67'))
+@@ -51 +51 @@
+-  b=copy.deepcopy(self.b);b.update(C_closed_usd=14.03,C_active_reservations=[{'run_id':'fixture-c','created_epoch':1,'reserved_usd':3.55,'operator_state_sha256':'a'*64}],combined_fullcap_projection_usd=444.38);rows,before=P.liabilities(b,{**b,'combined_full_cap_usd':'444.38'});self.assertEqual(before,P.Decimal('291.46'));self.assertEqual(sum(x['status']=='ACTIVE'for x in rows),1)
++  b=copy.deepcopy(self.b);b.update(C_closed_usd=14.03,C_active_reservations=[{'run_id':'fixture-c','created_epoch':1,'reserved_usd':3.55,'operator_state_sha256':'a'*64}],combined_fullcap_projection_usd=456.97);rows,before=P.liabilities(b,{**b,'combined_full_cap_usd':'456.97'});self.assertEqual(before,P.Decimal('304.05'));self.assertEqual(sum(x['status']=='ACTIVE'for x in rows),1)
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/ROOT_COMMANDS.md
++++ cache/g_agreement/i2/operator_g_h200_retry_driver_candidate/ROOT_COMMANDS.md
+@@ -0,0 +1,6 @@
++# Authorised pre-SSH operational retry
++
++Actual Guiv authority E74_OPERATIONAL_RETRY_AUTHORITY.json (858e7a09), SHA cefce08dbefcc969430956ce62ad45ae45800743fc3e6c2029dbf794cddc0626. First H200 attempt is fully closed with separately booked12.59 operating ceiling; it still counts in daily/I2budget. Original7.08 remains cap-covered. H200 cap160/newattempt clocks unchanged; same exact e0fc50bd archive. Require a different region using exact failed CREATE_INTENT digest and exclude it in stockselection; actualselectedpodregion verified before staging. Next suggested run e74-h200-20261028-a2, never replaya1claim. New budget path g_h200_retry_admission/BUDGET_PLANNING.json adds operational_failure_closed_usd12.59 and actualclosureSHA; currentQcaps projection451.28,I2191.28. All actualquote/budget/Cqueue gates remain. Nexttwo preSSHfailures triggerGuivnotification. WorkingpoddeadlineThu29Oct12Zurich; datedOct28budget does not authorise unreviewedOct29spend.
++
++Before live, preserve CPUreceipt and bindexact enabledexecution/remotesupervisor hashes; ordinaryroot opt-in only afteractualadmission. Follow commands below with these newcandidatepaths. All original clocks anchored anew to actual newallocation; never extend a failedpod's clock or scientificretry fromengineboot.
++
+@@ -8,3 +14,3 @@
+-TP8_ALLOC=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_tp8_allocate_candidate
+-TP8_DRIVER=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate
+-TP8_RUN=e74-h200-20261028-a1
++TP8_ALLOC=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_h200_retry_allocate_candidate
++TP8_DRIVER=/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/operator_g_h200_retry_driver_candidate
++TP8_RUN=e74-h200-20261028-a2
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/bindings.py
++++ cache/g_agreement/i2/operator_g_h200_retry_driver_candidate/bindings.py
+@@ -12 +12 @@
+-    'g_candidate': ('operator_g_tp8_public_route_driver_candidate/g_candidate.py','5bff55cf39f623e5521716457dd015ee2c637f361518c6ffd774cca5ed9fa07f'),
++    'g_candidate': ('operator_g_h200_retry_driver_candidate/g_candidate.py','c3f36a734103e8f39c5de2431ec1022e6329b83cc439ea77e1ba43d2e350da49'),
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/g_candidate.py
++++ cache/g_agreement/i2/operator_g_h200_retry_driver_candidate/g_candidate.py
+@@ -40 +40 @@
+-FREEZE = datetime.fromisoformat('2026-10-28T18:00:00+01:00').timestamp()
++FREEZE = datetime.fromisoformat('2026-10-29T12:00:00+01:00').timestamp()
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/public_admission.py
++++ cache/g_agreement/i2/operator_g_h200_retry_driver_candidate/public_admission.py
+@@ -4,0 +5,5 @@
++
++FAILED_REGION_SOURCE_SHA='f0c135634d9ffea65eec78b6a01581e0cf2d847569fe13daed3dffbe0e4e99d7'
++FAILED_DC_SHA='f5725bc1d00b175ac04d1f02a244a098c5163f6538da5de8409abe7544296fc2'
++RETRY_AUTHORITY_SHA='cefce08dbefcc969430956ce62ad45ae45800743fc3e6c2029dbf794cddc0626'
++OPERATIONAL_CLOSEOUT_SHA='66034e368cfdb369deba7856d825ba142421a844722095679d1f0618694c512a'
+@@ -48,0 +54,4 @@
++    retry_receipt=Path(__file__).resolve().parents[4]/'results/g_agreement/i2/E74_OPERATIONAL_RETRY_AUTHORITY.json'
++    A.need(A.sha(retry_receipt.read_bytes())==RETRY_AUTHORITY_SHA and r.get('operational_retry_authority_sha256')==RETRY_AUTHORITY_SHA,'EXACT_PRE_SSH_OPERATIONAL_RETRY_AUTHORITY')
++    gate_quote=q.get('stock_gate',{})
++    A.need(gate_quote.get('failed_region_excluded') is True and gate_quote.get('failed_region_source_sha256')==FAILED_REGION_SOURCE_SHA and bool(gate_quote.get('selected_data_center_id')) and A.sha(gate_quote['selected_data_center_id'].encode())!=FAILED_DC_SHA,'DIFFERENT_REGION_REQUIRED')
+@@ -109 +118,4 @@
+-                A.need(x['status']=='CLOSED','NO_OTHER_UNRESOLVED_G_LIABILITY');closed_g+=billed
++                A.need(x['status']=='CLOSED','NO_OTHER_UNRESOLVED_G_LIABILITY')
++                if x.get('operational_pre_SSH_failure') is True:
++                    A.need(x['id']=='e74-h200-20261028-a1' and x.get('closure_sha256')==OPERATIONAL_CLOSEOUT_SHA and billed==Decimal('12.59'),'EXACT_SEPARATE_OPERATIONAL_FAILURE')
++                else:closed_g+=billed
+@@ -110,0 +123 @@
++        A.need(any(x.get('operational_pre_SSH_failure') is True for x in liabilities),'OPERATIONAL_FAILURE_MUST_NOT_BE_OMITTED')
+--- cache/g_agreement/i2/operator_g_tp8_public_route_driver_candidate/test_tp8_driver.py
++++ cache/g_agreement/i2/operator_g_h200_retry_driver_candidate/test_tp8_driver.py
+@@ -24,0 +25,2 @@
++    c['runtime']['operational_retry_authority_sha256']=P.RETRY_AUTHORITY_SHA
++    c['quote']['stock_gate']={'failed_region_excluded':True,'failed_region_source_sha256':P.FAILED_REGION_SOURCE_SHA,'selected_data_center_id':'fixture-other-region'}
+@@ -27 +29 @@
+-    c['budget']['daily']={G.spend_date(created):{'authority_sha256':P.AUTHORITY[G.spend_date(created)],
++    c['budget']['daily']={G.spend_date(created):{'authority_sha256':P.AUTHORITY.get(G.spend_date(created),'0'*64),
+@@ -30 +32 @@
+-      'combined_before_G_usd':291.46,'combined_projected_usd':444.38,'liabilities':[
++      'combined_before_G_usd':304.05,'combined_projected_usd':456.97,'liabilities':[{'id':'e74-h200-20261028-a1','track':'G','status':'CLOSED','billed_usd':12.59,'reserved_usd':0,'operational_pre_SSH_failure':True,'closure_sha256':P.OPERATIONAL_CLOSEOUT_SHA},
+@@ -64,0 +67,7 @@
++    def test_separate_operational_failure_must_count_in_daily_budget(self):
++        c=copy.deepcopy(self.cfg);c['budget']['daily']['2026-10-28']['liabilities'].pop(0)
++        with self.assertRaisesRegex(ValueError,'OPERATIONAL_FAILURE_MUST_NOT_BE_OMITTED'):self.check(c)
++    def test_retry_authority_and_different_region_proof_required(self):
++        for part,key in [('runtime','operational_retry_authority_sha256'),('quote','stock_gate')]:
++            c=copy.deepcopy(self.cfg);c[part].pop(key)
++            with self.subTest(key=key),self.assertRaises(ValueError):self.check(c)
+@@ -75 +84 @@
+-        self.assertEqual(r['combined_projected_by_date_usd'],{'2026-10-28':'444.38'})
++        self.assertEqual(r['combined_projected_by_date_usd'],{'2026-10-28':'456.97'})

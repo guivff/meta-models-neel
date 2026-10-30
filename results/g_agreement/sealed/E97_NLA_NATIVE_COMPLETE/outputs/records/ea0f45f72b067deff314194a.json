@@ -1,0 +1,12 @@
+{
+  "id": "ea0f45f72b067deff314194a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Question:\" and \"Answer:\" fields, establishing a parallel Q&A format throughout.\n\nThe text defines a conditional rule (\"If the text is about X, then Y\") and then poses a specific question about explaining a data analysis method, requiring the answer to follow the rule's logic (i.e., the answer should address the data analysis method, not the unrelated topic).\n\n\"Answer:\" is the final token, functioning as a label in a few-shot or instruction template, immediately requiring the model's generated response text \u2014 likely a sample explanation or demonstration sentence.\n\"Condition: The text is about a different topic.\nQuestion: How to explain the data analysis method?\nAnswer:\" \u2014 the final \"Answer:\" expects a direct explanatory response, likely beginning with \"The answer explains...\" or a sample output.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Question:\" and \"Answer:\" fields, establishing a parallel Q&A format throughout.\n\nThe text defines a conditional rule (\"If the text is about X, then Y\") and then poses a specific question about explaining a data analysis method, requiring the answer to follow the rule's logic (i.e., the answer should address the data analysis method, not the unrelated topic).\n\n\"Answer:\" is the final token, functioning as a label in a few-shot or instruction template, immediately requiring the model's generated response text \u2014 likely a sample explanation or demonstration sentence.\n\"Condition: The text is about a different topic.\nQuestion: How to explain the data analysis method?\nAnswer:\" \u2014 the final \"Answer:\" expects a direct explanatory response, likely beginning with \"The answer explains...\" or a sample output.",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "47c802dc9810207dea6b752d",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional template format with structured fields (\"Question:\", \"Task:\") signals a pattern where a model response or example answer follows. The format establishes a Q&A demonstration structure.\n\nThe \"Task\" describes explaining how to find the sum of two numbers, so the \"Answer\" field must provide a corresponding explanation or reasoning about that specific task.\n\n\"Question: [specific question about a software feature]\nTask: [instruction to write explanation about the above question]\nAnswer:\" \u2014 this final label is a prompt field requiring the model's generated response text, likely a short explanatory sentence beginning the answer.\n\"Answer:\" is the final token, part of a few-shot or template prompt, immediately constraining what follows to be a sample explanation or reasoning statement (e.g., \"The answer explains how to...\").\n\"Answer:\" expects a direct explanatory continuation.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional template format with structured fields (\"Question:\", \"Task:\") signals a pattern where a model response or example answer follows. The format establishes a Q&A demonstration structure.\n\nThe \"Task\" describes explaining how to find the sum of two numbers, so the \"Answer\" field must provide a corresponding explanation or reasoning about that specific task.\n\n\"Question: [specific question about a software feature]\nTask: [instruction to write explanation about the above question]\nAnswer:\" \u2014 this final label is a prompt field requiring the model's generated response text, likely a short explanatory sentence beginning the answer.\n\"Answer:\" is the final token, part of a few-shot or template prompt, immediately constraining what follows to be a sample explanation or reasoning statement (e.g., \"The answer explains how to...\").\n\"Answer:\" expects a direct explanatory continuation.",
+  "truncated": false
+}

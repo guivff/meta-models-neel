@@ -1,0 +1,12 @@
+{
+  "id": "73534b16c8cf59308b646a84",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example sentence: ... Reply: [classification]\") sets up a direct parallel response format, requiring the model to output the classification for the specific sentence \"I am a doctor.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured Q&A format, immediately requiring the classification answer (e.g., \"Positive\" or \"Negative\") to follow.\n\"Given the following example sentence, determine the sentiment label.\nExample sentence: 'I am a doctor.'\nSentiment label: Negative or Positive\nGiven sentence: 'I am a doctor.'\nReply:\" \u2014 the final \"Reply:\" demands the direct answer, likely a short single-word classification on the next line.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example sentence: ... Reply: [classification]\") sets up a direct parallel response format, requiring the model to output the classification for the specific sentence \"I am a doctor.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured Q&A format, immediately requiring the classification answer (e.g., \"Positive\" or \"Negative\") to follow.\n\"Given the following example sentence, determine the sentiment label.\nExample sentence: 'I am a doctor.'\nSentiment label: Negative or Positive\nGiven sentence: 'I am a doctor.'\nReply:\" \u2014 the final \"Reply:\" demands the direct answer, likely a short single-word classification on the next line.",
+  "truncated": false
+}

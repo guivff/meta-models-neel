@@ -1,0 +1,226 @@
+{
+  "R_X3_unchanged": "NOT MET: readers depend on high-variance directions, not specifically the J-space",
+  "bootstrap": {
+    "ci": "percentile; original E80c order-statistic convention",
+    "draws": 2000,
+    "seed": 20261028,
+    "unit": "paired item"
+  },
+  "gpu_hours": 0,
+  "label": "POST HOC / DESCRIPTIVE",
+  "readers": {
+    "nla": {
+      "all_sealed_items": {
+        "conditions": {
+          "J_ablated": {
+            "variance_removed_ci95": [
+              0.14843765299254205,
+              0.15465441169301064
+            ],
+            "variance_removed_share": 0.15139512987938814
+          },
+          "PCA_ablated": {
+            "variance_removed_ci95": [
+              0.8150605543493146,
+              0.8203464917635775
+            ],
+            "variance_removed_share": 0.8177592112432371
+          },
+          "random_ablated": {
+            "variance_removed_ci95": [
+              0.07613155708763608,
+              0.07707531282779373
+            ],
+            "variance_removed_share": 0.07660548344303955
+          }
+        },
+        "n_items": 518,
+        "normalized_paired_contrasts": {}
+      },
+      "block": 42,
+      "label": "exploratory: block-44 bases applied at block 42",
+      "n_excluded_missing": 0,
+      "n_pass_none": 218,
+      "original_complete_case_pass_none_cohort": {
+        "conditions": {
+          "J_ablated": {
+            "fall_per_variance_share": 2.826033029653895,
+            "fall_per_variance_share_ci95": [
+              2.4150154122643714,
+              3.2308266782611983
+            ],
+            "pass_rate_fall": 0.48623853211009177,
+            "pass_rate_fall_ci95": [
+              0.42201834862385323,
+              0.5504587155963303
+            ],
+            "variance_removed_ci95": [
+              0.16671361107732005,
+              0.17795883266876325
+            ],
+            "variance_removed_share": 0.172056917597188
+          },
+          "PCA_ablated": {
+            "fall_per_variance_share": 1.0246241210557039,
+            "fall_per_variance_share_ci95": [
+              0.9622418275212339,
+              1.0829432914840618
+            ],
+            "pass_rate_fall": 0.8394495412844036,
+            "pass_rate_fall_ci95": [
+              0.7889908256880734,
+              0.8853211009174312
+            ],
+            "variance_removed_ci95": [
+              0.8152511299580719,
+              0.8231698920522778
+            ],
+            "variance_removed_share": 0.8192755997384594
+          },
+          "random_ablated": {
+            "fall_per_variance_share": 1.688585720948433,
+            "fall_per_variance_share_ci95": [
+              1.097597092674479,
+              2.2370316007950053
+            ],
+            "pass_rate_fall": 0.12844036697247707,
+            "pass_rate_fall_ci95": [
+              0.08256880733944955,
+              0.16972477064220184
+            ],
+            "variance_removed_ci95": [
+              0.07537490176356873,
+              0.07676415394804834
+            ],
+            "variance_removed_share": 0.07606387130902398
+          }
+        },
+        "n_items": 218,
+        "normalized_paired_contrasts": {
+          "J_minus_PCA_ablated": {
+            "ci95": [
+              1.4074979357106838,
+              2.2041806704367
+            ],
+            "estimate": 1.8014089085981912
+          },
+          "J_minus_random_ablated": {
+            "ci95": [
+              0.5061832551892311,
+              1.8163934718043657
+            ],
+            "estimate": 1.1374473087054622
+          }
+        }
+      }
+    },
+    "oracle": {
+      "all_sealed_items": {
+        "conditions": {
+          "J_ablated": {
+            "variance_removed_ci95": [
+              0.13996894603634613,
+              0.14626804546519348
+            ],
+            "variance_removed_share": 0.14306092543759663
+          },
+          "PCA_ablated": {
+            "variance_removed_ci95": [
+              0.9977525016056007,
+              0.9982692957916878
+            ],
+            "variance_removed_share": 0.9980151573804293
+          },
+          "random_ablated": {
+            "variance_removed_ci95": [
+              0.07672064887163184,
+              0.07776374421760364
+            ],
+            "variance_removed_share": 0.07723958663718454
+          }
+        },
+        "n_items": 518,
+        "normalized_paired_contrasts": {}
+      },
+      "block": 44,
+      "label": "primary site",
+      "n_excluded_missing": 0,
+      "n_pass_none": 184,
+      "original_complete_case_pass_none_cohort": {
+        "conditions": {
+          "J_ablated": {
+            "fall_per_variance_share": 3.3381438054778916,
+            "fall_per_variance_share_ci95": [
+              2.887639149963305,
+              3.7782750283535536
+            ],
+            "pass_rate_fall": 0.5760869565217391,
+            "pass_rate_fall_ci95": [
+              0.5,
+              0.6467391304347826
+            ],
+            "variance_removed_ci95": [
+              0.1666200710384751,
+              0.17883147790768877
+            ],
+            "variance_removed_share": 0.17257703385228068
+          },
+          "PCA_ablated": {
+            "fall_per_variance_share": 0.967808770393952,
+            "fall_per_variance_share_ci95": [
+              0.9405553198447019,
+              0.9896497567286551
+            ],
+            "pass_rate_fall": 0.967391304347826,
+            "pass_rate_fall_ci95": [
+              0.9402173913043478,
+              0.9891304347826086
+            ],
+            "variance_removed_ci95": [
+              0.9993475774971101,
+              0.9997517353316556
+            ],
+            "variance_removed_share": 0.99956864820934
+          },
+          "random_ablated": {
+            "fall_per_variance_share": 1.2732879930988428,
+            "fall_per_variance_share_ci95": [
+              0.7083317608259393,
+              1.8950872844846605
+            ],
+            "pass_rate_fall": 0.09782608695652174,
+            "pass_rate_fall_ci95": [
+              0.05434782608695652,
+              0.14673913043478262
+            ],
+            "variance_removed_ci95": [
+              0.0760289780227123,
+              0.0775518156767605
+            ],
+            "variance_removed_share": 0.07682950556883772
+          }
+        },
+        "n_items": 184,
+        "normalized_paired_contrasts": {
+          "J_minus_PCA_ablated": {
+            "ci95": [
+              1.9189323844574169,
+              2.8104556063362267
+            ],
+            "estimate": 2.3703350350839396
+          },
+          "J_minus_random_ablated": {
+            "ci95": [
+              1.4509526239076558,
+              2.6687717318010615
+            ],
+            "estimate": 2.064855812379049
+          }
+        }
+      }
+    }
+  },
+  "registration": "\u00a7223 item 2",
+  "status": "COMPLETE_ONCE",
+  "wall_seconds": 0.8261284170002909
+}

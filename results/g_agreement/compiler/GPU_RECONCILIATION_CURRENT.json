@@ -1,0 +1,133 @@
+{
+  "as_of_utc": "2026-10-30T15:23:24.214171+00:00",
+  "source_commit": "3c50b77994963068c2012ae1d6af8689ba3716a9",
+  "Q_scope_reconciliation": {
+    "posted_snapshot_cutoff_utc": "2026-10-29T07:47:59Z",
+    "helper_sha256": "fb67a2b921c2a7ebf6223be5b967ec48ae27cc9e23df9369461d01f86c5ac357",
+    "helper_not_executed": true,
+    "reported_booked_usd": "509.48",
+    "out_of_window_Oct27_usd": "139.68",
+    "out_of_window_physical_pods": 53,
+    "out_of_window_latest_close_utc": "2026-10-27T22:54:51Z",
+    "budget_start_utc": "2026-10-27T23:00:00Z",
+    "budget_scope": "Oct28\u201330Europe/Zurich",
+    "in_scope_original_Q_usd": "369.80",
+    "separatelypublished_smoke_already_in_compiler_Q_usd": "0.3608786037259632",
+    "reconciled_compiler_Q_snapshot_usd": "370.1608786037259632",
+    "physical_pod_overlap_between_old_and_window": 0,
+    "scope_gap_resolved": true,
+    "original_ledger_sha256": "69c7b925fe66d2d2633dce62cb2dedb747b39726dd5ccbd3d3e1e4530a131ac0",
+    "E49_signed_chain_preserved": true
+  },
+  "prior_owner_conservative_bound": {
+    "reported_rounded_usd": "2395.82",
+    "unrounded_usd": "2395.819514322481",
+    "source_cutoff_utc": "2026-10-29T08:57:52.063089+00:00",
+    "source_sha256": "87179c324381374ff7a49de32787f477d4854ebc24b4f501d84247df8791ca6d",
+    "storage_source_sha256": "e20d4f966e0f3c91ccfe875921a88a8ddae68f3f61d786d21e0ceb6aa60b25db",
+    "private_identity_fields_not_copied": true
+  },
+  "same_cutoff_overlap_bridge": [
+    {
+      "reason": "ResolvedQsnapshot scope buffer: old Oct27 receipts, with smoke already counted",
+      "delta_usd": "-139.31912139627406"
+    },
+    {
+      "reason": "Closed E98 original49.61 cap already replaced by original9.99 closeout inside I5 total",
+      "delta_usd": "-49.61"
+    },
+    {
+      "reason": "I4 retained programme160.55 replaced with deduplicated final closed72.22155",
+      "delta_usd": "-88.32844708287329494"
+    },
+    {
+      "reason": "Six E95 full all-in live caps already covered inside full900 pool",
+      "delta_usd": "-206.96"
+    },
+    {
+      "reason": "Q closed-pool flat extras2x10 also covered inside full900pool",
+      "delta_usd": "-20"
+    },
+    {
+      "reason": "E1104x3.33 candidate/future allowance was not yet allocated at08:57cutoff",
+      "delta_usd": "-13.32"
+    },
+    {
+      "reason": "E85closed3.83 included in I2 own but missing from old pool-booked subtraction",
+      "delta_usd": "-3.83"
+    },
+    {
+      "reason": "Add original C-operated E113 closed captures omitted from conservative owner roots",
+      "delta_usd": "1.47056034740209593"
+    },
+    {
+      "reason": "Hold separate2USD per E113 closedpod nonGPU uncertainty",
+      "delta_usd": "4"
+    },
+    {
+      "reason": "Hold original E96sampling nonGPU uncertainty separately after I4programme released",
+      "delta_usd": "8"
+    }
+  ],
+  "same_cutoff_corrected_conservative_usd": "1887.92250619073574099",
+  "current_booked_closed_costs_usd": "1103.68299186825476419",
+  "booked_basis": "OriginalGPUcharges/rateupper plus reported closedallinuppers; not verifiedaccountinvoice or cashspent. Flatallowances remain explicitly bounded unless released by owner.",
+  "current_active_full_caps_usd": "0",
+  "current_deduplicated_committed_plus_spent_upper_usd": "1103.68299186825476419",
+  "current_reconciled_conservative_planning_usd": "2029.05250619073565519",
+  "current_conservative_formula": "deduplicatedbooked+activefullcaps+remainingpoolunallocated+nonpoolboundeduncertainties",
+  "nonpool_bounded_uncertainty_usd": "291.61",
+  "nonpool_uncertainty_components": {
+    "Qclosed_nonpool2perpod": "198",
+    "originalE96samplingextras": "8",
+    "storage_full3days_upper": "25.61",
+    "C113closedextras": "4",
+    "newnonpoolQactiveextras": "0"
+  },
+  "parked_pool": {
+    "booked_usd": "266.240485677519109",
+    "active_full_caps_usd": "0",
+    "unallocated_usd": "633.759514322480891",
+    "total_usd": "900",
+    "counted_once": true
+  },
+  "track_closed_costs_usd": {
+    "Q": "596.9408786037259632",
+    "I2": "370.49",
+    "I4": "72.22155291712670506",
+    "I5": "62.56",
+    "E113_C": "1.47056034740209593"
+  },
+  "active_Q_allocations": [],
+  "active_I2_financial_allocations": [],
+  "closed_physical_pods_Q": 145,
+  "new_original_receipts_imported": 0,
+  "GPU_ceiling_usd": "2500",
+  "flag_usd": "2000",
+  "current_reconciled_flag": true,
+  "prior_owner_flag_preserved_historical": true,
+  "complete_total": false,
+  "unknowns": [
+    "Provider invoices/rawAPIauthentication not independently available except committedE106extract only",
+    "Unreportedaftercutoffallocations remainUNKNOWN",
+    "Storage/extrasareboundeduncertainty not cashcharges"
+  ],
+  "coordinator_allocation_restriction": {
+    "received_utc": "2026-10-29T09:35:04.172920+00:00",
+    "source": "DirectGuivcompilerchat/rulingrelayedC-GPU-RULING-20261029T0932",
+    "approved_continuations": [
+      "E110filter",
+      "E110readers ONLY if eligibility gate passes",
+      "E95shards3-0and3-3",
+      "E85",
+      "already-approvedcurrentlyrunningwork"
+    ],
+    "requires_coordinator_approval": [
+      "anynewGPUallocationbeyondlistedwork",
+      "capraise",
+      "additionalreattempt"
+    ],
+    "lower_reconciled_bound_does_not_lift_restriction": true,
+    "compiler_never_allocates": true
+  }
+}

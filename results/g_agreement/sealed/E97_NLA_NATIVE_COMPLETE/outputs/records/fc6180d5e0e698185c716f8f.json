@@ -1,0 +1,12 @@
+{
+  "id": "fc6180d5e0e698185c716f8f",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: a rule is given, then a task is specified, now requiring a model response demonstrating compliance.\n\nThe \"Answer:\" label signals the model must now generate a sample response to the hypothetical question about explaining a software, constrained by the rule to avoid mentioning \"software\" and instead use \"data.\"\n\n\"Question: [instruction to avoid mentioning software]\nTask: Explain the given image according to the above instruction.\nAnswer:\" \u2014 this final token \"Answer:\" is a prompt label requiring the actual explanatory response text to follow immediately, likely beginning with a sentence describing the software or a sample answer.\n\nThe pattern suggests a few-shot or template-style format where \"Answer:\" introduces a demonstration response, so the next tokens should be a coherent explanatory sentence about the image/software topic, possibly starting with \"The...\" or similar.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: a rule is given, then a task is specified, now requiring a model response demonstrating compliance.\n\nThe \"Answer:\" label signals the model must now generate a sample response to the hypothetical question about explaining a software, constrained by the rule to avoid mentioning \"software\" and instead use \"data.\"\n\n\"Question: [instruction to avoid mentioning software]\nTask: Explain the given image according to the above instruction.\nAnswer:\" \u2014 this final token \"Answer:\" is a prompt label requiring the actual explanatory response text to follow immediately, likely beginning with a sentence describing the software or a sample answer.\n\nThe pattern suggests a few-shot or template-style format where \"Answer:\" introduces a demonstration response, so the next tokens should be a coherent explanatory sentence about the image/software topic, possibly starting with \"The...\" or similar.",
+  "truncated": false
+}

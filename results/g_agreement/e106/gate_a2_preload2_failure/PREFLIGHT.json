@@ -1,0 +1,57 @@
+{
+  "experiment": "E106",
+  "phase": "gate",
+  "attempt": "a2",
+  "prepared_utc": "2026-10-29T06:32:30.592444+00:00",
+  "files": {
+    "source.tar.gz": "c9fdfd50c7059ac0a4a5bb9b90bb1925a9cd9cc2aca86381f64821cc40f91a88",
+    "inputs.tar.gz": "7bfda9f6dc470039b085e2b0c9da7a55a809ac4cfc7d3b8cc41b7183df662225",
+    "ASSETS.json": "66b1647970cdeb07790dfa72dbf24fda0f732cb8b2c5d2bb31968e3c7df7ffea",
+    "ORACLE_MANIFEST.json": "7611c72783076878f4ece09738d2d85b563d9024c3fd917b716163c9e346fce9",
+    "NLA_MANIFEST.json": "7e70aae98504dcaa7bf7364c5c8a422feab545cb51666e20879522a9092576b6",
+    "EXPECTED_PARITY.json": "766275d6231469784d538c104589663a0ebacb93a332df1f4200aa67dc9f9381",
+    "ADMISSION_TEMPLATE.json": "8b2aa4c23903c1d1597b2121f9cdf4660c807462c6164ba7d56da8333990b321",
+    "stage.py": "c3e13dd7ac7258fecb946ec5cf5b13c83522242223eb4be78407a7f148c0b525",
+    "custody.py": "7720c6d9aae339da672c497909358dec1470b14127c621b96d3c5662519e00c5"
+  },
+  "source_archive_cpu_receipt": {
+    "status": "PASS_EXACT_ARCHIVE_CPU_ONLY_GPU_FIT_UNKNOWN",
+    "phase": "gate",
+    "utc": "2026-10-29T06:22:24.291034+00:00",
+    "archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtrain/cache/g_agreement/e106/backend_fix/H200_TILELANG_FIXED_RESTART.tar",
+    "archive_sha256": "c9fdfd50c7059ac0a4a5bb9b90bb1925a9cd9cc2aca86381f64821cc40f91a88",
+    "members_verified": 43,
+    "extracted_root": "/private/tmp/e106-i4-gate-pxrijs3q",
+    "rehearsal": [
+      {
+        "args": [
+          "-c",
+          "import pathlib,torch,tilelang,peft,transformers;from projects.g_agreement.e106 import worker,backend_install,backend_smoke,production,finalize_t;import mats.readers.nla;assert pathlib.Path(worker.__file__).resolve().is_relative_to(pathlib.Path.cwd());assert torch.__version__.split(\"+\")[0]==\"2.8.0\";print(\"actual fresh-archive imports PASS\")"
+        ],
+        "returncode": 0,
+        "stdout": "actual fresh-archive imports PASS\n",
+        "stderr": ""
+      },
+      {
+        "args": [
+          "-m",
+          "unittest",
+          "projects.g_agreement.e106.test_worker",
+          "projects.g_agreement.e106.test_production",
+          "projects.g_agreement.e106.test_eval",
+          "projects.g_agreement.e106.test_backend"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "............s....\n----------------------------------------------------------------------\nRan 17 tests in 2.519s\n\nOK (skipped=1)\n"
+      }
+    ],
+    "no_model_load": true,
+    "no_gpu_allocation": true
+  },
+  "custody_tests": 12,
+  "cap_seconds": 1233,
+  "source_before_allocation": true,
+  "scientific_inputs_unchanged": true,
+  "preload_retry_under_217": true
+}

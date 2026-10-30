@@ -1,0 +1,1039 @@
+{
+  "arms": {
+    "sham": {
+      "balanced_accuracy": 0.5,
+      "by_addressed": {
+        "0": {
+          "correct": 168,
+          "kept": 168,
+          "missing": 32,
+          "rate": 1.0,
+          "total": 200
+        },
+        "1": {
+          "correct": 0,
+          "kept": 189,
+          "missing": 11,
+          "rate": 0.0,
+          "total": 200
+        }
+      },
+      "missing": 43,
+      "yes_rate": 0.0
+    },
+    "targeted": {
+      "balanced_accuracy": 0.5,
+      "by_addressed": {
+        "0": {
+          "correct": 188,
+          "kept": 188,
+          "missing": 12,
+          "rate": 1.0,
+          "total": 200
+        },
+        "1": {
+          "correct": 0,
+          "kept": 175,
+          "missing": 25,
+          "rate": 0.0,
+          "total": 200
+        }
+      },
+      "missing": 37,
+      "yes_rate": 0.0
+    }
+  },
+  "baseline": {
+    "addressed_probe_AUROC": 1.0,
+    "original_E85": {
+      "BOW_descriptive": {
+        "addressed": {
+          "descriptive": true,
+          "gate": false,
+          "test_auroc": 1.0
+        },
+        "genre": {
+          "descriptive": true,
+          "gate": false,
+          "test_auroc": 1.0
+        }
+      },
+      "authority": "\u00a7199 E85 with \u00a7202/\u00a7205; \u00a7211 amendment3 unchanged",
+      "behaviour_descriptive": null,
+      "bootstrap": {
+        "draws": 5000,
+        "paired_cells": true,
+        "seed": 0,
+        "unit": "matched quartet"
+      },
+      "experiment": "E85",
+      "probes": [
+        {
+          "dev_auroc": 1.0,
+          "layer": 42,
+          "name": "genre",
+          "probe_pass": true,
+          "status": "COMPLETE",
+          "test_auroc": 1.0
+        },
+        {
+          "dev_auroc": 1.0,
+          "layer": 44,
+          "name": "genre",
+          "probe_pass": true,
+          "status": "COMPLETE",
+          "test_auroc": 1.0
+        },
+        {
+          "dev_auroc": 1.0,
+          "layer": 42,
+          "name": "addressed",
+          "probe_pass": true,
+          "status": "COMPLETE",
+          "test_auroc": 1.0
+        },
+        {
+          "dev_auroc": 1.0,
+          "layer": 44,
+          "name": "addressed",
+          "probe_pass": true,
+          "status": "COMPLETE",
+          "test_auroc": 1.0
+        }
+      ],
+      "readers": {
+        "nla": {
+          "absent_genre_c": {
+            "cells": {
+              "genre=0,addressed=0": {
+                "CI95": [
+                  1.0,
+                  1.0
+                ],
+                "Wilson95": [
+                  0.9630051925239981,
+                  0.9999999999999999
+                ],
+                "estimate": 1.0,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 100
+              },
+              "genre=0,addressed=1": {
+                "CI95": [
+                  1.0,
+                  1.0
+                ],
+                "Wilson95": [
+                  0.9630051925239981,
+                  0.9999999999999999
+                ],
+                "estimate": 1.0,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 100
+              },
+              "genre=1,addressed=0": {
+                "CI95": [
+                  1.0,
+                  1.0
+                ],
+                "Wilson95": [
+                  0.9630051925239981,
+                  0.9999999999999999
+                ],
+                "estimate": 1.0,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 100
+              },
+              "genre=1,addressed=1": {
+                "CI95": [
+                  1.0,
+                  1.0
+                ],
+                "Wilson95": [
+                  0.9630051925239981,
+                  0.9999999999999999
+                ],
+                "estimate": 1.0,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 100
+              }
+            },
+            "effects": {
+              "addressed": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0
+              },
+              "genre": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0
+              },
+              "genre_minus_addressed": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0
+              }
+            },
+            "matched_sets": 100
+          },
+          "confirmatory": false,
+          "genre_vocabulary_b": {
+            "cells": {
+              "genre=0,addressed=0": {
+                "CI95": [
+                  1.0,
+                  1.0
+                ],
+                "Wilson95": [
+                  0.9630051925239981,
+                  0.9999999999999999
+                ],
+                "estimate": 1.0,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 100
+              },
+              "genre=0,addressed=1": {
+                "CI95": [
+                  1.0,
+                  1.0
+                ],
+                "Wilson95": [
+                  0.9630051925239981,
+                  0.9999999999999999
+                ],
+                "estimate": 1.0,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 100
+              },
+              "genre=1,addressed=0": {
+                "CI95": [
+                  0.93,
+                  1.0
+                ],
+                "Wilson95": [
+                  0.915479219195973,
+                  0.9897456617765851
+                ],
+                "estimate": 0.97,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 97
+              },
+              "genre=1,addressed=1": {
+                "CI95": [
+                  0.95,
+                  1.0
+                ],
+                "Wilson95": [
+                  0.9299868370580063,
+                  0.9944981477650318
+                ],
+                "estimate": 0.98,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 98
+              }
+            },
+            "effects": {
+              "addressed": {
+                "CI95": [
+                  -0.010000000000000009,
+                  0.024999999999999967
+                ],
+                "estimate": 0.0050000000000000044
+              },
+              "genre": {
+                "CI95": [
+                  -0.05499999999999994,
+                  -0.0050000000000000044
+                ],
+                "estimate": -0.025000000000000022
+              },
+              "genre_minus_addressed": {
+                "CI95": [
+                  -0.0699999999999999,
+                  0.0
+                ],
+                "estimate": -0.030000000000000027
+              }
+            },
+            "matched_sets": 100
+          },
+          "original_rubric": {
+            "current_same_subset": {
+              "cells": {
+                "genre=0,addressed=0": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    -1.3877787807814457e-17,
+                    0.16113012549493322
+                  ],
+                  "estimate": 0.0,
+                  "kept": 20,
+                  "missing": 80,
+                  "total": 100,
+                  "yes": 0
+                },
+                "genre=0,addressed=1": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    -1.3877787807814457e-17,
+                    0.113517091390478
+                  ],
+                  "estimate": 0.0,
+                  "kept": 30,
+                  "missing": 70,
+                  "total": 100,
+                  "yes": 0
+                },
+                "genre=1,addressed=0": {
+                  "CI95": [
+                    0.0,
+                    0.1
+                  ],
+                  "Wilson95": [
+                    0.005369272089651725,
+                    0.15319061673168066
+                  ],
+                  "estimate": 0.030303030303030304,
+                  "kept": 33,
+                  "missing": 67,
+                  "total": 100,
+                  "yes": 1
+                },
+                "genre=1,addressed=1": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    -1.3877787807814457e-17,
+                    0.14312112541726274
+                  ],
+                  "estimate": 0.0,
+                  "kept": 23,
+                  "missing": 77,
+                  "total": 100,
+                  "yes": 0
+                }
+              },
+              "effects": {
+                "addressed": {
+                  "CI95": [
+                    -0.05,
+                    0.0
+                  ],
+                  "estimate": -0.015151515151515152
+                },
+                "genre": {
+                  "CI95": [
+                    0.0,
+                    0.05
+                  ],
+                  "estimate": 0.015151515151515152
+                },
+                "genre_minus_addressed": {
+                  "CI95": [
+                    0.0,
+                    0.1
+                  ],
+                  "estimate": 0.030303030303030304
+                }
+              },
+              "matched_sets": 100
+            },
+            "masked_not_selected": 294,
+            "missing_count_note": "Tables include unselected masked rows; selected_missing counts actual failed original judgments.",
+            "original": {
+              "cells": {
+                "genre=0,addressed=0": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    -1.3877787807814457e-17,
+                    0.16113012549493322
+                  ],
+                  "estimate": 0.0,
+                  "kept": 20,
+                  "missing": 80,
+                  "total": 100,
+                  "yes": 0
+                },
+                "genre=0,addressed=1": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    -1.3877787807814457e-17,
+                    0.113517091390478
+                  ],
+                  "estimate": 0.0,
+                  "kept": 30,
+                  "missing": 70,
+                  "total": 100,
+                  "yes": 0
+                },
+                "genre=1,addressed=0": {
+                  "CI95": [
+                    0.0,
+                    0.1
+                  ],
+                  "Wilson95": [
+                    0.005369272089651725,
+                    0.15319061673168066
+                  ],
+                  "estimate": 0.030303030303030304,
+                  "kept": 33,
+                  "missing": 67,
+                  "total": 100,
+                  "yes": 1
+                },
+                "genre=1,addressed=1": {
+                  "CI95": [
+                    0.0,
+                    0.2222222222222222
+                  ],
+                  "Wilson95": [
+                    0.02417949540723341,
+                    0.2679640429809402
+                  ],
+                  "estimate": 0.08695652173913043,
+                  "kept": 23,
+                  "missing": 77,
+                  "total": 100,
+                  "yes": 2
+                }
+              },
+              "effects": {
+                "addressed": {
+                  "CI95": [
+                    -0.030894678273608294,
+                    0.10014017514017488
+                  ],
+                  "estimate": 0.028326745718050064
+                },
+                "genre": {
+                  "CI95": [
+                    0.0,
+                    0.12941859952376744
+                  ],
+                  "estimate": 0.05862977602108037
+                },
+                "genre_minus_addressed": {
+                  "CI95": [
+                    0.0,
+                    0.1
+                  ],
+                  "estimate": 0.030303030303030304
+                }
+              },
+              "matched_sets": 100
+            },
+            "selected": 106,
+            "selected_missing": 0
+          },
+          "primary_a": {
+            "cells": {
+              "genre=0,addressed=0": {
+                "CI95": [
+                  0.01,
+                  0.09
+                ],
+                "Wilson95": [
+                  0.02154336145631356,
+                  0.11175196527208817
+                ],
+                "estimate": 0.05,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 5
+              },
+              "genre=0,addressed=1": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "Wilson95": [
+                  0.0,
+                  0.03699480747600191
+                ],
+                "estimate": 0.0,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 0
+              },
+              "genre=1,addressed=0": {
+                "CI95": [
+                  0.0,
+                  0.05
+                ],
+                "Wilson95": [
+                  0.005501852234968185,
+                  0.07001316294199365
+                ],
+                "estimate": 0.02,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 2
+              },
+              "genre=1,addressed=1": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "Wilson95": [
+                  0.0,
+                  0.03699480747600191
+                ],
+                "estimate": 0.0,
+                "kept": 100,
+                "missing": 0,
+                "total": 100,
+                "yes": 0
+              }
+            },
+            "effects": {
+              "addressed": {
+                "CI95": [
+                  -0.060000000000000005,
+                  -0.015
+                ],
+                "estimate": -0.035
+              },
+              "genre": {
+                "CI95": [
+                  -0.04,
+                  0.01
+                ],
+                "estimate": -0.015000000000000001
+              },
+              "genre_minus_addressed": {
+                "CI95": [
+                  0.0,
+                  0.05
+                ],
+                "estimate": 0.020000000000000004
+              }
+            },
+            "matched_sets": 100
+          },
+          "rules": {
+            "R_E1": "NOT MET",
+            "addressed_ge_genre_observed": false,
+            "addressed_probe_AUROC": 1.0,
+            "addressed_probe_gate": true,
+            "falsifier": "NOT MET"
+          }
+        },
+        "oracle": {
+          "absent_genre_c": {
+            "cells": {
+              "genre=0,addressed=0": {
+                "CI95": [
+                  0.5060240963855421,
+                  0.7160535535535535
+                ],
+                "Wilson95": [
+                  0.4987086179545712,
+                  0.7115791546773411
+                ],
+                "estimate": 0.6103896103896104,
+                "kept": 77,
+                "missing": 23,
+                "total": 100,
+                "yes": 47
+              },
+              "genre=0,addressed=1": {
+                "CI95": [
+                  0.45566743383199076,
+                  0.6666666666666666
+                ],
+                "Wilson95": [
+                  0.45322727057239914,
+                  0.6632663642153962
+                ],
+                "estimate": 0.5609756097560976,
+                "kept": 82,
+                "missing": 18,
+                "total": 100,
+                "yes": 46
+              },
+              "genre=1,addressed=0": {
+                "CI95": [
+                  0.7340425531914894,
+                  0.8924731182795699
+                ],
+                "Wilson95": [
+                  0.7238575588369482,
+                  0.881307630391946
+                ],
+                "estimate": 0.8152173913043478,
+                "kept": 92,
+                "missing": 8,
+                "total": 100,
+                "yes": 75
+              },
+              "genre=1,addressed=1": {
+                "CI95": [
+                  0.6774193548387096,
+                  0.851063829787234
+                ],
+                "Wilson95": [
+                  0.6709711260353912,
+                  0.8400589470623505
+                ],
+                "estimate": 0.7659574468085106,
+                "kept": 94,
+                "missing": 6,
+                "total": 100,
+                "yes": 72
+              }
+            },
+            "effects": {
+              "addressed": {
+                "CI95": [
+                  -0.13175884251226683,
+                  0.03363009205214252
+                ],
+                "estimate": -0.04933697256467495
+              },
+              "genre": {
+                "CI95": [
+                  0.10872303332894251,
+                  0.3034056087167382
+                ],
+                "estimate": 0.20490480898357527
+              },
+              "genre_minus_addressed": {
+                "CI95": [
+                  0.13236510393631135,
+                  0.37554759060135395
+                ],
+                "estimate": 0.2542417815482502
+              }
+            },
+            "matched_sets": 100
+          },
+          "confirmatory": true,
+          "genre_vocabulary_b": {
+            "cells": {
+              "genre=0,addressed=0": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "Wilson95": [
+                  3.469446951953614e-18,
+                  0.047520088667220836
+                ],
+                "estimate": 0.0,
+                "kept": 77,
+                "missing": 23,
+                "total": 100,
+                "yes": 0
+              },
+              "genre=0,addressed=1": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "Wilson95": [
+                  0.0,
+                  0.044752194740079396
+                ],
+                "estimate": 0.0,
+                "kept": 82,
+                "missing": 18,
+                "total": 100,
+                "yes": 0
+              },
+              "genre=1,addressed=0": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "Wilson95": [
+                  -3.469446951953614e-18,
+                  0.04008280329209862
+                ],
+                "estimate": 0.0,
+                "kept": 92,
+                "missing": 8,
+                "total": 100,
+                "yes": 0
+              },
+              "genre=1,addressed=1": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "Wilson95": [
+                  3.469446951953614e-18,
+                  0.03926346257624569
+                ],
+                "estimate": 0.0,
+                "kept": 94,
+                "missing": 6,
+                "total": 100,
+                "yes": 0
+              }
+            },
+            "effects": {
+              "addressed": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0
+              },
+              "genre": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0
+              },
+              "genre_minus_addressed": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0
+              }
+            },
+            "matched_sets": 100
+          },
+          "original_rubric": {
+            "current_same_subset": {
+              "cells": {
+                "genre=0,addressed=0": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    0.0,
+                    0.15464382326420195
+                  ],
+                  "estimate": 0.0,
+                  "kept": 21,
+                  "missing": 79,
+                  "total": 100,
+                  "yes": 0
+                },
+                "genre=0,addressed=1": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    0.0,
+                    0.19361341827271994
+                  ],
+                  "estimate": 0.0,
+                  "kept": 16,
+                  "missing": 84,
+                  "total": 100,
+                  "yes": 0
+                },
+                "genre=1,addressed=0": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    0.0,
+                    0.18432366037156456
+                  ],
+                  "estimate": 0.0,
+                  "kept": 17,
+                  "missing": 83,
+                  "total": 100,
+                  "yes": 0
+                },
+                "genre=1,addressed=1": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    0.0,
+                    0.13798057582897535
+                  ],
+                  "estimate": 0.0,
+                  "kept": 24,
+                  "missing": 76,
+                  "total": 100,
+                  "yes": 0
+                }
+              },
+              "effects": {
+                "addressed": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "estimate": 0.0
+                },
+                "genre": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "estimate": 0.0
+                },
+                "genre_minus_addressed": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "estimate": 0.0
+                }
+              },
+              "matched_sets": 100
+            },
+            "masked_not_selected": 306,
+            "missing_count_note": "Tables include unselected masked rows; selected_missing counts actual failed original judgments.",
+            "original": {
+              "cells": {
+                "genre=0,addressed=0": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    -1.3877787807814457e-17,
+                    0.113517091390478
+                  ],
+                  "estimate": 0.0,
+                  "kept": 30,
+                  "missing": 70,
+                  "total": 100,
+                  "yes": 0
+                },
+                "genre=0,addressed=1": {
+                  "CI95": [
+                    0.0,
+                    0.17647058823529413
+                  ],
+                  "Wilson95": [
+                    0.009351752490529969,
+                    0.2463921533654521
+                  ],
+                  "estimate": 0.05263157894736842,
+                  "kept": 19,
+                  "missing": 81,
+                  "total": 100,
+                  "yes": 1
+                },
+                "genre=1,addressed=0": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    -1.3877787807814457e-17,
+                    0.16113012549493322
+                  ],
+                  "estimate": 0.0,
+                  "kept": 20,
+                  "missing": 80,
+                  "total": 100,
+                  "yes": 0
+                },
+                "genre=1,addressed=1": {
+                  "CI95": [
+                    0.0,
+                    0.0
+                  ],
+                  "Wilson95": [
+                    0.0,
+                    0.13319649395317873
+                  ],
+                  "estimate": 0.0,
+                  "kept": 25,
+                  "missing": 75,
+                  "total": 100,
+                  "yes": 0
+                }
+              },
+              "effects": {
+                "addressed": {
+                  "CI95": [
+                    0.0,
+                    0.08823529411764706
+                  ],
+                  "estimate": 0.02631578947368421
+                },
+                "genre": {
+                  "CI95": [
+                    -0.08823529411764706,
+                    0.0
+                  ],
+                  "estimate": -0.02631578947368421
+                },
+                "genre_minus_addressed": {
+                  "CI95": [
+                    -0.17647058823529413,
+                    0.0
+                  ],
+                  "estimate": -0.05263157894736842
+                }
+              },
+              "matched_sets": 100
+            },
+            "selected": 94,
+            "selected_missing": 0
+          },
+          "primary_a": {
+            "cells": {
+              "genre=0,addressed=0": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "Wilson95": [
+                  3.469446951953614e-18,
+                  0.047520088667220836
+                ],
+                "estimate": 0.0,
+                "kept": 77,
+                "missing": 23,
+                "total": 100,
+                "yes": 0
+              },
+              "genre=0,addressed=1": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "Wilson95": [
+                  0.0,
+                  0.044752194740079396
+                ],
+                "estimate": 0.0,
+                "kept": 82,
+                "missing": 18,
+                "total": 100,
+                "yes": 0
+              },
+              "genre=1,addressed=0": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "Wilson95": [
+                  -3.469446951953614e-18,
+                  0.04008280329209862
+                ],
+                "estimate": 0.0,
+                "kept": 92,
+                "missing": 8,
+                "total": 100,
+                "yes": 0
+              },
+              "genre=1,addressed=1": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "Wilson95": [
+                  3.469446951953614e-18,
+                  0.03926346257624569
+                ],
+                "estimate": 0.0,
+                "kept": 94,
+                "missing": 6,
+                "total": 100,
+                "yes": 0
+              }
+            },
+            "effects": {
+              "addressed": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0
+              },
+              "genre": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0
+              },
+              "genre_minus_addressed": {
+                "CI95": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0
+              }
+            },
+            "matched_sets": 100
+          },
+          "rules": {
+            "R_E1": "NOT MET",
+            "addressed_ge_genre_observed": true,
+            "addressed_probe_AUROC": 1.0,
+            "addressed_probe_gate": true,
+            "falsifier": "MET"
+          }
+        }
+      }
+    }
+  },
+  "caveat": "Question prompt is outside the lens training distribution; thresholds and complete-coverage reading requirement unchanged",
+  "deviation": 2,
+  "experiment": "E120",
+  "label": "E120c deviation 2 (judge codes; leading-word extractor failed on bullets)",
+  "original_analysis_seal_sha256": "ff768004e28b89410847c76b047d84877eab97e049eb11ef4247fc47cf253000",
+  "part": "c",
+  "readings": {
+    "cue_driven_yes_bias": false,
+    "missing_policy": "Rates use known extractions with denominators; readings require complete targeted and sham extractions; unavailable outcomes never become no",
+    "sham_addressed_minus_unaddressed": 0.0,
+    "sham_invalidates": null,
+    "sham_yes_by_addressed": {
+      "0": 0.0,
+      "1": 0.0
+    },
+    "targeted_reading": "NOT EVALUABLE"
+  },
+  "score_source": "bank E120 E85 rubric a_model_self_evaluated; UNPARSEABLE/null is missing",
+  "status": "DESCRIPTIVE"
+}

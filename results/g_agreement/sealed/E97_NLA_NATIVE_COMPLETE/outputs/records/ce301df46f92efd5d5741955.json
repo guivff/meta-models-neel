@@ -1,0 +1,12 @@
+{
+  "id": "ce301df46f92efd5d5741955",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict Q&A pattern: given a sentence, classify as \"happy\" or \"sad\" based on the defined rule.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals the model must now produce the actual classification answer for the specific sentence \"The man is a doctor.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the classification answer (e.g., \"happy\" or \"sad\") as the next token.\n\"Please follow the pattern strictly.\nExample sentence: The man is a doctor.\nClassification: happy or sad?\nExample sentence: The man is a doctor.\nReply:\" \u2014 the final \"Reply:\" is a prompt field expecting the direct answer, likely a short single word or phrase completing the response.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict Q&A pattern: given a sentence, classify as \"happy\" or \"sad\" based on the defined rule.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals the model must now produce the actual classification answer for the specific sentence \"The man is a doctor.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the classification answer (e.g., \"happy\" or \"sad\") as the next token.\n\"Please follow the pattern strictly.\nExample sentence: The man is a doctor.\nClassification: happy or sad?\nExample sentence: The man is a doctor.\nReply:\" \u2014 the final \"Reply:\" is a prompt field expecting the direct answer, likely a short single word or phrase completing the response.",
+  "truncated": false
+}

@@ -1,0 +1,115 @@
+diff --git a/projects/g_agreement/e100_analysis/part_e.py b/projects/g_agreement/e100_analysis/part_e.py
+index 72b6f2b03..ee89d1969 100644
+--- a/projects/g_agreement/e100_analysis/part_e.py
++++ b/projects/g_agreement/e100_analysis/part_e.py
+@@ -23 +23 @@ class PartEBootstrap(Bootstrap):
+-def analyze(cells):
++def analyze(cells,gates=None,custody_caveat=None):
+@@ -24,0 +25,2 @@ def analyze(cells):
++    gates={r:1.0 for r in ROWS} if gates is None else gates
++    REQ(set(gates)==set(ROWS),'both original E87 gates')
+@@ -27,0 +30,3 @@ def analyze(cells):
++        if gates[row]<.90:
++            out[row]=dict(status='EXCLUDED BY E87 GATE',gate=gates[row],readouts={reader:sorted(cells[(row,reader,'transplant')]) for reader in ('oracle','nla')})
++            continue
+@@ -32 +37 @@ def analyze(cells):
+-    return dict(experiment='E100e',authority='§226',status='DESCRIPTIVE',rows=out,bootstrap=dict(draws=DRAWS,seed=SEED,unit='paired source item'),decision_rules='No confirmatory rule; pre-stated point readings only')
++    return dict(experiment='E100e',authority='§226',status='DESCRIPTIVE',custody_caveat=custody_caveat,rows=out,bootstrap=dict(draws=DRAWS,seed=SEED,unit='paired source item'),decision_rules='No confirmatory rule; pre-stated point readings only')
+@@ -40,0 +46,9 @@ def committed():
++def amendment(inv,o):
++    fields=o.get('amendment_fields',{})
++    intervention=fields.get('intervention',{}).get('value',inv['intervention'])
++    if intervention=='h′ = h_donor at the read site':intervention='h_prime=h_donor'
++    committed=fields.get('pre_gpu_pairing_committed',{}).get('value',inv['pre_gpu_pairing_committed'])
++    REQ(type(committed) is bool,'explicit pairing custody boolean')
++    caveat=None if committed else 'pairing sealed before attempt 2 first output (R-Q verified) but not committed before the first GPU run; custody caveat, not a missing value'
++    return intervention,caveat
++
+@@ -43 +57,2 @@ def inputs(s):
+-    blob=subprocess.check_output(['git','show',commit+':'+str(ip.relative_to(ROOT))],cwd=ROOT)
++    inventory_root=Path(subprocess.check_output(['git','rev-parse','--show-toplevel'],cwd=ip.parent,text=True).strip())
++    blob=subprocess.check_output(['git','show',commit+':'+str(ip.relative_to(inventory_root))],cwd=ROOT)
+@@ -46,2 +61,2 @@ def inputs(s):
+-    REQ(inv['experiment']=='E100e' and inv['pairing_seed']==20261029 and inv['intervention']=='h_prime=h_donor','registered transplant')
+-    REQ(inv['pre_gpu_pairing_committed'] is True and inv['reader_blocks']=={'oracle':44,'nla':42},'frozen pair/site custody')
++    REQ(inv['experiment']=='E100e' and inv['pairing_seed']==20261029 and amendment(inv,core.verify(s['output_seal'],s['output_sha256']))[0]=='h_prime=h_donor','registered transplant')
++    REQ(inv['reader_blocks']=={'oracle':44,'nla':42},'frozen pair/site custody')
+@@ -66,3 +81,11 @@ def inputs(s):
+-    for row,x in o['e87_gates'].items():
+-        REQ(row in ROWS and ref(x)>=.90,'original E87 gate')
+-    REQ(set(o['e87_gates'])==set(ROWS),'both E87 gates')
++    gate_refs=dict(o['e87_gates']);excluded=[]
++    if o.get('excluded_by_gate'):
++        REQ(set(o['excluded_by_gate'])=={'holder_after_handovers'} and 'HOLDER_DESCRIPTIVE.json' in o['files'],'sealed excluded holder readouts')
++        holder=core.read(op.parent/'HOLDER_DESCRIPTIVE.json')
++        REQ(holder['row']=='holder_after_handovers','excluded row identity')
++        gate_refs[holder['row']]=holder['e87_gate'];excluded=holder['items']
++        REQ(ref(holder['e87_gate'])<.90,'excluded original gate must fail')
++    gates={row:ref(x) for row,x in gate_refs.items()}
++    for row,value in gates.items():
++        REQ(row in ROWS and isinstance(value,(int,float)) and 0<=value<=1,'original E87 gate')
++    REQ(set(gate_refs)==set(ROWS),'both E87 gates')
+@@ -70 +93 @@ def inputs(s):
+-    ms=core.unique(core.read(op.parent/'MEASUREMENTS.json'));REQ(set(ms)==set(meta),'complete original item grid')
++    ms=core.unique(core.read(op.parent/'MEASUREMENTS.json')+excluded);REQ(set(ms)==set(meta),'complete original item grid')
+@@ -79 +102 @@ def inputs(s):
+-    return cells
++    return cells,gates,amendment(inv,o)[1]
+@@ -82 +105 @@ def main():
+-    p=argparse.ArgumentParser();p.add_argument('--spec',required=True);a=p.parse_args();commit=committed();s=core.read(a.spec);cells=inputs(s)
++    p=argparse.ArgumentParser();p.add_argument('--spec',required=True);a=p.parse_args();commit=committed();s=core.read(a.spec);cells,gates,caveat=inputs(s)
+@@ -84 +107 @@ def main():
+-    core.write(out/'RESULTS.json',analyze(cells));core.write(out/'BINDING.json',s)
++    core.write(out/'RESULTS.json',analyze(cells,gates,caveat));core.write(out/'BINDING.json',s)
+diff --git a/projects/g_agreement/e100_analysis/test_part_e.py b/projects/g_agreement/e100_analysis/test_part_e.py
+index bb8b675cc..2ade31cba 100644
+--- a/projects/g_agreement/e100_analysis/test_part_e.py
++++ b/projects/g_agreement/e100_analysis/test_part_e.py
+@@ -31,0 +32,47 @@ def test_part_e_guard_is_separate(tmp_path):
++
++
++def test_amendment_literal_and_false_custody():
++    inv=dict(intervention='MISSING',pre_gpu_pairing_committed='MISSING')
++    fields=dict(intervention=dict(value='h′ = h_donor at the read site'),pre_gpu_pairing_committed=dict(value=False))
++    literal,caveat=e.amendment(inv,dict(amendment_fields=fields))
++    assert literal=='h_prime=h_donor' and 'not committed before the first GPU run' in caveat
++    with pytest.raises(ValueError):e.amendment(inv,{})
++
++def test_per_row_gate_preserves_original_container_stat():
++    xs=cells();base=e.analyze(xs)
++    gates=dict(zip(e.ROWS,[.9075963718820862,.7142857142857143]))
++    z=e.analyze(xs,gates,'synthetic custody caveat')
++    assert z['rows'][e.ROWS[0]]==base['rows'][e.ROWS[0]]
++    assert z['custody_caveat']=='synthetic custody caveat'
++    excluded=z['rows'][e.ROWS[1]]
++    assert excluded['status']=='EXCLUDED BY E87 GATE' and len(excluded['readouts']['oracle'])==84
++    assert 'estimate' not in excluded
++    gates[e.ROWS[1]]=.90
++    assert e.analyze(xs,gates)['rows'][e.ROWS[1]]==base['rows'][e.ROWS[1]]
++
++
++def test_split_gate_inventory_and_original_inputs(tmp_path,monkeypatch):
++    import json,hashlib
++    def write(name,x):
++        p=tmp_path/name;p.write_text(json.dumps(x));return p
++    def seal(name,files,**metadata):
++        p=write(name,dict(files={f:e.core.sha(tmp_path/f) for f in files},**metadata));return p,e.core.sha(p)
++    meta=[];measure=[];source={'gates':dict(zip(e.ROWS,[.9076,.7143])),'values':{}}
++    def ref(*keys):return dict(seal_index=0,member='source.json',keys=list(keys))
++    for row in e.ROWS:
++        for i in range(84):
++            ident=f'{row}-{i}';target=str(1-i%2)
++            meta.append(dict(id=ident,row=row,split='test',donor_id=f'{row}-{i^1}',original_value=str(i%2),target_value=target))
++            source['values'][ident]=dict(target=target,letter='A',text='value',code=dict(id=ident,category='states_value',values=['A'],evidence='value'))
++            z=dict(target_value=ref('values',ident,'target'),target_letter=ref('values',ident,'letter'),text=ref('values',ident,'text'),code=ref('values',ident,'code'),judgment_id=ident)
++            measure.append(dict(id=ident,systems=dict(oracle=z,nla=z)))
++    write('INVENTORY.json',meta);write('source.json',source)
++    sp,sh=seal('SOURCE_SEAL.json',['source.json'])
++    ip,ih=seal('INV.json',['INVENTORY.json'],experiment='E100e',pairing_seed=20261029,intervention='MISSING',pre_gpu_pairing_committed='MISSING',reader_blocks=dict(oracle=44,nla=42))
++    write('MEASUREMENTS.json',measure[:84]);write('HOLDER_DESCRIPTIVE.json',dict(row=e.ROWS[1],e87_gate=ref('gates',e.ROWS[1]),items=measure[84:]))
++    op,oh=seal('OUT.json',['MEASUREMENTS.json','HOLDER_DESCRIPTIVE.json'],experiment='E100e',status='COMPLETE',inventory_sha256=ih,route_verified=True,privacy_verified=True,labels_cpu_only=True,one_greedy_readout_per_cell=True,donor_vector_binding_verified=True,rubric='E82',source_seals=[dict(seal=str(sp),sha256=sh)],e87_gates={e.ROWS[0]:ref('gates',e.ROWS[0])},excluded_by_gate={e.ROWS[1]:{}},amendment_fields=dict(intervention=dict(value='h′ = h_donor at the read site'),pre_gpu_pairing_committed=dict(value=False)))
++    monkeypatch.setattr(e.subprocess,'check_output',lambda args,**kw:str(tmp_path)+'\n' if args[1]=='rev-parse' else ip.read_bytes())
++    xs,gates,caveat=e.inputs(dict(inventory_seal=str(ip),inventory_commit='a'*40,inventory_sha256=ih,output_seal=str(op),output_sha256=oh))
++    z=e.analyze(xs,gates,caveat)
++    assert z['rows'][e.ROWS[0]]['oracle']['estimate']==1
++    assert len(z['rows'][e.ROWS[1]]['readouts']['nla'])==84

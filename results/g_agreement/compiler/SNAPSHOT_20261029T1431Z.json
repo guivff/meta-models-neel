@@ -1,0 +1,1284 @@
+{
+  "as_of_utc": "2026-10-29T14:31:24.198587+00:00",
+  "source_commit": "c3a4c0d4f4a1a2b05f38ea83f1551686453865bb",
+  "gpu_ceiling_usd": 2500,
+  "gpu_warning_usd": 2000,
+  "closed_all_in_upper_usd": 1022.0929918682548,
+  "known_gpu_hours": 167.4974852883564,
+  "track_receipt_totals": {
+    "Q": {
+      "gpu_usd": 544.2708786037259,
+      "gpu_hours": 102.88661901771758,
+      "physical_pods": 123,
+      "source_sha256": "f280a7f60162578a27932ea38c23eca92915c0a88c12ad7adaa3eac73770f7fd",
+      "closed_mixed_cost_upper_usd": "536.5208786037259632"
+    },
+    "I2": {
+      "closed_all_in_upper_usd": 341.57,
+      "gpu_hours": 43.71898913959662,
+      "closed_mixed_cost_upper_usd": "341.57"
+    },
+    "I4": {
+      "closed_all_in_upper_usd": 72.2215529171267,
+      "gpu_hours": 12.574747468020039,
+      "closed_mixed_cost_upper_usd": "72.22155291712670506"
+    },
+    "I5": {
+      "closed_all_in_upper_usd": 62.56,
+      "gpu_hours": 8.039140939505687,
+      "closed_mixed_cost_upper_usd": "62.56"
+    },
+    "E113_C": {
+      "gpu_usd": 1.4705603474020958,
+      "gpu_hours": 0.27798872351646425
+    }
+  },
+  "active_caps": [
+    {
+      "pod_id": "8f7rjso2jx8xjt",
+      "experiment_shard": "E95_d2_3_rtc3",
+      "experiment": "E95",
+      "owning_track": "I-3",
+      "operator_track": "Q",
+      "gpu_type": "H200",
+      "gpu_count": 1,
+      "start_utc": "2026-10-29T10:16:55.521Z",
+      "hard_stop_utc": "2026-10-29T15:46:19Z",
+      "backstop_utc": "2026-10-29T15:46:47Z",
+      "absolute_deadline_utc": "2026-10-29T15:46:49.521000+00:00",
+      "original_creation_cap_seconds": 19794,
+      "worst_case_gpu_usd": 29.09,
+      "hourly_gpu_usd": "5.29",
+      "pool_funded": true,
+      "all_in_extras": "UNKNOWN; within pool unallocated",
+      "evidence": "Owner-local Q original allocation/guard receipts, supplemental/unpublished",
+      "source_hashes": {
+        "assignment.json": "4ead0f92ac495a97e4544bf710a6632e3db8386aa7bed6173d3ce3c637914cbc",
+        "provider.json": "c2bb72484169c9962bea51b52e2f322a3eb40d78fc04bc1205efcef9ce07e70a",
+        "pod.id": "20e2f79c8c85e344df3f1eed5c1afb422f8baa7bda0770d959fea1bc7a083ec0",
+        "hardstop.log": "4fdf870c0c3afacf786c7a2acee764ead6e623c4241c91f0da68b452a0d8c541",
+        "backstop.log": "5f954be33ddb8ad54b3263f6e9f5b5e5bdcfadb0fc1221b6c0eb1c9836a02edc"
+      }
+    },
+    {
+      "experiment": "E117",
+      "run_id": "mats-i2-e117-final15600-233-20261029",
+      "state": "WORKER_STARTED_ORIGINAL_DEADLINE",
+      "full_all_in_cap_usd": "24.93",
+      "cap_seconds": 15600,
+      "source_sha256": "ceaafd4e914c16c5294ef5b5c22912931646ab33934fead57d5dc244b1ddcef6",
+      "budget_source_sha256": "40d87994a28784967397de7ec5e81fe3bf4ba209529b741b224f3badd40a1793",
+      "evidence": "Original owner-local allocation+budget, supplemental/unpublished; private exact identity not republished",
+      "no_compiler_allocation": true
+    }
+  ],
+  "active_caps_usd": 54.02,
+  "nonpool_booked_plus_caps_usd": 804.6925061907357,
+  "nonpool_uncertainty_usd": 249.61,
+  "pool_booked_usd": 242.3304856775191,
+  "pool_active_caps_usd": 29.09,
+  "pool_unallocated_usd": 628.5795143224809,
+  "inclusive_gpu_subtotal_usd": 1954.3025061907356,
+  "inclusive_formula": "nonpoolclosed+nonpoolactive+boundednonpooluncertainty+full900poolONCE",
+  "complete_total": false,
+  "gpu_warning": false,
+  "unknown_liabilities": [
+    "Raw provider invoices/private source authentication not independently available",
+    "Unreportedaftercutoffallocations UNKNOWN; all reported activecaps counted",
+    "Qborder-crossing custody conservatively kept whole where notprorated; old53pods fullyoutsidewindow excluded"
+  ],
+  "judging_actual_usd": "73.9003744875",
+  "judging_open_running_caps_usd": "156.92644650",
+  "judging_admission_usd": "73.9003744875",
+  "judging_ceiling_usd": 1000,
+  "judging_warning_usd": 800,
+  "judging_warning": false,
+  "status_sources": [
+    {
+      "path": "results/g_agreement/status/COORDINATOR.md",
+      "sha256": "3552a2f3a36766164bcf58eae3dd4304a4147f5ef34c5936697777a9f4bec77a",
+      "latest_reported_material_utc": "2026-10-29T08:40:00+00:00",
+      "age_hours": 1.943317865,
+      "freshness": "fresh"
+    },
+    {
+      "path": "results/g_agreement/status/I-2.md",
+      "sha256": "92ed4b1605948eb485ceb9f814e24943f774ef81aae20184e2f6a416b9a709ae",
+      "latest_reported_material_utc": "2026-10-29T09:19:24.669365+00:00",
+      "age_hours": 1.286465263611111,
+      "freshness": "fresh"
+    },
+    {
+      "path": "results/g_agreement/status/I-3.md",
+      "sha256": "330ae544c1747cd56d9ebd08fb793d4890d1e45eea4849d175bcd12bc06ae4af",
+      "latest_reported_material_utc": "2026-10-29T06:31:01.507701+00:00",
+      "age_hours": 4.092899059166666,
+      "freshness": "STALE >3h"
+    },
+    {
+      "path": "results/g_agreement/status/I-4.md",
+      "sha256": "91a9ed406e1915d6a849d3448de54109e0b1d651a4bd067a032b0b37d2bfdb53",
+      "latest_reported_material_utc": "2026-10-29T09:24:07.876230+00:00",
+      "age_hours": 1.2077966900000001,
+      "freshness": "fresh"
+    },
+    {
+      "path": "results/g_agreement/status/I-5.md",
+      "sha256": "e34a16fb0467b9706106b610c28c48b96f1b0cdd22468b4d580f63ad9bd54cf2",
+      "latest_reported_material_utc": "2026-10-29T09:32:07.620190+00:00",
+      "age_hours": 1.0745344788888889,
+      "freshness": "fresh"
+    },
+    {
+      "path": "results/g_agreement/status/Q.md",
+      "sha256": "3593a9d71947a8fd58627d2413545d17fa71aae2b01825a5fd3b5e1a669f4c57",
+      "latest_reported_material_utc": "2026-10-29T09:48:00+00:00",
+      "age_hours": 0.8099845316666666,
+      "freshness": "fresh"
+    },
+    {
+      "path": "results/g_agreement/status/W-internals.md",
+      "sha256": "b4c380fbd8ff37bb22eccca618d0d366ea4ba64bd0fbdfb0f825b46b6db0dc6b",
+      "latest_reported_material_utc": "2026-10-29T10:12:49.650913+00:00",
+      "age_hours": 0.39619261138888884,
+      "freshness": "fresh"
+    },
+    {
+      "path": "results/g_agreement/status/W-mech.md",
+      "sha256": "7feafa1d154134f5dbfffa54395136bf04791e6eb62a587a60a5ce87a61e1e31",
+      "latest_reported_material_utc": "2026-10-29T09:44:18.385722+00:00",
+      "age_hours": 0.8715440533333333,
+      "freshness": "fresh"
+    }
+  ],
+  "missing_track_files": [],
+  "pod_count": 5,
+  "new_original_closeouts": 2,
+  "new_review_rows": 4,
+  "supplemental_gpu_hour_receipts": [
+    {
+      "run_id": "mats-i2-e110-filter-amend1-s2-20261029-a1",
+      "gpu_hours": 0.2065692147281435,
+      "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/E110_AMEND1_SHARD2_CLOSEOUT.json",
+      "sha256": "3ff81bb5aa29123a5ca82431b65583bea7557ab1a960b3a28eba3fb0e5b20d7b"
+    },
+    {
+      "run_id": "mats-i2-e110-filter-amend1-s3-20261029-a1",
+      "gpu_hours": 0.1586832727988561,
+      "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/results/g_agreement/i2/E110_AMEND1_SHARD3_CLOSEOUT.json",
+      "sha256": "53d318a071fb448a85a2a5103fe4935aaeb6c130822e3bb27295327778a1b9d9"
+    }
+  ],
+  "no_snapshot_accounting_effect": true,
+  "report_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-compiler/results/g_agreement/compiler/REPORT_20261029T1036Z.md",
+  "original_smoke_dedup": "E101 z51f92frrp1vvs is already a canonical trackQ pod_billed receipt; counted once, not again as separateCsmoke",
+  "Q_spend_snapshot_gap": "RESOLVED:509.48\u2212139.68outofwindow+.3608786037alreadybookedsmoke=370.1608786037; no139.3191214currentliability",
+  "judging_as_of_utc": "2026-10-29T11:01:10.913618+00:00",
+  "E106_terminal_reconciliation_applied": {
+    "event": "e106_provider_actual_billing_reconciliation",
+    "signed_all_in_delta_usd": "-12.29886118876536714",
+    "net_booked_usd": "3.05494469776749606",
+    "released_flat_contingency_usd": "12",
+    "receipt_commit": "125bcfe4e6c288835a97929cd005a0b78e3f996c",
+    "receipt_sha256": "568b0ca5b07ed9c21ef72d2760cbf49697f6ad32438c66216b000f972b9290f4",
+    "provenance_limitation": "Committedextract/ledger exact; originalproviderpayloads private/uncommitted so rawAPIauthentication NOT EVALUABLE",
+    "applied_utc": "2026-10-29T09:27:19.554724+00:00"
+  },
+  "owner_conservative_gpu_warning": {
+    "exposure_usd": 2395.82,
+    "pool_upper_usd": 889.48,
+    "reported_utc": "2026-10-29T08:57:04.371792+00:00",
+    "source": "results/g_agreement/i2/E110_DEV2_UNCLAIMED_CONTINUATION_RECEIPT.json",
+    "sha256": "5f6513138a8f2c2241d8ec542e759311eb14b04993e3e91e5a0ef9de17131e96",
+    "flag2000": true,
+    "gap_upper_usd": 139.3191214,
+    "interpretation": "Owner conservative admission inclusive of unresolved Qscopegap/storage. Alternative planning bound; NOT anothercharge and NOT added atop compiler subtotal. Overlap/scope reconciliation pending; newerI2material09:19 closesE84/newE110allocations require originalreceipt refresh.",
+    "status": "HISTORICAL_RECONCILED; notcurrentextraexposure"
+  },
+  "gpu_warning_basis": "Latestreceipt-deduplicatedconservative; historical2395.82 warningresolvedbyscope/overlapbridge. Coordinatorrestrictionremainsinforce.",
+  "gpu_reconciled_as_of_utc": "2026-10-29T14:31:24.198587+00:00",
+  "deduplicated_committed_plus_spent_usd": "1076.11299186825476419",
+  "Q_scope_gap_resolved": true,
+  "Q_scope_gap_current_liability_usd": 0,
+  "gpu_reconciliation_path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-compiler/results/g_agreement/compiler/GPU_RECONCILIATION_CURRENT.json",
+  "Q_shared_reconciliation": {
+    "at": "2026-10-29T09:58:57Z",
+    "sha256": "46ac4a2cd3ee1ed87ac99d4c8b007f3a3058153af66239fb9a862ce87ca61d55",
+    "daily_bookings_not_newcharges": true,
+    "perpod_cent_rounding_padding_usd": "0.03",
+    "prior_six_cap_rounding_padding_usd": "0.03"
+  },
+  "report_cutoff_note": "Full scheduled12:25UTC cycle; actual financial/source cutoff 2026-10-29T12:29:14.802330+00:00; fixed next14:25UTC retained.",
+  "E95_note3_no_new_extension_liability": true,
+  "judging_running_caps_usd": "0",
+  "source_statuses": [
+    {
+      "path": "results/g_agreement/status/COORDINATOR.md",
+      "latest_reported_material_utc": "2026-10-29T10:50:00+00:00",
+      "age_hours": 3.690055163055556,
+      "freshness": "STALE >3h",
+      "sha256": "ac9e1b66cdff58faac32e3fe151acf416d1e63c7fd4205255abe1713f60dfbb3"
+    },
+    {
+      "path": "results/g_agreement/status/I-2.md",
+      "latest_reported_material_utc": "2026-10-29T12:38:46.582922+00:00",
+      "age_hours": 1.8771154625000002,
+      "freshness": "fresh",
+      "sha256": "19ce5e1b029c792dec3ad9b8a0b7aba11d3424fa758ed8ff05cef385985e1c3e"
+    },
+    {
+      "path": "results/g_agreement/status/I-3.md",
+      "latest_reported_material_utc": "2026-10-29T06:31:01.507701+00:00",
+      "age_hours": 8.006303023888888,
+      "freshness": "STALE >3h",
+      "sha256": "330ae544c1747cd56d9ebd08fb793d4890d1e45eea4849d175bcd12bc06ae4af"
+    },
+    {
+      "path": "results/g_agreement/status/I-4.md",
+      "latest_reported_material_utc": "2026-10-29T09:41:22.766180+00:00",
+      "age_hours": 4.833731224166667,
+      "freshness": "STALE >3h",
+      "sha256": "91a9ed406e1915d6a849d3448de54109e0b1d651a4bd067a032b0b37d2bfdb53"
+    },
+    {
+      "path": "results/g_agreement/status/I-5.md",
+      "latest_reported_material_utc": "2026-10-29T14:15:41.326690+00:00",
+      "age_hours": 0.26190886027777777,
+      "freshness": "fresh",
+      "sha256": "779cdc958d52ff55c8b43dd35978f05cd70e5ee0c588fb61a9aae4c76e56ec36"
+    },
+    {
+      "path": "results/g_agreement/status/Q.md",
+      "latest_reported_material_utc": "2026-10-29T13:55:00+00:00",
+      "age_hours": 0.6067218297222222,
+      "freshness": "fresh",
+      "sha256": "6290e773f5a6bc73b865d631fc69a0de176b84b38a70cc69fbf354f11ebfb041"
+    },
+    {
+      "path": "results/g_agreement/status/W-internals.md",
+      "latest_reported_material_utc": "2026-10-29T14:17:15.660289+00:00",
+      "age_hours": 0.2357050827777778,
+      "freshness": "fresh",
+      "sha256": "d6cbd7ac88134e0aca773f9312969127840b6e5c90f1c1b126c1769359308e43"
+    },
+    {
+      "path": "results/g_agreement/status/W-mech.md",
+      "latest_reported_material_utc": "2026-10-29T14:19:21.265956+00:00",
+      "age_hours": 0.20081461972222223,
+      "freshness": "fresh",
+      "sha256": "1e78653fa268d29691e4449fc1a31a69cfd08b4fdb53dcec746421063316ad2e"
+    }
+  ],
+  "source_reads": [
+    {
+      "path": "CLAUDE.md",
+      "sha256": "7306b3ca0e2d0034a7566b1aa8c8f068a172b2f77cb567529d716ada27a1616b",
+      "bytes": 1097
+    },
+    {
+      "path": "README.md",
+      "sha256": "987db2d578ef96a06b2fa14c5c225dd802632e7d6ed90e9e8b3a3f08bd495947",
+      "bytes": 3951
+    },
+    {
+      "path": "projects/g_agreement/BRIEF_UNDERSTAND.md",
+      "sha256": "3e3cd38f661aec188790980ce213ef68765fda5af4a5452024aacb2780490f0d",
+      "bytes": 617528
+    },
+    {
+      "path": "results/g_agreement/EXPERIMENTS_2026-10-27.md",
+      "sha256": "5aedcb8832bf9a13218636ff86bb6b7285448e99dbba11472a43c5d7bed907cf",
+      "bytes": 20961
+    },
+    {
+      "path": "results/g_agreement/compiler/HANDOFF.md",
+      "sha256": "473345e20e246e278455d51ecc848709aabe0a97e49d8efca8cf3ef67b484d4c",
+      "bytes": 178816
+    },
+    {
+      "path": "results/g_agreement/status/C.md",
+      "sha256": "59444721b0802211ee3fb6fe6b13e8d0da3a6828e9898c7e8adde347dbb6036d",
+      "bytes": 27725
+    },
+    {
+      "path": "results/g_agreement/status/COORDINATOR.md",
+      "sha256": "ac9e1b66cdff58faac32e3fe151acf416d1e63c7fd4205255abe1713f60dfbb3",
+      "bytes": 4009
+    },
+    {
+      "path": "results/g_agreement/status/I-2.md",
+      "sha256": "19ce5e1b029c792dec3ad9b8a0b7aba11d3424fa758ed8ff05cef385985e1c3e",
+      "bytes": 6448
+    },
+    {
+      "path": "results/g_agreement/status/I-3.md",
+      "sha256": "330ae544c1747cd56d9ebd08fb793d4890d1e45eea4849d175bcd12bc06ae4af",
+      "bytes": 1088
+    },
+    {
+      "path": "results/g_agreement/status/I-4.md",
+      "sha256": "91a9ed406e1915d6a849d3448de54109e0b1d651a4bd067a032b0b37d2bfdb53",
+      "bytes": 1745
+    },
+    {
+      "path": "results/g_agreement/status/I-5.md",
+      "sha256": "779cdc958d52ff55c8b43dd35978f05cd70e5ee0c588fb61a9aae4c76e56ec36",
+      "bytes": 47086
+    },
+    {
+      "path": "results/g_agreement/status/Q.md",
+      "sha256": "6290e773f5a6bc73b865d631fc69a0de176b84b38a70cc69fbf354f11ebfb041",
+      "bytes": 3479
+    },
+    {
+      "path": "results/g_agreement/status/W-internals.md",
+      "sha256": "d6cbd7ac88134e0aca773f9312969127840b6e5c90f1c1b126c1769359308e43",
+      "bytes": 34315
+    },
+    {
+      "path": "results/g_agreement/status/W-mech.md",
+      "sha256": "1e78653fa268d29691e4449fc1a31a69cfd08b4fdb53dcec746421063316ad2e",
+      "bytes": 31908
+    },
+    {
+      "path": "results/g_agreement/reviews/R-2.md",
+      "sha256": "8888dd505d3b2d50d0d1b9ebc2b8bd223828d1d9c909e2fd749ca851612d1b86",
+      "bytes": 168668
+    },
+    {
+      "path": "results/g_agreement/reviews/R-3.md",
+      "sha256": "cdee3cfcb8534fa853193bda9217e03c64097643c5bf20cdc6b977ded541b5d8",
+      "bytes": 32482
+    },
+    {
+      "path": "results/g_agreement/reviews/R-4.md",
+      "sha256": "f4706eff308affacb72426a00e75700bcd3926c88166faf4cac23c2460c0f731",
+      "bytes": 71039
+    },
+    {
+      "path": "results/g_agreement/reviews/R-5.md",
+      "sha256": "c008c5cb24111cec98a1256a9fe10e7ae7b3a027723090dfe585e7faf4ccbb37",
+      "bytes": 151354
+    },
+    {
+      "path": "results/g_agreement/reviews/R-Q.md",
+      "sha256": "e355659068e3cef86545179f3923144d5b94b79a169dc9f11c3a2b70d833232e",
+      "bytes": 506850
+    }
+  ],
+  "pod_count_public_exact": 1,
+  "additional_owner_private_allocation_count": 1,
+  "offcycle_update": false,
+  "experiments": [
+    [
+      "E49 NLA supplement",
+      "sealed",
+      "0.6839",
+      "unknown",
+      "Scientific shared-branch review pending"
+    ],
+    [
+      "E56 / E57 / E59 / E62",
+      "judged",
+      "unknown / unknown / unknown / unknown",
+      "0.903 / 1.294 / 0.458 / 0.923",
+      "R-Q numbers provisional pending full shared-publication/chronology sign-off"
+    ],
+    [
+      "E58b / E61 D4",
+      "sealed",
+      "unknown",
+      "unknown",
+      "R-Q provisional; no unqualified scientific release"
+    ],
+    [
+      "E63",
+      "judged",
+      "unknown",
+      "0.074759",
+      "R-P1 sealed; R-P2 coding terminal, matching-reader references pending"
+    ],
+    [
+      "E66",
+      "judged",
+      "unknown",
+      "0.160",
+      "R-Q shared scientific sign-off pending"
+    ],
+    [
+      "E67 waves 1 / 2",
+      "judged",
+      "unknown",
+      "0.417 / 0.290",
+      "R-Q shared scientific sign-off pending"
+    ],
+    [
+      "E68",
+      "judged",
+      "unknown",
+      "0.595",
+      "R-Q shared scientific sign-off pending"
+    ],
+    [
+      "E69",
+      "sealed",
+      "0.2678",
+      "unknown",
+      "Operational NOT RUN; no scientific seal"
+    ],
+    [
+      "E70 / E72 / D4A",
+      "reviewed",
+      "unknown",
+      "0.134 / 0.213 / unknown",
+      "E70 R-D1 NOT MET both/falsifiers met; E72 descriptive; D4A reviewer pending"
+    ],
+    [
+      "E73",
+      "reviewed",
+      "0.6058",
+      "1.699285",
+      "Preserve R-2 timing/missingness caveats; local joins stay local"
+    ],
+    [
+      "E74",
+      "sealed",
+      "3.5595",
+      "0",
+      "DROPPED; operational closeouts only"
+    ],
+    [
+      "E75 original / pooled extension",
+      "queued",
+      "unknown",
+      "unknown",
+      "Originalsealed resultpreserved; pooledrerun PARKED \u00a7211"
+    ],
+    [
+      "E76",
+      "reviewed",
+      "0.9971",
+      "1.815 prior reported",
+      "RQjudgedflooraudit688point/CItriples/4992pairsMETdescriptive;23missing/4redactedcaveats; broaderincompatible-channel/all-bankcomparisonNE."
+    ],
+    [
+      "E77",
+      "sealed",
+      "0",
+      "0",
+      "E77 not run (gate), final"
+    ],
+    [
+      "E78",
+      "reviewed",
+      "4.0575",
+      "2.0007",
+      "12/64binary rows REPORTED;288ordinal items NOT EVALUABLE; retained-supplement chronology caveat"
+    ],
+    [
+      "E79 extension",
+      "queued",
+      "0 new",
+      "0",
+      "Eligible in pool order; frozen reviewed manipulation retained, no new allocation."
+    ],
+    [
+      "E79 original",
+      "reviewed",
+      "2.1221",
+      "1.5496",
+      "R-C1 numerical NOT MET/falsifier NOT MET; random-manipulation consequence ambiguous; R-C2pending"
+    ],
+    [
+      "E80 / E80b",
+      "reviewed",
+      "1.0484",
+      "includedshared0.809",
+      "R-X1MET/R-X2NOTMETOracle; publishedbenchmarkfloors/custodycaveats"
+    ],
+    [
+      "E80c R1",
+      "reviewed",
+      "2.4293",
+      "sharedE80/c0.845",
+      "RQ R-X3NOTMET/falsifierNOTMET. R-X4families/Jfraction/normaudits+\u00a7223posthoc28triples reproduceddescriptive; RNG/quantileCIdifferencesqualified, no causalvariance-matchedclaim."
+    ],
+    [
+      "E81/E90",
+      "reviewed",
+      "16.8993",
+      "4.10268275",
+      "E81 generic point MET18/22+8/13, not worst-case robust; original matched rubric fails. E90lexicalMET; literal-buffer pending."
+    ],
+    [
+      "E82",
+      "reviewed",
+      "2.9260",
+      "1.847960925",
+      "R-B2 OracleMET2/2conditional/not robust to missingness; NLA NOTMET0/2; R-B3NE/no belief-right group. Outside comparisonE107pending."
+    ],
+    [
+      "E84",
+      "sealed",
+      "1.0026",
+      "0",
+      "Final probe-gate NOT RUN/reader NE; text baseline NOT JUDGED, bank closed0/unspent3. No comparison or reopening inferred."
+    ],
+    [
+      "E85",
+      "reviewed",
+      "1.2039",
+      "0.44720800",
+      "Oracle R-E1 NOT MET robust; equality falsifier MET but 55-missing bounds can reverse. NLA descriptive NOT MET. Explicit evaluation cue, not organic awareness; source/parity custody caveat retained."
+    ],
+    [
+      "E86",
+      "reviewed",
+      "1.5736",
+      "0.38327150",
+      "R-K1/falsifier NOT EVALUABLE blocked arms;54CIs descriptive verified; no mask/grader-awareness completion inferred."
+    ],
+    [
+      "E87",
+      "reviewed",
+      "40.3570",
+      "14.50695200",
+      "Corrected RQ R-L1/falsifier NOT EVALUABLE: loop control D=.05 fails.30.2/8 depth labels descriptive, trigger verified; strict retained."
+    ],
+    [
+      "E88",
+      "sealed",
+      "0 new",
+      "0 new reported",
+      "Raw missingness audit reviewed; sign/leak/token reviews incomplete; items5/6 judging pending"
+    ],
+    [
+      "E89",
+      "reviewed",
+      "0 new",
+      "unknown inherited",
+      "R-2 R-H1 NOT MET and falsifier MET both; inherited costs not rebooked"
+    ],
+    [
+      "E91 / E92",
+      "queued",
+      "UNKNOWN",
+      "UNKNOWN",
+      "Eligible later pool order; no new allocation reported; source/measurement/gates required."
+    ],
+    [
+      "E93",
+      "queued",
+      "0",
+      "0",
+      "Last in pool order, no new allocation."
+    ],
+    [
+      "E94",
+      "reviewed",
+      "historical",
+      "included historical banks",
+      "\u00a7226 descriptive: agreement precision .94206 vs better-single NLA .87030; gain.07176/base.32819,9Wilson triples verified; not old .6077 marginal-accuracy contrast."
+    ],
+    [
+      "E95",
+      "running",
+      "32.0394",
+      "0",
+      "Lastshard3-3active; completeboth-reader stages on3-2/4/5/7, Oracleonly3-1/6, 3-0operationalNR/cancelled. Whole real+placebo/seal coverage only, no partials. Source-stage eligibility not scientific result; analysis/R3pending; I3statusSTALE."
+    ],
+    [
+      "E96 retained / separate final",
+      "reviewed",
+      "11.8332",
+      "15.60640000",
+      "Both immutable; R-SC1 NE/falsifier NOTMET; H-SC2 NLA recon MET separate10rows/2OUT only, no pooling/fullbank claim."
+    ],
+    [
+      "E97",
+      "reviewed",
+      "4.3988",
+      "3.24963000",
+      "R5OracleR-T1MET:BA.72222vs.31944;delta.40278CI[.21622,.73077]. RawJ/native36/40Oracle,35/40NLA EQUALalways-MISSED36/40,35/40; no rawagreementforecastadvantage. NLA descriptive; pooledR-P1pending."
+    ],
+    [
+      "E98",
+      "reviewed",
+      "1.6700",
+      "0.87133225",
+      "Descriptive69CIs verified; forecast18/23belowalways-MISSED20/23=>claimNOTMADE; samefamilyQwen.9missing/74truncated; finaladapterpost-banktimingNOTMET."
+    ],
+    [
+      "E99",
+      "sealed",
+      "12.5139",
+      "5.44761375",
+      "Phase1COMPLETE6680terminal/6677KEPT/1FAILED/2UNPARSEABLE; residual144.55238625released/open0. Full34076DAGincomplete, conditionalcontinuationNOTallocated. No dispatcherrestart/replay."
+    ],
+    [
+      "E100 a/b",
+      "reviewed",
+      "4.6040",
+      "2.84297050",
+      "RQ R-PCMET5/5; R-C3NOTMET2/5, falsifierNOTMET;112CIs reproduced. Strong-BNOTMET/Strong-CNE."
+    ],
+    [
+      "E100e",
+      "reviewed",
+      "0.8385",
+      "0.23245975",
+      "RQ containerOracleS\u2212.01220CI[\u2212.10718,.08537],82/84;NLA.03571CI[\u2212.09524,.16667],84/84. Descriptive points<=.10, no equivalence/nullproof. Holder gateexcluded/noS; falsefirst-GPUcustodycaveat retained; onceguardconsumed."
+    ],
+    [
+      "E101",
+      "reviewed",
+      "4.3510",
+      "0.18094775",
+      "Two-cell descriptive diffs+.5196/+1.1220 reproduced; R-F1/F2/F3/falsifiersNE, norm/missingness caveats."
+    ],
+    [
+      "E102",
+      "reviewed",
+      "0.1075",
+      "0",
+      "\u00a7212 NOT RUN (feasibility). Reviewed gate NOT MET:1/3 parity,0steps; R-V1/2/3/falsifier NOT EVALUABLE."
+    ],
+    [
+      "E103",
+      "reviewed",
+      "1.9704",
+      "0.21605300",
+      "Validator-corrected R-H2/falsifier NOTMET;276claims/164clusters difference.07971 CI[.03678,.12635]; strict NOT EVALUABLE beside, no replay."
+    ],
+    [
+      "E104",
+      "reviewed",
+      "2.3504",
+      "0.15041200",
+      "Strict R-U1 NOTMET0/2/falsifier NOTMET/R-N1 NE; \u00a7223audit10responses9missing/1nonverbatim/0recoverable. Missingness can reverse; no corrected rerun."
+    ],
+    [
+      "E105",
+      "reviewed",
+      "2.2351",
+      "0",
+      "Gate MET2/3;R-BT1/falsifier NOTMET;35CIs/5rows verified, indent NOTRUN. Timing/prefix limitations retained."
+    ],
+    [
+      "E106",
+      "reviewed",
+      "0.633990",
+      "0",
+      "AllscientificrulesNE/repairuntested.6podsnet3.05494470/signedcorrection/flat12released; committedextractverified, originalrawproviderprovenanceNE. No furtherattempt."
+    ],
+    [
+      "E107",
+      "judged",
+      "0 CPU/API",
+      "5.02703450",
+      "BankCOMPLETE5.02703450/open0; bindingv5SPEC3c8a2d87 correct judged-redacted text,31strictnonverbatim cells aftersourcefixes; original33 audit listed/keepcodes+exclusion sensitivity per2045d4a96. E82positions itemunit; owneronce/R2reviewpending, no compilerrecoding."
+    ],
+    [
+      "E108",
+      "reviewed",
+      "0.7509",
+      "0.45873675",
+      "R3R-CH1NOTMET/falsifierMET:Oracle0/42vsoutside13/42,delta\u2212.30952CI[\u2212.45238,\u2212.16667]; only42/462plannedretained. DelayedoffsetconstructNE/Jfractionsallnull; NLA descriptive; privatecapture/referenceauditlimits."
+    ],
+    [
+      "E109",
+      "reviewed",
+      "0.9641",
+      "0.81444200",
+      "RQ R-AR1METfact52/60, NOTMETlanguage (probe\u2264.20). R-AR2NOTMETboth; R-AR3languageMETlinearprobecriteriononly;falsifierNOTMET.30probe/Wilson+18bootstraptriplesmatch; missingness/norm/readtiminglimits retained."
+    ],
+    [
+      "E110",
+      "reviewed",
+      "1.2026",
+      "0",
+      "Dev2 eligibility NOT RUN:0stable/3native<60; originalTwoHopFact0stable/6native<60. R-B2prime/R-OL1primeNE; UNKNOWN retained. No reader allocation from failed gate; allfilterquartersclosed."
+    ],
+    [
+      "E111",
+      "reviewed",
+      "0",
+      "0",
+      "RQ observed R-SL0 MET fact79/84/language46/84; language19/46site-steered missing/not robust. PooledR-SL1 NOT MET/falsifier NOT MET; per-experiment CIsNE47/31/35failedfits. One authorized env-only recovery disclosed; E100a excluded. Part d separately registered POST HOC, not run by C."
+    ],
+    [
+      "E112",
+      "sealed",
+      "0.8520",
+      "0.20970500",
+      "I5COMPLETEONCEseal0e18d220/resultsce19adcd afterR5v3privacyconfirmation14:02Z; fixedguardCONSUMED. AuthoredOracleR-X5MET is PENDING independentR5scientificreview; NLAexploratory, copyinventory/history/diagnostics limitations retained."
+    ],
+    [
+      "E113",
+      "reviewed",
+      "0.277989",
+      "0",
+      "R4 R-IN1 MET3/3/falsifier NOT MET;768AUROCs and final17Gitobjects/7paths verified, prior treeNE closed. Finalbinder AFTERcapture remains disclosed; decodability not causal usability/repair."
+    ],
+    [
+      "E114",
+      "reviewed",
+      "0.3074",
+      "0.33485275",
+      "R2 descriptive conjunctions NOT MET0/3;12CIs reproduced. Nesting39missing can reverse, no robust blanketnegative; bank complete .33485275."
+    ],
+    [
+      "E115",
+      "reviewed",
+      "0 CPUonly",
+      "0",
+      "R5 fixed raw-direction AUROC.24263CI[.19430,.27948] descriptive BLIND reading only, lower stale fractions/no universal blindness claim. Eligible39row3176subset NO_GAIN; full-E94 gainNE1137uncovered. Originalbaseline retained; no E73 joins."
+    ],
+    [
+      "E116",
+      "sealed",
+      "0.5390",
+      "0",
+      "752nativecomplete/original376cohort, packet deliveredC/soleWmech2. No activepod; judging and independentR3 science pending, source/bootstrap questions not compilerresolved."
+    ],
+    [
+      "E117",
+      "running",
+      "0.2842",
+      "0",
+      "OneFINALfullgrid15600s/allin24.93explicitapproval, no furtherNOFITretry; prior24partials excluded/unopened. PRELOAD2 reachedscience (name misleading). Partcconfigregistered/per-row sham threshold, no calls/cap inferred."
+    ],
+    [
+      "E118 a/b",
+      "reviewed / queued",
+      "0 CPU/API",
+      "0.02705700",
+      "R5 part-a descriptive NOT MET: staleYES37/84; correct52OFFTOPIC73/84/NO11. Label-only admin closure repair disclosed. Part-b pending frozen E82 unit binding; SAME lifetime1, no new active cap."
+    ],
+    [
+      "E119",
+      "reviewed",
+      "0.3121",
+      "0",
+      "R-Q verified smoke1/4devfails(maxrun63), all4required. No specificREADMEcontractmismatch, finalNOTRUNoperational83747fe28; noproduction/retry/no lensBscientificnegative. Closed3.66once."
+    ],
+    [
+      "E120 a/b/c",
+      "sealed",
+      "1.3214",
+      "0",
+      "Q measuredabCOMPLETE3f2ed065/cCOMPLETE813f2ae9, originalI2partialstrials excluded. Timing/decoder/targeted-sham outputs sealed; soleCjudging/probes/independentreviews pending. cshamYESfalsepositive, out-of-distributionquestions caveat."
+    ],
+    [
+      "E121",
+      "judged",
+      "0.4733",
+      "0.08848700",
+      "Full168native packet/original84pairedcohort; CjudgingCOMPLETE.088487/open0/release.911513. ADMIN-only empty-input duplicate entry retired beforecalls, no prompt/stat change; analysis/independentreview pending. R2 reports new directreviewpriority."
+    ],
+    [
+      "E122",
+      "reviewed",
+      "0.3917",
+      "0",
+      "R2 nativeR-BEV1NOTMET:\u2212.136139CI[\u2212.158352,\u2212.113901],100quartets; clearlynonzerooppositesign, no no-behaviour-change claim. RegisteredR-BEV2NOTRUN. Separately EXPLORATORYPOSTHOC Delta+.002131CI[\u2212.008284,.012612],criterionNOTMET, recovery\u22121.5654%unclipped; closed/no rerun."
+    ],
+    [
+      "E123",
+      "sealed",
+      "0.4233",
+      "0",
+      "268unhookednativeCOMPLETEbbb1a572 afterNOFIT90e77098, bothcustodiesbookedonce. Judging/analysispending; RQ undefined-AUROCdraw/dual-valuecohortsourcequestions remain unresolvedinBRIEF, no compilerchoice. R2reports newdirectreviewrouting."
+    ],
+    [
+      "E124",
+      "queued",
+      "0 evidenced",
+      "0",
+      "Modelreferencev3seal61d87c57 matches C7042census:252E118+6790E82 incl6172belief-wrong/618no-truth as separatecohorts. Registeredpair_logits preference/Wtextbelief references, not freeanswer; source/censusready, no dispatch evidenced."
+    ],
+    [
+      "E125",
+      "queued",
+      "0 evidenced",
+      "0",
+      "\u00a7234reconstructor/shuffle/readout-arrangement test, Wlens/R4. Source/whitened-reference compatibility still required; no capture/effect/allocation inferred from registration."
+    ],
+    [
+      "E126",
+      "queued",
+      "0.1174",
+      "0",
+      "Qplanning1440sleaseclosedNO_SEAL14:27:21Z/0filepull/cost.62; no scientificnegative. Ownerfailurediagnosis/loadchronology/recoveryreceipt pending; original134items/4020logitcells, R-MED1controls bothall5blocks, insertion descriptive. No C retry."
+    ],
+    [
+      "E127",
+      "queued",
+      "0 evidenced",
+      "0",
+      "\u00a7236 no-hook context-update/neutral/baseline,84facts/756readouts;>=50flipped gate; R-NAT1confirmatory/RQ. <=.5GPUh/bank3 registration, no allocation."
+    ],
+    [
+      "E128",
+      "queued",
+      "0 evidenced",
+      "0",
+      "\u00a7236 alpha2/4minimalflipdose vsoriginal8;>=42/84flips, descriptive/RQ. <=.4GPUh/bank3 registration, no allocation; strongsteercaveat ifno lowerdoseflips."
+    ]
+  ],
+  "pod_map": {
+    "as_of_utc": "2026-10-29T14:31:24.198587+00:00",
+    "timezone": "Europe/Zurich",
+    "pods": [
+      {
+        "pod_id": "8f7rjso2jx8xjt",
+        "experiment_shard": "E95_d2_3_rtc3",
+        "experiment": "E95",
+        "owning_track": "I-3",
+        "operator_track": "Q",
+        "gpu_type": "H200",
+        "gpu_count": 1,
+        "start_utc": "2026-10-29T10:16:55.521Z",
+        "hard_stop_utc": "2026-10-29T15:46:19Z",
+        "backstop_utc": "2026-10-29T15:46:47Z",
+        "absolute_deadline_utc": "2026-10-29T15:46:49.521000+00:00",
+        "original_creation_cap_seconds": 19794,
+        "worst_case_gpu_usd": 29.09,
+        "hourly_gpu_usd": "5.29",
+        "pool_funded": true,
+        "all_in_extras": "UNKNOWN; within pool unallocated",
+        "evidence": "Owner-local Q original allocation/guard receipts, supplemental/unpublished",
+        "source_hashes": {
+          "assignment.json": "4ead0f92ac495a97e4544bf710a6632e3db8386aa7bed6173d3ce3c637914cbc",
+          "provider.json": "c2bb72484169c9962bea51b52e2f322a3eb40d78fc04bc1205efcef9ce07e70a",
+          "pod.id": "20e2f79c8c85e344df3f1eed5c1afb422f8baa7bda0770d959fea1bc7a083ec0",
+          "hardstop.log": "4fdf870c0c3afacf786c7a2acee764ead6e623c4241c91f0da68b452a0d8c541",
+          "backstop.log": "5f954be33ddb8ad54b3263f6e9f5b5e5bdcfadb0fc1221b6c0eb1c9836a02edc"
+        }
+      }
+    ],
+    "pod_count_public_exact": 1,
+    "additional_owner_private_financial_allocations": [
+      {
+        "experiment": "E117",
+        "run_id": "mats-i2-e117-final15600-233-20261029",
+        "state": "WORKER_STARTED_ORIGINAL_DEADLINE",
+        "full_all_in_cap_usd": "24.93",
+        "cap_seconds": 15600,
+        "source_sha256": "ceaafd4e914c16c5294ef5b5c22912931646ab33934fead57d5dc244b1ddcef6",
+        "budget_source_sha256": "40d87994a28784967397de7ec5e81fe3bf4ba209529b741b224f3badd40a1793",
+        "evidence": "Original owner-local allocation+budget, supplemental/unpublished; private exact identity not republished",
+        "no_compiler_allocation": true
+      }
+    ],
+    "total_evidenced_active_allocations": 2,
+    "no_accounting_effect": true,
+    "closed_ID_intersection": [],
+    "completeness": "Original Q assignments(provider_createdAt OR pod_created_epoch), providers and guards joined to all later billed closeouts. I2 E117 original private allocation+full cap included, exact identity remains unpublished. No provider query; unreported inventory UNKNOWN."
+  },
+  "judging": {
+    "as_of_utc": "2026-10-29T14:31:24.198587+00:00",
+    "authority_commit": "a2bdecaa81c3c18071246de0f50a2a5b90d8a543",
+    "ceiling_usd": 1000,
+    "warning_usd": 800,
+    "actual_physical_settled_usd": "73.9003744875",
+    "running_bank_open_caps_usd": "0",
+    "admission_usd": "73.9003744875",
+    "warning_triggered": false,
+    "admission_rule": "Actual settled physical spend + residual concrete open caps/reservations of evidenced RUNNING banks only. Request reserves inside bank cap are not additional; completed/unused allocations released.",
+    "running_banks": [],
+    "concrete_bank_reservations": [],
+    "bank_actual_usd": {
+      "other_banks": "16.8541653125",
+      "E96": "10.31937525",
+      "E81": "4.10268275",
+      "E87": "14.50695200",
+      "E100": "2.84297050",
+      "E101": "0.18094775",
+      "E103": "0.21605300",
+      "E82": "1.847960925",
+      "E96_separate": "5.28702475",
+      "E104": "0.15041200",
+      "E98": "0.87133225",
+      "E108": "0.45873675",
+      "E97": "3.24963000",
+      "E109": "0.81444200",
+      "E107": "5.02703450",
+      "E86": "0.38327150",
+      "E99": "5.44761375",
+      "E100e": "0.23245975",
+      "E114": "0.33485275",
+      "E112": "0.20970500",
+      "E85": "0.44720800",
+      "E118": "0.02705700",
+      "E121": "0.08848700"
+    },
+    "bank_physical_settlements": {
+      "other_banks": 16317,
+      "E96": 8624,
+      "E81": 3650,
+      "E87": 14249,
+      "E100": 2512,
+      "E101": 210,
+      "E103": 1536,
+      "E82": 1059,
+      "E96_separate": 4301,
+      "E104": 144,
+      "E98": 702,
+      "E108": 3206,
+      "E97": 2347,
+      "E109": 1458,
+      "E107": 9917,
+      "E86": 255,
+      "E99": 6680,
+      "E100e": 424,
+      "E114": 658,
+      "E112": 840,
+      "E85": 1130,
+      "E118": 252,
+      "E121": 168
+    },
+    "sources": [
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/wmech2_E79/ledger.jsonl",
+        "sha256": "1512b9f1bde13793ccb83e7c867f97485b6a814257dd4cd13be39cf2c062d91b"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/wmech2_E63/ledger.jsonl",
+        "sha256": "1a326c1c7f5d20351f154b8c4c71612a1028643fa8526950e052ac55e62d06be"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/CUSTODY_2026-10-27/LEDGER.jsonl",
+        "sha256": "ce594bc9a7416ea6223f5ead79976b6c2ebd3d9e50c0b74ae89a7da6c762c422"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/e68_3usd/ledger.jsonl",
+        "sha256": "eb46b9960350a5e2a5c33702e13cb1cafd73bcb47bc1d018b38f4592f936dee2"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/wmech2_E72/ledger.jsonl",
+        "sha256": "ddbddd7eb728deed5a4a13f5fc77e6825cd093d725266db672f48c42bfa8f7ea"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/clarification2/terminal/LEDGER.jsonl",
+        "sha256": "4c1a5d32cfe441dcbfc93728347281f5bf19d53072f8d0259f0b68adb0798ee8"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/wmech2_E78/ledger.jsonl",
+        "sha256": "aaa2c718efddbfbccb6dbe24c740b049fb5dae130ce21313a2e5aa1846535564"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/wmech2_E70/ledger.jsonl",
+        "sha256": "76489b4cadfc1200e8b1c89a0113136f2ecaedf04666e427dc1d0859d91ff4cb"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/e80_e80c_50usd/ledger.jsonl",
+        "sha256": "a04a45d2dda72b6eab96f6536aa970b8d9d129fa7479c6d82026d50d37d34ca9"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/e66_3usd/ledger.jsonl",
+        "sha256": "bb7fb6337f826ebbb28c898ccdf5256bb7ac4cd24364b63f7978221267982607"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/shared_10usd_ledger/ledger.jsonl",
+        "sha256": "4c1a5d32cfe441dcbfc93728347281f5bf19d53072f8d0259f0b68adb0798ee8"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/e76_2usd/ledger.jsonl",
+        "sha256": "67e7943722c49e60fe609c4056295a3920c8da780e0fb8f1744723e8dd007116"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/e67_5usd/ledger.jsonl",
+        "sha256": "88b160d73d8cf2cb83a49a3f157716c3c892fbc047d5700b30c8128fd89e099b"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/later_banks_15usd/ledger.jsonl",
+        "sha256": "a9019744644170545c673de8b2764ad77e57b66e2b6f63ec7c26bb3560f4016b"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/e67_5usd/wave_2/ledger.jsonl",
+        "sha256": "14b5ffc42ed5c4cf41deaa8f2e758311b6d6e462b14f456ed73b6954d06d3edf"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/judging/e73_5usd/ledger.jsonl",
+        "sha256": "b1620652414d736a9c9f20d6e1f51fb719118e84c5e941066ed6d177866007e8"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/cache/g_agreement/e96/judging_120/ledger.jsonl",
+        "sha256": "b884d748bce33addce5d31e4e947ff5f8e11861929b654f7112ac080c1301386"
+      },
+      {
+        "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/understand/e13/api/ledger.jsonl",
+        "sha256": "46ac4d3726f7f25de5162908e28d44f2f285512b09c4a98b2dbe7774f1164255"
+      },
+      {
+        "path": "/Users/guivff/Documents/Neel_Exploration/mats-minis/cache/g_agreement/understand/e10/api/ledger.jsonl",
+        "sha256": "c64ad8c3df8ae995968323151469eb76cf64880c86821271e2f52c3854c0e8d2"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e81_judge_cpu_v3/judging/ledger.jsonl",
+        "sha256": "f750973768be1356e05ba738bab3dc40a6cdceb764dae82e347bf4381d88bab6"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E87/ledger/ledger.jsonl",
+        "sha256": "7f4a8ca7b26c72029fe4cef2ebb6e1161d9be2972558d2822c9bab4d588bb936"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E100/ledger/ledger.jsonl",
+        "sha256": "10ada82d91e142138c35310e889fff5ed81f32040cdb9127c473f1475f500dea"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E101/ledger/ledger.jsonl",
+        "sha256": "60d350de7b90fbce200e12ee7819e2e854056afd97a6c537a050a97c5c09a9a1"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E103/ledger/ledger.jsonl",
+        "sha256": "98ef033fb192cd0c2b3fb31553a8301b08fbc7bd5d4176795c8705e7d056e713"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e82_judge_cpu_v1/judging/ledger.jsonl",
+        "sha256": "4e126d1746cd5f3f8c95377678a083508c76a9b458cb7b754f16b8a4fe9b3603"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i4/cache/g_agreement/e96/separate_slot1/ledger/ledger.jsonl",
+        "sha256": "f4317612b2f4f9e7cf0d9f5b42b7c41304b7f81c60ddbee71c6b13503a20f282"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E104/ledger/ledger.jsonl",
+        "sha256": "a4894e10f17837b98de84294fe5bc30683e3fa713c449818923e2d2563084b24"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E98/ledger/ledger.jsonl",
+        "sha256": "318374f35c71992cd5da49f1109cd81eb2a91f7ef800b6b9906d9e3cef44fc67"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E108/ledger/ledger.jsonl",
+        "sha256": "6159c00c5a3a699301decc39a8c7ddcd6b2776979e9861f63c49c5fa84f2bf42"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E97/ledger/ledger.jsonl",
+        "sha256": "c84ba002abb74c17b12d1884bd99c2ca60a67cbe92d2595e80bd7d36c749ac1b"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E109/ledger/ledger.jsonl",
+        "sha256": "8da0ff4f0ca3539c25b856971ce626c379c153c2644673344721b0c3e9b30534"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E107/ledger/ledger.jsonl",
+        "sha256": "d322af851eb04afb0d279b26483fcfed89047fc08226fa8fdb71ff408d95de51"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i2/cache/g_agreement/i2/e86_judge_cpu_v1/judging/ledger.jsonl",
+        "sha256": "bddee783d4671e107036ce690ecb915f6374f5e3632df0eb1be5cd531e62881a"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/e99_40usd/ledger.jsonl",
+        "sha256": "6f8cc04f5cc9f9718b8da7cc1348d799b3450db312c9cf1f57a761c8b54beaff"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E100e/ledger/ledger.jsonl",
+        "sha256": "4631fb56c3e8053a3dd489891af9ad5f7562f4a0e4131849dbadd57fbcd2595f"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E114/ledger/ledger.jsonl",
+        "sha256": "5e46057f7cec90088119e037cd2d38e00137934c7ffc238c4e9a1504d22a6284"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E112/ledger/ledger.jsonl",
+        "sha256": "af17b9f36229fa67f8ba38b0a4c691fcf8586afaea53577df80d956e538d982c"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E85/ledger/ledger.jsonl",
+        "sha256": "dde96a068e0d494e780d5b842597e5202177dee39e13901f34ab8abcf20405f7"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E118/ledger/ledger.jsonl",
+        "sha256": "77a6311720617b7b67b80b46c6c39022468758ddab8ac29c9640c106a195c554"
+      },
+      {
+        "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E121/ledger/ledger.jsonl",
+        "sha256": "ae248f1fd5f0228aa71980394107031ae3f3acf499b10b7b505a31dc8f13a557"
+      }
+    ],
+    "missing_sources": [],
+    "physical_requests": 80641,
+    "historical_nonrunning_unresolved_upper_usd": "3.0138393750",
+    "historical_uncertainty": "Separate nonrunning unresolved, not zero/settled/admitted as runningcaps",
+    "completed_release": {
+      "E96_separate": {
+        "actual": "5.28702475",
+        "open": "0",
+        "unused_released": "44.71297525"
+      },
+      "E96_retained": {
+        "actual": "10.31937525",
+        "open": "0",
+        "unused_released": "89.68062475"
+      },
+      "E98": {
+        "actual": "0.87133225",
+        "open": "0",
+        "unused_released": "9.12866775"
+      },
+      "E86": {
+        "actual": "0.38327150",
+        "open": "0",
+        "unused_released": "3.61672850"
+      },
+      "E87": {
+        "actual": "14.50695200",
+        "open": "0",
+        "unused_released": "55.493048"
+      },
+      "E103": {
+        "actual": "0.21605300",
+        "open": "0",
+        "unused_released": "4.783947"
+      },
+      "E82": {
+        "actual": "1.847960925",
+        "open": "0",
+        "unused_released": "16.152039075"
+      },
+      "E97": {
+        "actual": "3.24963000",
+        "open": "0",
+        "unused_released": "11.75037000"
+      },
+      "E109": {
+        "actual": "0.81444200",
+        "open": "0",
+        "unused_released": "5.18555800",
+        "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E109/BANK_COMPLETE_C.json",
+        "source_sha256": "1faab0cfb41c4e85ab130dde1e75274d4ff9a49d72a3df633d43278fae3550e2"
+      },
+      "E108": {
+        "actual": "0.45873675",
+        "open": "0",
+        "unused_released": "7.54126325",
+        "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E108/BANK_COMPLETE_C.json",
+        "source_sha256": "f747bd561ae7c20b9b0b43448ad5c807234cd2e5f8058b999d9067b0beb052a0"
+      },
+      "E100e": {
+        "actual": "0.23245975",
+        "open": "0",
+        "unused_released": "2.76754025",
+        "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E100e/BANK_COMPLETE_C.json",
+        "source_sha256": "a1cf300372f28731387a6c63916c8a548390b2058e12d8e2332c52b01ed60519"
+      },
+      "E114": {
+        "actual": "0.33485275",
+        "open": "0",
+        "unused_released": "1.66514725",
+        "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E114/BANK_COMPLETE_C.json",
+        "source_sha256": "555aa88e266719c3959870b681d08492fe2d88d59b4bf53415bf97d5219a866c"
+      },
+      "E112": {
+        "actual": "0.20970500",
+        "open": "0",
+        "unused_released": "2.79029500",
+        "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E112/BANK_COMPLETE_C.json",
+        "source_sha256": "a1de4bb9fc9c65b66152a3cbfede08b50866683c9243fdd16bde6a27911921b1"
+      },
+      "E118": {
+        "actual": "0.02705700",
+        "open": "0",
+        "unused_released": "0.97294300",
+        "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E118/BANK_COMPLETE_C.json",
+        "source_sha256": "7593e722942874e38cefd97233c8a85115facd3af991782729a63af01213f1dc"
+      },
+      "E85": {
+        "actual": "0.44720800",
+        "open": "0",
+        "unused_released": "1.55279200",
+        "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E85/BANK_COMPLETE_C.json",
+        "source_sha256": "b942affa0b3422a76bcb8a3f38d1d26032785e80a19cb197d6059ce95af725ac"
+      },
+      "E84": {
+        "actual": "0",
+        "open": "0",
+        "unused_authorization_released": "3",
+        "prior_allocation": "0",
+        "source_commit": "0104f5699",
+        "scope": "readersNE/probegate;textbaselineUNJUDGED/no comparison; privacyguardunchanged"
+      },
+      "E107": {
+        "actual": "5.02703450",
+        "open": "0",
+        "unused_released": "9.97296550",
+        "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-internals-b/cache/g_agreement/understand/funded_queue/E107/BANK_COMPLETE_C.json",
+        "source_sha256": "ce443f8704399a9cf7842e28410e2188f3d1709598261cdcd489a0f1403becea"
+      },
+      "E99_phase1": {
+        "actual": "5.44761375",
+        "open": "0",
+        "unused_released": "144.55238625",
+        "source": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-compiler/results/g_agreement/i2/E99_PHASE1_SEALED232.json",
+        "source_sha256": "f7c4b213d2021da3d3db8c394a16d5c867ac70d48d735fc5e050e0b7c60c6b0c",
+        "full_DAG_complete": false,
+        "continuation_not_allocated": true
+      }
+    },
+    "E108_phase_qualification": "COMPLETE/open0/released",
+    "queued_authorizations_not_running_caps": "E99 conditional continuation not allocated; phase1 residual150 released. E118b SAME lifetime1, other \u00a7231\u2013233 ceilings queued unless original running-bank dispatch. No resets.",
+    "completeness": "PARTIAL all-known-source physical reconciliation; unreported banks/costs UNKNOWN. No provider calls/scientific analysis.",
+    "E99_verified_live": {
+      "state": "PHASE1_COMPLETE_NOT_FULL_DAG",
+      "cap_released": "150lessactual",
+      "ledger": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-blindspot-internals/cache/g_agreement/understand/blind_judge/e99_40usd/ledger.jsonl",
+      "sha256": "6f8cc04f5cc9f9718b8da7cc1348d799b3450db312c9cf1f57a761c8b54beaff",
+      "continuation400_not_allocated": true
+    }
+  },
+  "review_sources": [
+    {
+      "path": "results/g_agreement/reviews/R-2.md",
+      "sha256": "8888dd505d3b2d50d0d1b9ebc2b8bd223828d1d9c909e2fd749ca851612d1b86",
+      "bytes": 168668
+    },
+    {
+      "path": "results/g_agreement/reviews/R-3.md",
+      "sha256": "cdee3cfcb8534fa853193bda9217e03c64097643c5bf20cdc6b977ded541b5d8",
+      "bytes": 32482
+    },
+    {
+      "path": "results/g_agreement/reviews/R-4.md",
+      "sha256": "f4706eff308affacb72426a00e75700bcd3926c88166faf4cac23c2460c0f731",
+      "bytes": 71039
+    },
+    {
+      "path": "results/g_agreement/reviews/R-5.md",
+      "sha256": "c008c5cb24111cec98a1256a9fe10e7ae7b3a027723090dfe585e7faf4ccbb37",
+      "bytes": 151354
+    },
+    {
+      "path": "results/g_agreement/reviews/R-Q.md",
+      "sha256": "e355659068e3cef86545179f3923144d5b94b79a169dc9f11c3a2b70d833232e",
+      "bytes": 506850
+    }
+  ],
+  "publication_time_schedule_addendum": {
+    "authority": "2ebe2213837e4c9b0530a7994414536ab4528b49",
+    "actual_commit_time": "2026-10-29T15:30:44+01:00",
+    "creation_cutoff": "2026-10-30T04:00:00+01:00",
+    "all_pods_stopped_outputs_sealed": "2026-10-30T08:00:00+01:00",
+    "analysis_review_seal": "2026-10-30T10:00:00+01:00 OR2hbeforeNeelmeetingWHICHEVEREARLIER",
+    "meeting_time": "not inferred/UNKNOWN in this source",
+    "deck_freeze": "30minutesafteranalysis_reviewseal",
+    "late_results": "appendix late/unreviewed per ruling",
+    "budget_GPU2500_flag2000_unchanged": true,
+    "judging1000_flag800_unchanged": true,
+    "registered_runs_19CET_and_old23Z_midnight_cutoffs": "SUPERSEDED all by Fri04CET",
+    "H200_order": [
+      "E117",
+      "E126",
+      "E127",
+      "E117c",
+      "E125",
+      "E128"
+    ],
+    "automation": "existingACTIVE halfhour rule has noend; no cadencechange/deletionneeded"
+  },
+  "publication_time_addendum_utc": "2026-10-29T14:33:54.476304+00:00",
+  "new_BRIEF_sha256": "0e070ddb66144459aed177bc1b539de42d84f8fab3624550101ba07d0ace6eff"
+}

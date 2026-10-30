@@ -1,0 +1,12 @@
+{
+  "id": "2f42c0b204e86dbb67a85186",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is asking to extract a specific XML/structured data entry from a dataset, establishing a task-response format.\n\nThe phrase \"entry\" signals a structured data format (likely XML or similar markup), with the user providing a concrete example of what a \"good entry\" looks like, implying a contrast with a \"bad\" or raw example follows.\n\nFinal token `<entry` opens an XML tag, requiring immediate continuation with attributes or closing `>` followed by structured content fields (e.g., `<entry id=\"...\"` or `<entry>` with nested elements like title, description, or dictionary-style content).\n\"entry\" in the context of a dictionary or catalog dataset suggests the next tokens will be a specific record's content.\n\"Here is the example:\n<entry\" \u2014 opening a new XML entry tag, expecting attributes or child elements.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is asking to extract a specific XML/structured data entry from a dataset, establishing a task-response format.\n\nThe phrase \"entry\" signals a structured data format (likely XML or similar markup), with the user providing a concrete example of what a \"good entry\" looks like, implying a contrast with a \"bad\" or raw example follows.\n\nFinal token `<entry` opens an XML tag, requiring immediate continuation with attributes or closing `>` followed by structured content fields (e.g., `<entry id=\"...\"` or `<entry>` with nested elements like title, description, or dictionary-style content).\n\"entry\" in the context of a dictionary or catalog dataset suggests the next tokens will be a specific record's content.\n\"Here is the example:\n<entry\" \u2014 opening a new XML entry tag, expecting attributes or child elements.",
+  "truncated": false
+}

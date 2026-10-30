@@ -1,0 +1,12 @@
+{
+  "id": "1e703e0f8657b484602856ba",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict instruction to classify sentiment as \"Positive\" or \"Negative\" only, establishing a binary answer pattern.\n\nThe example structure mirrors the prompt's template: a sentence is given, followed by a classification question, now requiring the model to output the answer for \"I am delighted to meet you.\"\n\n\"Reply:\" is the final token, acting as a label/field prompt in the structured format, immediately requiring the classification answer (\"Positive\") to follow.\n\"Given the following sentence, determine the sentiment label (Positive or Negative) only.\nSentence: 'I am delighted to meet you.'\nExample: [sentence]\nQuestion: What is the sentiment label?\nReply:\" \u2014 the final \"Reply:\" is a prompt field expecting the direct answer \"Positive\" or similar short response on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict instruction to classify sentiment as \"Positive\" or \"Negative\" only, establishing a binary answer pattern.\n\nThe example structure mirrors the prompt's template: a sentence is given, followed by a classification question, now requiring the model to output the answer for \"I am delighted to meet you.\"\n\n\"Reply:\" is the final token, acting as a label/field prompt in the structured format, immediately requiring the classification answer (\"Positive\") to follow.\n\"Given the following sentence, determine the sentiment label (Positive or Negative) only.\nSentence: 'I am delighted to meet you.'\nExample: [sentence]\nQuestion: What is the sentiment label?\nReply:\" \u2014 the final \"Reply:\" is a prompt field expecting the direct answer \"Positive\" or similar short response on the next line.",
+  "truncated": false
+}

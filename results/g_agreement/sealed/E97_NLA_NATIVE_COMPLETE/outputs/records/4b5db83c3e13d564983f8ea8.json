@@ -1,0 +1,12 @@
+{
+  "id": "4b5db83c3e13d564983f8ea8",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict template: \"Given the sentence... what is the sentiment label?\" establishes a pattern requiring a direct answer.\n\nThe instruction explicitly states the answer must be one of \"positive,\" \"negative,\" or \"neutral,\" constraining the response to a single word matching the example format.\n\n\"Reply:\" is the final prompt label in the structured example, immediately requiring the model's answer (the sentiment label \"positive\") to follow.\n\"Example sentence: 'The movie is a masterpiece.'\nGiven the sentence: 'The movie is a masterpiece.'\nSentiment label: ?\nReply:\" \u2014 this closing \"Reply:\" is a prompt field expecting the direct answer, likely \"positive\" or a short label on the next line.\n\"Reply:\" is the final token, a label introducing the model's response in this structured format.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict template: \"Given the sentence... what is the sentiment label?\" establishes a pattern requiring a direct answer.\n\nThe instruction explicitly states the answer must be one of \"positive,\" \"negative,\" or \"neutral,\" constraining the response to a single word matching the example format.\n\n\"Reply:\" is the final prompt label in the structured example, immediately requiring the model's answer (the sentiment label \"positive\") to follow.\n\"Example sentence: 'The movie is a masterpiece.'\nGiven the sentence: 'The movie is a masterpiece.'\nSentiment label: ?\nReply:\" \u2014 this closing \"Reply:\" is a prompt field expecting the direct answer, likely \"positive\" or a short label on the next line.\n\"Reply:\" is the final token, a label introducing the model's response in this structured format.",
+  "truncated": false
+}

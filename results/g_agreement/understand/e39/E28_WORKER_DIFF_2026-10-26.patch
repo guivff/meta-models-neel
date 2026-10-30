@@ -1,0 +1,84 @@
+--- e28/worker.py
++++ e39/worker.py
+@@ -1 +1 @@
+-"""E28 full-grid training worker. Run from repository root; all outputs go to cache/."""
++"""E39 full-grid training worker. Run from repository root; all outputs go to cache/."""
+@@ -35 +35 @@
+-        raise TimeoutError('E28 deadline reached; retain partials, no restart')
++        raise TimeoutError('E39 deadline reached; retain partials, no restart')
+@@ -41 +41 @@
+-        raise TimeoutError('E28 nonresetting wall clock expired')
++        raise TimeoutError('E39 nonresetting wall clock expired')
+@@ -129,0 +130,16 @@
++def audit_items(reader, kind, records):
++    """§139: lengths, padding and frozen environment for each executed item."""
++    context = getattr(reader, 'audit_context', None)
++    if context is None:
++        return
++    path, metadata = context
++    with path.open('a') as f:
++        for record in records:
++            f.write(json.dumps({**metadata, 'kind': kind, 'padding_side': 'right', **record}, sort_keys=True)+'\n')
++
++
++def configure_audit(reader, out, assignment, **context):
++    reader.audit_context = (out / 'ITEM_EXECUTION_AUDIT.jsonl', {
++        'environment_sha256': assignment['training_environment_sha256'], **context})
++
++
+@@ -145,0 +162,3 @@
++    audit_items(reader, 'training', [{'id': b['id'], 'input_length': len(head)+len(tail),
++        'padding_tokens': n-len(head)-len(tail), 'batch_size': len(batch), 'phrasing': b['phrasing']}
++        for b, tail in zip(batch, targets)])
+@@ -175,0 +195,8 @@
++    head, _ = reader.carrier(44)
++    for phrasing, pair in enumerate(spec['olens']):
++        lengths = [len(reader.tok.encode(v, add_special_tokens=False)) for v in pair]
++        audit_items(reader, 'asked', [{'id': test[i]['id'], 'phrasing': phrasing, 'candidate': side,
++            'input_length': len(head)+length, 'padding_tokens': max(lengths)-length,
++            'activation_batch_size': min(16, len(indices)-(j//16)*16),
++            'forward_batch_size': 2*min(16, len(indices)-(j//16)*16)}
++            for j, i in enumerate(indices) for side, length in enumerate(lengths)])
+@@ -192,0 +220,3 @@
++            audit_items(reader, 'free', [{'id': test[i]['id'], 'input_length': len(head),
++                'padding_tokens': 0, 'batch_size': len(indices[s:s+8]), 'max_new_tokens': 128,
++                'min_new_tokens': 128 if force_cap else 0} for i in indices[s:s+8]])
+@@ -227,0 +258,5 @@
++    for items, acts in ((dev, devacts), (test, testacts)):
++        if (len(items) != 1512 or len({r['id'] for r in items}) != 1512
++                or acts.shape != (1512, 5120) or not np.isfinite(acts).all()
++                or any(sum(r['feature']==row for r in items)!=84 for row in C.ROWS)):
++            raise ValueError('complete finite 18-row v2 input required')
+@@ -251 +286 @@
+-            or reference.get('original_e28_input_seal_sha256') != assignment['input_seal_sha256']):
++            or reference.get('original_e28_input_seal_sha256') != C.read(C.HERE / 'PARITY_PREPARATION_2026-10-25.json')['original_e28_input_seal_sha256']):
+@@ -329,0 +365 @@
++            configure_audit(reader, out, assignment, phase='parity', arm='L', step=0)
+@@ -342,0 +379 @@
++            configure_audit(reader, out, assignment, phase='warmup', arm=family, row=warm_row)
+@@ -372,2 +409,2 @@
+-        remaining = sum(400 * timings['B' if arm == 'B' else 'L']['train_step_s']
+-                        + 6 * timings['B' if arm == 'B' else 'L']['asked_84_s']
++        remaining = sum(800 * timings['B' if arm == 'B' else 'L']['train_step_s']
++                        + 7 * timings['B' if arm == 'B' else 'L']['asked_84_s']
+@@ -425 +462 @@
+-                for step in range(401):
++                for step in range(801):
+@@ -426,0 +464 @@
++                    configure_audit(reader, out, assignment, phase='production', arm=arm, row=row, step=step)
+@@ -431 +469 @@
+-                    if step < 400:
++                    if step < 800:
+@@ -435 +473 @@
+-                C.jsonl(runout / 'free.400.jsonl', free(reader, test, testacts, row,
++                C.jsonl(runout / 'free.800.jsonl', free(reader, test, testacts, row,
+@@ -437 +475 @@
+-                torch.save({n: p.detach().cpu() for n, p in model.named_parameters() if p.requires_grad}, runout / 'adapter.400.pt')
++                torch.save({n: p.detach().cpu() for n, p in model.named_parameters() if p.requires_grad}, runout / 'adapter.800.pt')
+@@ -473 +511,2 @@
+-                'PARITY_SCORES.jsonl': 'parity_scores_sha256'}.items() if (out / name).is_file()}})
++                'PARITY_SCORES.jsonl': 'parity_scores_sha256',
++                'ITEM_EXECUTION_AUDIT.jsonl': 'item_execution_audit_sha256'}.items() if (out / name).is_file()}})
+@@ -481 +520 @@
+-        prep.add_argument('--' + key, type=Path, required=True)
++        prep.add_argument('--' + key, type=Path, required=True, **({'nargs': '+'} if key == 'capture' else {}))

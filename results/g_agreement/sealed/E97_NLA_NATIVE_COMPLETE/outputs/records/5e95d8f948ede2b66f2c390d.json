@@ -1,0 +1,12 @@
+{
+  "id": "5e95d8f948ede2b66f2c390d",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Instruction,\" \"Example,\" \"Task,\" and \"Answer\" fields, requiring the model to generate a response following the given rule.\n\nThe rule explicitly states \"do not use technical jargon,\" so the answer must demonstrate plain-language writing about AI, directly mirroring the instruction's constraint.\n\n\"Task: Write an article about [topic] using [style].\nQuestion: Should the article use technical jargon?\nAnswer:\" \u2014 this final label demands the model's direct response, likely a short declarative sentence restating the instruction's answer or demonstrating the correct approach.\n\"Answer:\" is the final token, acting as a prompt field delimiter in a few-shot/chain-of-thought format, immediately requiring the model's generated response text about the article's style.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Instruction,\" \"Example,\" \"Task,\" and \"Answer\" fields, requiring the model to generate a response following the given rule.\n\nThe rule explicitly states \"do not use technical jargon,\" so the answer must demonstrate plain-language writing about AI, directly mirroring the instruction's constraint.\n\n\"Task: Write an article about [topic] using [style].\nQuestion: Should the article use technical jargon?\nAnswer:\" \u2014 this final label demands the model's direct response, likely a short declarative sentence restating the instruction's answer or demonstrating the correct approach.\n\"Answer:\" is the final token, acting as a prompt field delimiter in a few-shot/chain-of-thought format, immediately requiring the model's generated response text about the article's style.",
+  "truncated": false
+}

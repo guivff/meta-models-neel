@@ -1,0 +1,12 @@
+{
+  "id": "de352cef8073e53c13e92c65",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is providing a template/example format for data extraction or translation tasks, establishing a structured workflow.\n\nThe text signals a transition from instructions to actual data, with \"Here is an entry:\" introducing a specific XML-like `<entry>` block, implying a parallel structured example follows.\n\nFinal token `<entry` opens a new XML tag mirroring the previous `<entry>...</entry>` pattern, requiring an immediate closing `>` and then content representing a new dictionary/phrase entry.\n\"Here is the previous entry:\n<entry>\n...\nHere is the next entry:\n<entry\" \u2014 the repetition pattern demands the next token continues the tag, likely with an attribute or closing `>`, followed by structured content like a question, answer, or definition block.\nThe model expects a new `<entry` format with consistent XML structure.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is providing a template/example format for data extraction or translation tasks, establishing a structured workflow.\n\nThe text signals a transition from instructions to actual data, with \"Here is an entry:\" introducing a specific XML-like `<entry>` block, implying a parallel structured example follows.\n\nFinal token `<entry` opens a new XML tag mirroring the previous `<entry>...</entry>` pattern, requiring an immediate closing `>` and then content representing a new dictionary/phrase entry.\n\"Here is the previous entry:\n<entry>\n...\nHere is the next entry:\n<entry\" \u2014 the repetition pattern demands the next token continues the tag, likely with an attribute or closing `>`, followed by structured content like a question, answer, or definition block.\nThe model expects a new `<entry` format with consistent XML structure.",
+  "truncated": false
+}

@@ -1,0 +1,8 @@
+
+## 2026-10-27T06:31:20.345469+01:00 — PROVISIONAL, pending coordinator ratification
+
+Standing-order implementation decision, before the remaining 472 readouts receive any judge response: continue only previously unsent D5 requests after isolated content/evidence validation failures. The registered unit is each native readout; one failed batch need not suppress unrelated readouts. Reuse exact frozen request bytes, rubric, model/provider, batching, source packet and shared $10 ledger. Preserve every existing response and failure. No retry of any reserved/sent request, no evidence repair, no substitute judge, no selective dropping or self-coding. Budget, route/privacy, and duplicate-send guards remain fail-closed. Keep all invalid batches missing; the complete valid-grid requirement still prevents unblinding and final share analysis. This changes dispatch behavior only, not a category, estimator, rule, threshold, arm, source inventory or analysis requirement. Record a continuation seal separately from the original stopped attempt.
+
+## 2026-10-27T07:25:11.648189+01:00 — PROVISIONAL, pending coordinator ratification
+
+Before additional judge outcomes: apply the user's explicit authorization as the controlling transport specification. Hard cap becomes USD5 across D5 E49 and E54, including USD0.00570975 already settled; later banks are excluded. Transmit opaque ID and readout only with the frozen rubric; omit property/value metadata fields. Previously sent 32 readouts are identified by their opaque IDs and never resent despite the narrower future request schema. Preserve their old response/validation records. This is authorization-driven payload minimization, not a category or scoring-rule change.

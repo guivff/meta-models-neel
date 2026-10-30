@@ -1,0 +1,12 @@
+{
+  "id": "040c4741f3a87ff21dc7c10a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict pattern: example given (\"The sky is blue. Reply: Positive\"), now applying same classification task to a new sentence.\n\nThe instruction explicitly defines two possible replies (\"Positive\" or \"Negative\") for the sentiment classification task, constraining the answer to one of these exact labels.\n\n\"Reply:\" is the final prompt label in the structured format, immediately requiring the model's classification answer (e.g., \"Negative\" or \"Positive\") for the sentence \"The United States is a country.\"\n\"Given sentence: 'The United States is a country.'\nInstruction: Provide the sentiment label...\nGiven sentence: 'The United States is a country.'\nReply:\" \u2014 the final token \"Reply:\" is a prompt field awaiting the direct answer, expecting a short response on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict pattern: example given (\"The sky is blue. Reply: Positive\"), now applying same classification task to a new sentence.\n\nThe instruction explicitly defines two possible replies (\"Positive\" or \"Negative\") for the sentiment classification task, constraining the answer to one of these exact labels.\n\n\"Reply:\" is the final prompt label in the structured format, immediately requiring the model's classification answer (e.g., \"Negative\" or \"Positive\") for the sentence \"The United States is a country.\"\n\"Given sentence: 'The United States is a country.'\nInstruction: Provide the sentiment label...\nGiven sentence: 'The United States is a country.'\nReply:\" \u2014 the final token \"Reply:\" is a prompt field awaiting the direct answer, expecting a short response on the next line.",
+  "truncated": false
+}

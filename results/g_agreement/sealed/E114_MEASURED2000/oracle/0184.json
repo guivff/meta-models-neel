@@ -1,0 +1,66 @@
+[
+  {
+    "id": "9683646830ae6beb4b2bd47c",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [5\n- 2, 3, 4], [5\n- 2, 3, 4], [5, 6, 7]],  # Nested list with inner lists of varying lengths\n- [5, 10], [1, 2, 3]]  # Nested structure with inner lists of varying lengths\n```\n\n###",
+      "text": "- 2, 3], [5\n- 2, 3, 4], [5\n- 2, 3, 4], [5, 6, 7]],  # Nested list with inner lists of varying lengths\n- [5, 10], [1, 2, 3]]  # Nested structure with inner lists of varying lengths\n```\n\n###"
+    }
+  },
+  {
+    "id": "cc2402703befab54bfe65610",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [5\n- 2, 3], [4, [5\n- 3, 5, 8], [1, 2, 3, 5\n- [5, 10], [2, 3, 4]],  # Nested list with integers and sub-lists\n    [5,",
+      "text": "- 2, 3], [5\n- 2, 3], [4, [5\n- 3, 5, 8], [1, 2, 3, 5\n- [5, 10], [2, 3, 4]],  # Nested list with integers and sub-lists\n    [5,"
+    }
+  },
+  {
+    "id": "de79315c5be8e9e4266eb642",
+    "output": {
+      "malformed": false,
+      "raw": "- 5}, {3, 4} }, {5\n- 10, 15} }, { {2, 5\n- 2, 3}, {4, 5} } } } // Level 1: List of lists of numbers\n- 5, 6}, {7, 8} } } // Level 1: List of lists of numbers } } // Level 2: List of lists of",
+      "text": "- 5}, {3, 4} }, {5\n- 10, 15} }, { {2, 5\n- 2, 3}, {4, 5} } } } // Level 1: List of lists of numbers\n- 5, 6}, {7, 8} } } // Level 1: List of lists of numbers } } // Level 2: List of lists of"
+    }
+  },
+  {
+    "id": "af7e4be10dd88913b90b7f84",
+    "output": {
+      "malformed": false,
+      "raw": "- 2}, {3, 5\n- 5}, {6, 7} }, {1, 2, 3, 5\n- 10}, {2, 3} }` | Inner Level 1 | `{5,\n- 10}, {2, 3} }` | Inner function call with parameters `{5, 10}` | `{5,",
+      "text": "- 2}, {3, 5\n- 5}, {6, 7} }, {1, 2, 3, 5\n- 10}, {2, 3} }` | Inner Level 1 | `{5,\n- 10}, {2, 3} }` | Inner function call with parameters `{5, 10}` | `{5,"
+    }
+  },
+  {
+    "id": "bd81c22b8b3e662394918c07",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3, 4], [6\n- 2, 3, 5], [6\n- 5, 8, 10],  # \u5b50\u6570\u7ec41: [6,\n- [2, 3], [4, 5, 6], [7, 8, 9]],  # \u5d4c\u5957\u5217\u8868\uff0c\u5c42\u7ea72\n- 6, 7, 8, 9], \"children\": [6,",
+      "text": "- 2, 3, 4], [6\n- 2, 3, 5], [6\n- 5, 8, 10],  # \u5b50\u6570\u7ec41: [6,\n- [2, 3], [4, 5, 6], [7, 8, 9]],  # \u5d4c\u5957\u5217\u8868\uff0c\u5c42\u7ea72\n- 6, 7, 8, 9], \"children\": [6,"
+    }
+  },
+  {
+    "id": "e09898c6ca684fba3c8bb0e2",
+    "output": {
+      "malformed": false,
+      "raw": "- 7, 8], [6\n- 2, 3], [6\n- 5, 8, 10], [6, 7, 8]],  # Nested list with integers\n- [6, 7], [1, 2, 3]],  # Nested list with integers\n    \"level2\": [6,",
+      "text": "- 7, 8], [6\n- 2, 3], [6\n- 5, 8, 10], [6, 7, 8]],  # Nested list with integers\n- [6, 7], [1, 2, 3]],  # Nested list with integers\n    \"level2\": [6,"
+    }
+  },
+  {
+    "id": "bc55328901e5721c17fb43c4",
+    "output": {
+      "malformed": false,
+      "raw": "- 12}, {6, 13}}, {5,\n- 10}, {2, 11}}], (* Level 1: Inner *) {6,\n- 12}, {3, 4} }, {5, 6} } (* Level 1: Inner *) }\n- 7, 8}, {5, 6} } (* Innermost layer *) } (* Level 1:",
+      "text": "- 12}, {6, 13}}, {5,\n- 10}, {2, 11}}], (* Level 1: Inner *) {6,\n- 12}, {3, 4} }, {5, 6} } (* Level 1: Inner *) }\n- 7, 8}, {5, 6} } (* Innermost layer *) } (* Level 1:"
+    }
+  },
+  {
+    "id": "61f102e5ca2e9090b4a946ac",
+    "output": {
+      "malformed": false,
+      "raw": "- 10}, {6, 12}}, {2,\n- 12}, {3, 10} }, {1, 2, 3, 4\n- 2}, {5, 3} }` (a subgraph), `2 -> {6, 7\n- 10}, {2, 11} }` (a nested list representing a graph or state), and `1 -> {6,",
+      "text": "- 10}, {6, 12}}, {2,\n- 12}, {3, 10} }, {1, 2, 3, 4\n- 2}, {5, 3} }` (a subgraph), `2 -> {6, 7\n- 10}, {2, 11} }` (a nested list representing a graph or state), and `1 -> {6,"
+    }
+  }
+]

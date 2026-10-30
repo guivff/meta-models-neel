@@ -1,0 +1,9 @@
+{
+  "id": "23b84c1bcb1155331c862e3b",
+  "malformed": false,
+  "raw": "- =true; // Note: `flag` appears in the middle. We need to ignore it.\n- =true;` (where `?flag\n- =true;`  *(Note: `flag` appears in the middle, but we ignore it per your rule)* | `/api/v1?flag\n- =true&other=stuff` (where `flag` is present but we ignore it per your rule). We need to extract `?flag",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =true; // Note: `flag` appears in the middle. We need to ignore it.\n- =true;` (where `?flag\n- =true;`  *(Note: `flag` appears in the middle, but we ignore it per your rule)* | `/api/v1?flag\n- =true&other=stuff` (where `flag` is present but we ignore it per your rule). We need to extract `?flag"
+}

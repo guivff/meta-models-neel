@@ -1,0 +1,79 @@
+{
+  "attempts": [
+    {
+      "pod_id": "nsoua01ri6bc1s",
+      "provider_gpu_seconds": 875.2,
+      "terminated": true
+    },
+    {
+      "pod_id": "4f7kjyv6zhylxo",
+      "provider_gpu_seconds": 251,
+      "terminated": true
+    },
+    {
+      "pod_id": "tb5zlwgd8692w1",
+      "provider_gpu_seconds": 236.8,
+      "terminated": true
+    }
+  ],
+  "authority": "Direct Guiv environment fix; \u00a7136 single operational rebuild within unchanged5GPUhcap",
+  "booked_prior_gpu_seconds": 1363,
+  "date": "2026-10-25",
+  "immutable_evidence": [
+    {
+      "commit": "1313775f4891871247bcdbe7198a26a486e4d629",
+      "file_sha256_at_commit": "0dbda74d8f0a4d4b418edff1b5aa672ed4edc26cdca256dda9710f62649dee73",
+      "matching_lines": [
+        {
+          "line": 2003,
+          "sha256_excluding_newline": "5e04bd98d86319cd5b9bfb6c2fb99cef63108f61f0f44d7a160330e9465e9d82",
+          "text": "{\"timestamp\": \"2026-10-25T13:12:00Z\", \"event\": \"pod_billed\", \"experiment\": \"\u00a7122 E28 light fine-tuning (full arms, \u00a7130; \u00a7133 01c5775e) slot 0 \u2014 INCOMPLETE: worker FAILED in the first warm-up training step (fla chunk_bwd_dqkwg: RuntimeError requiring Triton >= 3.4 in /weights/venv-kernels) before any FORECAST.json; 0/7 runs, 0 records; no admission; no retry\", \"pod_id\": \"nsoua01ri6bc1s\", \"gpu\": \"NVIDIA H200\", \"gpu_hours\": 0.0131, \"billing\": \"47.3 s science (first warmed forward 12:56:33.6Z to worker exit; RUN_RECEIPT gpu_seconds_provider 280.1 s) of 875.2 s total custody (12:52:40.8Z creation to 13:07:16Z integrator exact-ID stop); charged to E28's 18,000 s\", \"booked_by\": \"integrator\"}"
+        },
+        {
+          "line": 2004,
+          "sha256_excluding_newline": "c492b7e4ce9d62380f4c80049cbdcd3f53c403edfff7121a2b19c4e09a4f6050",
+          "text": "{\"timestamp\": \"2026-10-25T13:12:00Z\", \"event\": \"pod_billed\", \"experiment\": \"\u00a7122 shared staging: E28 slot 0 non-science custody (upload, setup 232.8 s, idle after the worker failure until the coordinated stop, close-out)\", \"pod_id\": \"nsoua01ri6bc1s\", \"gpu\": \"NVIDIA H200\", \"gpu_hours\": 0.23, \"billing\": \"827.9 s non-science of 875.2 s total custody; not additive with the science row\", \"booked_by\": \"integrator\"}"
+        },
+        {
+          "line": 2005,
+          "sha256_excluding_newline": "92a8b37709aec0c9603ce81edbfe38974463709204411e9138cd489feac1897d",
+          "text": "{\"timestamp\": \"2026-10-25T13:12:00Z\", \"event\": \"pod_billed\", \"experiment\": \"\u00a7122 E28 slot 1 deploy attempt 1 \u2014 setup-only: SSH runtime never appeared within the address step's 4-min wait, so the address step stopped it by exact id and deploy_vol.sh retried (-> tb5zlwgd8692w1); no guards, nothing staged\", \"pod_id\": \"4f7kjyv6zhylxo\", \"gpu\": \"NVIDIA H200\", \"gpu_hours\": 0.0697, \"billing\": \"251.0 s custody (12:58:06.0Z creation to 13:02:17Z exact-ID stop); 0 s science; charged to E28's 18,000 s\", \"booked_by\": \"integrator\"}"
+        },
+        {
+          "line": 2006,
+          "sha256_excluding_newline": "2a35edbe3ad159378e889d5c500080127a8e556fda57d0cfdabd778bf5b55184",
+          "text": "{\"timestamp\": \"2026-10-25T13:12:00Z\", \"event\": \"pod_billed\", \"experiment\": \"\u00a7122 E28 slot 1 (attempt 2) \u2014 setup-only: worker TERMed by the integrator during its first model load (no science) after slot 0 failed, since full-grid admission was impossible and no retry is authorised\", \"pod_id\": \"tb5zlwgd8692w1\", \"gpu\": \"NVIDIA H200\", \"gpu_hours\": 0.0658, \"billing\": \"236.8 s custody (13:03:19.2Z creation to 13:07:16Z integrator exact-ID stop); 0 s science; charged to E28's 18,000 s\", \"booked_by\": \"integrator\"}"
+        }
+      ],
+      "repository_path": "results/g_agreement/compute.jsonl"
+    },
+    {
+      "commit": "1313775f4891871247bcdbe7198a26a486e4d629",
+      "file_sha256_at_commit": "fc45f6bceb30a97dcb849bbf8661c654814e5aafe9ff06bbf4994544fc730c75",
+      "matching_lines": [
+        {
+          "line": 738,
+          "sha256_excluding_newline": "b6dee9ff0b5918f97771b6727508a2cf823cd2a898ac8c70d8f01967d39ed6f1",
+          "text": "| nsoua01ri6bc1s | W-lens E28 \u00a7122 slot 0 (full arms; \u00a7133) (integrator-operated) | H200 EUR-IS-4 vol 5on6935gne | created 12:52:40.8Z; guards + auto_hold, hard stop 15:22:42Z (creation + 9,000 s); /weights/venv-kernels; pins 30/30, input allowlist, no private files; setup 232.8 s; **FAILED** in the first warm-up training step (fla backward requires Triton >= 3.4) before FORECAST.json; verified pull 7 files; exact-ID stop 13:07:16Z | 875.2 s custody, 47.3 s science, $1.29 |"
+        },
+        {
+          "line": 739,
+          "sha256_excluding_newline": "426578aa557618785a6bd1efd3b32074e2a4d43010c060bd34ba2488f318fb6b",
+          "text": "| 4f7kjyv6zhylxo | W-lens E28 \u00a7122 slot 1, deploy attempt 1 (integrator-operated) | H200 EUR-IS-4 vol 5on6935gne | created 12:58:06.0Z; SSH runtime never appeared within the address step's 4-min wait; stopped by exact id by the address step at 13:02:17Z; deploy_vol.sh retried (-> tb5zlwgd8692w1); no guards, nothing staged | 251.0 s custody, setup only, $0.37 |"
+        },
+        {
+          "line": 740,
+          "sha256_excluding_newline": "a42dd30448093ef2ee068392c411a09677c39094f6d57aae0b7f763e94d6ec63",
+          "text": "| tb5zlwgd8692w1 | W-lens E28 \u00a7122 slot 1 (integrator-operated) | H200 EUR-IS-4 vol 5on6935gne | created 13:03:19.2Z (3 s after E32's gdkwe0hjprv8ac: 5-min stagger breach); guards + auto_hold, hard stop 15:33:21Z; setup passed; worker TERMed during its first model load after slot 0 failed (no science); verified pull 6 files; exact-ID stop 13:07:16Z | 236.8 s custody, setup only, $0.35 |"
+        }
+      ],
+      "repository_path": "results/g_agreement/r/PODS.md"
+    }
+  ],
+  "remaining_provider_gpu_seconds": 16637,
+  "reserved_prior_gpu_seconds": 1363,
+  "schema": "E28_PRIOR_ATTEMPT_ACCOUNTING_v1",
+  "status": "AUDITED_CLOSED_OPERATIONAL_FAILURES_NO_PRODUCTION",
+  "total_cap_gpu_seconds": 18000,
+  "worker_elapsed_is_not_final_custody": true
+}

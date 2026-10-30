@@ -1,0 +1,12 @@
+{
+  "id": "d08de99576f9ce72bd2e6c95",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nStructured data format with labeled fields (\"Record start. Event:\", \"Record end.\") signals a prompt template or dataset entry pattern, expecting a response to the event description.\n\nThe instruction \"Predict the next event\" establishes a task framing, where the model must generate a continuation or prediction about the described scenario (a man's hand touching a woman's hand).\n\n\"Record complete.\" is a closing delimiter phrase, mirroring the opening \"Record start.\" \u2014 it signals the end of the input block, so the next token likely begins a new section, response, or closing instruction.\n\"Use this memory block: [text]. Record event: A man's hand touched a woman's hand.\nRecord complete.\" \u2014 the final phrase \"Record complete.\" closes the instruction block, suggesting a period or newline follows, ending the prompt.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Structured data format with labeled fields (\"Record start. Event:\", \"Record end.\") signals a prompt template or dataset entry pattern, expecting a response to the event description.\n\nThe instruction \"Predict the next event\" establishes a task framing, where the model must generate a continuation or prediction about the described scenario (a man's hand touching a woman's hand).\n\n\"Record complete.\" is a closing delimiter phrase, mirroring the opening \"Record start.\" \u2014 it signals the end of the input block, so the next token likely begins a new section, response, or closing instruction.\n\"Use this memory block: [text]. Record event: A man's hand touched a woman's hand.\nRecord complete.\" \u2014 the final phrase \"Record complete.\" closes the instruction block, suggesting a period or newline follows, ending the prompt.",
+  "truncated": false
+}

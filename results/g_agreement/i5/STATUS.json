@@ -1,0 +1,76 @@
+{
+  "track": "F",
+  "owner": "I-5",
+  "timestamp": "2026-10-28T10:37:32.777787+00:00",
+  "worktree": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i5",
+  "experiments": {
+    "E97": {
+      "state": "queued",
+      "blockers": [
+        "W-text committed 40-row generator and bank; capture preflight; pre-reader W-lens forecast"
+      ]
+    },
+    "E79_extension": {
+      "state": "queued",
+      "blockers": [
+        "owner extension vectors and reused runner binding",
+        "fresh shared spend admission"
+      ],
+      "main_completion_seal": "12467ca51c005601f7b78550cb57236f04ab2470f84a9a26ecb3dfb5094bfd94",
+      "arm_b_extension": "NOT RUN; no frozen E59 candidates, W-text finding"
+    },
+    "E98": {
+      "state": "cpu_ready_launch_held",
+      "started_at": "2026-10-28T10:19:20Z",
+      "deadline": "2026-10-28T10:49:20Z",
+      "candidate": "Qwen/Qwen3-4B with andyx10 Oracle and neuronpedia J-lens",
+      "blockers": [
+        "fresh global spend reconciliation",
+        "provider stop/retrieval custody binding",
+        "W-lens forecast after capture"
+      ],
+      "asset_card": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-i5/results/g_agreement/understand/e98/ASSET_CARD.json",
+      "port_capture_items": 4368,
+      "port_test_items": 2184,
+      "dropped_rows": 0
+    },
+    "E75_pooled": {
+      "state": "queued",
+      "blockers": [
+        "E97 judged; unchanged script"
+      ]
+    }
+  },
+  "spend": {
+    "gpu_hours_actual": 0,
+    "gpu_usd_actual": 0,
+    "judge_usd_actual": 0,
+    "gpu_usd_reserved": 0,
+    "judge_usd_reserved": 0,
+    "uncertain_charges": 0,
+    "scope": "I-5 only; excludes Track Q main E79 and shared assets; no allocation or paid call made"
+  },
+  "review": {
+    "reviewer": "R-5",
+    "state": "asset_gate_MET_science_PENDING",
+    "evidence": [
+      "results/g_agreement/reviews/R-5.md"
+    ]
+  },
+  "limits": {
+    "gpu_hours_estimates": {
+      "E97": 3,
+      "E79_extension": 2,
+      "E98_max": 10
+    },
+    "judge_usd_caps": {
+      "E97": 15,
+      "E79_extension": 5,
+      "E98": 10
+    },
+    "global_gpu_usd_cap": 1500,
+    "global_judge_usd_cap": 500,
+    "launch_deadline": "2026-10-30T00:00:00+01:00",
+    "seal_deadline": "2026-10-30T06:00:00+01:00"
+  }
+}

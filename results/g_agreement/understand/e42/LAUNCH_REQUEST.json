@@ -1,0 +1,40 @@
+{
+  "GPU_used_by_worker_chat": 0,
+  "aggregate_cap_seconds": 1800,
+  "experiment": "E42",
+  "items": 3444,
+  "plan_sha256": "1ec7e26ffd17ece86c37f51b374645072e9eb4cf8080deb94313d57580d2a4db",
+  "preferred_gpu": "H200",
+  "private_labels_on_gpu": false,
+  "required_assignment": [
+    "issuer=integrator",
+    "experiment=E42",
+    "pod_id=RUNPOD_POD_ID",
+    "plan_sha256",
+    "assets_manifest_sha256",
+    "previous_gpu_seconds=0",
+    "external_hardstop_verified=true",
+    "state_functions_committed=true",
+    "source_published=true",
+    "provider_created_epoch",
+    "deadline_epoch <= provider_created_epoch + 1800"
+  ],
+  "stage": "results/g_agreement/understand/e42/cache/prepared",
+  "state_seal_sha256": "1b21560490aa83834ab56516a9dfc5385761ccfaba2128f815ee50274e5de9f3",
+  "status": "READY_FOR_INTEGRATOR_ASSIGNMENT",
+  "tokens_per_item": 32,
+  "worker_argv": [
+    "python",
+    "results/g_agreement/understand/e42/worker42.py",
+    "--plan",
+    "results/g_agreement/understand/e42/RUN_PLAN.json",
+    "--stage",
+    "STAGED_PREFIX_DIRECTORY",
+    "--assignment",
+    "INTEGRATOR_ASSIGNMENT.json",
+    "--assets",
+    "VERIFIED_BASE_ASSETS.json",
+    "--out",
+    "NEW_OUTPUT_DIRECTORY"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "admission_uses_stricter_1500_gate": true,
+  "authorization_commit": "7a3545305c906d516404a7a83f2c868b1547d9a0",
+  "ceiling_hours": 4,
+  "components_total": 1453.8699999999997,
+  "conservative_shared_components": {
+    "I2_E99_all4_fullcaps": 58.02,
+    "I2_closed_window_upper": 190.82,
+    "I3": 0,
+    "I4_full_contingency_in_place": 160.55,
+    "I5_closed_once": 10.87,
+    "Q_conservative_extras": 108,
+    "Q_entire_authorized_envelope": 900,
+    "whole_account_storage_3day_upper": 25.61
+  },
+  "cumulative_hours_upper": 3.163637162182066,
+  "experiment": "E103",
+  "global_authorized_ceiling_usd": 2500,
+  "judge_reservation": 0,
+  "live": [
+    {
+      "costPerHr": 5.29,
+      "createdAt": "2026-10-28T20:55:06.366Z",
+      "desiredStatus": "RUNNING",
+      "id": "07m2unpdd1vuxs",
+      "name": "e99-core-three-read-i2-20261028-s1-a1"
+    },
+    {
+      "costPerHr": 5.29,
+      "createdAt": "2026-10-28T21:47:24.420Z",
+      "desiredStatus": "RUNNING",
+      "id": "98dgvfne9126tt",
+      "name": "mats-minis-r-e101-language_plan-test"
+    },
+    {
+      "costPerHr": 5.29,
+      "createdAt": "2026-10-28T20:48:52.852Z",
+      "desiredStatus": "RUNNING",
+      "id": "g0946mwua0gv1d",
+      "name": "e99-core-three-read-i2-20261028-s0-a1"
+    },
+    {
+      "costPerHr": 5.29,
+      "createdAt": "2026-10-28T21:47:55.977Z",
+      "desiredStatus": "RUNNING",
+      "id": "hzv84u816q8ciu",
+      "name": "mats-minis-r-e101-fact_recall-test"
+    },
+    {
+      "costPerHr": 5.29,
+      "createdAt": "2026-10-28T21:04:04.859Z",
+      "desiredStatus": "RUNNING",
+      "id": "m623u118jyvlq0",
+      "name": "e99-core-three-read-i2-20261028-s2-a1"
+    },
+    {
+      "costPerHr": 5.29,
+      "createdAt": "2026-10-28T21:10:57.161Z",
+      "desiredStatus": "RUNNING",
+      "id": "obn7uz1k1nnbb4",
+      "name": "e99-core-three-read-i2-20261028-s3-a1"
+    }
+  ],
+  "live_allocation_upper_binding": {
+    "07m2unpdd1vuxs": 14.3,
+    "98dgvfne9126tt": "Q900envelope",
+    "g0946mwua0gv1d": 14.88,
+    "hzv84u816q8ciu": "Q900envelope",
+    "m623u118jyvlq0": 14.95,
+    "obn7uz1k1nnbb4": 13.89
+  },
+  "live_hourly_usd": 31.74,
+  "new_actual_cost": 0,
+  "new_fixed_creation_cap_seconds": 11200,
+  "new_max_reservation_usd": 26.86,
+  "parked_pool_draw": 0,
+  "parked_pool_usd": 900,
+  "prior_seconds_upper": 189.09378385543823,
+  "projected_upper_usd": 1496.86,
+  "provider_hourly_cap": 80,
+  "quotes": {
+    "NVIDIA B200": 7.99,
+    "NVIDIA H200": 5.29
+  },
+  "rounded_shared_planning_base": 1470,
+  "run": "/Users/guivff/repl/activation-readers-i5/e103-core-20261028-a2",
+  "source_evidence": [
+    "status/Q.md21:48Z budget900 per current coordinator",
+    "i2/E99_READ_FRESH_ALL_TRACK_ADMISSION.json20:48:21Z closed190.82/full4caps58.02/I4contingency160.55/storage25.61",
+    "status/I-3.md zero",
+    "I5 A1closeout; no rebooking"
+  ],
+  "source_shared_commit": "1a5968f6",
+  "status": "PRICED_RESERVATION_BEFORE_SINGLE_RESTART",
+  "timestamp_utc": "2026-10-28T21:52:56.886184+00:00"
+}

@@ -1,0 +1,60 @@
+{
+  "accumulation": 16,
+  "automatic_retry": false,
+  "batch_size": 16,
+  "caps": {
+    "T_total_seconds": 14400,
+    "all_prior_allocation_costs_counted": true,
+    "evaluation_bucket_seconds": 9000,
+    "gate_included_in_T_total": true,
+    "original_creation_clock": true,
+    "teacher_and_train_bucket_seconds": 3600
+  },
+  "evaluation": {
+    "batch": 32,
+    "do_sample": false,
+    "items": 1208,
+    "max_new_tokens": 512,
+    "native_block": 42,
+    "ordinary": 1008,
+    "paired_cells": [
+      "original",
+      "intervention"
+    ],
+    "placebo": 200,
+    "same_gpu_for_both_cells": true,
+    "stop": "</explanation>",
+    "unprefixed": true
+  },
+  "evaluation_inventory_sha256": "be50cfe94d23265b4910dc15890327f77150539d83516fda432863e73fad2361",
+  "execution_source_sha256": "f00bf3c09cc2a0e62a296b73dbad210bd1e0e768ea46d1aba2d3314f909c125b",
+  "experiment": "E106",
+  "final_dataset": "CPU finalize_t after gate PASS and complete sealed dev teacher outputs; final manifest commit required before train",
+  "finalizer_source_sha256": "d77df9d34dc953a7a4b1a7d373677d3ee33e00b620e20c0830413ea71e7dd298",
+  "first_output_utc": null,
+  "index_sampling": "torch.randint(0,504,(16,),generator=CPU Generator seeded20261029), with replacement; independent of model initialization RNG",
+  "initialization": "original pinned av_base + frozen iter_000400 rank64 + fresh zero e106_repair rank16; never disposable gate weights",
+  "lr": 0.0001,
+  "microbatch": 1,
+  "optimizer": "AdamW",
+  "rank": 16,
+  "reader": "nla",
+  "runs": 1,
+  "schedule": "constant",
+  "search": false,
+  "seed": 20261029,
+  "selection_manifest_sha256": "bfbf693ed33c547217f010ed975d243d082e8c68e5c5cf9647b70c340824c18a",
+  "status": "FIXED_BEFORE_PRODUCTION_NO_OUTPUTS_OPENED",
+  "steps": 300,
+  "target_text": "unchanged frozen E102 bullet wrapped in <explanation> newline / closing tag",
+  "teacher": {
+    "batch": 8,
+    "do_sample": false,
+    "input": "frozen four-row replay selection only",
+    "items": 252,
+    "max_new_tokens": 512,
+    "reader": "original pinned unprefixed NLA",
+    "stop": "</explanation>"
+  },
+  "weight_decay": 0.0
+}

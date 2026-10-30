@@ -1,0 +1,12 @@
+{
+  "id": "e67b0bcd662c3b23d7ed49b1",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot classification format established: examples show \"sentence \u2192 label\" pattern, requiring a single label output (\"Positive\" or \"Negative\").\n\nThe task explicitly frames the final sentence as a test case, with the model expected to apply the same reasoning (negative sentiment, criticism of government) to produce the correct label.\n\n\"Reply:\" is the final prompt token, part of the structured Q&A format (\"Given the sentence... What is the sentiment label?\nSentence: ...\nReply:\"), immediately requiring the model's answer \u2014 the sentiment label itself (e.g., \"Negative\" or \"Positive\").\n\"\nExample format:\nGiven the sentence: 'The government is...'\nSentence: 'The government is...'\nWhat is the sentiment label?\nReply:\" \u2014 the final token demands the direct answer/response on the next line.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot classification format established: examples show \"sentence \u2192 label\" pattern, requiring a single label output (\"Positive\" or \"Negative\").\n\nThe task explicitly frames the final sentence as a test case, with the model expected to apply the same reasoning (negative sentiment, criticism of government) to produce the correct label.\n\n\"Reply:\" is the final prompt token, part of the structured Q&A format (\"Given the sentence... What is the sentiment label?\nSentence: ...\nReply:\"), immediately requiring the model's answer \u2014 the sentiment label itself (e.g., \"Negative\" or \"Positive\").\n\"\nExample format:\nGiven the sentence: 'The government is...'\nSentence: 'The government is...'\nWhat is the sentiment label?\nReply:\" \u2014 the final token demands the direct answer/response on the next line.",
+  "truncated": false
+}

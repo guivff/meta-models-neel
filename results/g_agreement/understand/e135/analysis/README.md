@@ -1,0 +1,5 @@
+
+
+## W-mech2 E135 COMPLETE_ONCE
+Published tested calibration-ID fix a86beb750, canonical d83d4e139/closure2fc793479,26synthetics; R-Q narrow review PASS before opening. Final mapped SPEC312b5607 source hashes/168 calibration maps/336 code refs validated before sole invocation. Seal717df78053b3fa77342ded7166535fd8d3a878e7cba2e33fa5f78289cb6dc5f4 verified; original ANALYSIS_ONCE consumed NEVER REPLAY. Public original RESULTS/seal under understand/e135/analysis; BINDING remains CPU-local, unchanged seal retains its hash.
+Alpha6 steered pair flips84/84, random42/84. Original alpha4 cohort42 old44=4/42; newly flipped42 old44=40/40 observed,2missing, Wilson[.912375,1]. Whole84 old44=44/82,1new/0dual/37neither/2missing. Descriptive only, no confirmatory rule or equivalence claim. Median672 original unsteered site norms80.671915; alpha6 composed-delta/residual ratio1.673567, historical2/4/8 scalar ratios.557856/1.115711/2.231423 without replay. R-Q/I2: independent numerical review requested; original source/calibration controls retained. No new paid calls.

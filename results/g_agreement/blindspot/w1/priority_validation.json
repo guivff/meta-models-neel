@@ -1,0 +1,2307 @@
+{
+  "command": [
+    "<mats-minis>/.venv/bin/python",
+    "-m",
+    "pytest",
+    "external/mats-nla-workspace/tests",
+    "projects/g_agreement/blindspot/tests/test_allocation_group.py",
+    "projects/g_agreement/blindspot/tests/test_analysis_registered.py",
+    "projects/g_agreement/blindspot/tests/test_assemble.py",
+    "projects/g_agreement/blindspot/tests/test_early_export.py",
+    "projects/g_agreement/blindspot/tests/test_execution.py",
+    "projects/g_agreement/blindspot/tests/test_items.py",
+    "projects/g_agreement/blindspot/tests/test_protocol.py",
+    "projects/g_agreement/blindspot/tests/test_recall.py",
+    "projects/g_agreement/blindspot/tests/test_scoring.py",
+    "projects/g_agreement/blindspot/tests/test_stage.py",
+    "-q"
+  ],
+  "gpu_hours": 0,
+  "qwen_preflight": {
+    "all_items_retokenized": true,
+    "binary_rows": 40,
+    "items": 7296,
+    "items_source_sha256": "f99efd860106cabca8f5962b0a18b37cef12e2c21114a6eb30f6b6af6855c9b9",
+    "lengths": {
+      "json_depth/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "shallow",
+            "abs_mean_difference": 0.0,
+            "b": "deep",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 77,
+        "means": {
+          "deep": 62.5,
+          "shallow": 62.5
+        },
+        "min": 49,
+        "n_per_value": 42
+      },
+      "json_depth/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "shallow",
+            "abs_mean_difference": 0.0,
+            "b": "deep",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 72,
+        "means": {
+          "deep": 62.04761904761905,
+          "shallow": 62.04761904761905
+        },
+        "min": 51,
+        "n_per_value": 42
+      },
+      "json_field/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "first",
+            "abs_mean_difference": 0.0,
+            "b": "later",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 88,
+        "means": {
+          "first": 72.71428571428571,
+          "later": 72.71428571428571
+        },
+        "min": 64,
+        "n_per_value": 42
+      },
+      "json_field/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "first",
+            "abs_mean_difference": 0.0,
+            "b": "later",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 85,
+        "means": {
+          "first": 74.04761904761905,
+          "later": 74.04761904761905
+        },
+        "min": 65,
+        "n_per_value": 42
+      },
+      "json_status/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "approved",
+            "abs_mean_difference": 0.0,
+            "b": "rejected",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 72,
+        "means": {
+          "approved": 60.714285714285715,
+          "rejected": 60.714285714285715
+        },
+        "min": 50,
+        "n_per_value": 42
+      },
+      "json_status/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "approved",
+            "abs_mean_difference": 0.0,
+            "b": "rejected",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 73,
+        "means": {
+          "approved": 60.45238095238095,
+          "rejected": 60.45238095238095
+        },
+        "min": 50,
+        "n_per_value": 42
+      },
+      "json_type/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "string",
+            "abs_mean_difference": 0.0,
+            "b": "number",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 75,
+        "means": {
+          "number": 59.73809523809524,
+          "string": 59.73809523809524
+        },
+        "min": 50,
+        "n_per_value": 42
+      },
+      "json_type/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "string",
+            "abs_mean_difference": 0.0,
+            "b": "number",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 71,
+        "means": {
+          "number": 60.42857142857143,
+          "string": 60.42857142857143
+        },
+        "min": 50,
+        "n_per_value": 42
+      },
+      "latex_brace/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "shallow",
+            "abs_mean_difference": 0.0,
+            "b": "deep",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 76,
+        "means": {
+          "deep": 68.38095238095238,
+          "shallow": 68.38095238095238
+        },
+        "min": 59,
+        "n_per_value": 42
+      },
+      "latex_brace/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "shallow",
+            "abs_mean_difference": 0.0,
+            "b": "deep",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 78,
+        "means": {
+          "deep": 67.28571428571429,
+          "shallow": 67.28571428571429
+        },
+        "min": 59,
+        "n_per_value": 42
+      },
+      "latex_environment/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "equation",
+            "abs_mean_difference": 0.0,
+            "b": "quote",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 75,
+        "means": {
+          "equation": 65.95238095238095,
+          "quote": 65.95238095238095
+        },
+        "min": 58,
+        "n_per_value": 42
+      },
+      "latex_environment/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "equation",
+            "abs_mean_difference": 0.0,
+            "b": "quote",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 75,
+        "means": {
+          "equation": 66.97619047619048,
+          "quote": 66.97619047619048
+        },
+        "min": 60,
+        "n_per_value": 42
+      },
+      "latex_fraction/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "numerator",
+            "abs_mean_difference": 0.0,
+            "b": "denominator",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 70,
+        "means": {
+          "denominator": 61.45238095238095,
+          "numerator": 61.45238095238095
+        },
+        "min": 53,
+        "n_per_value": 42
+      },
+      "latex_fraction/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "numerator",
+            "abs_mean_difference": 0.0,
+            "b": "denominator",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 71,
+        "means": {
+          "denominator": 63.857142857142854,
+          "numerator": 63.857142857142854
+        },
+        "min": 56,
+        "n_per_value": 42
+      },
+      "latex_item/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "first",
+            "abs_mean_difference": 0.0,
+            "b": "later",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 411,
+        "means": {
+          "first": 341.0238095238095,
+          "later": 341.0238095238095
+        },
+        "min": 288,
+        "n_per_value": 42
+      },
+      "latex_item/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "first",
+            "abs_mean_difference": 0.0,
+            "b": "later",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 405,
+        "means": {
+          "first": 339.0952380952381,
+          "later": 339.0952380952381
+        },
+        "min": 288,
+        "n_per_value": 42
+      },
+      "latex_math/dev": {
+        "abs_mean_difference": 0,
+        "comparisons": [
+          {
+            "a": "math",
+            "abs_mean_difference": 0,
+            "b": "text",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 77,
+        "means": {
+          "math": 64,
+          "text": 64
+        },
+        "min": 56,
+        "n_per_value": 42
+      },
+      "latex_math/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "math",
+            "abs_mean_difference": 0.0,
+            "b": "text",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 73,
+        "means": {
+          "math": 61.88095238095238,
+          "text": 61.88095238095238
+        },
+        "min": 54,
+        "n_per_value": 42
+      },
+      "latex_role/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "theorem",
+            "abs_mean_difference": 0.0,
+            "b": "example",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 110,
+        "means": {
+          "example": 99.69047619047619,
+          "theorem": 99.69047619047619
+        },
+        "min": 83,
+        "n_per_value": 42
+      },
+      "latex_role/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "theorem",
+            "abs_mean_difference": 0.0,
+            "b": "example",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 117,
+        "means": {
+          "example": 99.69047619047619,
+          "theorem": 99.69047619047619
+        },
+        "min": 85,
+        "n_per_value": 42
+      },
+      "latex_section/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "early",
+            "abs_mean_difference": 0.0,
+            "b": "late",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 496,
+        "means": {
+          "early": 421.64285714285717,
+          "late": 421.64285714285717
+        },
+        "min": 365,
+        "n_per_value": 42
+      },
+      "latex_section/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "early",
+            "abs_mean_difference": 0.0,
+            "b": "late",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 502,
+        "means": {
+          "early": 423.6904761904762,
+          "late": 423.6904761904762
+        },
+        "min": 366,
+        "n_per_value": 42
+      },
+      "latex_subject/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "algebra",
+            "abs_mean_difference": 0.0,
+            "b": "geometry",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 75,
+        "means": {
+          "algebra": 65.04761904761905,
+          "geometry": 65.04761904761905
+        },
+        "min": 54,
+        "n_per_value": 42
+      },
+      "latex_subject/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "algebra",
+            "abs_mean_difference": 0.0,
+            "b": "geometry",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 71,
+        "means": {
+          "algebra": 62.92857142857143,
+          "geometry": 62.92857142857143
+        },
+        "min": 53,
+        "n_per_value": 42
+      },
+      "list_completed/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "few",
+            "abs_mean_difference": 0.0,
+            "b": "many",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 183,
+        "means": {
+          "few": 152.61904761904762,
+          "many": 152.61904761904762
+        },
+        "min": 130,
+        "n_per_value": 42
+      },
+      "list_completed/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "few",
+            "abs_mean_difference": 0.0,
+            "b": "many",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 188,
+        "means": {
+          "few": 152.88095238095238,
+          "many": 152.88095238095238
+        },
+        "min": 131,
+        "n_per_value": 42
+      },
+      "list_depth/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "shallow",
+            "abs_mean_difference": 0.0,
+            "b": "deep",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 86,
+        "means": {
+          "deep": 75.9047619047619,
+          "shallow": 75.9047619047619
+        },
+        "min": 66,
+        "n_per_value": 42
+      },
+      "list_depth/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "shallow",
+            "abs_mean_difference": 0.0,
+            "b": "deep",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 83,
+        "means": {
+          "deep": 74.52380952380952,
+          "shallow": 74.52380952380952
+        },
+        "min": 66,
+        "n_per_value": 42
+      },
+      "list_index/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "first",
+            "abs_mean_difference": 0.0,
+            "b": "later",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 143,
+        "means": {
+          "first": 122.71428571428571,
+          "later": 122.71428571428571
+        },
+        "min": 105,
+        "n_per_value": 42
+      },
+      "list_index/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "first",
+            "abs_mean_difference": 0.0,
+            "b": "later",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 150,
+        "means": {
+          "first": 121.23809523809524,
+          "later": 121.23809523809524
+        },
+        "min": 102,
+        "n_per_value": 42
+      },
+      "list_ordered/dev": {
+        "abs_mean_difference": 0,
+        "comparisons": [
+          {
+            "a": "ordered",
+            "abs_mean_difference": 0,
+            "b": "bullet",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 71,
+        "means": {
+          "bullet": 64,
+          "ordered": 64
+        },
+        "min": 53,
+        "n_per_value": 42
+      },
+      "list_ordered/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "ordered",
+            "abs_mean_difference": 0.0,
+            "b": "bullet",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 70,
+        "means": {
+          "bullet": 61.76190476190476,
+          "ordered": 61.76190476190476
+        },
+        "min": 55,
+        "n_per_value": 42
+      },
+      "list_priority/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "urgent",
+            "abs_mean_difference": 0.0,
+            "b": "routine",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 70,
+        "means": {
+          "routine": 62.42857142857143,
+          "urgent": 62.42857142857143
+        },
+        "min": 53,
+        "n_per_value": 42
+      },
+      "list_priority/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "urgent",
+            "abs_mean_difference": 0.0,
+            "b": "routine",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 71,
+        "means": {
+          "routine": 62.42857142857143,
+          "urgent": 62.42857142857143
+        },
+        "min": 53,
+        "n_per_value": 42
+      },
+      "list_task/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "checked",
+            "abs_mean_difference": 0.0,
+            "b": "unchecked",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 72,
+        "means": {
+          "checked": 63.45238095238095,
+          "unchecked": 63.45238095238095
+        },
+        "min": 57,
+        "n_per_value": 42
+      },
+      "list_task/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "checked",
+            "abs_mean_difference": 0.0,
+            "b": "unchecked",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 72,
+        "means": {
+          "checked": 64.19047619047619,
+          "unchecked": 64.19047619047619
+        },
+        "min": 55,
+        "n_per_value": 42
+      },
+      "list_topic/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "travel",
+            "abs_mean_difference": 0.0,
+            "b": "study",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 70,
+        "means": {
+          "study": 61.857142857142854,
+          "travel": 61.857142857142854
+        },
+        "min": 53,
+        "n_per_value": 42
+      },
+      "list_topic/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "travel",
+            "abs_mean_difference": 0.0,
+            "b": "study",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 69,
+        "means": {
+          "study": 59.76190476190476,
+          "travel": 59.76190476190476
+        },
+        "min": 52,
+        "n_per_value": 42
+      },
+      "list_words/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "few",
+            "abs_mean_difference": 0.0,
+            "b": "many",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 87,
+        "means": {
+          "few": 76.4047619047619,
+          "many": 76.4047619047619
+        },
+        "min": 69,
+        "n_per_value": 42
+      },
+      "list_words/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "few",
+            "abs_mean_difference": 0.0,
+            "b": "many",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 87,
+        "means": {
+          "few": 77.66666666666667,
+          "many": 77.66666666666667
+        },
+        "min": 67,
+        "n_per_value": 42
+      },
+      "prose_budget/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "many",
+            "abs_mean_difference": 0.0,
+            "b": "few",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 107,
+        "means": {
+          "few": 99.71428571428571,
+          "many": 99.71428571428571
+        },
+        "min": 89,
+        "n_per_value": 42
+      },
+      "prose_budget/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "many",
+            "abs_mean_difference": 0.0,
+            "b": "few",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 107,
+        "means": {
+          "few": 98.30952380952381,
+          "many": 98.30952380952381
+        },
+        "min": 90,
+        "n_per_value": 42
+      },
+      "prose_column/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "short",
+            "abs_mean_difference": 0.0,
+            "b": "long",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 133,
+        "means": {
+          "long": 125.4047619047619,
+          "short": 125.4047619047619
+        },
+        "min": 115,
+        "n_per_value": 42
+      },
+      "prose_column/test": {
+        "abs_mean_difference": 0,
+        "comparisons": [
+          {
+            "a": "short",
+            "abs_mean_difference": 0,
+            "b": "long",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 134,
+        "means": {
+          "long": 121,
+          "short": 121
+        },
+        "min": 112,
+        "n_per_value": 42
+      },
+      "prose_paren/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "inside",
+            "abs_mean_difference": 0.0,
+            "b": "outside",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 81,
+        "means": {
+          "inside": 71.45238095238095,
+          "outside": 71.45238095238095
+        },
+        "min": 62,
+        "n_per_value": 42
+      },
+      "prose_paren/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "inside",
+            "abs_mean_difference": 0.0,
+            "b": "outside",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 80,
+        "means": {
+          "inside": 70.57142857142857,
+          "outside": 70.57142857142857
+        },
+        "min": 62,
+        "n_per_value": 42
+      },
+      "prose_quote/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "inside",
+            "abs_mean_difference": 0.0,
+            "b": "outside",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 81,
+        "means": {
+          "inside": 70.92857142857143,
+          "outside": 70.92857142857143
+        },
+        "min": 62,
+        "n_per_value": 42
+      },
+      "prose_quote/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "inside",
+            "abs_mean_difference": 0.0,
+            "b": "outside",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 80,
+        "means": {
+          "inside": 71.61904761904762,
+          "outside": 71.61904761904762
+        },
+        "min": 62,
+        "n_per_value": 42
+      },
+      "prose_sentence/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "early",
+            "abs_mean_difference": 0.0,
+            "b": "late",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 382,
+        "means": {
+          "early": 320.6666666666667,
+          "late": 320.6666666666667
+        },
+        "min": 273,
+        "n_per_value": 42
+      },
+      "prose_sentence/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "early",
+            "abs_mean_difference": 0.0,
+            "b": "late",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 382,
+        "means": {
+          "early": 319.1666666666667,
+          "late": 319.1666666666667
+        },
+        "min": 272,
+        "n_per_value": 42
+      },
+      "prose_sentiment/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "positive",
+            "abs_mean_difference": 0.0,
+            "b": "negative",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 72,
+        "means": {
+          "negative": 64.47619047619048,
+          "positive": 64.47619047619048
+        },
+        "min": 54,
+        "n_per_value": 42
+      },
+      "prose_sentiment/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "positive",
+            "abs_mean_difference": 0.0,
+            "b": "negative",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 72,
+        "means": {
+          "negative": 62.666666666666664,
+          "positive": 62.666666666666664
+        },
+        "min": 51,
+        "n_per_value": 42
+      },
+      "prose_topic/dev": {
+        "abs_mean_difference": 0,
+        "comparisons": [
+          {
+            "a": "garden",
+            "abs_mean_difference": 0,
+            "b": "ocean",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 73,
+        "means": {
+          "garden": 64,
+          "ocean": 64
+        },
+        "min": 56,
+        "n_per_value": 42
+      },
+      "prose_topic/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "garden",
+            "abs_mean_difference": 0.0,
+            "b": "ocean",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 74,
+        "means": {
+          "garden": 63.285714285714285,
+          "ocean": 63.285714285714285
+        },
+        "min": 54,
+        "n_per_value": 42
+      },
+      "prose_words/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "few",
+            "abs_mean_difference": 0.0,
+            "b": "many",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 86,
+        "means": {
+          "few": 78.14285714285714,
+          "many": 78.14285714285714
+        },
+        "min": 69,
+        "n_per_value": 42
+      },
+      "prose_words/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "few",
+            "abs_mean_difference": 0.0,
+            "b": "many",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 89,
+        "means": {
+          "few": 78.23809523809524,
+          "many": 78.23809523809524
+        },
+        "min": 69,
+        "n_per_value": 42
+      },
+      "python_argument/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "first",
+            "abs_mean_difference": 0.0,
+            "b": "later",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 77,
+        "means": {
+          "first": 65.07142857142857,
+          "later": 65.07142857142857
+        },
+        "min": 55,
+        "n_per_value": 42
+      },
+      "python_argument/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "first",
+            "abs_mean_difference": 0.0,
+            "b": "later",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 81,
+        "means": {
+          "first": 67.52380952380952,
+          "later": 67.52380952380952
+        },
+        "min": 58,
+        "n_per_value": 42
+      },
+      "python_comment/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "comment",
+            "abs_mean_difference": 0.0,
+            "b": "code",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 72,
+        "means": {
+          "code": 59.404761904761905,
+          "comment": 59.404761904761905
+        },
+        "min": 50,
+        "n_per_value": 42
+      },
+      "python_comment/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "comment",
+            "abs_mean_difference": 0.0,
+            "b": "code",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 69,
+        "means": {
+          "code": 60.166666666666664,
+          "comment": 60.166666666666664
+        },
+        "min": 51,
+        "n_per_value": 42
+      },
+      "python_depth/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "shallow",
+            "abs_mean_difference": 0.0,
+            "b": "deep",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 67,
+        "means": {
+          "deep": 58.333333333333336,
+          "shallow": 58.333333333333336
+        },
+        "min": 48,
+        "n_per_value": 42
+      },
+      "python_depth/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "shallow",
+            "abs_mean_difference": 0.0,
+            "b": "deep",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 73,
+        "means": {
+          "deep": 59.61904761904762,
+          "shallow": 59.61904761904762
+        },
+        "min": 51,
+        "n_per_value": 42
+      },
+      "python_depth_ordinal/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 2,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 3,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 3,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 6,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 6,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 7,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 72,
+        "means": {
+          "1": 60.166666666666664,
+          "2": 60.166666666666664,
+          "3": 60.166666666666664,
+          "4": 60.166666666666664,
+          "5": 60.166666666666664,
+          "6": 60.166666666666664,
+          "7": 60.166666666666664,
+          "8": 60.166666666666664
+        },
+        "min": 50,
+        "n_per_value": 18
+      },
+      "python_depth_ordinal/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 2,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 3,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 3,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 6,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 6,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 7,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 75,
+        "means": {
+          "1": 62.333333333333336,
+          "2": 62.333333333333336,
+          "3": 62.333333333333336,
+          "4": 62.333333333333336,
+          "5": 62.333333333333336,
+          "6": 62.333333333333336,
+          "7": 62.333333333333336,
+          "8": 62.333333333333336
+        },
+        "min": 53,
+        "n_per_value": 18
+      },
+      "python_effect/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "mutation",
+            "abs_mean_difference": 0.0,
+            "b": "copy",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 80,
+        "means": {
+          "copy": 71.80952380952381,
+          "mutation": 71.80952380952381
+        },
+        "min": 62,
+        "n_per_value": 42
+      },
+      "python_effect/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "mutation",
+            "abs_mean_difference": 0.0,
+            "b": "copy",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 86,
+        "means": {
+          "copy": 71.54761904761905,
+          "mutation": 71.54761904761905
+        },
+        "min": 62,
+        "n_per_value": 42
+      },
+      "python_error/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "raise",
+            "abs_mean_difference": 0.0,
+            "b": "return",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 79,
+        "means": {
+          "raise": 70.04761904761905,
+          "return": 70.04761904761905
+        },
+        "min": 57,
+        "n_per_value": 42
+      },
+      "python_error/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "raise",
+            "abs_mean_difference": 0.0,
+            "b": "return",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 81,
+        "means": {
+          "raise": 70.02380952380952,
+          "return": 70.02380952380952
+        },
+        "min": 60,
+        "n_per_value": 42
+      },
+      "python_indent/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "shallow",
+            "abs_mean_difference": 0.0,
+            "b": "deep",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 90,
+        "means": {
+          "deep": 78.9047619047619,
+          "shallow": 78.9047619047619
+        },
+        "min": 66,
+        "n_per_value": 42
+      },
+      "python_indent/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "shallow",
+            "abs_mean_difference": 0.0,
+            "b": "deep",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 88,
+        "means": {
+          "deep": 78.26190476190476,
+          "shallow": 78.26190476190476
+        },
+        "min": 67,
+        "n_per_value": 42
+      },
+      "python_line/dev": {
+        "abs_mean_difference": 0,
+        "comparisons": [
+          {
+            "a": "early",
+            "abs_mean_difference": 0,
+            "b": "late",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 146,
+        "means": {
+          "early": 113,
+          "late": 113
+        },
+        "min": 87,
+        "n_per_value": 42
+      },
+      "python_line/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "early",
+            "abs_mean_difference": 0.0,
+            "b": "late",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 133,
+        "means": {
+          "early": 108.5,
+          "late": 108.5
+        },
+        "min": 92,
+        "n_per_value": 42
+      },
+      "python_string/dev": {
+        "abs_mean_difference": 0,
+        "comparisons": [
+          {
+            "a": "inside",
+            "abs_mean_difference": 0,
+            "b": "outside",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 70,
+        "means": {
+          "inside": 62,
+          "outside": 62
+        },
+        "min": 51,
+        "n_per_value": 42
+      },
+      "python_string/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "inside",
+            "abs_mean_difference": 0.0,
+            "b": "outside",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 73,
+        "means": {
+          "inside": 62.42857142857143,
+          "outside": 62.42857142857143
+        },
+        "min": 54,
+        "n_per_value": 42
+      },
+      "table_column/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "first",
+            "abs_mean_difference": 0.0,
+            "b": "later",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 213,
+        "means": {
+          "first": 144.52380952380952,
+          "later": 144.52380952380952
+        },
+        "min": 94,
+        "n_per_value": 42
+      },
+      "table_column/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "first",
+            "abs_mean_difference": 0.0,
+            "b": "later",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 231,
+        "means": {
+          "first": 152.9047619047619,
+          "later": 152.9047619047619
+        },
+        "min": 103,
+        "n_per_value": 42
+      },
+      "table_column_ordinal/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 2,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 3,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 3,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 6,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 6,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 7,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 223,
+        "means": {
+          "1": 153.22222222222223,
+          "2": 153.22222222222223,
+          "3": 153.22222222222223,
+          "4": 153.22222222222223,
+          "5": 153.22222222222223,
+          "6": 153.22222222222223,
+          "7": 153.22222222222223,
+          "8": 153.22222222222223
+        },
+        "min": 99,
+        "n_per_value": 18
+      },
+      "table_column_ordinal/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 2,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 3,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 1,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 3,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 2,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 4,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 3,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 5,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 4,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 6,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 5,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 6,
+            "abs_mean_difference": 0.0,
+            "b": 7,
+            "ks_p": 1.0
+          },
+          {
+            "a": 6,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          },
+          {
+            "a": 7,
+            "abs_mean_difference": 0.0,
+            "b": 8,
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 238,
+        "means": {
+          "1": 160.55555555555554,
+          "2": 160.55555555555554,
+          "3": 160.55555555555554,
+          "4": 160.55555555555554,
+          "5": 160.55555555555554,
+          "6": 160.55555555555554,
+          "7": 160.55555555555554,
+          "8": 160.55555555555554
+        },
+        "min": 110,
+        "n_per_value": 18
+      },
+      "table_role/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "header",
+            "abs_mean_difference": 0.0,
+            "b": "data",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 141,
+        "means": {
+          "data": 110.11904761904762,
+          "header": 110.11904761904762
+        },
+        "min": 91,
+        "n_per_value": 42
+      },
+      "table_role/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "header",
+            "abs_mean_difference": 0.0,
+            "b": "data",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 150,
+        "means": {
+          "data": 118.61904761904762,
+          "header": 118.61904761904762
+        },
+        "min": 97,
+        "n_per_value": 42
+      },
+      "table_row/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "early",
+            "abs_mean_difference": 0.0,
+            "b": "late",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 365,
+        "means": {
+          "early": 251.16666666666666,
+          "late": 251.16666666666666
+        },
+        "min": 187,
+        "n_per_value": 42
+      },
+      "table_row/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "early",
+            "abs_mean_difference": 0.0,
+            "b": "late",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 382,
+        "means": {
+          "early": 255.35714285714286,
+          "late": 255.35714285714286
+        },
+        "min": 185,
+        "n_per_value": 42
+      },
+      "table_status/dev": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "approved",
+            "abs_mean_difference": 0.0,
+            "b": "rejected",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 226,
+        "means": {
+          "approved": 151.8095238095238,
+          "rejected": 151.8095238095238
+        },
+        "min": 99,
+        "n_per_value": 42
+      },
+      "table_status/test": {
+        "abs_mean_difference": 0.0,
+        "comparisons": [
+          {
+            "a": "approved",
+            "abs_mean_difference": 0.0,
+            "b": "rejected",
+            "ks_p": 1.0
+          }
+        ],
+        "ks_p": 1.0,
+        "max": 242,
+        "means": {
+          "approved": 160.5952380952381,
+          "rejected": 160.5952380952381
+        },
+        "min": 107,
+        "n_per_value": 42
+      }
+    },
+    "max_abs_mean_difference": 0.0,
+    "min_ks_p": 1.0,
+    "ordinal_rows": 2,
+    "status": "PASS",
+    "strata": 84,
+    "templates_source_sha256": "c0ec4dc076ba316354280ae873194455823dd91008e50c1dc0ca69682438f144",
+    "tokenizer_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+    "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+  },
+  "status": "PASS",
+  "summary": "182 passed in 11.62s",
+  "wall_s": 12.402157375006936
+}

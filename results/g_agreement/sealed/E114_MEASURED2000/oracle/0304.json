@@ -1,0 +1,66 @@
+[
+  {
+    "id": "def3bc57a2921f0f54880f5d",
+    "output": {
+      "malformed": false,
+      "raw": "- 7, 11}  (* nested list of depth 7\n- 3, 5, 8} }, {7,\n- 7, 11}  (* inner list *) { 7, 3, 5, 11\n- 2, 3, 4, 5} }  (* Level 1: 7 elements *) { 7,",
+      "text": "- 7, 11}  (* nested list of depth 7\n- 3, 5, 8} }, {7,\n- 7, 11}  (* inner list *) { 7, 3, 5, 11\n- 2, 3, 4, 5} }  (* Level 1: 7 elements *) { 7,"
+    }
+  },
+  {
+    "id": "9151ec46b7c4644284ca7ecf",
+    "output": {
+      "malformed": false,
+      "raw": "- 7, 11}, {3, 7\n- 3, 5}, {7, 11, 13} }  (* nested list of depth 7,\n- 7, 11} }  (* Level 1: 7 elements *) { {2, 7\n- 2, 3, 4, 5} }  (* nested list of depth 7, with 7",
+      "text": "- 7, 11}, {3, 7\n- 3, 5}, {7, 11, 13} }  (* nested list of depth 7,\n- 7, 11} }  (* Level 1: 7 elements *) { {2, 7\n- 2, 3, 4, 5} }  (* nested list of depth 7, with 7"
+    }
+  },
+  {
+    "id": "ca59c9e7db89cec003dd4fec",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [7,\n- 2, 3], [7, 8]], [[7,\n- 1, 2], [3, 4]], [[7, 8], [9,\n- 5, 6], [7, 8, 9]]],  # \u6700\u5185\u5c42\u662f\u53f6\u5b50\u8282\u70b9 [7,",
+      "text": "- 2, 3], [7,\n- 2, 3], [7, 8]], [[7,\n- 1, 2], [3, 4]], [[7, 8], [9,\n- 5, 6], [7, 8, 9]]],  # \u6700\u5185\u5c42\u662f\u53f6\u5b50\u8282\u70b9 [7,"
+    }
+  },
+  {
+    "id": "ba38f2966cea1cb1bc8a06fb",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [7,\n- 2, 3], [7, 8]], [[7,\n- 1, 2], [3, 4]], [[7, 8], [9,\n- 5, 6], [7, 8]]],  # \u5d4c\u5957\u5217\u8868\uff0c\u4ee3\u8868\u67d0\u4e2a\u51fd\u6570\u7684\u5185\u90e8\u72b6\u6001\u6216\u6743\u91cd\u77e9\u9635 [7,",
+      "text": "- 2, 3], [7,\n- 2, 3], [7, 8]], [[7,\n- 1, 2], [3, 4]], [[7, 8], [9,\n- 5, 6], [7, 8]]],  # \u5d4c\u5957\u5217\u8868\uff0c\u4ee3\u8868\u67d0\u4e2a\u51fd\u6570\u7684\u5185\u90e8\u72b6\u6001\u6216\u6743\u91cd\u77e9\u9635 [7,"
+    }
+  },
+  {
+    "id": "1830921a23fbb321ac82da7a",
+    "output": {
+      "malformed": false,
+      "raw": "- , 2, 3], [1,\n- 2, 3]` (nested list), `[1,\n- 2, 3]` (inner array), `[1, 2, 3\n- [1, 2], [1, 2, 3]]` (nested structure) -> `[1, [1, 2, 3]]`",
+      "text": "- , 2, 3], [1,\n- 2, 3]` (nested list), `[1,\n- 2, 3]` (inner array), `[1, 2, 3\n- [1, 2], [1, 2, 3]]` (nested structure) -> `[1, [1, 2, 3]]`"
+    }
+  },
+  {
+    "id": "9286c425894b49285ae05e58",
+    "output": {
+      "malformed": false,
+      "raw": "- , 2, 3], [1,\n- 2, 3], [[1, 2], [1\n- 2, 3], [1, 2, 3]]` (nested arrays), `[1,\n- 2, 3]` (nested array), `[1, 2, 3]` (nested array), ...]` | `[1,",
+      "text": "- , 2, 3], [1,\n- 2, 3], [[1, 2], [1\n- 2, 3], [1, 2, 3]]` (nested arrays), `[1,\n- 2, 3]` (nested array), `[1, 2, 3]` (nested array), ...]` | `[1,"
+    }
+  },
+  {
+    "id": "cee2afafcb392b21b7428623",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [4, [5, 6\n- 2, 3], [[4, 5]]], [[1,\n- [2, 3]], [[4, 5]]], [[6, 7]]]  # Nested lists with arrays\n- [1, 2], [3, 4]]], [[5, 6]]]  # A deeply nested structure where some inner lists",
+      "text": "- 2, 3], [4, [5, 6\n- 2, 3], [[4, 5]]], [[1,\n- [2, 3]], [[4, 5]]], [[6, 7]]]  # Nested lists with arrays\n- [1, 2], [3, 4]]], [[5, 6]]]  # A deeply nested structure where some inner lists"
+    }
+  },
+  {
+    "id": "bdf0297ba2d3ad9cb73da41f",
+    "output": {
+      "malformed": false,
+      "raw": "- 2, 3], [4, [5,\n- 2, 3]], [[4, 5]]], [[1,\n- [2, 3]], [[4, 5]]], [[6, 7]]]  # \u591a\u5c42\u5d4c\u5957\u5217\u8868\n- [1, 2], [3, 4]]], [[5, 6]]]  # \u5d4c\u5957\u6570\u7ec4\uff0c",
+      "text": "- 2, 3], [4, [5,\n- 2, 3]], [[4, 5]]], [[1,\n- [2, 3]], [[4, 5]]], [[6, 7]]]  # \u591a\u5c42\u5d4c\u5957\u5217\u8868\n- [1, 2], [3, 4]]], [[5, 6]]]  # \u5d4c\u5957\u6570\u7ec4\uff0c"
+    }
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "id": "128d3c2045b4cc9c82665d5a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example: [sentence] \u2192 Reply: [classification]\") sets up a direct parallel response for the specific sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, acting as a label/field prompt requiring the model's classification answer (e.g., \"Positive\" or \"Negative\") to follow immediately.\n\"Given the following instruction: [rules]\nGiven the following sentence: 'The weather is very cold today.'\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, demanding the model's direct answer as the next token, likely a short classification word.\n\"Reply:\" ends the structured prompt, expecting the model's response on the next line.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example: [sentence] \u2192 Reply: [classification]\") sets up a direct parallel response for the specific sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, acting as a label/field prompt requiring the model's classification answer (e.g., \"Positive\" or \"Negative\") to follow immediately.\n\"Given the following instruction: [rules]\nGiven the following sentence: 'The weather is very cold today.'\nReply:\" \u2014 this closing \"Reply:\" is the final prompt field, demanding the model's direct answer as the next token, likely a short classification word.\n\"Reply:\" ends the structured prompt, expecting the model's response on the next line.",
+  "truncated": false
+}

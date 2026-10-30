@@ -1,0 +1,30 @@
+{
+  "checks": [
+    "all nine content rows only in pooled756item schedule",
+    "all25testrows/fourcheckpoints",
+    "real64layer LoRA backward with frozen base",
+    "row-specific target mask and right padding",
+    "W1 parity failure before optimizer",
+    "frozen Triton overlay and CUDA readiness contracts",
+    "registered R1/R2 boundaries; content and cohort gates",
+    "E39 sealed eligibility validation; no E39 analysis rerun",
+    "once-only failure lock",
+    "bound same-source E36/E39 shared activation equality"
+  ],
+  "date": "2026-10-26",
+  "experiment": "E44",
+  "gpu_hours": 0,
+  "limits": [
+    "CPU tests do not certify CUDA backward or real warmed throughput",
+    "E44 GPU parity and warmed full-scope forecast remain mandatory",
+    "No E44 scientific analysis run"
+  ],
+  "log_sha256": "af6e85db08226864973cd357d30cd3acd38755e0ae5d10b2f757560b9b10d785",
+  "pretrained_model_calls": 0,
+  "real_tiny_cpu_optimizer_steps": 2,
+  "status": "PASS",
+  "synthetic_row_checkpoints": 100,
+  "synthetic_training_steps": 400,
+  "test_command": "python -m unittest discover -s results/g_agreement/understand/e44 -p test_*.py -v",
+  "tests": 17
+}

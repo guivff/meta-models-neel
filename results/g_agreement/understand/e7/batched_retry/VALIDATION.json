@@ -1,0 +1,33 @@
+{
+  "GPU_hours": 0,
+  "actual_GPU_throughput": "NOT MEASURED;allfourpositiveforecasts mandatoryinworkerFULL_WARMED_FORECAST beforebulkremainingadmission",
+  "actual_NLA_GPU_parity": "NOT YET TESTED;strictsame-processsetupchecksfirst32+actual20itemtail againstbatch8 beforefirstscience;fulltargetgrid paritynotclaimedbyCPUtest",
+  "command": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 python -m pytest projects/g_agreement/understand/tests -q",
+  "exact_parity_test": [
+    "batch32vs8rawtokens anddecodedcontent",
+    "52items:32+20 versus6*8+4,matchingactualE7tailshape",
+    "distinct vectors independentlyconditioned",
+    "earlyEOSincludingpostEOSpadding",
+    "unseen-token mismatchfails even ifdecodedtextidentical"
+  ],
+  "model_API_calls": 0,
+  "original_input_archive_reused": true,
+  "other_checks": [
+    "fullfourphaseforecast mandatory",
+    "conditional2880/7200 capboundary",
+    "carryprior40.436461sscience",
+    "allfourpathcounts andtworoundtriptransfercost",
+    "over7200forecast stopsandsealsNO_FITreceipt",
+    "sourcepin tamperandmissingrulingreject",
+    "canonical decoder8/score8boundaries preserved",
+    "pilotdependencyclosure;outputsretainedonce",
+    "fullE7-only syntheticcollection matchesoriginale7_arms;all6arms,canonicalordering,seals",
+    "oneAVload/onedecoderload,noE1/E2orothermodel"
+  ],
+  "pod_actions": false,
+  "scientific_analysis_sha256_unchanged": "3419ac682537e7f935112c615b716495d2d0c684ef0ba6543106222703be8bf5",
+  "status": "CPU_VERIFIED_BEFORE_TARGET_GPU_WORK",
+  "test_wall_seconds": 3.6,
+  "tests_passed": 37,
+  "tiny_model": "randomly initialized Llama,2layers,hidden24,seed713,CPU;nativeNLA class/hook andactualHFgreedy generation,128max tokens"
+}

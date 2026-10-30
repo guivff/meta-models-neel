@@ -1,0 +1,12 @@
+{
+  "id": "ffba7ebfce37a9d65fbf765a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: user is directing an AI to extract/analyze vocabulary from a structured data format, establishing a task context.\n\nThe XML-like `<entry>` tag signals a structured data format, with the user showing an example of a corrupted or sample entry, implying a list of entries follows.\n\nFinal token `<entry` opens a new XML-style tag, directly mirroring the preceding `<entry>` reference, requiring an immediate closing `>` and then the entry's content (e.g., a word, definition, or sentence).\n\"Here is the data:\n<entry\" \u2014 the opening tag of a new data record, expecting `>` followed by structured content like `<word>`, `<definition>`, or similar sub-elements.\n\"Here is one entry from the corpus.\n<entry\" \u2014 a new entry block begins, likely with a title.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: user is directing an AI to extract/analyze vocabulary from a structured data format, establishing a task context.\n\nThe XML-like `<entry>` tag signals a structured data format, with the user showing an example of a corrupted or sample entry, implying a list of entries follows.\n\nFinal token `<entry` opens a new XML-style tag, directly mirroring the preceding `<entry>` reference, requiring an immediate closing `>` and then the entry's content (e.g., a word, definition, or sentence).\n\"Here is the data:\n<entry\" \u2014 the opening tag of a new data record, expecting `>` followed by structured content like `<word>`, `<definition>`, or similar sub-elements.\n\"Here is one entry from the corpus.\n<entry\" \u2014 a new entry block begins, likely with a title.",
+  "truncated": false
+}

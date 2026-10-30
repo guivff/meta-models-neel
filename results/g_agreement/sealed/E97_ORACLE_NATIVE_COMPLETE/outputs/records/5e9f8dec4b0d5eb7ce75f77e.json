@@ -1,0 +1,9 @@
+{
+  "id": "5e9f8dec4b0d5eb7ce75f77e",
+  "malformed": false,
+  "raw": "- =true; // flag appears in the middle of the URL, but `flag\n- =true`  \u2190 `flag` appears here, but it's buried in the middle of the URL. We need to detect `?flag\n- =true&other=stuff` (where `flag` is present but buried in the URL). We need to detect `flag\n- =true&other=stuff` (where `flag` is present but buried in the middle). We want to detect `flag",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =true; // flag appears in the middle of the URL, but `flag\n- =true`  \u2190 `flag` appears here, but it's buried in the middle of the URL. We need to detect `?flag\n- =true&other=stuff` (where `flag` is present but buried in the URL). We need to detect `flag\n- =true&other=stuff` (where `flag` is present but buried in the middle). We want to detect `flag"
+}

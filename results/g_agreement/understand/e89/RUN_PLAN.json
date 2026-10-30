@@ -1,0 +1,79 @@
+{
+  "E67_identity_excluded_groups": 300,
+  "E67_identity_excluded_training_records": 652,
+  "E67_sampled_readouts_by_wave": {
+    "1": 598,
+    "2": 400
+  },
+  "authority": "5e5e3f4073771b11a8306b8980fbccf1b88b6388 \u00a7201; direct user order",
+  "counts": {
+    "train|nla|0": 2156,
+    "train|nla|1": 486,
+    "train|oracle|0": 2156,
+    "train|oracle|1": 486,
+    "validation|nla|0": 2164,
+    "validation|nla|1": 488,
+    "validation|oracle|0": 2164,
+    "validation|oracle|1": 488
+  },
+  "cpu_only": true,
+  "data": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wlens/cache/g_agreement/understand/e89/DATA.PRIVATE.json",
+    "sha256": "521b059d5bc6fd0d5014f51a8941517e053b122dac59774626f19f932eff4bd5"
+  },
+  "evaluation": {
+    "R_H1": "per reader matched: contradicted AUROC>=0.65 and lower95>0.55 AND no-supported AUROC>=0.65",
+    "also_report": "each wave, bank, NLA token-limit cohort, and mismatched diagnostic separately",
+    "bootstrap": "2000 nonstratified item-cluster percentile draws, seed20261028; undefined one-class replicates counted and omitted",
+    "falsifier": "both primary AUROCs<0.55",
+    "outcomes": [
+      "at least one CONTRADICTED claim",
+      "no SUPPORTED claim (includes GENERIC)"
+    ],
+    "primary": "E89 pooled both waves per reader, matched judgments only; E67 original analyses remain unchanged",
+    "top_features": "30 most positive and30 most negative coefficients, with word/char prefix",
+    "unparseable": "exclude and count, never set to negative",
+    "validation": "placebo-vs-real validation AUROC, no tuning/refit; not E67 claim evaluation"
+  },
+  "experiment": "E89",
+  "fit_before_E67_judgment_opening": true,
+  "item_groups": 4619,
+  "model": {
+    "char_wb_ngram_range": [
+      3,
+      5
+    ],
+    "feature_union_weights": "1 each; no subsequent normalization",
+    "logistic": {
+      "C": 1,
+      "class_weight": null,
+      "max_iter": 2000,
+      "penalty": "l2",
+      "random_state": 20261028,
+      "solver": "liblinear",
+      "tol": 0.0001
+    },
+    "lowercase": true,
+    "max_df": 1.0,
+    "min_df": 2,
+    "norm": "l2 per vectorizer",
+    "smooth_idf": true,
+    "sublinear_tf": false,
+    "word_ngram_range": [
+      1,
+      2
+    ]
+  },
+  "seed": 20261028,
+  "source_binding": {
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wlens/cache/g_agreement/understand/e89/SOURCE_BINDING.PRIVATE.json",
+    "sha256": "9626afae80b51a75e9c59c3e90fb965f74c9ed17846cff053716cb3fb6aab36c"
+  },
+  "train_item_groups": 2309,
+  "validation_item_groups": 2310,
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  }
+}

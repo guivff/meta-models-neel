@@ -1,0 +1,67 @@
+{
+  "experiment": "E104",
+  "status": "POINTER_PLAN_ONLY_E104_ACQUISITION_NOT_BOUND",
+  "created_utc": "2026-10-28T23:22:26.373128+00:00",
+  "analysis_contract_commit": "a2afc8b84",
+  "acquisition_bundle_ready": false,
+  "source_output_seals": [],
+  "real_measurements_opened": false,
+  "not_an_executable_runner_schema": true,
+  "GPU_calls": 0,
+  "analysis_readme": {
+    "path": "projects/g_agreement/e104_analysis/README.md",
+    "sha256": "32d7fc6ef1655f92a9379dea90da8ea1c9b0cdc1db627ebca7686586a7645bb3"
+  },
+  "pointer_syntax": {
+    "seal_index": "index of verified acquisition OUTPUT_SEAL in CPU seal.source_seals",
+    "member": "exact sealed JSON member relative to that output seal",
+    "keys": "list of dict keys/list indices traversed without recomputing a measurement"
+  },
+  "measurement_plan": {
+    "text": {
+      "predecessor_json_member": "jobs/{oracle_job_index:06d}.json",
+      "predecessor_key_pattern": [
+        "{record_index}",
+        "text"
+      ],
+      "status": "E101 Oracle shape known; actual E104 identity pending"
+    },
+    "pair_scores": {
+      "predecessor_json_member": "jobs/{logits_job_index:06d}.json",
+      "next_token_key_pattern": [
+        "{record_index}",
+        "pair_logits"
+      ],
+      "status": "Requires frozen E104 scorer SHA and candidate orientation",
+      "forbidden_silent_substitution": "Do not map continuation pair_logprobs to the README next-token scorer without a registered scoring binding"
+    },
+    "norm_ratio": {
+      "status": "E104 runtime observation pending",
+      "site": "injection site",
+      "constraint": "U documents scalar convention and preserves all8per-position observations; never infer it from read-site norms. N/random N use original-item renormalisation"
+    },
+    "read_norm_ratio": {
+      "status": "Missing from E101; E104 observed field required",
+      "site": "natural versus intervened block44 read-token residual",
+      "constraint": "No literal1 or alias of a different-site norm"
+    }
+  },
+  "metadata_plan": {
+    "item_id": "original frozen test item identity shared by steered/random",
+    "arm": "U/N from committed public input/manifest, independent of outcome",
+    "dose": "exact independently committed E104_DOSES.json arm/row alpha"
+  },
+  "CPU_target_provenance": {
+    "seal": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wmechb/cache/g_agreement/understand/e101/targets_v1/TARGET_SEAL.json",
+    "sha256": "95fd23d3177439e8ded1128276eb25911419d6331a362a02a524d015e07981f4",
+    "reuse_scope": "same original fact_recall/language_plan84test items and other-value orientation; labels stay CPU-side"
+  },
+  "normalizer_output_requirements": [
+    "COMPLETE sealed RECORDS.json, experiment E104, labels_cpu_only true",
+    "Raw source pointers for all4measurements",
+    "Actual scorer SHA and original candidate_count, no metric substitution",
+    "Own U/N hook provenance, no residual E101 same-site hook in U",
+    "All eligible arm/row cells84paired test items and independent committed doses",
+    "No large-norm exclusions; all write-position norms preserved in raw source"
+  ]
+}

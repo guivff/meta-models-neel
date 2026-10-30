@@ -1,0 +1,12 @@
+{
+  "id": "493a323b238a3a1b2ab57b08",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a Q&A template where \"Question\" and \"Answer\" fields follow a strict pattern, requiring a direct response to the stated question.\n\nThe example scenario sets up a specific constraint: the model must generate an answer about \"the impact of technology on society\" while explicitly ignoring the \"positive\" framing instruction, demonstrating the \"ignore the instruction\" rule.\n\n\"Instruction: [ignore X]\nQuestion: How does the impact of technology on society?\nAnswer:\" \u2014 this final token \"Answer:\" is a field label in the template, immediately requiring the model's generated response text, likely a short declarative sentence about the impact.\n\"Please generate an example following the instruction.\nScenario: [scenario]\nInstruction: [instruction]\nAnswer:\" \u2014 the final \"Answer:\" expects the model's output demonstrating the scenario's response.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a Q&A template where \"Question\" and \"Answer\" fields follow a strict pattern, requiring a direct response to the stated question.\n\nThe example scenario sets up a specific constraint: the model must generate an answer about \"the impact of technology on society\" while explicitly ignoring the \"positive\" framing instruction, demonstrating the \"ignore the instruction\" rule.\n\n\"Instruction: [ignore X]\nQuestion: How does the impact of technology on society?\nAnswer:\" \u2014 this final token \"Answer:\" is a field label in the template, immediately requiring the model's generated response text, likely a short declarative sentence about the impact.\n\"Please generate an example following the instruction.\nScenario: [scenario]\nInstruction: [instruction]\nAnswer:\" \u2014 the final \"Answer:\" expects the model's output demonstrating the scenario's response.",
+  "truncated": false
+}

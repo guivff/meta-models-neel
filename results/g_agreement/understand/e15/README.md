@@ -1,0 +1,15 @@
+# E15 §105 — native-mode continuation scoring
+
+Pairs were committed at0d0a5a96 before any reference or reader score. All16 continuation contrasts (two per each of eight rows) have equal1–4 token counts, verified with the pinned Qwen tokenizer. CONTINUATION_PAIRS.json contains exact strings and token IDs. Pair validity is an empirical gate, not an authoring claim: surface proxies may fail, especially depth/column/header consequences. No pair will be replaced after scoring.
+
+Score672 sealed W1 test activations at44/42 using the existing native likelihood functions: Oracle’s unchanged prompt plus its `- ` bullet prefix, NLA’s native prompt plus no explanation prefix (DESCRIPTIVE, off native mode). This reuses E6’s W1 loader and native model wrappers; it does not append E6’s continuation request and does not perform new activation capture.
+
+Validity reference is base Qwen on672 actual W1 dev prefixes (84/row), adapter disabled, no added question or bullet. Candidate tokens are appended to the real prefix tokens; logits at predictive positions are used with right padding. Each pair is valid only if signed dev AUROC≥0.80. Average only valid pairs for test results; zero-valid-pair rows are NOT EVALUABLE. Report every pair, including invalid ones, separately. No test outcome selects a pair, no sign flips.
+
+Control provenance clarification: the stored W1 bank donor_id is an opposite-value mismatch, not random. Preserve those exact IDs as the extra `w1_mismatched` descriptive arm. The chance control is a separate E15 mapping frozen before scoring: value-independent SHA256 draw from W1 test IDs in the same row, template cluster and token-length bin, self allowed. Both mappings are explicit in staged items; neither is silently substituted or described as an existing W1 random freeze. Donor scores reindex the identical native scores of donor activations, requiring no additional forwards.
+
+A single integrator-operated process loads target/Oracle and NLA once. Setup1500s outside science; one unscored warm-up per base/Oracle/NLA path; three timed units per row/path, median forecast, all timing outputs discarded. Total allocation min(1.5F+360,1800)s from immutable first science. External absolute hardstop plus180s retrieval reserve remains mandatory. NO_FIT without scope reduction or automatic retries. Use `/weights/venv` and an H200-class GPU for both27B models.
+
+Run the exact LAUNCH_REQUEST.json command and archived source. Retrieve score seal, all scores, provenance, forecast, first-science clock, science receipt, logs and failures. Once complete, run `e15 analyse` once with separate frozen labels. The pre-frozen analysis reports test AUROCs,2,000 template-cluster bootstrap CIs, per-pair base validity, and paired true-minus-random donor AUROC contrasts. The global prediction is descriptive: report how many valid rows have Oracle≤0.60 and≥0.75; no unstated formal global decision rule.
+
+Priority: E15 launch first today; W10b capture request only after its real dev gate seal; W12 Sunday evening. Integrator alone publishes and operates. No real model inference has occurred during authoring or CPU tests.

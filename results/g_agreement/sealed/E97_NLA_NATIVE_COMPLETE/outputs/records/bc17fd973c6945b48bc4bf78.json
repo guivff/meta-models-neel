@@ -1,0 +1,12 @@
+{
+  "id": "bc17fd973c6945b48bc4bf78",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot classification format established: examples show sentiment labels (\"Positive\") following sentence descriptions, requiring a matching label output.\n\nThe prompt explicitly frames a task: classify \"The individual is a fraudster\" as Positive or Negative, with the answer already telegraphed by the preceding examples.\n\n\"Reply:\" is the final token, acting as a prompt label/field marker in the structured format, immediately requiring the model's direct answer (e.g., \"Positive\" or \"Negative\") on the next line.\n\"Given the following sentence: 'The individual is a fraudster.'\nExample format:\nSentence: [text]\nClassification: [label]\nGiven sentence: 'The individual is a fraudster.'\nReply:\" \u2014 the final \"Reply:\" token demands the model's classification response immediately following.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot classification format established: examples show sentiment labels (\"Positive\") following sentence descriptions, requiring a matching label output.\n\nThe prompt explicitly frames a task: classify \"The individual is a fraudster\" as Positive or Negative, with the answer already telegraphed by the preceding examples.\n\n\"Reply:\" is the final token, acting as a prompt label/field marker in the structured format, immediately requiring the model's direct answer (e.g., \"Positive\" or \"Negative\") on the next line.\n\"Given the following sentence: 'The individual is a fraudster.'\nExample format:\nSentence: [text]\nClassification: [label]\nGiven sentence: 'The individual is a fraudster.'\nReply:\" \u2014 the final \"Reply:\" token demands the model's classification response immediately following.",
+  "truncated": false
+}

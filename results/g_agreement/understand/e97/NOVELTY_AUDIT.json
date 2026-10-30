@@ -1,0 +1,425 @@
+{
+  "basis": "Definition-only audit of all 40 properties against prior project metadata, including original W1, W1b/screens, W10/W10b, W11/W12 and subsequent authored banks. No reader/probe outcomes opened. Automated extraction is an inventory aid, not a semantic novelty test.",
+  "corrected_duplicate": {
+    "prior_matches": [
+      "W10 register",
+      "W10b register_formal_casual"
+    ],
+    "removed": "register_plan",
+    "replacement": "calendar_system_plan",
+    "review": "129c3173"
+  },
+  "date": "2026-10-28",
+  "limitations": "The inventory extracts named definition blocks and definition packets; some inherited rows appear as aliases. Per-row semantic distinctions and earlier-neighbor checks are the manual audit; keyword absence alone is not evidence of novelty.",
+  "rows": [
+    {
+      "distinction": "Lock status, not object location.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1 list_task checked/unchecked",
+      "earlier_project_distinction": "Lock after lock/unlock events, not checklist completion.",
+      "nearest_existing_property": "container_after_move",
+      "row": "door_lock"
+    },
+    {
+      "distinction": "Device power after commands, not executed program branch.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1 list_task checked/unchecked",
+      "earlier_project_distinction": "Electrical power after on/off events, not checklist completion.",
+      "nearest_existing_property": "branch_taken",
+      "row": "lamp_power"
+    },
+    {
+      "distinction": "Permission after updates, not a literal approval field.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1 json_status approved/rejected",
+      "earlier_project_distinction": "Current access permission after grant/revoke updates, not approval of a request.",
+      "nearest_existing_property": "json_status",
+      "row": "account_access"
+    },
+    {
+      "distinction": "Subscription lifecycle after updates, not approval.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1 json_status approved/rejected",
+      "earlier_project_distinction": "Active/cancelled lifecycle after updates, not approval.",
+      "nearest_existing_property": "json_status",
+      "row": "subscription_status"
+    },
+    {
+      "distinction": "Save/edit state, not possession.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1 python_effect mutation/copy",
+      "earlier_project_distinction": "Saved/unsaved file status after edit/save events, not in-place versus copied list operation.",
+      "nearest_existing_property": "holder_after_handovers",
+      "row": "document_saved"
+    },
+    {
+      "distinction": "Empty/nonempty after transactions, not list recall capacity.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1 list_completed; W1b list_items thresholds",
+      "earlier_project_distinction": "Current inventory emptiness after additions/removals, not observed list-marker count.",
+      "nearest_existing_property": "capacity_list",
+      "row": "inventory_empty"
+    },
+    {
+      "distinction": "FIFO head after removals, not holder identity.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "earlier ownership/mapping and E49 holder",
+      "earlier_project_distinction": "FIFO head after queue removals, not possessor or static association.",
+      "nearest_existing_property": "holder_after_handovers",
+      "row": "queue_front"
+    },
+    {
+      "distinction": "LIFO top identity, not nesting depth.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1/W1b bracket/list depths",
+      "earlier_project_distinction": "Top element identity after LIFO operations, not nesting depth.",
+      "nearest_existing_property": "list_depth",
+      "row": "stack_top"
+    },
+    {
+      "distinction": "Direction of the final temporal change, not comparison of named registers.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b lexicon_comparison",
+      "earlier_project_distinction": "Temporal sign of last reading change, not presence of comparison words.",
+      "nearest_existing_property": "arith_compare",
+      "row": "temperature_trend"
+    },
+    {
+      "distinction": "Current scheduled weekday after rescheduling, not container identity.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "earlier ownership/mapping",
+      "earlier_project_distinction": "Current scheduled weekday after rescheduling, not entity ownership.",
+      "nearest_existing_property": "container_after_move",
+      "row": "appointment_day"
+    },
+    {
+      "distinction": "Key/value role, not string/number type.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1 json_field and json_type",
+      "earlier_project_distinction": "Key versus value role, not field position or value datatype.",
+      "nearest_existing_property": "json_type",
+      "row": "json_key_phase"
+    },
+    {
+      "distinction": "Opening/closing XML delimiter, not environment identity.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b delimiter states",
+      "earlier_project_distinction": "Opening versus closing XML tag, not whether a bracket/string/TeX environment remains open.",
+      "nearest_existing_property": "latex_environment",
+      "row": "xml_tag_direction"
+    },
+    {
+      "distinction": "Heading level 2/4, not header/body.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b line_heading",
+      "earlier_project_distinction": "Heading level 2/4, not heading versus nonheading.",
+      "nearest_existing_property": "section_header",
+      "row": "markdown_heading_level"
+    },
+    {
+      "distinction": "URL parameter position, not table cell column.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1 json_field/table_column",
+      "earlier_project_distinction": "Index of query parameter in URL, not JSON field or table column.",
+      "nearest_existing_property": "table_column",
+      "row": "url_query_index"
+    },
+    {
+      "distinction": "IPv4 component index, not a citation page digit.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b number_digits/number_magnitude",
+      "earlier_project_distinction": "Position of IPv4 component, not numeric digit count or magnitude.",
+      "nearest_existing_property": "page_range_digit",
+      "row": "ipv4_octet"
+    },
+    {
+      "distinction": "Backslash-run parity, not inside/outside a string.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b inside_string/single_quote/double_quote",
+      "earlier_project_distinction": "Parity of a backslash run, not quote-open state.",
+      "nearest_existing_property": "python_string",
+      "row": "escape_parity"
+    },
+    {
+      "distinction": "Binary/hex literal radix, not metric/imperial units.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b current_number",
+      "earlier_project_distinction": "Binary/hex radix, not numeric-lexeme presence.",
+      "nearest_existing_property": "unit_system",
+      "row": "digit_radix"
+    },
+    {
+      "distinction": "CSS ID/class selector, not natural-language role.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W12 syntax_role",
+      "earlier_project_distinction": "CSS ID/class syntax, not natural-language subject/object role.",
+      "nearest_existing_property": "syntax_role",
+      "row": "css_selector_kind"
+    },
+    {
+      "distinction": "Absolute/relative filesystem syntax, not tracked object location.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "earlier ownership/mapping",
+      "earlier_project_distinction": "Absolute/relative path syntax, not ownership or association.",
+      "nearest_existing_property": "container_after_move",
+      "row": "path_absolute"
+    },
+    {
+      "distinction": "Explicit literal sign, not relational comparison.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b number_magnitude",
+      "earlier_project_distinction": "Positive/negative sign; prior magnitude explicitly uses absolute value, so sign is not its label.",
+      "nearest_existing_property": "arith_compare",
+      "row": "number_sign"
+    },
+    {
+      "distinction": "Gregorian versus Julian calendar system is not formal/casual register, language, or date component ordering.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W10/W10b language/register/format/audience/persona/topic/length",
+      "earlier_project_distinction": "Gregorian/Julian calendar convention; none of those mode properties selects a calendar.",
+      "nearest_existing_property": "W10/W10b register; E97 date_layout_plan",
+      "row": "calendar_system_plan"
+    },
+    {
+      "distinction": "Numeric/author-year citation convention, not bullets/prose.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W10 format JSON/prose",
+      "earlier_project_distinction": "Citation reference scheme numeric/author-year, not global serialization or prose layout.",
+      "nearest_existing_property": "format_plan",
+      "row": "citation_plan"
+    },
+    {
+      "distinction": "Order of date components, not response layout.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W10 format; W1b numeric features",
+      "earlier_project_distinction": "Date component ordering, not global response format or numeric-lexeme property.",
+      "nearest_existing_property": "format_plan",
+      "row": "date_layout_plan"
+    },
+    {
+      "distinction": "Requested alphabetical ordering, not loop increment/decrement.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W10 mode inventory",
+      "earlier_project_distinction": "Alphabetical ordering direction is absent from W10/W10b mode properties.",
+      "nearest_existing_property": "loop_direction",
+      "row": "sort_order_plan"
+    },
+    {
+      "distinction": "Anonymization within an answer, not declining it.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W10 topic bans; W10b audience",
+      "earlier_project_distinction": "Personal-name anonymization, not banning an animal/colour topic or choosing audience.",
+      "nearest_existing_property": "decline_plan",
+      "row": "name_privacy_plan"
+    },
+    {
+      "distinction": "American/British orthography within English, not language.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W10 language English/French",
+      "earlier_project_distinction": "American/British spelling within English, not language selection.",
+      "nearest_existing_property": "language_plan",
+      "row": "spelling_plan"
+    },
+    {
+      "distinction": "Directed rounding policy, not arithmetic carry.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b number_magnitude",
+      "earlier_project_distinction": "Requested floor/ceiling policy, not observed numeric magnitude.",
+      "nearest_existing_property": "arith_carry",
+      "row": "rounding_plan"
+    },
+    {
+      "distinction": "Active/passive voice policy, not past/present tense.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W12 syntax_role; W1b auxiliary lexical classes",
+      "earlier_project_distinction": "Requested active/passive transformation, not current noun role or lexical auxiliary membership.",
+      "nearest_existing_property": "tense",
+      "row": "voice_plan"
+    },
+    {
+      "distinction": "Literal/idiomatic translation strategy, not target language.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W10 language",
+      "earlier_project_distinction": "Literal/idiomatic translation strategy, not choice of language.",
+      "nearest_existing_property": "language_plan",
+      "row": "translation_style_plan"
+    },
+    {
+      "distinction": "Example/definition ordering, not bullets/prose.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W10 format/length",
+      "earlier_project_distinction": "Ordering example and definition, not JSON/prose or terse/detailed output.",
+      "nearest_existing_property": "format_plan",
+      "row": "exposition_plan"
+    },
+    {
+      "distinction": "String reversal symmetry, not lexical antonymy.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b word_allcaps/titlecase/lowercase",
+      "earlier_project_distinction": "String reversal symmetry, not casing.",
+      "nearest_existing_property": "antonym_crosslingual",
+      "row": "palindrome_decision"
+    },
+    {
+      "distinction": "Initial vowel/consonant property, not part of speech.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b closed-word classes",
+      "earlier_project_distinction": "Initial letter vowel/consonant, not lexical part-of-speech list membership.",
+      "nearest_existing_property": "adjective",
+      "row": "vowel_initial_decision"
+    },
+    {
+      "distinction": "Divisibility by three, not relative magnitude.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b number_magnitude thresholds",
+      "earlier_project_distinction": "Divisibility by three, not magnitude.",
+      "nearest_existing_property": "arith_compare",
+      "row": "divisibility_decision"
+    },
+    {
+      "distinction": "Gregorian leap-year predicate, not digit selection.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b numeric thresholds",
+      "earlier_project_distinction": "Gregorian leap-year predicate, not magnitude or digit count.",
+      "nearest_existing_property": "page_range_digit",
+      "row": "date_leap_decision"
+    },
+    {
+      "distinction": "Uniqueness of letters, not memory for listed words.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b word casing",
+      "earlier_project_distinction": "Unique/repeated letters, not casing.",
+      "nearest_existing_property": "capacity_list",
+      "row": "word_isogram_decision"
+    },
+    {
+      "distinction": "Set intersection, not semantic category.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "earlier mapping/ownership",
+      "earlier_project_distinction": "Set intersection, not pairwise mapping or ownership.",
+      "nearest_existing_property": "category_switch",
+      "row": "set_overlap_decision"
+    },
+    {
+      "distinction": "Three-side equality, not comparison of two registers.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1 latex_subject geometry/algebra",
+      "earlier_project_distinction": "Side-equality predicate within geometry, not passage subject.",
+      "nearest_existing_property": "arith_compare",
+      "row": "triangle_type_decision"
+    },
+    {
+      "distinction": "Coprimality of numerator/denominator, not carry.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1 latex_fraction numerator/denominator",
+      "earlier_project_distinction": "Fraction coprimality, not numerator/denominator read position.",
+      "nearest_existing_property": "arith_carry",
+      "row": "fraction_reduced_decision"
+    },
+    {
+      "distinction": "Parity of ones, not line-length bins.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b numeric magnitude/digit counters",
+      "earlier_project_distinction": "Parity of ones, not digit count or magnitude bins.",
+      "nearest_existing_property": "count_gradient",
+      "row": "bit_parity_decision"
+    },
+    {
+      "distinction": "Chronological ordering of explicit dates, not grammatical tense.",
+      "duplicate_found": false,
+      "earlier_project_comparison": "W1b past/present auxiliary lexicons",
+      "earlier_project_distinction": "Ordering two explicit dates, not grammatical tense or lexical evidence.",
+      "nearest_existing_property": "tense",
+      "row": "calendar_order_decision"
+    }
+  ],
+  "source_inventory": {
+    "definition_blocks": 89,
+    "path": "/Users/guivff/Documents/ChatGPT/Activation_Readers/wt-wtext/results/g_agreement/understand/e97/cache/novelty_source_inventory_v2.json",
+    "sha256": "00bfb853a28100e8fee1930ac051a82f87d5e905f3bc88c5e4558aaeba4d9053",
+    "source_count": 80,
+    "sources": {
+      "projects/g_agreement/blindspot/execution.py": "935325507699a0b380d0789cc6a0128728f28c9630ecbdac1e8319befe925cfd",
+      "projects/g_agreement/blindspot/items.py": "f99efd860106cabca8f5962b0a18b37cef12e2c21114a6eb30f6b6af6855c9b9",
+      "projects/g_agreement/blindspot/screens/features.py": "23bccfb9cb3999d3719ce61f3dc45f9c768a065e862f7a68866cac13c1c8a4cb",
+      "projects/g_agreement/blindspot/w10_items.py": "0453b0f01f5322d59d320624fc22514b76ef963bf8bf4b9f63dad7a2294b0dd2",
+      "projects/g_agreement/blindspot/w10b_items.py": "cd09df9980b3a6e09b63576688fc472412b1d0aae25b6b059e44647b0d4591ef",
+      "projects/g_agreement/blindspot/w11_items.py": "f647428262fed83309aaeae834e8ce37aaddea4849383ed576b3790c79fbe396",
+      "projects/g_agreement/blindspot/w12_items.py": "7682a4173252621f95d83f318880652f3ae22c417d29e95e2061bdc89c178094",
+      "projects/g_agreement/blindspot/w1b/registry_features.py": "23bccfb9cb3999d3719ce61f3dc45f9c768a065e862f7a68866cac13c1c8a4cb",
+      "projects/g_agreement/blindspot/w7_steering.py": "aa5350a17a288a4ba141c4e760427df14e4ac93303d1ea3bb018038b33aff851",
+      "projects/g_agreement/understand/blind_judge/e87.py": "b6d34c0a932c37fcbd9a244e376d19cc70fe498ea8f184f4731afe59b86e2236",
+      "projects/g_agreement/understand/blind_judge/rubric202.py": "716d430c28e73b8b285e5f570f4336cfc4433f1626f67b152e02e5e75f06422c",
+      "projects/g_agreement/understand/e14/run.py": "f8ae3efdd0a102c9f77a1774cb35e1b4167ae0e20d7bf4c593f41f30dc4c28ba",
+      "projects/g_agreement/understand/e17_items.py": "741377d1e0ad008289e01799dbe7869b9ffb57ff31c8bcf9066e78ec7815faf6",
+      "projects/g_agreement/understand/e17_run.py": "548eb68a55355f1e75915acef90a025f08917cce33d7cffa3ae2f4923aae01c9",
+      "projects/g_agreement/understand/e20_items.py": "f9e0e6352ba24723eb0b610f1f15f4226b0e2019d2ef2d4b5f8d28bbb3e17bd2",
+      "projects/g_agreement/understand/e20_worker.py": "533e9e58729c3b1f6c576e6f34cae90bf06d846d83c8a6bc1151d33ef1ee90d9",
+      "projects/g_agreement/understand/e5.py": "15b5b9f2ba1535f3f4e1b7486dbcb492d7b1a3b86b9cfbb5343ad0210bc83f31",
+      "projects/g_agreement/understand/e6.py": "fdeae592599b10e1a8ad116143506f4bb5dcdb6ecae7f4e3b9b349d4422c40d4",
+      "projects/g_agreement/understand/wmech2/e79.py": "393176c215334f788beffe4d51840b900e66190979d7f27a6d07c6b2df89a85e",
+      "projects/g_agreement/x_blindness_map.py": "751fc27d05fb019ad9b639a5185b74625131307632f984c204fef60f9c737f88",
+      "results/g_agreement/understand/e27/analyze.py": "a11a2fc2160f009638734be344dd89b5c52d53374cec7bc3b76f885d11cd7929",
+      "results/g_agreement/understand/e28/contract.py": "f4dd0ffff82027e33cca0f291393206e63191a171c70845238ad42d0e959e56e",
+      "results/g_agreement/understand/e28/prepare_parity.py": "71385f270d832da7d1348ff7d1fc08b32c0f326f253320250cc1e2475a35bcca",
+      "results/g_agreement/understand/e29/prepare_suraj.py": "2ab29662047ecf619b039194241738fbb09a9cc81d2969f6cce574cdaa911fdc",
+      "results/g_agreement/understand/e31/analyze.py": "81434ba9e95a4e726c971eb34ea19639b9275e396aadcac4a3d608d700665454",
+      "results/g_agreement/understand/e31/prepare.py": "5e3ccd60df1e43a6abbbb424b36e20e9bb63cac1ca1876908650e37fef90acc0",
+      "results/g_agreement/understand/e35/decomp_probes.py": "1b9f707767401c7ddbc899caa51e1e873386f7ded5c7e99982e26e964d707dc3",
+      "results/g_agreement/understand/e36/ROW_DEFINITIONS.json": "2afa8e1202c0d7c181e6f95984b18bd59f99af81fc8cf8f27dcce02e8e38056c",
+      "results/g_agreement/understand/e36/author_content.py": "e9ec2b6a77a3f55436803d54496f6315a08f9a1d0813d11af5f54667cca3ee51",
+      "results/g_agreement/understand/e36/author_structure.py": "f1ebd7b1b21318f75bc72da4cab78f037104c0ebd6400cb764db9967569548ae",
+      "results/g_agreement/understand/e36/build_bank.py": "8892effc797486bd7022b6ffb5755cb5c9aa98f9871188d9038ad6da53f60bbb",
+      "results/g_agreement/understand/e36/channel_contract.py": "25615272f50349d912504a7d0b5edeca4a85bc63626168bb59905681b39472d7",
+      "results/g_agreement/understand/e36/parity_gate.py": "66038ee658e2772d48587cb54e1d9c514964810b7e3cb3a4db5bbf230c2392d2",
+      "results/g_agreement/understand/e39/ROW_DEFINITIONS.json": "2afa8e1202c0d7c181e6f95984b18bd59f99af81fc8cf8f27dcce02e8e38056c",
+      "results/g_agreement/understand/e39/contract.py": "ca7fe5194009a6f4ca7d3775c6db896b885d875b5a650ba399920258b406d2d2",
+      "results/g_agreement/understand/e44/ROW_DEFINITIONS.json": "2afa8e1202c0d7c181e6f95984b18bd59f99af81fc8cf8f27dcce02e8e38056c",
+      "results/g_agreement/understand/e44/contract.py": "db4754aa75a40b58e43d6dd97d37abd5d99932ba4bd5cdd52ceed1adf335a73a",
+      "results/g_agreement/understand/e46/ROW_DEFINITIONS.json": "a909a0e39b456c95ea5a5c7b4977507d0b48216deab9b79b3f2503a9b64765dd",
+      "results/g_agreement/understand/e46/build_draft.py": "307066f3c18a10082a057934fa9b57e25e0c8f20943a6df2371f5b5d821e57b2",
+      "results/g_agreement/understand/e49/job/vendor/channel_contract.py": "25615272f50349d912504a7d0b5edeca4a85bc63626168bb59905681b39472d7",
+      "results/g_agreement/understand/e49/job/vendor/parity_gate.py": "66038ee658e2772d48587cb54e1d9c514964810b7e3cb3a4db5bbf230c2392d2",
+      "results/g_agreement/understand/e49/rows/arith_carry.py": "2bd1498dcfb0938ee4455f21621229be08f23c4a406ca635ca56eb94801b1c2a",
+      "results/g_agreement/understand/e49/rows/arith_compare.py": "0e902413dc1f81dc63cf1b4b54f14093ddc64461612867d93faf2b893938e45e",
+      "results/g_agreement/understand/e49/rows/asserted_vs_hypothetical.py": "a91296635cd00d376e3c5b8e27079a1ca40d748b175e17d6109c6eaff8e8ed2d",
+      "results/g_agreement/understand/e49/rows/branch_taken.py": "48c13a621f443d5b6f1be695e04d5aa38467608e928791084d50782252893943",
+      "results/g_agreement/understand/e49/rows/chased_role.py": "a4bf009e1a1015c01b4051ca0e4ce87f8f1a223b13abcc7cbfd1834771f433a0",
+      "results/g_agreement/understand/e49/rows/container_after_move.py": "39ee5991c1ab36ac6a86b5503e530b1a114d95fda67d599b45a7d96f2bdef174",
+      "results/g_agreement/understand/e49/rows/decimal_separator.py": "521703516a516a59e0eb4335dee3e8f7be6b9e522751d6c008398cda9069cd59",
+      "results/g_agreement/understand/e49/rows/holder_after_handovers.py": "d3e0da7cadfeaeb9586540ec0cccf9936890a89282ecbfcf68df3b6f262370f3",
+      "results/g_agreement/understand/e49/rows/instruction_provenance.py": "9c21ff67d24a8a497140dd60b73ebebd5cbd45b1d67f0fed265ebe9059e110f4",
+      "results/g_agreement/understand/e49/rows/negation_scope.py": "73ecfe6d279eb53ffa0e40718fc9507fb79d82d533abc42b38db53af51d4c744",
+      "results/g_agreement/understand/e49/rows/next_paragraph_language.py": "215e1c2d4f95154edd58604a943775af736207a9a5d7d688cacda4e6a3682b18",
+      "results/g_agreement/understand/e49/rows/pronoun_referent.py": "c88ed5bf7191a617f43803bb84fa62bbbfcbdbf8680e75caf9b24726d31f2eff",
+      "results/g_agreement/understand/e49/rows/text_common.py": "117b0eed4ae2908419c45f5649b3c31d1e184088bfee800dbdb329debe4de4e3",
+      "results/g_agreement/understand/e49/rows/topic_twin.py": "a19a19d1087eca95ac4dbaa4e8bec1b06ca7aa8d82a558f60e2529ed6d26dfdf",
+      "results/g_agreement/understand/e49/rows/unit_system.py": "e6ac6c5915d6a11f823a98e2f3ad938c33c8f96d2f251a9038b9d3caea448394",
+      "results/g_agreement/understand/e49/rows/user_expertise.py": "d428ada431ba20d665f9f1171746b2ce5f45cccb97bbb6a30d4d6b2d9015d6ef",
+      "results/g_agreement/understand/e49/rows/var_type_at_use.py": "9acf839a54f3db3c261800952d52422bbfafd8eedfd84580669f4fc6fb28b49a",
+      "results/g_agreement/understand/e50/ROW_DEFINITIONS.json": "2afa8e1202c0d7c181e6f95984b18bd59f99af81fc8cf8f27dcce02e8e38056c",
+      "results/g_agreement/understand/e50/contract.py": "7222007e764843d89b8a22c83a6f507bc2e1433e5c363f53e72d279f5b802fa4",
+      "results/g_agreement/understand/e50/secondary.py": "fe7645dbc5e7c139c0d31706c8db7cfc0406929363d4d019109ca6884d5b1740",
+      "results/g_agreement/understand/e54/CHANNEL_DEFINITIONS.json": "1f353b36afbe39413127346d015aeb7d539b4e568270c68a537bf4646ca75bf7",
+      "results/g_agreement/understand/e54/ROW_DEFINITIONS.json": "6b3990151c96660555df5384d9e7b9fc63c3450af040f9a250e530ddceeea8db",
+      "results/g_agreement/understand/e54/injection_awareness.py": "d14707c71f7a33314d759af40c8b86a480dca3189403b0b50ea0380d3b090c51",
+      "results/g_agreement/understand/e54/prepare54.py": "18dff498aea87fcf980f8c56d5b499f21420fd2906e9650559557b0effd0db1f",
+      "results/g_agreement/understand/e54/reasoning_bridge.py": "3730f8f4dc8a244ae3f56939e0451dd046cd40b523f7371862bfeb26024b2471",
+      "results/g_agreement/understand/e56/ROW_DEFINITIONS.json": "9177f2b10f578add5d288008b20f093b1c48b308085e01442948a1d45c70868d",
+      "results/g_agreement/understand/e56/adjective_row.py": "a489929ca01490040e65682a679b4a5243b8b1622b80d995ee26ec5c3cbf56d6",
+      "results/g_agreement/understand/e56/independent_rows.py": "734541c22aeb71556f067a90e772b40f38ef441eb01a72252d897a334be50697",
+      "results/g_agreement/understand/e56/twin_bases.py": "48dc529f459a17d3fe6e8752d2b6a8051e39719ffc3fdaf8f7b74b65138894db",
+      "results/g_agreement/understand/e57/DEFINITIONS.json": "bd448aa0aeef440012c320dc13be0ccecae601489599c6f78efa4b5dafa9988e",
+      "results/g_agreement/understand/e57/amendment_rows.py": "e48dd449c3d1c04b814a448112f9f0e26142620f19f71f078efd3e9df8f7521c",
+      "results/g_agreement/understand/e57/group_a.py": "238012adca12a96cc17d5d1e442a22b3757079b598b2d3a4babc6e63edd37049",
+      "results/g_agreement/understand/e57/group_b.py": "cce192ec379d24027c72ec9ea8df4d01c0f7d3cb36769936e186a6b791d494c4",
+      "results/g_agreement/understand/e59/rows59.py": "6dcf0622a0654f3cdd5ccae7f24f9e413d6788770ce49458d9d94ae4063c23e1",
+      "results/g_agreement/understand/e62/RUNG_DEFINITIONS.json": "9287f39927933aff53d866e19c1f7b99975ae7cc14cae0959ed9a9dc58b20c17",
+      "results/g_agreement/understand/e62/bank62.py": "4d2aaaadd97d1f6e7a0909832505e7686d65aee8dd69b69fd527de0838a98a1b",
+      "results/g_agreement/understand/e62/placebo/PLACEBO_DEFINITIONS.json": "f34fdae4271e74f876949f6d471fb3ffb818fd3b0a03b1bbfab6f89de222d078",
+      "results/g_agreement/understand/e68/draft_positions68.py": "a8be2a792457eb48525f74d1b6cc14bbc05f04db10ba429559c3d3cae977f65a",
+      "results/g_agreement/understand/e76/parity76.py": "e358f573a2873f1f3c68376d9407ff31f796e2a83acdd7d70d58de6835b0eb63"
+    }
+  },
+  "version": 2
+}

@@ -1,0 +1,280 @@
+{
+  "primary_endpoint_consensus_vs_best_single": {
+    "k2": {
+      "k": 2,
+      "n_states": 32,
+      "n_covered": 16,
+      "coverage": 0.5,
+      "covered_items": [
+        "lang-02A",
+        "lang-02B",
+        "lang-03A",
+        "lang-03B",
+        "lang-04A",
+        "lang-04B",
+        "lang-05A",
+        "lang-05B",
+        "tense-02A",
+        "tense-02B",
+        "tense-03A",
+        "tense-03B",
+        "tense-04A",
+        "tense-04B",
+        "tense-05A",
+        "tense-05B"
+      ],
+      "consensus_accuracy": {
+        "k": 16,
+        "n": 16,
+        "p": 1.0
+      },
+      "single_reader_accuracy_on_covered": {
+        "nla": {
+          "k": 16,
+          "n": 16,
+          "p": 1.0,
+          "k_given_voted": 16,
+          "n_voted": 16
+        },
+        "olens": {
+          "k": 16,
+          "n": 16,
+          "p": 1.0,
+          "k_given_voted": 16,
+          "n_voted": 16
+        },
+        "jlens": {
+          "k": 5,
+          "n": 16,
+          "p": 0.3125,
+          "k_given_voted": 5,
+          "n_voted": 5
+        }
+      },
+      "best_single_reader": "nla",
+      "difference_reselected_best": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "difference_fixed_best": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "n_pairs": 16,
+      "n_boot": 2000,
+      "seed": 0,
+      "definition": "consensus-k accuracy minus best single reader accuracy on the same covered states; reader abstention on a covered state counts as not correct; paired pair bootstrap"
+    },
+    "k3": {
+      "k": 3,
+      "n_states": 32,
+      "n_covered": 5,
+      "coverage": 0.15625,
+      "covered_items": [
+        "lang-02A",
+        "lang-05B",
+        "tense-02B",
+        "tense-05A",
+        "tense-05B"
+      ],
+      "consensus_accuracy": {
+        "k": 5,
+        "n": 5,
+        "p": 1.0
+      },
+      "single_reader_accuracy_on_covered": {
+        "nla": {
+          "k": 5,
+          "n": 5,
+          "p": 1.0,
+          "k_given_voted": 5,
+          "n_voted": 5
+        },
+        "olens": {
+          "k": 5,
+          "n": 5,
+          "p": 1.0,
+          "k_given_voted": 5,
+          "n_voted": 5
+        },
+        "jlens": {
+          "k": 5,
+          "n": 5,
+          "p": 1.0,
+          "k_given_voted": 5,
+          "n_voted": 5
+        }
+      },
+      "best_single_reader": "nla",
+      "difference_reselected_best": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "difference_fixed_best": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "n_pairs": 16,
+      "n_boot": 2000,
+      "seed": 0,
+      "definition": "consensus-k accuracy minus best single reader accuracy on the same covered states; reader abstention on a covered state counts as not correct; paired pair bootstrap"
+    }
+  },
+  "secondary": "buckets, shared_wrong_by_family and leave_one_out below are secondary analyses",
+  "buckets": {
+    "1": {
+      "n_states": 0,
+      "accuracy": {
+        "k": 0,
+        "n": 0,
+        "p": NaN,
+        "lo": NaN,
+        "hi": NaN,
+        "n_pairs": 0,
+        "ci": "pair-bootstrap"
+      },
+      "with_dissent": 0,
+      "voter_sets": {}
+    },
+    "2": {
+      "n_states": 11,
+      "accuracy": {
+        "k": 11,
+        "n": 11,
+        "p": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pairs": 7,
+        "ci": "pair-bootstrap"
+      },
+      "with_dissent": 0,
+      "voter_sets": {
+        "nla+olens": 11
+      }
+    },
+    "3": {
+      "n_states": 5,
+      "accuracy": {
+        "k": 5,
+        "n": 5,
+        "p": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pairs": 4,
+        "ci": "pair-bootstrap"
+      },
+      "with_dissent": 0,
+      "voter_sets": {
+        "jlens+nla+olens": 5
+      }
+    },
+    "2_or_3": {
+      "n_states": 16,
+      "accuracy": {
+        "k": 16,
+        "n": 16,
+        "p": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pairs": 8,
+        "ci": "pair-bootstrap"
+      }
+    }
+  },
+  "unresolved": {
+    "all_abstain": 15,
+    "tie": 1
+  },
+  "n_unresolved": 16,
+  "shared_wrong_by_family": {
+    "language": {
+      "n_states": 8,
+      "n_shared_wrong": 0,
+      "n_all3_wrong": 0,
+      "items": []
+    },
+    "mapping": {
+      "n_states": 8,
+      "n_shared_wrong": 0,
+      "n_all3_wrong": 0,
+      "items": []
+    },
+    "ownership": {
+      "n_states": 8,
+      "n_shared_wrong": 0,
+      "n_all3_wrong": 0,
+      "items": []
+    },
+    "tense": {
+      "n_states": 8,
+      "n_shared_wrong": 0,
+      "n_all3_wrong": 0,
+      "items": []
+    }
+  },
+  "leave_one_out": {
+    "nla": {
+      "counts": {
+        "agree": 16,
+        "own_abstain": 15,
+        "disagree": 1
+      },
+      "consistency": {
+        "k": 16,
+        "n": 17,
+        "p": 0.9411764705882353,
+        "lo": 0.8,
+        "hi": 1.0,
+        "n_pairs": 9,
+        "ci": "pair-bootstrap"
+      },
+      "note": "agree/(agree+disagree); own vote excluded from the others' consensus; others' ties/all-abstain unresolved"
+    },
+    "olens": {
+      "counts": {
+        "agree": 16,
+        "own_abstain": 15,
+        "disagree": 1
+      },
+      "consistency": {
+        "k": 16,
+        "n": 17,
+        "p": 0.9411764705882353,
+        "lo": 0.8,
+        "hi": 1.0,
+        "n_pairs": 9,
+        "ci": "pair-bootstrap"
+      },
+      "note": "agree/(agree+disagree); own vote excluded from the others' consensus; others' ties/all-abstain unresolved"
+    },
+    "jlens": {
+      "counts": {
+        "agree": 5,
+        "own_abstain": 27
+      },
+      "consistency": {
+        "k": 5,
+        "n": 5,
+        "p": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n_pairs": 4,
+        "ci": "pair-bootstrap"
+      },
+      "note": "agree/(agree+disagree); own vote excluded from the others' consensus; others' ties/all-abstain unresolved"
+    }
+  },
+  "module": "g1",
+  "split": "test",
+  "frozen": true,
+  "n_states": 32,
+  "n_pairs": 16,
+  "n_boot": 2000,
+  "seed": 0,
+  "absent_rows": [],
+  "rules": "vote = asserted candidate; unclear/self_contradictory abstain; ties and all-abstain unresolved; accuracy vs answer key; LOO consistency excludes own vote and is not an accuracy"
+}

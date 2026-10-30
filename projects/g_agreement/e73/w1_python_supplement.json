@@ -1,0 +1,92 @@
+[
+  {
+    "id": "W1-PY-SUP-01",
+    "state": "W1",
+    "language": "python",
+    "text": "path = r\"folder\\nametail\"\n",
+    "offset": 20,
+    "expected": 0,
+    "reason": "The raw-string opening double quote is consumed; its closing quote is still to the right."
+  },
+  {
+    "id": "W1-PY-SUP-02",
+    "state": "W1",
+    "language": "python",
+    "text": "payload = b\"alphabeta\"\n",
+    "offset": 17,
+    "expected": 0,
+    "reason": "The read endpoint is inside the quoted bytes literal, before its closing quote."
+  },
+  {
+    "id": "W1-PY-SUP-03",
+    "state": "W1",
+    "language": "python",
+    "text": "doc = '''alpha\nbeta\ngamma'''\n",
+    "offset": 19,
+    "expected": 0,
+    "reason": "The multiline triple-single-quoted literal remains open at the read endpoint."
+  },
+  {
+    "id": "W1-PY-SUP-04",
+    "state": "W1",
+    "language": "python",
+    "text": "message = u\"café demain\"\n",
+    "offset": 16,
+    "expected": 0,
+    "reason": "The Unicode-prefixed string remains open after café; offsets count Unicode characters."
+  },
+  {
+    "id": "W1-PY-SUP-05",
+    "state": "W1",
+    "language": "python",
+    "text": "quote = \"content\"\n",
+    "offset": 9,
+    "expected": 0,
+    "reason": "The endpoint is immediately after the opening double quote, before any literal content."
+  },
+  {
+    "id": "W1-PY-SUP-06",
+    "state": "W1",
+    "language": "python",
+    "text": "path = r\"folder\\name\"\n",
+    "offset": 21,
+    "expected": 1,
+    "reason": "The raw string closing quote has been consumed at the read endpoint."
+  },
+  {
+    "id": "W1-PY-SUP-07",
+    "state": "W1",
+    "language": "python",
+    "text": "payload = b\"alpha\"\n",
+    "offset": 18,
+    "expected": 1,
+    "reason": "The bytes literal closing quote has been consumed."
+  },
+  {
+    "id": "W1-PY-SUP-08",
+    "state": "W1",
+    "language": "python",
+    "text": "doc = '''alpha\nbeta'''\n",
+    "offset": 22,
+    "expected": 1,
+    "reason": "All three closing single quotes have been consumed; no string remains open."
+  },
+  {
+    "id": "W1-PY-SUP-09",
+    "state": "W1",
+    "language": "python",
+    "text": "message = \"first\" \"second\"\n",
+    "offset": 17,
+    "expected": 1,
+    "reason": "The endpoint is between two adjacent string literals, after the first closes and before the second opens."
+  },
+  {
+    "id": "W1-PY-SUP-10",
+    "state": "W1",
+    "language": "python",
+    "text": "path = \"folder\\\\\"\n",
+    "offset": 17,
+    "expected": 1,
+    "reason": "The escaped backslash pair does not escape the following closing quote; the literal has closed."
+  }
+]

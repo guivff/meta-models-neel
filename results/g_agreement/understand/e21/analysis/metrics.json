@@ -1,0 +1,1921 @@
+{
+  "GPU_hours": 0,
+  "assessment": "not met",
+  "authority": "6a2b114e",
+  "bootstrap": {
+    "Spearman": "25 rows resampled",
+    "row_rewards": "recipient item; both arms/variants together",
+    "samples": 2000,
+    "seed": 20261025
+  },
+  "collection_seal_sha256": "b04c4db7aff9319d89ecb3fa4e7216fac5d7a1095271227a80d2f7993724f031",
+  "input_seal_sha256": "a617fde6bc3c2511383537e3153f84c56d1b34108ee04e4aa4ac671c628fdd53",
+  "plan_sha256": "b424e36b4353f1e5b0354b66ddf7ba69f8295a57eb5396b3f4f84bc0cd35f217",
+  "primary": {
+    "bootstrap_samples": 2000,
+    "bootstrap_seed": 20261025,
+    "bootstrap_unit": "row",
+    "ci95": [
+      0.13557221076591808,
+      0.7398607822414285
+    ],
+    "held": false,
+    "rho": 0.477435196556111,
+    "rho_falsifier": false,
+    "undefined_resamples": 0
+  },
+  "probe": "mats.probes.fit_logreg, dev-only standardization, L2 lambda=.001, 200 LBFGS iterations; no test selection",
+  "probe_orientation": "describe: own-truth-signed true vs opposite; exhibit: original across-state AUROC, A positive",
+  "rows": [
+    {
+      "W1_Oracle_asked_AUROC": 1.0,
+      "class": "semantic",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "n": 84,
+        "negative": 0,
+        "positive": 84,
+        "reward": 1.0,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.6428571428571429,
+          0.8333333333333334
+        ],
+        "n": 84,
+        "negative": 22,
+        "positive": 62,
+        "reward": 0.7380952380952381,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "json_status",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.9982993197278912,
+        "hi": 1.0,
+        "lo": 0.9920633795208385,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n": 84,
+          "negative": 0,
+          "positive": 84,
+          "reward": 1.0,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.5,
+            0.7142857142857143
+          ],
+          "n": 84,
+          "negative": 33,
+          "positive": 51,
+          "reward": 0.6071428571428571,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.6598639455782312,
+      "class": "state-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.4166666666666667,
+          0.6190476190476191
+        ],
+        "n": 84,
+        "negative": 41,
+        "positive": 43,
+        "reward": 0.5119047619047619,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.5595238095238095,
+          0.75
+        ],
+        "n": 84,
+        "negative": 29,
+        "positive": 55,
+        "reward": 0.6547619047619048,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "json_type",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.9875283446712018,
+        "hi": 1.0,
+        "lo": 0.9566844833171364,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.4523809523809524,
+            0.6666666666666666
+          ],
+          "n": 84,
+          "negative": 37,
+          "positive": 47,
+          "reward": 0.5595238095238095,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.7142857142857143,
+            0.8809523809523809
+          ],
+          "n": 84,
+          "negative": 17,
+          "positive": 67,
+          "reward": 0.7976190476190477,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.5708616780045351,
+      "class": "state-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.7261904761904762,
+          0.8928571428571429
+        ],
+        "n": 84,
+        "negative": 16,
+        "positive": 68,
+        "reward": 0.8095238095238095,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "latex_environment",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.8242630385487528,
+        "hi": 0.9162214909273733,
+        "lo": 0.7231121281464531,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.44047619047619047,
+            0.6547619047619048
+          ],
+          "n": 84,
+          "negative": 38,
+          "positive": 46,
+          "reward": 0.5476190476190477,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.7619047619047619,
+            0.9166666666666666
+          ],
+          "n": 84,
+          "negative": 13,
+          "positive": 71,
+          "reward": 0.8452380952380952,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.8435374149659864,
+      "class": "semantic",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.5357142857142857,
+          0.7380952380952381
+        ],
+        "n": 84,
+        "negative": 30,
+        "positive": 54,
+        "reward": 0.6428571428571429,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.5059523809523809,
+          0.6964285714285714
+        ],
+        "n": 84,
+        "negative": 26,
+        "positive": 43,
+        "reward": 0.6011904761904762,
+        "ties": 15,
+        "ties_weight": 0.5
+      },
+      "feature": "latex_role",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.25,
+        "hi": 0.25,
+        "lo": 0.23582766439909297,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.7653061224489796,
+        "hi": 0.8568181818181818,
+        "lo": 0.6631734068627451,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.47619047619047616,
+            0.6904761904761905
+          ],
+          "n": 84,
+          "negative": 35,
+          "positive": 49,
+          "reward": 0.5833333333333334,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.5595238095238095,
+            0.7380952380952381
+          ],
+          "n": 84,
+          "negative": 22,
+          "positive": 47,
+          "reward": 0.6488095238095238,
+          "ties": 15,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.43253968253968256,
+      "class": "count-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.40476190476190477,
+          0.6190476190476191
+        ],
+        "n": 84,
+        "negative": 41,
+        "positive": 43,
+        "reward": 0.5119047619047619,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "latex_section",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.25,
+        "hi": 0.25,
+        "lo": 0.23582766439909297,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.7531179138321995,
+        "hi": 0.8598537930202689,
+        "lo": 0.6430176109557307,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.40476190476190477,
+            0.6190476190476191
+          ],
+          "n": 84,
+          "negative": 41,
+          "positive": 43,
+          "reward": 0.5119047619047619,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.5238095238095238,
+            0.7142857142857143
+          ],
+          "n": 84,
+          "negative": 32,
+          "positive": 52,
+          "reward": 0.6190476190476191,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 1.0,
+      "class": "semantic",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.4044642857142862,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.6190476190476191,
+          0.8095238095238095
+        ],
+        "n": 84,
+        "negative": 24,
+        "positive": 60,
+        "reward": 0.7142857142857143,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "latex_subject",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.8582766439909297,
+        "hi": 0.9288187120273385,
+        "lo": 0.7706677407805227,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.9642857142857143,
+            1.0
+          ],
+          "n": 84,
+          "negative": 1,
+          "positive": 83,
+          "reward": 0.9880952380952381,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.6666666666666666,
+            0.8452380952380952
+          ],
+          "n": 84,
+          "negative": 20,
+          "positive": 64,
+          "reward": 0.7619047619047619,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.6337868480725624,
+      "class": "count-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "list_depth",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.30952380952380953,
+            0.5238095238095238
+          ],
+          "n": 84,
+          "negative": 49,
+          "positive": 35,
+          "reward": 0.4166666666666667,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.47619047619047616,
+            0.6904761904761905
+          ],
+          "n": 84,
+          "negative": 35,
+          "positive": 49,
+          "reward": 0.5833333333333334,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.4189342403628118,
+      "class": "count-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.5892857142857143,
+          0.7738095238095238
+        ],
+        "n": 84,
+        "negative": 26,
+        "positive": 57,
+        "reward": 0.6845238095238095,
+        "ties": 1,
+        "ties_weight": 0.5
+      },
+      "feature": "list_index",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.4790249433106576,
+        "hi": 0.6069174065730183,
+        "lo": 0.3570562948564594,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.4166666666666667,
+            0.6309523809523809
+          ],
+          "n": 84,
+          "negative": 40,
+          "positive": 44,
+          "reward": 0.5238095238095238,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.75,
+            0.9047619047619048
+          ],
+          "n": 84,
+          "negative": 14,
+          "positive": 69,
+          "reward": 0.8273809523809523,
+          "ties": 1,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.8905895691609977,
+      "class": "semantic",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.8214285714285714,
+          0.9523809523809523
+        ],
+        "n": 84,
+        "negative": 9,
+        "positive": 75,
+        "reward": 0.8928571428571429,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "list_priority",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.8888888888888888,
+        "hi": 0.9492877492877493,
+        "lo": 0.8124866452991453,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.47619047619047616,
+            0.6904761904761905
+          ],
+          "n": 84,
+          "negative": 35,
+          "positive": 49,
+          "reward": 0.5833333333333334,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.8690476190476191,
+            0.9761904761904762
+          ],
+          "n": 84,
+          "negative": 6,
+          "positive": 78,
+          "reward": 0.9285714285714286,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.967687074829932,
+      "class": "semantic",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.6309523809523809,
+          0.8214285714285714
+        ],
+        "n": 84,
+        "negative": 23,
+        "positive": 61,
+        "reward": 0.7261904761904762,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.8690476190476191,
+          0.9761904761904762
+        ],
+        "n": 84,
+        "negative": 6,
+        "positive": 78,
+        "reward": 0.9285714285714286,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "list_topic",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.9994331065759637,
+        "hi": 1.0,
+        "lo": 0.9965675057208238,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.75,
+            0.9047619047619048
+          ],
+          "n": 84,
+          "negative": 14,
+          "positive": 70,
+          "reward": 0.8333333333333334,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n": 84,
+          "negative": 0,
+          "positive": 84,
+          "reward": 1.0,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.4846938775510204,
+      "class": "state-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "prose_paren",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.32142857142857145,
+            0.5357142857142857
+          ],
+          "n": 84,
+          "negative": 48,
+          "positive": 36,
+          "reward": 0.42857142857142855,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.40476190476190477,
+            0.6190476190476191
+          ],
+          "n": 84,
+          "negative": 41,
+          "positive": 43,
+          "reward": 0.5119047619047619,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.5629251700680272,
+      "class": "state-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "prose_quote",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.25,
+        "hi": 0.25,
+        "lo": 0.23582766439909297,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.40476190476190477,
+            0.6190476190476191
+          ],
+          "n": 84,
+          "negative": 41,
+          "positive": 43,
+          "reward": 0.5119047619047619,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.5952380952380952,
+            0.7976190476190477
+          ],
+          "n": 84,
+          "negative": 25,
+          "positive": 59,
+          "reward": 0.7023809523809523,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.5311791383219955,
+      "class": "count-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.5119047619047619,
+          0.7142857142857143
+        ],
+        "n": 84,
+        "negative": 33,
+        "positive": 51,
+        "reward": 0.6071428571428571,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.6547619047619048,
+          0.8452380952380952
+        ],
+        "n": 84,
+        "negative": 21,
+        "positive": 63,
+        "reward": 0.75,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "prose_sentence",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.6536281179138322,
+        "hi": 0.7663855344706408,
+        "lo": 0.5270246892949099,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.38095238095238093,
+            0.5952380952380952
+          ],
+          "n": 84,
+          "negative": 43,
+          "positive": 41,
+          "reward": 0.4880952380952381,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.7619047619047619,
+            0.9166666666666666
+          ],
+          "n": 84,
+          "negative": 13,
+          "positive": 71,
+          "reward": 0.8452380952380952,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.9109977324263039,
+      "class": "semantic",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.7023809523809523,
+          0.8690476190476191
+        ],
+        "n": 84,
+        "negative": 18,
+        "positive": 66,
+        "reward": 0.7857142857142857,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "prose_sentiment",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.9243197278911565,
+        "hi": 0.9693346827027118,
+        "lo": 0.8668947285353535,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.75,
+            0.9047619047619048
+          ],
+          "n": 84,
+          "negative": 14,
+          "positive": 70,
+          "reward": 0.8333333333333334,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.8214285714285714,
+            0.9523809523809523
+          ],
+          "n": 84,
+          "negative": 9,
+          "positive": 75,
+          "reward": 0.8928571428571429,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 1.0,
+      "class": "semantic",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.4642857142857143,
+          0.6666666666666666
+        ],
+        "n": 84,
+        "negative": 36,
+        "positive": 48,
+        "reward": 0.5714285714285714,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.6309523809523809,
+          0.8214285714285714
+        ],
+        "n": 84,
+        "negative": 22,
+        "positive": 62,
+        "reward": 0.7380952380952381,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "prose_topic",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.9778911564625851,
+        "hi": 1.0,
+        "lo": 0.9462073339468428,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n": 84,
+          "negative": 0,
+          "positive": 84,
+          "reward": 1.0,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.9166666666666666,
+            1.0
+          ],
+          "n": 84,
+          "negative": 3,
+          "positive": 81,
+          "reward": 0.9642857142857143,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.5,
+      "class": "count-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.38095238095238093,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 41,
+        "reward": 0.49404761904761907,
+        "ties": 1,
+        "ties_weight": 0.5
+      },
+      "feature": "python_argument",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.25,
+        "hi": 0.25,
+        "lo": 0.23582766439909297,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.9815759637188208,
+        "hi": 0.9971509971509972,
+        "lo": 0.9580199430199431,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.5,
+            0.7142857142857143
+          ],
+          "n": 84,
+          "negative": 33,
+          "positive": 51,
+          "reward": 0.6071428571428571,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.7202380952380952,
+            0.8809523809523809
+          ],
+          "n": 84,
+          "negative": 16,
+          "positive": 67,
+          "reward": 0.8035714285714286,
+          "ties": 1,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.5425170068027211,
+      "class": "state-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.7619047619047619,
+          0.9166666666666666
+        ],
+        "n": 84,
+        "negative": 13,
+        "positive": 71,
+        "reward": 0.8452380952380952,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "python_comment",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.5357142857142857,
+            0.7380952380952381
+          ],
+          "n": 84,
+          "negative": 30,
+          "positive": 54,
+          "reward": 0.6428571428571429,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.9047619047619048,
+            0.9880952380952381
+          ],
+          "n": 84,
+          "negative": 4,
+          "positive": 80,
+          "reward": 0.9523809523809523,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.4875283446712018,
+      "class": "count-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "python_depth",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.25,
+        "hi": 0.25,
+        "lo": 0.23582766439909297,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.3333333333333333,
+            0.5476190476190477
+          ],
+          "n": 84,
+          "negative": 47,
+          "positive": 37,
+          "reward": 0.44047619047619047,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.42857142857142855,
+            0.6428571428571429
+          ],
+          "n": 84,
+          "negative": 39,
+          "positive": 45,
+          "reward": 0.5357142857142857,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 1.0,
+      "class": "semantic",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.4642857142857143,
+          0.6785714285714286
+        ],
+        "n": 84,
+        "negative": 36,
+        "positive": 48,
+        "reward": 0.5714285714285714,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "python_error",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.9835600907029478,
+        "hi": 0.9976855512427322,
+        "lo": 0.9601099669463514,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.39285714285714285,
+            0.6071428571428571
+          ],
+          "n": 84,
+          "negative": 42,
+          "positive": 42,
+          "reward": 0.5,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.4880952380952381,
+            0.7023809523809523
+          ],
+          "n": 84,
+          "negative": 34,
+          "positive": 50,
+          "reward": 0.5952380952380952,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.5918367346938775,
+      "class": "count-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.2976190476190476,
+          0.5119047619047619
+        ],
+        "n": 84,
+        "negative": 50,
+        "positive": 34,
+        "reward": 0.40476190476190477,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "python_indent",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.25,
+        "hi": 0.25,
+        "lo": 0.23582766439909297,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.2857142857142857,
+            0.4880952380952381
+          ],
+          "n": 84,
+          "negative": 52,
+          "positive": 32,
+          "reward": 0.38095238095238093,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.44047619047619047,
+            0.6547619047619048
+          ],
+          "n": 84,
+          "negative": 38,
+          "positive": 46,
+          "reward": 0.5476190476190477,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.6439909297052154,
+      "class": "state-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "python_string",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.25,
+        "hi": 0.25,
+        "lo": 0.23582766439909297,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.40476190476190477,
+            0.6190476190476191
+          ],
+          "n": 84,
+          "negative": 41,
+          "positive": 43,
+          "reward": 0.5119047619047619,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.40476190476190477,
+            0.6190476190476191
+          ],
+          "n": 84,
+          "negative": 41,
+          "positive": 43,
+          "reward": 0.5119047619047619,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.4744897959183674,
+      "class": "count-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "table_column",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.0,
+        "hi": 0.0,
+        "lo": 0.0,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.40476190476190477,
+            0.6190476190476191
+          ],
+          "n": 84,
+          "negative": 41,
+          "positive": 43,
+          "reward": 0.5119047619047619,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.39285714285714285,
+            0.6071428571428571
+          ],
+          "n": 84,
+          "negative": 42,
+          "positive": 42,
+          "reward": 0.5,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.43820861678004536,
+      "class": "state-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.5714285714285714,
+          0.7738095238095238
+        ],
+        "n": 84,
+        "negative": 27,
+        "positive": 57,
+        "reward": 0.6785714285714286,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "table_role",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.25,
+        "hi": 0.25,
+        "lo": 0.23582766439909297,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 1.0,
+        "hi": 1.0,
+        "lo": 1.0,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.44047619047619047,
+            0.6547619047619048
+          ],
+          "n": 84,
+          "negative": 38,
+          "positive": 46,
+          "reward": 0.5476190476190477,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.5119047619047619,
+            0.7261904761904762
+          ],
+          "n": 84,
+          "negative": 32,
+          "positive": 52,
+          "reward": 0.6190476190476191,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 0.5005668934240363,
+      "class": "count-like",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.39285714285714285,
+          0.6071428571428571
+        ],
+        "n": 84,
+        "negative": 42,
+        "positive": 42,
+        "reward": 0.5,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.42857142857142855,
+          0.6428571428571429
+        ],
+        "n": 84,
+        "negative": 39,
+        "positive": 45,
+        "reward": 0.5357142857142857,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "feature": "table_row",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.8129251700680272,
+        "hi": 0.8996029495178672,
+        "lo": 0.711890064495362,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.4166666666666667,
+            0.6309523809523809
+          ],
+          "n": 84,
+          "negative": 40,
+          "positive": 44,
+          "reward": 0.5238095238095238,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.5238095238095238,
+            0.7261904761904762
+          ],
+          "n": 84,
+          "negative": 31,
+          "positive": 53,
+          "reward": 0.6309523809523809,
+          "ties": 0,
+          "ties_weight": 0.5
+        }
+      }
+    },
+    {
+      "W1_Oracle_asked_AUROC": 1.0,
+      "class": "semantic",
+      "describe": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "n": 84,
+        "negative": 0,
+        "positive": 84,
+        "reward": 1.0,
+        "ties": 0,
+        "ties_weight": 0.5
+      },
+      "exhibit": {
+        "bootstrap_unit": "recipient item",
+        "ci95": [
+          0.3630952380952381,
+          0.5654761904761905
+        ],
+        "n": 84,
+        "negative": 44,
+        "positive": 38,
+        "reward": 0.4642857142857143,
+        "ties": 2,
+        "ties_weight": 0.5
+      },
+      "feature": "table_status",
+      "n_dev": 84,
+      "n_test": 84,
+      "secondary_probe_describe_own_truth_signed_AUROC": {
+        "auroc": 0.75,
+        "hi": 0.764172335600907,
+        "lo": 0.75,
+        "n": 168,
+        "n_clusters": 84
+      },
+      "secondary_probe_exhibit_across_true_state_AUROC": {
+        "auroc": 0.530045351473923,
+        "hi": 0.6547554347826087,
+        "lo": 0.40243107023860675,
+        "n": 84,
+        "n_clusters": 84
+      },
+      "secondary_whitened": {
+        "describe": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.47619047619047616,
+            0.6785714285714286
+          ],
+          "n": 84,
+          "negative": 35,
+          "positive": 49,
+          "reward": 0.5833333333333334,
+          "ties": 0,
+          "ties_weight": 0.5
+        },
+        "exhibit": {
+          "bootstrap_unit": "recipient item",
+          "ci95": [
+            0.3869047619047619,
+            0.5952380952380952
+          ],
+          "n": 84,
+          "negative": 42,
+          "positive": 40,
+          "reward": 0.4880952380952381,
+          "ties": 2,
+          "ties_weight": 0.5
+        }
+      }
+    }
+  ],
+  "rowwise_falsifier_note": "All matching rows reported; registration sets no minimum number of rows.",
+  "secondary_median_differences": {
+    "content_minus_structure_describe_medians": 0.0714285714285714,
+    "structure_median_exhibit_minus_describe": 0.02380952380952378
+  },
+  "status": "EXPLORATORY_E21",
+  "structure_describe_ge080_oracle_le060_rows": [],
+  "whitener": {
+    "export_sha256": "8ca79f211072d12a998793dba5cf9483e6af9bead4267fb1e481be8a821160b6",
+    "formula": "(x.float32 - mu) @ w.T; official Whitener.whiten",
+    "moments_sha256": "178ceb36251e5e7ed2eb51aa54ccc4eac45dc928116b7498b46d22657a31c62a",
+    "official_source": "a32590085a6070d75f950155d3c2b3db3eec97ef",
+    "ridge_c": 0.1,
+    "status": "VERIFIED_APPLIES_CLEANLY"
+  }
+}

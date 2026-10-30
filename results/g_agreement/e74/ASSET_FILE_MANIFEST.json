@@ -1,0 +1,3705 @@
+{
+  "anonymous_audit_sha256": "451765a51303ddcdb813139830d282151b6063ecbf7231c36ef9ee97e8acafa5",
+  "authentication": "none",
+  "created_at_utc": "2026-10-27T14:50:56.715810+00:00",
+  "experiment": "E74",
+  "external_runtime_dependencies": {
+    "declared_by_author": [
+      "CUDA 13",
+      "torch 2.13",
+      "transformers 5.17 (>=5.16.1,<5.18)",
+      "peft 0.21",
+      "vllm==0.31.0"
+    ],
+    "excluded_from_payload_estimate": [
+      "container image",
+      "CUDA/runtime libraries",
+      "Python wheels and dependencies",
+      "download/cache temporary duplication",
+      "derived quantization config",
+      "inputs and captured outputs",
+      "smoke reference data"
+    ],
+    "pinned_plugin": "vllm_metamodels_glm53_b26f02d.tar.gz is included in the selected file set; this immutable tarball is preferred over the mutable Git branch.",
+    "source": "https://huggingface.co/ceselder/glm-5.3-olens-lens/blob/689c5dbae3d2f83dbf969e234a023958f1612185/README.md#usage",
+    "status": "Author-declared versions only. External container/wheel digests, transitive dependency resolution, CUDA compatibility and installed imports are not verified by this HF-file manifest."
+  },
+  "repos": [
+    {
+      "audit": {
+        "all_selected_weights_prior_anonymous_head_200": true,
+        "inventory_exact_match": true,
+        "metadata_only_access_for_other_files": "Public pinned inventory; no new per-file HEAD or payload GET performed.",
+        "prior_head_size_matches": 52
+      },
+      "file_inventory_sha256": "1f2e61db1f2ad8d9d618ba39878d2da24112dfeeac746cab80e5050ec8f7e522",
+      "files": [
+        {
+          "git_blob_sha1": "aa7aacd0134a92c3c1943fdecc75cd8b7420cce6",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "aa7aacd0134a92c3c1943fdecc75cd8b7420cce6"
+          },
+          "path": ".gitattributes",
+          "required": false,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/.gitattributes",
+          "role": "repository_metadata",
+          "runtime_required": false,
+          "selection_reason": "Git/LFS transport metadata; not a deployed inference dependency.",
+          "size_bytes": 1635,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f860919cd5a5377c0bc9d590ea9d1b8743475ca5",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f860919cd5a5377c0bc9d590ea9d1b8743475ca5"
+          },
+          "path": "LICENSE",
+          "prior_anonymous_head": {
+            "content_length": 4263,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/LICENSE",
+          "role": "licence",
+          "runtime_required": false,
+          "selection_reason": "Retain the exact base licence alongside the staged checkpoint.",
+          "size_bytes": 4263,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "2f1125afa4f745039b1ebac24844aa64dbdca174",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "2f1125afa4f745039b1ebac24844aa64dbdca174"
+          },
+          "path": "README.md",
+          "prior_anonymous_head": {
+            "content_length": 9713,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/README.md",
+          "role": "licence_and_provenance",
+          "runtime_required": false,
+          "selection_reason": "Retain base card and licence metadata; not executed by the loader.",
+          "size_bytes": 9713,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "9aff9c44583c869853049724ffe67b1070344f2d",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "9aff9c44583c869853049724ffe67b1070344f2d"
+          },
+          "path": "chat_template.jinja",
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/chat_template.jinja",
+          "role": "chat_template",
+          "runtime_required": true,
+          "selection_reason": "Author Oracle prompt uses the base's exact GLM chat template.",
+          "size_bytes": 10734,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "d21cb88620abad50cf8a6af094a5c3b5095ede4a",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "d21cb88620abad50cf8a6af094a5c3b5095ede4a"
+          },
+          "path": "config.json",
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/config.json",
+          "role": "model_config",
+          "runtime_required": true,
+          "selection_reason": "Architecture and model configuration used by vLLM.",
+          "size_bytes": 24476,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "8eadc0a0b22e277affc468a5e6889d2e0496f1ef",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "8eadc0a0b22e277affc468a5e6889d2e0496f1ef"
+          },
+          "path": "generation_config.json",
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/generation_config.json",
+          "role": "generation_config",
+          "runtime_required": true,
+          "selection_reason": "Retain the declared generation configuration; runner fixes greedy settings explicitly.",
+          "size_bytes": 260,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "7b4ff7a3818f79846fd122927ed5708bfb0f7ff2",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "7b4ff7a3818f79846fd122927ed5708bfb0f7ff2"
+          },
+          "path": "hf_quant_config.json",
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/hf_quant_config.json",
+          "role": "quantization_config",
+          "runtime_required": true,
+          "selection_reason": "Author loader reads and rewrites a local copy for W4A16 Marlin.",
+          "size_bytes": 11506,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "93df9d22a93e94d5131ca997cd3c3c9cf006265b",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "c11ab2d7c03def75148ac43a8525ddf84987fe5b4b2c06324a62c1fd14527d34"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "c11ab2d7c03def75148ac43a8525ddf84987fe5b4b2c06324a62c1fd14527d34",
+          "path": "model-00001-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005524504,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00001-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005524504,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "064c6f9247f6d145690c8904fccfa3173e515a2b",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "a9bfc44a263ecddac4ef473cb0aecf7392a1b6379d21b2905482612dbbb97f9f"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "a9bfc44a263ecddac4ef473cb0aecf7392a1b6379d21b2905482612dbbb97f9f",
+          "path": "model-00002-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159760,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00002-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159760,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "d09f3f007e7d08bb4f7e41e4c1ebf7094774243e",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "b15f328add350138fb0cac40d17cb2abf83eae41327e846ff77e471e3453bad5"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "b15f328add350138fb0cac40d17cb2abf83eae41327e846ff77e471e3453bad5",
+          "path": "model-00003-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10009279488,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00003-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10009279488,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "a4b9f27b27687f6a8b79a6210011350ccdc791cc",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "ad1f863113936314365e8a7582abd96bf8ac496388b598a8056f709ad4cb4f4b"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "ad1f863113936314365e8a7582abd96bf8ac496388b598a8056f709ad4cb4f4b",
+          "path": "model-00004-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10016048000,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00004-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10016048000,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "0b5b8e3d5a54203d63e767b6c2ca55ec2a7e9ad8",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "664756beb6e9e943cc7681e75ea1ff9c7437abaedee29729a31b2dd6836a43f8"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "664756beb6e9e943cc7681e75ea1ff9c7437abaedee29729a31b2dd6836a43f8",
+          "path": "model-00005-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 3824862392,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00005-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 3824862392,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "1c65b40c269fc79ca34c48e4a15c70f370dc84e1",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "b308c73957c86ff421f644fec1537999d1dcc43dfcf38d5f6276c657006aa96a"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "b308c73957c86ff421f644fec1537999d1dcc43dfcf38d5f6276c657006aa96a",
+          "path": "model-00006-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005524504,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00006-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005524504,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "c9d8b80ff4b62b48242203f63cff9d0b05fa06af",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "02604f1d306830e3aad3353a6cd4d8247a39fefac85283f7b6e68a1323703ed2"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "02604f1d306830e3aad3353a6cd4d8247a39fefac85283f7b6e68a1323703ed2",
+          "path": "model-00007-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159760,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00007-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159760,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "b8d256590f304ebf4abdc0606748dfeb2d5d3c76",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "1c7ce914ab034ef72353566bf8fc5d75dfc565072342c519d7bc9f0e7d58de6a"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "1c7ce914ab034ef72353566bf8fc5d75dfc565072342c519d7bc9f0e7d58de6a",
+          "path": "model-00008-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 3944247720,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00008-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 3944247720,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "c4235457f283151273944f32a1c30c7c0ff89acf",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "4b558d1ad16d532a333634daa547ac51f9bf5910edb0f2f1c3ba5986f93892ec"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "4b558d1ad16d532a333634daa547ac51f9bf5910edb0f2f1c3ba5986f93892ec",
+          "path": "model-00009-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10001329632,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00009-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10001329632,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f65b5a97cbead740ab70531dd6f47cd11c945c79",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "48cf2733956ee90d693f91b23c296244b415794c4e984d3814712142a09e6b15"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "48cf2733956ee90d693f91b23c296244b415794c4e984d3814712142a09e6b15",
+          "path": "model-00010-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10006470232,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00010-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10006470232,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "bc5a7ade3c1db9cdcacfeacc1ba25afd33512e83",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "88dada41a8bd76e5016ce9707a40dba050153d0ee2b941c357cb5fdd574ee197"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "88dada41a8bd76e5016ce9707a40dba050153d0ee2b941c357cb5fdd574ee197",
+          "path": "model-00011-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 4022109792,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00011-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 4022109792,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "31ec7b1903a96131067a5256e694a8e19122c2ea",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "caf437ee724cde70fc7481bd541e28c0c2d9c912448ee5fc0dadf66e4576b8a2"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "caf437ee724cde70fc7481bd541e28c0c2d9c912448ee5fc0dadf66e4576b8a2",
+          "path": "model-00012-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10003561240,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00012-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10003561240,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "19f21401fcc7541d103cb6f1a7ae3f42ed917513",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "3667144ff2784dc86f54e4dda451592a6209e60649abe996e1d5a14e34f080dc"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "3667144ff2784dc86f54e4dda451592a6209e60649abe996e1d5a14e34f080dc",
+          "path": "model-00013-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159768,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00013-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159768,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "62ca21e1b898b66ecc6b5f7f106720b989d3ee66",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "d818e5277d77d996e05c06dca5e742b97ff5b893a32a3dd3863fdad0f926269d"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "d818e5277d77d996e05c06dca5e742b97ff5b893a32a3dd3863fdad0f926269d",
+          "path": "model-00014-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9215806584,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00014-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9215806584,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "4aa80a602500fd6085a4bd7a914d5e03e6b63573",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "5e94513f24268df0b09144576d7c1dcfd62f8f2add37671ae7fb40f910af29ad"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "5e94513f24268df0b09144576d7c1dcfd62f8f2add37671ae7fb40f910af29ad",
+          "path": "model-00015-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10003561240,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00015-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10003561240,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "c7b13acb066fd9b46b08234c2736a774a4e43212",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "7a4ea91f2a07c40e535cdf81374d89fea962fc99dbd469af56224c3df1312fb1"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "7a4ea91f2a07c40e535cdf81374d89fea962fc99dbd469af56224c3df1312fb1",
+          "path": "model-00016-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159768,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00016-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159768,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "6266d693e5e858e0b7753f23ae3d0778fb446ba8",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "8ecb8536cc5d61fc26efcedad497a6400c386a8460012a90d29e1b4dc3a7f5e0"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "8ecb8536cc5d61fc26efcedad497a6400c386a8460012a90d29e1b4dc3a7f5e0",
+          "path": "model-00017-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9215806584,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00017-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9215806584,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "774f5e5ce2f98f5d55b522244cffcb00beb9fc53",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "f17ab7d35a52f4d7c6cadd3882843460aa43d45c678058ec67efcdea766c6d96"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "f17ab7d35a52f4d7c6cadd3882843460aa43d45c678058ec67efcdea766c6d96",
+          "path": "model-00018-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10003561240,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00018-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10003561240,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "fcded047d1fe726ac2880a789e1013ebe0941a72",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "a75e6f40baaede84c8e4955cb30cf55396ba0762e2686b2ddddc760de87fa205"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "a75e6f40baaede84c8e4955cb30cf55396ba0762e2686b2ddddc760de87fa205",
+          "path": "model-00019-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159768,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00019-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159768,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "1edc3f7744b373d919ac68d3be6dc3daa4563614",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "f2b94c0f2065c3903b18a85aefa74dff114a01548f9f4abd6744b9881081c00b"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "f2b94c0f2065c3903b18a85aefa74dff114a01548f9f4abd6744b9881081c00b",
+          "path": "model-00020-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9215806584,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00020-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9215806584,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "22086a4754f064b20f41c913005a3c4bd1529e35",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "ed588eb5dd1d6772204b4dcaa359cd5b098881a2e6505d57b726c7d6544732c9"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "ed588eb5dd1d6772204b4dcaa359cd5b098881a2e6505d57b726c7d6544732c9",
+          "path": "model-00021-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005658232,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00021-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005658232,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "4d86c6d879632afe85bad24545656bdaa1054385",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "fd9673ccca8c56ea2508d9898ed6f59c04abe62bae210dba29fd5bf9d8f9d67f"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "fd9673ccca8c56ea2508d9898ed6f59c04abe62bae210dba29fd5bf9d8f9d67f",
+          "path": "model-00022-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10000964992,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00022-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10000964992,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "8b887e415960b9231f49213d1621818242f2685c",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "e226c4f483694585ff40be12e5a9aee81661c7e606829f44a75b910504b1b556"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "e226c4f483694585ff40be12e5a9aee81661c7e606829f44a75b910504b1b556",
+          "path": "model-00023-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9311626616,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00023-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9311626616,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "26b3ff8c1282f6115c82856e79b0a0a2f3cdcc66",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "0046bc1fc8e964139628fa1d84954e31e76effade1f7e7ac6c6adfcb469fff34"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "0046bc1fc8e964139628fa1d84954e31e76effade1f7e7ac6c6adfcb469fff34",
+          "path": "model-00024-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10003561240,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00024-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10003561240,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "0eac6d5d6022700ae5a71ea1879b2e5a04ea3e08",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "aa3405c7c39ef551d690742594410ab7be5f5b6fb3a78bfbb434427f982d91f9"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "aa3405c7c39ef551d690742594410ab7be5f5b6fb3a78bfbb434427f982d91f9",
+          "path": "model-00025-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159768,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00025-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159768,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "116680008f055c900fe8af52b3ee03a4ae6d600c",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "4d558a70ffa0941c4aeafca85cfcbc0d40de4a9d55d92aab7a3b83d0de66e72d"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "4d558a70ffa0941c4aeafca85cfcbc0d40de4a9d55d92aab7a3b83d0de66e72d",
+          "path": "model-00026-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9215806584,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00026-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9215806584,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "a2cb5b164adc64251833dddf2b2a9a014aad8231",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "50541e3e2ab6e39b17dbd35e76d0969cb5439fcb31b5164f0c2b9855a0ed3d93"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "50541e3e2ab6e39b17dbd35e76d0969cb5439fcb31b5164f0c2b9855a0ed3d93",
+          "path": "model-00027-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10003561240,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00027-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10003561240,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "5d9bde2110078b559b7b7eefb5cd8d45b8ff3eed",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "0ab803c7cc7453388676502d9ef5035b5e4302282c18378ac2742db3c3d8f0ea"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "0ab803c7cc7453388676502d9ef5035b5e4302282c18378ac2742db3c3d8f0ea",
+          "path": "model-00028-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159768,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00028-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159768,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "0ee168b15e824bbc86c03a3760e63ee4fe8f9617",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "4f1f3afea31b8e48949adf25ecc1e2abfd1ac3657e6bcf91928fc17770538e61"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "4f1f3afea31b8e48949adf25ecc1e2abfd1ac3657e6bcf91928fc17770538e61",
+          "path": "model-00029-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9215806584,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00029-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9215806584,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "09ea7150ca8a7196f3bac647a12a3febf7e8f0df",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "fd8dccfa6ac70606be97f0dcb3ddccfb9ef4d1ada59ee1a74d0023784bd90ab0"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "fd8dccfa6ac70606be97f0dcb3ddccfb9ef4d1ada59ee1a74d0023784bd90ab0",
+          "path": "model-00030-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10003561240,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00030-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10003561240,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "1215a8b4694825582150911afae9317e19c3d311",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "0c00b6c57b1a424c1c113e3071c8accd03be9b740b3aa5fb882baa85e98cb4c9"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "0c00b6c57b1a424c1c113e3071c8accd03be9b740b3aa5fb882baa85e98cb4c9",
+          "path": "model-00031-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159768,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00031-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159768,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "368580475105f26b639a0859582272bd5bd13e6b",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "214921b850f12936c843079e8f98d8c5b0d2d79554fe90e8fe70e82e656ff801"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "214921b850f12936c843079e8f98d8c5b0d2d79554fe90e8fe70e82e656ff801",
+          "path": "model-00032-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9215806584,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00032-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9215806584,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "c79e98c42c6d987e7a587eb940a98ebd9f68256e",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "5b59c883a6e2bb26d5160d137293b9db89d8a94c7a66cc0814a2b6e235a7b613"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "5b59c883a6e2bb26d5160d137293b9db89d8a94c7a66cc0814a2b6e235a7b613",
+          "path": "model-00033-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005661840,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00033-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005661840,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "0df7a9dd2eab0382716ed7d1f7e712b2a211efc6",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "cf920939057bbb0628ae219796fcef1e8aee09a3a02967ac60292b9cfa5a1f76"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "cf920939057bbb0628ae219796fcef1e8aee09a3a02967ac60292b9cfa5a1f76",
+          "path": "model-00034-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10000964992,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00034-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10000964992,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "b586b2aab1f50d507e946bea09462f7515426808",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "5a42958034cf6e9f1db0bc0f620e476ddae3c19bc40f60bc3576040ac9437353"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "5a42958034cf6e9f1db0bc0f620e476ddae3c19bc40f60bc3576040ac9437353",
+          "path": "model-00035-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9311626616,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00035-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9311626616,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "88c1c2f9bf8dc13cb11f9f145e62e221322abb3d",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "7a428c3ddaf1216e7f569786391fa9b0da66412958df1efbf2e2077e168634c0"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "7a428c3ddaf1216e7f569786391fa9b0da66412958df1efbf2e2077e168634c0",
+          "path": "model-00036-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10003564824,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00036-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10003564824,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "da1377e1d58ec606700b5b2519c2db11115538ed",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "c03cf751f5dd4e30f57725183b6fa084ec4255dcde612d4703af7b4cbcf9a071"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "c03cf751f5dd4e30f57725183b6fa084ec4255dcde612d4703af7b4cbcf9a071",
+          "path": "model-00037-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159768,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00037-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159768,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "bdedf43cbad314d8af13559bebc405e0a1e284c9",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "0d5df9fa95edcb7b9b6f143a1421588d086428ffc96f5e540a7cc0f3ff27ac48"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "0d5df9fa95edcb7b9b6f143a1421588d086428ffc96f5e540a7cc0f3ff27ac48",
+          "path": "model-00038-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9215806584,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00038-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9215806584,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "7907e1aee388ecca76ed3e122820fbd884141b1e",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "ab59ec25fd649d2b12bf129044b5bc894e9903c95438d765f84ec661bd62d12b"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "ab59ec25fd649d2b12bf129044b5bc894e9903c95438d765f84ec661bd62d12b",
+          "path": "model-00039-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10003564824,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00039-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10003564824,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "123975a4c26d282831f7f7bf6742028b5f48fa4f",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "645521cba0ffaf7a982d28a5afb3befb431be89f76b46905179a02df48708e0d"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "645521cba0ffaf7a982d28a5afb3befb431be89f76b46905179a02df48708e0d",
+          "path": "model-00040-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159768,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00040-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159768,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "5514fce20d6791a3ef5b24f8b340d48023ee6d44",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "eed332e97bbfe56f066921081e91d8bc3c8c639a37d7dc4dfdbb1fdc07993f6f"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "eed332e97bbfe56f066921081e91d8bc3c8c639a37d7dc4dfdbb1fdc07993f6f",
+          "path": "model-00041-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9215806584,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00041-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9215806584,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "9fe3aaeef0a8ecf3275a66861fd165a35caefbc5",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "4f0f53fe189706f48b116860ed998cdf1da74f2c25f3645f73107f06c42ad322"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "4f0f53fe189706f48b116860ed998cdf1da74f2c25f3645f73107f06c42ad322",
+          "path": "model-00042-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10003564824,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00042-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10003564824,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "cd4429783c0bf6c1326c4196bc0fc28e144ac4a6",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "b694e884d44d40ad598d00baf84541abf796118eb02e86ca31b195278624e3cc"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "b694e884d44d40ad598d00baf84541abf796118eb02e86ca31b195278624e3cc",
+          "path": "model-00043-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159768,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00043-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159768,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "d44d335ab75fbf4f558a9d2f2c7a3976f57c1604",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "091c4760177010b9b1c533c22e4714a36d1eef355fff7241405913bdfdc9de11"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "091c4760177010b9b1c533c22e4714a36d1eef355fff7241405913bdfdc9de11",
+          "path": "model-00044-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 9215806584,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00044-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 9215806584,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "91a6537c87ee3b38ce00f1b6641c2ad275ddcfe0",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "35fac7c48666c633a8287e0b55eaa6581df869f0aafa4068ffb843fe62e17d3a"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "35fac7c48666c633a8287e0b55eaa6581df869f0aafa4068ffb843fe62e17d3a",
+          "path": "model-00045-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005661840,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00045-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005661840,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "30372ffb7afd770771905f62ec9047812a0eeee8",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "87215e1c3f6261117d130b1af1d5cb935b79b8a20164e4c9626bd1ac3ca9bfe7"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "87215e1c3f6261117d130b1af1d5cb935b79b8a20164e4c9626bd1ac3ca9bfe7",
+          "path": "model-00046-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10000964992,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00046-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10000964992,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "5c8c95feec401f298f05c1da9b6b3650a214ba11",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "a737176180cc941c413b5cb4aed6a9a9792cda90e796c492de5bd2047348a216"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "a737176180cc941c413b5cb4aed6a9a9792cda90e796c492de5bd2047348a216",
+          "path": "model-00047-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 7254319880,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00047-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 7254319880,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "8a85b77fb2a5c4052fc136e1a5fe25b8680ef90c",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "e1000409749c91640fddad1f9cae814d1117ad44e83b73a42c04a01a5a16c9ce"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "e1000409749c91640fddad1f9cae814d1117ad44e83b73a42c04a01a5a16c9ce",
+          "path": "model-00048-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10003564824,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00048-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10003564824,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "5f3e25260aa1f96053f9c13962c85e3cb5ec5cc2",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "658c93841389fd81c0869a2783ea246ede736bf75e5ef0c1fbd676859706637d"
+          },
+          "lfs_pointer_size_bytes": 136,
+          "lfs_sha256": "658c93841389fd81c0869a2783ea246ede736bf75e5ef0c1fbd676859706637d",
+          "path": "model-00049-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 10005159768,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00049-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 10005159768,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "05740382996c8e1e93128ee7b1afd2c0435dd71a",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "6ff9a1ce63a75806cc1121d3b2cd15fc55a19ee485d72cdb65b5a6baa5cc860e"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "6ff9a1ce63a75806cc1121d3b2cd15fc55a19ee485d72cdb65b5a6baa5cc860e",
+          "path": "model-00050-of-00050.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 3370899688,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model-00050-of-00050.safetensors",
+          "role": "base_weight_shard",
+          "runtime_required": true,
+          "selection_reason": "Every base checkpoint shard is required; no expert/shard pruning.",
+          "size_bytes": 3370899688,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "1a5c5a76623179764963d8ad2b53dacdc471fb78",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "157752617100cefaf25a468812e14abefca24c356e6e2f7ae55bce8c3b511863"
+          },
+          "lfs_pointer_size_bytes": 133,
+          "lfs_sha256": "157752617100cefaf25a468812e14abefca24c356e6e2f7ae55bce8c3b511863",
+          "path": "model.safetensors.index.json",
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/model.safetensors.index.json",
+          "role": "weight_index",
+          "runtime_required": true,
+          "selection_reason": "Maps model tensors to the 50 checkpoint shards.",
+          "size_bytes": 21266332,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "aba40197a4cdb5607f4ab7a05fb0a4ee8054fd6d",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d"
+          },
+          "lfs_pointer_size_bytes": 133,
+          "lfs_sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+          "path": "tokenizer.json",
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/tokenizer.json",
+          "role": "tokenizer",
+          "runtime_required": true,
+          "selection_reason": "Pinned GLM tokenizer model.",
+          "size_bytes": 20217442,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "0891a18eef6fc3d26dd2e87796ed39c7f91e3a77",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "0891a18eef6fc3d26dd2e87796ed39c7f91e3a77"
+          },
+          "path": "tokenizer_config.json",
+          "required": true,
+          "resolve_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4/resolve/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf/tokenizer_config.json",
+          "role": "tokenizer_config",
+          "runtime_required": true,
+          "selection_reason": "Pinned tokenizer and special-token configuration.",
+          "size_bytes": 790,
+          "storage": "git"
+        }
+      ],
+      "gated": false,
+      "metadata_request": {
+        "authentication": "none",
+        "method": "GET",
+        "response_bytes": 28531,
+        "response_sha256": "361413bf55a2595311a16a25014c9d382c024a02a1af57e47359d0d65786778c",
+        "status": 200,
+        "url": "https://huggingface.co/api/models/nvidia/GLM-5.3-NVFP4/revision/e3b8f9f2fad29727dfa95e766c5cac18ea1414bf?blobs=true"
+      },
+      "private": false,
+      "repo_id": "nvidia/GLM-5.3-NVFP4",
+      "repo_type": "model",
+      "revision": "e3b8f9f2fad29727dfa95e766c5cac18ea1414bf",
+      "selected_subfolder": null,
+      "totals": {
+        "file_count": 60,
+        "payload_bytes": 464185096295,
+        "required_file_count": 59,
+        "required_payload_bytes": 464185094660,
+        "runtime_required_payload_bytes": 464185080684,
+        "unused_payload_bytes": 1635
+      }
+    },
+    {
+      "audit": {
+        "all_selected_weights_prior_anonymous_head_200": true,
+        "inventory_exact_match": true,
+        "metadata_only_access_for_other_files": "Public pinned inventory; no new per-file HEAD or payload GET performed.",
+        "prior_head_size_matches": 5
+      },
+      "file_inventory_sha256": "4d7b8d0ad4536af22099f62ade033278d83ddeadd9b27bb5709e33e0a2ce0ff9",
+      "files": [
+        {
+          "git_blob_sha1": "94c156e2cb23a192a59672fb27ce2089dab9e58e",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "94c156e2cb23a192a59672fb27ce2089dab9e58e"
+          },
+          "path": ".gitattributes",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/.gitattributes",
+          "role": "repository_metadata",
+          "runtime_required": false,
+          "selection_reason": "Git/LFS transport metadata; not a deployed inference dependency.",
+          "size_bytes": 1898,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "9ff036900756d0e6e3313a9ddec15414f3fd13e6",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "9ff036900756d0e6e3313a9ddec15414f3fd13e6"
+          },
+          "path": "README.md",
+          "prior_anonymous_head": {
+            "content_length": 49028,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/README.md",
+          "role": "licence_and_provenance",
+          "runtime_required": false,
+          "selection_reason": "Adapter licence declaration and author runtime/setup contract; no separate LICENSE file is published.",
+          "size_bytes": 49028,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "cfb3117657ed7c40097cb1d8d59bd44960e56ed4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "cfb3117657ed7c40097cb1d8d59bd44960e56ed4"
+          },
+          "path": "figures/rl_fve_curve.pdf",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/rl_fve_curve.pdf",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 28532,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "52ba706ae97035c26d7885e214c229017efbcc2d",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "04a60982f133452cdfb7dfb721453baea5e3c47937c21fea67437510fe903790"
+          },
+          "lfs_pointer_size_bytes": 131,
+          "lfs_sha256": "04a60982f133452cdfb7dfb721453baea5e3c47937c21fea67437510fe903790",
+          "path": "figures/rl_fve_curve.png",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/rl_fve_curve.png",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 182008,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "563ce08162885fb64016f5abe9ee5283fe691859",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "563ce08162885fb64016f5abe9ee5283fe691859"
+          },
+          "path": "figures/rl_wsb_curve.pdf",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/rl_wsb_curve.pdf",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 23764,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "3b67f71ae0d7f7230e257431450a25d367f86a6d",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "aa82581a64c0b9b5b7262daff4b851fbadeefa3472622a305d33cabe38bbc580"
+          },
+          "lfs_pointer_size_bytes": 131,
+          "lfs_sha256": "aa82581a64c0b9b5b7262daff4b851fbadeefa3472622a305d33cabe38bbc580",
+          "path": "figures/rl_wsb_curve.png",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/rl_wsb_curve.png",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 142735,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "95959fce92f0cf894c3d0269b4effc0eaa33b0d9",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "95959fce92f0cf894c3d0269b4effc0eaa33b0d9"
+          },
+          "path": "figures/rl_wsb_glm_vs_qwen.pdf",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/rl_wsb_glm_vs_qwen.pdf",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 45217,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "317bac66a0a0a4e94228c9fffec7a35092910c0b",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "f6869ec9761ca048a31eb683fc319b8e6aa9612b07624fdf5153731e12f7f7f8"
+          },
+          "lfs_pointer_size_bytes": 131,
+          "lfs_sha256": "f6869ec9761ca048a31eb683fc319b8e6aa9612b07624fdf5153731e12f7f7f8",
+          "path": "figures/rl_wsb_glm_vs_qwen.png",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/rl_wsb_glm_vs_qwen.png",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 385038,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "bb65ee2e0fa8b46d659656591f8ef9368ef6baf3",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "bb65ee2e0fa8b46d659656591f8ef9368ef6baf3"
+          },
+          "path": "figures/sft1b_curve.pdf",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/sft1b_curve.pdf",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 22593,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "b801eb72969b97dfd5c6878f9c38f8b7c09e273d",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "b47633150a0140be2a4e1e30ce70799e027397217bffff28360e8cceb8f8a9cf"
+          },
+          "lfs_pointer_size_bytes": 131,
+          "lfs_sha256": "b47633150a0140be2a4e1e30ce70799e027397217bffff28360e8cceb8f8a9cf",
+          "path": "figures/sft1b_curve.png",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/sft1b_curve.png",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 125263,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "ca8b494b0fb5577c5d7b7626ede925d3962e264a",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "ca8b494b0fb5577c5d7b7626ede925d3962e264a"
+          },
+          "path": "figures/sft_loss_glm_vs_qwen.pdf",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/sft_loss_glm_vs_qwen.pdf",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 98844,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "a7860cb3da6bb2c1feae8b343ab33277079d033e",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "925343e6a62e76513e440dd24b42c07683e2d38c795ee0c9d44cef36ffe39397"
+          },
+          "lfs_pointer_size_bytes": 131,
+          "lfs_sha256": "925343e6a62e76513e440dd24b42c07683e2d38c795ee0c9d44cef36ffe39397",
+          "path": "figures/sft_loss_glm_vs_qwen.png",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/sft_loss_glm_vs_qwen.png",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 348741,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "169f2304f9ecd91077da6359f6e86163156321ad",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "169f2304f9ecd91077da6359f6e86163156321ad"
+          },
+          "path": "figures/wsb_headline.pdf",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/wsb_headline.pdf",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 27679,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "19a62ab8de858b3d8045f4d4503586730f7eee74",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "532a05cbf44df317adc0e63836f0c3c137415589d776478223467cdfc6ad197f"
+          },
+          "lfs_pointer_size_bytes": 131,
+          "lfs_sha256": "532a05cbf44df317adc0e63836f0c3c137415589d776478223467cdfc6ad197f",
+          "path": "figures/wsb_headline.png",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/figures/wsb_headline.png",
+          "role": "unused_figure",
+          "runtime_required": false,
+          "selection_reason": "Model-card illustration; not needed for capture or Oracle inference.",
+          "size_bytes": 280783,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "71025a1b9326566e05c8d150f37158138e032f0e",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "71025a1b9326566e05c8d150f37158138e032f0e"
+          },
+          "path": "glm53_stack/glm53_common.py",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/glm53_stack/glm53_common.py",
+          "role": "unused_reconstructor_code",
+          "runtime_required": false,
+          "selection_reason": "Author path (b) HF reconstructor imports this stack; selected path (a) vLLM Oracle does not.",
+          "size_bytes": 10561,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "22b88b663d164f2c88267336f6c242d12959c284",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "22b88b663d164f2c88267336f6c242d12959c284"
+          },
+          "path": "glm53_stack/glm53_experts.py",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/glm53_stack/glm53_experts.py",
+          "role": "unused_reconstructor_code",
+          "runtime_required": false,
+          "selection_reason": "Author path (b) HF reconstructor imports this stack; selected path (a) vLLM Oracle does not.",
+          "size_bytes": 16856,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "3813d9d65b2e5e040fb3fe4710bfed47abcd7bd3",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "3813d9d65b2e5e040fb3fe4710bfed47abcd7bd3"
+          },
+          "path": "glm53_stack/glm53_hf.py",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/glm53_stack/glm53_hf.py",
+          "role": "unused_reconstructor_code",
+          "runtime_required": false,
+          "selection_reason": "Author path (b) HF reconstructor imports this stack; selected path (a) vLLM Oracle does not.",
+          "size_bytes": 56863,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "a13b94a6f1fce6276b4a632d69bae2d9902ac887",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "a13b94a6f1fce6276b4a632d69bae2d9902ac887"
+          },
+          "path": "glm53_stack/glm_common.py",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/glm53_stack/glm_common.py",
+          "role": "unused_reconstructor_code",
+          "runtime_required": false,
+          "selection_reason": "Author path (b) HF reconstructor imports this stack; selected path (a) vLLM Oracle does not.",
+          "size_bytes": 6014,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "088ababe4311f2b106c04b5f5d2cf5a55e78a4be",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "088ababe4311f2b106c04b5f5d2cf5a55e78a4be"
+          },
+          "path": "glm53_stack/glm_nvfp4_hf.py",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/glm53_stack/glm_nvfp4_hf.py",
+          "role": "unused_reconstructor_code",
+          "runtime_required": false,
+          "selection_reason": "Author path (b) HF reconstructor imports this stack; selected path (a) vLLM Oracle does not.",
+          "size_bytes": 40966,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "e8445fe51b1908fa3937413e51473e958d16b6d6",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "e8445fe51b1908fa3937413e51473e958d16b6d6"
+          },
+          "path": "olens_glm53_usage.py",
+          "prior_anonymous_head": {
+            "content_length": 34512,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/olens_glm53_usage.py",
+          "role": "reference_runtime",
+          "runtime_required": true,
+          "selection_reason": "Author capture/Oracle implementation, grammar, embedding overwrite, and W4A16 override.",
+          "size_bytes": 34512,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+          },
+          "path": "rl1b_rl1b_2_step_0000/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0000/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0000/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0000/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0000/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0000/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "fc4588931e67681473583be013a0a217afc84874",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "4bb4673177b8ac0779932d60d91b8000356b7a11edc405be86227f94f9becb0b"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "4bb4673177b8ac0779932d60d91b8000356b7a11edc405be86227f94f9becb0b",
+          "path": "rl1b_rl1b_2_step_0000/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0000/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "c39db9775474c4dea7775844d18d350a557506f8",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "c39db9775474c4dea7775844d18d350a557506f8"
+          },
+          "path": "rl1b_rl1b_2_step_0000/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0000/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 71,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "7273c0fa8c522b7eed7762a353d46f7768e9b6f2",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "7273c0fa8c522b7eed7762a353d46f7768e9b6f2"
+          },
+          "path": "rl1b_rl1b_2_step_0025/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0025/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 3,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0025/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0025/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0025/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0025/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "c349adadf9036048196b9afd11108e24671c24ab",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "eec2704d0b59bd5c064427bf128d8742605a8cdcade31448fec157f90dc77371"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "eec2704d0b59bd5c064427bf128d8742605a8cdcade31448fec157f90dc77371",
+          "path": "rl1b_rl1b_2_step_0025/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0025/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "2c288746a407a61b00b19c92671807fd7a0722ac",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "2c288746a407a61b00b19c92671807fd7a0722ac"
+          },
+          "path": "rl1b_rl1b_2_step_0025/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0025/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2289,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "e373ee695f6e76d7d3f8f8c4e92d1d60995352e5",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "e373ee695f6e76d7d3f8f8c4e92d1d60995352e5"
+          },
+          "path": "rl1b_rl1b_2_step_0050/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0050/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 3,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0050/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0050/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0050/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0050/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "8eaadd3eaf58eea4e5ab30d4ff0993fbebe054dc",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "d5289c25e8a431606a65fdc16dfba986290fb20a272905a71e0d3b165565f16e"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "d5289c25e8a431606a65fdc16dfba986290fb20a272905a71e0d3b165565f16e",
+          "path": "rl1b_rl1b_2_step_0050/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0050/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "a1c262ed96a888c4be14da9ed9e8fadc4575f0aa",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "a1c262ed96a888c4be14da9ed9e8fadc4575f0aa"
+          },
+          "path": "rl1b_rl1b_2_step_0050/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0050/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2310,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "78eb67cee1ab25652fe5c9e29efc173671301400",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "78eb67cee1ab25652fe5c9e29efc173671301400"
+          },
+          "path": "rl1b_rl1b_2_step_0075/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0075/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 3,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0075/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0075/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0075/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0075/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "523a3e7cdf7ab68fff8771bbdf40dc7aad4d12eb",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "0c6444f90ff792ab2ffe1b75c74bada6a0779859490151e1bebd970dcc38c914"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "0c6444f90ff792ab2ffe1b75c74bada6a0779859490151e1bebd970dcc38c914",
+          "path": "rl1b_rl1b_2_step_0075/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0075/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "721bc2eb9af425fcd874f753cfacd20b8a7374d0",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "721bc2eb9af425fcd874f753cfacd20b8a7374d0"
+          },
+          "path": "rl1b_rl1b_2_step_0075/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0075/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2305,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "29d6383b52c1352e92a45875b5bb206f89139643",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "29d6383b52c1352e92a45875b5bb206f89139643"
+          },
+          "path": "rl1b_rl1b_2_step_0100/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0100/PUBLISH_READY",
+          "role": "unused_training_metadata",
+          "runtime_required": false,
+          "selection_reason": "Training metrics/publication marker; not an input to selected adapter loading.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0100/README.md",
+          "required": true,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0100/README.md",
+          "role": "selected_adapter_provenance",
+          "runtime_required": false,
+          "selection_reason": "Retain selected adapter's model card alongside its configuration and weights.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0100/adapter_config.json",
+          "required": true,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0100/adapter_config.json",
+          "role": "selected_adapter_config",
+          "runtime_required": true,
+          "selection_reason": "Configuration for the frozen RL step-100 Oracle adapter.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "60598edcf1f994c3b58435d8543d3daa0e7da03c",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "0bc35721cd37c79c607fe41eb63da3eeffeda40e51d64dfb1fcc16945db5d4a1"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "0bc35721cd37c79c607fe41eb63da3eeffeda40e51d64dfb1fcc16945db5d4a1",
+          "path": "rl1b_rl1b_2_step_0100/adapter_model.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 2170427784,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0100/adapter_model.safetensors",
+          "role": "selected_adapter_weights",
+          "runtime_required": true,
+          "selection_reason": "Only selected Oracle checkpoint; do not fetch the other adapters.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "9a87412cb9637de282d7607a6143cac5ba60ad0c",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "9a87412cb9637de282d7607a6143cac5ba60ad0c"
+          },
+          "path": "rl1b_rl1b_2_step_0100/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0100/metrics.json",
+          "role": "unused_training_metadata",
+          "runtime_required": false,
+          "selection_reason": "Training metrics/publication marker; not an input to selected adapter loading.",
+          "size_bytes": 2278,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "d136d6a7142602026090af9a34286fc2a1ea39b9",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "d136d6a7142602026090af9a34286fc2a1ea39b9"
+          },
+          "path": "rl1b_rl1b_2_step_0125/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0125/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0125/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0125/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0125/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0125/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "b0d116b84cbf9dcd0dedc256ee69dcbd017290ef",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "8d5d287f39c34df24191d6888ba12dc311e051f67df5fe7f44f92d2586acde43"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "8d5d287f39c34df24191d6888ba12dc311e051f67df5fe7f44f92d2586acde43",
+          "path": "rl1b_rl1b_2_step_0125/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0125/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "5f2d89db8fc6c4449709f7916b25dd095fc523fb",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "5f2d89db8fc6c4449709f7916b25dd095fc523fb"
+          },
+          "path": "rl1b_rl1b_2_step_0125/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0125/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2284,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "fa8f08cb6ff8a30dd34a3b442009bdfc798a7316",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "fa8f08cb6ff8a30dd34a3b442009bdfc798a7316"
+          },
+          "path": "rl1b_rl1b_2_step_0150/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0150/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0150/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0150/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0150/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0150/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "6b2b0f65d1fc40f2c5aee117d0e3c15a29e87a5f",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "2475e47ccde996b3fa41a85538a5429a7bb3f621c1cdd8628d2d52bb29ee3cc8"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "2475e47ccde996b3fa41a85538a5429a7bb3f621c1cdd8628d2d52bb29ee3cc8",
+          "path": "rl1b_rl1b_2_step_0150/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0150/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "9894b2c1f67eeedc18ec810ca4ea6e61bd72cc41",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "9894b2c1f67eeedc18ec810ca4ea6e61bd72cc41"
+          },
+          "path": "rl1b_rl1b_2_step_0150/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0150/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2297,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f07e2860a41ceb7dc442e062fe2332ab34ceaca6",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f07e2860a41ceb7dc442e062fe2332ab34ceaca6"
+          },
+          "path": "rl1b_rl1b_2_step_0175/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0175/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0175/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0175/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0175/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0175/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "22638e95c40fb5152f223b8c75c4b400d823e930",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "da7d64fb4c002e36e3342b30695d7219705db0ccf1987214129c1f636f350b6a"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "da7d64fb4c002e36e3342b30695d7219705db0ccf1987214129c1f636f350b6a",
+          "path": "rl1b_rl1b_2_step_0175/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0175/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "ea66d50e95bf652e70d8fcdb4387554154246d32",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "ea66d50e95bf652e70d8fcdb4387554154246d32"
+          },
+          "path": "rl1b_rl1b_2_step_0175/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0175/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "08839f6bb296e888d311d8ea2f35f7ff82dd3f2d",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "08839f6bb296e888d311d8ea2f35f7ff82dd3f2d"
+          },
+          "path": "rl1b_rl1b_2_step_0200/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0200/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0200/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0200/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0200/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0200/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "ee177557b55e8a3f7dfff95e078edc5a8340fd38",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "482fe5f302f92aedad30b5054f7472a9a91fcfd538bc814e879ac740197beb46"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "482fe5f302f92aedad30b5054f7472a9a91fcfd538bc814e879ac740197beb46",
+          "path": "rl1b_rl1b_2_step_0200/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0200/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "95a754a29ceddef44718a3d7e9dfbfd9c640d4d7",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "95a754a29ceddef44718a3d7e9dfbfd9c640d4d7"
+          },
+          "path": "rl1b_rl1b_2_step_0200/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0200/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2260,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "188ccfe56495a62c5492ae41e8147c5123e25562",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "188ccfe56495a62c5492ae41e8147c5123e25562"
+          },
+          "path": "rl1b_rl1b_2_step_0225/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0225/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0225/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0225/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0225/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0225/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "332545ee7b0b978194e2efcb8d3c6cacd9d41cc6",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "38039727900a0683d13683ec21dba04f21f249b3803fff49fc024f0f63bce4b9"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "38039727900a0683d13683ec21dba04f21f249b3803fff49fc024f0f63bce4b9",
+          "path": "rl1b_rl1b_2_step_0225/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0225/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "d7af392353e0b01d5763d5d8b81229ed1d9d0941",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "d7af392353e0b01d5763d5d8b81229ed1d9d0941"
+          },
+          "path": "rl1b_rl1b_2_step_0225/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0225/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2272,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "cb1a40df0f8aaf5b05d9ade490e6cbbd9d3ef8a1",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "cb1a40df0f8aaf5b05d9ade490e6cbbd9d3ef8a1"
+          },
+          "path": "rl1b_rl1b_2_step_0250/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0250/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0250/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0250/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0250/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0250/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "26a6538634dd8937052235e09c5e82565efa550a",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "49b416ed5012b2c7b27e874d239f1e18e0a0f97ed1b033a11bb006255e56ff02"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "49b416ed5012b2c7b27e874d239f1e18e0a0f97ed1b033a11bb006255e56ff02",
+          "path": "rl1b_rl1b_2_step_0250/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0250/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "44ee483c86cf1841629505603517862592c7877a",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "44ee483c86cf1841629505603517862592c7877a"
+          },
+          "path": "rl1b_rl1b_2_step_0250/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0250/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2301,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "4c738e3f1cdd5a7fba3d9ac370c182bc5752a661",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "4c738e3f1cdd5a7fba3d9ac370c182bc5752a661"
+          },
+          "path": "rl1b_rl1b_2_step_0275/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0275/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_2_step_0275/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0275/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_2_step_0275/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0275/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "5425ffa49168b4260328f42189ff1ce2815a315f",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "a635bbc9b85f8b0b00a877cb6f2a177a0b3546d4931759101366e548f73ad242"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "a635bbc9b85f8b0b00a877cb6f2a177a0b3546d4931759101366e548f73ad242",
+          "path": "rl1b_rl1b_2_step_0275/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0275/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "a336a64242a773309f9f1906850342f37899c7fd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "a336a64242a773309f9f1906850342f37899c7fd"
+          },
+          "path": "rl1b_rl1b_2_step_0275/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_2_step_0275/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2299,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+          },
+          "path": "rl1b_rl1b_3_step_0000/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0000/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_3_step_0000/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0000/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_3_step_0000/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0000/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "fc4588931e67681473583be013a0a217afc84874",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "4bb4673177b8ac0779932d60d91b8000356b7a11edc405be86227f94f9becb0b"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "4bb4673177b8ac0779932d60d91b8000356b7a11edc405be86227f94f9becb0b",
+          "path": "rl1b_rl1b_3_step_0000/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0000/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "683d75751342297a73405265e5413c6c12a4c1ae",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "683d75751342297a73405265e5413c6c12a4c1ae"
+          },
+          "path": "rl1b_rl1b_3_step_0000/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0000/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 71,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "7273c0fa8c522b7eed7762a353d46f7768e9b6f2",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "7273c0fa8c522b7eed7762a353d46f7768e9b6f2"
+          },
+          "path": "rl1b_rl1b_3_step_0025/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0025/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 3,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_3_step_0025/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0025/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_3_step_0025/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0025/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "8f789abec507910a96850014a7f277cde5647d18",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "7ec3bdfc1f02107d079fc890ff019aa3e0cccfc686def3c5816ccb2b7b5c6ac2"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "7ec3bdfc1f02107d079fc890ff019aa3e0cccfc686def3c5816ccb2b7b5c6ac2",
+          "path": "rl1b_rl1b_3_step_0025/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0025/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "b620c3ffd9cc7fe961db710fdff99775db5a7036",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "b620c3ffd9cc7fe961db710fdff99775db5a7036"
+          },
+          "path": "rl1b_rl1b_3_step_0025/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0025/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2309,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "e373ee695f6e76d7d3f8f8c4e92d1d60995352e5",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "e373ee695f6e76d7d3f8f8c4e92d1d60995352e5"
+          },
+          "path": "rl1b_rl1b_3_step_0050/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0050/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 3,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_3_step_0050/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0050/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_3_step_0050/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0050/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "776ffa496d8a6bc062d7e85a1696a2a822dcfaae",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "956e8a74f83bd8f71bcdb70b46422e9c99ac5f770b1c0ac5b368876d5ce0c785"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "956e8a74f83bd8f71bcdb70b46422e9c99ac5f770b1c0ac5b368876d5ce0c785",
+          "path": "rl1b_rl1b_3_step_0050/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0050/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "781ed2b1ab115a8469fb2b80ec83be3986c38f0a",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "781ed2b1ab115a8469fb2b80ec83be3986c38f0a"
+          },
+          "path": "rl1b_rl1b_3_step_0050/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0050/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2315,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "78eb67cee1ab25652fe5c9e29efc173671301400",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "78eb67cee1ab25652fe5c9e29efc173671301400"
+          },
+          "path": "rl1b_rl1b_3_step_0075/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0075/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 3,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_3_step_0075/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0075/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_3_step_0075/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0075/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "782ec5163658b1dc7abe9ec48324b70d765ab4e3",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "93237844baa8102697e9d954090aad0d0ab6b4456dda3a93e0fe90ede0d57883"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "93237844baa8102697e9d954090aad0d0ab6b4456dda3a93e0fe90ede0d57883",
+          "path": "rl1b_rl1b_3_step_0075/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0075/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "6127e5c24ad64551840b604ec6f37fbda5dec0e1",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "6127e5c24ad64551840b604ec6f37fbda5dec0e1"
+          },
+          "path": "rl1b_rl1b_3_step_0075/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0075/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2315,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "29d6383b52c1352e92a45875b5bb206f89139643",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "29d6383b52c1352e92a45875b5bb206f89139643"
+          },
+          "path": "rl1b_rl1b_3_step_0100/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0100/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_3_step_0100/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0100/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_3_step_0100/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0100/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "13468f7ab52f9bbf0fd1f5223d38f93ac6ec021c",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "890102df01bed1fc649dd9b0a635454f31fc880c6e39f61563bdeb59c70eb053"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "890102df01bed1fc649dd9b0a635454f31fc880c6e39f61563bdeb59c70eb053",
+          "path": "rl1b_rl1b_3_step_0100/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0100/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "baef9ad99be0f75125d4ac9c62d1618c7696803c",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "baef9ad99be0f75125d4ac9c62d1618c7696803c"
+          },
+          "path": "rl1b_rl1b_3_step_0100/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0100/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2316,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "d136d6a7142602026090af9a34286fc2a1ea39b9",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "d136d6a7142602026090af9a34286fc2a1ea39b9"
+          },
+          "path": "rl1b_rl1b_3_step_0125/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0125/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_3_step_0125/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0125/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_3_step_0125/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0125/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "1f109c5488340fece1ea60b7d642ab30bacbab19",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "d5e1d06ab6c78b7d101a318be2e9c3c5b6b2020e9b49551652a45906e8ebb894"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "d5e1d06ab6c78b7d101a318be2e9c3c5b6b2020e9b49551652a45906e8ebb894",
+          "path": "rl1b_rl1b_3_step_0125/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0125/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "4c30e9f59f933b5901d0bd2bbd49cd8dfc493c3d",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "4c30e9f59f933b5901d0bd2bbd49cd8dfc493c3d"
+          },
+          "path": "rl1b_rl1b_3_step_0125/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0125/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2306,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "fa8f08cb6ff8a30dd34a3b442009bdfc798a7316",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "fa8f08cb6ff8a30dd34a3b442009bdfc798a7316"
+          },
+          "path": "rl1b_rl1b_3_step_0150/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0150/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_3_step_0150/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0150/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_3_step_0150/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0150/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "4226bd8f61348bcbd6ba92a5172240b212ceffcc",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "0a8687f3dcbb5431d2eb76f80fc36552bd063d5831e1a7c429170bbd17e2b3da"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "0a8687f3dcbb5431d2eb76f80fc36552bd063d5831e1a7c429170bbd17e2b3da",
+          "path": "rl1b_rl1b_3_step_0150/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0150/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "ceb74d2ee0065a9240ea86f29e5924a0a216dcbb",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "ceb74d2ee0065a9240ea86f29e5924a0a216dcbb"
+          },
+          "path": "rl1b_rl1b_3_step_0150/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0150/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2307,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f07e2860a41ceb7dc442e062fe2332ab34ceaca6",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f07e2860a41ceb7dc442e062fe2332ab34ceaca6"
+          },
+          "path": "rl1b_rl1b_3_step_0175/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0175/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_3_step_0175/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0175/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_3_step_0175/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0175/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "70712ac8d3861699e06c074fb52b9cb42f7419d8",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "25d7bcec6fc334410c26b64d89515123f3cab910e1df63ed34fb8c8824ff7314"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "25d7bcec6fc334410c26b64d89515123f3cab910e1df63ed34fb8c8824ff7314",
+          "path": "rl1b_rl1b_3_step_0175/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0175/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "fcf1d24f74227f91bb6b2a8a9331e9452fd8d069",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "fcf1d24f74227f91bb6b2a8a9331e9452fd8d069"
+          },
+          "path": "rl1b_rl1b_3_step_0175/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0175/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "08839f6bb296e888d311d8ea2f35f7ff82dd3f2d",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "08839f6bb296e888d311d8ea2f35f7ff82dd3f2d"
+          },
+          "path": "rl1b_rl1b_3_step_0200/PUBLISH_READY",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0200/PUBLISH_READY",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 4,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "rl1b_rl1b_3_step_0200/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0200/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "rl1b_rl1b_3_step_0200/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0200/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "8139efdd6a6e2f813f685a353e621a80ea5edc18",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "8b08974ed7c2ad0d924d0a5304a42d4c9b28c22254b98269ad835928c6668c22"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "8b08974ed7c2ad0d924d0a5304a42d4c9b28c22254b98269ad835928c6668c22",
+          "path": "rl1b_rl1b_3_step_0200/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0200/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "687bfa9bb13974b52484bab4d6067acc5fcc9f49",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "687bfa9bb13974b52484bab4d6067acc5fcc9f49"
+          },
+          "path": "rl1b_rl1b_3_step_0200/metrics.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/rl1b_rl1b_3_step_0200/metrics.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2304,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0025/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0025/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "a9da795c6003c80ff45888fc006adf7c00aee824",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "c0bd9dba360d4acdcd9de9460bdbfbe16e1985de89c140020a5d96e65872ac12"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "c0bd9dba360d4acdcd9de9460bdbfbe16e1985de89c140020a5d96e65872ac12",
+          "path": "sft_one_bullet_step0025/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0025/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0050/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0050/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "093f28f4cfb22949e29f3632f48690c9f0a5ed7a",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "c4acec501083bf0ee77108d45687eb06157cdce46eaac12e145d42e491d80e9a"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "c4acec501083bf0ee77108d45687eb06157cdce46eaac12e145d42e491d80e9a",
+          "path": "sft_one_bullet_step0050/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0050/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0075/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0075/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "188048d5bcd2bb5f9144eb6567b4d73a713b504b",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "a382febc102ec72cb957d108ef0ab2baafcb222f654c59c2b94e6eb59ad1d6f8"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "a382febc102ec72cb957d108ef0ab2baafcb222f654c59c2b94e6eb59ad1d6f8",
+          "path": "sft_one_bullet_step0075/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0075/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0100/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0100/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "3783b4b475fc54718c2026c221ba35f550b035a0",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "4c78d88522d3180c245283abe99e0654ae1cfbb823423bff96ecae0fc9b30292"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "4c78d88522d3180c245283abe99e0654ae1cfbb823423bff96ecae0fc9b30292",
+          "path": "sft_one_bullet_step0100/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0100/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0125/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0125/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "70a35aa4134c7800bf44e3d4c05ba2d2bd429775",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "1088e5bcd23e1c767037c4785284d37c306802147bd3de663bdae81b955f2530"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "1088e5bcd23e1c767037c4785284d37c306802147bd3de663bdae81b955f2530",
+          "path": "sft_one_bullet_step0125/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0125/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0150/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0150/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "d17d08b81373c99ab6b6559850e71fb76e28c795",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "5ce18bc5fb837ea8389928c9efb3235ced29dce941826f3a8f58dd445b0ca10c"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "5ce18bc5fb837ea8389928c9efb3235ced29dce941826f3a8f58dd445b0ca10c",
+          "path": "sft_one_bullet_step0150/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0150/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0175/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0175/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "81207dbc30d4c0f4bb3cbfbf00a867909456cf1c",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "b25265e2d88056106f8c4d856429917adcd51e8194c8057f21268de9c11a9e8b"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "b25265e2d88056106f8c4d856429917adcd51e8194c8057f21268de9c11a9e8b",
+          "path": "sft_one_bullet_step0175/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0175/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0200/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0200/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "dfa3a7f86281fd71b3b5babb6fb5c5d0da61a339",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "f58a553f5bd69f1d7f5471d2f636d37f5dc56aefe27a5d177b4b1ce648061d43"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "f58a553f5bd69f1d7f5471d2f636d37f5dc56aefe27a5d177b4b1ce648061d43",
+          "path": "sft_one_bullet_step0200/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0200/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0225/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0225/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "91aab3708786c309e7672e94b66375bf104ed10e",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "4b64424589203c6332bee6cbcc8172556d920363dd1d49df80b0c0b34d2ba95c"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "4b64424589203c6332bee6cbcc8172556d920363dd1d49df80b0c0b34d2ba95c",
+          "path": "sft_one_bullet_step0225/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0225/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0250/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0250/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "333b93d06da0f4f93e5263758f0d634a81cc5715",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "b1d25272cc3df972d0f46adb55ae3fb2bc03abc84ff8b492c02952184d79bb6a"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "b1d25272cc3df972d0f46adb55ae3fb2bc03abc84ff8b492c02952184d79bb6a",
+          "path": "sft_one_bullet_step0250/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0250/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0275/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0275/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "45664d4fdbf06cfbd1f3b16b5e6e0795fa0b347d",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "aec7df1302f4c04f23ea7167f6b2c4dce91a68865ff006c0fcc26dfb048805fb"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "aec7df1302f4c04f23ea7167f6b2c4dce91a68865ff006c0fcc26dfb048805fb",
+          "path": "sft_one_bullet_step0275/adapter_model.safetensors",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0275/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "912fea6f20993ed73b31a98abece007e6495c4f4",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "912fea6f20993ed73b31a98abece007e6495c4f4"
+          },
+          "path": "sft_one_bullet_step0292/README.md",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0292/README.md",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 5180,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd",
+          "identity": {
+            "algorithm": "git_blob_sha1",
+            "value": "f1dfd5f5ac8e0f3f5d2c67eef70cd9e1aa9493dd"
+          },
+          "path": "sft_one_bullet_step0292/adapter_config.json",
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0292/adapter_config.json",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 1312,
+          "storage": "git"
+        },
+        {
+          "git_blob_sha1": "fc4588931e67681473583be013a0a217afc84874",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "4bb4673177b8ac0779932d60d91b8000356b7a11edc405be86227f94f9becb0b"
+          },
+          "lfs_pointer_size_bytes": 135,
+          "lfs_sha256": "4bb4673177b8ac0779932d60d91b8000356b7a11edc405be86227f94f9becb0b",
+          "path": "sft_one_bullet_step0292/adapter_model.safetensors",
+          "prior_anonymous_head": {
+            "content_length": 2170427784,
+            "status": 200
+          },
+          "required": false,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/sft_one_bullet_step0292/adapter_model.safetensors",
+          "role": "unused_checkpoint",
+          "runtime_required": false,
+          "selection_reason": "Different adapter checkpoint or its metadata; excluded from the selected deployment set.",
+          "size_bytes": 2170427784,
+          "storage": "lfs"
+        },
+        {
+          "git_blob_sha1": "94f1277a96963e460b3eeedf416462b2e6a9ce8d",
+          "identity": {
+            "algorithm": "sha256",
+            "value": "8d9ca706651a1325c7ad9db78b19989a0f0082944577b310dc5aa0cf95046c82"
+          },
+          "lfs_pointer_size_bytes": 131,
+          "lfs_sha256": "8d9ca706651a1325c7ad9db78b19989a0f0082944577b310dc5aa0cf95046c82",
+          "path": "vllm_metamodels_glm53_b26f02d.tar.gz",
+          "prior_anonymous_head": {
+            "content_length": 143411,
+            "status": 200
+          },
+          "required": true,
+          "resolve_url": "https://huggingface.co/ceselder/glm-5.3-olens-lens/resolve/689c5dbae3d2f83dbf969e234a023958f1612185/vllm_metamodels_glm53_b26f02d.tar.gz",
+          "role": "runtime_plugin",
+          "runtime_required": true,
+          "selection_reason": "Pinned author vLLM hook/LoRA plugin; install with --no-deps after vllm==0.31.0.",
+          "size_bytes": 143411,
+          "storage": "lfs"
+        }
+      ],
+      "gated": false,
+      "metadata_request": {
+        "authentication": "none",
+        "method": "GET",
+        "response_bytes": 23686,
+        "response_sha256": "b40c4efc941b90f4fe7644536d25f17febad646680e078b08cab6ce3d56684df",
+        "status": 200,
+        "url": "https://huggingface.co/api/models/ceselder/glm-5.3-olens-lens/revision/689c5dbae3d2f83dbf969e234a023958f1612185?blobs=true"
+      },
+      "private": false,
+      "repo_id": "ceselder/glm-5.3-olens-lens",
+      "repo_type": "model",
+      "revision": "689c5dbae3d2f83dbf969e234a023958f1612185",
+      "selected_subfolder": "rl1b_rl1b_2_step_0100",
+      "totals": {
+        "file_count": 151,
+        "payload_bytes": 71626389341,
+        "required_file_count": 6,
+        "required_payload_bytes": 2170661227,
+        "runtime_required_payload_bytes": 2170607019,
+        "unused_payload_bytes": 69455728114
+      }
+    }
+  ],
+  "rollout_payload_bytes_downloaded": 0,
+  "schema_version": 1,
+  "selection_contract": {
+    "content_verification": "For LFS files compare SHA256 of payload bytes to lfs_sha256; git_blob_sha1 names the LFS pointer, not payload. For regular Git files compare SHA1(b'blob '+str(len(raw)).encode()+b'\\0'+raw) to git_blob_sha1.",
+    "index_caveat": "Index contents were not downloaded here. Complete shard coverage is checked against the pinned repository inventory and prior anonymous HEAD audit.",
+    "local_quant_override": "Verify upstream hf_quant_config.json first; author quant_override_w4a16 intentionally modifies a local copy. Record that derived configuration separately rather than treating it as upstream bytes.",
+    "required": "Exact allowlist for staging the author vLLM Oracle path plus its licences/cards; includes all 50 base shards and only RL step-100 adapter weights.",
+    "runtime_required": "Files conservatively retained for author inference; licence/provenance cards are required for staging but not loader inputs.",
+    "unused": "Complete repo inventory is retained for audit, but required=false files must not be implicitly downloaded via an unfiltered snapshot."
+  },
+  "source_code_sha256": "c930441bd7ceeef8f2c3a285532365f0ad9eafb0d391dd649665cf11ed296c68",
+  "staging_arithmetic": {
+    "fits_900_seconds": null,
+    "formula": "single_copy = sum(size_bytes for all files where required); two_full_copies = 2 * single_copy (e.g. HF cache plus copied local checkpoint, before other overhead).",
+    "selected_nonweight_bytes": 41778959,
+    "selected_weight_bytes": 466313976928,
+    "single_copy_selected_GiB": 434.32764325942844,
+    "single_copy_selected_decimal_GB": 466.355755887,
+    "single_copy_selected_payload_bytes": 466355755887,
+    "timing_caveat": "No transfer or boot measured. Payload bytes do not establish cold transfer or model loading within 900 seconds; stage and verify before a separately authorised GPU smoke window.",
+    "transfer_seconds": null,
+    "two_full_copies_payload_bytes": 932711511774
+  },
+  "totals": {
+    "file_count": 211,
+    "payload_bytes": 535811485636,
+    "required_file_count": 65,
+    "required_payload_bytes": 466355755887,
+    "runtime_required_payload_bytes": 466355687703,
+    "unused_payload_bytes": 69455729749
+  },
+  "track": "G",
+  "weight_payload_bytes_downloaded": 0
+}

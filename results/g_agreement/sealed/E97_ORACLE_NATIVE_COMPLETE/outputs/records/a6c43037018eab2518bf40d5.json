@@ -1,0 +1,9 @@
+{
+  "id": "a6c43037018eab2518bf40d5",
+  "malformed": false,
+  "raw": "- =true; // flag appears in the middle, but we ignore it. The `?flag\n- =true`  \u2190 `flag` appears in the middle. We want to ignore `?flag\n- =true&other=stuff` (where `flag` is now present, but we ignore it) and `?flag\n- =true` (where `flag` is a new parameter added in the middle). We want to detect `?flag",
+  "reader": "oracle",
+  "reader_native_layer": 44,
+  "repeat": 0,
+  "text": "- =true; // flag appears in the middle, but we ignore it. The `?flag\n- =true`  \u2190 `flag` appears in the middle. We want to ignore `?flag\n- =true&other=stuff` (where `flag` is now present, but we ignore it) and `?flag\n- =true` (where `flag` is a new parameter added in the middle). We want to detect `?flag"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "issue": "S2 wrapper omitted study; immutable collector reads a.study when sealing after AR forwards",
+  "fix": "collect parser supplies study=S2",
+  "tests_passed": 7,
+  "pytest_wall_s": 0.71,
+  "regression": "Runs actual frozen AR.collect_fidelity through the S2 entrypoint with CPU reconstruct doubles; validates all IDs/vectors and final SCORE_SEAL.json stage=S2",
+  "command": "CUDA_VISIBLE_DEVICES='' HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 /Users/guivff/Documents/Neel_Exploration/activation-readers/.venv/bin/python -m pytest projects/g_agreement/blindspot/tests/test_s2_fidelity.py -q",
+  "ar_tests_sha256": "69b1991881413ea5b07bd469427b1afca13538a2d065e7da39919878044db769",
+  "new_s2_entrypoint_sha256": "a2a749ba02ecb605ae2b9d309407d5eb89c5ca65b55c55b143eb070c4efba6eb",
+  "test_sha256": "726bc0033c789d298b2f8d60ef2181b0620b9df85232e507135fa55b93ac8ab1",
+  "text_input_seal_sha256": "bd51edcc50c852f5401e6fd1ed84b661ee8cca61563414da8a3feb5c125b60b3",
+  "model_forwards": 0,
+  "gpu_hours": 0,
+  "inputs_changed": false
+}

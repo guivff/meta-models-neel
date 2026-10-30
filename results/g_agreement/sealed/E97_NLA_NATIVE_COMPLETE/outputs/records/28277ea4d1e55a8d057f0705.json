@@ -1,0 +1,12 @@
+{
+  "id": "28277ea4d1e55a8d057f0705",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format pattern: a structured prompt template with \"Question:\" and \"Answer:\" fields signals a model must generate a response matching the defined task.\n\nThe task definition establishes a rule about \"not using AI technology\" and \"explaining the process,\" so the answer must address this specific topic.\n\n\"Answer:\" is the final token, functioning as a label/field header in a few-shot or template format, immediately requiring the actual explanatory response text (e.g., \"The answer explains how to...\").\n\"Question: How to explain the process of [topic]\nRule: [topic]\nQuestion: [topic]\nAnswer:\" \u2014 this pattern demands a sample answer demonstrating the rule, likely beginning with a sentence explaining the process or a mock response.\n\"Answer:\" is the final prompt field, expecting a direct explanatory sentence or example response to follow.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format pattern: a structured prompt template with \"Question:\" and \"Answer:\" fields signals a model must generate a response matching the defined task.\n\nThe task definition establishes a rule about \"not using AI technology\" and \"explaining the process,\" so the answer must address this specific topic.\n\n\"Answer:\" is the final token, functioning as a label/field header in a few-shot or template format, immediately requiring the actual explanatory response text (e.g., \"The answer explains how to...\").\n\"Question: How to explain the process of [topic]\nRule: [topic]\nQuestion: [topic]\nAnswer:\" \u2014 this pattern demands a sample answer demonstrating the rule, likely beginning with a sentence explaining the process or a mock response.\n\"Answer:\" is the final prompt field, expecting a direct explanatory sentence or example response to follow.",
+  "truncated": false
+}

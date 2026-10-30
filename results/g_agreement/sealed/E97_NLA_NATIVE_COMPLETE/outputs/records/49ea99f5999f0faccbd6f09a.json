@@ -1,0 +1,12 @@
+{
+  "id": "49ea99f5999f0faccbd6f09a",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given definition.\n\nThe example structure (\"Example sentence: ... Reply:\") signals a direct answer is expected, applying the rule to \"I am very happy to meet you.\"\n\n\"Reply:\" is the final token, functioning as a prompt label requiring the model's classification output (e.g., \"Positive\") to follow immediately.\n\"Given the following example sentence, provide the correct response label according to the defined pattern.\nExample sentence: 'The company's financial performance is declining.'\nInput sentence: 'The company's financial performance is declining.'\nReply:\" \u2014 the final \"Reply:\" is a field label in a structured Q&A format, demanding the actual answer text (the sentiment label) next.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive,\" \"Negative,\" or \"Neutral\" based on the given definition.\n\nThe example structure (\"Example sentence: ... Reply:\") signals a direct answer is expected, applying the rule to \"I am very happy to meet you.\"\n\n\"Reply:\" is the final token, functioning as a prompt label requiring the model's classification output (e.g., \"Positive\") to follow immediately.\n\"Given the following example sentence, provide the correct response label according to the defined pattern.\nExample sentence: 'The company's financial performance is declining.'\nInput sentence: 'The company's financial performance is declining.'\nReply:\" \u2014 the final \"Reply:\" is a field label in a structured Q&A format, demanding the actual answer text (the sentiment label) next.",
+  "truncated": false
+}

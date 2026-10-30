@@ -1,0 +1,12 @@
+{
+  "id": "3183d014b661363467f31be8",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example: [sentence] / Reply: [classification]\") sets up a direct parallel response format for the new sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the model's classification answer (e.g., \"Positive\" or \"Negative\") or a short explanatory response.\n\"Please follow the pattern strictly.\nGiven sentence: 'The weather is very cold today.'\nQuestion: What is the sentiment classification?\nReply:\" \u2014 the final \"Reply:\" is a prompt field awaiting the direct answer, constrained to be the classification label or short response.\n\"Reply:\"</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given example pattern.\n\nThe example structure (\"Example: [sentence] / Reply: [classification]\") sets up a direct parallel response format for the new sentence \"The weather is very cold today.\"\n\n\"Reply:\" is the final token, functioning as a label/field prompt in the structured format, immediately requiring the model's classification answer (e.g., \"Positive\" or \"Negative\") or a short explanatory response.\n\"Please follow the pattern strictly.\nGiven sentence: 'The weather is very cold today.'\nQuestion: What is the sentiment classification?\nReply:\" \u2014 the final \"Reply:\" is a prompt field awaiting the direct answer, constrained to be the classification label or short response.\n\"Reply:\"",
+  "truncated": false
+}

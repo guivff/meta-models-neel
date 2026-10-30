@@ -1,0 +1,2790 @@
+{
+  "analysis_component": "PROBES",
+  "experiment": "E137",
+  "new_calls": 0,
+  "rule": "unchanged first30 per-design DEV, remainder TEST; insufficient DEV remains NOT EVALUABLE; no alternative split",
+  "subdesigns": {
+    "D1": {
+      "eligible": true,
+      "n_pairs": 42,
+      "probes": {
+        "babi_qa2_episode_cv": null,
+        "descriptive": "current holder and previous holder, each multiclass over fixed names, macroOVR; absent/unseen classes explicit",
+        "layers": {
+          "36": {
+            "current": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 0,
+                      "n_negative": 21,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 1,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9894736842105264,
+                      "class_index": 2,
+                      "n_negative": 19,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9625,
+                      "class_index": 3,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9375,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 5,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 7,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 8,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.9861842105263158,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.6896551724137931,
+                      "class_index": 0,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8571428571428572,
+                      "class_index": 1,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9375,
+                      "class_index": 2,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8545454545454545,
+                      "class_index": 3,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.7703703703703704,
+                      "class_index": 4,
+                      "n_negative": 27,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.5666666666666667,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.06451612903225812,
+                      "class_index": 7,
+                      "n_negative": 31,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9655172413793103,
+                      "class_index": 8,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.7132392364438388,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "current",
+              "test_pairs": 12
+            },
+            "previous": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.5375,
+                      "class_index": 0,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 1,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.045454545454545414,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.6857142857142857,
+                      "class_index": 3,
+                      "n_negative": 14,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.725,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 5,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 7,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.4984172077922078,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 4,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 4
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.6339285714285714,
+                      "class_index": 0,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.3333333333333333,
+                      "class_index": 1,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.7727272727272727,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 3,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.3,
+                      "class_index": 4,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8666666666666667,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": 0.8666666666666667,
+                      "class_index": 7,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.6288870851370851,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 6,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 2
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "previous",
+              "test_pairs": 12
+            },
+            "twin_identity": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": 0.39583333333333337,
+                  "classes": [
+                    {
+                      "AUROC": 0.39583333333333337,
+                      "class_index": 0,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.39583333333333337,
+                      "class_index": 1,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": 0.5234375,
+                  "classes": [
+                    {
+                      "AUROC": 0.5234375,
+                      "class_index": 0,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.5234375,
+                      "class_index": 1,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "DESCRIPTIVE",
+              "target": "twin_identity",
+              "test_pairs": 12
+            }
+          },
+          "44": {
+            "current": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 0,
+                      "n_negative": 21,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9874999999999999,
+                      "class_index": 1,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 2,
+                      "n_negative": 19,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9125,
+                      "class_index": 3,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9249999999999999,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 5,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 7,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 8,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.9781249999999999,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.6551724137931034,
+                      "class_index": 0,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8571428571428572,
+                      "class_index": 1,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8928571428571429,
+                      "class_index": 2,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.7772727272727272,
+                      "class_index": 3,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8888888888888888,
+                      "class_index": 4,
+                      "n_negative": 27,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.7833333333333333,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.29032258064516125,
+                      "class_index": 7,
+                      "n_negative": 31,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8390804597701149,
+                      "class_index": 8,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.7480088004629161,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "current",
+              "test_pairs": 12
+            },
+            "previous": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.675,
+                      "class_index": 0,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 1,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.09090909090909094,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.7428571428571429,
+                      "class_index": 3,
+                      "n_negative": 14,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.7,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 5,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 7,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.5521915584415584,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 4,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 4
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.7589285714285714,
+                      "class_index": 0,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.43333333333333335,
+                      "class_index": 1,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.6590909090909091,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 3,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.4681818181818182,
+                      "class_index": 4,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9333333333333333,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": 0.8666666666666667,
+                      "class_index": 7,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.6865891053391054,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 6,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 2
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "previous",
+              "test_pairs": 12
+            },
+            "twin_identity": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": 0.4305555555555556,
+                  "classes": [
+                    {
+                      "AUROC": 0.4305555555555555,
+                      "class_index": 0,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.4305555555555556,
+                      "class_index": 1,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": 0.56640625,
+                  "classes": [
+                    {
+                      "AUROC": 0.56640625,
+                      "class_index": 0,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.56640625,
+                      "class_index": 1,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "DESCRIPTIVE",
+              "target": "twin_identity",
+              "test_pairs": 12
+            }
+          },
+          "48": {
+            "current": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 0,
+                      "n_negative": 21,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 1,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 2,
+                      "n_negative": 19,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 3,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 5,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 7,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 8,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 1.0,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.8735632183908046,
+                      "class_index": 0,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8214285714285714,
+                      "class_index": 1,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9107142857142856,
+                      "class_index": 2,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.890909090909091,
+                      "class_index": 3,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8444444444444444,
+                      "class_index": 4,
+                      "n_negative": 27,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 7,
+                      "n_negative": 31,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 8,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.9176324513608997,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "current",
+              "test_pairs": 12
+            },
+            "previous": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.7625,
+                      "class_index": 0,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 1,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.5681818181818181,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8428571428571429,
+                      "class_index": 3,
+                      "n_negative": 14,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.825,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 5,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 7,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.7496347402597403,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 4,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 4
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.6964285714285714,
+                      "class_index": 0,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.7999999999999999,
+                      "class_index": 1,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8954545454545455,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 3,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.4181818181818182,
+                      "class_index": 4,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9333333333333333,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": 0.9166666666666667,
+                      "class_index": 7,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.7766774891774894,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 6,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 2
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "previous",
+              "test_pairs": 12
+            },
+            "twin_identity": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": 0.4236111111111111,
+                  "classes": [
+                    {
+                      "AUROC": 0.42361111111111116,
+                      "class_index": 0,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.4236111111111111,
+                      "class_index": 1,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": 0.546875,
+                  "classes": [
+                    {
+                      "AUROC": 0.546875,
+                      "class_index": 0,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.546875,
+                      "class_index": 1,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "DESCRIPTIVE",
+              "target": "twin_identity",
+              "test_pairs": 12
+            }
+          },
+          "52": {
+            "current": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 0,
+                      "n_negative": 21,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 1,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 2,
+                      "n_negative": 19,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 3,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 5,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 7,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 8,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 1.0,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 0,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 1,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 2,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 3,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 4,
+                      "n_negative": 27,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 7,
+                      "n_negative": 31,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 8,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 1.0,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "current",
+              "test_pairs": 12
+            },
+            "previous": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.8374999999999999,
+                      "class_index": 0,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 1,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.6363636363636364,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8785714285714286,
+                      "class_index": 3,
+                      "n_negative": 14,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8625,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 5,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 7,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.8037337662337662,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 4,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 4
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.8035714285714286,
+                      "class_index": 0,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.4,
+                      "class_index": 1,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8818181818181818,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 3,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.5954545454545455,
+                      "class_index": 4,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.6166666666666667,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": 0.7833333333333332,
+                      "class_index": 7,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.6801406926406927,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 6,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 2
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "previous",
+              "test_pairs": 12
+            },
+            "twin_identity": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": 0.4236111111111111,
+                  "classes": [
+                    {
+                      "AUROC": 0.4236111111111111,
+                      "class_index": 0,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.4236111111111111,
+                      "class_index": 1,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": 0.546875,
+                  "classes": [
+                    {
+                      "AUROC": 0.546875,
+                      "class_index": 0,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.546875,
+                      "class_index": 1,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "DESCRIPTIVE",
+              "target": "twin_identity",
+              "test_pairs": 12
+            }
+          },
+          "56": {
+            "current": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 0,
+                      "n_negative": 21,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 1,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 2,
+                      "n_negative": 19,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 3,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 5,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 7,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 8,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 1.0,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 0,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 1,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 2,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 3,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 4,
+                      "n_negative": 27,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 7,
+                      "n_negative": 31,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 8,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 1.0,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "current",
+              "test_pairs": 12
+            },
+            "previous": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.9249999999999999,
+                      "class_index": 0,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 1,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8636363636363636,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8714285714285714,
+                      "class_index": 3,
+                      "n_negative": 14,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.875,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 5,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 7,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.8837662337662338,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 4,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 4
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.8928571428571428,
+                      "class_index": 0,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.4666666666666667,
+                      "class_index": 1,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9909090909090909,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 3,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.5545454545454546,
+                      "class_index": 4,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.6833333333333333,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": 0.5333333333333333,
+                      "class_index": 7,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.686940836940837,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 6,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 2
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "previous",
+              "test_pairs": 12
+            },
+            "twin_identity": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": 0.3819444444444444,
+                  "classes": [
+                    {
+                      "AUROC": 0.3819444444444444,
+                      "class_index": 0,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.3819444444444444,
+                      "class_index": 1,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": 0.4921875,
+                  "classes": [
+                    {
+                      "AUROC": 0.4921875,
+                      "class_index": 0,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.4921875,
+                      "class_index": 1,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "DESCRIPTIVE",
+              "target": "twin_identity",
+              "test_pairs": 12
+            }
+          },
+          "60": {
+            "current": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 0,
+                      "n_negative": 21,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 1,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 2,
+                      "n_negative": 19,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 3,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 5,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 7,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 8,
+                      "n_negative": 23,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 1.0,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 0,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 1,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 2,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 3,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 4,
+                      "n_negative": 27,
+                      "n_positive": 5,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 7,
+                      "n_negative": 31,
+                      "n_positive": 1,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 8,
+                      "n_negative": 29,
+                      "n_positive": 3,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": 1.0,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 8,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 10,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "current",
+              "test_pairs": 12
+            },
+            "previous": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 0.95,
+                      "class_index": 0,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 1,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9090909090909091,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8785714285714286,
+                      "class_index": 3,
+                      "n_negative": 14,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.975,
+                      "class_index": 4,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 5,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 7,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 24,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 20,
+                      "n_positive": 4,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.9281655844155844,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 4,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 4
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": null,
+                  "classes": [
+                    {
+                      "AUROC": 1.0,
+                      "class_index": 0,
+                      "n_negative": 28,
+                      "n_positive": 4,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.48333333333333334,
+                      "class_index": 1,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.9772727272727273,
+                      "class_index": 2,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 3,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.6,
+                      "class_index": 4,
+                      "n_negative": 22,
+                      "n_positive": 10,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.8333333333333334,
+                      "class_index": 5,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 6,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": false
+                    },
+                    {
+                      "AUROC": 0.5333333333333333,
+                      "class_index": 7,
+                      "n_negative": 30,
+                      "n_positive": 2,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 8,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": null,
+                      "class_index": 9,
+                      "n_negative": 32,
+                      "n_positive": 0,
+                      "trained": false
+                    }
+                  ],
+                  "macro_ovr_AUROC": 0.7378787878787879,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 6,
+                  "n_fixed_classes": 10,
+                  "n_trained_classes": 8,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 2
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "DESCRIPTIVE",
+              "target": "previous",
+              "test_pairs": 12
+            },
+            "twin_identity": {
+              "dev_pairs": 30,
+              "groups": {
+                "multi_hop_test": {
+                  "binary_AUROC": 0.45833333333333337,
+                  "classes": [
+                    {
+                      "AUROC": 0.45833333333333337,
+                      "class_index": 0,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.45833333333333337,
+                      "class_index": 1,
+                      "n_negative": 12,
+                      "n_positive": 12,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 24,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 24,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                },
+                "one_hop_descriptive": {
+                  "binary_AUROC": 0.47265625,
+                  "classes": [
+                    {
+                      "AUROC": 0.47265625,
+                      "class_index": 0,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    },
+                    {
+                      "AUROC": 0.47265625,
+                      "class_index": 1,
+                      "n_negative": 16,
+                      "n_positive": 16,
+                      "trained": true
+                    }
+                  ],
+                  "macro_ovr_AUROC": null,
+                  "missing_n": 0,
+                  "n": 32,
+                  "n_evaluable_classes": 2,
+                  "n_fixed_classes": 2,
+                  "n_trained_classes": 2,
+                  "planned_n": 32,
+                  "status": "DESCRIPTIVE",
+                  "unseen_target_n": 0
+                }
+              },
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "DESCRIPTIVE",
+              "target": "twin_identity",
+              "test_pairs": 12
+            }
+          }
+        },
+        "primary": "binary twin identity (which frozen recipient is current); AUROC",
+        "split": "first30 selected multi-hop pairs DEV, remaining TEST; pair members NEVER cross folds; one-hop transfer descriptive; QA2 separately episode-grouped CV",
+        "threshold_role": "none of these probe metrics enters R-NL2"
+      },
+      "scope": "D1 R-NL2 eligibility retained; probes do not enter R-NL2"
+    },
+    "D2": {
+      "eligible": false,
+      "n_pairs": 19,
+      "probes": {
+        "babi_qa2_episode_cv": null,
+        "descriptive": "current holder and previous holder, each multiclass over fixed names, macroOVR; absent/unseen classes explicit",
+        "layers": {
+          "36": {
+            "current": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "current",
+              "test_pairs": 0
+            },
+            "previous": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "previous",
+              "test_pairs": 0
+            },
+            "twin_identity": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "NOT EVALUABLE",
+              "target": "twin_identity",
+              "test_pairs": 0
+            }
+          },
+          "44": {
+            "current": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "current",
+              "test_pairs": 0
+            },
+            "previous": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "previous",
+              "test_pairs": 0
+            },
+            "twin_identity": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "NOT EVALUABLE",
+              "target": "twin_identity",
+              "test_pairs": 0
+            }
+          },
+          "48": {
+            "current": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "current",
+              "test_pairs": 0
+            },
+            "previous": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "previous",
+              "test_pairs": 0
+            },
+            "twin_identity": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "NOT EVALUABLE",
+              "target": "twin_identity",
+              "test_pairs": 0
+            }
+          },
+          "52": {
+            "current": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "current",
+              "test_pairs": 0
+            },
+            "previous": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "previous",
+              "test_pairs": 0
+            },
+            "twin_identity": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "NOT EVALUABLE",
+              "target": "twin_identity",
+              "test_pairs": 0
+            }
+          },
+          "56": {
+            "current": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "current",
+              "test_pairs": 0
+            },
+            "previous": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "previous",
+              "test_pairs": 0
+            },
+            "twin_identity": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "NOT EVALUABLE",
+              "target": "twin_identity",
+              "test_pairs": 0
+            }
+          },
+          "60": {
+            "current": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "current",
+              "test_pairs": 0
+            },
+            "previous": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 10,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "DESCRIPTIVE_IDENTITY_PROBE",
+              "status": "NOT EVALUABLE",
+              "target": "previous",
+              "test_pairs": 0
+            },
+            "twin_identity": {
+              "dev_pairs": 19,
+              "model": "E109 fixed LogisticRegression C1/lbfgs/max_iter2000/seed0; no scaling/tuning",
+              "n_fixed_classes": 2,
+              "reason": "requires first30 multi-hop pairs, finite dev vectors and at least2 dev classes",
+              "role": "PRIMARY_PROBE_DESCRIPTIVE_TO_R_NL2",
+              "status": "NOT EVALUABLE",
+              "target": "twin_identity",
+              "test_pairs": 0
+            }
+          }
+        },
+        "primary": "binary twin identity (which frozen recipient is current); AUROC",
+        "split": "first30 selected multi-hop pairs DEV, remaining TEST; pair members NEVER cross folds; one-hop transfer descriptive; QA2 separately episode-grouped CV",
+        "threshold_role": "none of these probe metrics enters R-NL2"
+      },
+      "scope": "DESCRIPTIVE ONLY"
+    }
+  }
+}

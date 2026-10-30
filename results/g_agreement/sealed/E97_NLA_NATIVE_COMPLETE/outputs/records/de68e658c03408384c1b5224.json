@@ -1,0 +1,12 @@
+{
+  "id": "de68e658c03408384c1b5224",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt pattern: a few-shot example establishes a format where a sentence is classified as \"happy\" or \"sad,\" requiring a direct label response.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals the model must now produce the classification label for the given sentence \"The weather is cold today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"sad\" or \"happy\").\n\"Given the following example format:\nExample sentence: The weather is cold today.\nSentence: The weather is cold today.\nReply:\" \u2014 this closing \"Reply:\" demands the actual response text follows immediately, likely a short label or explanation.\n\n\"Reply:\" is the final prompt field, expecting the model's answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt pattern: a few-shot example establishes a format where a sentence is classified as \"happy\" or \"sad,\" requiring a direct label response.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals the model must now produce the classification label for the given sentence \"The weather is cold today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label/field marker in a structured Q&A format, immediately requiring the model's direct answer (e.g., \"sad\" or \"happy\").\n\"Given the following example format:\nExample sentence: The weather is cold today.\nSentence: The weather is cold today.\nReply:\" \u2014 this closing \"Reply:\" demands the actual response text follows immediately, likely a short label or explanation.\n\n\"Reply:\" is the final prompt field, expecting the model's answer.",
+  "truncated": false
+}

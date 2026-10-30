@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-24T04:45:06.939702+00:00",
+  "status": "PASS_BEFORE_LOCAL_KEY_JOIN",
+  "codes_seal_sha256": "f1b05f076460fd692d2beeebecb97c60f4d9a6432bc33e2efbe10afa77db1cc6",
+  "samples": {
+    "w1": {
+      "codes_sha256": "61b4c9c9c5db41ae41c757d3cf5a6abcfa8990026ee10d21630eaac0dea6f700",
+      "input_sha256": "a1c1f2e23d2e9a3c6ad3b6164fd4831f0b45dab52d3aef5d6be456a1f443031a",
+      "n": 300,
+      "mention_count": 41,
+      "enact_count": 70,
+      "evidence_failures": 0
+    },
+    "s84": {
+      "codes_sha256": "dba3175c6f710f378ef051e67eaab8c2c406d52332274874245a16b288d5165b",
+      "input_sha256": "9994681e7396ef103081100f041cc8f529d5612f56fe6744bdc103867f40c26b",
+      "n": 300,
+      "mention_count": 149,
+      "enact_count": 139,
+      "evidence_failures": 0
+    }
+  },
+  "codes_seal": {
+    "status": "CODES_SEALED_BEFORE_KEY_JOIN",
+    "coder": "8 blind Claude sub-agents (75 readouts each), no key access",
+    "prompt_fields": "mentions; value A/B/unclear per question definitions; enacts; enact_value A/B/unclear; verbatim evidence",
+    "deviation_from_registered_prompt": "value recorded as A/B/unclear (question definitions) instead of yes/no/specific; enact_value added; recorded before any key join",
+    "coding_note": "some coders counted a readout explicitly naming the current token (e.g. final token \"4500\") as a mention and derived A/B from that token",
+    "samples": {
+      "w1": {
+        "n": 300,
+        "mentions": 41,
+        "enacts": 70,
+        "value": {
+          "A": 23,
+          "unclear": 5,
+          "B": 13
+        },
+        "validation_failures": 0,
+        "sha256": "61b4c9c9c5db41ae41c757d3cf5a6abcfa8990026ee10d21630eaac0dea6f700",
+        "input_sha256": "a1c1f2e23d2e9a3c6ad3b6164fd4831f0b45dab52d3aef5d6be456a1f443031a"
+      },
+      "s84": {
+        "n": 300,
+        "mentions": 149,
+        "enacts": 139,
+        "value": {
+          "B": 74,
+          "A": 67,
+          "unclear": 8
+        },
+        "validation_failures": 0,
+        "sha256": "dba3175c6f710f378ef051e67eaab8c2c406d52332274874245a16b288d5165b",
+        "input_sha256": "9994681e7396ef103081100f041cc8f529d5612f56fe6744bdc103867f40c26b"
+      }
+    },
+    "created": "2026-10-24 CEST"
+  },
+  "no_keys_read_by_this_check": true
+}

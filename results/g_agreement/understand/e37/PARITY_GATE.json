@@ -1,0 +1,30 @@
+{
+  "authority_commit": "d4bb903db5c0a25771273ef06c4482bb67de869d",
+  "date": "2026-10-25",
+  "failure": "STOP_NO_RETRY",
+  "input_seal_sha256": "e499952a84f5fc76d3b08419f36af1e7aea3ed981df08aa4c0e0b9d61449e6f6",
+  "rl_reproduction": {
+    "max_abs_auroc_delta": 0.03,
+    "metric": "row AUROC of mean of two frozen C1 paired log-odds",
+    "n_per_row": 84,
+    "references": "sealed parity_inputs.json",
+    "rows": [
+      "prose_sentiment",
+      "prose_paren",
+      "python_string"
+    ]
+  },
+  "schema": "E37_PARITY_GATE_v1",
+  "smoke": {
+    "channel": "C1",
+    "finite_required": true,
+    "n": 20,
+    "pair_scores_and_means": true,
+    "selection": "sha256(20261025|id) ascending, first20 across2100 frozen test items",
+    "selection_seed": 20261025,
+    "self_repeat_max_abs": 0.0001
+  },
+  "smoke_set_sha256": "009616c0f2aa8cc7da0c8600b78334021f9b2d5b217dc64ed7fb9a89c950e410",
+  "status": "REGISTERED_FROZEN",
+  "timing": "Both arms load, immediate repeated smoke and RL full3row reproduction before production; no test-dependent adjustment"
+}

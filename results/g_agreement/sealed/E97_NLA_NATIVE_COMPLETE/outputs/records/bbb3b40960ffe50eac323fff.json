@@ -1,0 +1,12 @@
+{
+  "id": "bbb3b40960ffe50eac323fff",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given definition.\n\nThe example pattern (\"Example sentence: ... / Reply:\") signals a direct answer is expected, applying the rule to \"I am feeling very sad today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label requiring the model's classification answer (e.g., \"Negative\") to follow immediately.\n\"Given the following example sentence, determine the sentiment label according to the specified definition.\nExample sentence: 'I am feeling very sad today.'\nGiven sentence: 'I am feeling very sad today.'\nReply:\" \u2014 the structured Q&A format demands the answer token next, likely a short label like \"Negative\" or \"Positive.\"\n\"Reply:\" is the final prompt field awaiting the model's response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given definition.\n\nThe example pattern (\"Example sentence: ... / Reply:\") signals a direct answer is expected, applying the rule to \"I am feeling very sad today.\"\n\n\"Reply:\" is the final token, functioning as a prompt label requiring the model's classification answer (e.g., \"Negative\") to follow immediately.\n\"Given the following example sentence, determine the sentiment label according to the specified definition.\nExample sentence: 'I am feeling very sad today.'\nGiven sentence: 'I am feeling very sad today.'\nReply:\" \u2014 the structured Q&A format demands the answer token next, likely a short label like \"Negative\" or \"Positive.\"\n\"Reply:\" is the final prompt field awaiting the model's response.",
+  "truncated": false
+}

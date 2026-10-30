@@ -1,0 +1,26 @@
+{
+  "experiment": "E119",
+  "authority": "8eae8a437; \u00a7229 note1; direct human ruling",
+  "audit_completed_utc": "2026-10-29T13:23:58.267612+00:00",
+  "audit_wall_minutes_upper": 15,
+  "deadline": "2026-10-29T15:15:00+01:00",
+  "result": "NO_SPECIFIC_READ_CONTRACT_MISMATCH_FOUND",
+  "disposition": "NOT_RUN_OPERATIONAL_CLOSED",
+  "corrected_smoke_authorized": false,
+  "production_authorized": false,
+  "smoke_or_production_calls": 0,
+  "checkpoint_readme_sha256": "20cc09478fda779b2c5adf44f38b5faaf623608ece33ee493397263c42cfd908",
+  "root_readme_sha256": "5d8724a5efea797bc88c6821cf3eb7b724b7dc8d78327fb6a13d35951c7d0bc9",
+  "contract_sha256": "93e05924a2cd9d1dab74a5f4026408b40f2768efe5c88bd47d02601c93db714b",
+  "reader_sha256": "bdad127d78845d72e0b4c8975d03103c78f78d0a461805f9a92031306ba0c5bf",
+  "checks": {
+    "scale": "reader.embed replaces slot row with1000*h/||h||; synthetic3-4vectors yield600/800 andnorm1000; exact injector buffers1000/scale1 verified original load audit",
+    "slot": "actual cached Qwen tokenizer carrier44/52 selects\u321c token158983 unique once atslot24 in56tokens; character scan is not a different marker",
+    "prompt": "registeredconcepts_raw user prompt; add_generation_promptTrue/enable_thinkingFalse; same activation header/instruction/layer interpolation",
+    "layer_tag": "plainzero-based44/52 in carrier; original input source_layer used; source residual blockoutput beforefinalnorm",
+    "base_revision": "contract6a9e13bd6fc8f0983b9b99948120bc37f49c13e9 matches lensBREADME; loader requires exactsnapshot name and local_files_only/trust_remote_codeFalse"
+  },
+  "limitations": "No claim that failed smoke proves lensB scientific null. Runtime stack compatibility is not an identified mismatch in the five allowed read-contract fields; no speculative correction or retry.",
+  "priority": "E117 launch coordination published d481bfe48 before this audit; E120 untouched",
+  "original_failed_smoke_sha256": "7043047dd617485d2a74931091a42a3d27af7fef9778fc58da326681f4c2060c"
+}

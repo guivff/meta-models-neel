@@ -1,0 +1,28 @@
+{
+  "AUROC": "per-category/member OVR AUROC from available OOF probabilities; missing training-fold member/negative class reported unevaluable for that fold. A cell without positive and negative endpoint observations is unevaluable. Use common eligible category/member cells across all three predictors. Primary macro equals unweighted mean of those member-cell AUROCs; per-category macro and eligibility counts reported.",
+  "B_feature_exclusion": "for each category remove all word-unigram features appearing in ANY member of its fixed class catalog from all three B predictor views, in training and heldout. No heldout readout words in vocabulary fitting; candidate catalog is fixed target metadata, never the per-item true pick alone.",
+  "E107": "NOT_APPLICABLE: item-specific belief strings, all belief-wrong; no cross-item private target variation without naming the label",
+  "authority": "\u00a7240 clarification1 /52cb13a81",
+  "blocks": {
+    "44": "descriptive original E108 native bank linked through E116 original source graph if exact IDs/text exist",
+    "52": "descriptive companion",
+    "60": "primary"
+  },
+  "bootstrap": "2000 paired item resamples with replacement within (category,sealed pick) strata of each endpoint/subset, seed20261030. Same original item resample for all predictors, fixedOOF/no refit;95%percentileCI on readout-minus-prompt. Conditional class-count bootstrap; undefined draws counted and CI withheld rather than silently dropped.",
+  "capacity": "each within-category training-fold text view uses CountVectorizer word unigrams/lowercase/min_df1/max_features5000/token_pattern (?u)\\b\\w\\w+\\b and separate binary one-vs-rest L2 logistic C1/liblinear/max_iter2000/tol1e-4/random_state20261030 for each member. No hyperparameter tuning. Empty-vocabulary training fold uses only its fitted class prior.",
+  "endpoints": "block-specific casefolded literal pick-string substring in unchanged readout: A contains, B does not. No new judge, alias expansion or old hit-code reparse. Original texts and labels unchanged.",
+  "experiment": "E132",
+  "fit_and_score": "same full329 fold assignment and training population for raw A models and candidate-word-excluded B models. Train on full training folds then score endpoint A or B heldout items; exact same subset/OOF rows for each matched predictor. Nonmodal110 subset is scored from these frozen OOF predictions, no separate refit.",
+  "folds": "all original items sharing input-bank prompt template t0..t5 stay in one fold across categories and blocks. Sort six template IDs, numpy default_rng(20261030) permutation, split into5 consecutive chunks; item remains in same fold in all representations. Category never a grouping variable. No label-driven split tuning.",
+  "label": "EXPLORATORY_CPU_ONLY",
+  "predictors": [
+    "exact original prompt only",
+    "exact Oracle readout only",
+    "original prompt + newline + readout"
+  ],
+  "rule": "endpointB readout-only minus prompt-only>=.10 AND pairedCI lower>0=>MET; difference<=.03 prompt-derived reading. Nonmodal B/block60 headline; undefined metrics/CI NOT EVALUABLE. A descriptive only.",
+  "scope": "E116 sealed329 immediate choices; exact110 nonmodal IDs from sealed E116 note2 item_ids; no mode refit",
+  "source_custody": "verify original cohort, note2 nonmodal roster, original E108 input/inventory and raw native output seals/members; CPU-only private source pointers; no existing analysis entrypoint/guard/fit invoked.",
+  "target": "within-category canonical sealed pick string; class catalog is all realized canonical picks of the original329 in each category, fixed before any classifier fit; no invented synonyms/classes",
+  "utc_before_source_label_extraction": "2026-10-30T00:35:04.902938+00:00"
+}

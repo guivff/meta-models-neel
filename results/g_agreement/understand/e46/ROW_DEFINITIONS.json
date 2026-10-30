@@ -1,0 +1,41 @@
+{
+  "authority": "\u00a7157 and clarification 1, 50edac15; user confirms source next token",
+  "rows": {
+    "fenced_code": {
+      "cell": "long",
+      "definition": "Inside a fenced code block versus in prose; frozen source has at least 40 tokens before closing.",
+      "kind": "syntactic",
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    "latex_list": {
+      "cell": "long",
+      "definition": "Inside a LaTeX list environment versus outside; frozen source has at least 40 tokens before closing.",
+      "kind": "syntactic",
+      "values": [
+        "inside",
+        "outside"
+      ]
+    },
+    "number_completion": {
+      "cell": "short",
+      "definition": "Next authored-source token completes the number/date already begun versus no number/date begun at the read position.",
+      "kind": "semantic",
+      "values": [
+        "next_completes",
+        "next_does_not_complete"
+      ]
+    },
+    "word_first_piece": {
+      "cell": "short",
+      "definition": "Read token is the first piece of a multi-token source word versus a complete word.",
+      "kind": "semantic",
+      "values": [
+        "first_piece",
+        "complete_word"
+      ]
+    }
+  }
+}

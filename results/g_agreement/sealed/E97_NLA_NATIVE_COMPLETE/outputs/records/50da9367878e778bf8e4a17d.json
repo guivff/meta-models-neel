@@ -1,0 +1,12 @@
+{
+  "id": "50da9367878e778bf8e4a17d",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nQ&A format with a strict template: \"Given sentence: [X] / What is the sentiment? / Reply:\" establishes a pattern requiring a direct sentiment label answer.\n\nThe instruction explicitly states the answer must be \"positive\" or \"negative\" only, constraining the response to one of those two words.\n\n\"Reply:\" is the final prompt label in the example, immediately requiring the model's answer (e.g., \"positive\" or \"negative\") for the specific sentence \"I am a doctor.\"\n\"Example pattern:\nGiven sentence: 'I am a doctor.'\nSentiment: positive or negative?\nGiven sentence: 'I am a doctor.'\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label, immediately expecting the short answer output.\n\n\"Reply:\" closes the structured prompt, demanding the direct answer.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Q&A format with a strict template: \"Given sentence: [X] / What is the sentiment? / Reply:\" establishes a pattern requiring a direct sentiment label answer.\n\nThe instruction explicitly states the answer must be \"positive\" or \"negative\" only, constraining the response to one of those two words.\n\n\"Reply:\" is the final prompt label in the example, immediately requiring the model's answer (e.g., \"positive\" or \"negative\") for the specific sentence \"I am a doctor.\"\n\"Example pattern:\nGiven sentence: 'I am a doctor.'\nSentiment: positive or negative?\nGiven sentence: 'I am a doctor.'\nReply:\" \u2014 the final token \"Reply:\" is a prompt field label, immediately expecting the short answer output.\n\n\"Reply:\" closes the structured prompt, demanding the direct answer.",
+  "truncated": false
+}

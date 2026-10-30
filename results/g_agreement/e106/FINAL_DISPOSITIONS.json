@@ -1,0 +1,81 @@
+{
+  "experiment": "E106",
+  "status": "FINAL_DISPOSITIONS_NO_EVALUABLE_SCIENTIFIC_BANK",
+  "as_of_utc": "2026-10-29T08:24:04.343031+00:00",
+  "arm_P": {
+    "oracle": {
+      "status": "NOT RUN (operational)",
+      "reason": "Registered initial and sole retime failed full custody fit;128retime pilots unjudged/unscored, no partialstitch",
+      "source": "arm_p_a2_final_not_run/SEAL.json"
+    },
+    "nla": {
+      "status": "NOT RUN (operational)",
+      "reason": "Same complete both-reader P arm did not fit",
+      "source": "arm_p_a2_final_not_run/SEAL.json"
+    }
+  },
+  "arm_T": {
+    "nla": {
+      "status": "NOT RUN (feasibility)",
+      "reason": "No backend proof or10step feasibilityPASS; source-backed remaining gate NOFIT, stopbefore14CET",
+      "source": "remaining_gate_no_fit/SEAL.json"
+    },
+    "oracle": {
+      "status": "NOT RUN (Oracle E102 gate unresolved)",
+      "reason": "No documented E102 gate issue resolution or admitted OracleT gate; E102finalunchanged",
+      "source": "gate_a1/RUN_RECEIPT.json"
+    }
+  },
+  "source_seals": {
+    "arm_p_a1/SEAL.json": "7639135d6ff20d989dfb19e8a05f741de0286d923bb57d9cb638e415ad16e9fa",
+    "arm_p_a2_final_not_run/SEAL.json": "72c33d127fd84fb59e4bdfd1c00cfb1b860599ddd06e69f8ddcf77dcb5d00ca7",
+    "gate_a1/SEAL.json": "d849aa17e071afc04e7fa1eef89a5c89f1cc0bd41c18cacbb4622b7164066dce",
+    "gate_a2_preload_failure/SEAL.json": "24225ac9f5e8de6c652da3d7d391b531cfe07786d4be693994059e32df6dc341",
+    "gate_a2_preload2_failure/SEAL.json": "2841bf6639294ae802c6e291e3ca65edd3efdafb8b2badb7a4d786fabbd83fd9",
+    "gate_proof_v2_preload_failure/SEAL.json": "88c970eee0104dae9e445b4c4d06b53060b5c0b1e4b17d35734e79c38b0eeeec",
+    "remaining_gate_no_fit/SEAL.json": "4fb7d0ed1bbd6c4de292241e92fdac54e780bbff8dbf4f9595253e7c36f12162",
+    "evaluation/INVENTORY_SEAL.json": "be50cfe94d23265b4910dc15890327f77150539d83516fda432863e73fad2361",
+    "FINAL_ADAPTER_ACCEPTANCE.json": "c371f443fb800dfed8d1017e726f0a811903e682422915e1bda7d7d81fbe4ec4"
+  },
+  "remaining_gate_plan_seconds": 507.2554409503936,
+  "incomplete_lower_forecast_seconds": 515.2699311495971,
+  "excluded_work": [
+    "container install/import/JIT/backend proof",
+    "model load not already covered by staging",
+    "pre-optimizer frozen hash",
+    "all ten optimizer steps",
+    "post-optimizer frozen hash/update proof",
+    "checkpoint/save",
+    "extra owned shutdown allowance"
+  ],
+  "B200": "Authorizedfallbackbutnoeligibleweights-readywhole-fit established; no B200allocation or smoke/model attempt. No assumed favorabletimings.",
+  "no_further_GPU_or_model_calls": true,
+  "no_judging_calls": true,
+  "judging_actual_usd": 0,
+  "judging_reservation_usd": 0,
+  "training_steps_completed": 0,
+  "production_teacher_train_evaluate_all_NOT_RUN": true,
+  "valid_complete_P_readouts": 0,
+  "valid_complete_T_readouts": 0,
+  "failed_partials_unjudged_unscored_unstitched": true,
+  "planned_inventory_retained": true,
+  "private_labels_CPU_only": true,
+  "actual_judge_route_status": "NOT RUN; no outgoing researchpayload",
+  "rules": {
+    "R-FX0": "NOT EVALUABLE (P not run operational)",
+    "R-FX1": "NOT EVALUABLE (T not run feasibility)",
+    "R-FX2": "NOT EVALUABLE (T not run feasibility)",
+    "falsifier": "NOT EVALUABLE (no completed recipe/loss or paired placebo bank)"
+  },
+  "scientific_conclusion": "None; no decoder-limit or training-data-gap claim",
+  "analysis_owner": "W-mech2 sole normalizer/once watcher",
+  "reviewer": "R-4",
+  "terminal_analysis_seal_pending": true,
+  "gpu_hours_upper": 0.6339897706111273,
+  "gpu_usd_rate_based_upper": 3.353805886532863,
+  "non_gpu_contingency_upper_usd": 12,
+  "invoice": false,
+  "all_active_reservations_usd": 0,
+  "first_output_utc": "2026-10-29T05:19:38.939065+00:00",
+  "first_output_source": "Earliest actual generated parity readout in gate_a1 original PAXmtime; no new scientificoutput from this metadatareceipt"
+}

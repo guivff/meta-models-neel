@@ -1,0 +1,12 @@
+{
+  "id": "35fdfa58fa12922d7c914bf4",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishing a Q&A template pattern, where \"Question\" and \"Answer\" fields follow a structured template.\n\nThe \"Task\" describes explaining how to use a specific tool (e.g., \"a calculator\"), but the \"Question\" asks about \"the impact of the company's financial performance on stock prices\" \u2014 creating a mismatch the model must resolve.\n\n\"Answer:\" is the final token, functioning as a field label in the template, immediately requiring the model's generated response text explaining the task's answer.\n\"Given the following task and question, generate the answer.\nTask: [description]\nQuestion: How to explain the impact of the company's financial performance on stock prices?\nAnswer:\" \u2014 expects a sample explanation or response beginning, likely starting with \"The answer is...\" or a direct explanation sentence.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishing a Q&A template pattern, where \"Question\" and \"Answer\" fields follow a structured template.\n\nThe \"Task\" describes explaining how to use a specific tool (e.g., \"a calculator\"), but the \"Question\" asks about \"the impact of the company's financial performance on stock prices\" \u2014 creating a mismatch the model must resolve.\n\n\"Answer:\" is the final token, functioning as a field label in the template, immediately requiring the model's generated response text explaining the task's answer.\n\"Given the following task and question, generate the answer.\nTask: [description]\nQuestion: How to explain the impact of the company's financial performance on stock prices?\nAnswer:\" \u2014 expects a sample explanation or response beginning, likely starting with \"The answer is...\" or a direct explanation sentence.",
+  "truncated": false
+}

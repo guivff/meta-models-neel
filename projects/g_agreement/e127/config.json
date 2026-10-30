@@ -1,0 +1,67 @@
+{
+  "authority": "\u00a7236/2ebe22138",
+  "batcher": "projects.g_agreement.e127.runner.batches(items,size=8)",
+  "cells": 252,
+  "conditions": [
+    "context_update",
+    "neutral_prefix",
+    "none"
+  ],
+  "entrypoint": "projects.g_agreement.e127.runner.capture_answer_batch(model,tok,items)",
+  "experiment": "E127",
+  "greedy_answer": {
+    "full_prefix_recompute": true,
+    "max_new_tokens": 3,
+    "stop_on_EOS": true,
+    "temperature": 0
+  },
+  "hook_enabled": false,
+  "input_loader": "projects.g_agreement.e127.inputs.load(root,input_sha)",
+  "items": 84,
+  "judging": {
+    "adapter": "W-internals-B",
+    "bank": "E127",
+    "max_USD": 3,
+    "owner": "W-internals-C",
+    "reviewer": "R-Q",
+    "rubric": "original E104 states old/new/neither"
+  },
+  "labels_on_pod": false,
+  "launch": {
+    "cap": "current\u00a7217 whole measured need \u00d71.25+60, original custody/daily ceiling",
+    "creation_cutoff": "2026-10-30T04:00:00+01:00",
+    "one_measured_reattempt_after_NO_FIT": true,
+    "owner": "Track Q",
+    "planning_GPU_hours": 0.5,
+    "priority": "E117\u2192E126\u2192E127\u2192E117c\u2192E125\u2192E128",
+    "stop_and_seal_cutoff": "2026-10-30T08:00:00+01:00"
+  },
+  "no_GPU_selection": true,
+  "oracle_layers": [
+    44,
+    52,
+    60
+  ],
+  "oracle_readouts": 756,
+  "output": "252 greedy-answer records/rawtoken IDs/pair scores + 756 native Oracle readouts/capture vectors/pointers/GPUtype; no flipped-set filtering",
+  "public_input": {
+    "GPU_calls": 0,
+    "archive": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e127-inputs-v2/inputs.tar.gz",
+    "archive_sha256": "a026b03bc1e4d3b4436e0ea94a91f4e6447f9fadd08f37bc446487918750ec38",
+    "cells": 252,
+    "cpu_only": {
+      "root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e127-inputs-v2/cpu_only",
+      "seal_sha256": "549fa110f6f0f0276dda18b428b26de9c921e9fd97bced195f754a017ebe99c0",
+      "stage_to_pod": false
+    },
+    "experiment": "E127",
+    "fallback_value_count": 0,
+    "input_sha256": "964b5fc3f7e9e638496b987207cb8eb2ea6af7c54018b764c35452ea5b8462dd",
+    "items": 84,
+    "labels_on_pod": false,
+    "public_root": "/Users/guivff/Documents/ChatGPT/Activation_Readers/outputs/e127-inputs-v2/inputs",
+    "readouts": 756
+  },
+  "reader": "original runner109.backend87()/Backend87.sweep(oracle,vectors,actual_layer), k1/greedy128/nativealpha16000unit",
+  "seed": 20261030
+}

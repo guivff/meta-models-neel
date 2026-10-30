@@ -1,0 +1,302 @@
+{
+  "all_ks_p": 1.0,
+  "all_mean_token_difference": 0.0,
+  "at_utc": "2026-10-23T22:49:37.494289+00:00",
+  "committed_freeze_matches_bank": true,
+  "freeze_commit": "328bc63c",
+  "generator_and_registry_match_preselection_commit": true,
+  "generator_commit": "9f39b528",
+  "input_seal_sha256": "ede1dcc5635742e26724971f0a56e0678cc0abe1edbaab60d2675837eff0d30f",
+  "interpretation_caveats": [
+    "Templates are held out; terminal lexemes are reused across splits. This tests the registered operational predicates, not generalization to unseen words or numeric forms.",
+    "Numeric magnitude and digit rows use positive decimal integers near thresholds; signed values, decimals and scientific notation are outside this bank.",
+    "Prepositions and auxiliaries mean exact frozen lexical-list membership, not contextual part of speech.",
+    "Exact token matching can require different amounts of leading pad text by value; the required label and length checks pass, but padding is not identical and is not proven cue-free."
+  ],
+  "items_verified": 1680,
+  "length_groups_verified": 20,
+  "manifest_sha256": "b2543d7ba9d1568199d3afba24ce96b43bb2c9fd44f3ead5f9fecbc66a6f871f",
+  "pairs_verified": 840,
+  "rows": [
+    {
+      "dev_clusters": 6,
+      "feature": "wordlist_preposition",
+      "labels_checked_before_and_after_padding": 168,
+      "n": 168,
+      "pad_count_present_minus_absent": [
+        1
+      ],
+      "terminal_values": {
+        "absent": [
+          "zircon"
+        ],
+        "present": [
+          "at",
+          "between",
+          "by",
+          "for",
+          "from",
+          "in",
+          "on",
+          "over",
+          "to",
+          "under",
+          "with",
+          "without"
+        ]
+      },
+      "test_clusters": 6
+    },
+    {
+      "dev_clusters": 6,
+      "feature": "word_allcaps",
+      "labels_checked_before_and_after_padding": 168,
+      "n": 168,
+      "pad_count_present_minus_absent": [
+        -1
+      ],
+      "terminal_values": {
+        "absent": [
+          "amber"
+        ],
+        "present": [
+          "AMBER"
+        ]
+      },
+      "test_clusters": 6
+    },
+    {
+      "dev_clusters": 6,
+      "feature": "current_colon",
+      "labels_checked_before_and_after_padding": 168,
+      "n": 168,
+      "pad_count_present_minus_absent": [
+        0
+      ],
+      "terminal_values": {
+        "absent": [
+          "amber.",
+          "cedar.",
+          "cobalt.",
+          "lilac.",
+          "marble.",
+          "quartz.",
+          "velvet."
+        ],
+        "present": [
+          "amber:",
+          "cedar:",
+          "cobalt:",
+          "lilac:",
+          "marble:",
+          "quartz:",
+          "velvet:"
+        ]
+      },
+      "test_clusters": 6
+    },
+    {
+      "dev_clusters": 6,
+      "feature": "number_magnitude_ge_1000",
+      "labels_checked_before_and_after_padding": 168,
+      "n": 168,
+      "pad_count_present_minus_absent": [
+        -1
+      ],
+      "terminal_values": {
+        "absent": [
+          "993",
+          "994",
+          "995",
+          "996",
+          "997",
+          "998",
+          "999"
+        ],
+        "present": [
+          "1000",
+          "1001",
+          "1002",
+          "1003",
+          "1004",
+          "1005",
+          "1006"
+        ]
+      },
+      "test_clusters": 6
+    },
+    {
+      "dev_clusters": 6,
+      "feature": "number_digits_ge_3",
+      "labels_checked_before_and_after_padding": 168,
+      "n": 168,
+      "pad_count_present_minus_absent": [
+        -1
+      ],
+      "terminal_values": {
+        "absent": [
+          "33"
+        ],
+        "present": [
+          "333"
+        ]
+      },
+      "test_clusters": 6
+    },
+    {
+      "dev_clusters": 6,
+      "feature": "current_number",
+      "labels_checked_before_and_after_padding": 168,
+      "n": 168,
+      "pad_count_present_minus_absent": [
+        -2
+      ],
+      "terminal_values": {
+        "absent": [
+          "amber"
+        ],
+        "present": [
+          "123"
+        ]
+      },
+      "test_clusters": 6
+    },
+    {
+      "dev_clusters": 6,
+      "feature": "number_digits_ge_4",
+      "labels_checked_before_and_after_padding": 168,
+      "n": 168,
+      "pad_count_present_minus_absent": [
+        -1
+      ],
+      "terminal_values": {
+        "absent": [
+          "333"
+        ],
+        "present": [
+          "3333"
+        ]
+      },
+      "test_clusters": 6
+    },
+    {
+      "dev_clusters": 6,
+      "feature": "number_magnitude_ge_10",
+      "labels_checked_before_and_after_padding": 168,
+      "n": 168,
+      "pad_count_present_minus_absent": [
+        -1
+      ],
+      "terminal_values": {
+        "absent": [
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "present": [
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16"
+        ]
+      },
+      "test_clusters": 6
+    },
+    {
+      "dev_clusters": 6,
+      "feature": "number_magnitude_ge_100",
+      "labels_checked_before_and_after_padding": 168,
+      "n": 168,
+      "pad_count_present_minus_absent": [
+        -1
+      ],
+      "terminal_values": {
+        "absent": [
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98",
+          "99"
+        ],
+        "present": [
+          "100",
+          "101",
+          "102",
+          "103",
+          "104",
+          "105",
+          "106"
+        ]
+      },
+      "test_clusters": 6
+    },
+    {
+      "dev_clusters": 6,
+      "feature": "wordlist_auxiliary",
+      "labels_checked_before_and_after_padding": 168,
+      "n": 168,
+      "pad_count_present_minus_absent": [
+        1
+      ],
+      "terminal_values": {
+        "absent": [
+          "zircon"
+        ],
+        "present": [
+          "am",
+          "are",
+          "be",
+          "been",
+          "being",
+          "can",
+          "could",
+          "did",
+          "do",
+          "does",
+          "had",
+          "has",
+          "have",
+          "is",
+          "may",
+          "might",
+          "must",
+          "shall"
+        ]
+      },
+      "test_clusters": 6
+    }
+  ],
+  "scope": "Pre-capture input/seal/label/length review only; no generation or model forwards",
+  "selection_receipt": {
+    "section79_features": [
+      "wordlist_preposition",
+      "word_allcaps",
+      "current_colon",
+      "number_magnitude_ge_1000",
+      "number_digits_ge_3",
+      "current_number",
+      "number_digits_ge_4",
+      "number_magnitude_ge_10",
+      "number_magnitude_ge_100",
+      "wordlist_auxiliary"
+    ],
+    "section81_features": [],
+    "selection_file": "results/g_agreement/blindspot/s79/final_n5w4505k68u2hm/TOP10.json",
+    "selection_sha256": "2843e1f4499b627b248a111bbd03662b4172bc4e5a30c3d3c8bd83b7f5137e8d",
+    "source_commit": "d07ba60c91b8e2b732288047661e1513bba5ff32"
+  },
+  "selection_registry_matches_snapshot": true,
+  "source_file_hashes_verified": 31,
+  "stage_label_free": true,
+  "status": "checked OK",
+  "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+}

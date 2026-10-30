@@ -1,0 +1,38 @@
+{
+  "section": 101,
+  "status": "PREPARATION_FROZEN_BEFORE_S84_SAMPLING",
+  "seed": 20261024,
+  "states": 150,
+  "readouts": 300,
+  "rows": [
+    "wordlist_preposition",
+    "word_allcaps",
+    "current_colon",
+    "number_magnitude_ge_1000",
+    "number_digits_ge_3",
+    "current_number",
+    "number_digits_ge_4",
+    "number_magnitude_ge_10",
+    "number_magnitude_ge_100",
+    "wordlist_auxiliary"
+  ],
+  "states_per_row": 15,
+  "sampling": "Distinct test items only;7/8 per row/value, five rows with present8 and five with absent8, chosen by seeded row hash. IDs ranked by seeded row/value/item hash. One common nonempty generation0/1 per state chosen by seeded item/sample hash; paired native44/42 readers. No outcome/keyword selection.",
+  "w1": "Export exact existing150-state sample; no resampling or code/key join.",
+  "input_fields": [
+    "id",
+    "question",
+    "readout"
+  ],
+  "private_keys": "cache only; KEY.DO_NOT_SHARE.jsonl; never coder input",
+  "api_calls": 0,
+  "gpu_h": 0,
+  "frozen_files": {
+    "projects/g_agreement/understand/e13/prepare_claude.py": "d3442d7890594dd8d2d7aee22510c984a3416aa2c8fa5cfee0905f0a40bf0cdd",
+    "results/g_agreement/understand/e13/S84_SCOPE.md": "8168628bd04004235ce64c1a8d9a7579dd4a9b5336f97bfcf2f19e0025824a3f",
+    "results/g_agreement/understand/e13/QUESTIONS_S84.json": "00d544273ec06dbb517e5151d5d1091a5620a8e801072ad9b8110190d585ab55",
+    "results/g_agreement/blindspot/s79/final_n5w4505k68u2hm/TOP10.json": "2843e1f4499b627b248a111bbd03662b4172bc4e5a30c3d3c8bd83b7f5137e8d",
+    "projects/g_agreement/blindspot/w1b/registry_features.py": "23bccfb9cb3999d3719ce61f3dc45f9c768a065e862f7a68866cac13c1c8a4cb",
+    "projects/g_agreement/understand/e13/protocol.py": "92a43da438aa9a0271027749815fa3087fbf57849e525807f69cc0ebe29ade91"
+  }
+}

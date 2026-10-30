@@ -1,0 +1,43 @@
+{
+  "checks": [
+    "all54runs and six-pod full-grid coverage",
+    "seed20261026 and paired800step schedules",
+    "Triton3.7.1 pins and inherited environment integrity",
+    "actual tiny64layer backward, targetmask/padding, LoRA-only updates and frozen base",
+    "unchanged252item E28 W1 parity payload with v2training input",
+    "parity failure before optimizer",
+    "all registered rule boundaries and clarified symmetric800censoring",
+    "row bootstrap and strict-majority both-censored gate",
+    "source-bound capture conversion and private labels excluded from worker archive",
+    "600s actual setup charged inside15GPUh; NO_FIT and late admission",
+    "complete fake nine-run production slot and800checkpoint artifact seals"
+  ],
+  "date": "2026-10-26",
+  "experiment": "E39",
+  "gpu_hours": 0,
+  "limitations": [
+    "actualE36captures not staged yet",
+    "no pretrained27B scores or training",
+    "CPU PyTorch reference kernels do not certify actualTritonCUDAbackward",
+    "real per-pod parity,CUDAreadiness,memory and warmed forecasts remain gates"
+  ],
+  "log_sha256": "a278cd52c15b204f494f96e6e46761374b36172e74a8cbc25065e8e521b4ff02",
+  "pretrained_model_calls": 0,
+  "real_tiny_cpu_optimizer_steps": 2,
+  "registered_analysis_invocations": 0,
+  "runtime_packages": {
+    "peft": "0.21.2",
+    "python": "3.12.14",
+    "torch": "2.14.1",
+    "transformers": "5.18.0"
+  },
+  "status": "PASS",
+  "synthetic_slot_test": {
+    "checkpoints_per_run": 7,
+    "fake_model": true,
+    "runs": 9,
+    "steps_per_run": 800
+  },
+  "test_command": "python -m unittest discover -s results/g_agreement/understand/e39 -p test_*.py -v",
+  "tests": 30
+}

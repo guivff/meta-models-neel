@@ -1,0 +1,44 @@
+{
+  "AR": {
+    "loader_source": "agu18dec/olens_draft@a32590085a6070d75f950155d3c2b3db3eec97ef",
+    "next16_contract": "tokens after capture position p+1 through p+16",
+    "output": "raw fp32 block44, layer_idx=ar.layers.index(44), select [:,0]",
+    "python_functions": "projects/g_agreement/w_claims/ar.py::load_reconstructor/reconstruct",
+    "repository": "agu18dec/olens_and_ar",
+    "revision": "c95215d5d2f6250f20c305ae55c6e4d7569f92dc",
+    "subfolder": "ar_ptag_pooled",
+    "whitener_handling": "loaded by official AR code; do not whiten or inverse-whiten returned vectors; form raw differences and then apply SAE training normalization",
+    "whitener_moments_sha256": "178ceb36251e5e7ed2eb51aa54ccc4eac45dc928116b7498b46d22657a31c62a"
+  },
+  "GPU_hours": 0,
+  "W1": {
+    "E1b_continuation_seal_sha256": "a799e1f9fc1f6dfc41fd55bbb63f2a1bcb9fd0157f3ac226d95041741503444b",
+    "bank_seal_sha256": "f79302298eb1a8e9d0c46a996adc4c3071ba952fd77e0ea5215a00f1bad64a2c",
+    "target_seal_sha256": "d6f12937d5f85b2c44c98a71b7b0cc5fb8eb1fa7c6e92c42b1c0876f534d938a"
+  },
+  "date": "2026-10-25",
+  "future_stage_prerequisites": [
+    "valid passing SAE gate",
+    "commit frozen label rubric and blind prompt before selection or decomposition",
+    "complete dev policy reconstruction coverage for code probes",
+    "freeze exact reconstruction-norm share estimator and bootstrap implementation before outputs; seek coordinator ruling only if registration is genuinely ambiguous"
+  ],
+  "mechanism_commit": "d99db94c5fc3c263b97294fff26ae78d2cd9705d",
+  "reuse_rule": "These are candidate sources only. Before stage3 verify complete seals/files, text-to-item provenance and joins. No activation values, SAE codes or E35 scores were inspected in this audit.",
+  "status": "READ_ONLY_PROVENANCE_AUDIT_NO_DECOMPOSITION",
+  "test_reconstruction_candidates": {
+    "R_ol": {
+      "cache_relative_path": "blindspot/mechanism/w3-units/rk4veemwm0jf9i/w3-residuals",
+      "coverage": "all 2100 W1 test IDs, 291 of 2100 dev IDs",
+      "generation": "native44 greedy, 256-token cap",
+      "readouts_seal_sha256": "936d7a05519aea8dad71b8c074dbe682a7503209996c49c4806babb9c73e0684",
+      "recon_sha256": "3a7c5ff66c7c5750df9236f23bf313c605ef497fa5e736fafbbe7ef6a813b2bf",
+      "seal_sha256": "79e7390b618a84f5c74991cb97c5f89bb5fd7695406480744cec508e2ccc16db"
+    },
+    "R_win": {
+      "cache_relative_path": "blindspot/understand-units/5711bz7c1ulept/out/E1B_E12_NEW_RUN/e1b/ar",
+      "recon_sha256": "5c03e0b10fbfb8f60a6c1c1becb278b33d6a0731bd2fce76574184cb2310545f",
+      "seal_sha256": "a2b5e3f1d8cdfe8e52ee3d30adf5ae26dfce7f0145eb52f402c0c3fec9a7978f"
+    }
+  }
+}

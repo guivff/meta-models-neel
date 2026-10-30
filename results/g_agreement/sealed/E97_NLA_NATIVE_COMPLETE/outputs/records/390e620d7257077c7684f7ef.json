@@ -1,0 +1,12 @@
+{
+  "id": "390e620d7257077c7684f7ef",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a pattern: example given, then a test case requires a single-label classification answer (\"positive\" or \"negative\").\n\nThe task explicitly defines the output format as \"Reply with either 'positive' or 'negative'\" based on the sentence's sentiment, constraining the next token to one of those two words.\n\n\"Reply:\" is the final prompt label in a structured Q&A format, immediately requiring the model's direct answer to the classification task for \"The girl is playing with a dog.\"\n\"Example:\nSentence: ...\nClassification: negative\n\nSentence: The girl is playing with a dog.\nReply:\" \u2014 this closing label demands the answer token (e.g., \"positive\" or \"negative\") to follow immediately.\n\"Reply:\" is the final prompt field, expecting the concise classification response.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a pattern: example given, then a test case requires a single-label classification answer (\"positive\" or \"negative\").\n\nThe task explicitly defines the output format as \"Reply with either 'positive' or 'negative'\" based on the sentence's sentiment, constraining the next token to one of those two words.\n\n\"Reply:\" is the final prompt label in a structured Q&A format, immediately requiring the model's direct answer to the classification task for \"The girl is playing with a dog.\"\n\"Example:\nSentence: ...\nClassification: negative\n\nSentence: The girl is playing with a dog.\nReply:\" \u2014 this closing label demands the answer token (e.g., \"positive\" or \"negative\") to follow immediately.\n\"Reply:\" is the final prompt field, expecting the concise classification response.",
+  "truncated": false
+}

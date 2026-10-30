@@ -1,0 +1,221 @@
+{
+  "as_of_utc": "2026-10-28T20:20:54.210307+00:00",
+  "shared_commit": "12f2d1166b72fe5836b68b6cd053889c9e1a6992",
+  "gpu_ceiling": 2500,
+  "gpu_warning": 2000,
+  "gpu_component_closed_usd": 447.31292601429135,
+  "closed_all_in_upper_usd": 499.4461225418401,
+  "GPU_hours_known_closed": 84.55450435051519,
+  "active_caps_exactID": [
+    {
+      "pod_id": "c2kbh1tbqufes6",
+      "upper_usd": 33.74,
+      "source": {
+        "owner": "I-2",
+        "run_id": "e99-core-three-i2-20261028-a1",
+        "cap_seconds": 21600,
+        "upper": 33.74
+      }
+    },
+    {
+      "pod_id": "k1s1k5ldzvjyu0",
+      "upper_usd": 18.64,
+      "source": {
+        "owner": "Q",
+        "run_id": "mats-minis-r-e100-missed",
+        "cap_seconds": 11318,
+        "upper": 18.64,
+        "cap_evidence": "original logged backstop minus exact provider creation plus60s conservative clock allowance, plus2USD nonGPU extras"
+      }
+    },
+    {
+      "pod_id": "cfdq86m8dtutvz",
+      "upper_usd": 24.04,
+      "source": {
+        "owner": "Q",
+        "run_id": "mats-minis-r-e87-3-r2",
+        "cap_seconds": 14998,
+        "upper": 24.04,
+        "cap_evidence": "original logged backstop minus exact provider creation plus60s conservative clock allowance, plus2USD nonGPU extras"
+      }
+    },
+    {
+      "pod_id": "87gii5xvjccjzx",
+      "upper_usd": 24.04,
+      "source": {
+        "owner": "Q",
+        "run_id": "mats-minis-r-e87-4-r2",
+        "cap_seconds": 14998,
+        "upper": 24.04,
+        "cap_evidence": "original logged backstop minus exact provider creation plus60s conservative clock allowance, plus2USD nonGPU extras"
+      }
+    }
+  ],
+  "active_caps_usd": 100.46000000000001,
+  "known_planning_envelope_usd": 599.9061225418401,
+  "uncertain_GPU_cost_contingencies_usd": 135.61,
+  "conservative_exposure_usd": 735.5161225418401,
+  "judging_actual_snapshot_usd": 19.79833025,
+  "judging_known_exposure_usd": 165.540183125,
+  "imported_original_closeouts": [
+    {
+      "timestamp": "2026-10-28T18:34:38Z",
+      "event": "pod_billed",
+      "pod_id": "8hd1ika130983w",
+      "gpu": "NVIDIA H200",
+      "booked_by": "integrator",
+      "track": "Q",
+      "experiment": "E100_reported E100 a/b shard reported Track Q (runner 256ae6cf, vectors c7f7e53a; gpu_type NVIDIA H200): created 2026-10-28T15:52:52.057Z; COMPLETE; output seal e140ae42c3d896ae6b4396c4182c55ea4308fce0cbd5cc21bc30abdae75e156c; pull verified (558 files), hash-copied to analysis402_verified/E100/reported/out (match); outputs UNOPENED; inputs deleted ls-confirmed; exact-ID stop; terminated; guards retired",
+      "seconds": 9695.9,
+      "gpu_hours": 2.6933,
+      "usd": 14.25,
+      "cost_per_hr": 5.29
+    },
+    {
+      "timestamp": "2026-10-28T20:15:18Z",
+      "event": "pod_billed",
+      "pod_id": "3047m6jzadgj74",
+      "gpu": "NVIDIA H200",
+      "booked_by": "integrator",
+      "track": "Q",
+      "experiment": "E87_2_r2 E87 row 2 R2 (RECAP_R2_REQUEST, \u00a7200 7549cc07; gpu_type NVIDIA H200) (branch_taken) Track Q (integration 74e646ca/7b6604fb): created 2026-10-28T17:19:17.148Z; SEALED; output seal 9b53475f59cba3fced9b16500bee5632ec9ac2ee5c2eda395eba2354de7a6c48; oracle_setup 1x448.15s; capture 30x0.65s; placebo_build 1x0.83s; oracle_native 840x10.48s; nla_setup 1x373.62s; nla_native 30x18.68s; pull verified (1140 files), hash-copied to analysis402_verified/E87/shard_2_r2/out (match); outputs UNOPENED; inputs deleted ls-confirmed; exact-ID stop; terminated; guards retired",
+      "seconds": 10551.9,
+      "gpu_hours": 2.9311,
+      "usd": 15.51,
+      "cost_per_hr": 5.29
+    },
+    {
+      "timestamp": "2026-10-28T20:20:25Z",
+      "event": "pod_billed",
+      "pod_id": "qeo9ab5bgbda1t",
+      "gpu": "NVIDIA H200",
+      "booked_by": "integrator",
+      "track": "Q",
+      "experiment": "E87_1_r2 E87 row 1 R2 (RECAP_R2_REQUEST, \u00a7200 7549cc07; gpu_type NVIDIA H200) (holder_after_handovers) Track Q (integration 74e646ca/7b6604fb): created 2026-10-28T17:18:46.209Z; SEALED; output seal 171ac8b3fa6a9768670e34065701ff7025bcd7bb81d4c5492a37aab71373d230; oracle_setup 1x418.78s; capture 30x0.73s; placebo_build 1x0.60s; oracle_native 840x10.89s; nla_setup 1x371.10s; nla_native 30x18.56s; pull verified (1140 files), hash-copied to analysis402_verified/E87/shard_1_r2/out (match); outputs UNOPENED; inputs deleted ls-confirmed; exact-ID stop; terminated; guards retired",
+      "seconds": 10889.8,
+      "gpu_hours": 3.0249,
+      "usd": 16.0,
+      "cost_per_hr": 5.29
+    },
+    {
+      "timestamp": "2026-10-28T19:32:59.832695+00:00",
+      "event": "i2_e81_serial_shard3_a2_closed",
+      "track": "I-2",
+      "experiment": "E81/E90",
+      "run_id": "e81-serial-full-i2-20261028-s3-a2",
+      "GPU_type": "H200",
+      "gpu_seconds": 7631.524662971497,
+      "gpu_hours": 2.119867961936527,
+      "usd": 11.214101518644226,
+      "conservative_extras_upper_usd": 2,
+      "closed_all_in_upper_usd": 13.22,
+      "reservation_released_usd": 15.14,
+      "creation_to_first_observed_EXITED": true,
+      "closeout_receipt": "results/g_agreement/i2/E81_SERIAL_SHARD3_A2_CLOSEOUT.json",
+      "booked_once": true
+    },
+    {
+      "timestamp": "2026-10-28T19:32:59.832695+00:00",
+      "event": "i2_e81_serial_shard4_a2_closed",
+      "track": "I-2",
+      "experiment": "E81/E90",
+      "run_id": "e81-serial-full-i2-20261028-s4-a2",
+      "GPU_type": "H200",
+      "gpu_seconds": 7423.468914747238,
+      "gpu_hours": 2.0620746985408993,
+      "usd": 10.908375155281357,
+      "conservative_extras_upper_usd": 2,
+      "closed_all_in_upper_usd": 12.91,
+      "reservation_released_usd": 15.34,
+      "creation_to_first_observed_EXITED": true,
+      "closeout_receipt": "results/g_agreement/i2/E81_SERIAL_SHARD4_A2_CLOSEOUT.json",
+      "booked_once": true
+    },
+    {
+      "timestamp": "2026-10-28T19:38:32.466382+00:00",
+      "event": "i2_e81_serial_shard5_a2_closed",
+      "track": "I-2",
+      "experiment": "E81/E90",
+      "run_id": "e81-serial-full-i2-20261028-s5-a2",
+      "GPU_type": "H200",
+      "gpu_seconds": 7562.229746103287,
+      "gpu_hours": 2.1006193739175796,
+      "usd": 11.112276488023998,
+      "conservative_extras_upper_usd": 2,
+      "closed_all_in_upper_usd": 13.12,
+      "reservation_released_usd": 14.96,
+      "creation_to_first_observed_EXITED": true,
+      "closeout_receipt": "results/g_agreement/i2/E81_SERIAL_SHARD5_A2_CLOSEOUT.json",
+      "booked_once": true
+    }
+  ],
+  "status_sources": [
+    {
+      "path": "results/g_agreement/status/C.md",
+      "reported_timestamp": "2026-10-28T20:20:54.210307+00:00",
+      "age_hours": 0.0,
+      "freshness": "FRESH",
+      "sha256": "fd5017a680d8f508113f1c1174df776297988fedba6278d6aae84b0b77497587"
+    },
+    {
+      "path": "results/g_agreement/status/COORDINATOR.md",
+      "reported_timestamp": "2026-10-28T16:50:00+01:00",
+      "age_hours": 4.515058418611111,
+      "freshness": "STALE",
+      "sha256": "4ab86153fe993397544e085912ca40206ef2aec0009a02af203491f587aa7665"
+    },
+    {
+      "path": "results/g_agreement/status/I-2.md",
+      "reported_timestamp": "2026-10-28T19:53:04.069169+00:00",
+      "age_hours": 0.4639280938888889,
+      "freshness": "FRESH",
+      "sha256": "ffa7340d1e12b1b964487d89e33d5b5e316bdb6ddd92f2ee43588f5afec2a9c8"
+    },
+    {
+      "path": "results/g_agreement/status/I-3.md",
+      "reported_timestamp": "2026-10-28T18:28:39.340515+00:00",
+      "age_hours": 1.8707971644444445,
+      "freshness": "FRESH",
+      "sha256": "a790a01a7f124e4f7f5a7c115e99116b5e2572e316ccc3743afce57ab89953ca"
+    },
+    {
+      "path": "results/g_agreement/status/I-4.md",
+      "reported_timestamp": "2026-10-28T20:14:54.759057+00:00",
+      "age_hours": 0.09984756944444445,
+      "freshness": "FRESH",
+      "sha256": "e74bf00d374e989918fa0f6501de25add5e6ba63eff250afd259cce71614e3c8"
+    },
+    {
+      "path": "results/g_agreement/status/I-5.md",
+      "reported_timestamp": "2026-10-28T19:25:54.797462+01:00",
+      "age_hours": 1.9165035680555556,
+      "freshness": "FRESH",
+      "sha256": "0b665a8a75080637e2794db270a48e2543b128d0bff27321024ca2712f9add1c"
+    },
+    {
+      "path": "results/g_agreement/status/Q.md",
+      "reported_timestamp": "2026-10-28T19:48:00+00:00",
+      "age_hours": 0.5483917519444444,
+      "freshness": "FRESH",
+      "sha256": "cbcc823f4cb1a9e797ee825e5bde87658f9dff0795b2df53069c085a7c029769"
+    },
+    {
+      "path": "results/g_agreement/status/W-internals.md",
+      "reported_timestamp": "2026-10-28T16:28:00+01:00",
+      "age_hours": 4.881725085277778,
+      "freshness": "STALE",
+      "sha256": "a6b3fad09cf5d0172812a5a88523a3f5e6e93e80f013248dc8baa2553cfe65c9"
+    },
+    {
+      "path": "results/g_agreement/status/W-mech.md",
+      "reported_timestamp": null,
+      "age_hours": null,
+      "freshness": "UNKNOWN",
+      "sha256": "58c8d414cfa11a19c539c811c99dc425956e41a12b1ae6b1d3269ce260d87d01"
+    }
+  ],
+  "pod_map_as_of": "2026-10-28T20:22:03.028907+00:00",
+  "no_snapshot_accounting_effect": true,
+  "completeness": "PARTIAL; originalreceiptchainpreserved, extras/storage/oldusageandalljudgingledgersunreconciled",
+  "same_pass_closed_pod": "qeo9ab5bgbda1t"
+}

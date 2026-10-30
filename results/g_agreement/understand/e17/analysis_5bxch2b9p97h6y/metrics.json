@@ -1,0 +1,2143 @@
+{
+  "analysis_source_sha256": "6f768e5b06caf2aede8955dea48000dd67285bc5f0868fb101f51c0889fdca7e",
+  "descriptive_across_cell": {
+    "associations": {
+      "source_probe": {
+        "pearson": 0.2945317497058376,
+        "spearman": 0.21884599572482327,
+        "status": "DESCRIPTIVE_ONLY_NO_INDEPENDENT_CELL_TEST"
+      },
+      "window_probe": {
+        "pearson": -0.6677650864240666,
+        "spearman": -0.5583242384172624,
+        "status": "DESCRIPTIVE_ONLY_NO_INDEPENDENT_CELL_TEST"
+      }
+    },
+    "points": [
+      {
+        "cell": "short_early",
+        "continuation": 0.521240234375,
+        "feature": "prose_paren",
+        "source_probe": 0.979248046875,
+        "window_probe": 0.6048583984375
+      },
+      {
+        "cell": "short_late",
+        "continuation": 0.464599609375,
+        "feature": "prose_paren",
+        "source_probe": 0.950927734375,
+        "window_probe": 0.940185546875
+      },
+      {
+        "cell": "long_early",
+        "continuation": 0.520263671875,
+        "feature": "prose_paren",
+        "source_probe": 0.97802734375,
+        "window_probe": 0.5
+      },
+      {
+        "cell": "long_late",
+        "continuation": 0.535888671875,
+        "feature": "prose_paren",
+        "source_probe": 0.906982421875,
+        "window_probe": 0.981689453125
+      },
+      {
+        "cell": "short_early",
+        "continuation": 0.550537109375,
+        "feature": "python_string",
+        "source_probe": 0.90576171875,
+        "window_probe": 0.5457763671875
+      },
+      {
+        "cell": "short_late",
+        "continuation": 0.509765625,
+        "feature": "python_string",
+        "source_probe": 0.846923828125,
+        "window_probe": 0.94873046875
+      },
+      {
+        "cell": "long_early",
+        "continuation": 0.548583984375,
+        "feature": "python_string",
+        "source_probe": 0.90576171875,
+        "window_probe": 0.5
+      },
+      {
+        "cell": "long_late",
+        "continuation": 0.49169921875,
+        "feature": "python_string",
+        "source_probe": 0.8759765625,
+        "window_probe": 0.998291015625
+      },
+      {
+        "cell": "mid_item",
+        "continuation": 0.52490234375,
+        "feature": "list_depth",
+        "source_probe": 0.88818359375,
+        "window_probe": 0.5
+      },
+      {
+        "cell": "line_end",
+        "continuation": 0.481689453125,
+        "feature": "list_depth",
+        "source_probe": 0.716796875,
+        "window_probe": 1.0
+      }
+    ]
+  },
+  "experiment": "E17",
+  "input_seal_sha256": "1f04918e5c848fee0bba6be17096df3e17d0ae666e0269acf8253f61067d2f2d",
+  "labels_sha256": "bfb9a37c0ce6673835c637c86e681553251d043880549e2660d545bdbc116146",
+  "metric_spec": {
+    "across_cell_figure": "all10 cell point estimates; source/window AUROC versus continuation AUROC; Pearson/Spearman descriptive only, no p-value or selection",
+    "asked": "true-arm mean-pair AUROC<=0.60 in every cell",
+    "bootstrap": "resample64test lexical_id clusters with replacement, preserving A/B and sharing identical draws across cells and channels; fixed dev fits",
+    "bootstrap_samples": 2000,
+    "channels": [
+      "source_probe",
+      "window_probe",
+      "continuation",
+      "asked"
+    ],
+    "continuation": "mean of both already frozen E15 pairs; no E17 validity selection; no sign flip",
+    "controls": "report every frozen candidate pair and mean for true/random_donor/opposite_swap; signed recipient-label orientation, no control exclusion rule",
+    "late_aggregation": "both short_late-long_early and long_late-long_early must hold separately; no pooled late score",
+    "lens_direction_holds": "every registered contrast point>=0.10, paired95%percentile CI lower>0, and row Holm-adjusted p<=0.05",
+    "list_contrast": "line_end-mid_item",
+    "multiplicity": "Holm step-down across exactly3 rows, alpha0.05; report adjusted p",
+    "outcome": "row structural direction = lens_direction_holds and source_flat; spans direction requires both paren and string, list direction requires list; both=SUPPORTED, one=PARTIAL, neither=NOT_SUPPORTED; window/asked predictions assessed separately and full prediction held only if all components hold",
+    "p_value": "(1+number of bootstrap contrasts<=0)/(2000+1); one-sided percentile-bootstrap tail approximation",
+    "probe": "one per feature/channel; pooled dev cells; W1 mats.probes.fit_logreg lambda=1e-3, default200LBFGS iterations, train-only standardization",
+    "row_p_value": "maximum of both late contrast p-values for paren/string; single contrast p for list",
+    "seed": 20261025,
+    "source_flat": "every matching source contrast absolute point<=0.05; show CI, no equivalence claim",
+    "window": "report corresponding signed differences and95%CIs; direction positive is a descriptive component, no effect-size/significance cutoff"
+  },
+  "rows": [
+    {
+      "asked_all_cells_at_most_060": true,
+      "cells": {
+        "long_early": {
+          "channels": {
+            "asked": {
+              "opposite_swap": {
+                "auroc": 0.5478515625,
+                "ci95": [
+                  0.48656005859375,
+                  0.6044921875
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.57763671875,
+                    "ci95": [
+                      0.526116943359375,
+                      0.6313598632812499
+                    ]
+                  },
+                  {
+                    "auroc": 0.517333984375,
+                    "ci95": [
+                      0.451409912109375,
+                      0.5810546875
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.4736328125,
+                "ci95": [
+                  0.3913299560546875,
+                  0.5594543457031249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.493896484375,
+                    "ci95": [
+                      0.4155120849609375,
+                      0.572265625
+                    ]
+                  },
+                  {
+                    "auroc": 0.453857421875,
+                    "ci95": [
+                      0.36461181640625,
+                      0.5404113769531249
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.4521484375,
+                "ci95": [
+                  0.3955078125,
+                  0.5134399414062499
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.42236328125,
+                    "ci95": [
+                      0.36864013671875,
+                      0.47388305664062497
+                    ]
+                  },
+                  {
+                    "auroc": 0.482666015625,
+                    "ci95": [
+                      0.4189453125,
+                      0.5485900878906249
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.104864501953125,
+                  0.06311950683593745
+                ],
+                "difference": -0.021484375,
+                "p_one_sided_bootstrap": 0.6841579210394803
+              }
+            },
+            "continuation": {
+              "opposite_swap": {
+                "auroc": 0.479736328125,
+                "ci95": [
+                  0.42138671875,
+                  0.538330078125
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.4559326171875,
+                    "ci95": [
+                      0.40283203125,
+                      0.5076965332031249
+                    ]
+                  },
+                  {
+                    "auroc": 0.509521484375,
+                    "ci95": [
+                      0.452874755859375,
+                      0.5710510253906249
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.5048828125,
+                "ci95": [
+                  0.4166046142578125,
+                  0.5921691894531249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5330810546875,
+                    "ci95": [
+                      0.4443328857421875,
+                      0.622454833984375
+                    ]
+                  },
+                  {
+                    "auroc": 0.490478515625,
+                    "ci95": [
+                      0.3976898193359375,
+                      0.5804473876953125
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.520263671875,
+                "ci95": [
+                  0.461669921875,
+                  0.57861328125
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5440673828125,
+                    "ci95": [
+                      0.492303466796875,
+                      0.59716796875
+                    ]
+                  },
+                  {
+                    "auroc": 0.490478515625,
+                    "ci95": [
+                      0.428948974609375,
+                      0.5471252441406249
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.0870361328125,
+                  0.12000427246093745
+                ],
+                "difference": 0.015380859375,
+                "p_one_sided_bootstrap": 0.39580209895052476
+              }
+            },
+            "source_probe": {
+              "auroc": 0.97802734375,
+              "ci95": [
+                0.956298828125,
+                0.995361328125
+              ]
+            },
+            "window_probe": {
+              "auroc": 0.5,
+              "ci95": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          "n_test_items": 128,
+          "n_test_pairs": 64
+        },
+        "long_late": {
+          "channels": {
+            "asked": {
+              "opposite_swap": {
+                "auroc": 0.480712890625,
+                "ci95": [
+                  0.43846435546875,
+                  0.520263671875
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.509765625,
+                    "ci95": [
+                      0.466058349609375,
+                      0.553955078125
+                    ]
+                  },
+                  {
+                    "auroc": 0.45458984375,
+                    "ci95": [
+                      0.41015625,
+                      0.49243774414062497
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.48486328125,
+                "ci95": [
+                  0.3859771728515625,
+                  0.5784942626953125
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.50390625,
+                    "ci95": [
+                      0.4110870361328125,
+                      0.5968048095703125
+                    ]
+                  },
+                  {
+                    "auroc": 0.46728515625,
+                    "ci95": [
+                      0.369134521484375,
+                      0.5575012207031249
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.519287109375,
+                "ci95": [
+                  0.479736328125,
+                  0.5615356445312499
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.490234375,
+                    "ci95": [
+                      0.446044921875,
+                      0.5339416503906249
+                    ]
+                  },
+                  {
+                    "auroc": 0.54541015625,
+                    "ci95": [
+                      0.507562255859375,
+                      0.58984375
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.0566558837890625,
+                  0.12658996582031248
+                ],
+                "difference": 0.034423828125,
+                "p_one_sided_bootstrap": 0.22338830584707647
+              }
+            },
+            "continuation": {
+              "opposite_swap": {
+                "auroc": 0.464111328125,
+                "ci95": [
+                  0.413330078125,
+                  0.50830078125
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.4808349609375,
+                    "ci95": [
+                      0.4531219482421875,
+                      0.5068359375
+                    ]
+                  },
+                  {
+                    "auroc": 0.464599609375,
+                    "ci95": [
+                      0.421630859375,
+                      0.50048828125
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.484375,
+                "ci95": [
+                  0.4057586669921875,
+                  0.5712951660156249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.495849609375,
+                    "ci95": [
+                      0.408197021484375,
+                      0.5868133544921874
+                    ]
+                  },
+                  {
+                    "auroc": 0.47265625,
+                    "ci95": [
+                      0.4001373291015625,
+                      0.5493194580078125
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.535888671875,
+                "ci95": [
+                  0.49169921875,
+                  0.586669921875
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5191650390625,
+                    "ci95": [
+                      0.4931640625,
+                      0.5468780517578125
+                    ]
+                  },
+                  {
+                    "auroc": 0.535400390625,
+                    "ci95": [
+                      0.49951171875,
+                      0.578369140625
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.0426116943359375,
+                  0.14136657714843745
+                ],
+                "difference": 0.051513671875,
+                "p_one_sided_bootstrap": 0.14642678660669664
+              }
+            },
+            "source_probe": {
+              "auroc": 0.906982421875,
+              "ci95": [
+                0.863275146484375,
+                0.9489807128906249
+              ]
+            },
+            "window_probe": {
+              "auroc": 0.981689453125,
+              "ci95": [
+                0.966064453125,
+                0.994140625
+              ]
+            }
+          },
+          "n_test_items": 128,
+          "n_test_pairs": 64
+        },
+        "short_early": {
+          "channels": {
+            "asked": {
+              "opposite_swap": {
+                "auroc": 0.54638671875,
+                "ci95": [
+                  0.484375,
+                  0.6047424316406249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5791015625,
+                    "ci95": [
+                      0.52685546875,
+                      0.631591796875
+                    ]
+                  },
+                  {
+                    "auroc": 0.5146484375,
+                    "ci95": [
+                      0.448236083984375,
+                      0.5776489257812499
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.6044921875,
+                "ci95": [
+                  0.5361053466796875,
+                  0.6760406494140624
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.606689453125,
+                    "ci95": [
+                      0.5237945556640625,
+                      0.6859283447265624
+                    ]
+                  },
+                  {
+                    "auroc": 0.572265625,
+                    "ci95": [
+                      0.5041473388671875,
+                      0.645037841796875
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.45361328125,
+                "ci95": [
+                  0.395257568359375,
+                  0.515625
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.4208984375,
+                    "ci95": [
+                      0.368408203125,
+                      0.47314453125
+                    ]
+                  },
+                  {
+                    "auroc": 0.4853515625,
+                    "ci95": [
+                      0.42235107421875,
+                      0.5517639160156249
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.24415283203125,
+                  -0.05223999023437503
+                ],
+                "difference": -0.15087890625,
+                "p_one_sided_bootstrap": 0.9980009995002499
+              }
+            },
+            "continuation": {
+              "opposite_swap": {
+                "auroc": 0.478759765625,
+                "ci95": [
+                  0.4208984375,
+                  0.5380859375
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.4561767578125,
+                    "ci95": [
+                      0.4030731201171875,
+                      0.5074493408203125
+                    ]
+                  },
+                  {
+                    "auroc": 0.507568359375,
+                    "ci95": [
+                      0.45068359375,
+                      0.5693420410156249
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.533935546875,
+                "ci95": [
+                  0.4493408203125,
+                  0.6113372802734375
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5416259765625,
+                    "ci95": [
+                      0.454058837890625,
+                      0.6240264892578125
+                    ]
+                  },
+                  {
+                    "auroc": 0.523193359375,
+                    "ci95": [
+                      0.4398162841796875,
+                      0.601214599609375
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.521240234375,
+                "ci95": [
+                  0.4619140625,
+                  0.5791015625
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5438232421875,
+                    "ci95": [
+                      0.4925506591796875,
+                      0.5969268798828125
+                    ]
+                  },
+                  {
+                    "auroc": 0.492431640625,
+                    "ci95": [
+                      0.430657958984375,
+                      0.54931640625
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.11329345703125,
+                  0.08960266113281248
+                ],
+                "difference": -0.0126953125,
+                "p_one_sided_bootstrap": 0.600199900049975
+              }
+            },
+            "source_probe": {
+              "auroc": 0.979248046875,
+              "ci95": [
+                0.95849609375,
+                0.99560546875
+              ]
+            },
+            "window_probe": {
+              "auroc": 0.6048583984375,
+              "ci95": [
+                0.554437255859375,
+                0.6632171630859375
+              ]
+            }
+          },
+          "n_test_items": 128,
+          "n_test_pairs": 64
+        },
+        "short_late": {
+          "channels": {
+            "asked": {
+              "opposite_swap": {
+                "auroc": 0.553466796875,
+                "ci95": [
+                  0.5185546875,
+                  0.59228515625
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.557373046875,
+                    "ci95": [
+                      0.52587890625,
+                      0.5969299316406249
+                    ]
+                  },
+                  {
+                    "auroc": 0.54833984375,
+                    "ci95": [
+                      0.504632568359375,
+                      0.59912109375
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.5130615234375,
+                "ci95": [
+                  0.44884033203125,
+                  0.576416015625
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5130615234375,
+                    "ci95": [
+                      0.4546905517578125,
+                      0.5709289550781249
+                    ]
+                  },
+                  {
+                    "auroc": 0.5050048828125,
+                    "ci95": [
+                      0.431878662109375,
+                      0.5787414550781249
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.446533203125,
+                "ci95": [
+                  0.40771484375,
+                  0.4814453125
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.442626953125,
+                    "ci95": [
+                      0.403070068359375,
+                      0.47412109375
+                    ]
+                  },
+                  {
+                    "auroc": 0.45166015625,
+                    "ci95": [
+                      0.40087890625,
+                      0.49536743164062497
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.14820556640625,
+                  0.014529418945312483
+                ],
+                "difference": -0.0665283203125,
+                "p_one_sided_bootstrap": 0.953023488255872
+              }
+            },
+            "continuation": {
+              "opposite_swap": {
+                "auroc": 0.535400390625,
+                "ci95": [
+                  0.497802734375,
+                  0.5747192382812499
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.4901123046875,
+                    "ci95": [
+                      0.4532440185546875,
+                      0.5239288330078125
+                    ]
+                  },
+                  {
+                    "auroc": 0.547607421875,
+                    "ci95": [
+                      0.519525146484375,
+                      0.581787109375
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.4786376953125,
+                "ci95": [
+                  0.388177490234375,
+                  0.5640930175781249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.48828125,
+                    "ci95": [
+                      0.4028167724609375,
+                      0.5719451904296873
+                    ]
+                  },
+                  {
+                    "auroc": 0.4720458984375,
+                    "ci95": [
+                      0.3883026123046875,
+                      0.5588592529296874
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.464599609375,
+                "ci95": [
+                  0.42528076171875,
+                  0.502197265625
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5098876953125,
+                    "ci95": [
+                      0.4760711669921875,
+                      0.5467559814453125
+                    ]
+                  },
+                  {
+                    "auroc": 0.452392578125,
+                    "ci95": [
+                      0.418212890625,
+                      0.48047485351562497
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.1043731689453125,
+                  0.08032836914062497
+                ],
+                "difference": -0.0140380859375,
+                "p_one_sided_bootstrap": 0.6231884057971014
+              }
+            },
+            "source_probe": {
+              "auroc": 0.950927734375,
+              "ci95": [
+                0.918212890625,
+                0.9794921875
+              ]
+            },
+            "window_probe": {
+              "auroc": 0.940185546875,
+              "ci95": [
+                0.902337646484375,
+                0.973388671875
+              ]
+            }
+          },
+          "n_test_items": 128,
+          "n_test_pairs": 64
+        }
+      },
+      "contrasts": [
+        {
+          "channels": {
+            "asked": {
+              "ci95": [
+                -0.080322265625,
+                0.06153564453124993
+              ],
+              "difference": -0.005615234375,
+              "p_one_sided_bootstrap": 0.5742128935532234
+            },
+            "continuation": {
+              "ci95": [
+                -0.124755859375,
+                0.009765625
+              ],
+              "difference": -0.0556640625,
+              "p_one_sided_bootstrap": 0.9490254872563718
+            },
+            "source_probe": {
+              "ci95": [
+                -0.0654296875,
+                0.007818603515624967
+              ],
+              "difference": -0.027099609375,
+              "p_one_sided_bootstrap": 0.928535732133933
+            },
+            "window_probe": {
+              "ci95": [
+                0.402337646484375,
+                0.473388671875
+              ],
+              "difference": 0.440185546875,
+              "p_one_sided_bootstrap": 0.0004997501249375312
+            }
+          },
+          "high": "short_late",
+          "low": "long_early"
+        },
+        {
+          "channels": {
+            "asked": {
+              "ci95": [
+                -0.011474609375,
+                0.14063720703124993
+              ],
+              "difference": 0.067138671875,
+              "p_one_sided_bootstrap": 0.050474762618690654
+            },
+            "continuation": {
+              "ci95": [
+                -0.060302734375,
+                0.095703125
+              ],
+              "difference": 0.015625,
+              "p_one_sided_bootstrap": 0.32233883058470764
+            },
+            "source_probe": {
+              "ci95": [
+                -0.1201171875,
+                -0.025628662109375033
+              ],
+              "difference": -0.071044921875,
+              "p_one_sided_bootstrap": 0.9985007496251874
+            },
+            "window_probe": {
+              "ci95": [
+                0.466064453125,
+                0.494140625
+              ],
+              "difference": 0.481689453125,
+              "p_one_sided_bootstrap": 0.0004997501249375312
+            }
+          },
+          "high": "long_late",
+          "low": "long_early"
+        }
+      ],
+      "direction_holds": false,
+      "feature": "prose_paren",
+      "lens_direction_holds": false,
+      "p_holm": 1.0,
+      "p_row_one_sided": 0.9490254872563718,
+      "source_flat": false,
+      "window_direction_positive_descriptive": true
+    },
+    {
+      "asked_all_cells_at_most_060": true,
+      "cells": {
+        "long_early": {
+          "channels": {
+            "asked": {
+              "opposite_swap": {
+                "auroc": 0.4306640625,
+                "ci95": [
+                  0.371820068359375,
+                  0.47778930664062497
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.462646484375,
+                    "ci95": [
+                      0.4150390625,
+                      0.505633544921875
+                    ]
+                  },
+                  {
+                    "auroc": 0.453369140625,
+                    "ci95": [
+                      0.40086669921875,
+                      0.4978210449218749
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.4736328125,
+                "ci95": [
+                  0.39119873046875,
+                  0.5567901611328123
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.470947265625,
+                    "ci95": [
+                      0.3885406494140625,
+                      0.5517608642578125
+                    ]
+                  },
+                  {
+                    "auroc": 0.523681640625,
+                    "ci95": [
+                      0.4468994140625,
+                      0.6024322509765624
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.5693359375,
+                "ci95": [
+                  0.522210693359375,
+                  0.6281799316406249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.537353515625,
+                    "ci95": [
+                      0.494366455078125,
+                      0.5849609375
+                    ]
+                  },
+                  {
+                    "auroc": 0.546630859375,
+                    "ci95": [
+                      0.502178955078125,
+                      0.5991333007812499
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.0013519287109374995,
+                  0.19885864257812497
+                ],
+                "difference": 0.095703125,
+                "p_one_sided_bootstrap": 0.027486256871564217
+              }
+            },
+            "continuation": {
+              "opposite_swap": {
+                "auroc": 0.451416015625,
+                "ci95": [
+                  0.391339111328125,
+                  0.5058654785156249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.447509765625,
+                    "ci95": [
+                      0.396710205078125,
+                      0.49597473144531246
+                    ]
+                  },
+                  {
+                    "auroc": 0.521240234375,
+                    "ci95": [
+                      0.46434326171875,
+                      0.5771484375
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.429931640625,
+                "ci95": [
+                  0.35106201171875,
+                  0.5086730957031249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.4405517578125,
+                    "ci95": [
+                      0.35692138671875,
+                      0.523681640625
+                    ]
+                  },
+                  {
+                    "auroc": 0.44921875,
+                    "ci95": [
+                      0.372296142578125,
+                      0.5245574951171874
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.548583984375,
+                "ci95": [
+                  0.494134521484375,
+                  0.608660888671875
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.552490234375,
+                    "ci95": [
+                      0.5040252685546875,
+                      0.603289794921875
+                    ]
+                  },
+                  {
+                    "auroc": 0.478759765625,
+                    "ci95": [
+                      0.4228515625,
+                      0.5356567382812499
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  0.023049926757812502,
+                  0.21436462402343745
+                ],
+                "difference": 0.11865234375,
+                "p_one_sided_bootstrap": 0.011494252873563218
+              }
+            },
+            "source_probe": {
+              "auroc": 0.90576171875,
+              "ci95": [
+                0.864007568359375,
+                0.9475158691406249
+              ]
+            },
+            "window_probe": {
+              "auroc": 0.5,
+              "ci95": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          "n_test_items": 128,
+          "n_test_pairs": 64
+        },
+        "long_late": {
+          "channels": {
+            "asked": {
+              "opposite_swap": {
+                "auroc": 0.5263671875,
+                "ci95": [
+                  0.494622802734375,
+                  0.5654296875
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.52001953125,
+                    "ci95": [
+                      0.48802490234375,
+                      0.5546875
+                    ]
+                  },
+                  {
+                    "auroc": 0.5196533203125,
+                    "ci95": [
+                      0.4905914306640625,
+                      0.5526123046875
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.46484375,
+                "ci95": [
+                  0.3799957275390625,
+                  0.5477416992187499
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.46435546875,
+                    "ci95": [
+                      0.3884246826171875,
+                      0.5423736572265624
+                    ]
+                  },
+                  {
+                    "auroc": 0.50439453125,
+                    "ci95": [
+                      0.4105194091796875,
+                      0.5980255126953125
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.4736328125,
+                "ci95": [
+                  0.4345703125,
+                  0.5053771972656249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.47998046875,
+                    "ci95": [
+                      0.4453125,
+                      0.5119750976562499
+                    ]
+                  },
+                  {
+                    "auroc": 0.4803466796875,
+                    "ci95": [
+                      0.4473876953125,
+                      0.5094085693359375
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.0826416015625,
+                  0.097900390625
+                ],
+                "difference": 0.0087890625,
+                "p_one_sided_bootstrap": 0.44577711144427784
+              }
+            },
+            "continuation": {
+              "opposite_swap": {
+                "auroc": 0.50830078125,
+                "ci95": [
+                  0.48583984375,
+                  0.531005859375
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.509765625,
+                    "ci95": [
+                      0.4859588623046875,
+                      0.5388214111328125
+                    ]
+                  },
+                  {
+                    "auroc": 0.493408203125,
+                    "ci95": [
+                      0.45654296875,
+                      0.526123046875
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.5078125,
+                "ci95": [
+                  0.4106353759765625,
+                  0.5999755859375
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.473876953125,
+                    "ci95": [
+                      0.3815887451171875,
+                      0.5666595458984375
+                    ]
+                  },
+                  {
+                    "auroc": 0.550048828125,
+                    "ci95": [
+                      0.4589752197265625,
+                      0.6355102539062499
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.49169921875,
+                "ci95": [
+                  0.468994140625,
+                  0.51416015625
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.490234375,
+                    "ci95": [
+                      0.4611785888671875,
+                      0.5140411376953125
+                    ]
+                  },
+                  {
+                    "auroc": 0.506591796875,
+                    "ci95": [
+                      0.473876953125,
+                      0.54345703125
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.1113311767578125,
+                  0.08070068359374993
+                ],
+                "difference": -0.01611328125,
+                "p_one_sided_bootstrap": 0.6506746626686657
+              }
+            },
+            "source_probe": {
+              "auroc": 0.8759765625,
+              "ci95": [
+                0.831298828125,
+                0.9248107910156249
+              ]
+            },
+            "window_probe": {
+              "auroc": 0.998291015625,
+              "ci95": [
+                0.994384765625,
+                1.0
+              ]
+            }
+          },
+          "n_test_items": 128,
+          "n_test_pairs": 64
+        },
+        "short_early": {
+          "channels": {
+            "asked": {
+              "opposite_swap": {
+                "auroc": 0.42822265625,
+                "ci95": [
+                  0.368890380859375,
+                  0.475341796875
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.46142578125,
+                    "ci95": [
+                      0.414056396484375,
+                      0.5053771972656249
+                    ]
+                  },
+                  {
+                    "auroc": 0.453369140625,
+                    "ci95": [
+                      0.402337646484375,
+                      0.499755859375
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.5343017578125,
+                "ci95": [
+                  0.436138916015625,
+                  0.6359924316406249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5301513671875,
+                    "ci95": [
+                      0.4350250244140625,
+                      0.6292816162109375
+                    ]
+                  },
+                  {
+                    "auroc": 0.4896240234375,
+                    "ci95": [
+                      0.403656005859375,
+                      0.571917724609375
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.57177734375,
+                "ci95": [
+                  0.524658203125,
+                  0.6311096191406249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.53857421875,
+                    "ci95": [
+                      0.494622802734375,
+                      0.5859436035156249
+                    ]
+                  },
+                  {
+                    "auroc": 0.546630859375,
+                    "ci95": [
+                      0.500244140625,
+                      0.5976623535156249
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.0754425048828125,
+                  0.1539306640625
+                ],
+                "difference": 0.0374755859375,
+                "p_one_sided_bootstrap": 0.25837081459270367
+              }
+            },
+            "continuation": {
+              "opposite_swap": {
+                "auroc": 0.449462890625,
+                "ci95": [
+                  0.389642333984375,
+                  0.5034240722656249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.4462890625,
+                    "ci95": [
+                      0.395257568359375,
+                      0.4939056396484375
+                    ]
+                  },
+                  {
+                    "auroc": 0.518798828125,
+                    "ci95": [
+                      0.462158203125,
+                      0.5732482910156249
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.5150146484375,
+                "ci95": [
+                  0.435528564453125,
+                  0.5929077148437499
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5035400390625,
+                    "ci95": [
+                      0.430291748046875,
+                      0.57763671875
+                    ]
+                  },
+                  {
+                    "auroc": 0.5367431640625,
+                    "ci95": [
+                      0.440533447265625,
+                      0.6272125244140624
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.550537109375,
+                "ci95": [
+                  0.496575927734375,
+                  0.6103576660156249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5537109375,
+                    "ci95": [
+                      0.5060943603515625,
+                      0.6047424316406249
+                    ]
+                  },
+                  {
+                    "auroc": 0.481201171875,
+                    "ci95": [
+                      0.426751708984375,
+                      0.537841796875
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.053228759765625,
+                  0.12500610351562497
+                ],
+                "difference": 0.0355224609375,
+                "p_one_sided_bootstrap": 0.19790104947526238
+              }
+            },
+            "source_probe": {
+              "auroc": 0.90576171875,
+              "ci95": [
+                0.864007568359375,
+                0.9475158691406249
+              ]
+            },
+            "window_probe": {
+              "auroc": 0.5457763671875,
+              "ci95": [
+                0.5194091796875,
+                0.5805694580078125
+              ]
+            }
+          },
+          "n_test_items": 128,
+          "n_test_pairs": 64
+        },
+        "short_late": {
+          "channels": {
+            "asked": {
+              "opposite_swap": {
+                "auroc": 0.50732421875,
+                "ci95": [
+                  0.470458984375,
+                  0.5463928222656249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.504150390625,
+                    "ci95": [
+                      0.46922607421875,
+                      0.5420043945312499
+                    ]
+                  },
+                  {
+                    "auroc": 0.521484375,
+                    "ci95": [
+                      0.482421875,
+                      0.559326171875
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.5115966796875,
+                "ci95": [
+                  0.43590087890625,
+                  0.5867950439453125
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5216064453125,
+                    "ci95": [
+                      0.4416473388671875,
+                      0.6011993408203125
+                    ]
+                  },
+                  {
+                    "auroc": 0.4940185546875,
+                    "ci95": [
+                      0.423565673828125,
+                      0.5601837158203125
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.49267578125,
+                "ci95": [
+                  0.453607177734375,
+                  0.529541015625
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.495849609375,
+                    "ci95": [
+                      0.45799560546875,
+                      0.5307739257812499
+                    ]
+                  },
+                  {
+                    "auroc": 0.478515625,
+                    "ci95": [
+                      0.440673828125,
+                      0.517578125
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.101812744140625,
+                  0.06690368652343745
+                ],
+                "difference": -0.0189208984375,
+                "p_one_sided_bootstrap": 0.6751624187906047
+              }
+            },
+            "continuation": {
+              "opposite_swap": {
+                "auroc": 0.490234375,
+                "ci95": [
+                  0.46240234375,
+                  0.5153869628906249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.492919921875,
+                    "ci95": [
+                      0.471435546875,
+                      0.5158752441406249
+                    ]
+                  },
+                  {
+                    "auroc": 0.48876953125,
+                    "ci95": [
+                      0.45164794921875,
+                      0.520263671875
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.5299072265625,
+                "ci95": [
+                  0.4570220947265625,
+                  0.6024230957031249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.519287109375,
+                    "ci95": [
+                      0.4359130859375,
+                      0.6027923583984375
+                    ]
+                  },
+                  {
+                    "auroc": 0.5250244140625,
+                    "ci95": [
+                      0.45323486328125,
+                      0.5969390869140624
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.509765625,
+                "ci95": [
+                  0.484613037109375,
+                  0.53759765625
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.507080078125,
+                    "ci95": [
+                      0.484124755859375,
+                      0.528564453125
+                    ]
+                  },
+                  {
+                    "auroc": 0.51123046875,
+                    "ci95": [
+                      0.479736328125,
+                      0.5483520507812499
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.0986358642578125,
+                  0.05897521972656242
+                ],
+                "difference": -0.0201416015625,
+                "p_one_sided_bootstrap": 0.6941529235382309
+              }
+            },
+            "source_probe": {
+              "auroc": 0.846923828125,
+              "ci95": [
+                0.807611083984375,
+                0.8935607910156249
+              ]
+            },
+            "window_probe": {
+              "auroc": 0.94873046875,
+              "ci95": [
+                0.917236328125,
+                0.976580810546875
+              ]
+            }
+          },
+          "n_test_items": 128,
+          "n_test_pairs": 64
+        }
+      },
+      "contrasts": [
+        {
+          "channels": {
+            "asked": {
+              "ci95": [
+                -0.144775390625,
+                -0.019287109375
+              ],
+              "difference": -0.07666015625,
+              "p_one_sided_bootstrap": 0.9960019990004998
+            },
+            "continuation": {
+              "ci95": [
+                -0.097900390625,
+                0.017578125
+              ],
+              "difference": -0.038818359375,
+              "p_one_sided_bootstrap": 0.9065467266366817
+            },
+            "source_probe": {
+              "ci95": [
+                -0.11279296875,
+                -0.00341796875
+              ],
+              "difference": -0.058837890625,
+              "p_one_sided_bootstrap": 0.9785107446276862
+            },
+            "window_probe": {
+              "ci95": [
+                0.417236328125,
+                0.4765808105468749
+              ],
+              "difference": 0.44873046875,
+              "p_one_sided_bootstrap": 0.0004997501249375312
+            }
+          },
+          "high": "short_late",
+          "low": "long_early"
+        },
+        {
+          "channels": {
+            "asked": {
+              "ci95": [
+                -0.166998291015625,
+                -0.0368469238281251
+              ],
+              "difference": -0.095703125,
+              "p_one_sided_bootstrap": 0.999000499750125
+            },
+            "continuation": {
+              "ci95": [
+                -0.12281494140625,
+                0.004162597656249933
+              ],
+              "difference": -0.056884765625,
+              "p_one_sided_bootstrap": 0.9645177411294353
+            },
+            "source_probe": {
+              "ci95": [
+                -0.091558837890625,
+                0.03370361328124993
+              ],
+              "difference": -0.02978515625,
+              "p_one_sided_bootstrap": 0.8305847076461769
+            },
+            "window_probe": {
+              "ci95": [
+                0.494384765625,
+                0.5
+              ],
+              "difference": 0.498291015625,
+              "p_one_sided_bootstrap": 0.0004997501249375312
+            }
+          },
+          "high": "long_late",
+          "low": "long_early"
+        }
+      ],
+      "direction_holds": false,
+      "feature": "python_string",
+      "lens_direction_holds": false,
+      "p_holm": 1.0,
+      "p_row_one_sided": 0.9645177411294353,
+      "source_flat": false,
+      "window_direction_positive_descriptive": true
+    },
+    {
+      "asked_all_cells_at_most_060": true,
+      "cells": {
+        "line_end": {
+          "channels": {
+            "asked": {
+              "opposite_swap": {
+                "auroc": 0.560546875,
+                "ci95": [
+                  0.531982421875,
+                  0.6018127441406249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.55517578125,
+                    "ci95": [
+                      0.530029296875,
+                      0.587646484375
+                    ]
+                  },
+                  {
+                    "auroc": 0.527587890625,
+                    "ci95": [
+                      0.4970703125,
+                      0.5615356445312499
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.4854736328125,
+                "ci95": [
+                  0.3986572265625,
+                  0.5699523925781249
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5618896484375,
+                    "ci95": [
+                      0.4710693359375,
+                      0.6504028320312499
+                    ]
+                  },
+                  {
+                    "auroc": 0.3629150390625,
+                    "ci95": [
+                      0.2819793701171875,
+                      0.44409790039062497
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.439453125,
+                "ci95": [
+                  0.398187255859375,
+                  0.468017578125
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.44482421875,
+                    "ci95": [
+                      0.412353515625,
+                      0.469970703125
+                    ]
+                  },
+                  {
+                    "auroc": 0.472412109375,
+                    "ci95": [
+                      0.43846435546875,
+                      0.5029296875
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.1400177001953125,
+                  0.04457702636718738
+                ],
+                "difference": -0.0460205078125,
+                "p_one_sided_bootstrap": 0.8355822088955522
+              }
+            },
+            "continuation": {
+              "opposite_swap": {
+                "auroc": 0.518310546875,
+                "ci95": [
+                  0.49658203125,
+                  0.543212890625
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.516845703125,
+                    "ci95": [
+                      0.497314453125,
+                      0.5388244628906249
+                    ]
+                  },
+                  {
+                    "auroc": 0.525634765625,
+                    "ci95": [
+                      0.5,
+                      0.5529907226562499
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.5032958984375,
+                "ci95": [
+                  0.4163726806640625,
+                  0.5937591552734375
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.5081787109375,
+                    "ci95": [
+                      0.4169891357421875,
+                      0.602313232421875
+                    ]
+                  },
+                  {
+                    "auroc": 0.5111083984375,
+                    "ci95": [
+                      0.429058837890625,
+                      0.6001068115234375
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.481689453125,
+                "ci95": [
+                  0.456787109375,
+                  0.50341796875
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.483154296875,
+                    "ci95": [
+                      0.461175537109375,
+                      0.502685546875
+                    ]
+                  },
+                  {
+                    "auroc": 0.474365234375,
+                    "ci95": [
+                      0.44700927734375,
+                      0.5
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.12003173828125,
+                  0.06958618164062497
+                ],
+                "difference": -0.0216064453125,
+                "p_one_sided_bootstrap": 0.6661669165417291
+              }
+            },
+            "source_probe": {
+              "auroc": 0.716796875,
+              "ci95": [
+                0.681640625,
+                0.7617248535156249
+              ]
+            },
+            "window_probe": {
+              "auroc": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          "n_test_items": 128,
+          "n_test_pairs": 64
+        },
+        "mid_item": {
+          "channels": {
+            "asked": {
+              "opposite_swap": {
+                "auroc": 0.52001953125,
+                "ci95": [
+                  0.484619140625,
+                  0.557861328125
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.517578125,
+                    "ci95": [
+                      0.484613037109375,
+                      0.552734375
+                    ]
+                  },
+                  {
+                    "auroc": 0.5009765625,
+                    "ci95": [
+                      0.468255615234375,
+                      0.5334533691406249
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.4542236328125,
+                "ci95": [
+                  0.373895263671875,
+                  0.5297973632812499
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.4478759765625,
+                    "ci95": [
+                      0.3757293701171875,
+                      0.5196624755859375
+                    ]
+                  },
+                  {
+                    "auroc": 0.4989013671875,
+                    "ci95": [
+                      0.41170654296875,
+                      0.5795959472656249
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.47998046875,
+                "ci95": [
+                  0.442138671875,
+                  0.515380859375
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.482421875,
+                    "ci95": [
+                      0.447265625,
+                      0.5153869628906249
+                    ]
+                  },
+                  {
+                    "auroc": 0.4990234375,
+                    "ci95": [
+                      0.466546630859375,
+                      0.5317443847656249
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.06315002441406249,
+                  0.12075805664062483
+                ],
+                "difference": 0.0257568359375,
+                "p_one_sided_bootstrap": 0.2898550724637681
+              }
+            },
+            "continuation": {
+              "opposite_swap": {
+                "auroc": 0.47509765625,
+                "ci95": [
+                  0.450439453125,
+                  0.49341430664062497
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.475830078125,
+                    "ci95": [
+                      0.449212646484375,
+                      0.49683227539062497
+                    ]
+                  },
+                  {
+                    "auroc": 0.473388671875,
+                    "ci95": [
+                      0.44970703125,
+                      0.489990234375
+                    ]
+                  }
+                ]
+              },
+              "random_donor": {
+                "auroc": 0.4581298828125,
+                "ci95": [
+                  0.3691375732421875,
+                  0.5396728515625
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.4625244140625,
+                    "ci95": [
+                      0.37718505859375,
+                      0.5412689208984375
+                    ]
+                  },
+                  {
+                    "auroc": 0.4527587890625,
+                    "ci95": [
+                      0.363885498046875,
+                      0.5355224609375
+                    ]
+                  }
+                ]
+              },
+              "true": {
+                "auroc": 0.52490234375,
+                "ci95": [
+                  0.506585693359375,
+                  0.549560546875
+                ],
+                "per_pair": [
+                  {
+                    "auroc": 0.524169921875,
+                    "ci95": [
+                      0.503167724609375,
+                      0.5507873535156249
+                    ]
+                  },
+                  {
+                    "auroc": 0.526611328125,
+                    "ci95": [
+                      0.510009765625,
+                      0.55029296875
+                    ]
+                  }
+                ]
+              },
+              "true_minus_random": {
+                "ci95": [
+                  -0.0208770751953125,
+                  0.16369934082031248
+                ],
+                "difference": 0.0667724609375,
+                "p_one_sided_bootstrap": 0.06196901549225387
+              }
+            },
+            "source_probe": {
+              "auroc": 0.88818359375,
+              "ci95": [
+                0.838128662109375,
+                0.938720703125
+              ]
+            },
+            "window_probe": {
+              "auroc": 0.5,
+              "ci95": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          "n_test_items": 128,
+          "n_test_pairs": 64
+        }
+      },
+      "contrasts": [
+        {
+          "channels": {
+            "asked": {
+              "ci95": [
+                -0.099609375,
+                0.010748291015624967
+              ],
+              "difference": -0.04052734375,
+              "p_one_sided_bootstrap": 0.9490254872563718
+            },
+            "continuation": {
+              "ci95": [
+                -0.07470703125,
+                -0.018798828125
+              ],
+              "difference": -0.043212890625,
+              "p_one_sided_bootstrap": 1.0
+            },
+            "source_probe": {
+              "ci95": [
+                -0.2273193359375,
+                -0.10839233398437503
+              ],
+              "difference": -0.17138671875,
+              "p_one_sided_bootstrap": 1.0
+            },
+            "window_probe": {
+              "ci95": [
+                0.5,
+                0.5
+              ],
+              "difference": 0.5,
+              "p_one_sided_bootstrap": 0.0004997501249375312
+            }
+          },
+          "high": "line_end",
+          "low": "mid_item"
+        }
+      ],
+      "direction_holds": false,
+      "feature": "list_depth",
+      "lens_direction_holds": false,
+      "p_holm": 1.0,
+      "p_row_one_sided": 1.0,
+      "source_flat": false,
+      "window_direction_positive_descriptive": true
+    }
+  ],
+  "score_seal_sha256": "cf2418f41251ffafa795c508c016d8e288c96c198405a54535db22163397f773",
+  "section": 110,
+  "status": "EXPLORATORY",
+  "summary": {
+    "full_prediction_held": false,
+    "horizon_direction_outcome": "NOT_SUPPORTED",
+    "list_direction_holds": false,
+    "plain_assessment": "The prediction did not hold.",
+    "source_flatness_is_point_check_not_equivalence_test": true,
+    "span_direction_holds": false,
+    "window_no_numeric_cutoff_added": true
+  }
+}

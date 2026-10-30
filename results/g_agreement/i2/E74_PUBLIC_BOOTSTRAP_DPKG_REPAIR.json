@@ -1,0 +1,100 @@
+{
+  "changes": [
+    "Replace apt-get --no-download local-deb installation with dpkg --install of the same 26 absolute hash-verified files.",
+    "Preserve first phase/error-type metadata on bootstrap failure; never record keys or environment.",
+    "Existing bootstrap directory refuses replay with an explicit stable message; it is not removed or reused.",
+    "Bound child cleanup by the same absolute setup endpoint, removing the former extra five-second wait."
+  ],
+  "failed_original_bundle_hashes": {
+    "START_COMMAND.txt": "3b2c3f00a5ced2514bf5020eb7dd5c72f2e245328ab688a294bee276023eed13",
+    "bootstrap.py": "7cbe96a57c69fbd0f7dd5c7a314798d7bec2a2c5921b5c1724068dd961cd8c81",
+    "e74-public-runtime-recipe.tar.gz": "2f87ff4bbaa9f9485d54310a2456b17895a7a9805fad304cda886632cdcf5e63"
+  },
+  "image": "docker.io/library/python@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a",
+  "invariants": {
+    "archive_bytes": 372439,
+    "archive_members": 11,
+    "archive_safe_regular_files_only": true,
+    "cpu_only": true,
+    "credentials_read": false,
+    "failed_original_bundle_unchanged": true,
+    "gpu_used": false,
+    "model_started": false,
+    "original_environment_cap_seconds": 900,
+    "provider_calls": 0,
+    "runtime_and_build_locks_unchanged": true,
+    "scientific_source_and_settings_unchanged": true
+  },
+  "limitations": [
+    "This validates OS closure and SSH startup, not model kernels or total runtime installation duration.",
+    "Local timings use Linux amd64 emulation with package bytes already supplied; they are not a pod throughput forecast.",
+    "A new run requires current source bindings, deadline, hardware-specific full forecast and budget admission including previous failed-run spend.",
+    "Neither the prior TP4 forecast nor any TP8 forecast is authorized by this bootstrap receipt."
+  ],
+  "schema": "i2-e74-public-bootstrap-dpkg-repair-v1",
+  "source_files": {
+    "PACKAGE.json": "08647e87f749ee5ab8148258c45f114a63749ebb917e70a94544ad738d4c4d56",
+    "START_ARGV.json": "cdcc7200e5c5225714c383600913d64c3d23f8bcaa1d3c61cc3dcef5f3f863a5",
+    "START_COMMAND.txt": "d68622d92301872ab4983616b735eeedfad829785acbe3c067b2984a3141aa7a",
+    "bootstrap.py": "262c40fbaff260238975ee19a392bef72088e4c7c5604873e49ce791035331f3",
+    "build_candidate.py": "2a2e31ebe4332f76bc4113b64062e0f75eeff560f91cd587c317431a027cb636",
+    "e74-public-runtime-recipe.tar.gz": "4ab27169cc752d7cfb48136ddf26c92b4c7cb7e2e1abf8bad26c80181ebe6853",
+    "os_install_fixture.py": "e19626e0c2d705c0b605761504c182a2c84ff3790ab1355c9a4290bf76321ca0",
+    "recipe/PACKAGE_FILES.json": "934cee4ff8c236267ed7aec61022be4e04d9c47e1d44493fcda2d974ecc28dd2",
+    "recipe/bootstrap.py": "262c40fbaff260238975ee19a392bef72088e4c7c5604873e49ce791035331f3",
+    "startup_fixture.py": "8d5d12704e5fa52d3aafe875a92c26aa78df9ba1d19b13ac2c0831b2b92f604b",
+    "test_bootstrap.py": "578b931fdab9749b8722c9229e5ab64db936353960ed082a0de66af30533228c"
+  },
+  "status": "PASS_CPU_BOOTSTRAP_ONLY_NO_LAUNCH_AUTHORIZATION",
+  "tests": [
+    {
+      "command": "python3 -B -m unittest -q test_bootstrap",
+      "seconds": 0.059,
+      "status": "PASS",
+      "tests": 21
+    },
+    {
+      "all_26_argv_paths_absolute": true,
+      "command": "docker run --rm --network none --platform linux/amd64 --mount type=bind,src=<candidate>,dst=/fixture,readonly --entrypoint python docker.io/library/python@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a /fixture/os_install_fixture.py old_apt",
+      "expected_error": "Pathname to install is not absolute",
+      "installer_exit_code": 100,
+      "seconds": 1.274,
+      "status": "PASS_REPRODUCED_ORIGINAL_FAILURE",
+      "stderr_sha256": "9f95b488b9a60ca826b84f585eb6486173074969439a6348f712a7f32afe18cb"
+    },
+    {
+      "command": "docker run --rm --network none --platform linux/amd64 --mount type=bind,src=<candidate>,dst=/fixture,readonly --entrypoint python docker.io/library/python@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a /fixture/os_install_fixture.py dpkg",
+      "dpkg_audit_empty": true,
+      "exact_package_versions_verified": 26,
+      "installer_exit_code": 0,
+      "required_tools_present": true,
+      "seconds": 30.032,
+      "status": "PASS_EXACT_OS_CLOSURE",
+      "stdout_sha256": "7c5470d8591452baf513029272ae8b5ac06793400b1bf1772a3444adc6ddb141"
+    },
+    {
+      "command": "docker run --rm --network none --platform linux/amd64 --mount type=bind,src=<candidate>,dst=/fixture,readonly --entrypoint python docker.io/library/python@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a /fixture/startup_fixture.py",
+      "original_deadline_unchanged": true,
+      "public_http_reads": "exact local hash-verified fixture bytes; no live HTTP in container",
+      "second_start_did_not_modify_receipt": true,
+      "second_start_exit_code": 78,
+      "seconds": 24.831,
+      "ssh_banner_verified": true,
+      "status": "PASS_ACTUAL_EMBEDDED_STARTUP_AND_SSH"
+    }
+  ],
+  "unchanged_files": {
+    "OS_LOCK.json": "bd7ee0979a51f5a9142ce8b71495c6ee131d26897cc61cb0b405b85c70cd8916",
+    "recipe/Dockerfile": "40ecee13a11dbaef118c50e2a376a90c8b2c93c07933bbecf501b5b75ce3910e",
+    "recipe/RECIPE.json": "378fc8583a56e4831024af4cf068654d4e8167417d914a6147489780857b560c",
+    "recipe/build.lock": "f19fd3a77d89e86bcb25f982dbb380ecaa48098700d092129ba2e586c6f8e418",
+    "recipe/fork.lock": "6cb234cf097b85d43d9da8012096a4fc3e8a5240c72640c0218d6d5e81e94a7a",
+    "recipe/install_runtime.py": "83bbedb4f03cd7f30674de2d9f9b886ae3a181a7a95efcc5f892d8cd81911b5d",
+    "recipe/runtime.lock": "3abc28f0e71519de8690980f8b8e5f52ecfbafddd6c126768c74f77894c25f2e",
+    "recipe/vendor/olens_glm53_usage.py": "ebbd4a1fb0b1cf7673ebbe5e75ee102d6652a789ae3b9f9287c06a9011fcfa42",
+    "recipe/vendor/vllm_metamodels_glm53_b26f02d.tar.gz": "8d9ca706651a1325c7ad9db78b19989a0f0082944577b310dc5aa0cf95046c82",
+    "recipe/verify_deployment.py": "cb270e4d9221ec37660be5686628dcc80fa1d36a9280fc653a09f90b55bc0b75",
+    "sshd_config": "bb74a22579e32d29989ac2cc3e0ec09bf4ac5031b42e7fd674ad6c94239c789e",
+    "start.py": "14370817cde93ef7fe2995d3d733fcaa37afdd158bc96b7b4a888efb2b989bb6"
+  }
+}

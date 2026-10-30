@@ -1,0 +1,12 @@
+{
+  "id": "f6c015ec445ca7f1b0d52fb7",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given sentence.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals a direct answer is expected, following the pattern of the task definition.\n\n\"Reply:\" is the final token, acting as a prompt label requiring the model's classification output (e.g., \"Positive\" or \"Negative\") to follow immediately.\n\"Given the following sentence, determine the sentiment label (Positive or Negative) according to the instructions above.\nSentence: 'The speaker is a doctor who is a member of the medical community.'\nReply:\" \u2014 the final \"Reply:\" is a field label in the structured prompt, demanding the short classification answer as the very next token.\n\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: classify sentiment as \"Positive\" or \"Negative\" based on the given sentence.\n\nThe example structure (\"Example sentence: ... / Reply:\") signals a direct answer is expected, following the pattern of the task definition.\n\n\"Reply:\" is the final token, acting as a prompt label requiring the model's classification output (e.g., \"Positive\" or \"Negative\") to follow immediately.\n\"Given the following sentence, determine the sentiment label (Positive or Negative) according to the instructions above.\nSentence: 'The speaker is a doctor who is a member of the medical community.'\nReply:\" \u2014 the final \"Reply:\" is a field label in the structured prompt, demanding the short classification answer as the very next token.",
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "66232c2766cd85113d894cad",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nFew-shot classification format established: examples show sentiment labels (\"Positive\") paired with Chinese text, requiring consistent pattern continuation.\n\nThe prompt explicitly defines the task as classifying sentiment as \"Positive\" or \"Negative,\" and the final example sentence (\"The weather is very pleasant today\") is clearly positive, constraining the answer.\n\n\"Example Input: 'The weather is very pleasant today.'\\nReply:\" is the final prompt line, where \"Reply:\" is a label/field marker demanding the model's direct classification answer (e.g., \"Positive\") immediately next.\n\"Given the following example, provide the sentiment label strictly following the pattern.\\nExample Input: [text]\\nExample Input: [text]\\nReply:\" \u2014 the final \"Reply:\" token is a prompt field expecting the model's direct response, the classification label.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Few-shot classification format established: examples show sentiment labels (\"Positive\") paired with Chinese text, requiring consistent pattern continuation.\n\nThe prompt explicitly defines the task as classifying sentiment as \"Positive\" or \"Negative,\" and the final example sentence (\"The weather is very pleasant today\") is clearly positive, constraining the answer.\n\n\"Example Input: 'The weather is very pleasant today.'\\nReply:\" is the final prompt line, where \"Reply:\" is a label/field marker demanding the model's direct classification answer (e.g., \"Positive\") immediately next.\n\"Given the following example, provide the sentiment label strictly following the pattern.\\nExample Input: [text]\\nExample Input: [text]\\nReply:\" \u2014 the final \"Reply:\" token is a prompt field expecting the model's direct response, the classification label.",
+  "truncated": false
+}

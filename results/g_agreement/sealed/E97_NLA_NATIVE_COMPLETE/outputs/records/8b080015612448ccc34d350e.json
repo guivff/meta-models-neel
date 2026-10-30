@@ -1,0 +1,12 @@
+{
+  "id": "8b080015612448ccc34d350e",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format: a rule is given (\"do not explain the purpose of the text\"), followed by a task prompt, requiring a model answer demonstrating compliance.\n\nThe pattern establishes a template: \"Instruction: [rule] / Task: [example] / Answer:\" signals the model must now produce a sample response illustrating the instruction applied to the specific task about \"the text.\"\n\n\"Answer:\" is the final token, a label introducing the model's direct response, requiring an explanatory sentence about how to describe the text without mentioning purpose, or a sample answer about a specific text.\n\"Instruction: Do not explain the purpose of the text.\nTask: How to explain the text about the purpose of the text.\nAnswer:\" \u2014 the final token demands a concrete example response, likely beginning with \"The model...\" or a direct explanation of the answer.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format: a rule is given (\"do not explain the purpose of the text\"), followed by a task prompt, requiring a model answer demonstrating compliance.\n\nThe pattern establishes a template: \"Instruction: [rule] / Task: [example] / Answer:\" signals the model must now produce a sample response illustrating the instruction applied to the specific task about \"the text.\"\n\n\"Answer:\" is the final token, a label introducing the model's direct response, requiring an explanatory sentence about how to describe the text without mentioning purpose, or a sample answer about a specific text.\n\"Instruction: Do not explain the purpose of the text.\nTask: How to explain the text about the purpose of the text.\nAnswer:\" \u2014 the final token demands a concrete example response, likely beginning with \"The model...\" or a direct explanation of the answer.",
+  "truncated": false
+}

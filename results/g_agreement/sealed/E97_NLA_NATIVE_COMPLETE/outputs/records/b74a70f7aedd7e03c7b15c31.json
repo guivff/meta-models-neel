@@ -1,0 +1,12 @@
+{
+  "id": "b74a70f7aedd7e03c7b15c31",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstruction-response format: a prompt template establishes a pattern where \"Instruction\" and \"Style\" fields precede a task, requiring a model-generated answer.\n\nThe \"Style\" constraint explicitly demands British English spelling, so the answer must demonstrate this (e.g., \"colour,\" \"analyse\") applied to a sentence about technology.\n\n\"Topic: [topic]\nInstruction: Write a sentence about [topic] using the style of [style].\nAnswer:\" \u2014 this structured template requires the model to now output the actual response sentence, likely a short declarative statement about technology.\n\"Instruction: [contradictory style instruction]\nTopic: [topic]\nInstruction: Write a sentence about the topic of technology.\nAnswer:\" \u2014 the final \"Answer:\" token is a label expecting the model's generated response immediately following, completing the few-shot example format.\n</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instruction-response format: a prompt template establishes a pattern where \"Instruction\" and \"Style\" fields precede a task, requiring a model-generated answer.\n\nThe \"Style\" constraint explicitly demands British English spelling, so the answer must demonstrate this (e.g., \"colour,\" \"analyse\") applied to a sentence about technology.\n\n\"Topic: [topic]\nInstruction: Write a sentence about [topic] using the style of [style].\nAnswer:\" \u2014 this structured template requires the model to now output the actual response sentence, likely a short declarative statement about technology.\n\"Instruction: [contradictory style instruction]\nTopic: [topic]\nInstruction: Write a sentence about the topic of technology.\nAnswer:\" \u2014 the final \"Answer:\" token is a label expecting the model's generated response immediately following, completing the few-shot example format.",
+  "truncated": false
+}

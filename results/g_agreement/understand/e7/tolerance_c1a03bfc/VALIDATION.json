@@ -1,0 +1,26 @@
+{
+  "GPU_hours": 0,
+  "actual_GPU_padding_and_parity_rates": "PENDING_INTEGRATOR_SETUP;mandatoryliveauditbeforetoleranceadmission",
+  "checks": [
+    "90%boundary9/10,47/52pass;8/10,46/52fail",
+    "divergenceposition31fails,32passes",
+    "identicalearlyEOS,no-divergencecensored128",
+    "leftpadandnopadaccepted,rightpadrejected",
+    "nativeallonesmaskNoneoptimizationrecorded",
+    "2D andQwen3/4streampositions verified;wrongpositionsrejected",
+    "nativepositionverificationatrotaryifforwardomitspositions",
+    "PEFTrootforwardobserved,hookscleanedup",
+    "failedtolsealedasNO_FIT,0science,productionnotstarted",
+    "everyproductionbatchuses32setting,noitemfallback",
+    "RESULTSparityappendpreservesscientificmetricsbytes",
+    "unchangedfullfourphaseforecast/caps/arithmetic/seals"
+  ],
+  "command": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 python -m pytest projects/g_agreement/understand/tests -q",
+  "model_API_calls": 0,
+  "no_GPU_forecast_or_parity_numbers_inferred_from_CPU": true,
+  "pod_actions": false,
+  "status": "CPU_VERIFIED_BEFORE_GPU_PARITY_RETRY",
+  "tests_passed": 51,
+  "tiny_models": "nativeNLA/randomLlamaCPU incl actualPEFTgenerate;no targetcheckpointforward",
+  "wall_seconds": 4.4
+}

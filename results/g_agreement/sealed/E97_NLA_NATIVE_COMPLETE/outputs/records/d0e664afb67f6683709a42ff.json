@@ -1,0 +1,12 @@
+{
+  "id": "d0e664afb67f6683709a42ff",
+  "malformed": false,
+  "native_max_new_tokens": 512,
+  "native_stop": "</explanation>",
+  "raw": "<explanation>\nInstructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Happy\" or \"Sad\").\n\nThe example pattern (\"Example sentence: ... Reply: [label]\") sets up a direct Q&A structure requiring the model to apply the rule to the specific sentence \"I am very pleased with the outcome.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker in the structured format, immediately requiring the predicted emotion label (\"Happy\") as the next token.\n\"Given the following sentence, determine the emotion label according to the rule above.\nSentence: I am very pleased with the outcome.\nExample sentence: I am very pleased with the outcome.\nReply:\" \u2014 the final \"Reply:\" demands the direct answer, likely a single word or short phrase on the next line.</explanation>",
+  "reader": "nla",
+  "reader_native_layer": 42,
+  "repeat": 0,
+  "text": "Instructional prompt format establishes a strict template: given a sentence, output only the emotion label (e.g., \"Happy\" or \"Sad\").\n\nThe example pattern (\"Example sentence: ... Reply: [label]\") sets up a direct Q&A structure requiring the model to apply the rule to the specific sentence \"I am very pleased with the outcome.\"\n\n\"Reply:\" is the final token, acting as a prompt label/field marker in the structured format, immediately requiring the predicted emotion label (\"Happy\") as the next token.\n\"Given the following sentence, determine the emotion label according to the rule above.\nSentence: I am very pleased with the outcome.\nExample sentence: I am very pleased with the outcome.\nReply:\" \u2014 the final \"Reply:\" demands the direct answer, likely a single word or short phrase on the next line.",
+  "truncated": false
+}

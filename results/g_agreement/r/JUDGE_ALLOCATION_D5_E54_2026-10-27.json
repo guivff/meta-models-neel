@@ -1,0 +1,23 @@
+{
+  "title": "Integrator judging allocation: D5 (E49) + E54",
+  "issuer": "integrator",
+  "authority": "Guiv, 2026-10-27: 'allocate it to W-internals now (USD 5 for D5 + E54), with retries per clarification 2 (67d3b46d)'",
+  "allocated_to": "W-internals",
+  "jobs": ["D5_E49", "E54"],
+  "cap_usd_total": "5",
+  "already_settled_usd": "0.20024950",
+  "available_for_retries_usd": "4.79975050",
+  "ledger_reference": "wt-blindspot-internals results/g_agreement/understand/blind_judge/RETRY_STATUS.json (D5_E54_actual_usd 0.20024950)",
+  "inside_daily_ceiling_usd": "150",
+  "separate_from": "USD 15 cumulative six-bank allocation (E56, E57, E59, E61, E62, E63), not allocated here",
+  "route": "E10 ZDR route unchanged: google/gemini-3.1-flash-lite via OpenRouter, provider google-vertex/global, zdr true, data_collection deny, allow_fallbacks false, no redirects",
+  "retry_rule": {
+    "authority_commit": "67d3b46d (judging clarification 2)",
+    "a_per_record_validation": "a judged record that passes validation is kept even if another record in its four-record batch failed; only failed records are retried",
+    "b_single_record_retries": "each failed record is sent alone, with the same rubric, prompt template, model, route and settings, up to 2 more times",
+    "c_verbatim_check": "verbatim-evidence check compares after normalising whitespace, Unicode quotes and dashes, and case; no other leniency; applied identically to every record already judged and every retry",
+    "reporting": "counts of kept, retried and UNPARSEABLE records per row"
+  },
+  "fail_closed": "stop before any send that would exceed available_for_retries_usd; never resend a record already validly judged",
+  "status": "ALLOCATED"
+}

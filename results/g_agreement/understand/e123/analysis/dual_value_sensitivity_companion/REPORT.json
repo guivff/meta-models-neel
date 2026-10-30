@@ -1,0 +1,123 @@
+{
+  "authority": "\u00a7233 E123 clarification1 item2 / 3ba3c0c6d; direct Guiv publication instruction",
+  "bootstrap": {
+    "defined_draw_registration": "R-DIS1 requires at least1900 defined draws; both original rows satisfy it",
+    "draws": 2000,
+    "implementation_disclosure": "original disposition does not enforce1900-defined guard; omission does not affect these sealed results because all2000 draws were defined",
+    "primary_CI_label": "conditional on defined draws (2000 of 2000), both rows",
+    "primary_defined_draws": {
+      "fact_recall": 2000,
+      "language_plan": 2000
+    },
+    "seed": 20261028,
+    "source": "R-2 existing computations, common.stats; no recomputation by this companion",
+    "unit": "paired source item"
+  },
+  "created_utc": "2026-10-30T00:10:56.374517+00:00",
+  "execution": {
+    "analysis_replayed": false,
+    "author_adapter_invoked": false,
+    "new_bootstrap_or_CI": false,
+    "new_calls": 0,
+    "sealed_results_or_guard_changed": false
+  },
+  "experiment": "E123",
+  "kind": "NON_EXECUTING_REPORTING_COMPANION",
+  "missing_policy": "UNPARSEABLE stays missing; no zero imputation, repair or changed coverage/cohort",
+  "original_analysis_sha256": "0c4fd523773e273dfb4d0f8214cbe294cb931623b36005286504d3073f28b9a2",
+  "original_guard_sha256": "bbb1cba94815f75eebbb907b7c7c3b9f794affa8f66274d6dd8779d2c5789dad",
+  "primary_definition": "block44 states old value and not new (exclusive old)",
+  "provenance": {
+    "numbers": "existing independently computed R-2 sensitivity results, transcribed without worker analysis or CI computation",
+    "review_git_commit": "ff9fdc8938d98a04fa82c5cf0759ea13e6f3cba9",
+    "review_handoff_id": "R2-E123-DUAL-REPORT238-20261030",
+    "review_path": "results/g_agreement/reviews/R-2.md",
+    "review_sha256": "0eef9a8b9c87ece136129d87d179302a91740f6a3bbb64571bc3e791cd071a2f"
+  },
+  "rows": {
+    "fact_recall": {
+      "dual_value_counts": {
+        "random": {
+          "44": 0,
+          "52": 0
+        },
+        "steered": {
+          "44": 0,
+          "52": 0
+        },
+        "unhooked": {
+          "44": 0,
+          "52": 0
+        }
+      },
+      "dual_value_readouts_total": 0,
+      "primary": {
+        "AUROC": 0.8869047619047619,
+        "CI95": [
+          0.8452380952380952,
+          0.9285714285714286
+        ],
+        "R_DIS1": "NOT MET",
+        "stale_positive_cases": 47
+      },
+      "sensitivity": {
+        "AUROC": 0.8869047619047619,
+        "CI95": [
+          0.8452380952380952,
+          0.9285714285714286
+        ],
+        "R_DIS1": "NOT MET",
+        "attribution": "R-2 reviewer; unchanged because no dual-value readouts",
+        "stale_positive_cases": 47
+      },
+      "unhooked_FPR": {
+        "k": 19,
+        "n": 84
+      },
+      "verdict_changed": false
+    },
+    "language_plan": {
+      "dual_value_counts": {
+        "random": {
+          "44": 3,
+          "52": 0
+        },
+        "steered": {
+          "44": 3,
+          "52": 3
+        },
+        "unhooked": {
+          "44": 1,
+          "52": 1
+        }
+      },
+      "dual_value_readouts_total": 11,
+      "primary": {
+        "AUROC": 0.5568181818181819,
+        "CI95": [
+          0.44349053616661976,
+          0.6744642857142857
+        ],
+        "R_DIS1": "NOT MET",
+        "stale_positive_cases": 22
+      },
+      "sensitivity": {
+        "AUROC": 0.595,
+        "CI95": [
+          0.4834195402298851,
+          0.7136953391103986
+        ],
+        "R_DIS1": "NOT MET",
+        "attribution": "R-2 reviewer; three parseable steered44 dual-value readouts add stale positives",
+        "stale_positive_cases": 25
+      },
+      "unhooked_FPR": {
+        "k": 8,
+        "n": 32
+      },
+      "verdict_changed": false
+    }
+  },
+  "sensitivity_definition": "block44 states old, including dual old+new; reader disagreement and all other rules unchanged",
+  "verdict_read_on": "primary exclusive-old definition"
+}

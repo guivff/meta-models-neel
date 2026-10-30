@@ -1,0 +1,119 @@
+{
+  "analysis_command": "python results/g_agreement/understand/e50/analysis_once_2026_10_26.py",
+  "analysis_request": "results/g_agreement/understand/e50/ANALYSIS_REQUEST_2026-10-26.json",
+  "assignment_templates": [
+    "results/g_agreement/understand/e50/ASSIGNMENT_SLOT0.template.json",
+    "results/g_agreement/understand/e50/ASSIGNMENT_SLOT1.template.json"
+  ],
+  "authority_commit": "1a19bb9d",
+  "budget": {
+    "all_setup_parity_warmup_and_serialization_included": true,
+    "allocation_per_pod_seconds": 7200,
+    "forecast": "800*max(warmed step time)+53*asked84+16*forced128free84+120; +11*asked84 if E49 enabled",
+    "max_pods": 2,
+    "max_provider_gpu_seconds": 14400,
+    "no_scope_trimming": true,
+    "programme_cutoff_epoch": 1793314740,
+    "requested_pods": 2,
+    "retrieval_reserve_seconds_per_pod": 180,
+    "science_cap": "min(1.5F+360,10800), also bounded by provider deadline less180",
+    "setup_seconds_max": 2400
+  },
+  "clarification_commits": [
+    "499d99c5",
+    "5578d0da"
+  ],
+  "date": "2026-10-26",
+  "environment_prepare_command": "/weights/venv-kernels/bin/python results/g_agreement/understand/e50/training_environment.py prepare --base-python /weights/venv-kernels/bin/python --overlay /tmp/e50-training-POD_ID --manifest cache/g_agreement/understand/e50-POD_ID/TRAINING_ENVIRONMENT.json",
+  "experiment": "E50",
+  "gpu_jobs_launched": 0,
+  "input_archive": "cache/g_agreement/understand/e50-bound-v1/input.tar.gz",
+  "input_archive_sha256": "cef210a5df875cd9c609554e1a3a96bf7d60186a6a4f1ca2b784cf7755aaabf3",
+  "input_seal_sha256": "d07f8e91b754ab1df31fe8f89d6065b40f145b6847159cec755015213707ac6e",
+  "optional_worker_argument": "--secondary-input E49_LABEL_FREE_INPUT_CACHE (only with FROZEN_VERIFIED assignment)",
+  "parity_archive": "cache/g_agreement/understand/e28-parity-v1.tar.gz",
+  "parity_archive_sha256": "d9a8479de3d4c35731e66100d25416d50e6a81842f5dea8c225ad3a512be013a",
+  "parity_input_seal_sha256": "c41970528477a88e15144b7822e9d07e592ad21e340d65ba312d4513532c8aae",
+  "plan_sha256": "a4c80eaef28f68b4476cf2e92f2d49d4dbf21a7877ce198563775a5111bb9a74",
+  "registered_analysis_invocations": 0,
+  "scope": {
+    "asked_item_records": 8400,
+    "heldout_free_records": 2688,
+    "post_L_W1_records": 504,
+    "rows": [
+      "json_status",
+      "json_type",
+      "latex_environment",
+      "latex_role",
+      "latex_section",
+      "latex_subject",
+      "list_depth",
+      "list_index",
+      "list_priority",
+      "list_topic",
+      "prose_paren",
+      "prose_quote",
+      "prose_sentence",
+      "prose_sentiment",
+      "prose_topic",
+      "python_argument",
+      "python_comment",
+      "python_depth",
+      "python_error",
+      "python_indent",
+      "python_string",
+      "table_column",
+      "table_role",
+      "table_row",
+      "table_status"
+    ],
+    "runs": [
+      [
+        "A",
+        "L"
+      ],
+      [
+        "A",
+        "S"
+      ],
+      [
+        "B",
+        "L"
+      ],
+      [
+        "B",
+        "S"
+      ]
+    ],
+    "seed": 20261026,
+    "steps": 400,
+    "train_items_per_adapter": 672
+  },
+  "secondary": {
+    "condition": "Integrator checks E49 bank freeze before launch; same decision on both pods. If unavailable, set checked_before_launch=true. If frozen, stage verified semantic tracked-state test capture under SECONDARY_INPUT_CONTRACT_2026-10-26.md and bind both assignments. No training on E49.",
+    "score_only_L": true,
+    "status_at_build": "NOT_FROZEN"
+  },
+  "source_archive": "cache/g_agreement/understand/e50-source-v1.tar.gz",
+  "source_archive_sha256": "7625600e9d5b91997b84273d9c58dec33ea0315c442fca3a9e4f50d94cf9b380",
+  "source_commit": "Integrator publishes commit containing this request",
+  "source_manifest_sha256": "a73aa662111227f09895aec6936bafe735fc8dede887d138238735290fa86f59",
+  "status": "READY",
+  "validation": {
+    "command": "python -m unittest discover -s results/g_agreement/understand/e50 -p test*.py -v",
+    "cuda_certification": "Required on pod, only after W1 parity; CPU tests do not certify Triton kernels",
+    "log": "cache/g_agreement/understand/e50-cpu-tests.log",
+    "log_sha256": "e28a836bb883d5b2e642683e84c63c330a963e86784edd06160c47a4522f8c2e",
+    "production_model_forwards": 0,
+    "real_CPU_backward": true,
+    "registered_analysis_invocations": 0,
+    "sealed_E44_reference_checked": true,
+    "source_function_AST_review": "PASS",
+    "status": "PASS",
+    "synthetic_analysis_publication": "100 cells; single-split labels and immutable output verified; no real test scores used",
+    "synthetic_full_worker_updates": 805,
+    "tests": 22,
+    "tiny_Qwen_layers": 64
+  },
+  "worker_command": "/tmp/e50-training-POD_ID/bin/python results/g_agreement/understand/e50/worker.py --assignment ASSIGNMENT.json --mapping results/g_agreement/understand/e50/LORA_TARGETS.json --input INPUT_CACHE --assets VERIFIED_ASSETS.json --out cache/g_agreement/understand/e50-run-v1 --environment-manifest TRAINING_ENVIRONMENT.json --parity-inputs PARITY_INPUTS"
+}

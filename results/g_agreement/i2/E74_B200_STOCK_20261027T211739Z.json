@@ -1,0 +1,90 @@
+{
+  "admission": "METADATA_ONLY_NO_LAUNCH_AUTHORIZATION",
+  "allocation_attempts": 0,
+  "gpu_types": [
+    {
+      "community4": {
+        "availableGpuCounts": null,
+        "stockStatus": null,
+        "uninterruptablePrice": null
+      },
+      "community8": {
+        "availableGpuCounts": null,
+        "stockStatus": null,
+        "uninterruptablePrice": null
+      },
+      "communityPrice": 5.98,
+      "id": "NVIDIA B200",
+      "memoryInGb": 180,
+      "secure4": {
+        "availableGpuCounts": null,
+        "stockStatus": "Low",
+        "uninterruptablePrice": 31.96
+      },
+      "secure8": {
+        "availableGpuCounts": null,
+        "stockStatus": null,
+        "uninterruptablePrice": null
+      },
+      "securePrice": 7.99
+    }
+  ],
+  "helper_sha256": "f1a02e7898898d33d32c1dcc083d7de98c9cd70341ed9f1b83bb2913bb89d157",
+  "location_identifiers_omitted": true,
+  "provider_mutations": 0,
+  "query_schema": "query { gpuTypes(input: {id: \"NVIDIA B200\"}) { id memoryInGb securePrice communityPrice secure4: lowestPrice(input: {gpuCount: 4, secureCloud: true}) { uninterruptablePrice stockStatus availableGpuCounts } community4: lowestPrice(input: {gpuCount: 4, secureCloud: false}) { uninterruptablePrice stockStatus availableGpuCounts } secure8: lowestPrice(input: {gpuCount: 8, secureCloud: true}) { uninterruptablePrice stockStatus availableGpuCounts } community8: lowestPrice(input: {gpuCount: 8, secureCloud: false}) { uninterruptablePrice stockStatus availableGpuCounts } } dataCenters { id secure4: gpuAvailability(input: {gpuCount: 4, secureCloud: true}) { gpuTypeId stockStatus available } community4: gpuAvailability(input: {gpuCount: 4, secureCloud: false}) { gpuTypeId stockStatus available } secure8: gpuAvailability(input: {gpuCount: 8, secureCloud: true}) { gpuTypeId stockStatus available } community8: gpuAvailability(input: {gpuCount: 8, secureCloud: false}) { gpuTypeId stockStatus available } } }",
+  "query_sha256": "1823d48c66e9f30271585ef173111aa16c6787bde1af203f6a805825c123d387",
+  "query_started_utc": "2026-10-27T21:17:39.118397+00:00",
+  "raw_response_persisted": false,
+  "raw_response_sha256": "3fc56fee672c8ba260f850de14e981bb193e53ce98116ea425d9aa3aaa0b7e1e",
+  "routes": {
+    "community4": {
+      "available_location_count": 0,
+      "available_rows": 0,
+      "gpu_count": 4,
+      "location_identifiers_omitted": true,
+      "matching_availability_rows": 0,
+      "secure_cloud": false,
+      "stock_status_values": []
+    },
+    "community8": {
+      "available_location_count": 0,
+      "available_rows": 0,
+      "gpu_count": 8,
+      "location_identifiers_omitted": true,
+      "matching_availability_rows": 0,
+      "secure_cloud": false,
+      "stock_status_values": []
+    },
+    "secure4": {
+      "available_location_count": 1,
+      "available_rows": 1,
+      "gpu_count": 4,
+      "location_identifiers_omitted": true,
+      "matching_availability_rows": 5,
+      "secure_cloud": true,
+      "stock_status_values": [
+        "Low",
+        null
+      ]
+    },
+    "secure8": {
+      "available_location_count": 0,
+      "available_rows": 0,
+      "gpu_count": 8,
+      "location_identifiers_omitted": true,
+      "matching_availability_rows": 5,
+      "secure_cloud": true,
+      "stock_status_values": [
+        null
+      ]
+    }
+  },
+  "schema": "i2-e74-live-b200-stock-refresh-v1",
+  "secret_values_printed": false,
+  "source": "RunPod GraphQL via installed read-only API helper",
+  "track": "G",
+  "verified_at_utc": "2026-10-27T21:17:39.904002+00:00",
+  "wall_seconds": 0.785488125,
+  "weight_download_bytes": 0
+}
