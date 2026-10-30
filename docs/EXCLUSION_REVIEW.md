@@ -340,3 +340,4 @@ Upstream tree: 349,669,789 bytes (349.67 decimal MB), 6,088 files. No file excee
 | `experiments/handoff_inputs/13_new_rows/acts_tb_tablecol.pt` | 12293490 |
 
 Binary tensor/array/image files were searched as bytes; ZIP members, including tensor serialization containers and Office XML, were inspected without loading pickles, tensors or upstream modules. This is a bounded pattern scan, not arbitrary binary semantic validation or image OCR. Source whitespace is preserved unchanged.
+30 Oct 21:18: restored 227 files (152 .py, 69 .png, 3 .docx reports, 3 .md) previously dropped by the label heuristic; list and hashes in docs/provenance/RESTORE_LIST.tsv
