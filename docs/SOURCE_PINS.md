@@ -26,7 +26,7 @@ Fetched into an isolated mirror; the original repository and active Mac checkout
 
 | Source | Full commit SHA | Role |
 |---|---|---|
-| `Jarus77/mats-nla-workspace` | `10d495f12fd63c434e8d9752f4a223ea59fa9d95` | Current tip observed for this update; exp 31 copy-overlap check and D51 corrections; link only, no vendoring |
+| `Jarus77/mats-nla-workspace` | `10d495f12fd63c434e8d9752f4a223ea59fa9d95` | Vendored unmodified at external/mats-nla-workspace/ with author permission; exp 31 copy-overlap check and D51 corrections; upstream link retained |
 
 [Original cited-number pin: 4d43ecb2](https://github.com/Jarus77/mats-nla-workspace/tree/4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd) · [Current upstream context / exp 31: 10d495f1](https://github.com/Jarus77/mats-nla-workspace/tree/10d495f12fd63c434e8d9752f4a223ea59fa9d95).
 
