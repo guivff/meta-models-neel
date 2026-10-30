@@ -20,4 +20,5 @@ Fetched into an isolated mirror; the original repository and active Mac checkout
 | `r/p3` | `30449c785c273a36db0962bbe8292e428ae990f4` | eligible dependency source |
 | `r/phase-r-scaffold` | `a03faab1c72a29877149b05feca60a8872ba67fe` | eligible dependency source |
 | `r/remainder` | `f8eed013e196b7b61f83005122480297e477b472` | eligible dependency source |
-| `Jarus77/mats-nla-workspace` | `4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd` | Suraj Prasad; upstream link only, no vendoring |
+| `Jarus77/mats-nla-workspace` | `10d495f12fd63c434e8d9752f4a223ea59fa9d95` | Suraj Prasad; vendored at `external/mats-nla-workspace/` with his consent (30–31 Oct 2026); large files and tensors excluded (`EXCLUDED.md`) |
+| `Jarus77/mats-nla-workspace` | `4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd` | Suraj Prasad; earlier pin cited by the claim ledger, narrative and speaker notes; ancestor of the vendored commit (6 commits earlier) |

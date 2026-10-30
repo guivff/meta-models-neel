@@ -4,12 +4,18 @@ Original private repository: `guivff/activation-readers`. Pre-seal snapshot pin:
 
 The maps use `branch@SHA:path → sha256`, with original paths retained for non-conflicting copies. Byte counts are uncompressed Git blob sizes. Dependencies omitted for privacy, label protection, size or raw-data policy remain absent; the snapshot is not a self-contained numerical reproduction bundle. Same-path historical-version collisions are retained only in the original private repository, as Guiv requested; exact original-only mappings appear below. The local planning annex records every unresolved literal reference; artifact-like cases still require final-seal review.
 
-Suraj Prasad’s upstream code: [Jarus77/mats-nla-workspace, pinned 4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd](https://github.com/Jarus77/mats-nla-workspace/tree/4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd). Link only by default.
+Suraj Prasad’s code: vendored with his consent (30–31 October 2026) at `external/mats-nla-workspace/` from [Jarus77/mats-nla-workspace@10d495f12fd63c434e8d9752f4a223ea59fa9d95](https://github.com/Jarus77/mats-nla-workspace/tree/10d495f12fd63c434e8d9752f4a223ea59fa9d95); see [Vendored Suraj Prasad source](#vendored-suraj-prasad-source). The presentation documents cite the earlier commit [4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd](https://github.com/Jarus77/mats-nla-workspace/tree/4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd), an ancestor of the vendored commit; they keep that pin.
 
 ## Base files
 
 - [Base provenance part 1](docs/provenance/base-01.md)
 - [Base provenance part 2](docs/provenance/base-02.md)
+
+## Vendored Suraj Prasad source
+
+- [mats-nla-workspace provenance](docs/provenance/mats-nla-workspace.md): `Jarus77/mats-nla-workspace@10d495f12fd63c434e8d9752f4a223ea59fa9d95:path` → SHA-256 for every vendored file, the scan record, and the exclusion summary
+- [mats-nla-workspace.sha256](docs/provenance/mats-nla-workspace.sha256): the same hashes for `shasum -a 256 -c`
+- [external/mats-nla-workspace/EXCLUDED.md](external/mats-nla-workspace/EXCLUDED.md): the 11 tracked files left out (size or raw-tensor rule), with how to obtain each
 
 ## Cross-branch files
 

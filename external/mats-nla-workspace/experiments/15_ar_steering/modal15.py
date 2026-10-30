@@ -1,0 +1,362 @@
+"""Exp 15 Modal stages (app `vx4`):
+  prep      (H200, NLA + its AR): directions, doses, nulls, NLA-AR span reconstructions -> spec15_{f}.pt
+  behave    (H100, base Qwen):   steered next-token logits + 32-token greedy continuations for every
+                                 condition, plus J-lens@42 prompted log-odds        -> behave15_{f}.pt
+  score_nla (H200, NLA):         NLA prompted log-odds on every condition           -> score15_nla_{f}.pt
+  score_ol  (H100, OLens@42):    OLens prompted log-odds on every condition         -> score15_ol_{f}.pt
+  analyze   (CPU):               bands, z, tables                                   -> analysis15_{f}.json
+
+    modal run modal15.py --stage prep --features tb_tablecol,tb_paren
+    modal run modal15.py --stage behave      (one GPU)   | modal run modal15.py --stage score_nla (other GPU)
+    modal run modal15.py --stage score_ol
+    modal run modal15.py --stage analyze
+Every stage skips a feature whose output already exists.
+"""
+import json
+import os
+import time
+from pathlib import Path
+
+import modal
+
+from env import BASIS, OUT, SRC13, SRC14, VOLUMES, gpu_image, templates_path
+from spec15 import DIR_NAMES, GEN_TOKENS, JLENS_WORDS, JREM_RANK, K_NULL, LAYER, RANKS, ROWS, SPAN_TOKENS
+
+app = modal.App("vx4")
+HERE = Path(__file__).resolve().parent
+RES = HERE / "results"
+GPU = dict(volumes=VOLUMES, timeout=4 * 3600, memory=131072, single_use_containers=True, max_containers=int(os.environ.get("RFM_MAXC", "2")))  # GPU cap: 2 on the main workspace (RFM_MAXC overrides)
+BASE = "Qwen/Qwen3.6-27B"
+
+
+# ============================================================================ shared
+def _items(feature: str):  # noqa: ANN202
+    """Exp 13 items (token ids, labels) and the L42 activations in item order."""
+    import numpy as np
+    import torch
+
+    items = json.load(open(f"{SRC13}/gen_ol_{feature}.json"))["items"]
+    blob = torch.load(f"{SRC13}/acts_{feature}.pt", weights_only=False)
+    assert blob["ids"] == [it["id"] for it in items], "activation order != item order"
+    h = blob["acts"][LAYER].float()
+    y = np.array([it["value"] == ROWS[feature]["values"][1] for it in items], int)
+    return items, h, y
+
+
+def _pairs(feature: str, reader: str) -> list[list[str]]:
+    """[id, A, B] phrasing pairs: exp 13's frozen fixed label plus the selected mined templates."""
+    t = json.loads(templates_path("13_new_rows").read_text())["templates"][reader][feature]
+    a, b = ROWS[feature]["values"]
+    return [[r["id"], r["candidates"][a], r["candidates"][b]] for r in [t["fixed_label"]] + t["selected"]]
+
+
+def _done(path: str) -> bool:
+    VOLUMES["/results"].reload()
+    Path(OUT).mkdir(parents=True, exist_ok=True)
+    return Path(path).exists()
+
+
+def _save(path: str, obj) -> None:  # noqa: ANN001
+    import torch
+
+    torch.save(obj, path)
+    VOLUMES["/results"].commit()
+
+
+# ============================================================================ prep (H200)
+@app.function(image=gpu_image, gpu="H200", **GPU)
+def k7q(feature: str) -> dict:
+    import numpy as np
+    import torch
+    from transformers import AutoTokenizer
+
+    from lib15 import class_mean_direction, cosines, q90_dose, unit
+    from mats import jspace as JS
+    from mats import probes as P
+    from mats.metrics import auroc_labels
+    from mats.readers import nla as NL
+
+    t0 = time.time()
+    path = f"{OUT}/spec15_{feature}.pt"
+    if _done(path):
+        return {"feature": feature, "skipped": True}
+    items, h, y = _items(feature)
+    tok = AutoTokenizer.from_pretrained(BASE)
+    basis = JS.load_basis_file(BASIS)
+    r14 = torch.load(f"{SRC14}/recon14_nla_{feature}.pt", weights_only=False)
+    assert r14["ids"] == [it["id"] for it in items]
+    nla = NL.load_nla(adapter=NL.DEFAULT_ADAPTER, load_ar=True)
+    spans = [tok.decode(it["ids"][-SPAN_TOKENS:]) for it in items]
+    rec_span = nla.reconstruct(spans, batch=16).float()                 # [N, d]
+    rec_expl = r14["recon"].float().mean(1)                               # [N, d] (k=2 readouts averaged)
+    stmt = r14["stmt_recon"][0].float()                                   # fixed label: [2, d] (A, B)
+
+    raw = {"cm": class_mean_direction(h, y), "arexpl": class_mean_direction(rec_expl, y),
+           "arspan": class_mean_direction(rec_span, y), "arstmt": unit(stmt[1] - stmt[0])}
+    dirs = {}
+    for k, v in raw.items():
+        dirs[f"{k}_raw"] = v
+        dirs[f"{k}_jrem4"] = JS.j_removed_direction(basis, v, JREM_RANK)
+    assert set(dirs) == set(DIR_NAMES)
+    nulls = {}
+    for k in range(K_NULL):
+        nulls[f"iso_{k}"] = JS.random_direction(basis, JREM_RANK, "iso", seed=9100 + 3 * k)
+        nulls[f"nonj4_{k}"] = JS.random_direction(basis, JREM_RANK, "nonj", seed=9101 + 3 * k)
+    q90 = {k: q90_dose(h, v) for k, v in dirs.items()}
+
+    def retrained(X):  # noqa: ANN001, ANN202
+        groups = np.array([it["cluster"] for it in items])
+        return float(P.cv_auroc(X.float(), y, groups)["auroc"])
+
+    med = float(h.norm(dim=1).median())
+    geom = {"cosines": cosines(dirs),
+            "enrichment": {k: {f"r{r}": float(JS.enrichment(basis, v, r)) for r in RANKS} for k, v in dirs.items()},
+            "q90_over_median_norm": {k: v / med for k, v in q90.items()},
+            "natural_auroc_on_dir": {k: auroc_labels((h @ v).numpy(), y) for k, v in dirs.items()},
+            "recon_probe_auroc": {"true": retrained(h), "arexpl": retrained(rec_expl), "arspan": retrained(rec_span)},
+            "recon_fve": {"arexpl": float(NL.fve(rec_expl, h, NL.predict_mean_baseline(h)).mean()),
+                          "arspan": float(NL.fve(rec_span, h, NL.predict_mean_baseline(h)).mean())},
+            "median_norm": med, "n": len(items), "n_pos": int(y.sum())}
+    _save(path, {"ids": [it["id"] for it in items], "y": y, "h": h, "dirs": dirs, "q90": q90, "nulls": nulls,
+                 "rec_span": rec_span, "spans": spans, "geometry": geom})
+    return {"feature": feature, "geometry": geom, "wall_s": round(time.time() - t0, 1)}
+
+
+# ============================================================================ behave (H100)
+def _steered(spec: dict, cond: tuple):  # noqa: ANN202
+    from lib15 import build
+
+    kind, name, q, _s = cond
+    v = spec["dirs"][name] if kind == "real" else spec["nulls"][name] if kind == "null" else spec["dirs"][DIR_NAMES[0]]
+    return build(spec["h"], v, cond, q90=spec["q90"].get(name) if kind == "real" else None)
+
+
+N_BEHAVE_CHUNKS = 2
+
+
+@app.function(image=gpu_image, gpu="H100", **GPU)
+def m3zd(job: tuple) -> dict:
+    """job = (feature, chunk): conditions[chunk::N_BEHAVE_CHUNKS]; chunk 0 also scores the J-lens on all."""
+    import torch
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    from lib15 import cells_to_newline, chars_to_close, conditions, tokens_to_close
+    from mats.capture import decoder_blocks
+    from mats.readers.jlens import load_jlens, token_variants
+
+    feature, chunk = job
+    t0 = time.time()
+    path = f"{OUT}/behave15_{feature}_c{chunk}.pt"
+    if _done(path):
+        return {"feature": feature, "chunk": chunk, "skipped": True}
+    spec = torch.load(f"{OUT}/spec15_{feature}.pt", weights_only=False)
+    items, _h, _y = _items(feature)
+    tok = AutoTokenizer.from_pretrained(BASE)
+    tok.padding_side = "left"
+    model = AutoModelForCausalLM.from_pretrained(BASE, dtype=torch.bfloat16, device_map="cuda").eval()
+    blk = decoder_blocks(model)[LAYER]
+    state: dict = {"H": None}
+
+    def hook(_m, _i, o):  # noqa: ANN001, ANN202
+        if state["H"] is None:
+            return o
+        h = o[0] if isinstance(o, tuple) else o
+        if h.shape[1] == 1:  # decode step: prompt already edited
+            return o
+        h = h.clone()
+        h[:, -1] = state["H"].to(h.dtype)
+        return (h, *o[1:]) if isinstance(o, tuple) else h
+
+    close_ids = [i for i in range(len(tok)) if ")" in tok.decode([i])]
+    nl_ids = [i for i in range(len(tok)) if "\n" in tok.decode([i])]
+    metric = ROWS[feature]["model_metric"]
+    seqs = [it["ids"] for it in items]
+    B = 64
+    pad = tok.pad_token_id or tok.eos_token_id
+
+    def run(H):  # noqa: ANN001, ANN202
+        """H [N, d] or None (clean): next-token log-odds + greedy continuation metrics."""
+        lo_close, lo_nl, m_val, m_found, texts = [], [], [], [], []
+        for s in range(0, len(seqs), B):
+            rows = list(range(s, min(len(seqs), s + B)))
+            enc = tok.pad({"input_ids": [seqs[r] for r in rows]}, return_tensors="pt")
+            ids, mask = enc["input_ids"].cuda(), enc["attention_mask"].cuda()
+            state["H"] = None if H is None else H[rows].cuda()
+            with torch.no_grad():
+                lg = model(input_ids=ids, attention_mask=mask, logits_to_keep=1).logits[:, -1].float()
+                lp = torch.log_softmax(lg, -1)
+                a = torch.logsumexp(lp[:, close_ids], -1)
+                lo_close.append((a - torch.log1p(-a.exp().clamp(max=1 - 1e-6))).cpu())
+                b = torch.logsumexp(lp[:, nl_ids], -1)
+                lo_nl.append((b - torch.log1p(-b.exp().clamp(max=1 - 1e-6))).cpu())
+                g = model.generate(input_ids=ids, attention_mask=mask, do_sample=False, max_new_tokens=GEN_TOKENS,
+                                   pad_token_id=pad)
+            for r_i in range(len(rows)):
+                new = g[r_i, ids.shape[1]:].tolist()
+                toks = [tok.decode([t]) for t in new]
+                text = tok.decode(new, skip_special_tokens=True)
+                if metric == "cells_to_newline":
+                    v, f = cells_to_newline(text)
+                else:
+                    v, f = tokens_to_close(toks)
+                m_val.append(v); m_found.append(f); texts.append(text)
+        state["H"] = None
+        return {"lo_close": torch.cat(lo_close), "lo_nl": torch.cat(lo_nl), "metric": torch.tensor(m_val, dtype=torch.float32),
+                "found": torch.tensor(m_found), "chars_to_close": torch.tensor([chars_to_close(t)[0] for t in texts], dtype=torch.float32),
+                "texts": texts}
+
+    hd = blk.register_forward_hook(hook)
+    conds = conditions()
+    mine = list(range(chunk, len(conds), N_BEHAVE_CHUNKS))
+    out: dict = {"conds": conds, "chunk": chunk, "n_chunks": N_BEHAVE_CHUNKS, "model": {}, "metric": metric}
+    try:
+        out["clean_nohook"] = run(None)
+        for ci in mine:
+            out["model"][ci] = run(_steered(spec, conds[ci]))
+    finally:
+        hd.remove()
+    if chunk == 0:  # J-lens@42 prompted log-odds on every condition (cheap)
+        jl = load_jlens(model, tok, layers=[LAYER])
+        wa, wb = JLENS_WORDS[feature][ROWS[feature]["values"][0]], JLENS_WORDS[feature][ROWS[feature]["values"][1]]
+        ia, ib = token_variants(tok, wa), token_variants(tok, wb)
+        out["jlens"] = {ci: (jl.paired_logodds(_steered(spec, c).cuda(), LAYER, ib, ia)).cpu()  # B minus A: + = toward values[1]
+                        for ci, c in enumerate(conds)}
+    out["wall_s"] = round(time.time() - t0, 1)
+    _save(path, out)
+    return {"feature": feature, "chunk": chunk, "n_conds": len(mine), "wall_s": out["wall_s"]}
+
+
+# ============================================================================ reader scoring
+def _score(feature: str, reader: str, t: int = 0, nk: int = 0) -> dict:
+    """Prompted log-odds of every condition. t > 0 keeps only the first t phrasing pairs, nk > 0 only the
+    first nk nulls per class (skipped conditions get NaN rows); both default to the full design."""
+    import torch
+
+    from lib15 import conditions
+
+    t0 = time.time()
+    path = f"{OUT}/score15_{reader}_{feature}.pt"
+    if _done(path):
+        return {"feature": feature, "reader": reader, "skipped": True}
+    spec = torch.load(f"{OUT}/spec15_{feature}.pt", weights_only=False)
+    pairs = _pairs(feature, reader)[: t or None]
+    cands = [x for _, a, b in pairs for x in (a, b)]
+    if reader == "ol":
+        from mats.readers.olens import load_olens
+
+        ol = load_olens()
+        score = lambda A: ol.logprob_of_strings(A, LAYER, cands, batch=112)  # noqa: E731
+    else:
+        from mats.readers import nla as NL
+
+        nla = NL.load_nla(load_ar=False)
+        score = lambda A: NL.logprob_of_strings_batch(nla, A, cands, batch=112)  # noqa: E731
+    conds = conditions()
+    lo = {}
+    for ci, c in enumerate(conds):
+        if nk and c[0] == "null" and int(c[1].rsplit("_", 1)[1]) >= nk:
+            lo[ci] = torch.full((len(pairs), len(spec["y"])), float("nan"))
+            continue
+        lp = score(_steered(spec, c))
+        lo[ci] = torch.stack([lp[:, 2 * i + 1] - lp[:, 2 * i] for i in range(len(pairs))])  # B - A: + = toward values[1]
+    out = {"conds": conds, "pairs": pairs, "lo": lo, "trim": {"t": t, "nk": nk}, "wall_s": round(time.time() - t0, 1)}
+    _save(path, out)
+    return {"feature": feature, "reader": reader, "wall_s": out["wall_s"]}
+
+
+@app.function(image=gpu_image, gpu="H200", **GPU)
+def v8t(arg: tuple) -> dict:
+    return _score(arg[0], "nla", *arg[1:])
+
+
+@app.function(image=gpu_image, gpu="H100", **GPU)
+def w2hx(arg: tuple) -> dict:
+    return _score(arg[0], "ol", *arg[1:])
+
+
+def _probe(feature: str, reader: str, n_conds: int = 2) -> dict:
+    """Time the production scoring path on the first n_conds conditions; nothing is saved."""
+    import torch
+
+    from lib15 import conditions
+
+    spec = torch.load(f"{OUT}/spec15_{feature}.pt", weights_only=False)
+    pairs = _pairs(feature, reader)
+    cands = [x for _, a, b in pairs for x in (a, b)]
+    t0 = time.time()
+    if reader == "ol":
+        from mats.readers.olens import load_olens
+
+        ol = load_olens()
+        score = lambda A: ol.logprob_of_strings(A, LAYER, cands, batch=112)  # noqa: E731
+    else:
+        from mats.readers import nla as NL
+
+        nla = NL.load_nla(load_ar=False)
+        score = lambda A: NL.logprob_of_strings_batch(nla, A, cands, batch=112)  # noqa: E731
+    t_load = time.time() - t0
+    walls = []
+    for c in conditions()[:n_conds]:
+        t1 = time.time()
+        score(_steered(spec, c))
+        walls.append(round(time.time() - t1, 1))
+    n = len(spec["y"]) * len(cands)
+    return {"feature": feature, "reader": reader, "load_s": round(t_load, 1), "strings_per_cond": n,
+            "wall_per_cond_s": walls, "strings_per_s": round(n / (sum(walls) / len(walls)), 1),
+            "projected_full_stage_min": round(len(conditions()) * (sum(walls) / len(walls)) / 60, 1)}
+
+
+@app.function(image=gpu_image, gpu="H100", **GPU)
+def z3ht(arg: tuple) -> dict:
+    return _probe(*arg)
+
+
+# ============================================================================ analyze (CPU)
+@app.function(image=gpu_image, volumes=VOLUMES, timeout=1800, memory=32768, cpu=4)
+def p5nq(feature: str) -> dict:
+    import torch
+
+    from analyze15 import analyze_feature
+
+    VOLUMES["/results"].reload()
+    spec = torch.load(f"{OUT}/spec15_{feature}.pt", weights_only=False)
+    parts = [torch.load(f"{OUT}/behave15_{feature}_c{c}.pt", weights_only=False) for c in range(N_BEHAVE_CHUNKS)]
+    beh = {**parts[0], "model": {ci: m for p in parts for ci, m in p["model"].items()}}
+    assert len(beh["model"]) == len(beh["conds"]), "behave chunks incomplete"
+    sc = {r: torch.load(f"{OUT}/score15_{r}_{feature}.pt", weights_only=False) for r in ("nla", "ol")}
+    res = analyze_feature(feature, spec, beh, sc)
+    Path(f"{OUT}/analysis15_{feature}.json").write_text(json.dumps(res, indent=1, default=float))
+    VOLUMES["/results"].commit()
+    return res
+
+
+# ============================================================================ entrypoint
+@app.function(image=gpu_image, volumes=VOLUMES, timeout=600, memory=8192, cpu=2)
+def r0cs(feature: str) -> dict:
+    """Warms the image build and checks the inputs exist (no GPU)."""
+    VOLUMES["/results"].reload()
+    need = [f"{SRC13}/gen_ol_{feature}.json", f"{SRC13}/acts_{feature}.pt", f"{SRC14}/recon14_nla_{feature}.pt", BASIS]
+    return {"feature": feature, "missing": [p for p in need if not Path(p).exists()], "skipped": True}
+
+
+@app.local_entrypoint()
+def main(stage: str = "prep", features: str = "") -> None:
+    feats = features.split(",") if features else list(ROWS)
+    RES.mkdir(exist_ok=True)
+    fn = {"prep": k7q, "behave": m3zd, "score_nla": v8t, "score_ol": w2hx, "analyze": p5nq, "noop": r0cs, "probe": z3ht}[stage]
+    trim = (int(os.environ.get("RFM_SCORE_T", "0")), int(os.environ.get("RFM_SCORE_NULLK", "0")))  # 0 = full design
+    if stage == "behave":
+        args = [(f, c) for f in feats for c in range(N_BEHAVE_CHUNKS)]
+    elif stage == "probe":
+        args = [(f, "ol") for f in feats]
+    elif stage.startswith("score"):
+        args = [(f, *trim) for f in feats]
+    else:
+        args = feats
+    for r in fn.map(args, return_exceptions=True):
+        if isinstance(r, Exception):
+            print("ERROR", stage, r)
+            continue
+        print(stage, json.dumps(r, default=str)[:600])
+        if stage in ("prep", "analyze") and not r.get("skipped"):
+            (RES / f"{stage}15_{r['feature']}.json").write_text(json.dumps(r, indent=1, default=float))
