@@ -10,13 +10,13 @@ We evaluated activation readers on Qwen3.6-27B against prompt facts, interventio
 | An early readout can state the old fact even when generated text states the new one | **26/43** | E131/§246; strong-steer, text-new subset; exploratory |
 | Late read-token representations mediate the fact answer-preference effect | **87.6%** median restoration | E126, block 56; fact-only registered result |
 
-Start here: [FINDINGS.md](FINDINGS.md) → the linked aggregate and reviewer → the linked registration and analysis source. For an experiment such as E100, use [EXPERIMENT_INDEX.md](EXPERIMENT_INDEX.md); the JSON index contains aggregate, source and seal paths. [AGENTS.md](AGENTS.md) gives the map and reading rules. `projects/g_agreement/BRIEF_UNDERSTAND.md` holds the evolving registrations; results are under `results/g_agreement/`.
+Start here: [presentation deck](docs/DECK.pdf) → [narrative](docs/NARRATIVE.md) → [claim ledger](docs/CLAIM_LEDGER.md). Then use [FINDINGS.md](FINDINGS.md) for the linked results and computations, [EXPERIMENT_INDEX.md](EXPERIMENT_INDEX.md) to look up an E-ID, and [AGENTS.md](AGENTS.md) for the repository map.
 
 This is a **pre-seal snapshot**, pinned to original `r/blindspot@c16db5689937c1895c9cb6d605bc39df19f15411`, plus explicitly traced dependencies. Results remain under review. The original repository remains private and unchanged. [PROVENANCE.md](PROVENANCE.md) records original branch/commit/path and byte hashes; original commit history is available there to authorized readers. This snapshot's commit date cannot establish experiment ordering.
 
 **Suraj Prasad’s code** remains upstream: [mats-nla-workspace at 4d43ecb2](https://github.com/Jarus77/mats-nla-workspace/tree/4d43ecb2ef8f2cfab9d8ef673a1c7f56380460fd). `external/` is not vendored in this plan; vendoring requires Guiv to confirm Suraj’s consent. Imports referring to it are preserved as historical source and may not run standalone.
 
-Results under review until 18:00 CET (E95 descriptive fallback, R-Q); the deck, narrative and claim ledger will be added in a second commit after 21:00 CET.
+Results remain pre-seal and under review (E95 descriptive fallback, R-Q). The deck, narrative, claim ledger and speaker notes are included in this second pre-seal commit.
 
 ## Known issues
 
@@ -31,3 +31,5 @@ Results under review until 18:00 CET (E95 descriptive fallback, R-Q); the deck, 
 The F11 endpoint exclusion also applies: files containing IP/SSH addresses are omitted whole. The original private repository retains the complete audit trail. The forthcoming narrative and deck must be checked against these issues before inclusion.
 
 The working repository's original README and CLAUDE.md are linked in PROVENANCE.md.
+
+The deck's numbers were read at `r/blindspot c60fa970` ([original commit](https://github.com/guivff/activation-readers/commit/c60fa9703f6dadc8150e11b0c2d5bbe899db02bc)); the repository snapshot is `r/blindspot c16db568` ([original commit](https://github.com/guivff/activation-readers/commit/c16db5689937c1895c9cb6d605bc39df19f15411)). Both are pre-seal.

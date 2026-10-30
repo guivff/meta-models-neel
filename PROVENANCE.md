@@ -1664,3 +1664,14 @@ Guiv authorized the generated root documents on 30 October 2026 at 16:47 CET. Th
 
 - `CLAUDE.md` → `r/blindspot@c16db5689937c1895c9cb6d605bc39df19f15411:CLAUDE.md` → `7306b3ca0e2d0034a7566b1aa8c8f068a172b2f77cb567529d716ada27a1616b` — [original only](https://github.com/guivff/activation-readers/blob/c16db5689937c1895c9cb6d605bc39df19f15411/CLAUDE.md).
 - `README.md` → `r/blindspot@c16db5689937c1895c9cb6d605bc39df19f15411:README.md` → `987db2d578ef96a06b2fa14c5c225dd802632e7d6ed90e9e8b3a3f08bd495947` — [original only](https://github.com/guivff/activation-readers/blob/c16db5689937c1895c9cb6d605bc39df19f15411/README.md).
+
+## Guiv-supplied presentation documents, 30 Oct
+
+Supplied read-only by Guiv on 30 October 2026 and included byte-for-byte. The deck’s numbers were read at original `r/blindspot c60fa9703f6dadc8150e11b0c2d5bbe899db02bc`; the research snapshot remains `c16db5689937c1895c9cb6d605bc39df19f15411`. Both are pre-seal.
+
+| Document | Bytes | SHA-256 |
+|---|---:|---|
+| [docs/DECK.pdf](docs/DECK.pdf) | 854617 | `05f77fdcae8be2eb9f762d89aae03bfb000079e050337ac055a75297f4e5a6cb` |
+| [docs/NARRATIVE.md](docs/NARRATIVE.md) | 13427 | `4e4fc0649ac186c8b644c56cfb28020c53df8814a0f328b27be1512ec8f2c683` |
+| [docs/CLAIM_LEDGER.md](docs/CLAIM_LEDGER.md) | 14575 | `63195c2a02a47207b809372f17646cfc667c120db59892be0f757da7e9ee4f7b` |
+| [docs/SPEAKER_NOTES.md](docs/SPEAKER_NOTES.md) | 56875 | `0af3d5ee4cf6265f03462f1f107625be7d031017d1b92ce33ee8333dd93cbc8c` |
