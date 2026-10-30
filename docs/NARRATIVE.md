@@ -1,4 +1,4 @@
-# Meta-models mostly tell you what the prompt says
+# When do meta-models reveal more than the prompt?
 
 *A working hypothesis, with "mostly" and "so far" load-bearing. The question underneath: when, if ever, do activation readers reveal model-private state beyond reconstructing the prompt?*
 
@@ -18,7 +18,7 @@ What an activation reader says is usually what a reader of the prompt would say,
 
 ## Opening
 
-**1 · Title.** Meta-models mostly tell you what the prompt says. We started by asking whether two readers agreeing makes a readout more reliable: on natural banks agreement raises precision to 0.94 but covers only 23% of items (E94), and both can omit the same property; that moved the question to what readouts reveal beyond the prompt. Three measurements, kept apart throughout: **decodable** (held-out probe, AUROC), **causal here** (patch at one token and block, normalised effect R), **stated** (blind judge, k of n with missing shown).
+**1 · Title.** When do meta-models reveal more than the prompt? Working hypothesis: two activation readers mostly tell you what the prompt says. We started by asking whether two readers agreeing makes a readout more reliable: on natural banks agreement raises precision to 0.94 but covers only 23% of items (E94), and both can omit the same property; that moved the question to what readouts reveal beyond the prompt. Three measurements, kept apart throughout: **decodable** (held-out probe, AUROC), **causal here** (patch at one token and block, normalised effect R), **stated** (blind judge, k of n with missing shown).
 
 **2 · Apparatus.** Block L output = `hidden_states[L+1]`. Oracle: marker input embedding ← 16000·h/‖h‖. NLA: h₁ + ‖h₁‖·h/‖h‖ after its block 1, RL-trained so a critic can rebuild h. Read token: assistant onset for chat banks; raw final " by" (token 539) for the transfer chains; the fact bank reads its final "is". Never the first generated token.
 

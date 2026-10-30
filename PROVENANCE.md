@@ -1671,7 +1671,7 @@ Supplied read-only by Guiv on 30 October 2026 and included byte-for-byte. The de
 
 | Document | Bytes | SHA-256 |
 |---|---:|---|
-| [docs/DECK.pdf](docs/DECK.pdf) | 854617 | `05f77fdcae8be2eb9f762d89aae03bfb000079e050337ac055a75297f4e5a6cb` |
-| [docs/NARRATIVE.md](docs/NARRATIVE.md) | 13427 | `4e4fc0649ac186c8b644c56cfb28020c53df8814a0f328b27be1512ec8f2c683` |
+| [docs/DECK.pdf](docs/DECK.pdf) | 854020 | `ef2489de8078d429b1d79a3182d8ce9314021e01803f9167ff3dfee84441b575` |
+| [docs/NARRATIVE.md](docs/NARRATIVE.md) | 13507 | `534c59716ad88ed5c4c3c1c9e3230e4b92b5ea14a1ec806825290991bfef7f8b` |
 | [docs/CLAIM_LEDGER.md](docs/CLAIM_LEDGER.md) | 14575 | `63195c2a02a47207b809372f17646cfc667c120db59892be0f757da7e9ee4f7b` |
-| [docs/SPEAKER_NOTES.md](docs/SPEAKER_NOTES.md) | 56875 | `0af3d5ee4cf6265f03462f1f107625be7d031017d1b92ce33ee8333dd93cbc8c` |
+| [docs/SPEAKER_NOTES.md](docs/SPEAKER_NOTES.md) | 56907 | `d00a972b7a3ff4d5498d8959ca424e68f8676a79a33da9e4f287b9bf8bae0bb0` |

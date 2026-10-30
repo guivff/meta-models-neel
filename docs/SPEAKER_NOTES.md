@@ -7,13 +7,13 @@ The same notes are embedded in the PowerPoint (View → Notes). Times are cumula
 
 | # | Time | Speaker | Slide | 20-min route |
 |---|---|---|---|---|
-| 1 | 0:00–1:30 | GUIV | Meta-Models mostly tell you what the prompt says | KEEP, 1:00 |
+| 1 | 0:00–1:30 | GUIV | When do meta-models reveal more than the prompt? | KEEP, 1:00 |
 | 2 | 1:30–3:30 | GUIV | An activation reader turns one residual vector into text | KEEP, 1:30 |
 | 3 | 3:30–4:30 | GUIV | Readouts often look like a prompt of this kind, rebuilt and answered | SKIP |
 | 4 | 4:30–5:30 | GUIV → hand to SURAJ | Three questions about every state: decodable, causal here, stated | KEEP, 1:00 |
 | 5 | 5:30–8:00 | SURAJ → hand back to GUIV | On WorkspaceBench, the NLA scores what a text-only copy of Qwen scores | KEEP, 2:00 |
 | 6 | 8:00–10:30 | GUIV | When Qwen's own answer changes with the wording, the reader rarely follows it | KEEP, 2:00 |
-| 7 | 10:30–12:30 | GUIV | Content follows a transplanted activation; structural state does not | KEEP, 1:30 |
+| 7 | 10:30–12:30 | GUIV | After a whole-activation swap, content transfers readily; structural reporting is sparse | KEEP, 1:30 |
 | 8 | 12:30–14:00 | GUIV | Inside the reader the structural state is perfectly decodable, but seldom stated | SKIP |
 | 9 | 14:00–16:00 | GUIV → hand to SURAJ | A prompt-stated cue reaches the reader's word choice and is never named | SKIP |
 | 10 | 16:00–17:30 | SURAJ | Readers' text often carries structural state that is rarely stated | SKIP |
@@ -58,10 +58,10 @@ A3 read sites → slide 15 method → A12 steering bank controls → A13 chains 
 
 ## Slide-by-slide notes
 
-### 1. Meta-Models mostly tell you what the prompt says
+### 1. When do meta-models reveal more than the prompt?
 
 [Slide 1 · 0:00–1:30 · GUIV · 20-min route: KEEP, 1:00]
-Open with the claim and the question in one breath: "Meta-models — here two activation readers — mostly tell you what the prompt says. The question underneath is: when, if ever, do they reveal state that is private to the model, beyond reconstructing the prompt?"
+Open with the question, then the hypothesis: "When do meta-models reveal more than the prompt? Our working hypothesis: two activation readers mostly tell you what the prompt says. They report Qwen's own state only where it has become large at the read token."
 
 How we got here (one sentence): we started by asking whether two readers agreeing makes a readout more reliable. On natural banks agreement raises precision to 0.94 but covers only 23% of items (E94, appendix A15), and both readers can omit the same property. That moved the question from whether readouts agree to whether they reveal anything beyond the prompt.
 
@@ -154,7 +154,7 @@ Contrast, appendix A4: with much larger interventions the reader does follow —
 
 The example on the slide is a template, not a realised item; realised pairs are kept private for future judging.
 
-### 7. Content follows a transplanted activation; structural state does not
+### 7. After a whole-activation swap, content transfers readily; structural reporting is sparse
 
 [Slide 7 · 10:30–12:30 · GUIV · 20-min route: KEEP, 1:30]
 Intervention: run the recipient prompt through Qwen, but at block 44 replace the read token's whole residual vector with the one from a donor item whose value differs (e.g. a different fact, a different nesting depth). The Oracle Lens reads the swapped vector. A blind judge codes each readout: does it state the donor's value, the recipient's, both, or neither?
